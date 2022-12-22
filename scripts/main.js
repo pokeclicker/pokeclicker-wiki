@@ -1,11 +1,11 @@
 function gotoPage(type, name) {
     // Update our page hash, so if we reload it will load this page
-    window.location.hash = `#!${encodeURIComponent(type)}/${encodeURIComponent(name)}`;
+    window.location.hash = `#!${encodeURIComponent(type).replace(/%20/g, '_')}/${encodeURIComponent(name).replace(/%20/g, '_')}`;
 }
 
 onhashchange = (event) => {
     console.log(event.newURL);
-    const [ type, name ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURIComponent(i || ''));
+    const [ type, name ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURIComponent(i || '').replace(/_/g, ' '));
     pageType(type);
     pageName(name);
     const pageElement = $('#wiki-page-content');
