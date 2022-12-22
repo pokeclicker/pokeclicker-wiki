@@ -1,9 +1,33 @@
 var pageType = ko.observable();
 var pageName = ko.observable();
+
+function onPageChange() {
+    var pageElement = $('#wiki-page-content');
+    pageElement.html(''); //TODO: spinner?
+    if (!pageType()&&!pageName()) {
+        $.get('home.html', function(data) {
+            pageElement.html(data);
+        });
+    } else if (!pageName()) {
+        $.get(pageType() + '/overview.html', function(data) {
+            pageElement.html(data);
+        });
+    } else {
+        $.get(pageType() + '/main.html', function(data) {
+            pageElement.html(data);
+            console.log(data);
+        });
+    }
+}
 $('document').off('ready');
 $(document).ready(() => {
     pageType($('#page-type').val());
     pageName($('#page-name').val());
+    pageType.subscribe(onPageChange);
+    pageName.subscribe(onPageChange);
+
+    onPageChange();
+    
     ko.applyBindings({});
 });
 window.onbeforeunload = () => {

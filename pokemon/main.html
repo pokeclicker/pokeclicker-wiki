@@ -1,0 +1,31 @@
+<div>
+    <!-- ko with: pokemonList.find((p) => p.name == pageName()) -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" onclick="pageType(''); pageName(''); return false;">Home</a></li>
+                <li class="breadcrumb-item"><a href="#" onclick="pageType('pokemon'); pageName('overview'); return false;">Pokémon</a></li>
+                <li class="breadcrumb-item active" aria-current="page" data-bind="text: $data.name">Name</li>
+            </ol>
+        </nav>
+        <h1 data-bind="text: $data.name"></h1>
+        <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>
+        <div data-bind="visible: $data.evolutions">
+            <h3>Evolves into:</h3>
+            <!-- ko foreach: $data.evolutions -->
+            <div>
+                <a href="#" data-bind="
+                    click: () => { pageType('pokemon'); pageName($data.evolvedPokemon); return false; },
+                    text: $data.evolvedPokemon"></a>
+            </div>
+            <!-- /ko -->
+        </div>
+        <div>
+            <h3>Obtain methods:</h3>
+            <!-- ko foreach: Object.entries(PokemonHelper.getPokemonLocations($data.name)) -->
+                <p data-bind="text: PokemonLocationType[$data[0]]"></p>
+                <p style="display: none" data-bind="text: JSON.stringify($data[1])"></p>
+            <!-- /ko -->
+        </div>
+        
+    <!-- /ko -->
+</div>

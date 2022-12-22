@@ -1,0 +1,29 @@
+<div>
+    <!-- ko with: Object.values(ItemList).find((i) => i.displayName == pageName()) -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" onclick="pageType(''); pageName(''); return false;">Home</a></li>
+                <li class="breadcrumb-item"><a href="#" onclick="pageType('items'); pageName('overview'); return false;">Items</a></li>
+                <li class="breadcrumb-item active" aria-current="page" data-bind="text: $data.displayName">Name</li>
+            </ol>
+        </nav>
+        <h1 data-bind="text: $data.displayName"></h1>
+        <img data-bind="attr: {src: './pokeclicker/docs/' + $data.image}"/>
+        <div>
+            <h3>Ingame description:</h3>
+            <div data-bind="html: $data.description"></div>
+        </div>
+        <div data-bind="if: Object.values(TownList).some((t) => t.content.some((c) => c instanceof Shop && c.items.some((i) => i.name == $data.name)))">
+            <h3>Can be purchased in the following towns:</h3>
+            <!-- ko foreach : Object.values(TownList).filter((t) => t.content.some((c) => c instanceof Shop && c.items.some((i) => i.name == $data.name))) -->
+            <span class="badge badge-secondary" data-bind="text: $data.name"></span>
+            <!-- /ko -->
+        </div>
+        <div data-bind="if: Object.values(dungeonList).some((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name)))">
+            <h3>Can be found in the following dungeons:</h3>
+            <!-- ko foreach : Object.values(dungeonList).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name))) -->
+            <span class="badge badge-secondary" data-bind="text: $data.name"></span>
+            <!-- /ko -->
+        </div>
+    <!-- /ko -->
+</div>

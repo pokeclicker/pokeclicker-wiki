@@ -1,0 +1,35 @@
+<div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#" onclick="pageType(''); pageName(''); return false;">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Pokémon</li>
+        </ol>
+    </nav>
+    <h1>Pokémon</h1>
+    <table class="table table-hover table-striped  table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Pokémon</th>
+                <th>Type</th>
+                <th>Base Attack</th>
+                <th>Egg Steps</th>
+                <th>Catch Rate</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: pokemonMap">
+            <tr class="clickable" data-bind="click: () => { pageType('pokemon'); pageName($data.name); return false; }">
+                <td data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`"></td>
+                <td data-bind="text: $data.name"></td>
+                <td data-bind="foreach: $data.type">
+                    <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
+                        backgroundColor: TypeColor[$data]
+                    }"></span>
+                </td>
+                <td data-bind="text: $data.attack"></td>
+                <td data-bind="text: App.game.breeding.getSteps($data.eggCycles)"></td>
+                <td data-bind="text: PokemonFactory.catchRateHelper($data.catchRate, true) + '%'"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

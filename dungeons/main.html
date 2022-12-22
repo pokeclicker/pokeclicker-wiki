@@ -1,0 +1,44 @@
+<div data-bind="if: pageType() == 'dungeons' && pageName() != 'overview'">
+    <!-- ko with: Object.values(dungeonList).find((d) => d.name == pageName()) -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" onclick="pageType(''); pageName(''); return false;">Home</a></li>
+                <li class="breadcrumb-item"><a href="#" onclick="pageType('dungeons'); pageName('overview'); return false;">Dungeon</a></li>
+                <li class="breadcrumb-item active" aria-current="page" data-bind="text: $data.name">Name</li>
+            </ol>
+        </nav>
+        <h1 data-bind="text: $data.name"></h1>
+        <div>
+            <h3>Cost:</h3>
+            <p data-bind="text: $data.tokenCost.toLocaleString()"></p>
+        </div>
+        <div>
+            <h3>Base HP:</h3>
+            <p data-bind="text: $data.baseHealth.toLocaleString()"></p>
+        </div>
+        <div>
+            <h3>Bosses:</h3>
+            <!-- ko foreach: $data.bossList -->
+                <span class="badge badge-secondary" data-bind="text: $data.name"></span>
+            <!-- /ko -->
+        </div>
+        <br/>
+        <div>
+            <h3>Encounters:</h3>
+            <!-- ko foreach: $data.enemyList -->
+                <span class="badge badge-secondary" data-bind="text: $data.pokemon || $data.name || $data"></span>
+            <!-- /ko -->
+        </div>
+        <br/>
+        <div>
+            <h3>Possible Loot:</h3>
+            <!-- ko foreach: Object.entries(Object.values(dungeonList)[0].lootTable) -->
+                <h5 data-bind="text: $data[0]"></h5>
+                <!-- ko foreach: $data[1] -->
+                    <span class="badge badge-secondary" data-bind="text: $data.loot"></span>
+                <!-- /ko -->
+            <!-- /ko -->
+        </div>
+        
+    <!-- /ko -->
+</div>
