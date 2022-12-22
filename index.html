@@ -36,7 +36,7 @@
     <body style="padding-top: 5rem; min-height: 100vh;" class="no-select">
         <nav id="nav-bar" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
             <link id="theme-link" href="https://bootswatch.com/4/yeti/bootstrap.min.css" rel="stylesheet" data-bind="attr: {href: 'https://bootswatch.com/4/' + Settings.getSetting('theme').observableValue() + '/bootstrap.min.css'}">
-            <a class="navbar-brand" href="#" onclick="pageType(''); pageName(''); return false;">PokéClicker Wiki</a>
+            <a class="navbar-brand" href="#" onclick="gotoPage('', ''); return false;">PokéClicker Wiki</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -44,7 +44,7 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#" onclick="pageType(''); pageName(''); return false;">Home</a>
+                    <a class="nav-link" href="#" onclick="gotoPage('', ''); return false;">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>

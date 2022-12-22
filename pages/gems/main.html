@@ -2,8 +2,8 @@
     <!-- ko with: pageName() -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#" onclick="pageType(''); pageName(''); return false;">Home</a></li>
-                <li class="breadcrumb-item"><a href="#" onclick="pageType('gems'); pageName(''); return false;">Gems</a></li>
+                <li class="breadcrumb-item"><a href="#" onclick="gotoPage('', ''); return false;">Home</a></li>
+                <li class="breadcrumb-item"><a href="#" onclick="gotoPage('gems', ''); return false;">Gems</a></li>
                 <li class="breadcrumb-item active" aria-current="page" data-bind="text: $data + ' Gem'">Name</li>
             </ol>
         </nav>
