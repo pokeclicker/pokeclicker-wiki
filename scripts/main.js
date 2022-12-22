@@ -1,8 +1,9 @@
 function onPageChange() {
+    // Update our page hash, so if we reload it will load this page
+    window.location.hash = `#!${pageType()}/${pageName()}`;
     const pageElement = $('#wiki-page-content');
     pageElement.html(''); //TODO: spinner?
     let page = '';
-    window.location.hash = `#!${pageType()}/${pageName()}`;
     if (!pageType()&&!pageName()) {
         page = 'pages/home.html';
     } else if (!pageName()) {
