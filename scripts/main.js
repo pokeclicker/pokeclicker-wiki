@@ -1,6 +1,6 @@
 function gotoPage(type, name) {
     // Update our page hash, so if we reload it will load this page
-    window.location.hash = `#!${encodeURIComponent(type).replace(/%20/g, '_')}/${encodeURIComponent(name).replace(/%20/g, '_')}`;
+    window.location.hash = `#!${encodeURI(type).replace(/%20/g, '_')}/${encodeURI(name).replace(/%20/g, '_')}`;
 }
 
 // Load our error page for when we need it
@@ -13,7 +13,7 @@ $.get('404.html', (data) => {
 
 onhashchange = (event) => {
     console.log(event.newURL);
-    const [ type, name ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURIComponent(i || '').replace(/_/g, ' '));
+    const [ type, name ] = event.newURL.replace(/.*#!/, '').split('/').map(i => encodeURI(i || '').replace(/_/g, ' '));
     pageType(type);
     pageName(name);
     const pageElement = $('#wiki-page-content');
@@ -26,9 +26,9 @@ onhashchange = (event) => {
     if (!pageType()&&!pageName()) {
         page = 'pages/home.html';
     } else if (!pageName()) {
-        page = `pages/${pageType()}/overview.html`;
+        page = `pages/${encodeURIComponent(pageType())}/overview.html`;
     } else {
-        page = `pages/${pageType()}/main.html`;
+        page = `pages/${encodeURIComponent(pageType())}/main.html`;
     }
     $.get(page, (data) => {
         pageElement.html(data);
@@ -39,7 +39,7 @@ onhashchange = (event) => {
 
     const pageElementCustom = $('#wiki-page-custom-content');
     pageElementCustom.html('');
-    $.get(`data/${pageType()}/${pageName()}.md`, function(data) {
+    $.get(`data/${encodeURIComponent(pageType()).replace(/%/g, '%25')}/${encodeURIComponent(pageName()).replace(/%/g, '%25')}.md`, function(data) {
         pageElementCustom.html(md.render(data));
     });
 }
