@@ -28,7 +28,7 @@
                         var amountPerGym = regionGyms
                             .map((g) => {
                                 var totalMons = GymList[g].pokemons.length;
-                                var totalOfType = GymList[g].pokemons.filter((p) => PokemonHelper.getPokemonByName(p).type1 == $parent || PokemonHelper.getPokemonByName(p).type2 == $parent).length;
+                                var totalOfType = GymList[g].pokemons.filter((p) => PokemonHelper.getPokemonByName(p).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p).type2 == PokemonType[$parent]).length;
                                 return Math.round(totalOfType / totalMons * 100);
                             });
                         var max = Math.max(...amountPerGym);
