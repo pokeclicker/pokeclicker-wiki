@@ -17,6 +17,9 @@
         <!--Minified scripts-->
         <script src="./pokeclicker/docs/scripts/script.min.js?v=$VERSION"></script>
 
+        <!--Markdown-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js" integrity="sha512-SYfDUYPg5xspsG6OOpXU366G8SZsdHOhqk/icdrYJ2E/WKZxPxze7d2HD3AyXpT7U22PZ5y74xRpqZ6A2bJ+kQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
         <!--Bootstrap-->
         <link href="./pokeclicker/docs/libs/bootstrap.min.css" rel="stylesheet">
         <script src="./pokeclicker/docs/libs/popper.min.js"></script>
@@ -25,6 +28,7 @@
 
         <!-- Main wiki script -->
         <script src="scripts/main.js"></script>
+
         <style>
             .clickable {
                 cursor: pointer;
@@ -142,12 +146,12 @@ $('#search').typeahead({
   }
 });
 $('#search').bind('typeahead:select', function(ev, suggestion) {
-    pageName(suggestion.page);
     pageType(suggestion.type);
+    pageName(suggestion.page);
 });
 $('#search').bind('typeahead:autocomplete', function(ev, suggestion) {
-    pageName(suggestion.page);
     pageType(suggestion.type);
+    pageName(suggestion.page);
 });
         </script>
     </body>
