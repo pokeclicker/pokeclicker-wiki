@@ -23,7 +23,21 @@
                 <tr>
                     <td data-bind="text: GameConstants.Region[$data]" rowspan="2"></td>
                     <td>Gym</td>
-                    <td>Don't know yet</td>
+                    <td data-bind="text: (() => {
+                        var regionGyms = GameConstants.RegionGyms[$data];
+                        var amountPerGym = regionGyms
+                            .map((g) => {
+                                var totalMons = GymList[g].pokemons.length;
+                                var totalOfType = GymList[g].pokemons.filter((p) => PokemonHelper.getPokemonByName(p).type1 == $parent || PokemonHelper.getPokemonByName(p).type2 == $parent).length;
+                                return Math.round(totalOfType / totalMons * 100);
+                            });
+                        var max = Math.max(...amountPerGym);
+                        if (!max) {
+                            return 'No gym with this gem';
+                        }
+                        return max + '% at ' + regionGyms[amountPerGym.indexOf(max)];
+                    })()
+                    "></td>
                 </tr>
                 <tr>
                     <td>Route</td>
