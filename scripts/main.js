@@ -49,6 +49,7 @@ $(document).ready(() => {
         // This doesn't work as we can only bind to an element once..
         if (v) {
             applyBindings(false);
+            ko.cleanNode(document.getElementById('wiki-page-content'));
             ko.applyBindings({}, document.getElementById('wiki-page-content'))
         }
     })
