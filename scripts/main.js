@@ -1,8 +1,13 @@
 function gotoPage(type, name) {
     // Update our page hash, so if we reload it will load this page
+    window.location.hash = `#!${encodeURIComponent(type)}/${encodeURIComponent(name)}`;
+}
+
+onhashchange = (event) => {
+    console.log(event.newURL);
+    const [ type, name ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURIComponent(i || ''));
     pageType(type);
     pageName(name);
-    window.location.hash = `#!${pageType()}/${pageName()}`;
     const pageElement = $('#wiki-page-content');
     pageElement.html('');
     // Loading...
@@ -17,9 +22,11 @@ function gotoPage(type, name) {
     } else {
         page = `pages/${pageType()}/main.html`;
     }
-    $.get(page, function(data) {
+    $.get(page, (data) => {
         pageElement.html(data);
         applyBindings(true);
+    }).fail(() => {
+        pageElement.html(`<h1>Page not found</h1><p>Either something went wrong, or this page does not exist..</p><a href="#" onclick="gotoPage('', ''); return false;">Home</a>`);
     });
 
     const pageElementCustom = $('#wiki-page-custom-content');
@@ -43,7 +50,8 @@ const applyBindings = ko.observable(false);
 // Load the page the user is trying to visit
 (() => {
     const [ type, name ] = window.location.hash.substr(2).split('/');
-    gotoPage(decodeURI(type || ''), decodeURI(name || ''));
+    window.location.hash = `#!loading`;
+    gotoPage(decodeURIComponent(type || ''), decodeURIComponent(name || ''));
 })();
 
 $('document').off('ready');
