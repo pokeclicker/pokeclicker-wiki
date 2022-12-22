@@ -3,6 +3,14 @@ function gotoPage(type, name) {
     window.location.hash = `#!${encodeURIComponent(type).replace(/%20/g, '_')}/${encodeURIComponent(name).replace(/%20/g, '_')}`;
 }
 
+// Load our error page for when we need it
+errorPage = '';
+$.get('404.html', (data) => {
+    errorPage = data;
+}).fail(() => {
+    pageElement.html(`<h1>Page not found</h1>`);
+});
+
 onhashchange = (event) => {
     console.log(event.newURL);
     const [ type, name ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURIComponent(i || '').replace(/_/g, ' '));
@@ -26,7 +34,7 @@ onhashchange = (event) => {
         pageElement.html(data);
         applyBindings(true);
     }).fail(() => {
-        pageElement.html(`<h1>Page not found</h1><p>Either something went wrong, or this page does not exist..</p><a href="#" onclick="gotoPage('', ''); return false;">Home</a>`);
+        pageElement.html(errorPage);
     });
 
     const pageElementCustom = $('#wiki-page-custom-content');
