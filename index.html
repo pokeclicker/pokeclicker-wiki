@@ -26,9 +26,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
         <script src="./pokeclicker/docs/libs/bootstrap.min.js"></script>
 
-        <!-- Main wiki script -->
-        <script src="scripts/main.js"></script>
-
         <style>
             .clickable {
                 cursor: pointer;
@@ -36,9 +33,9 @@
         </style>
 
     </head>
-    <body style="padding-top: 5rem; min-height: 100vh;" class="no-select yeti" data-bind="class: 'no-select ' + Settings.getSetting('theme').observableValue(), attr : {'oncontextmenu' : 'return !' + Settings.getSetting('disableRightClickMenu').observableValue().toString() + ';'}">
-        <link id="theme-link" href="https://bootswatch.com/4/yeti/bootstrap.min.css" rel="stylesheet" data-bind="attr: {href: 'https://bootswatch.com/4/' + Settings.getSetting('theme').observableValue() + '/bootstrap.min.css'}">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <body style="padding-top: 5rem; min-height: 100vh;" class="no-select">
+        <nav id="nav-bar" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <link id="theme-link" href="https://bootswatch.com/4/yeti/bootstrap.min.css" rel="stylesheet" data-bind="attr: {href: 'https://bootswatch.com/4/' + Settings.getSetting('theme').observableValue() + '/bootstrap.min.css'}">
             <a class="navbar-brand" href="#" onclick="pageType(''); pageName(''); return false;">PokéClicker Wiki</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -77,82 +74,10 @@
 
         <main role="main" class="container">
             <div id="wiki-page-content"></div>
+            <div id="wiki-page-custom-content"></div>
         </main>
-        <script>
-const searchOptions = [
-    {
-        display:'Items',
-        type: 'items',
-        page: 'overview',
-    },
-    {
-        display:'Pokémon',
-        type: 'pokemon',
-        page: 'overview',
-    },
-    ...Object.values(ItemList).map(i => ({
-        display: i.displayName,
-        type: 'items', 
-        page: i.displayName,
-    })),
-    ...Object.values(pokemonList).map(p => ({
-        display: p.name,
-        type: 'pokemon',
-        page: p.name,
-    })),
-    ...Object.values(dungeonList).map(d => ({
-        display: d.name,
-        type: 'dungeons',
-        page: d.name,
-    })),
-];
-var substringMatcher = function(searchData) {
-  return function findMatches(query, cb) {
-    var matches, substringRegex;
 
-    // an array that will be populated with substring matches
-    matches = [];
-
-    // regex used to determine if a string contains the substring `q`
-    substrRegex = new RegExp(query, 'ig');
-
-    // iterate through the pool of strings and for any string that
-    // contains the substring `q`, add it to the `matches` array
-    searchData.forEach((d, i) => {
-      if (substrRegex.test(d.display)) {
-        matches.push(d);
-      }
-    });
-    cb(matches);
-  };
-};
-
-$('#search').typeahead({
-  hint: true,
-  highlight: true,
-  minLength: 1,
-  classNames: {
-    menu: 'dropdown-menu',
-    suggestion: 'dropdown-item',
-    cursor: 'active',
-  }
-},
-{
-  name: 'Search',
-  source: substringMatcher(searchOptions),
-  display: 'display',
-  templates: {
-    notFound: '<a class="dropdown-item disabled">No results found...</a>',
-  }
-});
-$('#search').bind('typeahead:select', function(ev, suggestion) {
-    pageType(suggestion.type);
-    pageName(suggestion.page);
-});
-$('#search').bind('typeahead:autocomplete', function(ev, suggestion) {
-    pageType(suggestion.type);
-    pageName(suggestion.page);
-});
-        </script>
+        <!-- Main wiki script -->
+        <script src="scripts/main.js"></script>
     </body>
 </html>
