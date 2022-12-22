@@ -1,12 +1,15 @@
 <div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#" onclick="gotoPage('', ''); return false;">Home</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="gotoPage('pokemon', ''); return false;">Pokémon</a></li>
+            <li class="breadcrumb-item active" aria-current="page" data-bind="text: pageName">Name</li>
+        </ol>
+    </nav>
+    <!-- ko ifnot: pokemonList.find((p) => p.name == pageName()) -->
+        <h1>Pokémon not found...</h1>
+    <!-- /ko -->
     <!-- ko with: pokemonList.find((p) => p.name == pageName()) -->
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#" onclick="gotoPage('', ''); return false;">Home</a></li>
-                <li class="breadcrumb-item"><a href="#" onclick="gotoPage('pokemon', ''); return false;">Pokémon</a></li>
-                <li class="breadcrumb-item active" aria-current="page" data-bind="text: $data.name">Name</li>
-            </ol>
-        </nav>
         <h1 data-bind="text: $data.name"></h1>
         <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>
         <div data-bind="visible: $data.evolutions">
@@ -26,6 +29,5 @@
                 <p style="display: none" data-bind="text: JSON.stringify($data[1])"></p>
             <!-- /ko -->
         </div>
-        
     <!-- /ko -->
 </div>
