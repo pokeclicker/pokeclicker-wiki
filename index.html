@@ -76,7 +76,7 @@
         </nav>
 
         <main role="main" class="container">
-            <div class="text-center" data-bind="if: !pageType() && !pageName()">
+            <div style="display:none" data-bind="visible: !pageType() && !pageName()" class="text-center" >
                 <h1>Welcome to the PokéClicker Wiki!</h1>
                 <h4>PokéClicker is an open source game built around the story and content of the Pokémon games.
                     <br/>This is an idle & clicker type game that is currently in beta release phase.
@@ -90,7 +90,7 @@
 
             </div>
 
-            <div data-bind="if: pageType() == 'dungeons' && pageName() == 'overview'">
+            <div style="display:none" data-bind="visible: pageType() == 'dungeons' && pageName() == 'overview'">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#" onclick="pageType(''); pageName(''); return false;">Home</a></li>
@@ -116,7 +116,7 @@
                 </table>
             </div>
 
-            <div data-bind="if: pageType() == 'items' && pageName() == 'overview'">
+            <div style="display:none" data-bind="visible: pageType() == 'items' && pageName() == 'overview'">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#" onclick="pageType(''); pageName(''); return false;">Home</a></li>
@@ -140,7 +140,7 @@
                 </table>
             </div>
 
-            <div data-bind="if: pageType() == 'pokemon' && pageName() == 'overview'">
+            <div style="display:none" data-bind="visible: pageType() == 'pokemon' && pageName() == 'overview'">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#" onclick="pageType(''); pageName(''); return false;">Home</a></li>
@@ -176,7 +176,7 @@
                 </table>
             </div>
 
-            <div data-bind="if: pageType() == 'items' && pageName() != 'overview'">
+            <div style="display:none" data-bind="visible: pageType() == 'items' && pageName() != 'overview'">
                 <!-- ko with: Object.values(ItemList).find((i) => i.displayName == pageName()) -->
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -206,7 +206,7 @@
                 <!-- /ko -->
             </div>
 
-            <div data-bind="if: pageType() == 'pokemon' && pageName() != 'overview'">
+            <div style="display:none" data-bind="visible: pageType() == 'pokemon' && pageName() != 'overview'">
                 <!-- ko with: pokemonList.find((p) => p.name == pageName()) -->
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -238,7 +238,7 @@
                 <!-- /ko -->
             </div>
 
-            <div data-bind="if: pageType() == 'dungeons' && pageName() != 'overview'">
+            <div style="display:none" data-bind="visible: pageType() == 'dungeons' && pageName() != 'overview'">
                 <!-- ko with: Object.values(dungeonList).find((d) => d.name == pageName()) -->
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">

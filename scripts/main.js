@@ -11,9 +11,11 @@ const pageType = ko.observable();
 const pageName = ko.observable();
 const pageOutput = ko.observable('');
 
+
 // Download remote data when pagename changes
 pageName.subscribe((v)=>{
     pageOutput('');
+    window.location.hash = `#!${pageType()}/${pageName()}`;
     fetch(`./data/${pageType()}/${pageName()}.md`)
         .then((response) => response.status == 200 ? response.text() : '')
         .then((data) => {
@@ -22,10 +24,14 @@ pageName.subscribe((v)=>{
         });
 });
 
+(() => {
+    const [ type, name ] = window.location.hash.substr(2).split('/');
+    pageType(decodeURI(type || ''));
+    pageName(decodeURI(name || ''));
+})();
+
 $('document').off('ready');
 $(document).ready(() => {
-    pageType($('#page-type').val());
-    pageName($('#page-name').val());
     ko.applyBindings({});
 });
 window.onbeforeunload = () => {
