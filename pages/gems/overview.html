@@ -1,0 +1,26 @@
+<div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#" onclick="pageType(''); pageName(''); return false;">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Gems</li>
+        </ol>
+    </nav>
+    <h1>Gems</h1>
+    <div>
+        Gems are gained by defeating Pokémon. They are mainly used to upgrade the type advantage of your Pokémon.
+    </div>
+    <table class="table table-hover table-striped  table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Gem</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: Object.keys(PokemonType)">
+            <tr class="clickable" data-bind="click: () => { pageType('gems'); pageName(PokemonType[$data]); return false; }">
+                <td data-bind="text: PokemonType[$data]"></td>
+                <td><img data-bind="attr: {src: './pokeclicker/docs/' + Gems.image($data)}"/></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

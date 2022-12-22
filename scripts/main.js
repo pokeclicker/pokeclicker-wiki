@@ -106,6 +106,11 @@ const searchOptions = [
         type: 'pokemon',
         page: '',
     },
+    {
+        display:'Gems',
+        type: 'gems',
+        page: '',
+    },
     ...Object.values(ItemList).map(i => ({
         display: i.displayName,
         type: 'items', 
