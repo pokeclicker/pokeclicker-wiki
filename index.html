@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+    <head>
+        <title>PokéClicker Wiki</title>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <link href="./pokeclicker/docs/assets/images/favicon.ico" rel="icon" type="image/x-icon">
+        <!--jQuery-->
+        <script src="./pokeclicker/docs/libs/jquery.min.js"></script>
+
+        <!--Knockout-->
+        <script src="./pokeclicker/docs/libs/knockout-latest.js"></script>
+
+        <!-- New module-based code from './modules' -->
+        <script src="./pokeclicker/docs/scripts/modules.min.js?v=$VERSION"></script>
+
+        <!--Minified scripts-->
+        <script src="./pokeclicker/docs/scripts/script.min.js?v=$VERSION"></script>
+
+        <!--Bootstrap-->
+        <link href="./pokeclicker/docs/libs/bootstrap.min.css" rel="stylesheet">
+        <script src="./pokeclicker/docs/libs/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+        <script src="./pokeclicker/docs/libs/bootstrap.min.js"></script>
+
+        <script>
+            var pageType = ko.observable();
+            var pageName = ko.observable();
+            $('document').off('ready');
+            $(document).ready(() => {
+                pageType($('#page-type').val());
+                pageName($('#page-name').val());
+                ko.applyBindings({});
+            });
+            window.onbeforeunload = () => {
+                Settings.saveDefault();
+            }
+
+            
+            // Map hints to requirements
+            Requirement.prototype.toJSON = function() {
+                const req = this.__proto__.constructor.name === 'LazyRequirementWrapper'
+                    ? this.unwrap()
+                    : this;
+            
+                return {
+                    ...Object.fromEntries(Object.entries(req)),
+                    hint: req.hint(),
+                    __class: req.__proto__.constructor.name,
+                };
+            };
+
+            App.game = {
+                breeding: new Breeding(),
+            }
+
+
+            // TODO: Fix these up somehow..
+            // Overrides, these methods don't work if game not started..
+            PokemonHelper.getPokemonWandering = () => [];
+            PokemonHelper.getPokemonDiscord = () => [];
+
+        </script>
+        <style>
+            .clickable {
+                cursor: pointer;
+            }
+        </style>
+
+    </head>
+    <body style="padding-top: 5rem; min-height: 100vh;" class="no-select yeti" data-bind="class: 'no-select ' + Settings.getSetting('theme').observableValue(), attr : {'oncontextmenu' : 'return !' + Settings.getSetting('disableRightClickMenu').observableValue().toString() + ';'}">
+        <link id="theme-link" href="https://bootswatch.com/4/yeti/bootstrap.min.css" rel="stylesheet" data-bind="attr: {href: 'https://bootswatch.com/4/' + Settings.getSetting('theme').observableValue() + '/bootstrap.min.css'}">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#" onclick="pageType(''); pageName(''); return false;">PokéClicker Wiki</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" onclick="pageType(''); pageName(''); return false;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                <knockout data-bind="with: Settings.getSetting('theme')">
+                    <select class="form-control mr-sm-2" onchange="Settings.setSettingByName(this.name, this.value)" data-bind="foreach: $data.options, attr: {name}">
+                        <option data-bind="text: $data.text, value: $data.value, attr:{ selected: $parent.observableValue() == $data.value}"></option>
+                    </select>
+                </knockout>
+                <input id="search" type="text" class="form-control typeahead" autocomplete="off" placeholder="Search" />
+                </form>
+            </div>
+        </nav>
+
+        <main role="main" class="container">
+            <div class="text-center" data-bind="if: !pageType() && !pageName()">
+                <h1>Welcome to the PokéClicker Wiki!</h1>
+                <h4>PokéClicker is an open source game built around the story and content of the Pokémon games.
+                    <br/>This is an idle & clicker type game that is currently in beta release phase.
+                    <br/>New content and patches are released frequently.</h4>
+
+                <hr/>
+
+                <button type="button" class="btn btn-primary" onclick="pageType('pokemon'); pageName('overview');">Pokémon</button>
+                <button type="button" class="btn btn-primary" onclick="pageType('items'); pageName('overview');">Items</button>
+                <button type="button" class="btn btn-primary" onclick="pageType('dungeons'); pageName('overview');">Dungeons</button>
+
+            </div>
+
+            <div data-bind="if: pageType() == 'dungeons' && pageName() == 'overview'">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#" onclick="pageType(''); pageName(''); return false;">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Dungeons</li>
+                    </ol>
+                </nav>
+                <h1>Dungeons</h1>
+                <table class="table table-hover table-striped  table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Dungeon Name</th>
+                            <th>Cost</th>
+                            <th>Base HP</th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: Object.values(dungeonList)">
+                        <tr class="clickable" data-bind="click: () => { pageType('dungeons'); pageName($data.name); return false; }">
+                            <td data-bind="text: $data.name"></td>
+                            <td data-bind="text: $data.tokenCost.toLocaleString()"></td>
+                            <td data-bind="text: `❤️ ${$data.baseHealth.toLocaleString()}`"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div data-bind="if: pageType() == 'items' && pageName() == 'overview'">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#" onclick="pageType(''); pageName(''); return false;">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Items</li>
+                    </ol>
+                </nav>
+                <h1>Items</h1>
+                <table class="table table-hover table-striped  table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: Object.values(ItemList)">
+                        <tr class="clickable" data-bind="click: () => { pageType('items'); pageName($data.displayName); return false; }">
+                            <td data-bind="text: $data.displayName"></td>
+                            <td data-bind="html: $data.description"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div data-bind="if: pageType() == 'pokemon' && pageName() == 'overview'">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#" onclick="pageType(''); pageName(''); return false;">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Pokémon</li>
+                    </ol>
+                </nav>
+                <h1>Pokémon</h1>
+                <table class="table table-hover table-striped  table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Pokémon</th>
+                            <th>Type</th>
+                            <th>Base Attack</th>
+                            <th>Egg Steps</th>
+                            <th>Catch Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: pokemonMap">
+                        <tr class="clickable" data-bind="click: () => { pageType('pokemon'); pageName($data.name); return false; }">
+                            <td data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`"></td>
+                            <td data-bind="text: $data.name"></td>
+                            <td data-bind="foreach: $data.type">
+                                <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
+                                    backgroundColor: TypeColor[$data]
+                                }"></span>
+                            </td>
+                            <td data-bind="text: $data.attack"></td>
+                            <td data-bind="text: App.game.breeding.getSteps($data.eggCycles)"></td>
+                            <td data-bind="text: PokemonFactory.catchRateHelper($data.catchRate, true) + '%'"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div data-bind="if: pageType() == 'items' && pageName() != 'overview'">
+                <!-- ko with: Object.values(ItemList).find((i) => i.displayName == pageName()) -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#" onclick="pageType(''); pageName(''); return false;">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#" onclick="pageType('items'); pageName('overview'); return false;">Items</a></li>
+                            <li class="breadcrumb-item active" aria-current="page" data-bind="text: $data.displayName">Name</li>
+                        </ol>
+                    </nav>
+                    <h1 data-bind="text: $data.displayName"></h1>
+                    <img data-bind="attr: {src: './pokeclicker/docs/' + $data.image}"/>
+                    <div>
+                        <h3>Ingame description:</h3>
+                        <div data-bind="html: $data.description"></div>
+                    </div>
+                    <div data-bind="if: Object.values(TownList).some((t) => t.content.some((c) => c instanceof Shop && c.items.some((i) => i.name == $data.name)))">
+                        <h3>Can be purchased in the following towns:</h3>
+                        <!-- ko foreach : Object.values(TownList).filter((t) => t.content.some((c) => c instanceof Shop && c.items.some((i) => i.name == $data.name))) -->
+                        <span class="badge badge-secondary" data-bind="text: $data.name"></span>
+                        <!-- /ko -->
+                    </div>
+                    <div data-bind="if: Object.values(dungeonList).some((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name)))">
+                        <h3>Can be found in the following dungeons:</h3>
+                        <!-- ko foreach : Object.values(dungeonList).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name))) -->
+                        <span class="badge badge-secondary" data-bind="text: $data.name"></span>
+                        <!-- /ko -->
+                    </div>
+                <!-- /ko -->
+            </div>
+
+            <div data-bind="if: pageType() == 'pokemon' && pageName() != 'overview'">
+                <!-- ko with: pokemonList.find((p) => p.name == pageName()) -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#" onclick="pageType(''); pageName(''); return false;">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#" onclick="pageType('pokemon'); pageName('overview'); return false;">Pokémon</a></li>
+                            <li class="breadcrumb-item active" aria-current="page" data-bind="text: $data.name">Name</li>
+                        </ol>
+                    </nav>
+                    <h1 data-bind="text: $data.name"></h1>
+                    <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>
+                    <div data-bind="visible: $data.evolutions">
+                        <h3>Evolves into:</h3>
+                        <!-- ko foreach: $data.evolutions -->
+                        <div>
+                            <a href="#" data-bind="
+                                click: () => { pageType('pokemon'); pageName($data.evolvedPokemon); return false; },
+                                text: $data.evolvedPokemon"></a>
+                        </div>
+                        <!-- /ko -->
+                    </div>
+                    <div>
+                        <h3>Obtain methods:</h3>
+                        <!-- ko foreach: Object.entries(PokemonHelper.getPokemonLocations($data.name)) -->
+                            <p data-bind="text: PokemonLocationType[$data[0]]"></p>
+                            <p style="display: none" data-bind="text: JSON.stringify($data[1])"></p>
+                        <!-- /ko -->
+                    </div>
+                    
+                <!-- /ko -->
+            </div>
+
+            <div data-bind="if: pageType() == 'dungeons' && pageName() != 'overview'">
+                <!-- ko with: Object.values(dungeonList).find((d) => d.name == pageName()) -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#" onclick="pageType(''); pageName(''); return false;">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#" onclick="pageType('dungeons'); pageName('overview'); return false;">Dungeon</a></li>
+                            <li class="breadcrumb-item active" aria-current="page" data-bind="text: $data.name">Name</li>
+                        </ol>
+                    </nav>
+                    <h1 data-bind="text: $data.name"></h1>
+                    <div>
+                        <h3>Cost:</h3>
+                        <p data-bind="text: $data.tokenCost.toLocaleString()"></p>
+                    </div>
+                    <div>
+                        <h3>Base HP:</h3>
+                        <p data-bind="text: $data.baseHealth.toLocaleString()"></p>
+                    </div>
+                    <div>
+                        <h3>Bosses:</h3>
+                        <!-- ko foreach: $data.bossList -->
+                            <span class="badge badge-secondary" data-bind="text: $data.name"></span>
+                        <!-- /ko -->
+                    </div>
+                    <br/>
+                    <div>
+                        <h3>Encounters:</h3>
+                        <!-- ko foreach: $data.enemyList -->
+                            <span class="badge badge-secondary" data-bind="text: $data.pokemon || $data.name || $data"></span>
+                        <!-- /ko -->
+                    </div>
+                    <br/>
+                    <div>
+                        <h3>Possible Loot:</h3>
+                        <!-- ko foreach: Object.entries(Object.values(dungeonList)[0].lootTable) -->
+                            <h5 data-bind="text: $data[0]"></h5>
+                            <!-- ko foreach: $data[1] -->
+                                <span class="badge badge-secondary" data-bind="text: $data.loot"></span>
+                            <!-- /ko -->
+                        <!-- /ko -->
+                    </div>
+                    
+                <!-- /ko -->
+            </div>
+        </main>
+        <script>
+const searchOptions = [
+    {
+        display:'Items',
+        type: 'items',
+        page: 'overview',
+    },
+    {
+        display:'Pokémon',
+        type: 'pokemon',
+        page: 'overview',
+    },
+    ...Object.values(ItemList).map(i => ({
+        display: i.displayName,
+        type: 'items', 
+        page: i.displayName,
+    })),
+    ...Object.values(pokemonList).map(p => ({
+        display: p.name,
+        type: 'pokemon',
+        page: p.name,
+    })),
+    ...Object.values(dungeonList).map(d => ({
+        display: d.name,
+        type: 'dungeons',
+        page: d.name,
+    })),
+];
+var substringMatcher = function(searchData) {
+  return function findMatches(query, cb) {
+    var matches, substringRegex;
+
+    // an array that will be populated with substring matches
+    matches = [];
+
+    // regex used to determine if a string contains the substring `q`
+    substrRegex = new RegExp(query, 'ig');
+
+    // iterate through the pool of strings and for any string that
+    // contains the substring `q`, add it to the `matches` array
+    searchData.forEach((d, i) => {
+      if (substrRegex.test(d.display)) {
+        matches.push(d);
+      }
+    });
+    cb(matches);
+  };
+};
+
+$('#search').typeahead({
+  hint: true,
+  highlight: true,
+  minLength: 1,
+  classNames: {
+    menu: 'dropdown-menu',
+    suggestion: 'dropdown-item',
+    cursor: 'active',
+  }
+},
+{
+  name: 'Search',
+  source: substringMatcher(searchOptions),
+  display: 'display',
+  templates: {
+    notFound: '<a class="dropdown-item disabled">No results found...</a>',
+  }
+});
+$('#search').bind('typeahead:select', function(ev, suggestion) {
+    pageName(suggestion.page);
+    pageType(suggestion.type);
+});
+$('#search').bind('typeahead:autocomplete', function(ev, suggestion) {
+    pageName(suggestion.page);
+    pageType(suggestion.type);
+});
+        </script>
+    </body>
+</html>

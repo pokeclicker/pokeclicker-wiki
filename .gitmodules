@@ -1,0 +1,4 @@
+[submodule "pokeclicker"]
+	path = pokeclicker
+	url = https://github.com/pokeclicker/pokeclicker.git
+	branch = master
