@@ -1,7 +1,7 @@
 <div>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#" onclick="pageType(''); pageName(''); return false;">Home</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="gotoPage('', ''); return false;">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Items</li>
         </ol>
     </nav>
@@ -14,7 +14,7 @@
             </tr>
         </thead>
         <tbody data-bind="foreach: Object.values(ItemList)">
-            <tr class="clickable" data-bind="click: () => { pageType('items'); pageName($data.displayName); return false; }">
+            <tr class="clickable" data-bind="click: () => { gotoPage('items', $data.displayName); return false; }">
                 <td data-bind="text: $data.displayName"></td>
                 <td data-bind="html: $data.description"></td>
             </tr>

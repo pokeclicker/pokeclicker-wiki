@@ -1,5 +1,7 @@
-function onPageChange() {
+function gotoPage(type, name) {
     // Update our page hash, so if we reload it will load this page
+    pageType(type);
+    pageName(name);
     window.location.hash = `#!${pageType()}/${pageName()}`;
     const pageElement = $('#wiki-page-content');
     pageElement.html('');
@@ -41,14 +43,12 @@ const applyBindings = ko.observable(false);
 // Load the page the user is trying to visit
 (() => {
     const [ type, name ] = window.location.hash.substr(2).split('/');
-    pageType(decodeURI(type || ''));
-    pageName(decodeURI(name || ''));
+    gotoPage(decodeURI(type || ''), decodeURI(name || ''));
 })();
 
 $('document').off('ready');
 $(document).ready(() => {
-    pageType.subscribe(onPageChange);
-    pageName.subscribe(onPageChange);
+    ko.applyBindings({}, document.getElementById('nav-bar'));
     applyBindings.subscribe((v) => {
         // This doesn't work as we can only bind to an element once..
         if (v) {
@@ -57,10 +57,6 @@ $(document).ready(() => {
             ko.applyBindings({}, document.getElementById('wiki-page-content'))
         }
     })
-
-    onPageChange();
-    
-    ko.applyBindings({}, document.getElementById('nav-bar'));
 });
 
 // Save any settings the user has set
@@ -167,10 +163,8 @@ $('#search').typeahead({
   }
 });
 $('#search').bind('typeahead:select', function(ev, suggestion) {
-    pageType(suggestion.type);
-    pageName(suggestion.page);
+    gotoPage(suggestion.type, suggestion.page);
 });
 $('#search').bind('typeahead:autocomplete', function(ev, suggestion) {
-    pageType(suggestion.type);
-    pageName(suggestion.page);
+    gotoPage(suggestion.type, suggestion.page);
 });

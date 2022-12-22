@@ -1,7 +1,7 @@
 <div>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#" onclick="pageType(''); pageName(''); return false;">Home</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="gotoPage('', ''); return false;">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Pokémon</li>
         </ol>
     </nav>
@@ -18,7 +18,7 @@
             </tr>
         </thead>
         <tbody data-bind="foreach: pokemonMap">
-            <tr class="clickable" data-bind="click: () => { pageType('pokemon'); pageName($data.name); return false; }">
+            <tr class="clickable" data-bind="click: () => { gotoPage('pokemon', $data.name); return false; }">
                 <td data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`"></td>
                 <td data-bind="text: $data.name"></td>
                 <td data-bind="foreach: $data.type">
