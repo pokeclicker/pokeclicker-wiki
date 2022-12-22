@@ -39,6 +39,9 @@
                                 return Math.round(totalOfType / totalMons * 100);
                             });
                         var max = Math.max(...amountPerRoute);
+                        if (!max) {
+                            return 'No route with this gem';
+                        }
                         return max + '% at ' + regionRoutes[amountPerRoute.indexOf(max)].routeName;
                     })()
                     "></td>
