@@ -42,13 +42,16 @@
         <br/>
         <div>
             <h3>Possible Loot:</h3>
-            <!-- ko foreach: Object.entries(Object.values(dungeonList)[0].lootTable) -->
+            <!-- ko foreach: Object.entries($data.lootTable) -->
                 <h5 data-bind="text: $data[0]"></h5>
                 <!-- ko foreach: $data[1] -->
                     <!-- ko if: ItemList[$data.loot] -->
                         <a class="badge text-bg-secondary" href="#" data-bind="text: ItemList[$data.loot].displayName, click: () => { gotoPage('Items', ItemList[$data.loot].displayName); return false; }"></a>
                     <!-- /ko -->
-                    <!-- ko ifnot: ItemList[$data.loot] -->
+                    <!-- ko if: UndergroundItems.list.some((ui) => ui.name == $data.loot) && !ItemList[$data.loot] -->
+                        <a class="badge text-bg-secondary" href="#" data-bind="text: UndergroundItems.list.find((ui) => ui.name == $data.loot).displayName, click: () => { gotoPage('Items', UndergroundItems.list.find((ui) => ui.displayName == $data.loot).displayName); return false; }"></a>
+                    <!-- /ko -->
+                    <!-- ko ifnot: ItemList[$data.loot] || UndergroundItems.list.some((ui) => ui.name == $data.loot) -->
                         <span class="badge text-bg-secondary" data-bind="text: $data.loot"></span>
                     <!-- /ko -->
                 <!-- /ko -->
