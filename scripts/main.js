@@ -22,7 +22,7 @@ function gotoPage(type, name) {
 // This also allows us to go forwards and back in history
 onhashchange = (event) => {
     console.log(event.newURL);
-    const [ type, name ] = event.newURL.replace(/.*#!/, '').split('/').map(i => encodeURI(i || '').replace(/_/g, ' '));
+    const [ type, name ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
     pageType(type);
     pageName(name);
     const pageElement = $('#wiki-page-content');
@@ -168,6 +168,9 @@ const searchOptions = [
     })),
 ];
 
+function escapeRegExp(text) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+}
 // This is the function which figures out the results to show
 var substringMatcher = function(searchData) {
   return function findMatches(query, cb) {
@@ -177,7 +180,7 @@ var substringMatcher = function(searchData) {
     matches = [];
 
     // regex used to determine if a string contains the substring `q`
-    substrRegex = new RegExp(query, 'ig');
+    substrRegex = new RegExp(escapeRegExp(query), 'ig');
 
     // iterate through the pool of strings and for any string that
     // contains the substring `q`, add it to the `matches` array
