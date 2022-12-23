@@ -10881,15 +10881,15 @@ const applyBindings = ko.observable(false);
 
 // This is our main function for changing pages
 // Look at onhashchange for what happens after
-window.gotoPage = (type, name) => {
+window.gotoPage = (type, name, other) => {
   // Update our page hash, so if we reload it will load this page
-  window.location.hash = `#!${encodeURI(type).replace(/%20/g, '_')}/${encodeURI(name).replace(/%20/g, '_')}`;
+  window.location.hash = `#!${encodeURI(type).replace(/%20/g, '_')}/${encodeURI(name).replace(/%20/g, '_')}${other ? `/${other}`: ''}`;
 };
 
 // When the hash changes, we will load the new page
 // This also allows us to go forwards and back in history
 onhashchange = (event) => {
-  const [type, name] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
+  const [ type, name, other ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
   if (type == 'loading') {
     return;
   }
@@ -10919,7 +10919,17 @@ onhashchange = (event) => {
   const pageElementCustom = $('#wiki-page-custom-content');
   pageElementCustom.html('');
   $.get(`data/${encodeURIComponent(pageType()).replace(/%/g, '%25')}/${encodeURIComponent(pageName()).replace(/%/g, '%25')}.md`, (data) => {
-    pageElementCustom.html(md.render(data));
+    if (other == 'edit') {
+      pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = md.render(this.value)">${data}</textarea><div id="preview-edit">${md.render(data)}</div>`);
+    } else {
+      pageElementCustom.html(md.render(data));
+    }
+  }).fail(() => {
+    if (other == 'edit') {
+      pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = md.render(this.value)"></textarea><div id="preview-edit"></div>`);
+    } else {
+      pageElementCustom.html('');
+    }
   });
 };
 
