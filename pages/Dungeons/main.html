@@ -19,14 +19,14 @@
         <div>
             <h3>Bosses:</h3>
             <!-- ko foreach: $data.bossList -->
-                <span class="badge badge-secondary" data-bind="text: $data.name"></span>
+                <span class="badge text-bg-secondary" data-bind="text: $data.name"></span>
             <!-- /ko -->
         </div>
         <br/>
         <div>
             <h3>Encounters:</h3>
             <!-- ko foreach: $data.enemyList -->
-                <span class="badge badge-secondary" data-bind="text: $data.pokemon || $data.name || $data"></span>
+                <span class="badge text-bg-secondary" data-bind="text: $data.pokemon || $data.name || $data"></span>
             <!-- /ko -->
         </div>
         <br/>
@@ -35,7 +35,7 @@
             <!-- ko foreach: Object.entries(Object.values(dungeonList)[0].lootTable) -->
                 <h5 data-bind="text: $data[0]"></h5>
                 <!-- ko foreach: $data[1] -->
-                    <span class="badge badge-secondary" data-bind="text: $data.loot"></span>
+                    <span class="badge text-bg-secondary" data-bind="text: $data.loot"></span>
                 <!-- /ko -->
             <!-- /ko -->
         </div>

@@ -16,13 +16,13 @@
         <div data-bind="if: Object.values(TownList).some((t) => t.content.some((c) => c instanceof Shop && c.items.some((i) => i.name == $data.name)))">
             <h3>Can be purchased in the following towns:</h3>
             <!-- ko foreach : Object.values(TownList).filter((t) => t.content.some((c) => c instanceof Shop && c.items.some((i) => i.name == $data.name))) -->
-            <span class="badge badge-secondary" data-bind="text: $data.name"></span>
+            <span class="badge text-bg-secondary" data-bind="text: $data.name"></span>
             <!-- /ko -->
         </div>
         <div data-bind="if: Object.values(dungeonList).some((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name)))">
             <h3>Can be found in the following dungeons:</h3>
             <!-- ko foreach : Object.values(dungeonList).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name))) -->
-            <span class="badge badge-secondary" data-bind="text: $data.name"></span>
+            <span class="badge text-bg-secondary" data-bind="text: $data.name"></span>
             <!-- /ko -->
         </div>
     <!-- /ko -->
