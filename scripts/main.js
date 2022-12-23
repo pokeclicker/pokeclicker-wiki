@@ -30,7 +30,6 @@ function gotoPage(type, name) {
 // When the hash changes, we will load the new page
 // This also allows us to go forwards and back in history
 onhashchange = (event) => {
-    console.log(event.newURL);
     const [ type, name ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
     pageType(type);
     pageName(name);
