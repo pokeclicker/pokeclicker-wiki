@@ -10986,7 +10986,7 @@ var plugin = Plugin(
   (match, utils) => {
     var url = `gotoPage('${utils.escape(match[1])}', '${utils.escape(match[2])}')`;
 
-    return `<a href="#" class="badge text-bg-secondary" onclick="${url}; return false;">${utils.escape(match[2])}</a>`;
+    return `<a href="#!${utils.escape(match[1])}/${utils.escape(match[2])}" class="badge text-bg-secondary" onclick="${url}; return false;">${utils.escape(match[2])}</a>`;
   }
 );
 
@@ -11004,7 +11004,7 @@ var plugin = Plugin(
   (match, utils) => {
     var url = `gotoPage('${utils.escape(match[1])}', '${utils.escape(match[2])}')`;
 
-    return `<a href="#" onclick="${url}; return false;">${utils.escape(match[2])}</a>`;
+    return `<a href="#!${utils.escape(match[1])}/${utils.escape(match[2])}" onclick="${url}; return false;">${utils.escape(match[2])}</a>`;
   }
 );
 
