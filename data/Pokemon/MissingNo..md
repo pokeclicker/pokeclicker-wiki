@@ -10,3 +10,5 @@ Testing | 1252
 Test 3 | 1
 
 And all the other stuff you would expect of markdown..
+
+Here's a link to [[Pokemon|Charmander]]
