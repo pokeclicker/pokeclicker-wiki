@@ -168,6 +168,11 @@ const searchOptions = [
         type: 'Items', 
         page: i.displayName,
     })),
+    ...Object.values(UndergroundItems.list.filter((ui) => !Object.values(ItemList).some((i) => i.displayName == ui.displayName))).map(i => ({
+        display: i.displayName,
+        type: 'Items', 
+        page: i.displayName,
+    })),
     // Pokémon
     {
         display:'Pokémon',

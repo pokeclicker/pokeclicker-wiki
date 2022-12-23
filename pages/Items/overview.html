@@ -13,11 +13,19 @@
                 <th>Description</th>
             </tr>
         </thead>
-        <tbody data-bind="foreach: Object.values(ItemList)">
+        <tbody>
+            <!-- ko foreach: Object.values(ItemList) -->
             <tr class="clickable" data-bind="click: () => { gotoPage('Items', $data.displayName); return false; }">
                 <td data-bind="text: $data.displayName"></td>
                 <td data-bind="html: $data.description"></td>
             </tr>
+            <!-- /ko -->
+            <!-- ko foreach: UndergroundItems.list.filter((ui) => !Object.values(ItemList).some((i) => i.displayName == ui.displayName)) -->
+            <tr class="clickable" data-bind="click: () => { gotoPage('Items', $data.displayName); return false; }">
+                <td data-bind="text: $data.displayName"></td>
+                <td>An item found in the underground</td>
+            </tr>
+            <!-- /ko -->
         </tbody>
     </table>
 </div>
