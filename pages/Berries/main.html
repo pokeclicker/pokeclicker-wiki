@@ -15,7 +15,7 @@
             <table class="table table-hover table-striped table-bordered">
                 <thead class="thead-dark">
                     <tr>
-                        <th class="text-center" colspan="2">Information</th>
+                        <th colspan="2">Information</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,20 +42,20 @@
                 </tbody>
                 <thead class="thead-dark">
                     <tr>
-                        <th class="text-center" colspan="2">Growth Times</th>
+                        <th colspan="2">Growth Times</th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- ko foreach: GameHelper.enumStrings(PlotStage) -->
                     <tr>
                         <td data-bind="text: $data"></td>
-                        <td data-bind="text: GameConstants.formatSecondsToTime($parent.growthTime[$index()])"></td>
+                        <td data-bind="text: GameConstants.formatSecondsToTime($parent.growthTime[$index()]).replace(/<\/br>/g, ' ')"></td>
                     </tr>
                     <!-- /ko -->
                 </tbody>
                 <thead class="thead-dark">
                     <tr>
-                        <th class="text-center" colspan="2">Flavors</th>
+                        <th colspan="2">Flavors</th>
                     </tr>
                 </thead>
                 <tbody>
