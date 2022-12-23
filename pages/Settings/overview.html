@@ -1,0 +1,27 @@
+<div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#" onclick="gotoPage('', ''); return false;">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Settings</li>
+        </ol>
+    </nav>
+    <h1>Settings</h1>
+    <table class="table table-hover table-striped  table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Option</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-bind="with: Settings.getSetting('theme')">
+                <td class="p-2" data-bind="text: $data.displayName"></td>
+                <td class="p-0">
+                    <select class="form-control" onchange="Settings.setSettingByName(this.name, this.value)" data-bind="foreach: $data.options, attr: {name}">
+                        <option data-bind="text: $data.text, value: $data.value, attr:{ selected: $parent.observableValue() == $data.value}"></option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

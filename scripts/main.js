@@ -109,6 +109,16 @@ PokemonHelper.getPokemonDiscord = () => [];
 */
 const searchOptions = [
     {
+        display:'Home',
+        type: '',
+        page: '',
+    },
+    {
+        display:'Settings',
+        type: 'Settings',
+        page: '',
+    },
+    {
         display:'Items',
         type: 'Items',
         page: '',
