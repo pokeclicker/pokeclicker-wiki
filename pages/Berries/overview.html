@@ -25,7 +25,7 @@
                 <td data-bind="text: BerryType[$data.type]"></td>
                 <td data-bind="text: $data.harvestAmount"></td>
                 <td data-bind="text: $data.farmValue"></td>
-                <td data-bind="html: `${GameConstants.formatSecondsToTime($data.growthTime[3])} to Ripe<br/>${GameConstants.formatSecondsToTime($data.growthTime[4] - $data.growthTime[3])} to Death`"></td>
+                <td data-bind="html: `${GameConstants.formatSecondsToTime($data.growthTime[3]).replace(/<\/br>/g, ' ')} to Ripe<br/>${GameConstants.formatSecondsToTime($data.growthTime[4] - $data.growthTime[3]).replace(/<\/br>/g, ' ')} to Death`"></td>
             </tr>
         </tbody>
     </table>
