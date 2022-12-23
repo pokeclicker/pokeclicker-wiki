@@ -76,13 +76,14 @@ $(document).ready(() => {
   window.location.hash = '#!loading';
   gotoPage(decodeURIComponent(type || ''), decodeURIComponent(name || ''));
 
+  ko.applyBindings({}, document.getElementById('page-nav'));
   ko.applyBindings({}, document.getElementById('nav-bar'));
   applyBindings.subscribe((v) => {
     // This doesn't work as we can only bind to an element once..
     if (v) {
       applyBindings(false);
       ko.cleanNode(document.getElementById('wiki-page-content'));
-      ko.applyBindings({}, document.getElementById('wiki-page-content'));
+      ko.applyBindings({}, document.getElementById('wiki-page-content'));''
     }
   });
 });

@@ -1,12 +1,5 @@
 <div>
     <!-- ko with: pageName() -->
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#" onclick="gotoPage('', ''); return false;">Home</a></li>
-                <li class="breadcrumb-item"><a href="#" onclick="gotoPage('Gems', ''); return false;">Gems</a></li>
-                <li class="breadcrumb-item active" aria-current="page" data-bind="text: $data + ' Gem'">Name</li>
-            </ol>
-        </nav>
         <h1 data-bind="text: $data + ' Gem'"></h1>
         <img data-bind="attr: {src: './pokeclicker/docs/' + Gems.image(PokemonType[$data])}"/>
 
