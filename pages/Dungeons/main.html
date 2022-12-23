@@ -19,14 +19,24 @@
         <div>
             <h3>Bosses:</h3>
             <!-- ko foreach: $data.bossList -->
-                <span class="badge text-bg-secondary" data-bind="text: $data.name"></span>
+                <!-- ko if: $data.baseHealth -->
+                    <a class="badge text-bg-secondary" href="#" data-bind="text: $data.name, click: () => { gotoPage('Pokemon', $data.name); return false; }"></a>
+                <!-- /ko -->
+                <!-- ko ifnot: $data.baseHealth -->
+                    <span class="badge text-bg-secondary" data-bind="text: $data.name"></span>
+                <!-- /ko -->
             <!-- /ko -->
         </div>
         <br/>
         <div>
             <h3>Encounters:</h3>
             <!-- ko foreach: $data.enemyList -->
-                <span class="badge text-bg-secondary" data-bind="text: $data.pokemon || $data.name || $data"></span>
+                <!-- ko ifnot: $data.name -->
+                    <a class="badge text-bg-secondary" href="#" data-bind="text: $data.pokemon || $data, click: () => { gotoPage('Pokemon', $data.pokemon || $data); return false; }"></a>
+                <!-- /ko -->
+                <!-- ko if: $data.name -->
+                    <span class="badge text-bg-secondary" data-bind="text: $data.name"></span>
+                <!-- /ko -->
             <!-- /ko -->
         </div>
         <br/>
@@ -35,7 +45,12 @@
             <!-- ko foreach: Object.entries(Object.values(dungeonList)[0].lootTable) -->
                 <h5 data-bind="text: $data[0]"></h5>
                 <!-- ko foreach: $data[1] -->
-                    <span class="badge text-bg-secondary" data-bind="text: $data.loot"></span>
+                    <!-- ko if: ItemList[$data.loot] -->
+                        <a class="badge text-bg-secondary" href="#" data-bind="text: ItemList[$data.loot].displayName, click: () => { gotoPage('Items', ItemList[$data.loot].displayName); return false; }"></a>
+                    <!-- /ko -->
+                    <!-- ko ifnot: ItemList[$data.loot] -->
+                        <span class="badge text-bg-secondary" data-bind="text: $data.loot"></span>
+                    <!-- /ko -->
                 <!-- /ko -->
             <!-- /ko -->
         </div>
