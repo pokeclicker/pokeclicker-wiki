@@ -1,0 +1,32 @@
+<div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#" onclick="gotoPage('', ''); return false;">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Berries</li>
+        </ol>
+    </nav>
+    <h1>Berries</h1>
+    <table class="table table-hover table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th class="col-1">ID</th>
+                <th class="col-1">Berry</th>
+                <th>Harvest Amount</th>
+                <th>Farm Points</th>
+                <th>Growth Time</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: App.game.farming.berryData">
+            <tr class="clickable align-middle" data-bind="if: $data!=-1, click: () => { gotoPage('Berries', BerryType[$data.type]); return false; }">
+                <td>
+                    <knockout data-bind="text: `#${($data.type + 1).toString().padStart(2, 0)}`"></knockout>
+                    <img height="30px" data-bind="attr: {src: './pokeclicker/docs/' + FarmController.getBerryImage($data.type)}"/>
+                </td>
+                <td data-bind="text: BerryType[$data.type]"></td>
+                <td data-bind="text: $data.harvestAmount"></td>
+                <td data-bind="text: $data.farmValue"></td>
+                <td data-bind="html: `${GameConstants.formatSecondsToTime($data.growthTime[3])} to Ripe<br/>${GameConstants.formatSecondsToTime($data.growthTime[4] - $data.growthTime[3])} to Death`"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

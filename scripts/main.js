@@ -108,9 +108,37 @@ Requirement.prototype.toJSON = function() {
 };
 
 // Custom binds as these aren't loaded
-App.game = {
-    breeding: new Breeding(),
-}
+const multiplier = new Multiplier();
+App.game = new Game(
+    new Update(),
+    new Profile(),
+    new Breeding(multiplier),
+    new Pokeballs(),
+    new Wallet(multiplier),
+    new KeyItems(),
+    new BadgeCase(),
+    new OakItems([20, 50, 100], multiplier),
+    new OakItemLoadouts(),
+    new PokemonCategories(),
+    new Party(multiplier),
+    new Gems(),
+    new Underground(),
+    new Farming(multiplier),
+    new LogBook(),
+    new RedeemableCodes(),
+    new Statistics(),
+    new Quests(),
+    new SpecialEvents(),
+    new Discord(),
+    new AchievementTracker(),
+    new Challenges(),
+    new BattleFrontier(),
+    multiplier,
+    new SaveReminder(),
+    new BattleCafeSaveObject(),
+    new DreamOrbController()
+);
+App.game.farming.initialize();
 
 // TODO: Fix these up somehow..
 // Overrides, these methods don't work if game not started..
@@ -175,6 +203,17 @@ const searchOptions = [
         display: `${t} Gem`,
         type: 'Gems',
         page: t,
+    })),
+    // Berries
+    {
+        display:'Berries',
+        type: 'Berries',
+        page: '',
+    },
+    ...App.game.farming.berryData.map(b => ({
+        display: `${BerryType[b.type]} Berry`,
+        type: 'Berries',
+        page: BerryType[b.type],
     })),
 ];
 

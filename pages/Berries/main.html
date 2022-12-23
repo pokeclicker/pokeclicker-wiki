@@ -1,0 +1,14 @@
+<div>
+    <!-- ko with: pageName() -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" onclick="gotoPage('', ''); return false;">Home</a></li>
+                <li class="breadcrumb-item"><a href="#" onclick="gotoPage('Berries', ''); return false;">Berries</a></li>
+                <li class="breadcrumb-item active" aria-current="page" data-bind="text: $data + ' Berry'">Name</li>
+            </ol>
+        </nav>
+        <h1 data-bind="text: $data + ' Berry'"></h1>
+        <img data-bind="attr: {src: './pokeclicker/docs/' + FarmController.getBerryImage(BerryType[$data])}"/>
+
+    <!-- /ko -->
+</div>
