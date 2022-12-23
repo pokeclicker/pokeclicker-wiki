@@ -1,0 +1,27 @@
+{
+  "name": "pokeclicker-wiki",
+  "description": "A static wiki for the idle clicker game PokéClicker. This is currently a proof of concept. It has access to the PokéClicker code, and can use that to auto generate pages.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "browserify": "^17.0.0"
+  },
+  "scripts": {
+    "start": "browserify scripts/main.js -o bundle.js",
+    "test": "eslint ./scripts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pokeclicker/pokeclicker-wiki.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pokeclicker/pokeclicker-wiki/issues"
+  },
+  "homepage": "https://github.com/pokeclicker/pokeclicker-wiki#readme",
+  "dependencies": {
+    "markdown-it": "^13.0.1",
+    "markdown-it-regexp": "^0.4.0"
+  }
+}
