@@ -143,6 +143,11 @@ const searchOptions = [
         type: 'Dungeons',
         page: d.name,
     })),
+    ...GameHelper.enumStrings(PokemonType).filter(t => t != 'None').map(t => ({
+        display: `${t} Gem`,
+        type: 'Gems',
+        page: t,
+    })),
 ];
 var substringMatcher = function(searchData) {
   return function findMatches(query, cb) {
