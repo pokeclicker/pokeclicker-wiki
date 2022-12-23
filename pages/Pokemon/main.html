@@ -2,7 +2,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#" onclick="gotoPage('', ''); return false;">Home</a></li>
-            <li class="breadcrumb-item"><a href="#" onclick="gotoPage('pokemon', ''); return false;">Pokémon</a></li>
+            <li class="breadcrumb-item"><a href="#" onclick="gotoPage('Pokemon', ''); return false;">Pokémon</a></li>
             <li class="breadcrumb-item active" aria-current="page" data-bind="text: pageName">Name</li>
         </ol>
     </nav>
@@ -17,7 +17,7 @@
             <!-- ko foreach: $data.evolutions -->
             <div>
                 <a href="#" data-bind="
-                    click: () => { gotoPage('pokemon', $data.evolvedPokemon); return false; },
+                    click: () => { gotoPage('Pokemon', $data.evolvedPokemon); return false; },
                     text: $data.evolvedPokemon"></a>
             </div>
             <!-- /ko -->

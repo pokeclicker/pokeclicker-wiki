@@ -110,32 +110,37 @@ PokemonHelper.getPokemonDiscord = () => [];
 const searchOptions = [
     {
         display:'Items',
-        type: 'items',
+        type: 'Items',
         page: '',
     },
     {
         display:'Pokémon',
-        type: 'pokemon',
+        type: 'Pokemon',
+        page: '',
+    },
+    {
+        display:'Dungeons',
+        type: 'Dungeons',
         page: '',
     },
     {
         display:'Gems',
-        type: 'gems',
+        type: 'Gems',
         page: '',
     },
     ...Object.values(ItemList).map(i => ({
         display: i.displayName,
-        type: 'items', 
+        type: 'Items', 
         page: i.displayName,
     })),
     ...Object.values(pokemonList).map(p => ({
         display: p.name,
-        type: 'pokemon',
+        type: 'Pokemon',
         page: p.name,
     })),
     ...Object.values(dungeonList).map(d => ({
         display: d.name,
-        type: 'dungeons',
+        type: 'Dungeons',
         page: d.name,
     })),
 ];
