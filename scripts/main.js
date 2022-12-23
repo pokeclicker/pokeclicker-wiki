@@ -12,7 +12,7 @@ errorPage = '';
 $.get('404.html', (data) => {
     errorPage = data;
 }).fail(() => {
-    pageElement.html(`<h1>Page not found</h1>`);
+    errorPage = '<h1>Page not found</h1>';
 });
 
 // Setup our pages observables
@@ -31,6 +31,7 @@ function gotoPage(type, name) {
 // This also allows us to go forwards and back in history
 onhashchange = (event) => {
     const [ type, name ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
+    if (type == 'loading') return;
     pageType(type);
     pageName(name);
     const pageElement = $('#wiki-page-content');
@@ -40,7 +41,7 @@ onhashchange = (event) => {
     const clone = template.content.cloneNode(true);
     pageElement.append(clone);
     let page = '';
-    if (!pageType()&&!pageName()) {
+    if (!pageType() && !pageName()) {
         page = 'pages/home.html';
     } else if (!pageName()) {
         page = `pages/${encodeURIComponent(pageType())}/overview.html`;
