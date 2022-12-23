@@ -10946,19 +10946,19 @@ window.onbeforeunload = () => {
   Settings.saveDefault();
 };
 
-},{"./game":95,"./markdown-renderer":99,"./typeahead":100}],97:[function(require,module,exports){
+},{"./game":95,"./markdown-renderer":100,"./typeahead":101}],97:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
 var plugin = Plugin(
-  // regexp to match
-  /@\[\[([^|\]]+)\|([^|\]]+)\]\]/,
+  // regexp to match (specify height or width)
+  /\[\[File:([^\|\]]+)(\|(\d+)(px)?)?\]\]/,
 
   // this function will be called when something matches
   (match, utils) => {
-    var url = `gotoPage('${utils.escape(match[1])}', '${utils.escape(match[2])}')`;
+    var url = `./images/${utils.escape(match[1])}`;
 
-    return `<a href="#" class="badge text-bg-secondary" onclick="${url}; return false;">${utils.escape(match[2])}</a>`;
+    return `<img src="${url}" ${match[3] ? `width="${match[3]}px"` : ''}/>`;
   }
 );
 
@@ -10970,7 +10970,25 @@ var Plugin = require('markdown-it-regexp');
 
 var plugin = Plugin(
   // regexp to match
-  /\[\[([^|\]]+)\|([^|\]]+)\]\]/,
+  /@\[\[([^|\]]+)\/([^|\]]+)\]\]/,
+
+  // this function will be called when something matches
+  (match, utils) => {
+    var url = `gotoPage('${utils.escape(match[1])}', '${utils.escape(match[2])}')`;
+
+    return `<a href="#" class="badge text-bg-secondary" onclick="${url}; return false;">${utils.escape(match[2])}</a>`;
+  }
+);
+
+module.exports = plugin;
+
+},{"markdown-it":24,"markdown-it-regexp":21}],99:[function(require,module,exports){
+var md     = require('markdown-it');
+var Plugin = require('markdown-it-regexp');
+
+var plugin = Plugin(
+  // regexp to match
+  /\[\[([^|\]]+)\/([^|\]]+)\]\]/,
 
   // this function will be called when something matches
   (match, utils) => {
@@ -10982,15 +11000,17 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":24,"markdown-it-regexp":21}],99:[function(require,module,exports){
+},{"markdown-it":24,"markdown-it-regexp":21}],100:[function(require,module,exports){
 const markdownit          = require('markdown-it');
-const wikiLinkPlugin      = require('./markdown-plugins/wiki-links.js');
-const wikiLinkBadgePlugin = require('./markdown-plugins/wiki-links-badge.js');
+const imageSizePlugin = require('./markdown-plugins/image-size.js');
+const linkBadgePlugin = require('./markdown-plugins/wiki-links-badge.js');
+const linkPlugin      = require('./markdown-plugins/wiki-links.js');
 
 // Setup our markdown editor
 const md = new markdownit()
-  .use(wikiLinkBadgePlugin)
-  .use(wikiLinkPlugin);
+  .use(imageSizePlugin)
+  .use(linkBadgePlugin)
+  .use(linkPlugin);
 md.renderer.rules.table_open = function(tokens, idx) {
   return '<table class="table table-hover table-striped table-bordered">';
 };
@@ -10999,7 +11019,7 @@ window.md = md;
 
 module.exports = md;
 
-},{"./markdown-plugins/wiki-links-badge.js":97,"./markdown-plugins/wiki-links.js":98,"markdown-it":24}],100:[function(require,module,exports){
+},{"./markdown-plugins/image-size.js":97,"./markdown-plugins/wiki-links-badge.js":98,"./markdown-plugins/wiki-links.js":99,"markdown-it":24}],101:[function(require,module,exports){
 const searchOptions = [
   {
     display:'Home',
