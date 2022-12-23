@@ -1,8 +1,3 @@
-function gotoPage(type, name) {
-    // Update our page hash, so if we reload it will load this page
-    window.location.hash = `#!${encodeURI(type).replace(/%20/g, '_')}/${encodeURI(name).replace(/%20/g, '_')}`;
-}
-
 // Load our error page for when we need it
 errorPage = '';
 $.get('404.html', (data) => {
@@ -11,6 +6,20 @@ $.get('404.html', (data) => {
     pageElement.html(`<h1>Page not found</h1>`);
 });
 
+// Setup our pages observables
+const pageType = ko.observable();
+const pageName = ko.observable();
+const applyBindings = ko.observable(false);
+
+// This is our main function for changing pages
+// Look at onhashchange for what happens after
+function gotoPage(type, name) {
+    // Update our page hash, so if we reload it will load this page
+    window.location.hash = `#!${encodeURI(type).replace(/%20/g, '_')}/${encodeURI(name).replace(/%20/g, '_')}`;
+}
+
+// When the hash changes, we will load the new page
+// This also allows us to go forwards and back in history
 onhashchange = (event) => {
     console.log(event.newURL);
     const [ type, name ] = event.newURL.replace(/.*#!/, '').split('/').map(i => encodeURI(i || '').replace(/_/g, ' '));
@@ -50,11 +59,6 @@ md.renderer.rules.table_open = function(tokens, idx) {
     return '<table class="table table-hover table-striped table-bordered">';
 };
 
-// Setup our pages observables
-const pageType = ko.observable();
-const pageName = ko.observable();
-const applyBindings = ko.observable(false);
-
 // Load the page the user is trying to visit
 (() => {
     const [ type, name ] = window.location.hash.substr(2).split('/');
@@ -75,7 +79,7 @@ $(document).ready(() => {
     })
 });
 
-// Save any settings the user has set
+// Save any settings the user has set before they leave
 window.onbeforeunload = () => {
     Settings.saveDefault();
 }
@@ -118,24 +122,10 @@ const searchOptions = [
         type: 'Settings',
         page: '',
     },
+    // Items
     {
         display:'Items',
         type: 'Items',
-        page: '',
-    },
-    {
-        display:'Pokémon',
-        type: 'Pokemon',
-        page: '',
-    },
-    {
-        display:'Dungeons',
-        type: 'Dungeons',
-        page: '',
-    },
-    {
-        display:'Gems',
-        type: 'Gems',
         page: '',
     },
     ...Object.values(ItemList).map(i => ({
@@ -143,22 +133,42 @@ const searchOptions = [
         type: 'Items', 
         page: i.displayName,
     })),
+    // Pokémon
+    {
+        display:'Pokémon',
+        type: 'Pokemon',
+        page: '',
+    },
     ...Object.values(pokemonList).map(p => ({
         display: p.name,
         type: 'Pokemon',
         page: p.name,
     })),
+    // Dungeons
+    {
+        display:'Dungeons',
+        type: 'Dungeons',
+        page: '',
+    },
     ...Object.values(dungeonList).map(d => ({
         display: d.name,
         type: 'Dungeons',
         page: d.name,
     })),
+    // Gems
+    {
+        display:'Gems',
+        type: 'Gems',
+        page: '',
+    },
     ...GameHelper.enumStrings(PokemonType).filter(t => t != 'None').map(t => ({
         display: `${t} Gem`,
         type: 'Gems',
         page: t,
     })),
 ];
+
+// This is the function which figures out the results to show
 var substringMatcher = function(searchData) {
   return function findMatches(query, cb) {
     var matches, substringRegex;
@@ -180,6 +190,7 @@ var substringMatcher = function(searchData) {
   };
 };
 
+// Initiate out autofill/typeahead
 $('#search').typeahead({
   hint: true,
   highlight: true,
