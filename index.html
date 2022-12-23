@@ -71,10 +71,10 @@
                     <!-- ko if: window.pageType() -->
                     <li data-bind="class: 'breadcrumb-item' + (window.pageType() && !window.pageName() ? ' active' : '')">
                         <!-- ko if: window.pageName() -->
-                        <a href="#" onclick="gotoPage('', ''); return false;" data-bind="text: pageType()"></a>
+                        <a href="#" onclick="gotoPage(window.pageType(), ''); return false;" data-bind="text: window.pageType()"></a>
                         <!-- /ko -->
                         <!-- ko ifnot: window.pageName() -->
-                        <span data-bind="text: pageType()"></span>
+                        <span data-bind="text: window.pageType()"></span>
                         <!-- /ko -->
                     </li>
                     <!-- /ko -->
