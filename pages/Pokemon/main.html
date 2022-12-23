@@ -3,7 +3,6 @@
         <h1>Pokémon not found...</h1>
     <!-- /ko -->
     <!-- ko with: pokemonList.find((p) => p.name == pageName()) -->
-        <h1 data-bind="text: $data.name"></h1>
         <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>
         <div data-bind="visible: $data.evolutions">
             <h3>Evolves into:</h3>

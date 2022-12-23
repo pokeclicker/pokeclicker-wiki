@@ -85,8 +85,9 @@
                     <!-- /ko -->
                 </ol>
             </nav>
-            <div id="wiki-page-content"></div>
+            <h1 id="page-title" data-bind="if: window.pageType(), text: window.pageName() ? window.pageName() : window.pageType()"></h1>
             <div id="wiki-page-custom-content"></div>
+            <div id="wiki-page-content"></div>
         </main>
         
         <template id="loading">

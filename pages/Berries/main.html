@@ -1,7 +1,6 @@
 <div>
     <!-- ko with: pageName() -->
         <div data-bind="with: App.game.farming.berryData[BerryType[$data]]">
-            <h1 data-bind="text: BerryType[$data.type] + ' Berry'"></h1>
             <img data-bind="attr: {src: './pokeclicker/docs/' + FarmController.getBerryImage($data.type)}"/>
             <p data-bind="text: $data.description"></p>
 
