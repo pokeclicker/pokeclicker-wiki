@@ -10840,6 +10840,7 @@ App.game = new Game(
   new DreamOrbController()
 );
 App.game.farming.initialize();
+QuestLineHelper.loadQuestLines();
 
 // TODO: Fix these up somehow..
 // Overrides, these methods don't work if game not started..
