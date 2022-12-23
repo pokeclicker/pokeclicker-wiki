@@ -34,22 +34,23 @@
     </head>
     <body style="padding-top: 5rem; min-height: 100vh;" class="no-select">
         <nav id="nav-bar" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-            <link id="theme-link" href="https://bootswatch.com/5/yeti/bootstrap.min.css" rel="stylesheet" data-bind="attr: {href: 'https://bootswatch.com/4/' + Settings.getSetting('theme').observableValue() + '/bootstrap.min.css'}">
-            <a class="navbar-brand" href="#" onclick="gotoPage('', ''); return false;">PokéClicker Wiki</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                <!-- <li class="nav-item active">
-                    <a class="nav-link" href="#" onclick="gotoPage('', ''); return false;">Home</a>
-                </li> -->
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input id="search" type="text" class="form-control typeahead" autocomplete="off" placeholder="Search" />
-                    <button class="btn btn-secondary ml-1" onclick="gotoPage('Settings', ''); return false;">⚙️</button>
-                </form>
+            <link id="theme-link" href="https://bootswatch.com/5/yeti/bootstrap.min.css" rel="stylesheet" data-bind="attr: {href: 'https://bootswatch.com/5/' + Settings.getSetting('theme').observableValue() + '/bootstrap.min.css'}">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" onclick="gotoPage('', ''); return false;">PokéClicker Wiki</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <!-- <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="gotoPage('', ''); return false;">Home</a>
+                        </li> -->
+                    </ul>
+                    <form class="d-flex">
+                        <input id="search" type="text" class="form-control typeahead me-2 text-dark" autocomplete="off" placeholder="Search" />
+                        <button tabindex="-1" class="btn btn-secondary ml-1" onclick="gotoPage('Settings', ''); return false;">⚙️</button>
+                    </form>
+                </div>
             </div>
         </nav>
 

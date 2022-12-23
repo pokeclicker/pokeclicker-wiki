@@ -68,6 +68,14 @@ md.renderer.rules.table_open = function(tokens, idx) {
 
 $('document').off('ready');
 $(document).ready(() => {
+    // Add bootstrap 5 themes
+    themes = Settings.getSetting('theme')
+    themes.options.push(new SettingOption('Morph', 'morph'))
+    themes.options.push(new SettingOption('Quartz', 'quartz'))
+    themes.options.push(new SettingOption('Vapor', 'vapor'))
+    themes.options.push(new SettingOption('Zephyr', 'zephyr'))
+    themes.options.sort((a, b) => (a.text).localeCompare(b.text))
+
     ko.applyBindings({}, document.getElementById('nav-bar'));
     applyBindings.subscribe((v) => {
         // This doesn't work as we can only bind to an element once..
