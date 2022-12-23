@@ -68,15 +68,12 @@ md.renderer.rules.table_open = function(tokens, idx) {
     return '<table class="table table-hover table-striped table-bordered">';
 };
 
-// Load the page the user is trying to visit
-(() => {
+$('document').off('ready');
+$(document).ready(() => {
+    // Load the page the user is trying to visit
     const [ type, name ] = window.location.hash.substr(2).split('/');
     window.location.hash = `#!loading`;
     gotoPage(decodeURIComponent(type || ''), decodeURIComponent(name || ''));
-})();
-
-$('document').off('ready');
-$(document).ready(() => {
 
     ko.applyBindings({}, document.getElementById('nav-bar'));
     applyBindings.subscribe((v) => {

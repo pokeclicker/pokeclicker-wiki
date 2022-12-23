@@ -7,8 +7,66 @@
                 <li class="breadcrumb-item active" aria-current="page" data-bind="text: $data + ' Berry'">Name</li>
             </ol>
         </nav>
-        <h1 data-bind="text: $data + ' Berry'"></h1>
-        <img data-bind="attr: {src: './pokeclicker/docs/' + FarmController.getBerryImage(BerryType[$data])}"/>
+        <div data-bind="with: App.game.farming.berryData[BerryType[$data]]">
+            <h1 data-bind="text: BerryType[$data.type] + ' Berry'"></h1>
+            <img data-bind="attr: {src: './pokeclicker/docs/' + FarmController.getBerryImage($data.type)}"/>
+            <p data-bind="text: $data.description"></p>
 
+            <table class="table table-hover table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="text-center" colspan="2">Information</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Color</td>
+                        <td data-bind="text: BerryColor[$data.color]"></td>
+                    </tr>
+                    <tr>
+                        <td>Exp</td>
+                        <td data-bind="text: $data.exp.toLocaleString()"></td>
+                    </tr>
+                    <tr>
+                        <td>Farm Points</td>
+                        <td data-bind="text: $data.farmValue.toLocaleString()"></td>
+                    </tr>
+                    <tr>
+                        <td>Harvest Amount</td>
+                        <td data-bind="text: $data.harvestAmount.toLocaleString()"></td>
+                    </tr>
+                    <tr>
+                        <td>Replant Chance</td>
+                        <td data-bind="text: ($data.replantRate * 100) + '%'"></td>
+                    </tr>
+                </tbody>
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="text-center" colspan="2">Growth Times</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- ko foreach: GameHelper.enumStrings(PlotStage) -->
+                    <tr>
+                        <td data-bind="text: $data"></td>
+                        <td data-bind="text: GameConstants.formatSecondsToTime($parent.growthTime[$index()])"></td>
+                    </tr>
+                    <!-- /ko -->
+                </tbody>
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="text-center" colspan="2">Flavors</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- ko foreach: GameHelper.enumStrings(FlavorType) -->
+                    <tr>
+                        <td data-bind="text: $data"></td>
+                        <td data-bind="text: $parent.flavors[$index()].value"></td>
+                    </tr>
+                    <!-- /ko -->
+                </tbody>
+            </table>
+        </div>
     <!-- /ko -->
 </div>
