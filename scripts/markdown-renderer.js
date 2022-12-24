@@ -2,6 +2,7 @@ const markdownit      = require('markdown-it');
 
 // Setup our markdown editor
 const md = new markdownit()
+  .use(require('./markdown-plugins/id-element.js'))
   .use(require('./markdown-plugins/image-size.js'))
   .use(require('./markdown-plugins/wiki-links-badge.js'))
   .use(require('./markdown-plugins/wiki-links.js'));
