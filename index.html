@@ -27,14 +27,18 @@
                 cursor: pointer;
             }
             body {
-                padding-top: 5rem;
                 padding-bottom: 5rem;
-                min-height: 100vh;
             }
         </style>
 
     </head>
     <body class="no-select">
+        <!-- Have this 2nd navbar for spacing of the body -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#!">PokéClicker Wiki</a>
+            </div>
+        </nav>
         <nav id="nav-bar" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
             <link id="theme-link" href="https://bootswatch.com/5/yeti/bootstrap.min.css" rel="stylesheet" data-bind="attr: {href: 'https://bootswatch.com/5/' + Settings.getSetting('theme').observableValue() + '/bootstrap.min.css'}">
             <div class="container-fluid">
