@@ -11157,6 +11157,17 @@ const searchOptions = [
     type: 'Berries',
     page: BerryType[b.type],
   })),
+  // QuestLines
+  {
+    display:'QuestLines',
+    type: 'QuestLines',
+    page: '',
+  },
+  ...App.game.quests.questLines().map(q => ({
+    display: q.name,
+    type: 'QuestLines',
+    page: q.name,
+  })),
 ];
 
 
