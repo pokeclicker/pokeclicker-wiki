@@ -1,7 +1,10 @@
 const markdownit      = require('markdown-it');
 
 // Setup our markdown editor
-const md = new markdownit()
+const md = new markdownit({
+    breaks: true,
+  })
+  .use(require('./markdown-plugins/hidden-comments.js'))
   .use(require('./markdown-plugins/id-element.js'))
   .use(require('./markdown-plugins/image-size.js'))
   .use(require('./markdown-plugins/wiki-links-badge.js'))
