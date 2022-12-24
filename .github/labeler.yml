@@ -1,0 +1,16 @@
+# Add 'images' tag to any changes within 'images' folder or any subfolders
+images:
+- images/**/*
+
+# Add 'markdown' tag to any changes within 'data' folder or any subfolders
+markdown:
+- data/**/*
+
+# Add 'html' tag to any change to .html files within the entire repository. Quotation marks are required for the leading asterisk
+html:
+- '**/*.html'
+
+# Add 'script' tag to any change to .js files within the entire repository. Quotation marks are required for the leading asterisk
+script:
+- '**/*.js'
+
