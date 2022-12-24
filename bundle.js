@@ -10983,13 +10983,13 @@ var Plugin = require('markdown-it-regexp');
 
 var plugin = Plugin(
   // regexp to match
-  /@\[\[([^|\]]+)\/([^|\]]+)\]\]/,
+  /@\[\[([^\/\]]+)(\/([^\]]+))?\]\]/,
 
   // this function will be called when something matches
   (match, utils) => {
-    var url = `gotoPage('${utils.escape(match[1])}', '${utils.escape(match[2])}')`;
+    var url = `gotoPage('${utils.escape(match[1])}', '${utils.escape(match[3] || '')}')`;
 
-    return `<a href="#!${utils.escape(match[1])}/${utils.escape(match[2])}" class="badge text-bg-secondary" onclick="${url}; return false;">${utils.escape(match[2])}</a>`;
+    return `<a class="badge text-bg-secondary" href="#!${utils.escape(match[1])}/${utils.escape(match[3] || '')}" onclick="${url}; return false;">${utils.escape(match[3] || match[1])}</a>`;
   }
 );
 
@@ -11001,7 +11001,7 @@ var Plugin = require('markdown-it-regexp');
 
 var plugin = Plugin(
   // regexp to match
-  /\[\[([^|\]]+)(\/([^|\]]+))?\]\]/,
+  /\[\[([^\/\]]+)(\/([^\]]+))?\]\]/,
 
   // this function will be called when something matches
   (match, utils) => {
@@ -11014,16 +11014,13 @@ var plugin = Plugin(
 module.exports = plugin;
 
 },{"markdown-it":24,"markdown-it-regexp":21}],100:[function(require,module,exports){
-const markdownit          = require('markdown-it');
-const imageSizePlugin = require('./markdown-plugins/image-size.js');
-const linkBadgePlugin = require('./markdown-plugins/wiki-links-badge.js');
-const linkPlugin      = require('./markdown-plugins/wiki-links.js');
+const markdownit      = require('markdown-it');
 
 // Setup our markdown editor
 const md = new markdownit()
-  .use(imageSizePlugin)
-  .use(linkBadgePlugin)
-  .use(linkPlugin);
+  .use(require('./markdown-plugins/image-size.js'))
+  .use(require('./markdown-plugins/wiki-links-badge.js'))
+  .use(require('./markdown-plugins/wiki-links.js'));
 md.renderer.rules.table_open = function(tokens, idx) {
   return '<table class="table table-hover table-striped table-bordered">';
 };

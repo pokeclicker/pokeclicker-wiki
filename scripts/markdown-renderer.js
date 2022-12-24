@@ -1,13 +1,10 @@
-const markdownit          = require('markdown-it');
-const imageSizePlugin = require('./markdown-plugins/image-size.js');
-const linkBadgePlugin = require('./markdown-plugins/wiki-links-badge.js');
-const linkPlugin      = require('./markdown-plugins/wiki-links.js');
+const markdownit      = require('markdown-it');
 
 // Setup our markdown editor
 const md = new markdownit()
-  .use(imageSizePlugin)
-  .use(linkBadgePlugin)
-  .use(linkPlugin);
+  .use(require('./markdown-plugins/image-size.js'))
+  .use(require('./markdown-plugins/wiki-links-badge.js'))
+  .use(require('./markdown-plugins/wiki-links.js'));
 md.renderer.rules.table_open = function(tokens, idx) {
   return '<table class="table table-hover table-striped table-bordered">';
 };
