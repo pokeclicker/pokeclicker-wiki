@@ -10919,7 +10919,7 @@ onhashchange = (event) => {
 
   const pageElementCustom = $('#wiki-page-custom-content');
   pageElementCustom.html('');
-  $.get(`data/${encodeURIComponent(pageType()).replace(/%/g, '%25')}/${encodeURIComponent(pageName()).replace(/%/g, '%25')}.md`, (data) => {
+  $.get(`data/${encodeURIComponent(pageType()).replace(/%/g, '%25')}/${encodeURIComponent(pageName() || 'main').replace(/%/g, '%25')}.md`, (data) => {
     if (other == 'edit') {
       pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = md.render(this.value)">${data}</textarea><div id="preview-edit">${md.render(data)}</div>`);
     } else {
