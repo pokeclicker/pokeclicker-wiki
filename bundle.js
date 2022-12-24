@@ -11039,6 +11039,11 @@ const searchOptions = [
     page: '',
   },
   {
+    display:'Wiki Guide',
+    type: 'Wiki Guide',
+    page: '',
+  },
+  {
     display:'Settings',
     type: 'Settings',
     page: '',
