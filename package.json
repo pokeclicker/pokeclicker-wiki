@@ -3,11 +3,10 @@
   "description": "A static wiki for the idle clicker game PokéClicker. This is currently a proof of concept. It has access to the PokéClicker code, and can use that to auto generate pages.",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {
-    "browserify": "^17.0.0"
-  },
   "scripts": {
-    "start": "browserify scripts/main.js -o bundle.js",
+    "start": "npm run build",
+    "build": "browserify scripts/main.js -o bundle.js",
+    "watch": "watchify scripts/main.js -o bundle.js",
     "test": "eslint ./scripts"
   },
   "repository": {
@@ -23,5 +22,9 @@
   "dependencies": {
     "markdown-it": "^13.0.1",
     "markdown-it-regexp": "^0.4.0"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "watchify": "^4.0.0"
   }
 }
