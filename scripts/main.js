@@ -64,6 +64,8 @@ onhashchange = (event) => {
     pageElement.html(data);
     applyBindings(true);
   }).fail(() => {
+    pageType('Page not found');
+    pageName('');
     pageElement.html(errorPage);
   });
 
