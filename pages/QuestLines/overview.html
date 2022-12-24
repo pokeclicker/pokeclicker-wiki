@@ -11,9 +11,9 @@
         </thead>
         <tbody data-bind="foreach: App.game.quests.questLines()">
             <tr class="clickable" data-bind="click: () => { gotoPage('QuestLines', $data.name); return false; }">
-                <td data-bind="$data.name"></td>
-                <td data-bind="$data.description"></td>
-                <td data-bind="GameConstants.BulletinBoards[$data.bulletinBoard]"></td>
+                <td data-bind="text: $data.name"></td>
+                <td data-bind="text: $data.description"></td>
+                <td data-bind="text: GameConstants.BulletinBoards[$data.bulletinBoard]"></td>
             </tr>
         </tbody>
     </table>
