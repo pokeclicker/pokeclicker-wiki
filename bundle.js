@@ -10917,9 +10917,11 @@ onhashchange = (event) => {
     pageElement.html(errorPage);
   });
 
+  const cleanFileName = (s) => s.replace(/[^\s\w\(\)'"!-]/gi, "-");
+
   const pageElementCustom = $('#wiki-page-custom-content');
   pageElementCustom.html('');
-  $.get(`data/${encodeURIComponent(pageType()).replace(/%/g, '%25')}/${encodeURIComponent(pageName() || 'overview').replace(/%/g, '%25')}.md`, (data) => {
+  $.get(`data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`, (data) => {
     if (other == 'edit') {
       pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = md.render(this.value)">${data}</textarea><div id="preview-edit">${md.render(data)}</div>`);
     } else {
