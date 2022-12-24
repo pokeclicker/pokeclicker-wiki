@@ -7,11 +7,9 @@
         <div data-bind="visible: $data.evolutions">
             <h3>Evolves into:</h3>
             <!-- ko foreach: $data.evolutions -->
-            <div>
-                <a href="#" data-bind="
-                    click: () => { gotoPage('Pokemon', $data.evolvedPokemon); return false; },
+                <a href="#!" class="badge text-bg-secondary" data-bind="
+                    attr: { href: `#!Pokemon/${$data.evolvedPokemon}` },
                     text: $data.evolvedPokemon"></a>
-            </div>
             <!-- /ko -->
         </div>
         <div>

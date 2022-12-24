@@ -14,7 +14,7 @@
         <div data-bind="if: Object.values(dungeonList).some((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name)))">
             <h3>Can be found in the following dungeons:</h3>
             <!-- ko foreach : Object.values(dungeonList).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name))) -->
-                <a class="badge text-bg-secondary" href="#" data-bind="text: $data.name, click: () => { gotoPage('Dungeons', $data.name); return false; }"></a>
+                <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Dungeons/${$data.name}` }"></a>
             <!-- /ko -->
         </div>
     <!-- /ko -->
@@ -30,7 +30,7 @@
     <div data-bind="if: Object.values(dungeonList).some((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name)))">
         <h3>Can be found in the following dungeons:</h3>
         <!-- ko foreach : Object.values(dungeonList).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name))) -->
-            <a class="badge text-bg-secondary" href="#" data-bind="text: $data.name, click: () => { gotoPage('Dungeons', $data.name); return false; }"></a>
+            <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Dungeons/${$data.name}` }"></a>
         <!-- /ko -->
     </div>
 <!-- /ko -->
