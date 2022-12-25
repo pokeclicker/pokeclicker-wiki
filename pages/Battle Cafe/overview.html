@@ -1,0 +1,67 @@
+<div>
+    <h3>Locations</h3>
+    <ol data-bind="foreach: Object.values(TownList).filter((t) => t.content.some((c) => c instanceof BattleCafe))">
+        <li data-bind="text: $data.name"></li>
+    </ol>
+    <table class="table table-hover table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Sweet</th>
+                <th>Time of day</th>
+                <th>Direction</th>
+                <th>Spin time</th>
+                <th>Form</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: Object.entries(BattleCafeController.evolutions)">
+            <tr>
+               <td rowspan="9">
+                    <span data-bind="text: GameConstants.AlcremieSweet[$data[0]]"></span>
+                    <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/sweets/' + GameConstants.AlcremieSweet[$data[0]] + '.png'}"/>
+                </td>
+               <td rowspan="4">5am to 19pm</td>
+               <td rowspan="2">Clockwise</td>
+               <td>Less than 5 seconds</td>
+               <td data-bind="text: $data[1][GameConstants.AlcremieSpins.dayClockwiseBelow5].displayName"></td>
+            </tr>
+            <tr>
+                <td>At least 5 seconds</td>
+               <td data-bind="text: $data[1][GameConstants.AlcremieSpins.dayClockwiseAbove5].displayName"></td>
+            </tr>
+            <tr>
+                <td rowspan="2">Counter-Clockwise</td>
+                <td>Less than 5 seconds</td>
+               <td data-bind="text: $data[1][GameConstants.AlcremieSpins.dayCounterclockwiseBelow5].displayName"></td>
+            </tr>
+            <tr>
+                <td>At least 5 seconds</td>
+               <td data-bind="text: $data[1][GameConstants.AlcremieSpins.dayCounterclockwiseAbove5].displayName"></td>
+            </tr>
+            <tr>
+                <td rowspan="4">19pm to 5am</td>
+                <td rowspan="2">Clockwise</td>
+                <td>Less than 5 seconds</td>
+                <td data-bind="text: $data[1][GameConstants.AlcremieSpins.nightClockwiseBelow5].displayName"></td>
+             </tr>
+             <tr>
+                 <td>At least 5 seconds</td>
+                <td data-bind="text: $data[1][GameConstants.AlcremieSpins.nightClockwiseAbove5].displayName"></td>
+             </tr>
+             <tr>
+                 <td rowspan="2">Counter-Clockwise</td>
+                 <td>Less than 5 seconds</td>
+                <td data-bind="text: $data[1][GameConstants.AlcremieSpins.nightCounterclockwiseBelow5].displayName"></td>
+             </tr>
+             <tr>
+                 <td>At least 5 seconds</td>
+                <td data-bind="text: $data[1][GameConstants.AlcremieSpins.nightCounterclockwiseAbove5].displayName"></td>
+             </tr>
+             <tr>
+                <td>19pm to 20pm</td>
+                <td>Counter-Clockwise</td>
+                <td>At least 10 seconds</td>
+                <td data-bind="text: $data[1][GameConstants.AlcremieSpins.at7Above10].displayName"></td>
+             </tr>
+        </tbody>
+    </table>
+</div>

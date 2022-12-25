@@ -11168,6 +11168,12 @@ const searchOptions = [
     type: 'QuestLines',
     page: q.name,
   })),
+  // Battle Cafe
+  {
+    display: 'Battle Café',
+    type: 'Battle Cafe',
+    page: '',
+  }
 ];
 
 
