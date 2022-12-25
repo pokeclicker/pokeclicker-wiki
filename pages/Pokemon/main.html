@@ -19,5 +19,11 @@
                 <p style="display: none" data-bind="text: JSON.stringify($data[1])"></p>
             <!-- /ko -->
         </div>
+        <div>
+            <h3>Egg Pattern (without type color)</h3>
+            <svg>
+                <g data-bind="html: BreedingController.getEggSpots($data.name)"></g>
+            </svg>
+        </div>
     <!-- /ko -->
 </div>
