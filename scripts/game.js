@@ -11,6 +11,8 @@ themes.options.push(new SettingOption('Zephyr', 'zephyr'));
 themes.options.sort((a, b) => (a.text).localeCompare(b.text));
 
 // Custom binds as these aren't loaded
+player = new Player();
+player.highestRegion(1);
 const multiplier = new Multiplier();
 App.game = new Game(
   new Update(),
@@ -43,6 +45,8 @@ App.game = new Game(
 );
 App.game.farming.initialize();
 QuestLineHelper.loadQuestLines();
+BattleFrontierRunner.stage(100);
+BattleFrontierBattle.generateNewEnemy();
 
 // TODO: Fix these up somehow..
 // Overrides, these methods don't work if game not started..

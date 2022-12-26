@@ -1,0 +1,21 @@
+<div>
+    <h3>HP per level</h3>
+    <table class="table table-hover table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Level</th>
+                <th>HP per Pokémon</th>
+                <th>HP in total</th>
+                <th>Damage required (after types)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+               <td><input type="text" value="100" onchange="BattleFrontierRunner.stage(value); BattleFrontierBattle.generateNewEnemy();"/></td>
+               <td data-bind="text: BattleFrontierBattle.enemyPokemon().health().toLocaleString('en-US')"></td>
+               <td data-bind="text: (BattleFrontierBattle.enemyPokemon().health() * 3).toLocaleString('en-US')"></td>
+               <td data-bind="text: (BattleFrontierBattle.enemyPokemon().health() * 3 / 30).toLocaleString('en-US')"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

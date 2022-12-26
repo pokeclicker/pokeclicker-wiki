@@ -90,6 +90,12 @@ const searchOptions = [
     display: 'Battle Café',
     type: 'Battle Cafe',
     page: '',
+  },
+  // Battle Cafe
+  {
+    display: 'Battle Frontier',
+    type: 'Battle Frontier',
+    page: '',
   }
 ];
 
