@@ -1,6 +1,6 @@
 # Jaboca
 
-Jaboca is a type of [Berry](https://wiki.pokeclicker.com/) that can be planted in the [Farm](https://wiki.pokeclicker.com/). It can be obtained by having at least one empty plot and at least 600 points of bitter on the field. The [Durin](https://wiki.pokeclicker.com/) must be unlocked to unlock this berry. Various [Farming Setups](https://wiki.pokeclicker.com/) using Jaboca can be found [here](https://wiki.pokeclicker.com/).
+Jaboca is one of the types of [[Berries]] that can be planted in the [Farm](https://wiki.pokeclicker.com/). It can be obtained by having at least one empty plot and at least 600 points of bitter on the field. The [[Berries/Durin]] must be unlocked to unlock this berry. Various [Farming Setups](https://wiki.pokeclicker.com/) using [[Berries/Jaboca]] can be found [here](https://wiki.pokeclicker.com/).
 
  ## Table of Contents
  1. [Growth Tables](#growth_tables)
