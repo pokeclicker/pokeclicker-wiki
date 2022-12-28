@@ -18,7 +18,7 @@ Jaboca is a type of [Berry](https://wiki.pokeclicker.com/) that can be planted i
 |:---------------------------------:|:----------------:|:---------------:|:---------------:| :---------------------------------:|
 | **Time passed since planting**    |  1 hour 12 mins  | 2 hours 12 mins | 4 hours 36 mins | 9 hours 18 mins - 18 hours 36 mins |
 | **Animation**                     |    -             |   -             | -               | -                                  |
-| **Aura (Roaming Pokémon Chance)** |                  |  x1.005         | x1.01           | x1.015                             |
+| **Aura (Roaming PokÃ©mon Chance)** |                  |  x1.005         | x1.01           | x1.015                             |
 
 ### Ripening Time with Modifiers
 
@@ -40,7 +40,7 @@ You can fill your farm in the following way to obtain Jaboca berries. Purple squ
 
 |  |  |  |  |  |
 |:--------------------------------------:|:--------------------------------------:|:-------------------------------------------------:|:--------------------------------------:| :-------------------------------------:|
-| [Durin](https://wiki.pokeclicker.com/) | [Durin](https://wiki.pokeclicker.com/) | [Durin](https://wiki.pokeclicker.com/) | [Durin](https://wiki.pokeclicker.com/) | [Durin](https://wiki.pokeclicker.com/) |
+[[File:Durin.png\|20px]] [[Berries/Durin]] | [[File:Durin.png\|20px]] [[Berries/Durin]] | [[File:Durin.png\|20px]] [[Berries/Durin]] | [[File:Durin.png\|20px]] [[Berries/Durin]] | [[File:Durin.png\|20px]] [[Berries/Durin]]
 | [Durin](https://wiki.pokeclicker.com/) |                                        | [Durin](https://wiki.pokeclicker.com/) |                                        | [Durin](https://wiki.pokeclicker.com/) |
 | [Durin](https://wiki.pokeclicker.com/) |                                        |                                        |                                        | [Durin](https://wiki.pokeclicker.com/) |
 | [Durin](https://wiki.pokeclicker.com/) | [Durin](https://wiki.pokeclicker.com/) | [Durin](https://wiki.pokeclicker.com/) | [Durin](https://wiki.pokeclicker.com/) | [Durin](https://wiki.pokeclicker.com/) |
