@@ -11168,6 +11168,12 @@ const searchOptions = [
     type: 'QuestLines',
     page: q.name,
   })),
+  // Farm
+    {
+      display:'Farm',
+      type: 'Farm',
+      page: '',
+    },
 ];
 
 
