@@ -3,8 +3,8 @@
         <h3>In game description</h3>
         <div data-bind="text: $data.description"></div>
         <h3>Quest Steps</h3>
-        <!-- ko foreach: $data.quests() -->
-            <div data-bind="text: `${$index() + 1}: ${$data.description}`"></div>
-        <!-- /ko -->
+        <ol class="list-group list-group-numbered" data-bind="foreach: $data.quests()">
+            <li class="list-group-item" data-bind="text: $data.description"></li>
+        </ol>
     <!-- /ko -->
 </div>
