@@ -4,7 +4,14 @@
         <div data-bind="text: $data.description"></div>
         <h3>Quest Steps</h3>
         <ol class="list-group list-group-numbered" data-bind="foreach: $data.quests()">
+            <!-- ko if: $data.description -->
             <li class="list-group-item" data-bind="text: $data.description"></li>
+            <!-- /ko -->
+            <!-- ko if: $data.quests -->
+            <li class="list-group-item" data-bind="foreach: $data.quests">
+                <span data-bind="text: $data.description"></span><br/>
+            </li>
+            <!-- /ko -->
         </ol>
     <!-- /ko -->
 </div>
