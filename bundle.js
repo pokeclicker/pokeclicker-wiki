@@ -11101,6 +11101,11 @@ const searchOptions = [
     type: 'Settings',
     page: '',
   },
+  {
+    display:'Battle Frontier',
+    type: 'Battle Frontier',
+    page: '',
+  },
   // Items
   {
     display:'Items',
