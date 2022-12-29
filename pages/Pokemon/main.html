@@ -4,10 +4,18 @@
     <!-- /ko -->
     <!-- ko with: pokemonList.find((p) => p.name == pageName()) -->
         <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>
+        <h3>ID:</h3>
+        <span data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`"></span>
         <h3>Type:</h3>
         <!-- ko foreach: $data.type -->
             <span class="badge" data-bind="text: PokemonType[$data], style:{ background: TypeColor[$data] }"></span>
         <!-- /ko -->
+        <h3>Base Attack:</h3>
+        <span data-bind="text: $data.attack.toLocaleString()"></span>
+        <h3>Egg Steps:</h3>
+        <span data-bind="text: App.game.breeding.getSteps($data.eggCycles).toLocaleString()"></span>
+        <h3>Catch Rate:</h3>
+        <span data-bind="text: PokemonFactory.catchRateHelper($data.catchRate, true) + '%'"></span>
         <div data-bind="visible: $data.evolutions">
             <h3>Evolves into:</h3>
             <!-- ko foreach: $data.evolutions -->

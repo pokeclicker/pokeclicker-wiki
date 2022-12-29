@@ -20,7 +20,7 @@
                     }"></span>
                 </td>
                 <td data-bind="text: $data.attack"></td>
-                <td data-bind="text: App.game.breeding.getSteps($data.eggCycles)"></td>
+                <td data-bind="text: App.game.breeding.getSteps($data.eggCycles).toLocaleString()"></td>
                 <td data-bind="text: PokemonFactory.catchRateHelper($data.catchRate, true) + '%'"></td>
             </tr>
         </tbody>
