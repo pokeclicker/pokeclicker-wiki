@@ -15,8 +15,8 @@ Here's a link to all the [[Pokemon]] or a specific one like [[Pokemon/Charmander
 
 Some images with sizing
 
-32px height Belue: [[File:Belue.jpg|32px]]
+32px height Belue: [[File:Belue.png|32px]]
 
-[[File:Belue.jpg|64px]]
+[[File:Belue.png|64px]]
 
-[[File:Belue.jpg]]
+[[File:Belue.png]]

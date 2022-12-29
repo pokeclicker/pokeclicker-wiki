@@ -38,10 +38,10 @@ You can fill your farm in the following way to obtain [[Berries/Jaboca]] berries
 
 | | | | | |
 | :----------------------------------------: | :----------------------------------------: | :----------------------------------------: | :----------------------------------------: | :----------------------------------------: |
-| [[File:Durin.jpg\|20px]] [[Berries/Durin]] | [[File:Durin.jpg\|20px]] [[Berries/Durin]] | [[File:Durin.jpg\|20px]] [[Berries/Durin]] | [[File:Durin.jpg\|20px]] [[Berries/Durin]] | [[File:Durin.jpg\|20px]] [[Berries/Durin]] |
-| [[File:Durin.jpg\|20px]] [[Berries/Durin]] |                                            | [[File:Durin.jpg\|20px]] [[Berries/Durin]] |                                            | [[File:Durin.jpg\|20px]] [[Berries/Durin]] |
-| [[File:Durin.jpg\|20px]] [[Berries/Durin]] |                                            |                                            |                                            | [[File:Durin.jpg\|20px]] [[Berries/Durin]] |
-| [[File:Durin.jpg\|20px]] [[Berries/Durin]] | [[File:Durin.jpg\|20px]] [[Berries/Durin]] | [[File:Durin.jpg\|20px]] [[Berries/Durin]] | [[File:Durin.jpg\|20px]] [[Berries/Durin]] | [[File:Durin.jpg\|20px]] [[Berries/Durin]] |
-| [[File:Durin.jpg\|20px]] [[Berries/Durin]] | [[File:Durin.jpg\|20px]] [[Berries/Durin]] | [[File:Durin.jpg\|20px]] [[Berries/Durin]] | [[File:Durin.jpg\|20px]] [[Berries/Durin]] | [[File:Durin.jpg\|20px]] [[Berries/Durin]] |
+| [[File:Durin.png\|20px]] [[Berries/Durin]] | [[File:Durin.png\|20px]] [[Berries/Durin]] | [[File:Durin.png\|20px]] [[Berries/Durin]] | [[File:Durin.png\|20px]] [[Berries/Durin]] | [[File:Durin.png\|20px]] [[Berries/Durin]] |
+| [[File:Durin.png\|20px]] [[Berries/Durin]] |                                            | [[File:Durin.png\|20px]] [[Berries/Durin]] |                                            | [[File:Durin.png\|20px]] [[Berries/Durin]] |
+| [[File:Durin.png\|20px]] [[Berries/Durin]] |                                            |                                            |                                            | [[File:Durin.png\|20px]] [[Berries/Durin]] |
+| [[File:Durin.png\|20px]] [[Berries/Durin]] | [[File:Durin.png\|20px]] [[Berries/Durin]] | [[File:Durin.png\|20px]] [[Berries/Durin]] | [[File:Durin.png\|20px]] [[Berries/Durin]] | [[File:Durin.png\|20px]] [[Berries/Durin]] |
+| [[File:Durin.png\|20px]] [[Berries/Durin]] | [[File:Durin.png\|20px]] [[Berries/Durin]] | [[File:Durin.png\|20px]] [[Berries/Durin]] | [[File:Durin.png\|20px]] [[Berries/Durin]] | [[File:Durin.png\|20px]] [[Berries/Durin]] |
 
 
