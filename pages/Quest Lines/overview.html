@@ -6,6 +6,7 @@
             <tr>
                 <th>Name</th>
                 <th>Description</th>
+                <th>Steps</th>
                 <th>Bulletin Board</th>
             </tr>
         </thead>
@@ -13,6 +14,7 @@
             <tr class="clickable" data-bind="click: () => { gotoPage('Quest Lines', $data.name); return false; }">
                 <td data-bind="text: $data.name"></td>
                 <td data-bind="text: $data.description"></td>
+                <td data-bind="text: $data.totalQuests"></td>
                 <td data-bind="text: GameConstants.BulletinBoards[$data.bulletinBoard]"></td>
             </tr>
         </tbody>
