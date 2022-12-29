@@ -25,6 +25,21 @@ window.gotoPage = (type, name, other) => {
 // When the hash changes, we will load the new page
 // This also allows us to go forwards and back in history
 onhashchange = (event) => {
+  if (!event.oldURL.includes('#!')) {
+    return;
+  }
+  if (!event.newURL.includes('#!') && event.oldURL.includes('#!')) {
+    // Change the url back to the current page
+    location.hash = event.oldURL.replace(/.*#!/, '#!');
+    // Scroll to the element they wanted to view
+    const el = document.getElementById(event.newURL.replace(/.*#/, ''));
+    if (el) {
+      const navEl = document.getElementById('nav-bar');
+      const y = (el?.getBoundingClientRect()?.top || 0) - (navEl?.scrollHeight || 0)
+      scrollBy(0, y);
+    }
+    return;
+  }
   const [ type, name, other ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
   if (type == 'loading') {
     return;
@@ -49,12 +64,16 @@ onhashchange = (event) => {
     pageElement.html(data);
     applyBindings(true);
   }).fail(() => {
+    pageType('Page not found');
+    pageName('');
     pageElement.html(errorPage);
   });
 
+  const cleanFileName = (s) => s.replace(/[^\s\w\(\)'"!-]/gi, "-");
+
   const pageElementCustom = $('#wiki-page-custom-content');
   pageElementCustom.html('');
-  $.get(`data/${encodeURIComponent(pageType()).replace(/%/g, '%25')}/${encodeURIComponent(pageName()).replace(/%/g, '%25')}.md`, (data) => {
+  $.get(`data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`, (data) => {
     if (other == 'edit') {
       pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = md.render(this.value)">${data}</textarea><div id="preview-edit">${md.render(data)}</div>`);
     } else {

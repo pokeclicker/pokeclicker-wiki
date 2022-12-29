@@ -5,6 +5,11 @@ const searchOptions = [
     page: '',
   },
   {
+    display:'Wiki Guide',
+    type: 'Wiki Guide',
+    page: '',
+  },
+  {
     display:'Settings',
     type: 'Settings',
     page: '',
@@ -16,6 +21,11 @@ const searchOptions = [
     page: '',
   },
   ...Object.values(ItemList).map(i => ({
+    display: i.displayName,
+    type: 'Items',
+    page: i.displayName,
+  })),
+  ...UndergroundItems.list.filter((ui) => !Object.values(ItemList).some((i) => i.displayName == ui.displayName)).map(i => ({
     display: i.displayName,
     type: 'Items',
     page: i.displayName,
@@ -64,6 +74,35 @@ const searchOptions = [
     type: 'Berries',
     page: BerryType[b.type],
   })),
+  // QuestLines
+  {
+    display:'QuestLines',
+    type: 'QuestLines',
+    page: '',
+  },
+  ...App.game.quests.questLines().map(q => ({
+    display: q.name,
+    type: 'QuestLines',
+    page: q.name,
+  })),
+  // Farm
+    {
+      display:'Farm',
+      type: 'Farm',
+      page: '',
+    },
+  // Battle Cafe
+  {
+    display: 'Battle Café',
+    type: 'Battle Cafe',
+    page: '',
+  },
+  // Battle Cafe
+  {
+    display: 'Battle Frontier',
+    type: 'Battle Frontier',
+    page: '',
+  }
 ];
 
 

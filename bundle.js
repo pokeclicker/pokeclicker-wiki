@@ -10809,6 +10809,8 @@ themes.options.push(new SettingOption('Zephyr', 'zephyr'));
 themes.options.sort((a, b) => (a.text).localeCompare(b.text));
 
 // Custom binds as these aren't loaded
+player = new Player();
+player.highestRegion(1);
 const multiplier = new Multiplier();
 App.game = new Game(
   new Update(),
@@ -10841,6 +10843,8 @@ App.game = new Game(
 );
 App.game.farming.initialize();
 QuestLineHelper.loadQuestLines();
+BattleFrontierRunner.stage(100);
+BattleFrontierBattle.generateNewEnemy();
 
 // TODO: Fix these up somehow..
 // Overrides, these methods don't work if game not started..
@@ -10890,6 +10894,21 @@ window.gotoPage = (type, name, other) => {
 // When the hash changes, we will load the new page
 // This also allows us to go forwards and back in history
 onhashchange = (event) => {
+  if (!event.oldURL.includes('#!')) {
+    return;
+  }
+  if (!event.newURL.includes('#!') && event.oldURL.includes('#!')) {
+    // Change the url back to the current page
+    location.hash = event.oldURL.replace(/.*#!/, '#!');
+    // Scroll to the element they wanted to view
+    const el = document.getElementById(event.newURL.replace(/.*#/, ''));
+    if (el) {
+      const navEl = document.getElementById('nav-bar');
+      const y = (el?.getBoundingClientRect()?.top || 0) - (navEl?.scrollHeight || 0)
+      scrollBy(0, y);
+    }
+    return;
+  }
   const [ type, name, other ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
   if (type == 'loading') {
     return;
@@ -10914,12 +10933,16 @@ onhashchange = (event) => {
     pageElement.html(data);
     applyBindings(true);
   }).fail(() => {
+    pageType('Page not found');
+    pageName('');
     pageElement.html(errorPage);
   });
 
+  const cleanFileName = (s) => s.replace(/[^\s\w\(\)'"!-]/gi, "-");
+
   const pageElementCustom = $('#wiki-page-custom-content');
   pageElementCustom.html('');
-  $.get(`data/${encodeURIComponent(pageType()).replace(/%/g, '%25')}/${encodeURIComponent(pageName()).replace(/%/g, '%25')}.md`, (data) => {
+  $.get(`data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`, (data) => {
     if (other == 'edit') {
       pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = md.render(this.value)">${data}</textarea><div id="preview-edit">${md.render(data)}</div>`);
     } else {
@@ -10959,7 +10982,39 @@ window.onbeforeunload = () => {
   Settings.saveDefault();
 };
 
-},{"./game":95,"./markdown-renderer":100,"./typeahead":101}],97:[function(require,module,exports){
+},{"./game":95,"./markdown-renderer":102,"./typeahead":103}],97:[function(require,module,exports){
+var md     = require('markdown-it');
+var Plugin = require('markdown-it-regexp');
+
+var plugin = Plugin(
+  // regexp to match
+  /<!--[^>]+-->/,
+
+  // this function will be called when something matches
+  (match, utils) => {
+    return '';
+  }
+);
+
+module.exports = plugin;
+
+},{"markdown-it":24,"markdown-it-regexp":21}],98:[function(require,module,exports){
+var md     = require('markdown-it');
+var Plugin = require('markdown-it-regexp');
+
+var plugin = Plugin(
+  // regexp to match
+  /\{#([\w-]+)\}/,
+
+  // this function will be called when something matches
+  (match, utils) => {
+    return `<div id="${utils.escape(match[1])}"></div>`;
+  }
+);
+
+module.exports = plugin;
+
+},{"markdown-it":24,"markdown-it-regexp":21}],99:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -10977,53 +11032,50 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":24,"markdown-it-regexp":21}],98:[function(require,module,exports){
-var md     = require('markdown-it');
-var Plugin = require('markdown-it-regexp');
-
-var plugin = Plugin(
-  // regexp to match
-  /@\[\[([^|\]]+)\/([^|\]]+)\]\]/,
-
-  // this function will be called when something matches
-  (match, utils) => {
-    var url = `gotoPage('${utils.escape(match[1])}', '${utils.escape(match[2])}')`;
-
-    return `<a href="#!${utils.escape(match[1])}/${utils.escape(match[2])}" class="badge text-bg-secondary" onclick="${url}; return false;">${utils.escape(match[2])}</a>`;
-  }
-);
-
-module.exports = plugin;
-
-},{"markdown-it":24,"markdown-it-regexp":21}],99:[function(require,module,exports){
-var md     = require('markdown-it');
-var Plugin = require('markdown-it-regexp');
-
-var plugin = Plugin(
-  // regexp to match
-  /\[\[([^|\]]+)\/([^|\]]+)\]\]/,
-
-  // this function will be called when something matches
-  (match, utils) => {
-    var url = `gotoPage('${utils.escape(match[1])}', '${utils.escape(match[2])}')`;
-
-    return `<a href="#!${utils.escape(match[1])}/${utils.escape(match[2])}" onclick="${url}; return false;">${utils.escape(match[2])}</a>`;
-  }
-);
-
-module.exports = plugin;
-
 },{"markdown-it":24,"markdown-it-regexp":21}],100:[function(require,module,exports){
-const markdownit          = require('markdown-it');
-const imageSizePlugin = require('./markdown-plugins/image-size.js');
-const linkBadgePlugin = require('./markdown-plugins/wiki-links-badge.js');
-const linkPlugin      = require('./markdown-plugins/wiki-links.js');
+var md     = require('markdown-it');
+var Plugin = require('markdown-it-regexp');
+
+var plugin = Plugin(
+  // regexp to match
+  /@\[\[([^\/\]]+)(\/([^\]]+))?\]\]/,
+
+  // this function will be called when something matches
+  (match, utils) => {
+    return `<a class="badge text-bg-secondary" href="#!${utils.escape(match[1])}/${utils.escape(match[3] || '')}">${utils.escape(match[3] || match[1])}</a>`;
+  }
+);
+
+module.exports = plugin;
+
+},{"markdown-it":24,"markdown-it-regexp":21}],101:[function(require,module,exports){
+var md     = require('markdown-it');
+var Plugin = require('markdown-it-regexp');
+
+var plugin = Plugin(
+  // regexp to match
+  /\[\[([^\/\]]+)(\/([^\]]+))?\]\]/,
+
+  // this function will be called when something matches
+  (match, utils) => {
+    return `<a href="#!${utils.escape(match[1])}/${utils.escape(match[3] || '')}">${utils.escape(match[3] || match[1])}</a>`;
+  }
+);
+
+module.exports = plugin;
+
+},{"markdown-it":24,"markdown-it-regexp":21}],102:[function(require,module,exports){
+const markdownit      = require('markdown-it');
 
 // Setup our markdown editor
-const md = new markdownit()
-  .use(imageSizePlugin)
-  .use(linkBadgePlugin)
-  .use(linkPlugin);
+const md = new markdownit({
+    breaks: true,
+  })
+  .use(require('./markdown-plugins/hidden-comments.js'))
+  .use(require('./markdown-plugins/id-element.js'))
+  .use(require('./markdown-plugins/image-size.js'))
+  .use(require('./markdown-plugins/wiki-links-badge.js'))
+  .use(require('./markdown-plugins/wiki-links.js'));
 md.renderer.rules.table_open = function(tokens, idx) {
   return '<table class="table table-hover table-striped table-bordered">';
 };
@@ -11032,11 +11084,16 @@ window.md = md;
 
 module.exports = md;
 
-},{"./markdown-plugins/image-size.js":97,"./markdown-plugins/wiki-links-badge.js":98,"./markdown-plugins/wiki-links.js":99,"markdown-it":24}],101:[function(require,module,exports){
+},{"./markdown-plugins/hidden-comments.js":97,"./markdown-plugins/id-element.js":98,"./markdown-plugins/image-size.js":99,"./markdown-plugins/wiki-links-badge.js":100,"./markdown-plugins/wiki-links.js":101,"markdown-it":24}],103:[function(require,module,exports){
 const searchOptions = [
   {
     display:'Home',
     type: '',
+    page: '',
+  },
+  {
+    display:'Wiki Guide',
+    type: 'Wiki Guide',
     page: '',
   },
   {
@@ -11051,6 +11108,11 @@ const searchOptions = [
     page: '',
   },
   ...Object.values(ItemList).map(i => ({
+    display: i.displayName,
+    type: 'Items',
+    page: i.displayName,
+  })),
+  ...UndergroundItems.list.filter((ui) => !Object.values(ItemList).some((i) => i.displayName == ui.displayName)).map(i => ({
     display: i.displayName,
     type: 'Items',
     page: i.displayName,
@@ -11099,6 +11161,35 @@ const searchOptions = [
     type: 'Berries',
     page: BerryType[b.type],
   })),
+  // QuestLines
+  {
+    display:'QuestLines',
+    type: 'QuestLines',
+    page: '',
+  },
+  ...App.game.quests.questLines().map(q => ({
+    display: q.name,
+    type: 'QuestLines',
+    page: q.name,
+  })),
+  // Farm
+    {
+      display:'Farm',
+      type: 'Farm',
+      page: '',
+    },
+  // Battle Cafe
+  {
+    display: 'Battle Café',
+    type: 'Battle Cafe',
+    page: '',
+  },
+  // Battle Cafe
+  {
+    display: 'Battle Frontier',
+    type: 'Battle Frontier',
+    page: '',
+  }
 ];
 
 

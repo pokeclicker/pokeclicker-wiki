@@ -27,31 +27,40 @@
                 cursor: pointer;
             }
             body {
-                padding-top: 5rem;
                 padding-bottom: 5rem;
                 min-height: 100vh;
+            }
+            blockquote {
+                border-left: 5px var(--bs-body-color) solid;
+                padding-left: 5px;
             }
         </style>
 
     </head>
     <body class="no-select">
+        <!-- Have this 2nd navbar for spacing of the body -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#!">PokéClicker Wiki</a>
+            </div>
+        </nav>
         <nav id="nav-bar" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
             <link id="theme-link" href="https://bootswatch.com/5/yeti/bootstrap.min.css" rel="stylesheet" data-bind="attr: {href: 'https://bootswatch.com/5/' + Settings.getSetting('theme').observableValue() + '/bootstrap.min.css'}">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#" onclick="gotoPage('', ''); return false;">PokéClicker Wiki</a>
+                <a class="navbar-brand" href="#!">PokéClicker Wiki</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <!-- <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="gotoPage('', ''); return false;">Home</a>
+                        <a class="nav-link" href="#!">Home</a>
                         </li> -->
                     </ul>
                     <div class="d-flex">
                         <input id="search" type="text" class="form-control typeahead me-2 text-dark" autocomplete="off" placeholder="Search" />
-                        <button tabindex="-1" class="btn btn-secondary ml-1" onclick="gotoPage('Settings', ''); return false;">⚙️</button>
-                        <button tabindex="-1" class="btn btn-secondary ml-1" onclick="gotoPage(pageType(), pageName(), 'edit'); return false;">✏️</button>
+                        <a href="#!Settings" tabindex="-1" class="btn btn-secondary ml-1">⚙️</a>
+                        <a href="#!" tabindex="-1" class="btn btn-secondary ml-1" data-bind="attr: { href: `#!${pageType()}/${pageName() || ''}/edit` }">✏️</a>
                     </div>
                 </div>
             </div>
@@ -62,7 +71,7 @@
                 <ol class="breadcrumb">
                     <li data-bind="class: 'breadcrumb-item' + (!window.pageType() && !window.pageName() ? ' active' : '')">
                         <!-- ko if: window.pageType() -->
-                        <a href="#" onclick="gotoPage('', ''); return false;">Home</a>
+                        <a href="#!">Home</a>
                         <!-- /ko -->
                         <!-- ko ifnot: window.pageType() -->
                         <span>Home</span>
@@ -71,7 +80,7 @@
                     <!-- ko if: window.pageType() -->
                     <li data-bind="class: 'breadcrumb-item' + (window.pageType() && !window.pageName() ? ' active' : '')">
                         <!-- ko if: window.pageName() -->
-                        <a href="#" onclick="gotoPage(window.pageType(), ''); return false;" data-bind="text: window.pageType()"></a>
+                        <a href="#!" data-bind="text: pageType(), attr: { href: `#!${pageType()}` }"></a>
                         <!-- /ko -->
                         <!-- ko ifnot: window.pageName() -->
                         <span data-bind="text: window.pageType()"></span>

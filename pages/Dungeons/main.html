@@ -12,7 +12,7 @@
             <h3>Bosses:</h3>
             <!-- ko foreach: $data.bossList -->
                 <!-- ko if: $data.baseHealth -->
-                    <a class="badge text-bg-secondary" href="#" data-bind="text: $data.name, click: () => { gotoPage('Pokemon', $data.name); return false; }"></a>
+                    <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a>
                 <!-- /ko -->
                 <!-- ko ifnot: $data.baseHealth -->
                     <span class="badge text-bg-secondary" data-bind="text: $data.name"></span>
@@ -24,7 +24,7 @@
             <h3>Encounters:</h3>
             <!-- ko foreach: $data.enemyList -->
                 <!-- ko ifnot: $data.name -->
-                    <a class="badge text-bg-secondary" href="#" data-bind="text: $data.pokemon || $data, click: () => { gotoPage('Pokemon', $data.pokemon || $data); return false; }"></a>
+                    <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.pokemon || $data, attr: { href: `#!Pokemon/${$data.pokemon || $data}` }"></a>
                 <!-- /ko -->
                 <!-- ko if: $data.name -->
                     <span class="badge text-bg-secondary" data-bind="text: $data.name"></span>
@@ -38,10 +38,10 @@
                 <h5 data-bind="text: $data[0]"></h5>
                 <!-- ko foreach: $data[1] -->
                     <!-- ko if: ItemList[$data.loot] -->
-                        <a class="badge text-bg-secondary" href="#" data-bind="text: ItemList[$data.loot].displayName, click: () => { gotoPage('Items', ItemList[$data.loot].displayName); return false; }"></a>
+                        <a class="badge text-bg-secondary" href="#" data-bind="text: ItemList[$data.loot].displayName, attr: { href: `#!Items/${ItemList[$data.loot].displayName}` }"></a>
                     <!-- /ko -->
                     <!-- ko if: UndergroundItems.list.some((ui) => ui.name == $data.loot) && !ItemList[$data.loot] -->
-                        <a class="badge text-bg-secondary" href="#" data-bind="text: UndergroundItems.list.find((ui) => ui.name == $data.loot).displayName, click: () => { gotoPage('Items', UndergroundItems.list.find((ui) => ui.displayName == $data.loot).displayName); return false; }"></a>
+                        <a class="badge text-bg-secondary" href="#" data-bind="text: UndergroundItems.list.find((ui) => ui.name == $data.loot).displayName, attr: { href: `#!Items/${UndergroundItems.list.find((ui) => ui.displayName == $data.loot).displayName}` }"></a>
                     <!-- /ko -->
                     <!-- ko ifnot: ItemList[$data.loot] || UndergroundItems.list.some((ui) => ui.name == $data.loot) -->
                         <span class="badge text-bg-secondary" data-bind="text: $data.loot"></span>
