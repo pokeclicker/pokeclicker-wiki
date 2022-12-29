@@ -44,14 +44,10 @@ App.game = new Game(
   new DreamOrbController()
 );
 App.game.farming.initialize();
+App.game.breeding.initialize();
 QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
-
-// TODO: Fix these up somehow..
-// Overrides, these methods don't work if game not started..
-PokemonHelper.getPokemonWandering = () => [];
-PokemonHelper.getPokemonDiscord = () => [];
 
 // Map our requirment hints to the requirement
 Requirement.prototype.toJSON = function() {
