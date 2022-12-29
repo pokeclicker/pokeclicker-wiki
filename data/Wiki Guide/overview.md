@@ -46,10 +46,10 @@ Row | lorem | ipsum
 
 Images should be located in the `/images/` folder
 
-[[File:Belue.png|20px]] [[File:Belue.png]] [[File:Pokéball.svg|45]]
+[[File:Belue.png|20px]] [[File:Belue.png]] [[File:Pokeball.svg|45]]
 
 ```
-[[File:Belue.png|20px]] [[File:Belue.png]] [[File:Pokéball.svg|45]]
+[[File:Belue.png|20px]] [[File:Belue.png]] [[File:Pokeball.svg|45]]
 ```
 
 ---
