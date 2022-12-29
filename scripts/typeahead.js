@@ -81,13 +81,13 @@ const searchOptions = [
   })),
   // QuestLines
   {
-    display:'QuestLines',
-    type: 'QuestLines',
+    display:'Quest Lines',
+    type: 'Quest Lines',
     page: '',
   },
   ...App.game.quests.questLines().map(q => ({
     display: q.name,
-    type: 'QuestLines',
+    type: 'Quest Lines',
     page: q.name,
   })),
   // Farm
