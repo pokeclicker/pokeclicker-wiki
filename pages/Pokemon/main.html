@@ -20,9 +20,19 @@
             <!-- /ko -->
         </div>
         <div>
-            <h3>Egg Pattern (without type color)</h3>
-            <svg>
-                <g data-bind="html: BreedingController.getEggSpots($data.name)"></g>
+            <h3>Egg Pattern</h3>
+            <svg class="egg" xmlns="http://www.w3.org/2000/svg" data-bind="attr: {'data-type1': PokemonType[$data.type[0] || 0], 'data-type2': PokemonType[$data.type[1] || $data.type[0] || 0]}">
+                <defs>
+                  <filter id="b" width="1.193" height="1.123" x="-.096" y="-.061" color-interpolation-filters="sRGB">
+                    <feGaussianBlur stdDeviation=".402"></feGaussianBlur>
+                  </filter>
+                  <filter id="a" width="1.067" height="1.045" x="-.034" y="-.023" color-interpolation-filters="sRGB">
+                    <feGaussianBlur stdDeviation="1.168"></feGaussianBlur>
+                  </filter>
+                </defs>
+                <path class="egg-main" d="M111.5 76.2a48.2 47.7 0 11-96.3 0c0-26.3 21.5-74.7 48.1-74.7s48.2 48.4 48.2 74.7z"></path>
+                <g data-bind="html: BreedingController.getEggSpots($data.pokemon)"><g class="egg-spot" transform="matrix(.23639 0 0 .224 -1.683 1.746)">
+                </g>
             </svg>
         </div>
     <!-- /ko -->
