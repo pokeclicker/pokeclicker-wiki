@@ -24,7 +24,7 @@
                     text: $data.evolvedPokemon"></a>
             <!-- /ko -->
         </div>
-        <div>
+        <div data-bind="visible: Object.entries(PokemonHelper.getPokemonLocations($data.name)).length ">
             <h3>Obtain methods:</h3>
             <!-- ko foreach: Object.entries(PokemonHelper.getPokemonLocations($data.name)) -->
                 <p data-bind="text: PokemonLocationType[$data[0]]"></p>
