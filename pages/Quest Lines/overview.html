@@ -15,7 +15,7 @@
                 <td data-bind="text: $data.name"></td>
                 <td data-bind="text: $data.description"></td>
                 <td data-bind="text: $data.totalQuests"></td>
-                <td data-bind="text: GameConstants.BulletinBoards[$data.bulletinBoard]"></td>
+                <td data-bind="text: $data.bulletinBoard >= 0 ? GameConstants.BulletinBoards[$data.bulletinBoard] : '-'"></td>
             </tr>
         </tbody>
     </table>
