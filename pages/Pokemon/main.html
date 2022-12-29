@@ -4,6 +4,10 @@
     <!-- /ko -->
     <!-- ko with: pokemonList.find((p) => p.name == pageName()) -->
         <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>
+        <h3>Type:</h3>
+        <!-- ko foreach: $data.type -->
+            <span class="badge" data-bind="text: PokemonType[$data], style:{ background: TypeColor[$data] }"></span>
+        <!-- /ko -->
         <div data-bind="visible: $data.evolutions">
             <h3>Evolves into:</h3>
             <!-- ko foreach: $data.evolutions -->
