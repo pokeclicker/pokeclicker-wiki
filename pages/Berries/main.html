@@ -2,6 +2,7 @@
     <!-- ko with: pageName() -->
         <div data-bind="with: App.game.farming.berryData[BerryType[$data]]">
             <img data-bind="attr: {src: './pokeclicker/docs/' + FarmController.getBerryImage($data.type)}"/>
+            <h3>In game description</h3>
             <p data-bind="text: $data.description"></p>
 
             <table class="table table-hover table-striped table-bordered">
@@ -59,6 +60,25 @@
                     <!-- /ko -->
                 </tbody>
             </table>
+
+            <div data-bind="if: $data.aura">
+                <h3>Aura</h3>
+                <h4>Description</h4>
+                <span data-bind="text: AuraType[$data.aura.auraType]"></span>
+                <h4>Multiplier</h4>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Fully grown</td>
+                            <td data-bind="text: $data.aura.auraMultipliers[2]"></td>
+                        </tr>
+                        <tr>
+                            <td>25 Fully grown</td>
+                            <td data-bind="text: $data.aura.auraMultipliers[2] * 25"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     <!-- /ko -->
 </div>
