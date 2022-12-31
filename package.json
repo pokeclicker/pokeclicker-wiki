@@ -7,7 +7,7 @@
     "start": "npm run build",
     "build": "browserify scripts/main.js -o bundle.js",
     "watch": "watchify scripts/main.js -o bundle.js",
-    "update-game": "git submodule update --init && git submodule update --remote",
+    "update-game": "git submodule update --init && git submodule update --remote && node update.js",
     "test": "eslint ./scripts"
   },
   "repository": {
