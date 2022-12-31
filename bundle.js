@@ -10843,6 +10843,7 @@ App.game = new Game(
 );
 App.game.farming.initialize();
 App.game.breeding.initialize();
+SafariPokemonList.generateSafariLists();
 QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
