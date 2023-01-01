@@ -33,7 +33,7 @@ glob('pokeclicker/docs/assets/images/**/*', (err, res) => {
         if (/^-?\d+(-?\w)?\./.test(fileName)) return;
 
         // Create a symlink
-        fs.symlink(`./${filePath}`, `./images/${fileName}`, 'file', (err) => {
+        fs.symlink(`../${filePath}`, `./images/${fileName}`, 'file', (err) => {
             // No error or File already exist
             if (!err || err.code == 'EEXIST') return;
             // Permissions error, run as admin
