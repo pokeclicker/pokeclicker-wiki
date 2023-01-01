@@ -11303,7 +11303,13 @@ const searchOptions = [
     page: '',
   }
 ];
-
+// Differentiate our different links with the same name
+searchOptions.forEach(a => {
+  const duplicates = searchOptions.filter(b => b.display == a.display);
+  if (duplicates.length > 1) {
+    duplicates.forEach(d => d.display = `${d.display} (${d.type})`);
+  }
+})
 
 /*
     AUTO FILL FOR SEARCH BAR
