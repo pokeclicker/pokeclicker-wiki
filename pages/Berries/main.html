@@ -52,18 +52,11 @@
                 </tbody>
             </table>
         </div>
-        <h3>In game description</h3>
+        <h3>Description</h3>
         <p data-bind="text: $data.description"></p>
         <div class="table-responsive">
             <table class="table table-hover table-striped table-bordered">
-                <thead class="thead-dark">
-                    <tr>
-                        <th colspan="2">Information</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-                <thead class="thead-dark">
+                <thead>
                     <tr>
                         <th colspan="2">Growth Times</th>
                     </tr>
@@ -75,10 +68,6 @@
                         <td data-bind="text: GameConstants.formatSecondsToTime($parent.growthTime[$index()]).replace(/<\/br>/g, ' ')"></td>
                     </tr>
                     <!-- /ko -->
-                </tbody>
-                <thead class="thead-dark">
-                </thead>
-                <tbody>
                 </tbody>
             </table>
         </div>
