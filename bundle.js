@@ -11163,6 +11163,8 @@ module.exports = {
     getBestVitamins,
 }
 },{}],105:[function(require,module,exports){
+const { gotoPage } = require('./navigation');
+
 const searchOptions = [
   {
     display:'Home',
@@ -11335,4 +11337,4 @@ module.exports = {
   searchOptions,
 };
 
-},{}]},{},[96]);
+},{"./navigation":103}]},{},[96]);

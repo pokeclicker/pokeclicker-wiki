@@ -1,3 +1,5 @@
+const { gotoPage } = require('./navigation');
+
 const searchOptions = [
   {
     display:'Home',
