@@ -54,38 +54,70 @@
         </div>
         <h3>Description</h3>
         <p data-bind="text: $data.description"></p>
+        <h3>Growth Stages</h3>
         <div class="table-responsive">
             <table class="table table-hover table-striped table-bordered">
                 <thead>
                     <tr>
-                        <th colspan="2">Growth Times</th>
+                        <th></th>
+                        <!-- ko foreach: GameHelper.enumNumbers(PlotStage).filter(s => s > 0) -->
+                            <th class="col-2 text-center" data-bind="text:PlotStage[$data]"></th>
+                        <!-- /ko -->
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- ko foreach: GameHelper.enumStrings(PlotStage) -->
                     <tr>
-                        <td data-bind="text: $data"></td>
-                        <td data-bind="text: GameConstants.formatSecondsToTime($parent.growthTime[$index()]).replace(/<\/br>/g, ' ')"></td>
+                        <td>Time since planting</td>
+                        <!-- ko foreach: GameHelper.enumNumbers(PlotStage).filter(s => s > 0) -->
+                            <td class="text-center" data-bind="text: GameConstants.formatSecondsToTime($parent.growthTime[$index()]).replace(/<\/br>/g, ' ')"></td>
+                        <!-- /ko -->
                     </tr>
-                    <!-- /ko -->
+                    <tr>
+                        <td>Sprite</td>
+                        <td class="text-center">
+                            <img width="48px" class="pixel" src="./images/AllTreeSprout.png"/>
+                        </td>
+                        <!-- ko foreach: GameHelper.enumNumbers(PlotStage).filter(s => s > 1) -->
+                            <td class="text-center">
+                                <img width="48px" class="pixel" data-bind="attr: { src: `./images/${Wiki.pageName()}Tree${PlotStage[$data]}.png` }"/>
+                            </td>
+                        <!-- /ko -->
+                    </tr>
+                    <tr data-bind="if: $data.aura">
+                        <td data-bind="text: `Aura (${AuraType[$data.aura.auraType]})`"></td>
+                        <td class="text-center">-</td>
+                        <!-- ko foreach: GameHelper.enumNumbers(PlotStage).filter(s => s > 1) -->
+                            <td class="text-center" data-bind="text: `×${$parent.aura.auraMultipliers[$index()]}`"></td>
+                        <!-- /ko -->
+                    </tr>
                 </tbody>
             </table>
         </div>
-
-        <div data-bind="if: $data.aura">
-            <h3>Aura</h3>
-            <h4>Description</h4>
-            <span data-bind="text: AuraType[$data.aura.auraType]"></span>
-            <h4>Multiplier</h4>
-            <table>
+        <h3>Growth time with modifiers</h3>
+        <div class="table-responsive">
+            <table class="table table-hover table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Modifier</th>
+                        <th class="text-center">Ripe Time</th>
+                        <th class="text-center">Boost Mulch required</th>
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
-                        <td>Fully grown</td>
-                        <td data-bind="text: $data.aura.auraMultipliers[2]"></td>
+                        <td>None</td>
+                        <td class="text-center" data-bind="text: GameConstants.formatSecondsToTime($data.growthTime[3]).replace(/<\/br>/g, ' ')"></td>
+                        <td class="text-center">-</td>
                     </tr>
                     <tr>
-                        <td>25 Fully grown</td>
-                        <td data-bind="text: $data.aura.auraMultipliers[2] * 25"></td>
+                        <td>Boost Mulch/Sprayduck (max)</td>
+                        <td class="text-center" data-bind="text: GameConstants.formatSecondsToTime(Math.round(($data.growthTime[3] * .666))).replace(/<\/br>/g, ' ')"></td>
+                        <td class="text-center" data-bind="text: Math.ceil((Math.round(($data.growthTime[3] * .666) / 60) * 60) / (60 * 5))"></td>
+                    </tr>
+                    <tr>
+                        <td>Boost Mulch & Sprayduck (max)</td>
+                        <td class="text-center" data-bind="text: GameConstants.formatSecondsToTime(Math.round(($data.growthTime[3] * .666 * .666))).replace(/<\/br>/g, ' ')"></td>
+                        <td class="text-center" data-bind="text: Math.ceil((Math.round(($data.growthTime[3] * .666 * .666) / 60) * 60) / (60 * 5))"></td>
                     </tr>
                 </tbody>
             </table>

@@ -12,6 +12,9 @@ blockquote {
 .clickable {
   cursor: pointer;
 }
+img.pixel {
+  image-rendering: pixelated;
+}
 
 /* POKECLICKER */
 
