@@ -48,7 +48,7 @@
                     <div class="d-flex">
                         <input id="search" type="text" class="form-control typeahead me-2 text-dark" autocomplete="off" placeholder="Search" />
                         <a href="#!Settings" tabindex="-1" class="btn btn-secondary ml-1">⚙️</a>
-                        <a href="#!" tabindex="-1" class="btn btn-secondary ml-1" data-bind="attr: { href: `#!${pageType()}/${pageName() || ''}/edit` }">✏️</a>
+                        <a href="#!" tabindex="-1" class="btn btn-secondary ml-1" data-bind="attr: { href: `#!${Wiki.pageType()}/${Wiki.pageName() || ''}/edit` }">✏️</a>
                     </div>
                 </div>
             </div>
@@ -57,34 +57,34 @@
         <main role="main" class="container" id="main-content">
             <nav id="breadcrumbs" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li data-bind="class: 'breadcrumb-item' + (!window.pageType() && !window.pageName() ? ' active' : '')">
-                        <!-- ko if: window.pageType() -->
+                    <li data-bind="class: 'breadcrumb-item' + (!Wiki.pageType() && !Wiki.pageName() ? ' active' : '')">
+                        <!-- ko if: Wiki.pageType() -->
                         <a href="#!">Home</a>
                         <!-- /ko -->
-                        <!-- ko ifnot: window.pageType() -->
+                        <!-- ko ifnot: Wiki.pageType() -->
                         <span>Home</span>
                         <!-- /ko -->
                     </li>
-                    <!-- ko if: window.pageType() -->
-                    <li data-bind="class: 'breadcrumb-item' + (window.pageType() && !window.pageName() ? ' active' : '')">
-                        <!-- ko if: window.pageName() -->
-                        <a href="#!" data-bind="text: pageType(), attr: { href: `#!${pageType()}` }"></a>
+                    <!-- ko if: Wiki.pageType() -->
+                    <li data-bind="class: 'breadcrumb-item' + (Wiki.pageType() && !Wiki.pageName() ? ' active' : '')">
+                        <!-- ko if: Wiki.pageName() -->
+                        <a href="#!" data-bind="text: Wiki.pageType(), attr: { href: `#!${Wiki.pageType()}` }"></a>
                         <!-- /ko -->
-                        <!-- ko ifnot: window.pageName() -->
-                        <span data-bind="text: window.pageType()"></span>
+                        <!-- ko ifnot: Wiki.pageName() -->
+                        <span data-bind="text: Wiki.pageType()"></span>
                         <!-- /ko -->
                     </li>
                     <!-- /ko -->
-                    <!-- ko if: window.pageName() -->
-                    <li data-bind="class: 'breadcrumb-item' + (window.pageType() && window.pageName() ? ' active' : '')">
-                        <span data-bind="text: window.pageName()"></span>
+                    <!-- ko if: Wiki.pageName() -->
+                    <li data-bind="class: 'breadcrumb-item' + (Wiki.pageType() && Wiki.pageName() ? ' active' : '')">
+                        <span data-bind="text: Wiki.pageName()"></span>
                     </li>
                     <!-- /ko -->
                 </ol>
             </nav>
             <div id="page-title">
-                <!-- ko if: window.pageType() -->
-                <h1 data-bind="text: window.pageName() ? window.pageName() : window.pageType()"></h1>
+                <!-- ko if: Wiki.pageType() -->
+                <h1 data-bind="text: Wiki.pageName() ? Wiki.pageName() : Wiki.pageType()"></h1>
                 <!-- /ko -->
             </div>
             <div id="wiki-page-content"></div>
@@ -143,6 +143,6 @@
         </template>
 
         <!-- Main wiki script -->
-        <script src="bundle.js"></script>
+        <script src="bundle.js?t=1672535452163"></script>
     </body>
 </html>

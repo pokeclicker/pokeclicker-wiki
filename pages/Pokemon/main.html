@@ -1,8 +1,8 @@
 <div>
-    <!-- ko ifnot: pokemonList.find((p) => p.name == pageName()) -->
+    <!-- ko ifnot: pokemonList.find((p) => p.name == Wiki.pageName()) -->
         <h1>Pokémon not found...</h1>
     <!-- /ko -->
-    <!-- ko with: pokemonList.find((p) => p.name == pageName()) -->
+    <!-- ko with: pokemonList.find((p) => p.name == Wiki.pageName()) -->
         <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>
         <h3>ID:</h3>
         <span data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`"></span>
@@ -66,7 +66,7 @@
                     <tr>
                         <td data-bind="text: GameConstants.camelCaseToString($data)"></td>
                         <td data-bind="text: (GameConstants.Region[$data] + 1) * 5"></td>
-                        <!-- ko with: getBestVitamins($parent.attack, $parent.eggCycles, GameConstants.Region[$data]) -->
+                        <!-- ko with: Wiki.pokemon.getBestVitamins($parent.attack, $parent.eggCycles, GameConstants.Region[$data]) -->
                             <td data-bind="text: $data.protein"></td>
                             <td data-bind="text: $data.calcium"></td>
                             <td data-bind="text: $data.carbos"></td>

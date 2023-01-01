@@ -166,4 +166,6 @@ $('#search').bind('typeahead:autocomplete', (ev, suggestion) => {
   gotoPage(suggestion.type, suggestion.page);
 });
 
-module.exports = searchOptions;
+module.exports = { 
+  searchOptions,
+};

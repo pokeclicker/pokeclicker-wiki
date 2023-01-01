@@ -10,7 +10,7 @@
             </tr>
         </thead>
         <tbody data-bind="foreach: App.game.farming.berryData">
-            <tr class="clickable align-middle" data-bind="click: () => { gotoPage('Berries', BerryType[$data.type]); return false; }">
+            <tr class="clickable align-middle" data-bind="click: () => { Wiki.gotoPage('Berries', BerryType[$data.type]); return false; }">
                 <td>
                     <knockout data-bind="text: `#${($data.type + 1).toString().padStart(2, 0)}`"></knockout>
                     <img height="30px" data-bind="attr: {src: './pokeclicker/docs/' + FarmController.getBerryImage($data.type)}"/>

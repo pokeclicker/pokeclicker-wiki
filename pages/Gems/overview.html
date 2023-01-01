@@ -9,7 +9,7 @@
             </tr>
         </thead>
         <tbody data-bind="foreach: GameHelper.enumNumbers(PokemonType).filter(t => t >= 0)">
-            <tr class="clickable" data-bind="click: () => { gotoPage('Gems', PokemonType[$data]); return false; }">
+            <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Gems', PokemonType[$data]); return false; }">
                 <td data-bind="text: PokemonType[$data] + ' Gem'"></td>
                 <td><img data-bind="attr: {src: './pokeclicker/docs/' + Gems.image($data)}"/></td>
             </tr>

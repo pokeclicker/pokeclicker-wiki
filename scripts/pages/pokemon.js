@@ -59,12 +59,12 @@ calculateVitamins = (att, steps, region) => {
   return data;
 }
 
-window.getBestVitamins = (att, step, region) => {
+const getBestVitamins = (att, step, region) => {
     const output = calculateVitamins(att, step, region);
     const max = Math.max(...output.map(i => i.eff));
     return output.find(o => o.eff == max);
 }
 
 module.exports = {
-    getBestVitamins: window.getBestVitamins,
+    getBestVitamins,
 }

@@ -11,7 +11,7 @@
             </tr>
         </thead>
         <tbody data-bind="foreach: App.game.quests.questLines()">
-            <tr class="clickable" data-bind="click: () => { gotoPage('Quest Lines', $data.name); return false; }">
+            <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Quest Lines', $data.name); return false; }">
                 <td data-bind="text: $data.name"></td>
                 <td data-bind="text: $data.description"></td>
                 <td data-bind="text: $data.totalQuests"></td>

@@ -10861,127 +10861,15 @@ Requirement.prototype.toJSON = function() {
   };
 };
 
-module.exports = App;
-
 },{}],96:[function(require,module,exports){
-const App = require('./game');
-const md = require('./markdown-renderer');
-const searchOptions = require('./typeahead');
+window.Wiki = {
+  ...require('./game'),
+  ...require('./navigation'),
+  ...require('./typeahead'),
+  pokemon: require('./pages/pokemon'),
+}
 
-// Load our error page for when we need it
-errorPage = '';
-$.get('404.html', (data) => {
-  errorPage = data;
-}).fail(() => {
-  errorPage = '<h1>Page not found</h1>';
-});
-
-// Setup our pages observables
-window.pageType = ko.observable();
-window.pageName = ko.observable();
-const applyBindings = ko.observable(false);
-
-// This is our main function for changing pages
-// Look at onhashchange for what happens after
-window.gotoPage = (type, name, other) => {
-  // Update our page hash, so if we reload it will load this page
-  window.location.hash = `#!${encodeURI(type).replace(/%20/g, '_')}/${encodeURI(name).replace(/%20/g, '_')}${other ? `/${other}`: ''}`;
-};
-
-// When the hash changes, we will load the new page
-// This also allows us to go forwards and back in history
-onhashchange = (event) => {
-  if (!event.oldURL.includes('#!')) {
-    return;
-  }
-  if (!event.newURL.includes('#!') && event.oldURL.includes('#!')) {
-    // Change the url back to the current page
-    location.hash = event.oldURL.replace(/.*#!/, '#!');
-    // Scroll to the element they wanted to view
-    const el = document.getElementById(event.newURL.replace(/.*#/, ''));
-    if (el) {
-      const navEl = document.getElementById('nav-bar');
-      const y = (el?.getBoundingClientRect()?.top || 0) - (navEl?.scrollHeight || 0)
-      scrollBy(0, y);
-    }
-    return;
-  }
-  const [ type, name, other ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
-  if (type == 'loading') {
-    return;
-  }
-  pageType(type);
-  pageName(name);
-  const pageElement = $('#wiki-page-content');
-  pageElement.html('');
-  // Loading...
-  const template = document.querySelector('#loading');
-  const clone = template.content.cloneNode(true);
-  pageElement.append(clone);
-  let page = '';
-  if (!pageType() && !pageName()) {
-    page = 'pages/home.html';
-  } else if (!pageName()) {
-    page = `pages/${encodeURIComponent(pageType())}/overview.html`;
-  } else {
-    page = `pages/${encodeURIComponent(pageType())}/main.html`;
-  }
-  $.get(page, (data) => {
-    pageElement.html(data);
-    applyBindings(true);
-  }).fail(() => {
-    pageType('Page not found');
-    pageName('');
-    pageElement.html(errorPage);
-  });
-
-  const cleanFileName = (s) => s.replace(/[^\s\w\(\)'"!-]/gi, "-");
-
-  const pageElementCustom = $('#wiki-page-custom-content');
-  pageElementCustom.html('');
-  $.get(`data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`, (data) => {
-    if (other == 'edit') {
-      pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = md.render(this.value)">${data}</textarea><div id="preview-edit">${md.render(data)}</div>`);
-    } else {
-      pageElementCustom.html(md.render(data));
-    }
-  }).fail(() => {
-    if (other == 'edit') {
-      pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = md.render(this.value)"></textarea><div id="preview-edit"></div>`);
-    } else {
-      pageElementCustom.html('');
-    }
-  });
-};
-
-$('document').off('ready');
-$(document).ready(() => {
-  // Load the page the user is trying to visit
-  const [type, name] = window.location.hash.substr(2).split('/');
-  window.location.hash = '#!loading';
-  gotoPage(decodeURIComponent(type || ''), decodeURIComponent(name || ''));
-
-  ko.applyBindings({}, document.getElementById('nav-bar'));
-  ko.applyBindings({}, document.getElementById('page-title'));
-  ko.applyBindings({}, document.getElementById('breadcrumbs'));
-  applyBindings.subscribe((v) => {
-    // Unbind and re-bind knockout
-    if (v) {
-      applyBindings(false);
-      ko.cleanNode(document.getElementById('wiki-page-content'));
-      ko.applyBindings({}, document.getElementById('wiki-page-content'));
-    }
-  });
-});
-
-// Save any settings the user has set before they leave
-window.onbeforeunload = () => {
-  Settings.saveDefault();
-};
-
-pokemon: require('./pages/pokemon');
-
-},{"./game":95,"./markdown-renderer":102,"./pages/pokemon":103,"./typeahead":104}],97:[function(require,module,exports){
+},{"./game":95,"./navigation":103,"./pages/pokemon":104,"./typeahead":105}],97:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11079,11 +10967,131 @@ md.renderer.rules.table_open = function(tokens, idx) {
   return '<table class="table table-hover table-striped table-bordered">';
 };
 
-window.md = md;
-
-module.exports = md;
+module.exports = {
+  md,
+}
 
 },{"./markdown-plugins/hidden-comments.js":97,"./markdown-plugins/id-element.js":98,"./markdown-plugins/image-size.js":99,"./markdown-plugins/wiki-links-badge.js":100,"./markdown-plugins/wiki-links.js":101,"markdown-it":24}],103:[function(require,module,exports){
+const { md } = require('./markdown-renderer');
+
+// Load our error page for when we need it
+errorPage = '';
+$.get('404.html', (data) => {
+  errorPage = data;
+}).fail(() => {
+  errorPage = '<h1>Page not found</h1>';
+});
+
+// Setup our pages observables
+const pageType = ko.observable();
+const pageName = ko.observable();
+const applyBindings = ko.observable(false);
+
+// This is our main function for changing pages
+// Look at onhashchange for what happens after
+const gotoPage = (type, name, other) => {
+  // Update our page hash, so if we reload it will load this page
+  window.location.hash = `#!${encodeURI(type).replace(/%20/g, '_')}/${encodeURI(name).replace(/%20/g, '_')}${other ? `/${other}`: ''}`;
+};
+
+// When the hash changes, we will load the new page
+// This also allows us to go forwards and back in history
+onhashchange = (event) => {
+  if (!event.oldURL.includes('#!')) {
+    return;
+  }
+  if (!event.newURL.includes('#!') && event.oldURL.includes('#!')) {
+    // Change the url back to the current page
+    location.hash = event.oldURL.replace(/.*#!/, '#!');
+    // Scroll to the element they wanted to view
+    const el = document.getElementById(event.newURL.replace(/.*#/, ''));
+    if (el) {
+      const navEl = document.getElementById('nav-bar');
+      const y = (el?.getBoundingClientRect()?.top || 0) - (navEl?.scrollHeight || 0)
+      scrollBy(0, y);
+    }
+    return;
+  }
+  const [ type, name, other ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
+  if (type == 'loading') {
+    return;
+  }
+  pageType(type);
+  pageName(name);
+  const pageElement = $('#wiki-page-content');
+  pageElement.html('');
+  // Loading...
+  const template = document.querySelector('#loading');
+  const clone = template.content.cloneNode(true);
+  pageElement.append(clone);
+  let page = '';
+  if (!pageType() && !pageName()) {
+    page = 'pages/home.html';
+  } else if (!pageName()) {
+    page = `pages/${encodeURIComponent(pageType())}/overview.html`;
+  } else {
+    page = `pages/${encodeURIComponent(pageType())}/main.html`;
+  }
+  $.get(page, (data) => {
+    pageElement.html(data);
+    applyBindings(true);
+  }).fail(() => {
+    pageType('Page not found');
+    pageName('');
+    pageElement.html(errorPage);
+  });
+
+  const cleanFileName = (s) => s.replace(/[^\s\w\(\)'"!-]/gi, "-");
+
+  const pageElementCustom = $('#wiki-page-custom-content');
+  pageElementCustom.html('');
+  $.get(`data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`, (data) => {
+    if (other == 'edit') {
+      pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = md.render(this.value)">${data}</textarea><div id="preview-edit">${md.render(data)}</div>`);
+    } else {
+      pageElementCustom.html(md.render(data));
+    }
+  }).fail(() => {
+    if (other == 'edit') {
+      pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = md.render(this.value)"></textarea><div id="preview-edit"></div>`);
+    } else {
+      pageElementCustom.html('');
+    }
+  });
+};
+
+$('document').off('ready');
+$(document).ready(() => {
+  // Load the page the user is trying to visit
+  const [type, name] = window.location.hash.substr(2).split('/');
+  window.location.hash = '#!loading';
+  gotoPage(decodeURIComponent(type || ''), decodeURIComponent(name || ''));
+
+  ko.applyBindings({}, document.getElementById('nav-bar'));
+  ko.applyBindings({}, document.getElementById('page-title'));
+  ko.applyBindings({}, document.getElementById('breadcrumbs'));
+  applyBindings.subscribe((v) => {
+    // Unbind and re-bind knockout
+    if (v) {
+      applyBindings(false);
+      ko.cleanNode(document.getElementById('wiki-page-content'));
+      ko.applyBindings({}, document.getElementById('wiki-page-content'));
+    }
+  });
+});
+
+// Save any settings the user has set before they leave
+window.onbeforeunload = () => {
+  Settings.saveDefault();
+};
+
+module.exports = {
+    pageType,
+    pageName,
+    gotoPage,
+};
+
+},{"./markdown-renderer":102}],104:[function(require,module,exports){
 
 getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -11145,16 +11153,16 @@ calculateVitamins = (att, steps, region) => {
   return data;
 }
 
-window.getBestVitamins = (att, step, region) => {
+const getBestVitamins = (att, step, region) => {
     const output = calculateVitamins(att, step, region);
     const max = Math.max(...output.map(i => i.eff));
     return output.find(o => o.eff == max);
 }
 
 module.exports = {
-    getBestVitamins: window.getBestVitamins,
+    getBestVitamins,
 }
-},{}],104:[function(require,module,exports){
+},{}],105:[function(require,module,exports){
 const searchOptions = [
   {
     display:'Home',
@@ -11323,6 +11331,8 @@ $('#search').bind('typeahead:autocomplete', (ev, suggestion) => {
   gotoPage(suggestion.type, suggestion.page);
 });
 
-module.exports = searchOptions;
+module.exports = { 
+  searchOptions,
+};
 
 },{}]},{},[96]);

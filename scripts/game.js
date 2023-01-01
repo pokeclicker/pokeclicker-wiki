@@ -62,5 +62,3 @@ Requirement.prototype.toJSON = function() {
     __class: req.__proto__.constructor.name,
   };
 };
-
-module.exports = App;
