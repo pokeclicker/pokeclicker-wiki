@@ -11171,28 +11171,78 @@ const { gotoPage } = require('./navigation');
 
 const searchOptions = [
   {
-    display:'Home',
+    display: 'Home',
     type: '',
     page: '',
   },
   {
-    display:'Wiki Guide',
+    display: 'Wiki Guide',
     type: 'Wiki Guide',
     page: '',
   },
   {
-    display:'Settings',
+    display: 'Settings',
     type: 'Settings',
     page: '',
   },
   {
-    display:'Battle Frontier',
+    display: 'Battle Frontier',
     type: 'Battle Frontier',
+    page: '',
+  },
+  // Pokémon
+  {
+    display: 'Pokémon',
+    type: 'Pokemon',
+    page: '',
+  },
+  ...Object.values(pokemonList).map(p => ({
+    display: p.name,
+    type: 'Pokemon',
+    page: p.name,
+  })),
+  // Dungeons
+  {
+    display: 'Dungeons',
+    type: 'Dungeons',
+    page: '',
+  },
+  ...Object.values(dungeonList).map(d => ({
+    display: d.name,
+    type: 'Dungeons',
+    page: d.name,
+  })),
+  // Gems
+  {
+    display: 'Gems',
+    type: 'Gems',
+    page: '',
+  },
+  ...GameHelper.enumStrings(PokemonType).filter(t => t != 'None').map(t => ({
+    display: `${t} Gem`,
+    type: 'Gems',
+    page: t,
+  })),
+  // Berries
+  {
+    display: 'Berries',
+    type: 'Berries',
+    page: '',
+  },
+  ...App.game.farming.berryData.map(b => ({
+    display: `${BerryType[b.type]} Berry`,
+    type: 'Berries',
+    page: BerryType[b.type],
+  })),
+  // Eggs
+  {
+    display: 'Eggs',
+    type: 'Eggs',
     page: '',
   },
   // Items
   {
-    display:'Items',
+    display: 'Items',
     type: 'Items',
     page: '',
   },
@@ -11206,53 +11256,9 @@ const searchOptions = [
     type: 'Items',
     page: i.displayName,
   })),
-  // Pokémon
-  {
-    display:'Pokémon',
-    type: 'Pokemon',
-    page: '',
-  },
-  ...Object.values(pokemonList).map(p => ({
-    display: p.name,
-    type: 'Pokemon',
-    page: p.name,
-  })),
-  // Dungeons
-  {
-    display:'Dungeons',
-    type: 'Dungeons',
-    page: '',
-  },
-  ...Object.values(dungeonList).map(d => ({
-    display: d.name,
-    type: 'Dungeons',
-    page: d.name,
-  })),
-  // Gems
-  {
-    display:'Gems',
-    type: 'Gems',
-    page: '',
-  },
-  ...GameHelper.enumStrings(PokemonType).filter(t => t != 'None').map(t => ({
-    display: `${t} Gem`,
-    type: 'Gems',
-    page: t,
-  })),
-  // Berries
-  {
-    display:'Berries',
-    type: 'Berries',
-    page: '',
-  },
-  ...App.game.farming.berryData.map(b => ({
-    display: `${BerryType[b.type]} Berry`,
-    type: 'Berries',
-    page: BerryType[b.type],
-  })),
   // QuestLines
   {
-    display:'Quest Lines',
+    display: 'Quest Lines',
     type: 'Quest Lines',
     page: '',
   },
@@ -11263,7 +11269,7 @@ const searchOptions = [
   })),
   // Farm
     {
-      display:'Farm',
+      display: 'Farm',
       type: 'Farm',
       page: '',
     },
