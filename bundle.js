@@ -11089,6 +11089,7 @@ $(document).ready(() => {
 
   ko.applyBindings({}, document.getElementById('nav-bar'));
   ko.applyBindings({}, document.getElementById('page-title'));
+  ko.applyBindings({}, document.getElementById('page-table-of-contents'));
   ko.applyBindings({}, document.getElementById('breadcrumbs'));
   applyBindings.subscribe((v) => {
     // Unbind and re-bind knockout
