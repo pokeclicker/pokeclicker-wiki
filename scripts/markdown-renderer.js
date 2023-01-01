@@ -10,7 +10,10 @@ const md = new markdownit({
   .use(require('./markdown-plugins/wiki-links-badge.js'))
   .use(require('./markdown-plugins/wiki-links.js'));
 md.renderer.rules.table_open = function(tokens, idx) {
-  return '<table class="table table-hover table-striped table-bordered">';
+  return '<div class="table-responsive"><table class="table table-hover table-striped table-bordered">';
+};
+md.renderer.rules.table_close = function(tokens, idx) {
+  return '</table></div>';
 };
 
 module.exports = {

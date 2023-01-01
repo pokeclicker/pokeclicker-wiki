@@ -4,18 +4,32 @@
     <!-- /ko -->
     <!-- ko with: pokemonList.find((p) => p.name == Wiki.pageName()) -->
         <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>
-        <h3>ID:</h3>
-        <span data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`"></span>
-        <h3>Type:</h3>
-        <!-- ko foreach: $data.type -->
-            <span class="badge" data-bind="text: PokemonType[$data], style:{ background: TypeColor[$data] }"></span>
-        <!-- /ko -->
-        <h3>Base Attack:</h3>
-        <span data-bind="text: $data.attack.toLocaleString()"></span>
-        <h3>Egg Steps:</h3>
-        <span data-bind="text: App.game.breeding.getSteps($data.eggCycles).toLocaleString()"></span>
-        <h3>Catch Rate:</h3>
-        <span data-bind="text: PokemonFactory.catchRateHelper($data.catchRate, true) + '%'"></span>
+        <div class="table-responsive">
+            <table class="table table-hover table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Type</th>
+                        <th>Base Attack</th>
+                        <th>Egg Steps</th>
+                        <th>Catch Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`"></td>
+                        <td>
+                            <!-- ko foreach: $data.type -->
+                                <span class="badge" data-bind="text: PokemonType[$data], style:{ background: TypeColor[$data] }"></span>
+                            <!-- /ko -->
+                        </td>
+                        <td data-bind="text: $data.attack.toLocaleString()"></td>
+                        <td data-bind="text: App.game.breeding.getSteps($data.eggCycles).toLocaleString()"></td>
+                        <td data-bind="text: PokemonFactory.catchRateHelper($data.catchRate, true) + '%'"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <div data-bind="visible: $data.evolutions">
             <h3>Evolves into:</h3>
             <!-- ko foreach: $data.evolutions -->
@@ -51,30 +65,32 @@
         </div>
         <div>
             <h3>Best Vitamins:</h3>
-            <table class="table table-hover table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <th>Region</th>
-                        <th>Max Vitamins</th>
-                        <th>Protein</th>
-                        <th>Calcium</th>
-                        <th>Carbos</th>
-                        <th>Efficiency</th>
-                    </tr>
-                </thead>
-                <tbody data-bind="foreach: GameHelper.enumStrings(GameConstants.Region).filter(r => !['none', 'final'].includes(r))">
-                    <tr>
-                        <td data-bind="text: GameConstants.camelCaseToString($data)"></td>
-                        <td data-bind="text: (GameConstants.Region[$data] + 1) * 5"></td>
-                        <!-- ko with: Wiki.pokemon.getBestVitamins($parent.attack, $parent.eggCycles, GameConstants.Region[$data]) -->
-                            <td data-bind="text: $data.protein || '-'"></td>
-                            <td data-bind="text: $data.calcium || '-'"></td>
-                            <td data-bind="text: $data.carbos || '-'"></td>
-                            <td data-bind="text: $data.eff.toLocaleString('en-US', { maximumSignificantDigits: 2 })"></td>
-                        <!-- /ko -->
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-hover table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Region</th>
+                            <th>Max Vitamins</th>
+                            <th>Protein</th>
+                            <th>Calcium</th>
+                            <th>Carbos</th>
+                            <th>Efficiency</th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: GameHelper.enumStrings(GameConstants.Region).filter(r => !['none', 'final'].includes(r))">
+                        <tr>
+                            <td data-bind="text: GameConstants.camelCaseToString($data)"></td>
+                            <td data-bind="text: (GameConstants.Region[$data] + 1) * 5"></td>
+                            <!-- ko with: Wiki.pokemon.getBestVitamins($parent.attack, $parent.eggCycles, GameConstants.Region[$data]) -->
+                                <td data-bind="text: $data.protein || '-'"></td>
+                                <td data-bind="text: $data.calcium || '-'"></td>
+                                <td data-bind="text: $data.carbos || '-'"></td>
+                                <td data-bind="text: $data.eff.toLocaleString('en-US', { maximumSignificantDigits: 2 })"></td>
+                            <!-- /ko -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     <!-- /ko -->
 </div>

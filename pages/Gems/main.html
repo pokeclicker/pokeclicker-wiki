@@ -3,57 +3,59 @@
         <img data-bind="attr: {src: './pokeclicker/docs/' + Gems.image(PokemonType[$data])}"/>
 
         <h3>Best locations</h3>
-        <table class="table table-hover table-striped table-bordered">
-            <thead class="thead-dark">
-                <tr>
-                    <th>Region</th>
-                    <th>Battle Type</th>
-                    <th>Location</th>
-                </tr>
-            </thead>
-            <tbody data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r != GameConstants.Region.final && r != GameConstants.Region.none)">
-                <tr>
-                    <td data-bind="text: GameConstants.Region[$data]" rowspan="2"></td>
-                    <td>Gym</td>
-                    <td data-bind="text: (() => {
-                        var regionGyms = GameConstants.RegionGyms[$data];
-                        var amountPerGym = regionGyms
-                            .map((g) => {
-                                var totalMons = GymList[g].pokemons.length;
-                                var totalOfType = GymList[g].pokemons.filter((p) => PokemonHelper.getPokemonByName(p.name).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p.name).type2 == PokemonType[$parent]).length;
-                                return Math.round(totalOfType / totalMons * 100);
-                            });
-                        var max = Math.max(...amountPerGym);
-                        if (!max) {
-                            return 'No gym with this gem';
-                        }
-                        return max + '% at ' + regionGyms[amountPerGym.indexOf(max)];
-                    })()
-                    "></td>
-                </tr>
-                <tr>
-                    <td>Route</td>
-                    <td data-bind="text: (() => {
-                        var regionRoutes = Routes.regionRoutes.filter((r) => r.region == $data);
-                        var amountPerRoute = regionRoutes
-                            .map((r) => {
-                                var totalMons = r.pokemon.land.length+r.pokemon.water.length+r.pokemon.headbutt.length+r.pokemon.special.length;
-                                var totalOfType = r.pokemon.land.filter((p) => PokemonHelper.getPokemonByName(p).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p).type2 == PokemonType[$parent]).length +
-                                                  r.pokemon.water.filter((p) => PokemonHelper.getPokemonByName(p).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p).type2 == PokemonType[$parent]).length +
-                                                  r.pokemon.headbutt.filter((p) => PokemonHelper.getPokemonByName(p).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p).type2 == PokemonType[$parent]).length +
-                                                  r.pokemon.special.filter((p) => PokemonHelper.getPokemonByName(p).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p).type2 == PokemonType[$parent]).length;
-                                return Math.round(totalOfType / totalMons * 100);
-                            });
-                        var max = Math.max(...amountPerRoute);
-                        if (!max) {
-                            return 'No route with this gem';
-                        }
-                        return max + '% at ' + regionRoutes[amountPerRoute.indexOf(max)].routeName;
-                    })()
-                    "></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-hover table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Region</th>
+                        <th>Battle Type</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r != GameConstants.Region.final && r != GameConstants.Region.none)">
+                    <tr>
+                        <td data-bind="text: GameConstants.Region[$data]" rowspan="2"></td>
+                        <td>Gym</td>
+                        <td data-bind="text: (() => {
+                            var regionGyms = GameConstants.RegionGyms[$data];
+                            var amountPerGym = regionGyms
+                                .map((g) => {
+                                    var totalMons = GymList[g].pokemons.length;
+                                    var totalOfType = GymList[g].pokemons.filter((p) => PokemonHelper.getPokemonByName(p.name).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p.name).type2 == PokemonType[$parent]).length;
+                                    return Math.round(totalOfType / totalMons * 100);
+                                });
+                            var max = Math.max(...amountPerGym);
+                            if (!max) {
+                                return 'No gym with this gem';
+                            }
+                            return max + '% at ' + regionGyms[amountPerGym.indexOf(max)];
+                        })()
+                        "></td>
+                    </tr>
+                    <tr>
+                        <td>Route</td>
+                        <td data-bind="text: (() => {
+                            var regionRoutes = Routes.regionRoutes.filter((r) => r.region == $data);
+                            var amountPerRoute = regionRoutes
+                                .map((r) => {
+                                    var totalMons = r.pokemon.land.length+r.pokemon.water.length+r.pokemon.headbutt.length+r.pokemon.special.length;
+                                    var totalOfType = r.pokemon.land.filter((p) => PokemonHelper.getPokemonByName(p).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p).type2 == PokemonType[$parent]).length +
+                                                    r.pokemon.water.filter((p) => PokemonHelper.getPokemonByName(p).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p).type2 == PokemonType[$parent]).length +
+                                                    r.pokemon.headbutt.filter((p) => PokemonHelper.getPokemonByName(p).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p).type2 == PokemonType[$parent]).length +
+                                                    r.pokemon.special.filter((p) => PokemonHelper.getPokemonByName(p).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p).type2 == PokemonType[$parent]).length;
+                                    return Math.round(totalOfType / totalMons * 100);
+                                });
+                            var max = Math.max(...amountPerRoute);
+                            if (!max) {
+                                return 'No route with this gem';
+                            }
+                            return max + '% at ' + regionRoutes[amountPerRoute.indexOf(max)].routeName;
+                        })()
+                        "></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <!-- /ko -->
 </div>
