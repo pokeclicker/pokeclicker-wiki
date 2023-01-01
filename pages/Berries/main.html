@@ -122,6 +122,25 @@
                 </tbody>
             </table>
         </div>
+        <h3>Wanderers</h3>
+        <div class="table-responsive">
+            <table class="table table-hover table-striped table-bordered">
+                <tbody data-bind="foreach: new Array(Math.ceil($data.wander.length / 2))">
+                    <tr>
+                        <td>
+                            <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$parent.wander[$index() * 2]].id + '.png'}"/>
+                            <ko data-bind="text: $parent.wander[$index() * 2]"></ko>
+                        </td>
+                        <!-- ko if: $parent.wander[$index() * 2 + 1] -->
+                        <td>
+                            <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$parent.wander[$index() * 2 + 1]].id + '.png'}"/>
+                            <ko data-bind="text: $parent.wander[$index() * 2 + 1]"></ko>
+                        </td>
+                        <!-- /ko -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <!-- /ko -->
 </div>
