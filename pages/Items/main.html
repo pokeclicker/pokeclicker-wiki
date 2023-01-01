@@ -23,7 +23,7 @@
                     <td>Price</td>
                     <td>
                         <img data-bind="attr: { src: `./images/${GameConstants.Currency[$data.currency]}.svg` }" width="18px"/>
-                        <ko data-bind="text: $data.basePrice"></ko>
+                        <ko data-bind="text: $data.basePrice.toLocaleString()"></ko>
                     </td>
                 </tr>
             </tbody>
