@@ -67,9 +67,9 @@
                         <td data-bind="text: GameConstants.camelCaseToString($data)"></td>
                         <td data-bind="text: (GameConstants.Region[$data] + 1) * 5"></td>
                         <!-- ko with: Wiki.pokemon.getBestVitamins($parent.attack, $parent.eggCycles, GameConstants.Region[$data]) -->
-                            <td data-bind="text: $data.protein"></td>
-                            <td data-bind="text: $data.calcium"></td>
-                            <td data-bind="text: $data.carbos"></td>
+                            <td data-bind="text: $data.protein || '-'"></td>
+                            <td data-bind="text: $data.calcium || '-'"></td>
+                            <td data-bind="text: $data.carbos || '-'"></td>
                             <td data-bind="text: $data.eff.toLocaleString('en-US', { maximumSignificantDigits: 2 })"></td>
                         <!-- /ko -->
                     </tr>
