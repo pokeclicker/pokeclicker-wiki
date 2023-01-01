@@ -73,13 +73,13 @@ onhashchange = (event) => {
   pageElementCustom.html('');
   $.get(`data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`, (data) => {
     if (other == 'edit') {
-      pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = md.render(this.value)">${data}</textarea><div id="preview-edit">${md.render(data)}</div>`);
+      pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = Wiki.md.render(this.value)">${data}</textarea><div id="preview-edit">${md.render(data)}</div>`);
     } else {
       pageElementCustom.html(md.render(data));
     }
   }).fail(() => {
     if (other == 'edit') {
-      pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = md.render(this.value)"></textarea><div id="preview-edit"></div>`);
+      pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = Wiki.md.render(this.value)"></textarea><div id="preview-edit"></div>`);
     } else {
       pageElementCustom.html('');
     }
