@@ -49,5 +49,32 @@
                 <path fill="#111" d="M63.3 126.7A49.7 49.7 0 0113.7 77c0-14 5.6-33 14.3-48.5C38.3 10.1 50.8 0 63.3 0c12.5 0 25 10.1 35.4 28.5A109 109 0 01113 77a49.7 49.7 0 01-49.7 49.7zM63.3 3C48 3 36.3 20 30.6 30a105 105 0 00-14 47 46.7 46.7 0 0093.4 0c0-13.5-5.5-32-14-47C90.5 20 78.8 3 63.4 3z"></path>
             </svg>
         </div>
+        <div>
+            <h3>Best Vitamins:</h3>
+            <table class="table table-hover table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Region</th>
+                        <th>Max Vitamins</th>
+                        <th>Protein</th>
+                        <th>Calcium</th>
+                        <th>Carbos</th>
+                        <th>Efficiency</th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: GameHelper.enumStrings(GameConstants.Region).filter(r => !['none', 'final'].includes(r))">
+                    <tr>
+                        <td data-bind="text: GameConstants.camelCaseToString($data)"></td>
+                        <td data-bind="text: (GameConstants.Region[$data] + 1) * 5"></td>
+                        <!-- ko with: getBestVitamins($parent.attack, $parent.eggCycles, GameConstants.Region[$data]) -->
+                            <td data-bind="text: $data.protein"></td>
+                            <td data-bind="text: $data.calcium"></td>
+                            <td data-bind="text: $data.carbos"></td>
+                            <td data-bind="text: $data.eff.toLocaleString('en-US', { maximumSignificantDigits: 2 })"></td>
+                        <!-- /ko -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     <!-- /ko -->
 </div>

@@ -112,3 +112,5 @@ $(document).ready(() => {
 window.onbeforeunload = () => {
   Settings.saveDefault();
 };
+
+pokemon: require('./pages/pokemon');
