@@ -5,9 +5,9 @@
     -->
         <h3>Item not found...</h3>
     <!-- /ko -->
-    <!-- ko with: Object.values(ItemList).find((i) => i.displayName == Wiki.pageName()) -->
+    <!-- ko with: Object.values(ItemList).find((i) => i.displayName == Wiki.pageName()) || UndergroundItems.list.filter((ui) => !Object.values(ItemList).some((i) => i.displayName == ui.displayName)).find((i) => i.displayName == Wiki.pageName())-->
         <img data-bind="attr: {src: './pokeclicker/docs/' + $data.image}"/>
-        <div>
+        <div data-bind="if: $data.description">
             <h3>Description:</h3>
             <div data-bind="html: $data.description"></div>
         </div>
@@ -24,20 +24,4 @@
             <!-- /ko -->
         </div>
     <!-- /ko -->
-
-
-
-
-    <!-- ko with: UndergroundItems.list.filter((ui) => !Object.values(ItemList).some((i) => i.displayName == ui.displayName)).find((i) => i.displayName == Wiki.pageName()) -->
-    <img data-bind="attr: {src: './pokeclicker/docs/' + $data.image}"/>
-    <div>
-        <div>An item found in the underground.</div>
-    </div>
-    <div data-bind="if: Object.values(dungeonList).some((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name)))">
-        <h3>Can be found in the following dungeons:</h3>
-        <!-- ko foreach : Object.values(dungeonList).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name))) -->
-            <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Dungeons/${$data.name}` }"></a>
-        <!-- /ko -->
-    </div>
-<!-- /ko -->
 </div>
