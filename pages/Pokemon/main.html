@@ -1,6 +1,6 @@
 <div>
     <!-- ko ifnot: pokemonList.find((p) => p.name == Wiki.pageName()) -->
-        <h1>Pokémon not found...</h1>
+        <h3>Pokémon not found...</h3>
     <!-- /ko -->
     <!-- ko with: pokemonList.find((p) => p.name == Wiki.pageName()) -->
         <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>

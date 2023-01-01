@@ -1,5 +1,9 @@
 <div>
-    <!-- ko with: Wiki.pageName() -->
+    <!-- ko ifnot: PokemonType[Wiki.pageName()] >= 0 -->
+        <h3>Gem type not found...</h3>
+    <!-- /ko -->
+    <!-- ko if: PokemonType[Wiki.pageName()] >= 0 -->
+    <div data-bind="with: Wiki.pageName()">
         <img data-bind="attr: {src: './pokeclicker/docs/' + Gems.image(PokemonType[$data])}"/>
 
         <h3>Best locations</h3>
@@ -56,6 +60,6 @@
                 </tbody>
             </table>
         </div>
-
-        <!-- /ko -->
+    </div>
+    <!-- /ko -->
 </div>

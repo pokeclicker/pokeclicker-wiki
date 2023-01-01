@@ -1,5 +1,9 @@
 <div>
-    <!-- ko with: Wiki.pageName() -->
+    <!-- ko ifnot: BerryType[Wiki.pageName()] >= 0 -->
+        <h3>Berry not found...</h3>
+    <!-- /ko -->
+    <!-- ko if: BerryType[Wiki.pageName()] >= 0 -->
+    <div data-bind="with: Wiki.pageName()">
         <div data-bind="with: App.game.farming.berryData[BerryType[$data]]">
             <img data-bind="attr: {src: './pokeclicker/docs/' + FarmController.getBerryImage($data.type)}"/>
             <h3>In game description</h3>
@@ -81,5 +85,6 @@
                 </table>
             </div>
         </div>
+    </div>
     <!-- /ko -->
 </div>
