@@ -129,12 +129,12 @@
                     <tr>
                         <td>
                             <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$parent.wander[$index() * 2]].id + '.png'}"/>
-                            <ko data-bind="text: $parent.wander[$index() * 2]"></ko>
+                            <a data-bind="text: $parent.wander[$index() * 2], attr: { href: `#!Pokemon/${$parent.wander[$index() * 2]}` }"></a>
                         </td>
                         <!-- ko if: $parent.wander[$index() * 2 + 1] -->
                         <td>
                             <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$parent.wander[$index() * 2 + 1]].id + '.png'}"/>
-                            <ko data-bind="text: $parent.wander[$index() * 2 + 1]"></ko>
+                            <a data-bind="text: $parent.wander[$index() * 2 + 1], attr: { href: `#!Pokemon/${$parent.wander[$index() * 2 + 1]}` }"></a>
                         </td>
                         <!-- /ko -->
                     </tr>
