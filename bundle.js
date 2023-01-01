@@ -11067,13 +11067,13 @@ onhashchange = (event) => {
   pageElementCustomDescription.html('');
   $.get(`data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}_description.md`, (data) => {
     if (other == 'edit') {
-      pageElementCustomDescription.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = Wiki.md.render(this.value)">${data}</textarea><div id="preview-edit">${md.render(data)}</div>`);
+      pageElementCustomDescription.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit-desc').innerHTML = Wiki.md.render(this.value)">${data}</textarea><div id="preview-edit-desc">${md.render(data)}</div>`);
     } else {
       pageElementCustomDescription.html(md.render(data));
     }
   }).fail(() => {
     if (other == 'edit') {
-      pageElementCustomDescription.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = Wiki.md.render(this.value)"></textarea><div id="preview-edit"></div>`);
+      pageElementCustomDescription.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit-desc').innerHTML = Wiki.md.render(this.value)"></textarea><div id="preview-edit-desc"></div>`);
     } else {
       pageElementCustomDescription.html('');
     }
