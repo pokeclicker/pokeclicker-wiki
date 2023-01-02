@@ -113,6 +113,7 @@ $(document).ready(() => {
   ko.applyBindings({}, document.getElementById('page-title'));
   ko.applyBindings({}, document.getElementById('page-table-of-contents'));
   ko.applyBindings({}, document.getElementById('breadcrumbs'));
+  ko.applyBindings({}, document.getElementById('settings-modal'));
   applyBindings.subscribe((v) => {
     // Unbind and re-bind knockout
     if (v) {

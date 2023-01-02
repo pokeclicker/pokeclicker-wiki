@@ -12,11 +12,6 @@ const searchOptions = [
     page: '',
   },
   {
-    display: 'Settings',
-    type: 'Settings',
-    page: '',
-  },
-  {
     display: 'Battle Frontier',
     type: 'Battle Frontier',
     page: '',

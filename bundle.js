@@ -11091,6 +11091,7 @@ $(document).ready(() => {
   ko.applyBindings({}, document.getElementById('page-title'));
   ko.applyBindings({}, document.getElementById('page-table-of-contents'));
   ko.applyBindings({}, document.getElementById('breadcrumbs'));
+  ko.applyBindings({}, document.getElementById('settings-modal'));
   applyBindings.subscribe((v) => {
     // Unbind and re-bind knockout
     if (v) {
@@ -11195,11 +11196,6 @@ const searchOptions = [
   {
     display: 'Wiki Guide',
     type: 'Wiki Guide',
-    page: '',
-  },
-  {
-    display: 'Settings',
-    type: 'Settings',
     page: '',
   },
   {
