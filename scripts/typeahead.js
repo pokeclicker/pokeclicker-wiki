@@ -110,7 +110,13 @@ const searchOptions = [
     display: 'Battle Frontier',
     type: 'Battle Frontier',
     page: '',
-  }
+  },
+  // Vitamins
+  {
+    display: 'Vitamins',
+    type: 'Vitamins',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {

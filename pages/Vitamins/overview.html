@@ -1,0 +1,47 @@
+<div>
+    <p>
+        Vitamins are consumable items which can be purchased from each Region's League.
+        <br/>They can be applied to a Pokémon to adjust certain stats.
+        <br/>Each Pokémon can consume a total of 5 vitamins per unlocked region.
+    </p>
+    <h2>How to use</h2>
+    <p>
+        Go to <kbd>Start Menu</kbd> → <kbd>Items</kbd> → <kbd>Item Bag</kbd>, select the vitamin and select a Pokémon to use it on.
+        <br/>Vitamins can be removed at any point by right clicking the Pokémon or toggling the give/take button.
+    </p>
+    <h2>Types</h2>
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Vitamin</th>
+                    <th>Description</th>
+                    <th>Base Price</th>
+                    <th>Max Price</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: GameHelper.enumStrings(GameConstants.VitaminType)">
+                <tr>
+                    <td>
+                        <a href="#" data-bind="text: $data, attr: { href: `#!Items/${$data}`}"></a>
+                    </td>
+                    <td data-bind="html: ItemList[$data].description"></td>
+                    <td>
+                        <img data-bind="attr: { src: `./images/${GameConstants.Currency[ItemList[$data].currency]}.svg` }" width="18px"/>
+                        <ko data-bind="text: ItemList[$data].basePrice.toLocaleString()"></ko>
+                    </td>
+                    <td>
+                        <img data-bind="attr: { src: `./images/${GameConstants.Currency[ItemList[$data].currency]}.svg` }" width="18px"/>
+                        <ko data-bind="text: (ItemList[$data].basePrice * 100).toLocaleString()"></ko>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Prices</h2>
+    <p>
+        When bought from the Pokémon League shop, the price for Vitamins rises irreversibly, similar to Masterballs.
+        <br/>It starts off at <img src="./images/money.svg" width="18px"/> 10,000 and increments by a factor of 1.1 every purchase, and caps at 100 x the base price after 49 purchases.
+    </p>
+</div>
