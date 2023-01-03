@@ -11,4 +11,4 @@ To edit the markdown for a page, create a `.md` file in the `data` directory.
 The folder and file name should follow the page name eg `https://wiki.pokeclicker.com/#!Items/Charti_Berry` would link to `data/Items/Charti Berry.md`
 
 ## Updating game files to latest version:
-Run `npm run update-game` to download the latest game files.
+Run `npm run update` to download the latest game files.

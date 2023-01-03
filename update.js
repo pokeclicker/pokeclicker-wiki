@@ -10,7 +10,7 @@ fs.readFile("index.html", function(err, buf) {
     const fileContents = buf.toString();
 
     // Replace version numbers in file
-    fs.writeFile('index.html', fileContents.replace(/\?v=[\d\.]+/g, `?v=${version}`), (err) => {
+    fs.writeFile('index.html', fileContents.replace(/\?v=[\d\.]+/g, `?v=${version}`).replace(/\?t=\d+/g, `?t=${Date.now()}`), (err) => {
         if (err) return console.error('Error updating index.html', err);
         console.log('Successfully updated script version in index.html');
     });
