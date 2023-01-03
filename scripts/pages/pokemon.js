@@ -16,13 +16,13 @@ getEff = (vitaminsUsed, baseAttack, eggCycles) => {
     return (getBreedingAttackBonus(vitaminsUsed, baseAttack) / calcEggSteps(vitaminsUsed, eggCycles)) * GameConstants.EGG_CYCLE_MULTIPLIER;
 }
 
-calculateVitamins = (att, steps, region) => {
+calculateVitamins = (baseAttack, eggCycles, region) => {
     // Add our initial starting eff here
     data = [{
         protein: 0,
         calcium: 0,
         carbos: 0,
-        eff: getEff([0,0,0], att, steps),
+        eff: getEff([0,0,0], baseAttack, eggCycles),
     }];
     vitaminsUsed = {};
     totalVitamins = (region + 1) * 5;
@@ -34,7 +34,7 @@ calculateVitamins = (att, steps, region) => {
             // We can't access these yet
             vitaminsUsed[GameConstants.VitaminType.Calcium] = 0
             vitaminsUsed[GameConstants.VitaminType.Carbos] = 0
-            const eff = getEff(vitaminsUsed, att, steps);
+            const eff = getEff(vitaminsUsed, baseAttack, eggCycles);
             // If the previous result is better than this, no point to continue
             if (eff < data[data.length - 1].eff) break;
             // Push our data
@@ -42,7 +42,7 @@ calculateVitamins = (att, steps, region) => {
                 protein,
                 calcium: 0,
                 carbos: 0,
-                eff: getEff(vitaminsUsed, att, steps),
+                eff: getEff(vitaminsUsed, baseAttack, eggCycles),
             });
         } else {
             calcium = (totalVitamins - protein) + 1;
@@ -51,7 +51,7 @@ calculateVitamins = (att, steps, region) => {
                 if (region < GameConstants.Region.unova) {
                     // We can't access these yet
                     vitaminsUsed[GameConstants.VitaminType.Carbos] = 0
-                    const eff = getEff(vitaminsUsed, att, steps);
+                    const eff = getEff(vitaminsUsed, baseAttack, eggCycles);
                     // If the previous result is better than this, no point to continue
                     if (eff < data[data.length - 1].eff) break;
                     // Push our data
@@ -65,7 +65,7 @@ calculateVitamins = (att, steps, region) => {
                     carbos = (totalVitamins - (protein + calcium)) + 1;
                     while (carbos-- > 0) {
                         vitaminsUsed[GameConstants.VitaminType.Carbos] = carbos
-                        const eff = getEff(vitaminsUsed, att, steps);
+                        const eff = getEff(vitaminsUsed, baseAttack, eggCycles);
                         // If the previous result is better than this, no point to continue
                         if (eff < data[data.length - 1].eff) break;
                         // Push our data
@@ -83,8 +83,8 @@ calculateVitamins = (att, steps, region) => {
     return data;
 }
 
-const getBestVitamins = (att, step, region) => {
-    const output = calculateVitamins(att, step, region);
+const getBestVitamins = (baseAttack, eggCycles, region) => {
+    const output = calculateVitamins(baseAttack, eggCycles, region);
     const max = Math.max(...output.map(i => i.eff));
     return output.find(o => o.eff == max);
 }
