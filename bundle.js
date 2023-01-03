@@ -11344,9 +11344,16 @@ getEff = (vitaminsUsed, baseAttack, eggCycles) => {
 }
 
 calculateVitamins = (att, steps, region) => {
+    // Add our initial starting eff here
+    data = [{
+        protein: 0,
+        calcium: 0,
+        carbos: 0,
+        eff: getEff([0,0,0], att, steps),
+    }];
     vitaminsUsed = {};
-    data = [];
     totalVitamins = (region + 1) * 5;
+    // Calculate proteins → calcium → carbos
     protein = totalVitamins + 1;
     while (protein-- > 0) {
         vitaminsUsed[GameConstants.VitaminType.Protein] = protein
@@ -11356,7 +11363,7 @@ calculateVitamins = (att, steps, region) => {
             vitaminsUsed[GameConstants.VitaminType.Carbos] = 0
             const eff = getEff(vitaminsUsed, att, steps);
             // If the previous result is better than this, no point to continue
-            if (eff < data[data.length - 1]?.eff) break;
+            if (eff < data[data.length - 1].eff) break;
             // Push our data
             data.push({
                 protein,
@@ -11373,7 +11380,7 @@ calculateVitamins = (att, steps, region) => {
                     vitaminsUsed[GameConstants.VitaminType.Carbos] = 0
                     const eff = getEff(vitaminsUsed, att, steps);
                     // If the previous result is better than this, no point to continue
-                    if (eff < data[data.length - 1]?.eff) break;
+                    if (eff < data[data.length - 1].eff) break;
                     // Push our data
                     data.push({
                         protein,
@@ -11387,7 +11394,7 @@ calculateVitamins = (att, steps, region) => {
                         vitaminsUsed[GameConstants.VitaminType.Carbos] = carbos
                         const eff = getEff(vitaminsUsed, att, steps);
                         // If the previous result is better than this, no point to continue
-                        if (eff < data[data.length - 1]?.eff) break;
+                        if (eff < data[data.length - 1].eff) break;
                         // Push our data
                         data.push({
                         protein,
@@ -11410,6 +11417,8 @@ const getBestVitamins = (att, step, region) => {
 }
 
 module.exports = {
+    getEff,
+    calculateVitamins,
     getBestVitamins,
 }
 },{}],107:[function(require,module,exports){
