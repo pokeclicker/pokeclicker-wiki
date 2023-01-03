@@ -29,39 +29,49 @@
         </table>
     </div>
     <h2>Calculator</h2>
-    <table class="table table-hover table-striped table-bordered">
-        <thead>
-            <tr>
-                <th>Base Attack</th>
-                <th>Egg Steps</th>
-                <th>Protein</th>
-                <th>Calcium</th>
-                <th>Carbos</th>
-                <th>Efficiency</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="p-0"><input class="form-control typeahead me-2 text-dark tt-input" oninput="updateEfficiency()" id="efficiency-calculator-input-attack" value="184" type="number" min="10" step="1" max="1000"/></td>
-                <td class="p-0"><input class="form-control typeahead me-2 text-dark tt-input" oninput="updateEfficiency()" id="efficiency-calculator-input-egg-steps" value="4800" type="number" min="200" step="200" max="10000"/></td>
-                <td class="p-0"><input class="form-control typeahead me-2 text-dark tt-input" oninput="updateEfficiency()" id="efficiency-calculator-input-protein" value="0" type="number" min="0" step="1" max="100"/></td>
-                <td class="p-0"><input class="form-control typeahead me-2 text-dark tt-input" oninput="updateEfficiency()" id="efficiency-calculator-input-calcium" value="0" type="number" min="0" step="1" max="100"/></td>
-                <td class="p-0"><input class="form-control typeahead me-2 text-dark tt-input" oninput="updateEfficiency()" id="efficiency-calculator-input-carbos" value="0" type="number" min="0" step="1" max="100"/></td>
-                <td id="efficiency-calculator-output">1</td>
-            </tr>
-            <script>
-                const updateEfficiency = () => {
-                    const base = 'efficiency-calculator-input-';
-                    const attack = +document.getElementById(`${base}attack`)?.value || 10;
-                    const eggCycles = (+document.getElementById(`${base}egg-steps`)?.value || 200) / 40;
-                    const protein = +document.getElementById(`${base}protein`)?.value || 0;
-                    const calcium = +document.getElementById(`${base}calcium`)?.value || 0;
-                    const carbos = +document.getElementById(`${base}carbos`)?.value || 0;
-                    const efficiency = Wiki.pokemon.getEfficiency([protein, calcium, carbos], attack, eggCycles);
-                    document.getElementById('efficiency-calculator-output').innerText = efficiency.toLocaleString('en-US', { maximumSignificantDigits: 3 });
-                }
-                updateEfficiency();
-            </script>
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="2">Base Attack</th>
+                    <th colspan="2">Egg Steps</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="p-0" colspan="2"><input class="form-control typeahead me-2 text-dark tt-input" oninput="updateEfficiency()" id="efficiency-calculator-input-attack" value="184" type="number" min="10" step="1" max="1000"/></td>
+                    <td class="p-0" colspan="2"><input class="form-control typeahead me-2 text-dark tt-input" oninput="updateEfficiency()" id="efficiency-calculator-input-egg-steps" value="4800" type="number" min="200" step="200" max="10000"/></td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th>Protein</th>
+                    <th>Calcium</th>
+                    <th>Carbos</th>
+                    <th>Efficiency</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="p-0"><input class="form-control typeahead me-2 text-dark tt-input" oninput="updateEfficiency()" id="efficiency-calculator-input-protein" value="0" type="number" min="0" step="1" max="100"/></td>
+                    <td class="p-0"><input class="form-control typeahead me-2 text-dark tt-input" oninput="updateEfficiency()" id="efficiency-calculator-input-calcium" value="0" type="number" min="0" step="1" max="100"/></td>
+                    <td class="p-0"><input class="form-control typeahead me-2 text-dark tt-input" oninput="updateEfficiency()" id="efficiency-calculator-input-carbos" value="0" type="number" min="0" step="1" max="100"/></td>
+                    <td id="efficiency-calculator-output">0.383</td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            const updateEfficiency = () => {
+                const base = 'efficiency-calculator-input-';
+                const attack = +document.getElementById(`${base}attack`)?.value || 10;
+                const eggCycles = (+document.getElementById(`${base}egg-steps`)?.value || 200) / 40;
+                const protein = +document.getElementById(`${base}protein`)?.value || 0;
+                const calcium = +document.getElementById(`${base}calcium`)?.value || 0;
+                const carbos = +document.getElementById(`${base}carbos`)?.value || 0;
+                const efficiency = Wiki.pokemon.getEfficiency([protein, calcium, carbos], attack, eggCycles);
+                document.getElementById('efficiency-calculator-output').innerText = efficiency.toLocaleString('en-US', { maximumSignificantDigits: 3 });
+            }
+            updateEfficiency();
+        </script>
+    </div>
 </div>
