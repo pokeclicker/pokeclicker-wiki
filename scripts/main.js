@@ -1,4 +1,5 @@
 window.Wiki = {
+  ...require('./datatables'),
   ...require('./game'),
   ...require('./navigation'),
   ...require('./typeahead'),

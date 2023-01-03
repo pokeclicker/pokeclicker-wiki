@@ -1,4 +1,5 @@
 const { md } = require('./markdown-renderer');
+const { applyDatatables } = require('./datatables');
 
 // Load our error page for when we need it
 errorPage = '';
@@ -120,6 +121,7 @@ $(document).ready(() => {
       applyBindings(false);
       ko.cleanNode(document.getElementById('wiki-page-content'));
       ko.applyBindings({}, document.getElementById('wiki-page-content'));
+      applyDatatables();
     }
   });
 });

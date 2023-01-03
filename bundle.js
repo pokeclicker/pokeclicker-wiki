@@ -10796,6 +10796,65 @@ module.exports = function whichTypedArray(value) {
 
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"available-typed-arrays":1,"call-bind/callBound":2,"for-each":5,"gopd":9,"has-tostringtag/shams":12,"is-typed-array":18}],95:[function(require,module,exports){
+// Applying datatables to all tables on the page (with some exceptions)
+const applyDatatables = () => {
+    // Any table with headers
+    $('.table:has(thead)').each((i, element) => {
+        try {
+            const rows = element.getElementsByTagName('tr').length;
+            // Don't process these as datatables cannot handle them
+            const doNotProcess = element.querySelectorAll('[colspan],[rowspan]').length;
+
+            // Don't process anything with less than 40 rows
+            if (rows < 40 || doNotProcess) return;
+
+            $(element).DataTable({
+                // Bootstrap style tables, with responsive table
+                dom: `<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>><'row table-responsive'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 text-center'p>>`,
+                // Our custom page implementation 
+                pagingType: 'simple_numbers_no_ellipses',
+                // How many items per page
+                pageLength: 25,
+                // Adjust text
+                language: {
+                  paginate: {
+                    previous: '←',
+                    next: '→',
+                  }
+                }
+            });
+        } catch(e){}
+    });
+}
+
+/* CUSTOM DATA TABLES STUFF */
+
+// Hide any error messages that may appear (remove this line for debugging)
+$.fn.dataTable.ext.errMode = 'none';
+
+// Adjust how page numbers are shown
+$.fn.DataTable.ext.pager.simple_numbers_no_ellipses = (page, pages) => {
+    // how many buttons total (excluding next/prev buttons)
+    const buttons = 5; // Limit to 5 so it should be fine on mobile
+    const half = Math.floor( buttons / 2 );
+
+    page = Math.max(0, page - half);
+    const count = Math.min(pages - page, buttons);
+    const numbers = [];
+    for (let i = 0; i < count; i++){
+        numbers.push(page++);
+    }
+
+    numbers.DT_el = 'span';
+
+    return [ 'previous', numbers, 'next' ];
+};
+
+module.exports = {
+    applyDatatables,
+}
+
+},{}],96:[function(require,module,exports){
 /*
 Initializing anything we need from the game files
 */
@@ -10861,8 +10920,9 @@ Requirement.prototype.toJSON = function() {
   };
 };
 
-},{}],96:[function(require,module,exports){
+},{}],97:[function(require,module,exports){
 window.Wiki = {
+  ...require('./datatables'),
   ...require('./game'),
   ...require('./navigation'),
   ...require('./typeahead'),
@@ -10870,7 +10930,7 @@ window.Wiki = {
   pokemon: require('./pages/pokemon'),
 }
 
-},{"./game":95,"./markdown-renderer":102,"./navigation":103,"./pages/pokemon":104,"./typeahead":105}],97:[function(require,module,exports){
+},{"./datatables":95,"./game":96,"./markdown-renderer":103,"./navigation":104,"./pages/pokemon":105,"./typeahead":106}],98:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -10886,7 +10946,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":24,"markdown-it-regexp":21}],98:[function(require,module,exports){
+},{"markdown-it":24,"markdown-it-regexp":21}],99:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -10902,7 +10962,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":24,"markdown-it-regexp":21}],99:[function(require,module,exports){
+},{"markdown-it":24,"markdown-it-regexp":21}],100:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -10920,7 +10980,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":24,"markdown-it-regexp":21}],100:[function(require,module,exports){
+},{"markdown-it":24,"markdown-it-regexp":21}],101:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -10936,7 +10996,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":24,"markdown-it-regexp":21}],101:[function(require,module,exports){
+},{"markdown-it":24,"markdown-it-regexp":21}],102:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -10952,7 +11012,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":24,"markdown-it-regexp":21}],102:[function(require,module,exports){
+},{"markdown-it":24,"markdown-it-regexp":21}],103:[function(require,module,exports){
 const markdownit      = require('markdown-it');
 
 // Setup our markdown editor
@@ -10975,8 +11035,9 @@ module.exports = {
   md,
 }
 
-},{"./markdown-plugins/hidden-comments.js":97,"./markdown-plugins/id-element.js":98,"./markdown-plugins/image-size.js":99,"./markdown-plugins/wiki-links-badge.js":100,"./markdown-plugins/wiki-links.js":101,"markdown-it":24}],103:[function(require,module,exports){
+},{"./markdown-plugins/hidden-comments.js":98,"./markdown-plugins/id-element.js":99,"./markdown-plugins/image-size.js":100,"./markdown-plugins/wiki-links-badge.js":101,"./markdown-plugins/wiki-links.js":102,"markdown-it":24}],104:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
+const { applyDatatables } = require('./datatables');
 
 // Load our error page for when we need it
 errorPage = '';
@@ -11098,6 +11159,7 @@ $(document).ready(() => {
       applyBindings(false);
       ko.cleanNode(document.getElementById('wiki-page-content'));
       ko.applyBindings({}, document.getElementById('wiki-page-content'));
+      applyDatatables();
     }
   });
 });
@@ -11113,7 +11175,7 @@ module.exports = {
     gotoPage,
 };
 
-},{"./markdown-renderer":102}],104:[function(require,module,exports){
+},{"./datatables":95,"./markdown-renderer":103}],105:[function(require,module,exports){
 
 getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -11184,7 +11246,7 @@ const getBestVitamins = (att, step, region) => {
 module.exports = {
     getBestVitamins,
 }
-},{}],105:[function(require,module,exports){
+},{}],106:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [
@@ -11372,4 +11434,4 @@ module.exports = {
   searchOptions,
 };
 
-},{"./navigation":103}]},{},[96]);
+},{"./navigation":104}]},{},[97]);
