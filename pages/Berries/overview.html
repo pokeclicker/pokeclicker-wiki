@@ -17,7 +17,10 @@
                 </td>
                 <td data-bind="text: BerryType[$data.type]"></td>
                 <td data-bind="text: $data.harvestAmount"></td>
-                <td data-bind="text: $data.farmValue"></td>
+                <td>
+                    <img src="./images/farmPoint.svg" width="18px"/>
+                    <ko data-bind="text: $data.farmValue.toLocaleString()"></ko>
+                </td>
                 <td data-bind="html: `${GameConstants.formatSecondsToTime($data.growthTime[3]).replace(/<\/br>/g, ' ')} to Ripe<br/>${GameConstants.formatSecondsToTime($data.growthTime[4] - $data.growthTime[3]).replace(/<\/br>/g, ' ')} to Death`"></td>
             </tr>
         </tbody>
