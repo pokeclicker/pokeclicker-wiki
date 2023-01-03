@@ -22,6 +22,7 @@
   "homepage": "https://github.com/pokeclicker/pokeclicker-wiki#readme",
   "dependencies": {
     "markdown-it": "^13.0.1",
+    "markdown-it-container": "^3.0.0",
     "markdown-it-regexp": "^0.4.0"
   },
   "devDependencies": {

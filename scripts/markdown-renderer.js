@@ -4,6 +4,8 @@ const markdownit      = require('markdown-it');
 const md = new markdownit({
     breaks: true,
   })
+  .use(require('markdown-it-container'), 'text-center')
+  .use(require('markdown-it-container'), 'text-end')
   .use(require('./markdown-plugins/hidden-comments.js'))
   .use(require('./markdown-plugins/id-element.js'))
   .use(require('./markdown-plugins/image-size.js'))
