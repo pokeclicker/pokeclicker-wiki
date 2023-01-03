@@ -1,29 +1,29 @@
 
-getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
+const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
     const proteinBoost = vitaminsUsed[GameConstants.VitaminType.Protein];
     return Math.floor((baseAttack * attackBonusPercent) + proteinBoost);
 }
 
-calcEggSteps = (vitaminsUsed, eggCycles) => {
+const calcEggSteps = (vitaminsUsed, eggCycles) => {
     const div = 300;
     const extraCycles = (vitaminsUsed[GameConstants.VitaminType.Calcium] + vitaminsUsed[GameConstants.VitaminType.Protein]) / 2;
     const steps = (eggCycles + extraCycles) * GameConstants.EGG_CYCLE_MULTIPLIER;
     return steps <= div ? steps : Math.round(((steps / div) ** (1 - vitaminsUsed[GameConstants.VitaminType.Carbos] / 70)) * div);
 }
 
-getEff = (vitaminsUsed, baseAttack, eggCycles) => {
+const getEff = (vitaminsUsed, baseAttack, eggCycles) => {
     return (getBreedingAttackBonus(vitaminsUsed, baseAttack) / calcEggSteps(vitaminsUsed, eggCycles)) * GameConstants.EGG_CYCLE_MULTIPLIER;
 }
 
-calculateVitamins = (baseAttack, eggCycles, region) => {
+const getBestVitamins = (baseAttack, eggCycles, region) => {
     // Add our initial starting eff here
-    data = [{
+    let res = {
         protein: 0,
         calcium: 0,
         carbos: 0,
         eff: getEff([0,0,0], baseAttack, eggCycles),
-    }];
+    };
     vitaminsUsed = {};
     totalVitamins = (region + 1) * 5;
     // Unlocked at Unova
@@ -36,30 +36,23 @@ calculateVitamins = (baseAttack, eggCycles, region) => {
             while (protein-- > 0) {
                 const eff = getEff([protein, calcium, carbos], baseAttack, eggCycles);
                 // If the previous result is better than this, no point to continue
-                if (eff < data[data.length - 1].eff) break;
-                // Push our data
-                data.push({
+                if (eff < res.eff) break;
+                // Push our data if same or better
+                res = {
                     protein,
                     calcium,
                     carbos,
                     eff,
-                });
+                };
             }
         }
     }
-    return data;
-}
-
-const getBestVitamins = (baseAttack, eggCycles, region) => {
-    const output = calculateVitamins(baseAttack, eggCycles, region);
-    const max = Math.max(...output.map(i => i.eff));
-    const results = output.filter(o => o.eff == max);
-    // Favour Protein > Calcium due to price
-    return results[results.length - 1];
+    return res;
 }
 
 module.exports = {
+    getBreedingAttackBonus,
+    calcEggSteps,
     getEff,
-    calculateVitamins,
     getBestVitamins,
 }
