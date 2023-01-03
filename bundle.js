@@ -11353,57 +11353,24 @@ calculateVitamins = (baseAttack, eggCycles, region) => {
     }];
     vitaminsUsed = {};
     totalVitamins = (region + 1) * 5;
-    // Calculate proteins → calcium → carbos
-    protein = totalVitamins + 1;
-    while (protein-- > 0) {
-        vitaminsUsed[GameConstants.VitaminType.Protein] = protein
-        if (region < GameConstants.Region.hoenn) {
-            // We can't access these yet
-            vitaminsUsed[GameConstants.VitaminType.Calcium] = 0
-            vitaminsUsed[GameConstants.VitaminType.Carbos] = 0
-            const eff = getEff(vitaminsUsed, baseAttack, eggCycles);
-            // If the previous result is better than this, no point to continue
-            if (eff < data[data.length - 1].eff) break;
-            // Push our data
-            data.push({
-                protein,
-                calcium: 0,
-                carbos: 0,
-                eff: getEff(vitaminsUsed, baseAttack, eggCycles),
-            });
-        } else {
-            calcium = (totalVitamins - protein) + 1;
-            while (calcium-- > 0) {
-                vitaminsUsed[GameConstants.VitaminType.Calcium] = calcium
-                if (region < GameConstants.Region.unova) {
-                    // We can't access these yet
-                    vitaminsUsed[GameConstants.VitaminType.Carbos] = 0
-                    const eff = getEff(vitaminsUsed, baseAttack, eggCycles);
-                    // If the previous result is better than this, no point to continue
-                    if (eff < data[data.length - 1].eff) break;
-                    // Push our data
-                    data.push({
-                        protein,
-                        calcium,
-                        carbos: 0,
-                        eff,
-                    });
-                } else {
-                    carbos = (totalVitamins - (protein + calcium)) + 1;
-                    while (carbos-- > 0) {
-                        vitaminsUsed[GameConstants.VitaminType.Carbos] = carbos
-                        const eff = getEff(vitaminsUsed, baseAttack, eggCycles);
-                        // If the previous result is better than this, no point to continue
-                        if (eff < data[data.length - 1].eff) break;
-                        // Push our data
-                        data.push({
-                        protein,
-                        calcium,
-                        carbos,
-                        eff,
-                        });
-                    }
-                }
+    // Unlocked at Unova
+    carbos = (region >= GameConstants.Region.unova ? totalVitamins : 0) + 1;
+    while (carbos-- > 0) {
+        // Unlocked at Hoenn
+        calcium = (region >= GameConstants.Region.hoenn ? totalVitamins - carbos: 0) + 1;
+        while (calcium-- > 0) {
+            protein = (totalVitamins - (carbos + calcium)) + 1;
+            while (protein-- > 0) {
+                const eff = getEff([protein, calcium, carbos], baseAttack, eggCycles);
+                // If the previous result is better than this, no point to continue
+                if (eff < data[data.length - 1].eff) break;
+                // Push our data
+                data.push({
+                    protein,
+                    calcium,
+                    carbos,
+                    eff,
+                });
             }
         }
     }
@@ -11413,7 +11380,9 @@ calculateVitamins = (baseAttack, eggCycles, region) => {
 const getBestVitamins = (baseAttack, eggCycles, region) => {
     const output = calculateVitamins(baseAttack, eggCycles, region);
     const max = Math.max(...output.map(i => i.eff));
-    return output.find(o => o.eff == max);
+    const results = output.filter(o => o.eff == max);
+    // Favour Protein > Calcium due to price
+    return results[results.length - 1];
 }
 
 module.exports = {
