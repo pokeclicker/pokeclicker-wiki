@@ -12,7 +12,7 @@ const calcEggSteps = (vitaminsUsed, eggCycles) => {
     return steps <= div ? steps : Math.round(((steps / div) ** (1 - vitaminsUsed[GameConstants.VitaminType.Carbos] / 70)) * div);
 }
 
-const getEff = (vitaminsUsed, baseAttack, eggCycles) => {
+const getEfficiency = (vitaminsUsed, baseAttack, eggCycles) => {
     return (getBreedingAttackBonus(vitaminsUsed, baseAttack) / calcEggSteps(vitaminsUsed, eggCycles)) * GameConstants.EGG_CYCLE_MULTIPLIER;
 }
 
@@ -22,7 +22,7 @@ const getBestVitamins = (baseAttack, eggCycles, region) => {
         protein: 0,
         calcium: 0,
         carbos: 0,
-        eff: getEff([0,0,0], baseAttack, eggCycles),
+        eff: getEfficiency([0,0,0], baseAttack, eggCycles),
     };
     vitaminsUsed = {};
     totalVitamins = (region + 1) * 5;
@@ -34,7 +34,7 @@ const getBestVitamins = (baseAttack, eggCycles, region) => {
         while (calcium-- > 0) {
             protein = (totalVitamins - (carbos + calcium)) + 1;
             while (protein-- > 0) {
-                const eff = getEff([protein, calcium, carbos], baseAttack, eggCycles);
+                const eff = getEfficiency([protein, calcium, carbos], baseAttack, eggCycles);
                 // If the previous result is better than this, no point to continue
                 if (eff < res.eff) break;
                 // Push our data if same or better
@@ -53,6 +53,6 @@ const getBestVitamins = (baseAttack, eggCycles, region) => {
 module.exports = {
     getBreedingAttackBonus,
     calcEggSteps,
-    getEff,
+    getEfficiency,
     getBestVitamins,
 }
