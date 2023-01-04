@@ -150,11 +150,11 @@
                 <!-- ko if: $data[PokemonLocationType.DungeonChest] -->
                 <div class="accordion-item">
                     <h4 class="accordion-header">
-                        <button data-bs-target="#obtain-method-dungeon-boss" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                        <button data-bs-target="#obtain-method-dungeon-chest" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
                             Dungeon Chests
                         </button>
                     </h4>
-                    <div id="obtain-method-dungeon-boss" class="accordion-collapse collapse">
+                    <div id="obtain-method-dungeon-chest" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.DungeonChest])">
                             <span class="badge text-bg-secondary" data-bind="text: $data.dungeon + `${$data.requirements ? ' 🔒' : ''}`,
                             tooltip: {
@@ -174,11 +174,11 @@
                 <!-- ko if: $data[PokemonLocationType.Evolution] -->
                 <div class="accordion-item">
                     <h4 class="accordion-header">
-                        <button data-bs-target="#obtain-method-dungeon-boss" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            Evolutions
+                        <button data-bs-target="#obtain-method-evolution" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            Evolves From
                         </button>
                     </h4>
-                    <div id="obtain-method-dungeon-boss" class="accordion-collapse collapse">
+                    <div id="obtain-method-evolution" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Evolution])">
                             <span class="badge text-bg-secondary" data-bind="text: $data.basePokemon + `${$data.restrictions ? ' 🔒' : ''}`,
                             tooltip: {
