@@ -11503,6 +11503,17 @@ const searchOptions = [
     type: 'Vitamins',
     page: '',
   },
+  // Hatchery Helpers
+  {
+    display: 'Hatchery Helpers',
+    type: 'Hatchery Helpers',
+    page: '',
+  },
+  ...HatcheryHelpers.list.map(h => ({
+    display: h.name,
+    type: 'Hatchery Helpers',
+    page: h.name,
+  })),
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
