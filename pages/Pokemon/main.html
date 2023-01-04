@@ -92,7 +92,7 @@
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Roaming])">
                             <span class="badge text-bg-secondary" data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region]) + `${$data.requirements ? ' 🔒' : ''}`,
                             tooltip: {
-                                title: $data.requirements,
+                                title: $data.requirements ?? '',
                                 html: false,
                                 placement: 'bottom',
                                 trigger: 'hover'
@@ -121,7 +121,7 @@
                 <!-- /ko -->
 
                 <!--
-                    DUNGEON
+                    DUNGEON BOSS
                 -->
                 <!-- ko if: $data[PokemonLocationType.DungeonBoss] -->
                 <div class="accordion-item">
@@ -134,7 +134,31 @@
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.DungeonBoss])">
                             <span class="badge text-bg-secondary" data-bind="text: $data.dungeon + `${$data.requirements ? ' 🔒' : ''}`,
                             tooltip: {
-                                title: $data.requirements,
+                                title: $data.requirements ?? '',
+                                html: false,
+                                placement: 'bottom',
+                                trigger: 'hover'
+                            }"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+
+                <!--
+                    DUNGEON CHEST
+                -->
+                <!-- ko if: $data[PokemonLocationType.DungeonChest] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-dungeon-boss" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            Dungeon Chests
+                        </button>
+                    </h4>
+                    <div id="obtain-method-dungeon-boss" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.DungeonChest])">
+                            <span class="badge text-bg-secondary" data-bind="text: $data.dungeon + `${$data.requirements ? ' 🔒' : ''}`,
+                            tooltip: {
+                                title: $data.requirements ?? '',
                                 html: false,
                                 placement: 'bottom',
                                 trigger: 'hover'
