@@ -1,0 +1,104 @@
+<div>
+    <h2>Types</h2>
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Vitamin</th>
+                    <th>Description</th>
+                    <th>Base Price</th>
+                    <th>Max Price</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: GameHelper.enumStrings(GameConstants.VitaminType)">
+                <tr>
+                    <td>
+                        <a href="#" data-bind="text: $data, attr: { href: `#!Items/${$data}`}"></a>
+                    </td>
+                    <td data-bind="html: ItemList[$data].description"></td>
+                    <td>
+                        <img data-bind="attr: { src: `./images/${GameConstants.Currency[ItemList[$data].currency]}.svg` }" width="18px"/>
+                        <ko data-bind="text: ItemList[$data].basePrice.toLocaleString()"></ko>
+                    </td>
+                    <td>
+                        <img data-bind="attr: { src: `./images/${GameConstants.Currency[ItemList[$data].currency]}.svg` }" width="18px"/>
+                        <ko data-bind="text: (ItemList[$data].basePrice * 100).toLocaleString()"></ko>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2>Calculator</h2>
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <td class="col-2 p-0"></td>
+                    <td class="col-2 p-0"></td>
+                    <td class="col-2 p-0"></td>
+                    <td class="col-2 p-0"></td>
+                    <td class="col-2 p-0"></td>
+                    <td class="col-2 p-0"></td>
+                </tr>
+                <tr>
+                    <th colspan="3">Base Attack</th>
+                    <th colspan="3">Egg Steps</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="p-0" colspan="3"><input class="form-control typeahead me-2 text-dark tt-input" oninput="updateEfficiency()" id="efficiency-calculator-input-attack" value="184" type="number" min="10" step="1" max="1000"/></td>
+                    <td class="p-0" colspan="3"><input class="form-control typeahead me-2 text-dark tt-input" oninput="updateEfficiency()" id="efficiency-calculator-input-egg-steps" value="4800" type="number" min="200" step="200" max="10000"/></td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th colspan="2">Protein</th>
+                    <th colspan="2">Calcium</th>
+                    <th colspan="2">Carbos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2" class="p-0"><input class="form-control typeahead me-2 text-dark tt-input" oninput="updateEfficiency()" id="efficiency-calculator-input-protein" value="0" type="number" min="0" step="1" max="100"/></td>
+                    <td colspan="2" class="p-0"><input class="form-control typeahead me-2 text-dark tt-input" oninput="updateEfficiency()" id="efficiency-calculator-input-calcium" value="0" type="number" min="0" step="1" max="100"/></td>
+                    <td colspan="2" class="p-0"><input class="form-control typeahead me-2 text-dark tt-input" oninput="updateEfficiency()" id="efficiency-calculator-input-carbos" value="0" type="number" min="0" step="1" max="100"/></td>
+                </tr>
+            </tbody>
+            <thead>
+                <tr>
+                    <th colspan="2">Attack per Breed</th>
+                    <th colspan="2">Egg Steps Required</th>
+                    <th colspan="2">Efficiency</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2" id="efficiency-calculator-output-attack">46</td>
+                    <td colspan="2" id="efficiency-calculator-output-egg-steps">4,800</td>
+                    <td colspan="2" id="efficiency-calculator-output-efficiency">0.383</td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            const updateEfficiency = () => {
+                const base = 'efficiency-calculator-input-';
+                const attack = +document.getElementById(`${base}attack`)?.value || 10;
+                const eggCycles = (+document.getElementById(`${base}egg-steps`)?.value || 200) / 40;
+                const protein = +document.getElementById(`${base}protein`)?.value || 0;
+                const calcium = +document.getElementById(`${base}calcium`)?.value || 0;
+                const carbos = +document.getElementById(`${base}carbos`)?.value || 0;
+
+                const attackBonus = Wiki.pokemon.getBreedingAttackBonus([protein, calcium, carbos], attack);
+                const eggSteps = Wiki.pokemon.calcEggSteps([protein, calcium, carbos], eggCycles);
+                const efficiency = Wiki.pokemon.getEfficiency([protein, calcium, carbos], attack, eggCycles);
+                
+                const baseOutput = 'efficiency-calculator-input-';
+                document.getElementById('efficiency-calculator-output-attack').innerText = attackBonus.toLocaleString();
+                document.getElementById('efficiency-calculator-output-egg-steps').innerText = eggSteps.toLocaleString();
+                document.getElementById('efficiency-calculator-output-efficiency').innerText = efficiency.toLocaleString('en-US', { maximumSignificantDigits: 3 });
+            }
+            updateEfficiency();
+        </script>
+    </div>
+</div>

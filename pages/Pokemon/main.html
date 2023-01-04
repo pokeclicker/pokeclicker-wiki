@@ -1,9 +1,48 @@
 <div>
-    <!-- ko ifnot: pokemonList.find((p) => p.name == pageName()) -->
-        <h1>Pokémon not found...</h1>
+    <!-- ko ifnot: pokemonList.find((p) => p.name == Wiki.pageName()) -->
+        <h3>Pokémon not found...</h3>
     <!-- /ko -->
-    <!-- ko with: pokemonList.find((p) => p.name == pageName()) -->
-        <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>
+    <!-- ko with: pokemonList.find((p) => p.name == Wiki.pageName()) -->
+        <div class="float-lg-end col-lg-3 m-2">
+            <table class="table table-hover table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center" colspan="2" data-bind="text: Wiki.pageName()"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center" colspan="2">
+                            <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ID</td>
+                        <td data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`"></td>
+                    </tr>
+                    <tr>
+                        <td>Type(s)</td>
+                        <td>
+                            <!-- ko foreach: $data.type -->
+                                <span class="badge" data-bind="text: PokemonType[$data], style:{ background: TypeColor[$data] }"></span>
+                            <!-- /ko -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Base Attack</td>
+                        <td data-bind="text: $data.attack.toLocaleString()"></td>
+                    </tr>
+                    <tr>
+                        <td>Egg Steps</td>
+                        <td data-bind="text: App.game.breeding.getSteps($data.eggCycles).toLocaleString()"></td>
+                    </tr>
+                    <tr>
+                        <td>Catch Rate</td>
+                        <td data-bind="text: PokemonFactory.catchRateHelper($data.catchRate, true) + '%'"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <div data-bind="visible: $data.evolutions">
             <h3>Evolves into:</h3>
             <!-- ko foreach: $data.evolutions -->
@@ -12,18 +51,61 @@
                     text: $data.evolvedPokemon"></a>
             <!-- /ko -->
         </div>
-        <div>
+        <div data-bind="visible: Object.entries(PokemonHelper.getPokemonLocations($data.name)).length">
             <h3>Obtain methods:</h3>
             <!-- ko foreach: Object.entries(PokemonHelper.getPokemonLocations($data.name)) -->
                 <p data-bind="text: PokemonLocationType[$data[0]]"></p>
                 <p style="display: none" data-bind="text: JSON.stringify($data[1])"></p>
             <!-- /ko -->
         </div>
+        <br/>
         <div>
-            <h3>Egg Pattern (without type color)</h3>
-            <svg>
-                <g data-bind="html: BreedingController.getEggSpots($data.name)"></g>
+            <h3>Egg Pattern:</h3>
+            <svg class="egg" width="100px" viewBox="0 0 126.7 126.7" xmlns="http://www.w3.org/2000/svg" data-bind="attr: {'data-type1': PokemonType[$data.type[0] || 0], 'data-type2': PokemonType[$data.type[1] || $data.type[0] || 0]}">
+                <defs>
+                  <filter id="b" width="1.193" height="1.123" x="-.096" y="-.061" color-interpolation-filters="sRGB">
+                    <feGaussianBlur stdDeviation=".402"></feGaussianBlur>
+                  </filter>
+                  <filter id="a" width="1.067" height="1.045" x="-.034" y="-.023" color-interpolation-filters="sRGB">
+                    <feGaussianBlur stdDeviation="1.168"></feGaussianBlur>
+                  </filter>
+                </defs>
+                <path class="egg-main" d="M111.5 76.2a48.2 47.7 0 11-96.3 0c0-26.3 21.5-74.7 48.1-74.7s48.2 48.4 48.2 74.7z"></path>
+                <g data-bind="html: BreedingController.getEggSpots($data.name)"><g class="egg-spot" transform="matrix(.23639 0 0 .224 -1.683 1.746)"></g></g>
+                <path fill-opacity=".1" d="M63.3 1.5s34.377 56.31 22.684 83.558c-11.693 27.25-58.004 25.939-58.004 25.939 37.3 33.053 83.737 5.438 83.52-33.997-.147-26.6-21.6-75.5-48.2-75.5z" filter="url(#a)"></path>
+                <path fill="#fff" fill-opacity=".3" d="M47.106 33.508a4.8 8 0 01-4.284 7.952 4.8 8 0 01-5.204-6.246 4.8 8 0 013.167-9.293 4.8 8 0 015.884 4.252" filter="url(#b)" transform="rotate(13.2 42.307 33.508)"></path>
+                <path fill="#111" d="M63.3 126.7A49.7 49.7 0 0113.7 77c0-14 5.6-33 14.3-48.5C38.3 10.1 50.8 0 63.3 0c12.5 0 25 10.1 35.4 28.5A109 109 0 01113 77a49.7 49.7 0 01-49.7 49.7zM63.3 3C48 3 36.3 20 30.6 30a105 105 0 00-14 47 46.7 46.7 0 0093.4 0c0-13.5-5.5-32-14-47C90.5 20 78.8 3 63.4 3z"></path>
             </svg>
+        </div>
+        <br/>
+        <div>
+            <h3>Best Vitamins:</h3>
+            <div class="table-responsive">
+                <table class="table table-hover table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Region</th>
+                            <th>Max Vitamins</th>
+                            <th>Protein</th>
+                            <th>Calcium</th>
+                            <th>Carbos</th>
+                            <th>Efficiency</th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: GameHelper.enumStrings(GameConstants.Region).filter(r => !['final'].includes(r))">
+                        <tr>
+                            <td data-bind="text: GameConstants.camelCaseToString($data)"></td>
+                            <td data-bind="text: (GameConstants.Region[$data] + 1) * 5"></td>
+                            <!-- ko with: Wiki.pokemon.getBestVitamins($parent.attack, $parent.eggCycles, GameConstants.Region[$data]) -->
+                                <td data-bind="text: $data.protein || '-'"></td>
+                                <td data-bind="text: $data.calcium || '-'"></td>
+                                <td data-bind="text: $data.carbos || '-'"></td>
+                                <td data-bind="text: $data.eff.toLocaleString('en-US', { maximumSignificantDigits: 3 })"></td>
+                            <!-- /ko -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     <!-- /ko -->
 </div>

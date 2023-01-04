@@ -1,57 +1,48 @@
 <div>
-    <!-- ko with: pageName() -->
-        <div data-bind="with: App.game.farming.berryData[BerryType[$data]]">
-            <img data-bind="attr: {src: './pokeclicker/docs/' + FarmController.getBerryImage($data.type)}"/>
-            <h3>In game description</h3>
-            <p data-bind="text: $data.description"></p>
-
+    <!-- ko ifnot: BerryType[Wiki.pageName()] >= 0 -->
+        <h3>Berry not found...</h3>
+    <!-- /ko -->
+    <!-- ko if: BerryType[Wiki.pageName()] >= 0 -->
+    <div data-bind="with: App.game.farming.berryData[BerryType[Wiki.pageName()]]">
+        <div class="float-lg-end col-lg-3 m-2">
             <table class="table table-hover table-striped table-bordered">
-                <thead class="thead-dark">
+                <thead>
                     <tr>
-                        <th colspan="2">Information</th>
+                        <th class="text-center" colspan="2" data-bind="text: `#${($data.type + 1).toString().padStart(2, '0')} ${Wiki.pageName()}`"></th>
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td class="text-center" colspan="2">
+                            <img data-bind="attr: {src: './pokeclicker/docs/' + FarmController.getBerryImage($data.type)}"/>
+                        </td>
+                    </tr>
                     <tr>
                         <td>Color</td>
                         <td data-bind="text: BerryColor[$data.color]"></td>
                     </tr>
                     <tr>
-                        <td>Exp</td>
-                        <td data-bind="text: $data.exp.toLocaleString()"></td>
-                    </tr>
-                    <tr>
-                        <td>Farm Points</td>
-                        <td data-bind="text: $data.farmValue.toLocaleString()"></td>
+                        <td>Growth Time</td>
+                        <td data-bind="html: GameConstants.formatSecondsToTime($data.growthTime[PlotStage.Bloom])"></td>
                     </tr>
                     <tr>
                         <td>Harvest Amount</td>
-                        <td data-bind="text: $data.harvestAmount.toLocaleString()"></td>
+                        <td data-bind="text: `${$data.harvestAmount.toLocaleString()} berries`"></td>
                     </tr>
                     <tr>
                         <td>Replant Chance</td>
                         <td data-bind="text: ($data.replantRate * 100) + '%'"></td>
                     </tr>
-                </tbody>
-                <thead class="thead-dark">
                     <tr>
-                        <th colspan="2">Growth Times</th>
+                        <td>Farm Points</td>
+                        <td>
+                            <img src="./images/farmPoint.svg" width="18px"/>
+                            <ko data-bind="text: $data.farmValue.toLocaleString()"></ko>
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                    <!-- ko foreach: GameHelper.enumStrings(PlotStage) -->
                     <tr>
-                        <td data-bind="text: $data"></td>
-                        <td data-bind="text: GameConstants.formatSecondsToTime($parent.growthTime[$index()]).replace(/<\/br>/g, ' ')"></td>
+                        <th class="text-center" colspan="2">Flavors</th>
                     </tr>
-                    <!-- /ko -->
-                </tbody>
-                <thead class="thead-dark">
-                    <tr>
-                        <th colspan="2">Flavors</th>
-                    </tr>
-                </thead>
-                <tbody>
                     <!-- ko foreach: GameHelper.enumStrings(FlavorType) -->
                     <tr>
                         <td data-bind="text: $data"></td>
@@ -60,6 +51,7 @@
                     <!-- /ko -->
                 </tbody>
             </table>
+<<<<<<< HEAD
 
             <div data-bind="if: $data.aura">
                 <h3>Aura</h3>
@@ -79,6 +71,98 @@
                     </tbody>
                 </table>
             </div>
+=======
+>>>>>>> 03869ce077347d1c549d1087ff6ee562604b05d8
         </div>
+        <h3>Description</h3>
+        <p data-bind="text: $data.description"></p>
+        <h3>Growth Stages</h3>
+        <div class="table-responsive">
+            <table class="table table-hover table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <!-- ko foreach: GameHelper.enumNumbers(PlotStage).filter(s => s > 0) -->
+                            <th class="col-2 text-center" data-bind="text:PlotStage[$data]"></th>
+                        <!-- /ko -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Time since planting</td>
+                        <!-- ko foreach: GameHelper.enumNumbers(PlotStage).filter(s => s > 0) -->
+                            <td class="text-center" data-bind="text: GameConstants.formatSecondsToTime($parent.growthTime[$index()]).replace(/<\/br>/g, ' ')"></td>
+                        <!-- /ko -->
+                    </tr>
+                    <tr>
+                        <td>Sprite</td>
+                        <td class="text-center">
+                            <img width="48px" class="pixel" src="./images/AllTreeSprout.png"/>
+                        </td>
+                        <!-- ko foreach: GameHelper.enumNumbers(PlotStage).filter(s => s > 1) -->
+                            <td class="text-center">
+                                <img width="48px" class="pixel" data-bind="attr: { src: `./images/${Wiki.pageName()}Tree${PlotStage[$data]}.png` }"/>
+                            </td>
+                        <!-- /ko -->
+                    </tr>
+                    <tr data-bind="if: $data.aura">
+                        <td data-bind="text: `Aura (${AuraType[$data.aura.auraType]})`"></td>
+                        <td class="text-center">-</td>
+                        <!-- ko foreach: GameHelper.enumNumbers(PlotStage).filter(s => s > 1) -->
+                            <td class="text-center" data-bind="text: `×${$parent.aura.auraMultipliers[$index()]}`"></td>
+                        <!-- /ko -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3>Growth time with modifiers</h3>
+        <div class="table-responsive">
+            <table class="table table-hover table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Modifier</th>
+                        <th class="text-center">Ripe Time</th>
+                        <th class="text-center">Boost Mulch required</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>None</td>
+                        <td class="text-center" data-bind="text: GameConstants.formatSecondsToTime($data.growthTime[3]).replace(/<\/br>/g, ' ')"></td>
+                        <td class="text-center">-</td>
+                    </tr>
+                    <tr>
+                        <td>Boost Mulch/Sprayduck (max)</td>
+                        <td class="text-center" data-bind="text: GameConstants.formatSecondsToTime(Math.round(($data.growthTime[3] * .6666))).replace(/<\/br>/g, ' ')"></td>
+                        <td class="text-center" data-bind="text: Math.ceil((Math.round(($data.growthTime[3] * .666) / 60) * 60) / (60 * 5))"></td>
+                    </tr>
+                    <tr>
+                        <td>Boost Mulch & Sprayduck (max)</td>
+                        <td class="text-center" data-bind="text: GameConstants.formatSecondsToTime(Math.round(($data.growthTime[3] * .6666 * .6666))).replace(/<\/br>/g, ' ')"></td>
+                        <td class="text-center" data-bind="text: Math.ceil((Math.round(($data.growthTime[3] * .666 * .666) / 60) * 60) / (60 * 5))"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3>Wanderers</h3>
+        <div class="table-responsive">
+            <table class="table table-hover table-striped table-bordered">
+                <tbody data-bind="foreach: new Array(Math.ceil($data.wander.length / 2))">
+                    <tr>
+                        <td>
+                            <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$parent.wander[$index() * 2]].id + '.png'}"/>
+                            <a data-bind="text: $parent.wander[$index() * 2], attr: { href: `#!Pokemon/${$parent.wander[$index() * 2]}` }"></a>
+                        </td>
+                        <!-- ko if: $parent.wander[$index() * 2 + 1] -->
+                        <td>
+                            <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$parent.wander[$index() * 2 + 1]].id + '.png'}"/>
+                            <a data-bind="text: $parent.wander[$index() * 2 + 1], attr: { href: `#!Pokemon/${$parent.wander[$index() * 2 + 1]}` }"></a>
+                        </td>
+                        <!-- /ko -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
     <!-- /ko -->
 </div>

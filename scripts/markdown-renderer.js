@@ -4,15 +4,20 @@ const markdownit      = require('markdown-it');
 const md = new markdownit({
     breaks: true,
   })
+  .use(require('markdown-it-container'), 'text-center')
+  .use(require('markdown-it-container'), 'text-end')
   .use(require('./markdown-plugins/hidden-comments.js'))
   .use(require('./markdown-plugins/id-element.js'))
   .use(require('./markdown-plugins/image-size.js'))
   .use(require('./markdown-plugins/wiki-links-badge.js'))
   .use(require('./markdown-plugins/wiki-links.js'));
 md.renderer.rules.table_open = function(tokens, idx) {
-  return '<table class="table table-hover table-striped table-bordered">';
+  return '<div class="table-responsive"><table class="table table-hover table-striped table-bordered">';
+};
+md.renderer.rules.table_close = function(tokens, idx) {
+  return '</table></div>';
 };
 
-window.md = md;
-
-module.exports = md;
+module.exports = {
+  md,
+}

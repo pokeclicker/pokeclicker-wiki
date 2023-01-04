@@ -11,10 +11,10 @@
         </thead>
         <tbody>
             <tr>
-               <td><input type="text" value="100" onchange="BattleFrontierRunner.stage(value); BattleFrontierBattle.generateNewEnemy();"/></td>
+               <td><input type="number" min="1" step="1" value="100" oninput="BattleFrontierRunner.stage(+value); BattleFrontierBattle.generateNewEnemy();"/></td>
                <td data-bind="text: BattleFrontierBattle.enemyPokemon().health().toLocaleString('en-US')"></td>
                <td data-bind="text: (BattleFrontierBattle.enemyPokemon().health() * 3).toLocaleString('en-US')"></td>
-               <td data-bind="text: (BattleFrontierBattle.enemyPokemon().health() * 3 / 30).toLocaleString('en-US')"></td>
+               <td data-bind="text: Math.ceil(BattleFrontierBattle.enemyPokemon().health() * 3 / 30).toLocaleString('en-US')"></td>
             </tr>
         </tbody>
     </table>

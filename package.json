@@ -7,6 +7,7 @@
     "start": "npm run build",
     "build": "browserify scripts/main.js -o bundle.js",
     "watch": "watchify scripts/main.js -o bundle.js",
+    "update": "git submodule update --init && git submodule update --remote && node update.js",
     "test": "eslint ./scripts"
   },
   "repository": {
@@ -21,10 +22,12 @@
   "homepage": "https://github.com/pokeclicker/pokeclicker-wiki#readme",
   "dependencies": {
     "markdown-it": "^13.0.1",
+    "markdown-it-container": "^3.0.0",
     "markdown-it-regexp": "^0.4.0"
   },
   "devDependencies": {
     "browserify": "^17.0.0",
+    "glob": "^8.0.3",
     "watchify": "^4.0.0"
   }
 }

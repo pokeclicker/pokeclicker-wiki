@@ -1,4 +1,4 @@
-<div>
+<div class="table-responsive">
     <table class="table table-hover table-striped table-bordered">
         <thead class="thead-dark">
             <tr>
@@ -10,8 +10,8 @@
                 <th>Catch Rate</th>
             </tr>
         </thead>
-        <tbody data-bind="foreach: pokemonMap">
-            <tr class="clickable" data-bind="click: () => { gotoPage('Pokemon', $data.name); return false; }">
+        <tbody data-bind="foreach: pokemonList.filter(p => p.id >= 0)">
+            <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Pokemon', $data.name); return false; }">
                 <td data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`"></td>
                 <td data-bind="text: $data.name"></td>
                 <td data-bind="foreach: $data.type">
@@ -20,7 +20,7 @@
                     }"></span>
                 </td>
                 <td data-bind="text: $data.attack"></td>
-                <td data-bind="text: App.game.breeding.getSteps($data.eggCycles)"></td>
+                <td data-bind="text: App.game.breeding.getSteps($data.eggCycles).toLocaleString()"></td>
                 <td data-bind="text: PokemonFactory.catchRateHelper($data.catchRate, true) + '%'"></td>
             </tr>
         </tbody>

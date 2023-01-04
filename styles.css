@@ -1,0 +1,166 @@
+/* OVERIDES */
+body {
+  padding-bottom: 5rem;
+  min-height: 100vh;
+}
+blockquote {
+  border-left: 5px var(--bs-body-color) solid;
+  padding-left: 5px;
+}
+
+/* CUSTOM */
+.clickable {
+  cursor: pointer;
+}
+img.pixel {
+  image-rendering: pixelated;
+}
+/* Table cell will be as small as possible */
+tr.tight,
+td.tight {
+  width: 0;
+}
+
+/* POKECLICKER */
+
+/* Egg Patterns */
+.egg[data-type1=Bug] .egg-main {
+  fill: #9df68e
+}
+
+.egg[data-type1=Dark] .egg-main {
+  fill: #3d3d3d
+}
+
+.egg[data-type1=Dragon] .egg-main {
+  fill: #ff0006
+}
+
+.egg[data-type1=Electric] .egg-main {
+  fill: #ffe600
+}
+
+.egg[data-type1=Fairy] .egg-main {
+  fill: #f36ec2
+}
+
+.egg[data-type1=Fighting] .egg-main {
+  fill: #fbbd47
+}
+
+.egg[data-type1=Fire] .egg-main {
+  fill: #d94c32
+}
+
+.egg[data-type1=Flying] .egg-main {
+  fill: #a0c7e8
+}
+
+.egg[data-type1=Ghost] .egg-main {
+  fill: #dbdbdb
+}
+
+.egg[data-type1=Grass] .egg-main {
+  fill: #a1f173
+}
+
+.egg[data-type1=Ground] .egg-main {
+  fill: #ad5840
+}
+
+.egg[data-type1=Ice] .egg-main {
+  fill: #0af
+}
+
+.egg[data-type1=Normal] .egg-main {
+  fill: #e8e0a0
+}
+
+.egg[data-type1=Poison] .egg-main {
+  fill: #c183c1
+}
+
+.egg[data-type1=Psychic] .egg-main {
+  fill: #fa92b2
+}
+
+.egg[data-type1=Rock] .egg-main {
+  fill: #d2c8ac
+}
+
+.egg[data-type1=Steel] .egg-main {
+  fill: #b5b4b1
+}
+
+.egg[data-type1=Water] .egg-main {
+  fill: #379eff
+}
+
+.egg[data-type2=Bug] .egg-spot {
+  fill: #5ab690
+}
+
+.egg[data-type2=Dark] .egg-spot,
+.egg[data-type2=Dragon] .egg-spot {
+  fill: #111
+}
+
+.egg[data-type2=Electric] .egg-spot {
+  fill: #cb0
+}
+
+.egg[data-type2=Fairy] .egg-spot {
+  fill: #a1382b
+}
+
+.egg[data-type2=Fighting] .egg-spot {
+  fill: #b94a00
+}
+
+.egg[data-type2=Fire] .egg-spot {
+  fill: #fafb00
+}
+
+.egg[data-type2=Flying] .egg-spot {
+  fill: #6896c6
+}
+
+.egg[data-type2=Ghost] .egg-spot {
+  fill: #7c7c7c
+}
+
+.egg[data-type2=Grass] .egg-spot {
+  fill: #2f9f59
+}
+
+.egg[data-type2=Ground] .egg-spot {
+  fill: #763900
+}
+
+.egg[data-type2=Ice] .egg-spot {
+  fill: #00ffbe
+}
+
+.egg[data-type2=Normal] .egg-spot {
+  fill: #689050
+}
+
+.egg[data-type2=Poison] .egg-spot {
+  fill: #682a68
+}
+
+.egg[data-type2=Psychic] .egg-spot {
+  fill: #a13959
+}
+
+.egg[data-type2=Rock] .egg-spot {
+  fill: #6d6d6d
+}
+
+.egg[data-type2=Steel] .egg-spot {
+  fill: #7088b5
+}
+
+.egg[data-type2=Water] .egg-spot {
+  fill: #445e9c
+}

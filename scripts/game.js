@@ -44,14 +44,11 @@ App.game = new Game(
   new DreamOrbController()
 );
 App.game.farming.initialize();
+App.game.breeding.initialize();
+SafariPokemonList.generateSafariLists();
 QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
-
-// TODO: Fix these up somehow..
-// Overrides, these methods don't work if game not started..
-PokemonHelper.getPokemonWandering = () => [];
-PokemonHelper.getPokemonDiscord = () => [];
 
 // Map our requirment hints to the requirement
 Requirement.prototype.toJSON = function() {
@@ -66,4 +63,19 @@ Requirement.prototype.toJSON = function() {
   };
 };
 
-module.exports = App;
+// Knockout tooltip bindings
+ko.bindingHandlers.tooltip = {
+  init: (element, valueAccessor) => {
+      const local = ko.utils.unwrapObservable(valueAccessor()),
+          options = {};
+
+      ko.utils.extend(options, ko.bindingHandlers.tooltip.options);
+      ko.utils.extend(options, local);
+
+      $(element).tooltip(options);
+
+      ko.utils.domNodeDisposal.addDisposeCallback(element, () => {
+          $(element).tooltip('dispose');
+      });
+  }
+};

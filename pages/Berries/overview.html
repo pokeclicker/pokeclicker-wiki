@@ -1,4 +1,4 @@
-<div>
+<div class="table-responsive">
     <table class="table table-hover table-striped table-bordered">
         <thead class="thead-dark">
             <tr>
@@ -10,14 +10,17 @@
             </tr>
         </thead>
         <tbody data-bind="foreach: App.game.farming.berryData">
-            <tr class="clickable align-middle" data-bind="click: () => { gotoPage('Berries', BerryType[$data.type]); return false; }">
+            <tr class="clickable align-middle" data-bind="click: () => { Wiki.gotoPage('Berries', BerryType[$data.type]); return false; }">
                 <td>
                     <knockout data-bind="text: `#${($data.type + 1).toString().padStart(2, 0)}`"></knockout>
                     <img height="30px" data-bind="attr: {src: './pokeclicker/docs/' + FarmController.getBerryImage($data.type)}"/>
                 </td>
                 <td data-bind="text: BerryType[$data.type]"></td>
                 <td data-bind="text: $data.harvestAmount"></td>
-                <td data-bind="text: $data.farmValue"></td>
+                <td>
+                    <img src="./images/farmPoint.svg" width="18px"/>
+                    <ko data-bind="text: $data.farmValue.toLocaleString()"></ko>
+                </td>
                 <td data-bind="html: `${GameConstants.formatSecondsToTime($data.growthTime[3]).replace(/<\/br>/g, ' ')} to Ripe<br/>${GameConstants.formatSecondsToTime($data.growthTime[4] - $data.growthTime[3]).replace(/<\/br>/g, ' ')} to Death`"></td>
             </tr>
         </tbody>
