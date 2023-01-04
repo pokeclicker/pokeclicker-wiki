@@ -53,10 +53,98 @@
         </div>
         <div data-bind="visible: Object.entries(PokemonHelper.getPokemonLocations($data.name)).length">
             <h3>Obtain methods:</h3>
-            <!-- ko foreach: Object.entries(PokemonHelper.getPokemonLocations($data.name)) -->
-                <p data-bind="text: PokemonLocationType[$data[0]]"></p>
-                <p style="display: none" data-bind="text: JSON.stringify($data[1])"></p>
+            <div class="accordion">
+            <!-- ko with: PokemonHelper.getPokemonLocations($data.name) -->
+                <!--
+                    ROUTES
+                -->
+                <!-- ko if: $data[PokemonLocationType.Route] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-route" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            Routes
+                        </button>
+                    </h4>
+                    <div id="obtain-method-route" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: Object.entries($data[PokemonLocationType.Route])">
+                            <h5 data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0]])"></h5>
+                            <p data-bind="foreach: $data[1]">
+                                <ko data-bind="with: Routes.regionRoutes.find(r => r.region == $parent[0] && r.number == $data.route)">
+                                    <span class="badge text-bg-secondary" data-bind="text: $data.routeName.replace(new RegExp(`^${GameConstants.Region[$parents[1][0]]}`, 'i'), '')"></span>
+                                </ko>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+
+                <!--
+                    ROAMING
+                -->
+                <!-- ko if: $data[PokemonLocationType.Roaming] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-roaming" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            Roaming
+                        </button>
+                    </h4>
+                    <div id="obtain-method-roaming" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Roaming])">
+                            <span class="badge text-bg-secondary" data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region]) + `${$data.requirements ? ' 🔒' : ''}`,
+                            tooltip: {
+                                title: $data.requirements,
+                                html: false,
+                                placement: 'bottom',
+                                trigger: 'hover'
+                            }"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+
+                <!--
+                    DUNGEON
+                -->
+                <!-- ko if: $data[PokemonLocationType.Dungeon] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-dungeon" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            Dungeons
+                        </button>
+                    </h4>
+                    <div id="obtain-method-dungeon" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Dungeon])">
+                            <span class="badge text-bg-secondary" data-bind="text: $data"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+
+                <!--
+                    DUNGEON
+                -->
+                <!-- ko if: $data[PokemonLocationType.DungeonBoss] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-dungeon-boss" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            Dungeon Boss
+                        </button>
+                    </h4>
+                    <div id="obtain-method-dungeon-boss" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.DungeonBoss])">
+                            <span class="badge text-bg-secondary" data-bind="text: $data.dungeon + `${$data.requirements ? ' 🔒' : ''}`,
+                            tooltip: {
+                                title: $data.requirements,
+                                html: false,
+                                placement: 'bottom',
+                                trigger: 'hover'
+                            }"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
             <!-- /ko -->
+            </div>
         </div>
         <br/>
         <div>

@@ -20,6 +20,9 @@ tr.tight,
 td.tight {
   width: 0;
 }
+.accordion {
+  display: flow-root;
+}
 
 /* POKECLICKER */
 
