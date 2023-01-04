@@ -92,7 +92,7 @@
                             <th>Efficiency</th>
                         </tr>
                     </thead>
-                    <tbody data-bind="foreach: GameHelper.enumStrings(GameConstants.Region).filter(r => !['none', 'final'].includes(r))">
+                    <tbody data-bind="foreach: GameHelper.enumStrings(GameConstants.Region).filter(r => !['final'].includes(r))">
                         <tr>
                             <td data-bind="text: GameConstants.camelCaseToString($data)"></td>
                             <td data-bind="text: (GameConstants.Region[$data] + 1) * 5"></td>
