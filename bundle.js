@@ -11067,6 +11067,23 @@ Requirement.prototype.toJSON = function() {
   };
 };
 
+// Knockout tooltip bindings
+ko.bindingHandlers.tooltip = {
+  init: (element, valueAccessor) => {
+      const local = ko.utils.unwrapObservable(valueAccessor()),
+          options = {};
+
+      ko.utils.extend(options, ko.bindingHandlers.tooltip.options);
+      ko.utils.extend(options, local);
+
+      $(element).tooltip(options);
+
+      ko.utils.domNodeDisposal.addDisposeCallback(element, () => {
+          $(element).tooltip('dispose');
+      });
+  }
+};
+
 },{}],98:[function(require,module,exports){
 window.Wiki = {
   ...require('./datatables'),

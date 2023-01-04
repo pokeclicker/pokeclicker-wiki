@@ -62,3 +62,20 @@ Requirement.prototype.toJSON = function() {
     __class: req.__proto__.constructor.name,
   };
 };
+
+// Knockout tooltip bindings
+ko.bindingHandlers.tooltip = {
+  init: (element, valueAccessor) => {
+      const local = ko.utils.unwrapObservable(valueAccessor()),
+          options = {};
+
+      ko.utils.extend(options, ko.bindingHandlers.tooltip.options);
+      ko.utils.extend(options, local);
+
+      $(element).tooltip(options);
+
+      ko.utils.domNodeDisposal.addDisposeCallback(element, () => {
+          $(element).tooltip('dispose');
+      });
+  }
+};
