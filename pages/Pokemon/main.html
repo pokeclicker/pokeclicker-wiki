@@ -209,6 +209,24 @@
                     </div>
                 </div>
                 <!-- /ko -->
+
+                <!--
+                    BABY POKEMON
+                -->
+                <!-- ko if: $data[PokemonLocationType.Baby] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-baby" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            Breeding
+                        </button>
+                    </h4>
+                    <div id="obtain-method-baby" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Baby])">
+                            <span class="badge text-bg-secondary" data-bind="text: $data"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
             <!-- /ko -->
             </div>
         </div>
