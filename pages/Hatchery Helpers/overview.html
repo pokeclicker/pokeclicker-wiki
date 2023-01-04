@@ -19,8 +19,8 @@
                     <img width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/currency/${GameConstants.Currency[$data.cost.currency]}.svg` }"/>
                     <ko data-bind="text: $data.cost.amount.toLocaleString()"></ko>
                 </td>
-                <td data-bind="html: `${$data.attackEfficiencyBase}%`"></td>
-                <td data-bind="html: `${$data.stepEfficiencyBase}%`"></td>
+                <td data-bind="text: `${$data.attackEfficiencyBase}%`"></td>
+                <td data-bind="text: `${$data.stepEfficiencyBase}%`"></td>
             </tr>
             <!-- /ko -->
         </tbody>
