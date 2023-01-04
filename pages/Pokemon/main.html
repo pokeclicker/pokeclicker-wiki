@@ -310,12 +310,32 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-wandering" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            Wandering
+                            Farm Wandering
                         </button>
                     </h4>
                     <div id="obtain-method-wandering" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Wandering])">
                             <span class="badge text-bg-secondary" data-bind="text: $data"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+
+                <!--
+                    DISCORD
+                -->
+                <!-- ko if: $data[PokemonLocationType.Discord] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-discord" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            Discord Shop
+                        </button>
+                    </h4>
+                    <div id="obtain-method-discord" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Discord])">
+                            <span class="badge text-bg-secondary">
+                                <ko data-bind="text: `${$data.toLocaleString()} points`"></ko>
+                            </span>
                         </div>
                     </div>
                 </div>
