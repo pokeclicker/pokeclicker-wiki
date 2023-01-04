@@ -1,0 +1,28 @@
+<div class="table-responsive">
+    <table class="table table-hover table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th class="col-3">Helper</th>
+                <th class="col-3">Cost</th>
+                <th class="col-3">Attack Efficiency</th>
+                <th class="col-3">Step Efficiency</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- ko foreach: HatcheryHelpers.list -->
+            <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Hatchery Helpers', $data.name); return false; }">
+                <td class="text-nowrap">
+                    <img data-bind="attr: { src: `./pokeclicker/docs/assets/images/profile/trainer-${$data.trainerSprite}.png` }"/>
+                    <ko data-bind="text: $data.name"></ko>
+                </td>
+                <td class="text-nowrap">
+                    <img width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/currency/${GameConstants.Currency[$data.cost.currency]}.svg` }"/>
+                    <ko data-bind="text: $data.cost.amount.toLocaleString()"></ko>
+                </td>
+                <td data-bind="html: `${$data.attackEfficiencyBase}%`"></td>
+                <td data-bind="html: `${$data.stepEfficiencyBase}%`"></td>
+            </tr>
+            <!-- /ko -->
+        </tbody>
+    </table>
+</div>

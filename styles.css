@@ -15,6 +15,11 @@ blockquote {
 img.pixel {
   image-rendering: pixelated;
 }
+/* Table cell will be as small as possible */
+tr.tight,
+td.tight {
+  width: 0;
+}
 
 /* POKECLICKER */
 
