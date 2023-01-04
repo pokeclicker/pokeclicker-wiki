@@ -263,6 +263,27 @@
                     </div>
                 </div>
                 <!-- /ko -->
+
+                <!--
+                    SAFARI ZONE
+                -->
+                <!-- ko if: $data[PokemonLocationType.Safari] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-safari" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            Safari Zone
+                        </button>
+                    </h4>
+                    <div id="obtain-method-safari" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: Object.entries($data[PokemonLocationType.Safari])">
+                            <h5 data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0]])"></h5>
+                            <p data-bind="foreach: Object.entries($data[1])">
+                                <span class="badge text-bg-secondary" data-bind="text: `Zone ${$data[0]} | ${$data[1]}%`"></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
             <!-- /ko -->
             </div>
         </div>
