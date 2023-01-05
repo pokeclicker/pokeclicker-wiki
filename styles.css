@@ -23,6 +23,9 @@ td.tight {
 .accordion {
   display: flow-root;
 }
+.twitter-typeahead {
+  display: contents !important;
+}
 
 /* THEME OVERIDES */
 .sketchy .table-bordered {

@@ -26,7 +26,7 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.13.1/cr-1.6.1/datatables.min.css"/>
         <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.13.1/cr-1.6.1/datatables.min.js"></script>
 
-        <link href="./styles.css" rel="stylesheet">
+        <link href="./styles.css?t=1672881243500" rel="stylesheet">
 
     </head>
     <body class="no-select">
@@ -35,22 +35,40 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="#!">PokéClicker Wiki</a>
             </div>
+            <div class="collapse navbar-collapse main-nav-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <!-- <li class="nav-item">
+                    <a class="nav-link" href="#!">Home</a>
+                    </li> -->
+                </ul>
+                <div class="d-flex">
+                    <div class="input-group">
+                        <input id="search" type="text" class="form-control typeahead text-dark" autocomplete="off" placeholder="Search" />
+                        <button type="button" class="btn bg-transparent text-dark px-2" style="position: absolute; right: 0; z-index: 100;"  aria-label="Clear Search" onclick="document.getElementById('search').value = '';document.getElementById('search').dispatchEvent(new Event('input'));">×</button>
+                    </div>
+                    <a data-bs-toggle="modal" data-bs-target="#settings-modal" tabindex="-1" class="btn btn-primary ml-1">⚙️</a>
+                    <a href="#!" tabindex="-1" class="btn btn-primary ml-1" data-bind="attr: { href: `#!${Wiki.pageType()}/${Wiki.pageName() || ''}/edit` }">✏️</a>
+                </div>
+            </div>
         </nav>
         <nav id="nav-bar" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
             <link id="theme-link" href="https://bootswatch.com/5/yeti/bootstrap.min.css" rel="stylesheet" data-bind="attr: {href: 'https://bootswatch.com/5/' + Settings.getSetting('theme').observableValue() + '/bootstrap.min.css'}">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#!">PokéClicker Wiki</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".main-nav-collapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="collapse navbar-collapse main-nav-collapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <!-- <li class="nav-item">
                         <a class="nav-link" href="#!">Home</a>
                         </li> -->
                     </ul>
                     <div class="d-flex">
-                        <input id="search" type="text" class="form-control typeahead me-2 text-dark" autocomplete="off" placeholder="Search" />
+                        <div class="input-group">
+                            <input id="search" type="text" class="form-control typeahead text-dark" autocomplete="off" placeholder="Search" />
+                            <button type="button" class="btn bg-transparent text-dark px-2" style="position: absolute; right: 0; z-index: 100;"  aria-label="Clear Search" onclick="document.getElementById('search').value = '';document.getElementById('search').dispatchEvent(new Event('input'));">×</button>
+                        </div>
                         <a data-bs-toggle="modal" data-bs-target="#settings-modal" tabindex="-1" class="btn btn-primary ml-1">⚙️</a>
                         <a href="#!" tabindex="-1" class="btn btn-primary ml-1" data-bind="attr: { href: `#!${Wiki.pageType()}/${Wiki.pageName() || ''}/edit` }">✏️</a>
                     </div>
@@ -193,6 +211,6 @@
         </template>
 
         <!-- Main wiki script -->
-        <script src="bundle.js?t=1672708553734"></script>
+        <script src="bundle.js?t=1672881243500"></script>
     </body>
 </html>
