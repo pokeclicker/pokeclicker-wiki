@@ -31,6 +31,12 @@ td.tight {
 .sketchy .table-bordered>:not(caption)>*>* {
   border-width: 1px 1px;
 }
+.slate .tt-selectable .text-primary {
+  color: #d5d5d5 !important;
+}
+.quartz select option {
+  color: black;
+}
 
 /* POKECLICKER */
 

@@ -11548,24 +11548,15 @@ function escapeRegExp(text) {
   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
 }
 // This is the function which figures out the results to show
-var substringMatcher = function(searchData) {
-  return function findMatches(query, cb) {
-    var matches, substringRegex;
-
-    // an array that will be populated with substring matches
-    matches = [];
-
+var substringMatcher = (searchData) => {
+  return (query, cb) => {
     // regex used to determine if a string contains the substring `q`
-    substrRegex = new RegExp(escapeRegExp(query), 'ig');
+    const substrRegex = new RegExp(escapeRegExp(query), 'i');
 
-    // iterate through the pool of strings and for any string that
-    // contains the substring `q`, add it to the `matches` array
-    searchData.forEach((d, i) => {
-      if (substrRegex.test(d.display)) {
-        matches.push(d);
-      }
-    });
-    cb(matches);
+    // iterate through the pool of strings and for any string that matches the regex
+    const results = searchData.filter(d => substrRegex.test(d.display));
+
+    cb(results.sort((a, b) => a.display.search(substrRegex) - b.display.search(substrRegex) || a.display.length - b.display.length));
   };
 };
 
@@ -11578,10 +11569,12 @@ $('#search').typeahead({
     menu: 'dropdown-menu',
     suggestion: 'dropdown-item',
     cursor: 'active',
+    highlight: 'text-primary'
   },
 },
 {
   name: 'Search',
+  limit: 8,
   source: substringMatcher(searchOptions),
   display: 'display',
   templates: {
