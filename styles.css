@@ -1,11 +1,25 @@
 /* OVERIDES */
 body {
-  padding-bottom: 5rem;
   min-height: 100vh;
+  display:flex;
+  flex-direction:column; 
+}
+/* The main fills all the space between header & footer */
+main{
+  flex:1;
+}
+footer {
+  margin-top: 20px;
 }
 blockquote {
   border-left: 5px var(--bs-body-color) solid;
   padding-left: 5px;
+}
+.accordion {
+  display: flow-root;
+}
+.twitter-typeahead {
+  display: contents !important;
 }
 
 /* CUSTOM */
@@ -19,12 +33,6 @@ img.pixel {
 tr.tight,
 td.tight {
   width: 0;
-}
-.accordion {
-  display: flow-root;
-}
-.twitter-typeahead {
-  display: contents !important;
 }
 
 /* THEME OVERIDES */
