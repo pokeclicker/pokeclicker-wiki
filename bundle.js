@@ -11084,6 +11084,10 @@ ko.bindingHandlers.tooltip = {
   }
 };
 
+Settings.getSetting('theme').observableValue.subscribe(theme => {
+  document.body.className = `no-select ${theme}`;
+});
+
 },{}],98:[function(require,module,exports){
 window.Wiki = {
   ...require('./datatables'),

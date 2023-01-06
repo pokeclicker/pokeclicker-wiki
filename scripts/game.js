@@ -79,3 +79,7 @@ ko.bindingHandlers.tooltip = {
       });
   }
 };
+
+Settings.getSetting('theme').observableValue.subscribe(theme => {
+  document.body.className = `no-select ${theme}`;
+});
