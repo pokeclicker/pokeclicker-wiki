@@ -1,5 +1,6 @@
 const { md } = require('./markdown-renderer');
 const { applyDatatables } = require('./datatables');
+const { createMarkDownEditor } = require('./markdown-editor');
 
 // Load our error page for when we need it
 errorPage = '';
@@ -72,33 +73,45 @@ onhashchange = (event) => {
 
   const pageElementCustom = $('#wiki-page-custom-content');
   pageElementCustom.html('');
+  const customContentFileName = `./data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`;
   $.get(`data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`, (data) => {
     if (other == 'edit') {
-      pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = Wiki.md.render(this.value)">${data}</textarea><div id="preview-edit">${md.render(data)}</div>`);
+      pageElementCustom.html(`<textarea id="custom-edit">${data}</textarea>`);
     } else {
       pageElementCustom.html(md.render(data));
     }
   }).fail(() => {
     if (other == 'edit') {
-      pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = Wiki.md.render(this.value)"></textarea><div id="preview-edit"></div>`);
+      pageElementCustom.html(`<textarea id="custom-edit"></textarea>`);
     } else {
       pageElementCustom.html('');
+    }
+  }).always(() => {
+    if (other == 'edit') {
+      // Initialise markdown editor
+      createMarkDownEditor('custom-edit', customContentFileName);
     }
   });
 
   const pageElementCustomDescription = $('#wiki-page-custom-content-description');
   pageElementCustomDescription.html('');
-  $.get(`data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}_description.md`, (data) => {
+  const customContentDescFileName = `data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}_description.md`;
+  $.get(customContentDescFileName, (data) => {
     if (other == 'edit') {
-      pageElementCustomDescription.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit-desc').innerHTML = Wiki.md.render(this.value)">${data}</textarea><div id="preview-edit-desc">${md.render(data)}</div>`);
+      pageElementCustomDescription.html(`<textarea id="custom-edit-desc">${data}</textarea>`);
     } else {
       pageElementCustomDescription.html(md.render(data));
     }
   }).fail(() => {
     if (other == 'edit') {
-      pageElementCustomDescription.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit-desc').innerHTML = Wiki.md.render(this.value)"></textarea><div id="preview-edit-desc"></div>`);
+      pageElementCustomDescription.html(`<textarea id="custom-edit-desc"></textarea>`);
     } else {
       pageElementCustomDescription.html('');
+    }
+  }).always(() => {
+    if (other == 'edit') {
+      // Initialise markdown editor
+      createMarkDownEditor('custom-edit-desc', customContentDescFileName);
     }
   });
 };

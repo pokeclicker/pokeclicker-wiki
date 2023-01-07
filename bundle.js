@@ -11092,13 +11092,58 @@ Settings.getSetting('theme').observableValue.subscribe(theme => {
 window.Wiki = {
   ...require('./datatables'),
   ...require('./game'),
-  ...require('./navigation'),
   ...require('./typeahead'),
   ...require('./markdown-renderer'),
   pokemon: require('./pages/pokemon'),
+  ...require('./navigation'),
 }
 
-},{"./datatables":96,"./game":97,"./markdown-renderer":104,"./navigation":105,"./pages/pokemon":106,"./typeahead":107}],99:[function(require,module,exports){
+},{"./datatables":96,"./game":97,"./markdown-renderer":105,"./navigation":106,"./pages/pokemon":107,"./typeahead":108}],99:[function(require,module,exports){
+const { md } = require('./markdown-renderer');
+
+const createMarkDownEditor =  (elementID, filename) => {
+  // No element specified
+  if (!elementID || !filename) return;
+
+  return new SimpleMDE({
+    element: document.getElementById(elementID),
+    previewRender: (input) => md.render(input),
+    placeholder: "Type here...",
+    toolbarTips: false,
+    hideIcons: ['guide'],
+    insertTexts: {
+      image: ['[[File:', '|50px]]'],
+      link: [`[[`, ']]'],
+    },
+    showIcons: [
+      'bold', 'italic', 'heading', '|',
+      'quote', 'unordered-list', 'ordered-list', '|',
+      'link', 'image', 'table', 'horizontal-rule', '|',
+      'preview', 'side-by-side', 'fullscreen',
+    ],
+    status: [
+      'lines', 'words',
+      {
+        className: 'filename',
+        defaultValue: function(el) {
+          el.innerHTML = `Filename: <code>"${filename}"</code>`;
+        },
+      },
+      {
+        className: 'github',
+        defaultValue: function(el) {
+          el.innerHTML = `<a target="_BLANK" href="https://github.com/pokeclicker/pokeclicker-wiki/edit/main/${filename}">Edit on GitHub</a>`;
+        },
+      }
+    ]
+  });
+}
+
+module.exports = {
+  createMarkDownEditor,
+}
+
+},{"./markdown-renderer":105}],100:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11114,7 +11159,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":25,"markdown-it-regexp":22}],100:[function(require,module,exports){
+},{"markdown-it":25,"markdown-it-regexp":22}],101:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11130,7 +11175,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":25,"markdown-it-regexp":22}],101:[function(require,module,exports){
+},{"markdown-it":25,"markdown-it-regexp":22}],102:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11148,7 +11193,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":25,"markdown-it-regexp":22}],102:[function(require,module,exports){
+},{"markdown-it":25,"markdown-it-regexp":22}],103:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11164,7 +11209,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":25,"markdown-it-regexp":22}],103:[function(require,module,exports){
+},{"markdown-it":25,"markdown-it-regexp":22}],104:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11180,7 +11225,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":25,"markdown-it-regexp":22}],104:[function(require,module,exports){
+},{"markdown-it":25,"markdown-it-regexp":22}],105:[function(require,module,exports){
 const markdownit      = require('markdown-it');
 
 // Setup our markdown editor
@@ -11205,9 +11250,10 @@ module.exports = {
   md,
 }
 
-},{"./markdown-plugins/hidden-comments.js":99,"./markdown-plugins/id-element.js":100,"./markdown-plugins/image-size.js":101,"./markdown-plugins/wiki-links-badge.js":102,"./markdown-plugins/wiki-links.js":103,"markdown-it":25,"markdown-it-container":21}],105:[function(require,module,exports){
+},{"./markdown-plugins/hidden-comments.js":100,"./markdown-plugins/id-element.js":101,"./markdown-plugins/image-size.js":102,"./markdown-plugins/wiki-links-badge.js":103,"./markdown-plugins/wiki-links.js":104,"markdown-it":25,"markdown-it-container":21}],106:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 const { applyDatatables } = require('./datatables');
+const { createMarkDownEditor } = require('./markdown-editor');
 
 // Load our error page for when we need it
 errorPage = '';
@@ -11280,33 +11326,45 @@ onhashchange = (event) => {
 
   const pageElementCustom = $('#wiki-page-custom-content');
   pageElementCustom.html('');
+  const customContentFileName = `./data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`;
   $.get(`data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`, (data) => {
     if (other == 'edit') {
-      pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = Wiki.md.render(this.value)">${data}</textarea><div id="preview-edit">${md.render(data)}</div>`);
+      pageElementCustom.html(`<textarea id="custom-edit">${data}</textarea>`);
     } else {
       pageElementCustom.html(md.render(data));
     }
   }).fail(() => {
     if (other == 'edit') {
-      pageElementCustom.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit').innerHTML = Wiki.md.render(this.value)"></textarea><div id="preview-edit"></div>`);
+      pageElementCustom.html(`<textarea id="custom-edit"></textarea>`);
     } else {
       pageElementCustom.html('');
+    }
+  }).always(() => {
+    if (other == 'edit') {
+      // Initialise markdown editor
+      createMarkDownEditor('custom-edit', customContentFileName);
     }
   });
 
   const pageElementCustomDescription = $('#wiki-page-custom-content-description');
   pageElementCustomDescription.html('');
-  $.get(`data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}_description.md`, (data) => {
+  const customContentDescFileName = `data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}_description.md`;
+  $.get(customContentDescFileName, (data) => {
     if (other == 'edit') {
-      pageElementCustomDescription.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit-desc').innerHTML = Wiki.md.render(this.value)">${data}</textarea><div id="preview-edit-desc">${md.render(data)}</div>`);
+      pageElementCustomDescription.html(`<textarea id="custom-edit-desc">${data}</textarea>`);
     } else {
       pageElementCustomDescription.html(md.render(data));
     }
   }).fail(() => {
     if (other == 'edit') {
-      pageElementCustomDescription.html(`<textarea style="width: 100%;height: 500px;" oninput="document.getElementById('preview-edit-desc').innerHTML = Wiki.md.render(this.value)"></textarea><div id="preview-edit-desc"></div>`);
+      pageElementCustomDescription.html(`<textarea id="custom-edit-desc"></textarea>`);
     } else {
       pageElementCustomDescription.html('');
+    }
+  }).always(() => {
+    if (other == 'edit') {
+      // Initialise markdown editor
+      createMarkDownEditor('custom-edit-desc', customContentDescFileName);
     }
   });
 };
@@ -11345,7 +11403,7 @@ module.exports = {
     gotoPage,
 };
 
-},{"./datatables":96,"./markdown-renderer":104}],106:[function(require,module,exports){
+},{"./datatables":96,"./markdown-editor":99,"./markdown-renderer":105}],107:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -11404,7 +11462,7 @@ module.exports = {
     getEfficiency,
     getBestVitamins,
 }
-},{}],107:[function(require,module,exports){
+},{}],108:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [
@@ -11596,4 +11654,4 @@ module.exports = {
   searchOptions,
 };
 
-},{"./navigation":105}]},{},[98]);
+},{"./navigation":106}]},{},[98]);
