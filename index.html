@@ -67,8 +67,9 @@
                             <input id="search" type="text" class="form-control typeahead text-dark" autocomplete="off" placeholder="Search" />
                             <button type="button" class="btn bg-transparent text-dark px-2" style="position: absolute; right: 0; z-index: 100;"  aria-label="Clear Search" onclick="document.getElementById('search').value = '';document.getElementById('search').dispatchEvent(new Event('input'));">×</button>
                         </div>
-                        <a data-bs-toggle="modal" data-bs-target="#settings-modal" tabindex="-1" class="btn btn-primary ml-1">⚙️</a>
-                        <a href="#!" tabindex="-1" class="btn btn-primary ml-1" data-bind="attr: { href: `#!${Wiki.pageType()}/${Wiki.pageName() || ''}/edit` }">✏️</a>
+                        <a data-bs-toggle="modal" data-bs-target="#settings-modal" tabindex="-1" class="btn btn-secondary ml-1">
+                            <img src="./images/settings.svg" width="22px" />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -100,6 +101,9 @@
                         <span data-bind="text: Wiki.pageName()"></span>
                     </li>
                     <!-- /ko -->
+                    <li class="ms-auto">
+                        <a href="#!" data-bind="attr: { href: `#!${Wiki.pageType() || ''}/${Wiki.pageName() || ''}/edit` }">Edit</a>
+                    </li>
                 </ol>
             </nav>
             <div id="page-title">
