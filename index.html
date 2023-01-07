@@ -70,6 +70,16 @@
                         <a data-bs-toggle="modal" data-bs-target="#settings-modal" tabindex="-1" class="btn btn-secondary ml-1">
                             <img src="./images/settings.svg" width="22px" />
                         </a>
+                        <!-- ko ifnot: Wiki.discord.ID() -->
+                        <a href="#!" tabindex="-1" class="btn btn-secondary ml-1" data-bind="attr: { href: `https://discord.pokeclicker.com/proxy?action=login&redirect_uri=${encodeURIComponent(location.origin + location.pathname)}` }">
+                            <img src="./images/user.svg" width="22px" />
+                        </a>
+                        <!-- /ko -->
+                        <!-- ko if: Wiki.discord.ID() -->
+                        <a data-bs-toggle="modal" data-bs-target="#user-modal" tabindex="-1" class="btn btn-secondary p-0">
+                            <img data-bind="attr: { src: `${Wiki.discord.avatar()}` }" src="./images/user.svg" width="36px" />
+                        </a>
+                        <!-- /ko -->
                     </div>
                 </div>
             </div>
