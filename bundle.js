@@ -11381,6 +11381,7 @@ $(document).ready(() => {
   ko.applyBindings({}, document.getElementById('page-table-of-contents'));
   ko.applyBindings({}, document.getElementById('breadcrumbs'));
   ko.applyBindings({}, document.getElementById('settings-modal'));
+  ko.applyBindings({}, document.getElementById('footer'));
   applyBindings.subscribe((v) => {
     // Unbind and re-bind knockout
     if (v) {
