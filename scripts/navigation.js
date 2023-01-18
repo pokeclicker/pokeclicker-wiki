@@ -73,7 +73,7 @@ onhashchange = (event) => {
 
   const pageElementCustom = $('#wiki-page-custom-content');
   pageElementCustom.html('');
-  const customContentFileName = `./data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`;
+  let customContentFileName = `./data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`.replace(/\/+/g, '/');
   $.get(`data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`, (data) => {
     if (other == 'edit') {
       pageElementCustom.html(`<textarea id="custom-edit">${data}</textarea>`);
@@ -95,7 +95,7 @@ onhashchange = (event) => {
 
   const pageElementCustomDescription = $('#wiki-page-custom-content-description');
   pageElementCustomDescription.html('');
-  const customContentDescFileName = `data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}_description.md`;
+  const customContentDescFileName = `data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}_description.md`.replace(/\/+/g, '/');
   $.get(customContentDescFileName, (data) => {
     if (other == 'edit') {
       pageElementCustomDescription.html(`<textarea id="custom-edit-desc">${data}</textarea>`);
@@ -128,6 +128,7 @@ $(document).ready(() => {
   ko.applyBindings({}, document.getElementById('page-table-of-contents'));
   ko.applyBindings({}, document.getElementById('breadcrumbs'));
   ko.applyBindings({}, document.getElementById('settings-modal'));
+  ko.applyBindings({}, document.getElementById('footer'));
   applyBindings.subscribe((v) => {
     // Unbind and re-bind knockout
     if (v) {

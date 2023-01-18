@@ -10943,6 +10943,105 @@ module.exports = function whichTypedArray(value) {
 
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"available-typed-arrays":1,"call-bind/callBound":2,"for-each":5,"gopd":9,"has-tostringtag/shams":12,"is-typed-array":18}],96:[function(require,module,exports){
+module.exports={
+  "name": "pokeclicker",
+  "version": "0.10.8",
+  "description": "PokéClicker repository",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development gulp",
+    "test": "npm run ts-test && npm run eslint",
+    "ts-test": "gulp scripts",
+    "eslint": "eslint --ext ts ./src/scripts ./src/modules",
+    "eslint-fix": "eslint --ext ts --fix ./src/scripts ./src/modules",
+    "website": "npm run tl:update && npm test && cross-env NODE_ENV=production gulp website",
+    "publish": "npm test && node publish.js",
+    "tl:init": "git submodule update --init",
+    "tl:update": "git submodule update --remote",
+    "clean": "npm ci && npm run tl:init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pokeclicker/pokeclicker.git"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "author": "RedSparr0w",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pokeclicker/pokeclicker/issues"
+  },
+  "homepage": "https://github.com/pokeclicker/pokeclicker#readme",
+  "devDependencies": {
+    "@types/gtag.js": "0.0.4",
+    "@types/jquery": "^3.5.2",
+    "@types/sortablejs": "^1.10.5",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "bootstrap-notify": "^3.1.3",
+    "browser-sync": "^2.27.11",
+    "cross-env": "^7.0.2",
+    "del": "^5.1.0",
+    "es6-promise": "^4.2.8",
+    "eslint-config-airbnb-typescript": "^11.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "gh-pages": "^4.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-changed": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-ejs": "^5.1.0",
+    "gulp-file-include": "^2.2.2",
+    "gulp-filter": "^6.0.0",
+    "gulp-html-import": "^0.0.2",
+    "gulp-less": "^4.0.1",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stream-to-promise": "^0.1.0",
+    "gulp-strip-debug": "^3.0.0",
+    "gulp-typescript": "^5.0.1",
+    "gulp-util": "^3.0.7",
+    "husky": "^4.3.8",
+    "natives": "^1.1.6",
+    "ts-loader": "^8.0.4",
+    "typescript": "^3.7.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-stream": "^6.1.0"
+  },
+  "dependencies": {
+    "@types/bootstrap": "^4.3.1",
+    "@types/bootstrap-notify": "^3.1.34",
+    "@types/intro.js": "^2.4.7",
+    "@types/knockout": "^3.4.66",
+    "@typescript-eslint/parser": "^3.6.1",
+    "bootstrap": "^4.5.3",
+    "eslint": "^7.4.0",
+    "i18next": "^21.9.2",
+    "i18next-browser-languagedetector": "^6.1.5",
+    "i18next-chained-backend": "^3.1.0",
+    "i18next-http-backend": "^1.4.4",
+    "intro.js": "^2.9.3",
+    "jquery": "^3.5.1",
+    "knockout": "^3.5.1",
+    "popper.js": "^1.16.0",
+    "sortablejs": "^1.10.2"
+  }
+}
+
+},{}],97:[function(require,module,exports){
 // Applying datatables to all tables on the page (with some exceptions)
 const applyDatatables = () => {
     // Any table with headers
@@ -11001,7 +11100,7 @@ module.exports = {
     applyDatatables,
 }
 
-},{}],97:[function(require,module,exports){
+},{}],98:[function(require,module,exports){
 /*
 Initializing anything we need from the game files
 */
@@ -11088,8 +11187,12 @@ Settings.getSetting('theme').observableValue.subscribe(theme => {
   document.body.className = `no-select ${theme}`;
 });
 
-},{}],98:[function(require,module,exports){
+},{}],99:[function(require,module,exports){
+// import our version etc
+const package = require('../pokeclicker/package.json');
+
 window.Wiki = {
+  package,
   ...require('./datatables'),
   ...require('./game'),
   ...require('./typeahead'),
@@ -11098,7 +11201,7 @@ window.Wiki = {
   ...require('./navigation'),
 }
 
-},{"./datatables":96,"./game":97,"./markdown-renderer":105,"./navigation":106,"./pages/pokemon":107,"./typeahead":108}],99:[function(require,module,exports){
+},{"../pokeclicker/package.json":96,"./datatables":97,"./game":98,"./markdown-renderer":106,"./navigation":107,"./pages/pokemon":108,"./typeahead":109}],100:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const createMarkDownEditor =  (elementID, filename) => {
@@ -11143,7 +11246,7 @@ module.exports = {
   createMarkDownEditor,
 }
 
-},{"./markdown-renderer":105}],100:[function(require,module,exports){
+},{"./markdown-renderer":106}],101:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11159,7 +11262,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":25,"markdown-it-regexp":22}],101:[function(require,module,exports){
+},{"markdown-it":25,"markdown-it-regexp":22}],102:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11175,7 +11278,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":25,"markdown-it-regexp":22}],102:[function(require,module,exports){
+},{"markdown-it":25,"markdown-it-regexp":22}],103:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11193,7 +11296,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":25,"markdown-it-regexp":22}],103:[function(require,module,exports){
+},{"markdown-it":25,"markdown-it-regexp":22}],104:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11209,7 +11312,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":25,"markdown-it-regexp":22}],104:[function(require,module,exports){
+},{"markdown-it":25,"markdown-it-regexp":22}],105:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11225,7 +11328,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":25,"markdown-it-regexp":22}],105:[function(require,module,exports){
+},{"markdown-it":25,"markdown-it-regexp":22}],106:[function(require,module,exports){
 const markdownit      = require('markdown-it');
 
 // Setup our markdown editor
@@ -11250,7 +11353,7 @@ module.exports = {
   md,
 }
 
-},{"./markdown-plugins/hidden-comments.js":100,"./markdown-plugins/id-element.js":101,"./markdown-plugins/image-size.js":102,"./markdown-plugins/wiki-links-badge.js":103,"./markdown-plugins/wiki-links.js":104,"markdown-it":25,"markdown-it-container":21}],106:[function(require,module,exports){
+},{"./markdown-plugins/hidden-comments.js":101,"./markdown-plugins/id-element.js":102,"./markdown-plugins/image-size.js":103,"./markdown-plugins/wiki-links-badge.js":104,"./markdown-plugins/wiki-links.js":105,"markdown-it":25,"markdown-it-container":21}],107:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 const { applyDatatables } = require('./datatables');
 const { createMarkDownEditor } = require('./markdown-editor');
@@ -11326,7 +11429,7 @@ onhashchange = (event) => {
 
   const pageElementCustom = $('#wiki-page-custom-content');
   pageElementCustom.html('');
-  const customContentFileName = `./data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`;
+  let customContentFileName = `./data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`.replace(/\/+/g, '/');
   $.get(`data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`, (data) => {
     if (other == 'edit') {
       pageElementCustom.html(`<textarea id="custom-edit">${data}</textarea>`);
@@ -11348,7 +11451,7 @@ onhashchange = (event) => {
 
   const pageElementCustomDescription = $('#wiki-page-custom-content-description');
   pageElementCustomDescription.html('');
-  const customContentDescFileName = `data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}_description.md`;
+  const customContentDescFileName = `data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}_description.md`.replace(/\/+/g, '/');
   $.get(customContentDescFileName, (data) => {
     if (other == 'edit') {
       pageElementCustomDescription.html(`<textarea id="custom-edit-desc">${data}</textarea>`);
@@ -11381,6 +11484,7 @@ $(document).ready(() => {
   ko.applyBindings({}, document.getElementById('page-table-of-contents'));
   ko.applyBindings({}, document.getElementById('breadcrumbs'));
   ko.applyBindings({}, document.getElementById('settings-modal'));
+  ko.applyBindings({}, document.getElementById('footer'));
   applyBindings.subscribe((v) => {
     // Unbind and re-bind knockout
     if (v) {
@@ -11403,7 +11507,7 @@ module.exports = {
     gotoPage,
 };
 
-},{"./datatables":96,"./markdown-editor":99,"./markdown-renderer":105}],107:[function(require,module,exports){
+},{"./datatables":97,"./markdown-editor":100,"./markdown-renderer":106}],108:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -11462,7 +11566,7 @@ module.exports = {
     getEfficiency,
     getBestVitamins,
 }
-},{}],108:[function(require,module,exports){
+},{}],109:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [
@@ -11654,4 +11758,4 @@ module.exports = {
   searchOptions,
 };
 
-},{"./navigation":106}]},{},[98]);
+},{"./navigation":107}]},{},[99]);
