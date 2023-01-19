@@ -6,3 +6,5 @@ Once hired, a Hatchery Helper will work until they are fired or you do not have 
 Clicking on "Sort" opens a dropdown that allows you to select the order in which Hatchery Helpers will pull Pokémon from Party.
 Pokémon that are currently queued will not be able to be selected by Hatchery Helpers.
 You can only hire a maximum of 3 hatchery helpers at a time.
+
+Update test
