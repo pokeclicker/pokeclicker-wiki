@@ -76,8 +76,13 @@
                         </a>
                         <!-- /ko -->
                         <!-- ko if: Wiki.discord.ID() -->
-                        <a data-bs-toggle="modal" data-bs-target="#user-modal" tabindex="-1" class="btn btn-secondary p-0">
-                            <img data-bind="attr: { src: `${Wiki.discord.avatar()}` }" src="./images/user.svg" width="36px" />
+                        <a data-bs-toggle="modal" data-bs-target="#user-modal" tabindex="-1" class="btn btn-secondary p-0" data-bind="tooltip: {
+                            title: Wiki.discord.username ?? '',
+                            html: false,
+                            placement: 'left',
+                            trigger: 'hover'
+                        }">
+                            <img data-bind="attr: { src: `${Wiki.discord.avatar()}` }" width="36px" />
                         </a>
                         <!-- /ko -->
                     </div>
@@ -111,9 +116,11 @@
                         <span data-bind="text: Wiki.pageName()"></span>
                     </li>
                     <!-- /ko -->
+                    <!-- ko if: Wiki.discord.ID() -->
                     <li class="ms-auto">
                         <a href="#!" data-bind="attr: { href: `#!${Wiki.pageType() || ''}/${Wiki.pageName() || ''}/edit` }">Edit</a>
                     </li>
+                    <!-- /ko -->
                 </ol>
             </nav>
             <div id="page-title">
@@ -145,6 +152,7 @@
                 </p>
             </div>
         </footer>
+        <div id="toaster"></div>
 
         <div class="modal" id="settings-modal" tabindex="-1">
             <div class="modal-dialog">

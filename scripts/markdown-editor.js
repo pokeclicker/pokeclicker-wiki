@@ -3,11 +3,13 @@ const { md } = require('./markdown-renderer');
 const saveChanges = (editor, filename) => {
   const content = editor.value().split('\n').map(l => l.trimEnd()).join('\n');
   const originalContent = editor._rendered.value.split('\n').map(l => l.trimEnd()).join('\n');
+
   // If nothing has changed, just return
   if (content == originalContent) {
-    // TODO: some sort of error message?
+    Wiki.alert('No file changes detected..', 'warning', 3e3);
     return;
   }
+
   // Update the file contents
   (async () => {
     const formData = new FormData();
@@ -18,14 +20,27 @@ const saveChanges = (editor, filename) => {
       credentials: 'include',
       body: formData,
     });
+
+    // Check if the request was successfull
     if (rawResponse.status != 200) {
-      // TODO: some sort of error message?
+      Wiki.alert('Something went wrong trying to update this file, please try again later or check the console for more info.', 'danger', 1e4);
       return;
     }
+
+    // Get our response as json
     const response = await rawResponse.json();
 
-    // Update our "original content"
-    editor._rendered.value = content;
+    // If there was any error messages
+    if (response.error_msg) {
+      console.error(response);
+      Wiki.alert('Something went wrong trying to update this file, please try again later or check the console for more info.', 'danger', 1e4);
+      return;
+    }
+  
+    Wiki.alert('Successfully submitted your changes, please wait a few minutes for these changes to take affect', 'success', 2e4);
+
+    // Take user back to non editor page
+    window.location.hash = window.location.hash.replace(/\/+edit$/, '');
   })();
 }
 
