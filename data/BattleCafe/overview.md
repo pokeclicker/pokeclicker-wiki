@@ -19,9 +19,9 @@ While using the Battle Café, there are a number of factors that contribute to t
 
 **Time of Day**   | **Device Local Time**
 :---:             | :---:
-Day               | 5:00 AM - 5:59 PM
+Day               | 6:00 AM - 5:59 PM
 Dusk              | 5:00 PM - 5:59 PM
-Night             | 6:00 PM - 4:59 AM
+Night             | 6:00 PM - 5:59 AM
 
 ### Berry Costs
 Each sweet type requires a fixed quantity of three different types of berries. The player will need to possess the requisite number of each kind of berry to be able to spin on that sweet type and those berries will be lost. *(This means that caution should be taken so the last berry of a certain kind isn't lost while performing a spin.)* The seven sweet types and their associated berry costs are outlined below.
