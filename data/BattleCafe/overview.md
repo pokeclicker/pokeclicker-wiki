@@ -17,11 +17,11 @@ While using the Battle Café, there are a number of factors that contribute to t
 - **Spin Direction** — Determined by the player. Clockwise or counterclockwise.
 - **Time of Day** — The local time of the device running the game. Depending on the time, this could be **Day**, **Dusk**, or **Night**. This can be corroborated with the time of day indicator on the town map. See the table below for the associated windows of time.
 
-**Time of Day**   | **Device Local Time**
-:---:             | :---:
-Day               | 6:00 AM - 5:59 PM
-Dusk              | 5:00 PM - 5:59 PM
-Night             | 6:00 PM - 5:59 AM
+**Time of Day**   | **Device Time (12-Hour)** | **Device Time (24-Hour)**
+:---:             | :---:                     | :---:
+Day               | 6:00 AM - 5:59 PM         | 06:00 - 17:59
+Dusk              | 5:00 PM - 5:59 PM         | 17:00 - 17:59
+Night             | 6:00 PM - 5:59 AM         | 18:00 - 05:59
 
 ### Berry Costs
 Each sweet type requires a fixed quantity of three different types of berries. The player will need to possess the requisite number of each kind of berry to be able to spin on that sweet type and those berries will be lost. *(This means that caution should be taken so the last berry of a certain kind isn't lost while performing a spin.)* The seven sweet types and their associated berry costs are outlined below.
