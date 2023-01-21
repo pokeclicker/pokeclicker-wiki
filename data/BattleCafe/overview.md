@@ -1,3 +1,58 @@
+## Description
+The Battle Café is a mechanic that allows the player to evolve Micery into the different forms of [[Pokemon/Alcremie]]. It is unlocked when the player reaches Motostoke in Galar. There are 63 different [[Pokemon/Alcremie]] forms and one [[Pokemon/Milcery]] form that can be obtained using the Battle Café mechanic.
+
+## Locations
+The Battle Café can be accessed from the following three towns:
+
+| **Location**  |
+| :---:         |
+| Motostoke     |
+| Hammerlocke   |
+| Wyndon        |
+
+## Usage
+While using the Battle Café, there are a number of factors that contribute to the [[Pokemon/Alcremie]] *(or [[Pokemon/Milcery]])*. Those factors are as follows:
+- **Sweet Type** — Determined by the player. One of seven possible options, which are outlined below.
+- **Spin Duration** — Determined by the player. A number that is greater than zero. *(`3` by default.)*
+- **Spin Direction** — Determined by the player. Clockwise or counterclockwise.
+- **Time of Day** — The local time of the device running the game. Depending on the time, this could be **Day**, **Dusk**, or **Night**. This can be corroborated with the time of day indicator on the town map. See the table below for the associated windows of time.
+
+**Time of Day**   | **Device Local Time**
+:---:             | :---:
+Day               | 5:00 AM - 5:59 PM
+Dusk              | 5:00 PM - 5:59 PM
+Night             | 6:00 PM - 4:59 AM
+
+### Berry Costs
+Each sweet type requires a fixed quantity of three different types of berries. The player will need to possess the requisite number of each kind of berry to be able to spin on that sweet type and those berries will be lost. *(This means that caution should be taken so the last berry of a certain kind isn't lost while performing a spin.)* The seven sweet types and their associated berry costs are outlined below.
+
+**Sweet Type**  | **Location**
+:---:           | :---:       
+Strawberry      | 500 [[Berries/Cheri]] [[File:Cheri.png|20px]]
+^^              | 500 [[Berries/Leppa]] [[File:Leppa.png|20px]]
+^^              | 50 [[Berries/Razz]] [[File:Razz.png|20px]]
+Love            | 200 [[Berries/Habban]] [[File:Habban.png|20px]]
+^^              | 700 [[Berries/Roseli]] [[File:Roseli.png|20px]]
+^^              | 5 [[Berries/Lansat]] [[File:Lansat.png|20px]]
+Berry           | 1,000 [[Berries/Passho]] [[File:Passho.png|20px]]
+^^              | 75 [[Berries/Yache]] [[File:Yache.png|20px]]
+^^              | 150 [[Berries/Coba]] [[File:Coba.png|20px]]
+Clover          | 1,000 [[Berries/Wepear]] [[File:Wepear.png|20px]]
+^^              | 2,000 [[Berries/Aguav]] [[File:Aguav.png|20px]]
+^^              | 10 [[Berries/Lum]] [[File:Lum.png|20px]]
+Flower          | 15,000 [[Berries/Figy]] [[File:Figy.png|20px]]
+^^              | 20,000 [[Berries/Iapapa]] [[File:Iapapa.png|20px]]
+^^              | 3 [[Berries/Liechi]] [[File:Liechi.png|20px]]
+Star            | 2,000 [[Berries/Pinap]] [[File:Pinap.png|20px]]
+^^              | 100 [[Berries/Grepa]] [[File:Grepa.png|20px]]
+^^              | 50 [[Berries/Nomel]] [[File:Nomel.png|20px]]
+Ribbon          | 3,000 [[Berries/Bluk]] [[File:Bluk.png|20px]]
+^^              | 50 [[Berries/Pamtre]] [[File:Pamtre.png|20px]]
+^^              | 100 [[Berries/Payapa]] [[File:Payapa.png|20px]]
+
+## Possible Forms
+Outlined below are all of the possible combinations of Battle Café settings and the [[Pokemon/Alcremie]] or [[Pokemon/Milcery]] form that is obtained as a result.
+
 **Sweet**     | **Time**  | **Spins** | **Direction**     | **Pokémon**                       
 :---:         | :---:     | :---:     | :---:             | :---:                             
 Any           | Any       | 3600      | Any               | [[Pokemon/Milcery (Cheesy)]]                  
