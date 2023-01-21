@@ -1,336 +1,66 @@
-### Description
-Battle Café is used to evolve Micery into the different forms of Alcremie.
-You have a limited amount of spins each day, and you get form based on what sweet you use,
-how long you spin, what direction and what time of the day.
-
-<table>
-    <tr align="center">
-        <td><b>Sweet</b></td>
-        <td><b>Time</b></td>
-        <td><b>Spins</b></td>
-        <td><b>Direction</b></td>
-        <td><b>Pokémon</b></td>
-    </tr>
-    <tr align="center">
-        <td>Any</td>
-        <td>Any</td>
-        <td>3600</td>
-        <td>Any</td>
-        <td>Milcery (Cheesy)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="9">Strawberry</td>
-        <td rowspan="4">Day</td>
-        <td rowspan="2">1-4</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Strawberry Vanilla)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Strawberry Ruby Cream)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="2">5+</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Strawberry Caramel)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Strawberry Ruby Swirl)</td>
-    </tr>
-    <tr align="center">
-        <td>Dusk</td>
-        <td>11+</td>
-        <td>Counterclockwise</td>
-        <td>Alcremie (Strawberry Rainbow)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="4">Night</td>
-        <td rowspan="2">1-4</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Strawberry Matcha)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Strawberry Salted)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="2">5+</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Strawberry Lemon)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Strawberry Mint)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="9">Love</td>
-        <td rowspan="4">Day</td>
-        <td rowspan="2">1-4</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Love Vanilla)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Love Ruby Cream)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="2">5+</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Love Caramel)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Love Ruby Swirl)</td>
-    </tr>
-    <tr align="center">
-        <td>Dusk</td>
-        <td>11+</td>
-        <td>Counterclockwise</td>
-        <td>Alcremie (Love Rainbow)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="4">Night</td>
-        <td rowspan="2">1-4</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Love Matcha)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Love Salted)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="2">5+</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Love Lemon)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Love Mint)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="9">Berry</td>
-        <td rowspan="4">Day</td>
-        <td rowspan="2">1-4</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Berry Vanilla)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Berry Ruby Cream)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="2">5+</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Berry Caramel)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Berry Ruby Swirl)</td>
-    </tr>
-    <tr align="center">
-        <td>Dusk</td>
-        <td>11+</td>
-        <td>Counterclockwise</td>
-        <td>Alcremie (Berry Rainbow)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="4">Night</td>
-        <td rowspan="2">1-4</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Berry Matcha)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Berry Salted)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="2">5+</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Berry Lemon)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Berry Mint)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="9">Clover</td>
-        <td rowspan="4">Day</td>
-        <td rowspan="2">1-4</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Clover Vanilla)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Clover Ruby Cream)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="2">5+</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Clover Caramel)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Clover Ruby Swirl)</td>
-    </tr>
-    <tr align="center">
-        <td>Dusk</td>
-        <td>11+</td>
-        <td>Counterclockwise</td>
-        <td>Alcremie (Clover Rainbow)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="4">Night</td>
-        <td rowspan="2">1-4</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Clover Matcha)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Clover Salted)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="2">5+</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Clover Lemon)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Clover Mint)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="9">Flower</td>
-        <td rowspan="4">Day</td>
-        <td rowspan="2">1-4</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Flower Vanilla)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Flower Ruby Cream)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="2">5+</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Flower Caramel)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Flower Ruby Swirl)</td>
-    </tr>
-    <tr align="center">
-        <td>Dusk</td>
-        <td>11+</td>
-        <td>Counterclockwise</td>
-        <td>Alcremie (Flower Rainbow)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="4">Night</td>
-        <td rowspan="2">1-4</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Flower Matcha)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Flower Salted)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="2">5+</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Flower Lemon)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Flower Mint)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="9">Star</td>
-        <td rowspan="4">Day</td>
-        <td rowspan="2">1-4</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Star Vanilla)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Star Ruby Cream)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="2">5+</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Star Caramel)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Star Ruby Swirl)</td>
-    </tr>
-    <tr align="center">
-        <td>Dusk</td>
-        <td>11+</td>
-        <td>Counterclockwise</td>
-        <td>Alcremie (Star Rainbow)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="4">Night</td>
-        <td rowspan="2">1-4</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Star Matcha)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Star Salted)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="2">5+</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Star Lemon)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Star Mint)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="9">Ribbon</td>
-        <td rowspan="4">Day</td>
-        <td rowspan="2">1-4</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Ribbon Vanilla)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Ribbon Ruby Cream)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="2">5+</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Ribbon Caramel)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Ribbon Ruby Swirl)</td>
-    </tr>
-    <tr align="center">
-        <td>Dusk</td>
-        <td>11+</td>
-        <td>Counterclockwise</td>
-        <td>Alcremie (Ribbon Rainbow)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="4">Night</td>
-        <td rowspan="2">1-4</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Ribbon Matcha)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Ribbon Salted)</td>
-    </tr>
-    <tr align="center">
-        <td rowspan="2">5+</td>
-        <td>Clockwise</td>
-        <td>Alcremie (Ribbon Lemon)</td>
-    </tr>
-    <tr align="center">
-        <td>Counterclockwise</td>
-        <td>Alcremie (Ribbon Mint)</td>
-    </tr>
-</table>
+**Sweet**     | **Time**  | **Spins** | **Direction**     | **Pokémon**                       
+:---:         | :---:     | :---:     | :---:             | :---:                             
+Any           | Any       | 3600      | Any               | [[Pokemon/Milcery (Cheesy)]]                  
+Strawberry    | Day       | 1-4       | Clockwise         | [[Pokemon/Alcremie (Strawberry Vanilla)]]     
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Strawberry Ruby Cream)]]  
+^^            | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Strawberry Caramel)]]     
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Strawberry Ruby Swirl)]]  
+^^            | Dusk      | 11+       | Counterclockwise  | [[Pokemon/Alcremie (Strawberry Rainbow)]]     
+^^            | Night     | 1-4       | Clockwise         | [[Pokemon/Alcremie (Strawberry Matcha)]]      
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Strawberry Salted)]]      
+^^            | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Strawberry Lemon)]]       
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Strawberry Mint)]]        
+Love          | Day       | 1-4       | Clockwise         | [[Pokemon/Alcremie (Love Vanilla)]]           
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Love Ruby Cream)]]        
+^^            | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Love Caramel)]]           
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Love Ruby Swirl)]]        
+^^            | Dusk      | 11+       | Counterclockwise  | [[Pokemon/Alcremie (Love Rainbow)]]           
+^^            | Night     | 1-4       | Clockwise         | [[Pokemon/Alcremie (Love Matcha)]]            
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Love Salted)]]            
+^^            | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Love Lemon)]]             
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Love Mint)]]              
+Berry         | Day       | 1-4       | Clockwise         | [[Pokemon/Alcremie (Berry Vanilla)]]          
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Berry Ruby Cream)]]       
+^^            | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Berry Caramel)]]          
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Berry Ruby Swirl)]]       
+^^            | Dusk      | 11+       | Counterclockwise  | [[Pokemon/Alcremie (Berry Rainbow)]]          
+^^            | Night     | 1-4       | Clockwise         | [[Pokemon/Alcremie (Berry Matcha)]]           
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Berry Salted)]]           
+^^            | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Berry Lemon)]]            
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Berry Mint)]]             
+Clover        | Day       | 1-4       | Clockwise         | [[Pokemon/Alcremie (Clover Vanilla)]]         
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Clover Ruby Cream)]]      
+^^            | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Clover Caramel)]]         
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Clover Ruby Swirl)]]      
+^^            | Dusk      | 11+       | Counterclockwise  | [[Pokemon/Alcremie (Clover Rainbow)]]         
+^^            | Night     | 1-4       | Clockwise         | [[Pokemon/Alcremie (Clover Matcha)]]          
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Clover Salted)]]          
+^^            | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Clover Lemon)]]           
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Clover Mint)]]            
+Flower        | Day       | 1-4       | Clockwise         | [[Pokemon/Alcremie (Flower Vanilla)]]         
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Flower Ruby Cream)]]      
+^^            | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Flower Caramel)]]         
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Flower Ruby Swirl)]]      
+^^            | Dusk      | 11+       | Counterclockwise  | [[Pokemon/Alcremie (Flower Rainbow)]]         
+^^            | Night     | 1-4       | Clockwise         | [[Pokemon/Alcremie (Flower Matcha)]]          
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Flower Salted)]]          
+^^            | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Flower Lemon)]]           
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Flower Mint)]]            
+Star          | Day       | 1-4       | Clockwise         | [[Pokemon/Alcremie (Star Vanilla)]]           
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Star Ruby Cream)]]        
+^^            | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Star Caramel)]]           
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Star Ruby Swirl)]]        
+^^            | Dusk      | 11+       | Counterclockwise  | [[Pokemon/Alcremie (Star Rainbow)]]           
+^^            | Night     | 1-4       | Clockwise         | [[Pokemon/Alcremie (Star Matcha)]]            
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Star Salted)]]            
+^^            | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Star Lemon)]]             
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Star Mint)]]              
+Ribbon        | Day       | 1-4       | Clockwise         | [[Pokemon/Alcremie (Ribbon Vanilla)]]         
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Ribbon Ruby Cream)]]      
+^^            | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Ribbon Caramel)]]         
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Ribbon Ruby Swirl)]]      
+^^            | Dusk      | 11+       | Counterclockwise  | [[Pokemon/Alcremie (Ribbon Rainbow)]]         
+^^            | Night     | 1-4       | Clockwise         | [[Pokemon/Alcremie (Ribbon Matcha)]]          
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Ribbon Salted)]]          
+^^            | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Ribbon Lemon)]]           
+^^            | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Ribbon Mint)]]            
