@@ -11553,9 +11553,9 @@ module.exports = {
 }
 
 },{}],100:[function(require,module,exports){
-discordLoginJSON = 'https://discord.pokeclicker.com/json';
+const discordLoginJSON = 'https://discord.pokeclicker.com/json';
 
-let discord = {
+const discord = {
   error: ko.observable(''),
   ID: ko.observable(''),
   username: ko.observable(''),
