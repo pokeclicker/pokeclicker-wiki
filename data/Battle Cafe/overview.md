@@ -1,15 +1,3 @@
-## Description
-The Battle Café is a mechanic that allows the player to evolve Micery into the different forms of [[Pokemon/Alcremie]]. It is unlocked when the player reaches Motostoke in Galar. There are 63 different [[Pokemon/Alcremie]] forms and one [[Pokemon/Milcery]] form that can be obtained using the Battle Café mechanic.
-
-## Locations
-The Battle Café can be accessed from the following three towns:
-
-| **Location**  |
-| :---:         |
-| Motostoke     |
-| Hammerlocke   |
-| Wyndon        |
-
 ## Usage
 While using the Battle Café, there are a number of factors that contribute to the [[Pokemon/Alcremie]] *(or [[Pokemon/Milcery]])*. Those factors are as follows:
 - **Sweet Type** — Determined by the player. One of seven possible options, which are outlined below.
@@ -31,7 +19,7 @@ Each sweet type requires a fixed quantity of three different types of berries. T
 Strawberry      | 500 [[Berries/Cheri]] [[File:Cheri.png\|20px]]
 ^^              | 500 [[Berries/Leppa]] [[File:Leppa.png\|20px]]
 ^^              | 50 [[Berries/Razz]] [[File:Razz.png\|20px]]
-Love            | 200 [[Berries/Habban]] [[File:Habban.png\|20px]]
+Love            | 200 [[Berries/Haban]] [[File:Haban.png\|20px]]
 ^^              | 700 [[Berries/Roseli]] [[File:Roseli.png\|20px]]
 ^^              | 5 [[Berries/Lansat]] [[File:Lansat.png\|20px]]
 Berry           | 1,000 [[Berries/Passho]] [[File:Passho.png\|20px]]
