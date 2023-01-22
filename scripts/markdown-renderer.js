@@ -4,6 +4,10 @@ const markdownit      = require('markdown-it');
 const md = new markdownit({
     breaks: true,
   })
+  .use(require('markdown-it-multimd-table'), {
+    rowspan:    true,
+    headerless: true,
+  })
   .use(require('markdown-it-container'), 'text-center')
   .use(require('markdown-it-container'), 'text-end')
   .use(require('./markdown-plugins/hidden-comments.js'))
