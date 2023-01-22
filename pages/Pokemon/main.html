@@ -70,7 +70,13 @@
                             <h5 data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0]])"></h5>
                             <p data-bind="foreach: $data[1]">
                                 <ko data-bind="with: Routes.regionRoutes.find(r => r.region == $parent[0] && r.number == $data.route)">
-                                    <span class="badge text-bg-secondary" data-bind="text: $data.routeName.replace(new RegExp(`^${GameConstants.Region[$parents[1][0]]}`, 'i'), '')"></span>
+                                    <span class="badge text-bg-secondary" data-bind="text: $data.routeName.replace(new RegExp(`^${GameConstants.Region[$parents[1][0]]}`, 'i'), '') + `${$parent.requirements ? ' 🔒' : ''}`,
+                                    tooltip: {
+                                        title: $parent.requirements ?? '',
+                                        html: false,
+                                        placement: 'bottom',
+                                        trigger: 'hover'
+                                    }"></span>
                                 </ko>
                             </p>
                         </div>
