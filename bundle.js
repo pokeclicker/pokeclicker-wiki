@@ -11973,7 +11973,7 @@ onhashchange = (event) => {
 
   const pageElementCustom = $('#wiki-page-custom-content');
   pageElementCustom.html('');
-  let customContentFileName = `./data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`.replace(/\/+/g, '/');
+  let customContentFileName = `data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`.replace(/\/+/g, '/');
   $.get(`data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`, (data) => {
     if (other == 'edit') {
       pageElementCustom.html(`<textarea id="custom-edit">${data}</textarea>`);
