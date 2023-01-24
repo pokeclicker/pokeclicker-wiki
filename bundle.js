@@ -11732,7 +11732,8 @@ const createMarkDownEditor =  (elementID, filename) => {
 
   const element = document.getElementById(elementID);
 
-  return new SimpleMDE({
+  let mde;
+  mde = new SimpleMDE({
     element,
     previewRender: (input) => md.render(input),
     placeholder: "Type here...",
@@ -11740,13 +11741,7 @@ const createMarkDownEditor =  (elementID, filename) => {
       'bold', 'italic', 'heading', '|',
       'quote', 'unordered-list', 'ordered-list', '|',
       'link', 'image', 'table', 'horizontal-rule', '|',
-      'preview', 'side-by-side', 'fullscreen', '|',
-      {
-        name: 'saveChanges',
-        action: (e) => { saveChanges(e, filename) },
-        className: 'fa fa-floppy-o',
-        title: 'Save Changes',
-      },
+      'preview', 'side-by-side', 'fullscreen',
     ],
     hideIcons: ['guide'],
     insertTexts: {
@@ -11757,18 +11752,24 @@ const createMarkDownEditor =  (elementID, filename) => {
       'lines', 'words',
       {
         className: 'filename',
-        defaultValue: function(el) {
-          el.innerHTML = `Filename: <code>"${filename}"</code>`;
+        defaultValue: (el) => {
+          el.innerHTML = `Filename: <a class="text-decoration-none" target="_BLANK" href="https://github.com/pokeclicker/pokeclicker-wiki/tree/main/${filename}"><code>"${filename}"</code></a>`;
         },
       },
       {
         className: 'github',
-        defaultValue: function(el) {
-          el.innerHTML = `<a target="_BLANK" href="https://github.com/pokeclicker/pokeclicker-wiki/edit/main/${filename}">Edit on GitHub</a>`;
+        defaultValue: (el) => {
+          const btn = document.createElement('div');
+          btn.classList.add('btn', 'btn-success', 'btn-sm');
+          btn.innerText = 'Save Changes';
+          btn.onclick = () => saveChanges(mde, filename);
+          el.append(btn);
         },
       }
     ]
   });
+
+  return mde;
 }
 
 module.exports = {
