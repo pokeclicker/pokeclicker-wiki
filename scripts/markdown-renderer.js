@@ -10,6 +10,8 @@ const md = new markdownit({
   })
   .use(require('markdown-it-container'), 'text-center')
   .use(require('markdown-it-container'), 'text-end')
+  .use(require('markdown-it-container'), 'table-auto')
+  .use(require('markdown-it-container'), 'table-tight')
   .use(require('./markdown-plugins/hidden-comments.js'))
   .use(require('./markdown-plugins/id-element.js'))
   .use(require('./markdown-plugins/image-size.js'))

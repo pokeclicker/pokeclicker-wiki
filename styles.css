@@ -60,6 +60,12 @@ tr.tight,
 td.tight {
   width: 0;
 }
+.table-auto table.table {
+  width: auto;
+}
+.table-tight table.table {
+  width: min-content;
+}
 
 /* THEME OVERIDES */
 .sketchy .table-bordered {
