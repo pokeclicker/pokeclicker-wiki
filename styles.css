@@ -33,6 +33,22 @@ blockquote {
 }
 
 /* CUSTOM */
+#toaster {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2700;
+  padding: 10px;
+  padding-right: 30px;
+  pointer-events: none;
+}
+
+#toaster * {
+  pointer-events: all;
+}
+
 .clickable {
   cursor: pointer;
 }

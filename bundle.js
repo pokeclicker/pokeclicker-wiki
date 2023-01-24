@@ -11553,6 +11553,30 @@ module.exports = {
 }
 
 },{}],100:[function(require,module,exports){
+const discordLoginJSON = 'https://discord.pokeclicker.com/json';
+
+const discord = {
+  error: ko.observable(''),
+  ID: ko.observable(''),
+  username: ko.observable(''),
+  avatar: ko.observable(''),
+};
+
+fetch(discordLoginJSON, {
+    credentials: 'include'
+  })
+  .then((response) => response.json())
+  .then((data) => {
+    Object.entries(discord).forEach(([key, val]) => {
+      val(data[key] || '');
+    });
+  })
+  .catch((e) => console.error('Discord login check error'));
+
+module.exports = {
+  discord,
+}
+},{}],101:[function(require,module,exports){
 /*
 Initializing anything we need from the game files
 */
@@ -11639,66 +11663,130 @@ Settings.getSetting('theme').observableValue.subscribe(theme => {
   document.body.className = `no-select ${theme}`;
 });
 
-},{}],101:[function(require,module,exports){
+},{}],102:[function(require,module,exports){
 // import our version etc
 const package = require('../pokeclicker/package.json');
 
 window.Wiki = {
   package,
+  ...require('./notifications'),
   ...require('./datatables'),
   ...require('./game'),
   ...require('./typeahead'),
   ...require('./markdown-renderer'),
+  ...require('./discord'),
   pokemon: require('./pages/pokemon'),
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":98,"./datatables":99,"./game":100,"./markdown-renderer":108,"./navigation":109,"./pages/pokemon":110,"./typeahead":111}],102:[function(require,module,exports){
+},{"../pokeclicker/package.json":98,"./datatables":99,"./discord":100,"./game":101,"./markdown-renderer":109,"./navigation":110,"./notifications":111,"./pages/pokemon":112,"./typeahead":113}],103:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
+
+const saveChanges = (editor, filename, btn) => {
+  const content = editor.value().split('\n').map(l => l.trimEnd()).join('\n');
+  const originalContent = editor._rendered.value.split('\n').map(l => l.trimEnd()).join('\n');
+
+  // If nothing has changed, just return
+  if (content == originalContent) {
+    Wiki.alert('No file changes detected..', 'warning', 3e3);
+    btn.classList.remove('disabled');
+    btn.innerText = 'Save Changes';
+    return;
+  }
+
+  // Update the file contents
+  (async () => {
+    const formData = new FormData();
+    formData.append('path', filename);
+    formData.append('content', content);
+    const rawResponse = await fetch('https://discord.pokeclicker.com/github', {
+      method: 'POST',
+      credentials: 'include',
+      body: formData,
+    });
+
+    // Check if the request was successfull
+    if (rawResponse.status != 200) {
+      Wiki.alert('Something went wrong trying to update this file, please try again later or check the console for more info.', 'danger', 1e4);
+      btn.classList.remove('disabled');
+      btn.innerText = 'Save Changes';
+      return;
+    }
+
+    // Get our response as json
+    const response = await rawResponse.json();
+
+    // If there was any error messages
+    if (response.error_msg) {
+      console.error(response);
+      Wiki.alert('Something went wrong trying to update this file, please try again later or check the console for more info.', 'danger', 1e4);
+      btn.classList.remove('disabled');
+      btn.innerText = 'Save Changes';
+      return;
+    }
+  
+    Wiki.alert('Successfully submitted your changes, please wait a few minutes for these changes to take affect', 'success', 2e4);
+
+    // Take user back to non editor page
+    window.location.hash = window.location.hash.replace(/\/+edit$/, '');
+  })();
+}
 
 const createMarkDownEditor =  (elementID, filename) => {
   // No element specified
   if (!elementID || !filename) return;
 
-  return new SimpleMDE({
-    element: document.getElementById(elementID),
+  const element = document.getElementById(elementID);
+
+  let mde;
+  mde = new SimpleMDE({
+    element,
     previewRender: (input) => md.render(input),
     placeholder: "Type here...",
-    toolbarTips: false,
-    hideIcons: ['guide'],
-    insertTexts: {
-      image: ['[[File:', '|50px]]'],
-      link: [`[[`, ']]'],
-    },
-    showIcons: [
+    toolbar: [
       'bold', 'italic', 'heading', '|',
       'quote', 'unordered-list', 'ordered-list', '|',
       'link', 'image', 'table', 'horizontal-rule', '|',
       'preview', 'side-by-side', 'fullscreen',
     ],
+    hideIcons: ['guide'],
+    insertTexts: {
+      image: ['[[File:', '|50px]]'],
+      link: [`[[`, ']]'],
+    },
     status: [
       'lines', 'words',
       {
         className: 'filename',
-        defaultValue: function(el) {
-          el.innerHTML = `Filename: <code>"${filename}"</code>`;
+        defaultValue: (el) => {
+          el.innerHTML = `Filename: <a class="text-decoration-none" target="_BLANK" href="https://github.com/pokeclicker/pokeclicker-wiki/tree/main/${filename}"><code>"${filename}"</code></a>`;
         },
       },
       {
         className: 'github',
-        defaultValue: function(el) {
-          el.innerHTML = `<a target="_BLANK" href="https://github.com/pokeclicker/pokeclicker-wiki/edit/main/${filename}">Edit on GitHub</a>`;
+        defaultValue: (el) => {
+          const btn = document.createElement('div');
+          btn.classList.add('btn', 'btn-success', 'btn-sm');
+          btn.innerText = 'Save Changes';
+          btn.onclick = () => {
+            btn.classList.add('disabled');
+            btn.innerHTML = `<div class="spinner-border spinner-border-sm text-bg-success" role="status"></div> Saving...`;
+            saveChanges(mde, filename, btn);
+          }
+          el.append(btn);
         },
       }
     ]
   });
+
+  return mde;
 }
 
 module.exports = {
   createMarkDownEditor,
 }
 
-},{"./markdown-renderer":108}],103:[function(require,module,exports){
+},{"./markdown-renderer":109}],104:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11714,7 +11802,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":27,"markdown-it-regexp":24}],104:[function(require,module,exports){
+},{"markdown-it":27,"markdown-it-regexp":24}],105:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11730,7 +11818,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":27,"markdown-it-regexp":24}],105:[function(require,module,exports){
+},{"markdown-it":27,"markdown-it-regexp":24}],106:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11748,7 +11836,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":27,"markdown-it-regexp":24}],106:[function(require,module,exports){
+},{"markdown-it":27,"markdown-it-regexp":24}],107:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11764,7 +11852,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":27,"markdown-it-regexp":24}],107:[function(require,module,exports){
+},{"markdown-it":27,"markdown-it-regexp":24}],108:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11780,7 +11868,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":27,"markdown-it-regexp":24}],108:[function(require,module,exports){
+},{"markdown-it":27,"markdown-it-regexp":24}],109:[function(require,module,exports){
 const markdownit      = require('markdown-it');
 
 // Setup our markdown editor
@@ -11809,7 +11897,7 @@ module.exports = {
   md,
 }
 
-},{"./markdown-plugins/hidden-comments.js":103,"./markdown-plugins/id-element.js":104,"./markdown-plugins/image-size.js":105,"./markdown-plugins/wiki-links-badge.js":106,"./markdown-plugins/wiki-links.js":107,"markdown-it":27,"markdown-it-container":21,"markdown-it-multimd-table":22}],109:[function(require,module,exports){
+},{"./markdown-plugins/hidden-comments.js":104,"./markdown-plugins/id-element.js":105,"./markdown-plugins/image-size.js":106,"./markdown-plugins/wiki-links-badge.js":107,"./markdown-plugins/wiki-links.js":108,"markdown-it":27,"markdown-it-container":21,"markdown-it-multimd-table":22}],110:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 const { applyDatatables } = require('./datatables');
 const { createMarkDownEditor } = require('./markdown-editor');
@@ -11885,7 +11973,7 @@ onhashchange = (event) => {
 
   const pageElementCustom = $('#wiki-page-custom-content');
   pageElementCustom.html('');
-  let customContentFileName = `./data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`.replace(/\/+/g, '/');
+  let customContentFileName = `data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`.replace(/\/+/g, '/');
   $.get(`data/${cleanFileName(pageType())}/${cleanFileName(pageName() || 'overview')}.md`, (data) => {
     if (other == 'edit') {
       pageElementCustom.html(`<textarea id="custom-edit">${data}</textarea>`);
@@ -11963,7 +12051,30 @@ module.exports = {
     gotoPage,
 };
 
-},{"./datatables":99,"./markdown-editor":102,"./markdown-renderer":108}],110:[function(require,module,exports){
+},{"./datatables":99,"./markdown-editor":103,"./markdown-renderer":109}],111:[function(require,module,exports){
+const alert = (message, type = 'primary', timeout = 5e3) => {
+  const wrapper = document.createElement('div');
+  wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
+  wrapper.id = `alert-${Math.random().toString(36).substr(2, 9)}`;
+  wrapper.innerText = message;
+  wrapper.innerHTML += `<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`
+  document.getElementById('toaster').append(wrapper);
+  setTimeout(() => {
+    // Remove our element after the timeout
+    try {
+      const alertElement = bootstrap.Alert.getOrCreateInstance(`#${wrapper.id}`);
+      alertElement.close();
+    } catch(e) {
+      console.error('error removing alert', e);
+    }
+  }, timeout);
+}
+
+module.exports = {
+  alert,
+};
+
+},{}],112:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -12022,7 +12133,7 @@ module.exports = {
     getEfficiency,
     getBestVitamins,
 }
-},{}],111:[function(require,module,exports){
+},{}],113:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [
@@ -12214,4 +12325,4 @@ module.exports = {
   searchOptions,
 };
 
-},{"./navigation":109}]},{},[101]);
+},{"./navigation":110}]},{},[102]);
