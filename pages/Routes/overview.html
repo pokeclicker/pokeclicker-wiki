@@ -16,7 +16,7 @@
                 <td data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name, attr: { 'data-order': $data.subRegion ?? 0 }"></td>
                 <td data-bind="text: $data.routeName, attr: { 'data-order': $index() }"></td>
                 <td data-bind="text: new Set(Object.values($data.pokemon).flat().map(p => typeof p != 'string' ? p.pokemon.flat() : p).flat()).size"></td>
-                <td>TODO</td>
+                <td data-bind="text: `❤️ ${Math.round(PokemonFactory.routeHealth($data.number, $data.region)).toLocaleString()}`, attr: { 'data-order': PokemonFactory.routeHealth($data.number, $data.region) }"></td>
             </tr>
         </tbody>
     </table>
