@@ -80,7 +80,11 @@ const createMarkDownEditor =  (elementID, filename) => {
           const btn = document.createElement('div');
           btn.classList.add('btn', 'btn-success', 'btn-sm');
           btn.innerText = 'Save Changes';
-          btn.onclick = () => saveChanges(mde, filename);
+          btn.onclick = () => {
+            btn.classList.add('disabled');
+            btn.innerHTML = `<div class="spinner-border spinner-border-sm text-bg-success" role="status"></div> Saving...`;
+            saveChanges(mde, filename);
+          }
           el.append(btn);
         },
       }
