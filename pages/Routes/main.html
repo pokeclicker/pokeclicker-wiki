@@ -1,0 +1,42 @@
+<!-- ko ifnot: Routes.regionRoutes.find(r => r.routeName == Wiki.pageName()) -->
+<h2>Route not found...</h2>
+<!-- /ko -->
+<div data-bind="with: Routes.regionRoutes.find(r => r.routeName == Wiki.pageName())">
+  <div>
+    <h3>Region</h3>
+    <p data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region])"></p>
+  </div>
+  <div>
+    <h3>Sub Region</h3>
+    <p data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name"></p>
+  </div>
+  <div>
+      <h3>Base HP:</h3>
+      <p data-bind="text: Math.round(PokemonFactory.routeHealth($data.number, $data.region)).toLocaleString()"></p>
+  </div>
+  <div>
+    <h3>Encounters</h3>
+    <!-- ko foreach: Object.entries($data.pokemon) -->
+      <!-- ko if: $data[1].length -->
+      <h4 data-bind="text: $data[0]"></h4>
+      <div data-bind="foreach: $data[1]">
+        <!-- ko if: typeof $data == 'string' -->
+          <a class="badge text-bg-secondary" href="#!" data-bind="text: $data, attr: { href: `#!Pokemon/${$data}` }"></a>
+        <!-- /ko -->
+        <!-- ko ifnot: typeof $data == 'string' -->
+            <!-- ko foreach: $data.pokemon -->
+              <a class="badge text-bg-secondary" href="#!" data-bind="text: `${$data} 🔒`, attr: { href: `#!Pokemon/${$data}` },
+              tooltip: {
+                  title: $parent.req.hint(),
+                  html: false,
+                  placement: 'bottom',
+                  trigger: 'hover'
+              }"></a>
+            <!-- /ko -->
+        <!-- /ko -->
+      </div>
+      <br/>
+      <!-- /ko -->
+    <!-- /ko -->
+  </div>
+</div>
