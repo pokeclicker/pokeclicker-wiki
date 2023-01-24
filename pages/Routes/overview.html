@@ -6,6 +6,7 @@
     <table class="table table-hover table-striped table-bordered" data-order="[]">
         <thead class="thead-dark">
             <tr>
+                <th>Sub Region</th>
                 <th>Route Name</th>
                 <th>Encounters</th>
                 <th>Base HP</th>
@@ -13,6 +14,7 @@
         </thead>
         <tbody data-bind="foreach: $data">
             <tr class="text-nowrap clickable" data-bind="click: () => { Wiki.gotoPage('Routes', $data.routeName); return false; }">
+                <td data-bind="text: SubRegions.list[$parents[1]][$data.subRegion ?? 0].name"></td>
                 <td data-bind="text: $data.routeName"></td>
                 <td data-bind="text: new Set(Object.values($data.pokemon).flat().map(p => typeof p != 'string' ? p.pokemon.flat() : p).flat()).size"></td>
                 <td>TODO</td>
