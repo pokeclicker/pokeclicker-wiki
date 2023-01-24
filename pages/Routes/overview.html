@@ -1,0 +1,20 @@
+<!-- ko foreach: GameHelper.enumNumbers(GameConstants.Region).filter(r => r >= 0) -->
+<div class="table-responsive">
+    <table class="table table-hover table-striped table-bordered" data-order="[]">
+        <thead class="thead-dark">
+            <tr>
+                <th>Route Name</th>
+                <th>Encounters</th>
+                <th>Base HP</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: Routes.getRoutesByRegion($data)">
+            <tr class="text-nowrap clickable" data-bind="click: () => { Wiki.gotoPage('Routes', $data.routeName); return false; }">
+                <td data-bind="text: $data.routeName"></td>
+                <td data-bind="text: new Set(Object.values($data.pokemon).flat().map(p => typeof p != 'string' ? p.pokemon.flat() : p).flat()).size"></td>
+                <td>TODO</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- /ko -->
