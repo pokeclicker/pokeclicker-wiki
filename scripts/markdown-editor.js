@@ -1,12 +1,14 @@
 const { md } = require('./markdown-renderer');
 
-const saveChanges = (editor, filename) => {
+const saveChanges = (editor, filename, btn) => {
   const content = editor.value().split('\n').map(l => l.trimEnd()).join('\n');
   const originalContent = editor._rendered.value.split('\n').map(l => l.trimEnd()).join('\n');
 
   // If nothing has changed, just return
   if (content == originalContent) {
     Wiki.alert('No file changes detected..', 'warning', 3e3);
+    btn.classList.remove('disabled');
+    btn.innerText = 'Save Changes';
     return;
   }
 
@@ -24,6 +26,8 @@ const saveChanges = (editor, filename) => {
     // Check if the request was successfull
     if (rawResponse.status != 200) {
       Wiki.alert('Something went wrong trying to update this file, please try again later or check the console for more info.', 'danger', 1e4);
+      btn.classList.remove('disabled');
+      btn.innerText = 'Save Changes';
       return;
     }
 
@@ -34,6 +38,8 @@ const saveChanges = (editor, filename) => {
     if (response.error_msg) {
       console.error(response);
       Wiki.alert('Something went wrong trying to update this file, please try again later or check the console for more info.', 'danger', 1e4);
+      btn.classList.remove('disabled');
+      btn.innerText = 'Save Changes';
       return;
     }
   
@@ -83,7 +89,7 @@ const createMarkDownEditor =  (elementID, filename) => {
           btn.onclick = () => {
             btn.classList.add('disabled');
             btn.innerHTML = `<div class="spinner-border spinner-border-sm text-bg-success" role="status"></div> Saving...`;
-            saveChanges(mde, filename);
+            saveChanges(mde, filename, btn);
           }
           el.append(btn);
         },
