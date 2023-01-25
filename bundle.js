@@ -1774,7 +1774,786 @@ module.exports = function (opts) {
   return re;
 };
 
-},{"uc.micro/categories/Cc/regex":88,"uc.micro/categories/P/regex":90,"uc.micro/categories/Z/regex":91,"uc.micro/properties/Any/regex":93}],21:[function(require,module,exports){
+},{"uc.micro/categories/Cc/regex":91,"uc.micro/categories/P/regex":93,"uc.micro/categories/Z/regex":94,"uc.micro/properties/Any/regex":96}],21:[function(require,module,exports){
+'use strict';
+
+const patternsConfig = require('./patterns.js');
+
+const defaultOptions = {
+  leftDelimiter: '{',
+  rightDelimiter: '}',
+  allowedAttributes: []
+};
+
+module.exports = function attributes(md, options_) {
+  let options = Object.assign({}, defaultOptions);
+  options = Object.assign(options, options_);
+
+  const patterns = patternsConfig(options);
+
+  function curlyAttrs(state) {
+    const tokens = state.tokens;
+
+    for (let i = 0; i < tokens.length; i++) {
+      for (let p = 0; p < patterns.length; p++) {
+        const pattern = patterns[p];
+        let j = null; // position of child with offset 0
+        const match = pattern.tests.every(t => {
+          const res = test(tokens, i, t);
+          if (res.j !== null) { j = res.j; }
+          return res.match;
+        });
+        if (match) {
+          pattern.transform(tokens, i, j);
+          if (pattern.name === 'inline attributes' || pattern.name === 'inline nesting 0') {
+            // retry, may be several inline attributes
+            p--;
+          }
+        }
+      }
+    }
+  }
+
+  md.core.ruler.before('linkify', 'curly_attributes', curlyAttrs);
+};
+
+/**
+ * Test if t matches token stream.
+ *
+ * @param {array} tokens
+ * @param {number} i
+ * @param {object} t Test to match.
+ * @return {object} { match: true|false, j: null|number }
+ */
+function test(tokens, i, t) {
+  const res = {
+    match: false,
+    j: null  // position of child
+  };
+
+  const ii = t.shift !== undefined
+    ? i + t.shift
+    : t.position;
+
+  if (t.shift !== undefined && ii < 0) {
+    // we should never shift to negative indexes (rolling around to back of array)
+    return res;
+  }
+
+  const token = get(tokens, ii);  // supports negative ii
+
+
+  if (token === undefined) { return res; }
+
+  for (const key of Object.keys(t)) {
+    if (key === 'shift' || key === 'position') { continue; }
+
+    if (token[key] === undefined) { return res; }
+
+    if (key === 'children' && isArrayOfObjects(t.children)) {
+      if (token.children.length === 0) {
+        return res;
+      }
+      let match;
+      const childTests = t.children;
+      const children = token.children;
+      if (childTests.every(tt => tt.position !== undefined)) {
+        // positions instead of shifts, do not loop all children
+        match = childTests.every(tt => test(children, tt.position, tt).match);
+        if (match) {
+          // we may need position of child in transform
+          const j = last(childTests).position;
+          res.j = j >= 0 ? j : children.length + j;
+        }
+      } else {
+        for (let j = 0; j < children.length; j++) {
+          match = childTests.every(tt => test(children, j, tt).match);
+          if (match) {
+            res.j = j;
+            // all tests true, continue with next key of pattern t
+            break;
+          }
+        }
+      }
+
+      if (match === false) { return res; }
+
+      continue;
+    }
+
+    switch (typeof t[key]) {
+    case 'boolean':
+    case 'number':
+    case 'string':
+      if (token[key] !== t[key]) { return res; }
+      break;
+    case 'function':
+      if (!t[key](token[key])) { return res; }
+      break;
+    case 'object':
+      if (isArrayOfFunctions(t[key])) {
+        const r = t[key].every(tt => tt(token[key]));
+        if (r === false) { return res; }
+        break;
+      }
+    // fall through for objects !== arrays of functions
+    default:
+      throw new Error(`Unknown type of pattern test (key: ${key}). Test should be of type boolean, number, string, function or array of functions.`);
+    }
+  }
+
+  // no tests returned false -> all tests returns true
+  res.match = true;
+  return res;
+}
+
+function isArrayOfObjects(arr) {
+  return Array.isArray(arr) && arr.length && arr.every(i => typeof i === 'object');
+}
+
+function isArrayOfFunctions(arr) {
+  return Array.isArray(arr) && arr.length && arr.every(i => typeof i === 'function');
+}
+
+/**
+ * Get n item of array. Supports negative n, where -1 is last
+ * element in array.
+ * @param {array} arr
+ * @param {number} n
+ */
+function get(arr, n) {
+  return n >= 0 ? arr[n] : arr[arr.length + n];
+}
+
+// get last element of array, safe - returns {} if not found
+function last(arr) {
+  return arr.slice(-1)[0] || {};
+}
+
+},{"./patterns.js":22}],22:[function(require,module,exports){
+'use strict';
+/**
+ * If a pattern matches the token stream,
+ * then run transform.
+ */
+
+const utils = require('./utils.js');
+
+module.exports = options => {
+  const __hr = new RegExp('^ {0,3}[-*_]{3,} ?'
+                          + utils.escapeRegExp(options.leftDelimiter)
+                          + '[^' + utils.escapeRegExp(options.rightDelimiter) + ']');
+
+  return ([
+    {
+      /**
+       * ```python {.cls}
+       * for i in range(10):
+       *     print(i)
+       * ```
+       */
+      name: 'fenced code blocks',
+      tests: [
+        {
+          shift: 0,
+          block: true,
+          info: utils.hasDelimiters('end', options)
+        }
+      ],
+      transform: (tokens, i) => {
+        const token = tokens[i];
+        const start = token.info.lastIndexOf(options.leftDelimiter);
+        const attrs = utils.getAttrs(token.info, start, options);
+        utils.addAttrs(attrs, token);
+        token.info = utils.removeDelimiter(token.info, options);
+      }
+    }, {
+      /**
+       * bla `click()`{.c} ![](img.png){.d}
+       *
+       * differs from 'inline attributes' as it does
+       * not have a closing tag (nesting: -1)
+       */
+      name: 'inline nesting 0',
+      tests: [
+        {
+          shift: 0,
+          type: 'inline',
+          children: [
+            {
+              shift: -1,
+              type: (str) => str === 'image' || str === 'code_inline'
+            }, {
+              shift: 0,
+              type: 'text',
+              content: utils.hasDelimiters('start', options)
+            }
+          ]
+        }
+      ],
+      transform: (tokens, i, j) => {
+        const token = tokens[i].children[j];
+        const endChar = token.content.indexOf(options.rightDelimiter);
+        const attrToken = tokens[i].children[j - 1];
+        const attrs = utils.getAttrs(token.content, 0, options);
+        utils.addAttrs(attrs, attrToken);
+        if (token.content.length === (endChar + options.rightDelimiter.length)) {
+          tokens[i].children.splice(j, 1);
+        } else {
+          token.content = token.content.slice(endChar + options.rightDelimiter.length);
+        }
+      }
+    }, {
+      /**
+       * | h1 |
+       * | -- |
+       * | c1 |
+       *
+       * {.c}
+       */
+      name: 'tables',
+      tests: [
+        {
+          // let this token be i, such that for-loop continues at
+          // next token after tokens.splice
+          shift: 0,
+          type: 'table_close'
+        }, {
+          shift: 1,
+          type: 'paragraph_open'
+        }, {
+          shift: 2,
+          type: 'inline',
+          content: utils.hasDelimiters('only', options)
+        }
+      ],
+      transform: (tokens, i) => {
+        const token = tokens[i + 2];
+        const tableOpen = utils.getMatchingOpeningToken(tokens, i);
+        const attrs = utils.getAttrs(token.content, 0, options);
+        // add attributes
+        utils.addAttrs(attrs, tableOpen);
+        // remove <p>{.c}</p>
+        tokens.splice(i + 1, 3);
+      }
+    }, {
+      /**
+       * *emphasis*{.with attrs=1}
+       */
+      name: 'inline attributes',
+      tests: [
+        {
+          shift: 0,
+          type: 'inline',
+          children: [
+            {
+              shift: -1,
+              nesting: -1  // closing inline tag, </em>{.a}
+            }, {
+              shift: 0,
+              type: 'text',
+              content: utils.hasDelimiters('start', options)
+            }
+          ]
+        }
+      ],
+      transform: (tokens, i, j) => {
+        const token = tokens[i].children[j];
+        const content = token.content;
+        const attrs = utils.getAttrs(content, 0, options);
+        const openingToken = utils.getMatchingOpeningToken(tokens[i].children, j - 1);
+        utils.addAttrs(attrs, openingToken);
+        token.content = content.slice(content.indexOf(options.rightDelimiter) + options.rightDelimiter.length);
+      }
+    }, {
+      /**
+       * - item
+       * {.a}
+       */
+      name: 'list softbreak',
+      tests: [
+        {
+          shift: -2,
+          type: 'list_item_open'
+        }, {
+          shift: 0,
+          type: 'inline',
+          children: [
+            {
+              position: -2,
+              type: 'softbreak'
+            }, {
+              position: -1,
+              type: 'text',
+              content: utils.hasDelimiters('only', options)
+            }
+          ]
+        }
+      ],
+      transform: (tokens, i, j) => {
+        const token = tokens[i].children[j];
+        const content = token.content;
+        const attrs = utils.getAttrs(content, 0, options);
+        let ii = i - 2;
+        while (tokens[ii - 1] &&
+          tokens[ii - 1].type !== 'ordered_list_open' &&
+          tokens[ii - 1].type !== 'bullet_list_open') { ii--; }
+        utils.addAttrs(attrs, tokens[ii - 1]);
+        tokens[i].children = tokens[i].children.slice(0, -2);
+      }
+    }, {
+      /**
+       * - nested list
+       *   - with double \n
+       *   {.a} <-- apply to nested ul
+       *
+       * {.b} <-- apply to root <ul>
+       */
+      name: 'list double softbreak',
+      tests: [
+        {
+          // let this token be i = 0 so that we can erase
+          // the <p>{.a}</p> tokens below
+          shift: 0,
+          type: (str) =>
+            str === 'bullet_list_close' ||
+            str === 'ordered_list_close'
+        }, {
+          shift: 1,
+          type: 'paragraph_open'
+        }, {
+          shift: 2,
+          type: 'inline',
+          content: utils.hasDelimiters('only', options),
+          children: (arr) => arr.length === 1
+        }, {
+          shift: 3,
+          type: 'paragraph_close'
+        }
+      ],
+      transform: (tokens, i) => {
+        const token = tokens[i + 2];
+        const content = token.content;
+        const attrs = utils.getAttrs(content, 0, options);
+        const openingToken = utils.getMatchingOpeningToken(tokens, i);
+        utils.addAttrs(attrs, openingToken);
+        tokens.splice(i + 1, 3);
+      }
+    }, {
+      /**
+       * - end of {.list-item}
+       */
+      name: 'list item end',
+      tests: [
+        {
+          shift: -2,
+          type: 'list_item_open'
+        }, {
+          shift: 0,
+          type: 'inline',
+          children: [
+            {
+              position: -1,
+              type: 'text',
+              content: utils.hasDelimiters('end', options)
+            }
+          ]
+        }
+      ],
+      transform: (tokens, i, j) => {
+        const token = tokens[i].children[j];
+        const content = token.content;
+        const attrs = utils.getAttrs(content, content.lastIndexOf(options.leftDelimiter), options);
+        utils.addAttrs(attrs, tokens[i - 2]);
+        const trimmed = content.slice(0, content.lastIndexOf(options.leftDelimiter));
+        token.content = last(trimmed) !== ' ' ?
+          trimmed : trimmed.slice(0, -1);
+      }
+    }, {
+      /**
+       * something with softbreak
+       * {.cls}
+       */
+      name: '\n{.a} softbreak then curly in start',
+      tests: [
+        {
+          shift: 0,
+          type: 'inline',
+          children: [
+            {
+              position: -2,
+              type: 'softbreak'
+            }, {
+              position: -1,
+              type: 'text',
+              content: utils.hasDelimiters('only', options)
+            }
+          ]
+        }
+      ],
+      transform: (tokens, i, j) => {
+        const token = tokens[i].children[j];
+        const attrs = utils.getAttrs(token.content, 0, options);
+        // find last closing tag
+        let ii = i + 1;
+        while (tokens[ii + 1] && tokens[ii + 1].nesting === -1) { ii++; }
+        const openingToken = utils.getMatchingOpeningToken(tokens, ii);
+        utils.addAttrs(attrs, openingToken);
+        tokens[i].children = tokens[i].children.slice(0, -2);
+      }
+    }, {
+      /**
+       * horizontal rule --- {#id}
+       */
+      name: 'horizontal rule',
+      tests: [
+        {
+          shift: 0,
+          type: 'paragraph_open'
+        },
+        {
+          shift: 1,
+          type: 'inline',
+          children: (arr) => arr.length === 1,
+          content: (str) => str.match(__hr) !== null,
+        },
+        {
+          shift: 2,
+          type: 'paragraph_close'
+        }
+      ],
+      transform: (tokens, i) => {
+        const token = tokens[i];
+        token.type = 'hr';
+        token.tag = 'hr';
+        token.nesting = 0;
+        const content = tokens[i + 1].content;
+        const start = content.lastIndexOf(options.leftDelimiter);
+        const attrs = utils.getAttrs(content, start, options);
+        utils.addAttrs(attrs, token);
+        token.markup = content;
+        tokens.splice(i + 1, 2);
+      }
+    }, {
+      /**
+       * end of {.block}
+       */
+      name: 'end of block',
+      tests: [
+        {
+          shift: 0,
+          type: 'inline',
+          children: [
+            {
+              position: -1,
+              content: utils.hasDelimiters('end', options),
+              type: (t) => t !== 'code_inline' && t !== 'math_inline'
+            }
+          ]
+        }
+      ],
+      transform: (tokens, i, j) => {
+        const token = tokens[i].children[j];
+        const content = token.content;
+        const attrs = utils.getAttrs(content, content.lastIndexOf(options.leftDelimiter), options);
+        let ii = i + 1;
+        while (tokens[ii + 1] && tokens[ii + 1].nesting === -1) { ii++; }
+        const openingToken = utils.getMatchingOpeningToken(tokens, ii);
+        utils.addAttrs(attrs, openingToken);
+        const trimmed = content.slice(0, content.lastIndexOf(options.leftDelimiter));
+        token.content = last(trimmed) !== ' ' ?
+          trimmed : trimmed.slice(0, -1);
+      }
+    }
+  ]);
+};
+
+// get last element of array or string
+function last(arr) {
+  return arr.slice(-1)[0];
+}
+
+},{"./utils.js":23}],23:[function(require,module,exports){
+/**
+ * parse {.class #id key=val} strings
+ * @param {string} str: string to parse
+ * @param {int} start: where to start parsing (including {)
+ * @returns {2d array}: [['key', 'val'], ['class', 'red']]
+ */
+exports.getAttrs = function (str, start, options) {
+  // not tab, line feed, form feed, space, solidus, greater than sign, quotation mark, apostrophe and equals sign
+  const allowedKeyChars = /[^\t\n\f />"'=]/;
+  const pairSeparator = ' ';
+  const keySeparator = '=';
+  const classChar = '.';
+  const idChar = '#';
+
+  const attrs = [];
+  let key = '';
+  let value = '';
+  let parsingKey = true;
+  let valueInsideQuotes = false;
+
+  // read inside {}
+  // start + left delimiter length to avoid beginning {
+  // breaks when } is found or end of string
+  for (let i = start + options.leftDelimiter.length; i < str.length; i++) {
+    if (str.slice(i, i + options.rightDelimiter.length) === options.rightDelimiter) {
+      if (key !== '') { attrs.push([key, value]); }
+      break;
+    }
+    const char_ = str.charAt(i);
+
+    // switch to reading value if equal sign
+    if (char_ === keySeparator && parsingKey) {
+      parsingKey = false;
+      continue;
+    }
+
+    // {.class} {..css-module}
+    if (char_ === classChar && key === '') {
+      if (str.charAt(i + 1) === classChar) {
+        key = 'css-module';
+        i += 1;
+      } else {
+        key = 'class';
+      }
+      parsingKey = false;
+      continue;
+    }
+
+    // {#id}
+    if (char_ === idChar && key === '') {
+      key = 'id';
+      parsingKey = false;
+      continue;
+    }
+
+    // {value="inside quotes"}
+    if (char_ === '"' && value === '' && !valueInsideQuotes) {
+      valueInsideQuotes = true;
+      continue;
+    }
+    if (char_ === '"' && valueInsideQuotes) {
+      valueInsideQuotes = false;
+      continue;
+    }
+
+    // read next key/value pair
+    if ((char_ === pairSeparator && !valueInsideQuotes)) {
+      if (key === '') {
+        // beginning or ending space: { .red } vs {.red}
+        continue;
+      }
+      attrs.push([key, value]);
+      key = '';
+      value = '';
+      parsingKey = true;
+      continue;
+    }
+
+    // continue if character not allowed
+    if (parsingKey && char_.search(allowedKeyChars) === -1) {
+      continue;
+    }
+
+    // no other conditions met; append to key/value
+    if (parsingKey) {
+      key += char_;
+      continue;
+    }
+    value += char_;
+  }
+
+  if (options.allowedAttributes && options.allowedAttributes.length) {
+    const allowedAttributes = options.allowedAttributes;
+
+    return attrs.filter(function (attrPair) {
+      const attr = attrPair[0];
+
+      function isAllowedAttribute (allowedAttribute) {
+        return (attr === allowedAttribute
+          || (allowedAttribute instanceof RegExp && allowedAttribute.test(attr))
+        );
+      }
+
+      return allowedAttributes.some(isAllowedAttribute);
+    });
+
+  }
+  return attrs;
+
+};
+
+/**
+ * add attributes from [['key', 'val']] list
+ * @param {array} attrs: [['key', 'val']]
+ * @param {token} token: which token to add attributes
+ * @returns token
+ */
+exports.addAttrs = function (attrs, token) {
+  for (let j = 0, l = attrs.length; j < l; ++j) {
+    const key = attrs[j][0];
+    if (key === 'class') {
+      token.attrJoin('class', attrs[j][1]);
+    } else if (key === 'css-module') {
+      token.attrJoin('css-module', attrs[j][1]);
+    } else {
+      token.attrPush(attrs[j]);
+    }
+  }
+  return token;
+};
+
+/**
+ * Does string have properly formatted curly?
+ *
+ * start: '{.a} asdf'
+ * end: 'asdf {.a}'
+ * only: '{.a}'
+ *
+ * @param {string} where to expect {} curly. start, end or only.
+ * @return {function(string)} Function which testes if string has curly.
+ */
+exports.hasDelimiters = function (where, options) {
+
+  if (!where) {
+    throw new Error('Parameter `where` not passed. Should be "start", "end" or "only".');
+  }
+
+  /**
+   * @param {string} str
+   * @return {boolean}
+   */
+  return function (str) {
+    // we need minimum three chars, for example {b}
+    const minCurlyLength = options.leftDelimiter.length + 1 + options.rightDelimiter.length;
+    if (!str || typeof str !== 'string' || str.length < minCurlyLength) {
+      return false;
+    }
+
+    function validCurlyLength (curly) {
+      const isClass = curly.charAt(options.leftDelimiter.length) === '.';
+      const isId = curly.charAt(options.leftDelimiter.length) === '#';
+      return (isClass || isId)
+        ? curly.length >= (minCurlyLength + 1)
+        : curly.length >= minCurlyLength;
+    }
+
+    let start, end, slice, nextChar;
+    const rightDelimiterMinimumShift = minCurlyLength - options.rightDelimiter.length;
+    switch (where) {
+    case 'start':
+      // first char should be {, } found in char 2 or more
+      slice = str.slice(0, options.leftDelimiter.length);
+      start = slice === options.leftDelimiter ? 0 : -1;
+      end = start === -1 ? -1 : str.indexOf(options.rightDelimiter, rightDelimiterMinimumShift);
+      // check if next character is not one of the delimiters
+      nextChar = str.charAt(end + options.rightDelimiter.length);
+      if (nextChar && options.rightDelimiter.indexOf(nextChar) !== -1) {
+        end = -1;
+      }
+      break;
+
+    case 'end':
+      // last char should be }
+      start = str.lastIndexOf(options.leftDelimiter);
+      end = start === -1 ? -1 : str.indexOf(options.rightDelimiter, start + rightDelimiterMinimumShift);
+      end = end === str.length - options.rightDelimiter.length ? end : -1;
+      break;
+
+    case 'only':
+      // '{.a}'
+      slice = str.slice(0, options.leftDelimiter.length);
+      start = slice === options.leftDelimiter ? 0 : -1;
+      slice = str.slice(str.length - options.rightDelimiter.length);
+      end = slice === options.rightDelimiter ? str.length - options.rightDelimiter.length : -1;
+      break;
+
+    default:
+      throw new Error(`Unexpected case ${where}, expected 'start', 'end' or 'only'`);
+    }
+
+    return start !== -1 && end !== -1 && validCurlyLength(str.substring(start, end + options.rightDelimiter.length));
+  };
+};
+
+/**
+ * Removes last curly from string.
+ */
+exports.removeDelimiter = function (str, options) {
+  const start = escapeRegExp(options.leftDelimiter);
+  const end = escapeRegExp(options.rightDelimiter);
+
+  const curly = new RegExp(
+    '[ \\n]?' + start + '[^' + start + end + ']+' + end + '$'
+  );
+  const pos = str.search(curly);
+
+  return pos !== -1 ? str.slice(0, pos) : str;
+};
+
+/**
+ * Escapes special characters in string s such that the string
+ * can be used in `new RegExp`. For example "[" becomes "\\[".
+ *
+ * @param {string} s Regex string.
+ * @return {string} Escaped string.
+ */
+function escapeRegExp (s) {
+  return s.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
+}
+exports.escapeRegExp = escapeRegExp;
+
+/**
+ * find corresponding opening block
+ */
+exports.getMatchingOpeningToken = function (tokens, i) {
+  if (tokens[i].type === 'softbreak') {
+    return false;
+  }
+  // non closing blocks, example img
+  if (tokens[i].nesting === 0) {
+    return tokens[i];
+  }
+
+  const level = tokens[i].level;
+  const type = tokens[i].type.replace('_close', '_open');
+
+  for (; i >= 0; --i) {
+    if (tokens[i].type === type && tokens[i].level === level) {
+      return tokens[i];
+    }
+  }
+
+  return false;
+};
+
+
+/**
+ * from https://github.com/markdown-it/markdown-it/blob/master/lib/common/utils.js
+ */
+const HTML_ESCAPE_TEST_RE = /[&<>"]/;
+const HTML_ESCAPE_REPLACE_RE = /[&<>"]/g;
+const HTML_REPLACEMENTS = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;'
+};
+
+function replaceUnsafeChar(ch) {
+  return HTML_REPLACEMENTS[ch];
+}
+
+exports.escapeHtml = function (str) {
+  if (HTML_ESCAPE_TEST_RE.test(str)) {
+    return str.replace(HTML_ESCAPE_REPLACE_RE, replaceUnsafeChar);
+  }
+  return str;
+};
+
+},{}],24:[function(require,module,exports){
 // Process block-level custom containers
 //
 'use strict';
@@ -1921,7 +2700,7 @@ module.exports = function container_plugin(md, name, options) {
   md.renderer.rules['container_' + name + '_close'] = render;
 };
 
-},{}],22:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 'use strict';
 var DFA = require('./lib/dfa.js');
 
@@ -2299,7 +3078,7 @@ module.exports = function multimd_table_plugin(md, options) {
 
 /* vim: set ts=2 sw=2 et: */
 
-},{"./lib/dfa.js":23}],23:[function(require,module,exports){
+},{"./lib/dfa.js":26}],26:[function(require,module,exports){
 'use strict';
 
 // constructor
@@ -2373,10 +3152,10 @@ module.exports = DFA;
 
 /* vim: set ts=2 sw=2 et: */
 
-},{}],24:[function(require,module,exports){
+},{}],27:[function(require,module,exports){
 module.exports = require('./lib')
 
-},{"./lib":25}],25:[function(require,module,exports){
+},{"./lib":28}],28:[function(require,module,exports){
 /*!
  * markdown-it-regexp
  * Copyright (c) 2014 Alex Kocharin
@@ -2465,7 +3244,7 @@ Plugin.prototype.render = function (tokens, id, options, env) {
 }
 
 
-},{"./utils":26,"util":96}],26:[function(require,module,exports){
+},{"./utils":29,"util":99}],29:[function(require,module,exports){
 /*!
  * markdown-it-regexp
  * Copyright (c) 2014 Alex Kocharin
@@ -2493,13 +3272,13 @@ exports.escape = function(html) {
 }
 
 
-},{"util":96}],27:[function(require,module,exports){
+},{"util":99}],30:[function(require,module,exports){
 'use strict';
 
 
 module.exports = require('./lib/');
 
-},{"./lib/":36}],28:[function(require,module,exports){
+},{"./lib/":39}],31:[function(require,module,exports){
 // HTML5 entities map: { name -> utf16string }
 //
 'use strict';
@@ -2507,7 +3286,7 @@ module.exports = require('./lib/');
 /*eslint quotes:0*/
 module.exports = require('entities/lib/maps/entities.json');
 
-},{"entities/lib/maps/entities.json":4}],29:[function(require,module,exports){
+},{"entities/lib/maps/entities.json":4}],32:[function(require,module,exports){
 // List of valid html blocks names, accorting to commonmark spec
 // http://jgm.github.io/CommonMark/spec.html#html-blocks
 
@@ -2579,7 +3358,7 @@ module.exports = [
   'ul'
 ];
 
-},{}],30:[function(require,module,exports){
+},{}],33:[function(require,module,exports){
 // Regexps to match html elements
 
 'use strict';
@@ -2609,7 +3388,7 @@ var HTML_OPEN_CLOSE_TAG_RE = new RegExp('^(?:' + open_tag + '|' + close_tag + ')
 module.exports.HTML_TAG_RE = HTML_TAG_RE;
 module.exports.HTML_OPEN_CLOSE_TAG_RE = HTML_OPEN_CLOSE_TAG_RE;
 
-},{}],31:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
 // Utilities
 //
 'use strict';
@@ -2928,7 +3707,7 @@ exports.isPunctChar         = isPunctChar;
 exports.escapeRE            = escapeRE;
 exports.normalizeReference  = normalizeReference;
 
-},{"./entities":28,"mdurl":84,"uc.micro":92,"uc.micro/categories/P/regex":90}],32:[function(require,module,exports){
+},{"./entities":31,"mdurl":87,"uc.micro":95,"uc.micro/categories/P/regex":93}],35:[function(require,module,exports){
 // Just a shortcut for bulk export
 'use strict';
 
@@ -2937,7 +3716,7 @@ exports.parseLinkLabel       = require('./parse_link_label');
 exports.parseLinkDestination = require('./parse_link_destination');
 exports.parseLinkTitle       = require('./parse_link_title');
 
-},{"./parse_link_destination":33,"./parse_link_label":34,"./parse_link_title":35}],33:[function(require,module,exports){
+},{"./parse_link_destination":36,"./parse_link_label":37,"./parse_link_title":38}],36:[function(require,module,exports){
 // Parse link destination
 //
 'use strict';
@@ -3021,7 +3800,7 @@ module.exports = function parseLinkDestination(str, pos, max) {
   return result;
 };
 
-},{"../common/utils":31}],34:[function(require,module,exports){
+},{"../common/utils":34}],37:[function(require,module,exports){
 // Parse link label
 //
 // this function assumes that first character ("[") already matches;
@@ -3071,7 +3850,7 @@ module.exports = function parseLinkLabel(state, start, disableNested) {
   return labelEnd;
 };
 
-},{}],35:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 // Parse link title
 //
 'use strict';
@@ -3128,7 +3907,7 @@ module.exports = function parseLinkTitle(str, pos, max) {
   return result;
 };
 
-},{"../common/utils":31}],36:[function(require,module,exports){
+},{"../common/utils":34}],39:[function(require,module,exports){
 // Main parser class
 
 'use strict';
@@ -3712,7 +4491,7 @@ MarkdownIt.prototype.renderInline = function (src, env) {
 
 module.exports = MarkdownIt;
 
-},{"./common/utils":31,"./helpers":32,"./parser_block":37,"./parser_core":38,"./parser_inline":39,"./presets/commonmark":40,"./presets/default":41,"./presets/zero":42,"./renderer":43,"linkify-it":19,"mdurl":84,"punycode":87}],37:[function(require,module,exports){
+},{"./common/utils":34,"./helpers":35,"./parser_block":40,"./parser_core":41,"./parser_inline":42,"./presets/commonmark":43,"./presets/default":44,"./presets/zero":45,"./renderer":46,"linkify-it":19,"mdurl":87,"punycode":90}],40:[function(require,module,exports){
 /** internal
  * class ParserBlock
  *
@@ -3836,7 +4615,7 @@ ParserBlock.prototype.State = require('./rules_block/state_block');
 
 module.exports = ParserBlock;
 
-},{"./ruler":44,"./rules_block/blockquote":45,"./rules_block/code":46,"./rules_block/fence":47,"./rules_block/heading":48,"./rules_block/hr":49,"./rules_block/html_block":50,"./rules_block/lheading":51,"./rules_block/list":52,"./rules_block/paragraph":53,"./rules_block/reference":54,"./rules_block/state_block":55,"./rules_block/table":56}],38:[function(require,module,exports){
+},{"./ruler":47,"./rules_block/blockquote":48,"./rules_block/code":49,"./rules_block/fence":50,"./rules_block/heading":51,"./rules_block/hr":52,"./rules_block/html_block":53,"./rules_block/lheading":54,"./rules_block/list":55,"./rules_block/paragraph":56,"./rules_block/reference":57,"./rules_block/state_block":58,"./rules_block/table":59}],41:[function(require,module,exports){
 /** internal
  * class Core
  *
@@ -3899,7 +4678,7 @@ Core.prototype.State = require('./rules_core/state_core');
 
 module.exports = Core;
 
-},{"./ruler":44,"./rules_core/block":57,"./rules_core/inline":58,"./rules_core/linkify":59,"./rules_core/normalize":60,"./rules_core/replacements":61,"./rules_core/smartquotes":62,"./rules_core/state_core":63,"./rules_core/text_join":64}],39:[function(require,module,exports){
+},{"./ruler":47,"./rules_core/block":60,"./rules_core/inline":61,"./rules_core/linkify":62,"./rules_core/normalize":63,"./rules_core/replacements":64,"./rules_core/smartquotes":65,"./rules_core/state_core":66,"./rules_core/text_join":67}],42:[function(require,module,exports){
 /** internal
  * class ParserInline
  *
@@ -4086,7 +4865,7 @@ ParserInline.prototype.State = require('./rules_inline/state_inline');
 
 module.exports = ParserInline;
 
-},{"./ruler":44,"./rules_inline/autolink":65,"./rules_inline/backticks":66,"./rules_inline/balance_pairs":67,"./rules_inline/emphasis":68,"./rules_inline/entity":69,"./rules_inline/escape":70,"./rules_inline/fragments_join":71,"./rules_inline/html_inline":72,"./rules_inline/image":73,"./rules_inline/link":74,"./rules_inline/linkify":75,"./rules_inline/newline":76,"./rules_inline/state_inline":77,"./rules_inline/strikethrough":78,"./rules_inline/text":79}],40:[function(require,module,exports){
+},{"./ruler":47,"./rules_inline/autolink":68,"./rules_inline/backticks":69,"./rules_inline/balance_pairs":70,"./rules_inline/emphasis":71,"./rules_inline/entity":72,"./rules_inline/escape":73,"./rules_inline/fragments_join":74,"./rules_inline/html_inline":75,"./rules_inline/image":76,"./rules_inline/link":77,"./rules_inline/linkify":78,"./rules_inline/newline":79,"./rules_inline/state_inline":80,"./rules_inline/strikethrough":81,"./rules_inline/text":82}],43:[function(require,module,exports){
 // Commonmark default options
 
 'use strict';
@@ -4169,7 +4948,7 @@ module.exports = {
   }
 };
 
-},{}],41:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 // markdown-it default options
 
 'use strict';
@@ -4212,7 +4991,7 @@ module.exports = {
   }
 };
 
-},{}],42:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 // "Zero" preset, with nothing enabled. Useful for manual configuring of simple
 // modes. For example, to parse bold/italic only.
 
@@ -4277,7 +5056,7 @@ module.exports = {
   }
 };
 
-},{}],43:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 /**
  * class Renderer
  *
@@ -4620,7 +5399,7 @@ Renderer.prototype.render = function (tokens, options, env) {
 
 module.exports = Renderer;
 
-},{"./common/utils":31}],44:[function(require,module,exports){
+},{"./common/utils":34}],47:[function(require,module,exports){
 /**
  * class Ruler
  *
@@ -4974,7 +5753,7 @@ Ruler.prototype.getRules = function (chainName) {
 
 module.exports = Ruler;
 
-},{}],45:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 // Block quotes
 
 'use strict';
@@ -5260,7 +6039,7 @@ module.exports = function blockquote(state, startLine, endLine, silent) {
   return true;
 };
 
-},{"../common/utils":31}],46:[function(require,module,exports){
+},{"../common/utils":34}],49:[function(require,module,exports){
 // Code block (4 spaces padded)
 
 'use strict';
@@ -5296,7 +6075,7 @@ module.exports = function code(state, startLine, endLine/*, silent*/) {
   return true;
 };
 
-},{}],47:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 // fences (``` lang, ~~~ lang)
 
 'use strict';
@@ -5396,7 +6175,7 @@ module.exports = function fence(state, startLine, endLine, silent) {
   return true;
 };
 
-},{}],48:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 // heading (#, ##, ...)
 
 'use strict';
@@ -5453,7 +6232,7 @@ module.exports = function heading(state, startLine, endLine, silent) {
   return true;
 };
 
-},{"../common/utils":31}],49:[function(require,module,exports){
+},{"../common/utils":34}],52:[function(require,module,exports){
 // Horizontal rule
 
 'use strict';
@@ -5500,7 +6279,7 @@ module.exports = function hr(state, startLine, endLine, silent) {
   return true;
 };
 
-},{"../common/utils":31}],50:[function(require,module,exports){
+},{"../common/utils":34}],53:[function(require,module,exports){
 // HTML block
 
 'use strict';
@@ -5576,7 +6355,7 @@ module.exports = function html_block(state, startLine, endLine, silent) {
   return true;
 };
 
-},{"../common/html_blocks":29,"../common/html_re":30}],51:[function(require,module,exports){
+},{"../common/html_blocks":32,"../common/html_re":33}],54:[function(require,module,exports){
 // lheading (---, ===)
 
 'use strict';
@@ -5661,7 +6440,7 @@ module.exports = function lheading(state, startLine, endLine/*, silent*/) {
   return true;
 };
 
-},{}],52:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 // Lists
 
 'use strict';
@@ -6027,7 +6806,7 @@ module.exports = function list(state, startLine, endLine, silent) {
   return true;
 };
 
-},{"../common/utils":31}],53:[function(require,module,exports){
+},{"../common/utils":34}],56:[function(require,module,exports){
 // Paragraph
 
 'use strict';
@@ -6081,7 +6860,7 @@ module.exports = function paragraph(state, startLine/*, endLine*/) {
   return true;
 };
 
-},{}],54:[function(require,module,exports){
+},{}],57:[function(require,module,exports){
 'use strict';
 
 
@@ -6281,7 +7060,7 @@ module.exports = function reference(state, startLine, _endLine, silent) {
   return true;
 };
 
-},{"../common/utils":31}],55:[function(require,module,exports){
+},{"../common/utils":34}],58:[function(require,module,exports){
 // Parser state class
 
 'use strict';
@@ -6514,7 +7293,7 @@ StateBlock.prototype.Token = Token;
 
 module.exports = StateBlock;
 
-},{"../common/utils":31,"../token":80}],56:[function(require,module,exports){
+},{"../common/utils":34,"../token":83}],59:[function(require,module,exports){
 // GFM table, https://github.github.com/gfm/#tables-extension-
 
 'use strict';
@@ -6737,7 +7516,7 @@ module.exports = function table(state, startLine, endLine, silent) {
   return true;
 };
 
-},{"../common/utils":31}],57:[function(require,module,exports){
+},{"../common/utils":34}],60:[function(require,module,exports){
 'use strict';
 
 
@@ -6755,7 +7534,7 @@ module.exports = function block(state) {
   }
 };
 
-},{}],58:[function(require,module,exports){
+},{}],61:[function(require,module,exports){
 'use strict';
 
 module.exports = function inline(state) {
@@ -6770,7 +7549,7 @@ module.exports = function inline(state) {
   }
 };
 
-},{}],59:[function(require,module,exports){
+},{}],62:[function(require,module,exports){
 // Replace link-like texts with link nodes.
 //
 // Currently restricted by `md.validateLink()` to http/https/ftp
@@ -6914,7 +7693,7 @@ module.exports = function linkify(state) {
   }
 };
 
-},{"../common/utils":31}],60:[function(require,module,exports){
+},{"../common/utils":34}],63:[function(require,module,exports){
 // Normalize input string
 
 'use strict';
@@ -6937,7 +7716,7 @@ module.exports = function normalize(state) {
   state.src = str;
 };
 
-},{}],61:[function(require,module,exports){
+},{}],64:[function(require,module,exports){
 // Simple typographic replacements
 //
 // (c) (C) → ©
@@ -7045,7 +7824,7 @@ module.exports = function replace(state) {
   }
 };
 
-},{}],62:[function(require,module,exports){
+},{}],65:[function(require,module,exports){
 // Convert straight quotation marks to typographic ones
 //
 'use strict';
@@ -7248,7 +8027,7 @@ module.exports = function smartquotes(state) {
   }
 };
 
-},{"../common/utils":31}],63:[function(require,module,exports){
+},{"../common/utils":34}],66:[function(require,module,exports){
 // Core state object
 //
 'use strict';
@@ -7270,7 +8049,7 @@ StateCore.prototype.Token = Token;
 
 module.exports = StateCore;
 
-},{"../token":80}],64:[function(require,module,exports){
+},{"../token":83}],67:[function(require,module,exports){
 // Join raw text tokens with the rest of the text
 //
 // This is set as a separate rule to provide an opportunity for plugins
@@ -7317,7 +8096,7 @@ module.exports = function text_join(state) {
   }
 };
 
-},{}],65:[function(require,module,exports){
+},{}],68:[function(require,module,exports){
 // Process autolinks '<protocol:...>'
 
 'use strict';
@@ -7395,7 +8174,7 @@ module.exports = function autolink(state, silent) {
   return false;
 };
 
-},{}],66:[function(require,module,exports){
+},{}],69:[function(require,module,exports){
 // Parse backticks
 
 'use strict';
@@ -7460,7 +8239,7 @@ module.exports = function backtick(state, silent) {
   return true;
 };
 
-},{}],67:[function(require,module,exports){
+},{}],70:[function(require,module,exports){
 // For each opening emphasis-like marker find a matching closing one
 //
 'use strict';
@@ -7592,7 +8371,7 @@ module.exports = function link_pairs(state) {
   }
 };
 
-},{}],68:[function(require,module,exports){
+},{}],71:[function(require,module,exports){
 // Process *this* and _that_
 //
 'use strict';
@@ -7724,7 +8503,7 @@ module.exports.postProcess = function emphasis(state) {
   }
 };
 
-},{}],69:[function(require,module,exports){
+},{}],72:[function(require,module,exports){
 // Process html entity - &#123;, &#xAF;, &quot;, ...
 
 'use strict';
@@ -7781,7 +8560,7 @@ module.exports = function entity(state, silent) {
   return false;
 };
 
-},{"../common/entities":28,"../common/utils":31}],70:[function(require,module,exports){
+},{"../common/entities":31,"../common/utils":34}],73:[function(require,module,exports){
 // Process escaped chars and hardbreaks
 
 'use strict';
@@ -7854,7 +8633,7 @@ module.exports = function escape(state, silent) {
   return true;
 };
 
-},{"../common/utils":31}],71:[function(require,module,exports){
+},{"../common/utils":34}],74:[function(require,module,exports){
 // Clean up tokens after emphasis and strikethrough postprocessing:
 // merge adjacent text nodes into one and re-calculate all token levels
 //
@@ -7897,7 +8676,7 @@ module.exports = function fragments_join(state) {
   }
 };
 
-},{}],72:[function(require,module,exports){
+},{}],75:[function(require,module,exports){
 // Process html tags
 
 'use strict';
@@ -7957,7 +8736,7 @@ module.exports = function html_inline(state, silent) {
   return true;
 };
 
-},{"../common/html_re":30}],73:[function(require,module,exports){
+},{"../common/html_re":33}],76:[function(require,module,exports){
 // Process ![image](<src> "title")
 
 'use strict';
@@ -8111,7 +8890,7 @@ module.exports = function image(state, silent) {
   return true;
 };
 
-},{"../common/utils":31}],74:[function(require,module,exports){
+},{"../common/utils":34}],77:[function(require,module,exports){
 // Process [link](<to> "stuff")
 
 'use strict';
@@ -8263,7 +9042,7 @@ module.exports = function link(state, silent) {
   return true;
 };
 
-},{"../common/utils":31}],75:[function(require,module,exports){
+},{"../common/utils":34}],78:[function(require,module,exports){
 // Process links like https://example.org/
 
 'use strict';
@@ -8323,7 +9102,7 @@ module.exports = function linkify(state, silent) {
   return true;
 };
 
-},{}],76:[function(require,module,exports){
+},{}],79:[function(require,module,exports){
 // Proceess '\n'
 
 'use strict';
@@ -8371,7 +9150,7 @@ module.exports = function newline(state, silent) {
   return true;
 };
 
-},{"../common/utils":31}],77:[function(require,module,exports){
+},{"../common/utils":34}],80:[function(require,module,exports){
 // Inline parser state
 
 'use strict';
@@ -8531,7 +9310,7 @@ StateInline.prototype.Token = Token;
 
 module.exports = StateInline;
 
-},{"../common/utils":31,"../token":80}],78:[function(require,module,exports){
+},{"../common/utils":34,"../token":83}],81:[function(require,module,exports){
 // ~~strike through~~
 //
 'use strict';
@@ -8663,7 +9442,7 @@ module.exports.postProcess = function strikethrough(state) {
   }
 };
 
-},{}],79:[function(require,module,exports){
+},{}],82:[function(require,module,exports){
 // Skip text characters for text token, place those to pending buffer
 // and increment current pos
 
@@ -8754,7 +9533,7 @@ module.exports = function text(state, silent) {
   return true;
 };*/
 
-},{}],80:[function(require,module,exports){
+},{}],83:[function(require,module,exports){
 // Token class
 
 'use strict';
@@ -8957,7 +9736,7 @@ Token.prototype.attrJoin = function attrJoin(name, value) {
 
 module.exports = Token;
 
-},{}],81:[function(require,module,exports){
+},{}],84:[function(require,module,exports){
 
 'use strict';
 
@@ -9081,7 +9860,7 @@ decode.componentChars = '';
 
 module.exports = decode;
 
-},{}],82:[function(require,module,exports){
+},{}],85:[function(require,module,exports){
 
 'use strict';
 
@@ -9181,7 +9960,7 @@ encode.componentChars = "-_.!~*'()";
 
 module.exports = encode;
 
-},{}],83:[function(require,module,exports){
+},{}],86:[function(require,module,exports){
 
 'use strict';
 
@@ -9208,7 +9987,7 @@ module.exports = function format(url) {
   return result;
 };
 
-},{}],84:[function(require,module,exports){
+},{}],87:[function(require,module,exports){
 'use strict';
 
 
@@ -9217,7 +9996,7 @@ module.exports.decode = require('./decode');
 module.exports.format = require('./format');
 module.exports.parse  = require('./parse');
 
-},{"./decode":81,"./encode":82,"./format":83,"./parse":85}],85:[function(require,module,exports){
+},{"./decode":84,"./encode":85,"./format":86,"./parse":88}],88:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -9531,7 +10310,7 @@ Url.prototype.parseHost = function(host) {
 
 module.exports = urlParse;
 
-},{}],86:[function(require,module,exports){
+},{}],89:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -9717,7 +10496,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],87:[function(require,module,exports){
+},{}],90:[function(require,module,exports){
 (function (global){(function (){
 /*! https://mths.be/punycode v1.4.1 by @mathias */
 ;(function(root) {
@@ -10254,15 +11033,15 @@ process.umask = function() { return 0; };
 }(this));
 
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],88:[function(require,module,exports){
-module.exports=/[\0-\x1F\x7F-\x9F]/
-},{}],89:[function(require,module,exports){
-module.exports=/[\xAD\u0600-\u0605\u061C\u06DD\u070F\u08E2\u180E\u200B-\u200F\u202A-\u202E\u2060-\u2064\u2066-\u206F\uFEFF\uFFF9-\uFFFB]|\uD804[\uDCBD\uDCCD]|\uD82F[\uDCA0-\uDCA3]|\uD834[\uDD73-\uDD7A]|\uDB40[\uDC01\uDC20-\uDC7F]/
-},{}],90:[function(require,module,exports){
-module.exports=/[!-#%-\*,-\/:;\?@\[-\]_\{\}\xA1\xA7\xAB\xB6\xB7\xBB\xBF\u037E\u0387\u055A-\u055F\u0589\u058A\u05BE\u05C0\u05C3\u05C6\u05F3\u05F4\u0609\u060A\u060C\u060D\u061B\u061E\u061F\u066A-\u066D\u06D4\u0700-\u070D\u07F7-\u07F9\u0830-\u083E\u085E\u0964\u0965\u0970\u09FD\u0A76\u0AF0\u0C84\u0DF4\u0E4F\u0E5A\u0E5B\u0F04-\u0F12\u0F14\u0F3A-\u0F3D\u0F85\u0FD0-\u0FD4\u0FD9\u0FDA\u104A-\u104F\u10FB\u1360-\u1368\u1400\u166D\u166E\u169B\u169C\u16EB-\u16ED\u1735\u1736\u17D4-\u17D6\u17D8-\u17DA\u1800-\u180A\u1944\u1945\u1A1E\u1A1F\u1AA0-\u1AA6\u1AA8-\u1AAD\u1B5A-\u1B60\u1BFC-\u1BFF\u1C3B-\u1C3F\u1C7E\u1C7F\u1CC0-\u1CC7\u1CD3\u2010-\u2027\u2030-\u2043\u2045-\u2051\u2053-\u205E\u207D\u207E\u208D\u208E\u2308-\u230B\u2329\u232A\u2768-\u2775\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2CF9-\u2CFC\u2CFE\u2CFF\u2D70\u2E00-\u2E2E\u2E30-\u2E4E\u3001-\u3003\u3008-\u3011\u3014-\u301F\u3030\u303D\u30A0\u30FB\uA4FE\uA4FF\uA60D-\uA60F\uA673\uA67E\uA6F2-\uA6F7\uA874-\uA877\uA8CE\uA8CF\uA8F8-\uA8FA\uA8FC\uA92E\uA92F\uA95F\uA9C1-\uA9CD\uA9DE\uA9DF\uAA5C-\uAA5F\uAADE\uAADF\uAAF0\uAAF1\uABEB\uFD3E\uFD3F\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE61\uFE63\uFE68\uFE6A\uFE6B\uFF01-\uFF03\uFF05-\uFF0A\uFF0C-\uFF0F\uFF1A\uFF1B\uFF1F\uFF20\uFF3B-\uFF3D\uFF3F\uFF5B\uFF5D\uFF5F-\uFF65]|\uD800[\uDD00-\uDD02\uDF9F\uDFD0]|\uD801\uDD6F|\uD802[\uDC57\uDD1F\uDD3F\uDE50-\uDE58\uDE7F\uDEF0-\uDEF6\uDF39-\uDF3F\uDF99-\uDF9C]|\uD803[\uDF55-\uDF59]|\uD804[\uDC47-\uDC4D\uDCBB\uDCBC\uDCBE-\uDCC1\uDD40-\uDD43\uDD74\uDD75\uDDC5-\uDDC8\uDDCD\uDDDB\uDDDD-\uDDDF\uDE38-\uDE3D\uDEA9]|\uD805[\uDC4B-\uDC4F\uDC5B\uDC5D\uDCC6\uDDC1-\uDDD7\uDE41-\uDE43\uDE60-\uDE6C\uDF3C-\uDF3E]|\uD806[\uDC3B\uDE3F-\uDE46\uDE9A-\uDE9C\uDE9E-\uDEA2]|\uD807[\uDC41-\uDC45\uDC70\uDC71\uDEF7\uDEF8]|\uD809[\uDC70-\uDC74]|\uD81A[\uDE6E\uDE6F\uDEF5\uDF37-\uDF3B\uDF44]|\uD81B[\uDE97-\uDE9A]|\uD82F\uDC9F|\uD836[\uDE87-\uDE8B]|\uD83A[\uDD5E\uDD5F]/
 },{}],91:[function(require,module,exports){
-module.exports=/[ \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000]/
+module.exports=/[\0-\x1F\x7F-\x9F]/
 },{}],92:[function(require,module,exports){
+module.exports=/[\xAD\u0600-\u0605\u061C\u06DD\u070F\u08E2\u180E\u200B-\u200F\u202A-\u202E\u2060-\u2064\u2066-\u206F\uFEFF\uFFF9-\uFFFB]|\uD804[\uDCBD\uDCCD]|\uD82F[\uDCA0-\uDCA3]|\uD834[\uDD73-\uDD7A]|\uDB40[\uDC01\uDC20-\uDC7F]/
+},{}],93:[function(require,module,exports){
+module.exports=/[!-#%-\*,-\/:;\?@\[-\]_\{\}\xA1\xA7\xAB\xB6\xB7\xBB\xBF\u037E\u0387\u055A-\u055F\u0589\u058A\u05BE\u05C0\u05C3\u05C6\u05F3\u05F4\u0609\u060A\u060C\u060D\u061B\u061E\u061F\u066A-\u066D\u06D4\u0700-\u070D\u07F7-\u07F9\u0830-\u083E\u085E\u0964\u0965\u0970\u09FD\u0A76\u0AF0\u0C84\u0DF4\u0E4F\u0E5A\u0E5B\u0F04-\u0F12\u0F14\u0F3A-\u0F3D\u0F85\u0FD0-\u0FD4\u0FD9\u0FDA\u104A-\u104F\u10FB\u1360-\u1368\u1400\u166D\u166E\u169B\u169C\u16EB-\u16ED\u1735\u1736\u17D4-\u17D6\u17D8-\u17DA\u1800-\u180A\u1944\u1945\u1A1E\u1A1F\u1AA0-\u1AA6\u1AA8-\u1AAD\u1B5A-\u1B60\u1BFC-\u1BFF\u1C3B-\u1C3F\u1C7E\u1C7F\u1CC0-\u1CC7\u1CD3\u2010-\u2027\u2030-\u2043\u2045-\u2051\u2053-\u205E\u207D\u207E\u208D\u208E\u2308-\u230B\u2329\u232A\u2768-\u2775\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2CF9-\u2CFC\u2CFE\u2CFF\u2D70\u2E00-\u2E2E\u2E30-\u2E4E\u3001-\u3003\u3008-\u3011\u3014-\u301F\u3030\u303D\u30A0\u30FB\uA4FE\uA4FF\uA60D-\uA60F\uA673\uA67E\uA6F2-\uA6F7\uA874-\uA877\uA8CE\uA8CF\uA8F8-\uA8FA\uA8FC\uA92E\uA92F\uA95F\uA9C1-\uA9CD\uA9DE\uA9DF\uAA5C-\uAA5F\uAADE\uAADF\uAAF0\uAAF1\uABEB\uFD3E\uFD3F\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE61\uFE63\uFE68\uFE6A\uFE6B\uFF01-\uFF03\uFF05-\uFF0A\uFF0C-\uFF0F\uFF1A\uFF1B\uFF1F\uFF20\uFF3B-\uFF3D\uFF3F\uFF5B\uFF5D\uFF5F-\uFF65]|\uD800[\uDD00-\uDD02\uDF9F\uDFD0]|\uD801\uDD6F|\uD802[\uDC57\uDD1F\uDD3F\uDE50-\uDE58\uDE7F\uDEF0-\uDEF6\uDF39-\uDF3F\uDF99-\uDF9C]|\uD803[\uDF55-\uDF59]|\uD804[\uDC47-\uDC4D\uDCBB\uDCBC\uDCBE-\uDCC1\uDD40-\uDD43\uDD74\uDD75\uDDC5-\uDDC8\uDDCD\uDDDB\uDDDD-\uDDDF\uDE38-\uDE3D\uDEA9]|\uD805[\uDC4B-\uDC4F\uDC5B\uDC5D\uDCC6\uDDC1-\uDDD7\uDE41-\uDE43\uDE60-\uDE6C\uDF3C-\uDF3E]|\uD806[\uDC3B\uDE3F-\uDE46\uDE9A-\uDE9C\uDE9E-\uDEA2]|\uD807[\uDC41-\uDC45\uDC70\uDC71\uDEF7\uDEF8]|\uD809[\uDC70-\uDC74]|\uD81A[\uDE6E\uDE6F\uDEF5\uDF37-\uDF3B\uDF44]|\uD81B[\uDE97-\uDE9A]|\uD82F\uDC9F|\uD836[\uDE87-\uDE8B]|\uD83A[\uDD5E\uDD5F]/
+},{}],94:[function(require,module,exports){
+module.exports=/[ \xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000]/
+},{}],95:[function(require,module,exports){
 'use strict';
 
 exports.Any = require('./properties/Any/regex');
@@ -10271,16 +11050,16 @@ exports.Cf  = require('./categories/Cf/regex');
 exports.P   = require('./categories/P/regex');
 exports.Z   = require('./categories/Z/regex');
 
-},{"./categories/Cc/regex":88,"./categories/Cf/regex":89,"./categories/P/regex":90,"./categories/Z/regex":91,"./properties/Any/regex":93}],93:[function(require,module,exports){
+},{"./categories/Cc/regex":91,"./categories/Cf/regex":92,"./categories/P/regex":93,"./categories/Z/regex":94,"./properties/Any/regex":96}],96:[function(require,module,exports){
 module.exports=/[\0-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/
-},{}],94:[function(require,module,exports){
+},{}],97:[function(require,module,exports){
 module.exports = function isBuffer(arg) {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
     && typeof arg.fill === 'function'
     && typeof arg.readUInt8 === 'function';
 }
-},{}],95:[function(require,module,exports){
+},{}],98:[function(require,module,exports){
 // Currently in sync with Node.js lib/internal/util/types.js
 // https://github.com/nodejs/node/commit/112cc7c27551254aa2b17098fb774867f05ed0d9
 
@@ -10616,7 +11395,7 @@ exports.isAnyArrayBuffer = isAnyArrayBuffer;
   });
 });
 
-},{"is-arguments":15,"is-generator-function":17,"is-typed-array":18,"which-typed-array":97}],96:[function(require,module,exports){
+},{"is-arguments":15,"is-generator-function":17,"is-typed-array":18,"which-typed-array":100}],99:[function(require,module,exports){
 (function (process){(function (){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -11335,7 +12114,7 @@ function callbackify(original) {
 exports.callbackify = callbackify;
 
 }).call(this)}).call(this,require('_process'))
-},{"./support/isBuffer":94,"./support/types":95,"_process":86,"inherits":14}],97:[function(require,module,exports){
+},{"./support/isBuffer":97,"./support/types":98,"_process":89,"inherits":14}],100:[function(require,module,exports){
 (function (global){(function (){
 'use strict';
 
@@ -11394,7 +12173,7 @@ module.exports = function whichTypedArray(value) {
 };
 
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"available-typed-arrays":1,"call-bind/callBound":2,"for-each":5,"gopd":9,"has-tostringtag/shams":12,"is-typed-array":18}],98:[function(require,module,exports){
+},{"available-typed-arrays":1,"call-bind/callBound":2,"for-each":5,"gopd":9,"has-tostringtag/shams":12,"is-typed-array":18}],101:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
   "version": "0.10.8",
@@ -11493,7 +12272,7 @@ module.exports={
   }
 }
 
-},{}],99:[function(require,module,exports){
+},{}],102:[function(require,module,exports){
 // Applying datatables to all tables on the page (with some exceptions)
 const applyDatatables = () => {
     // Any table with headers
@@ -11552,7 +12331,7 @@ module.exports = {
     applyDatatables,
 }
 
-},{}],100:[function(require,module,exports){
+},{}],103:[function(require,module,exports){
 const discordLoginJSON = 'https://discord.pokeclicker.com/json';
 
 const discord = {
@@ -11576,7 +12355,7 @@ fetch(discordLoginJSON, {
 module.exports = {
   discord,
 }
-},{}],101:[function(require,module,exports){
+},{}],104:[function(require,module,exports){
 /*
 Initializing anything we need from the game files
 */
@@ -11663,7 +12442,7 @@ Settings.getSetting('theme').observableValue.subscribe(theme => {
   document.body.className = `no-select ${theme}`;
 });
 
-},{}],102:[function(require,module,exports){
+},{}],105:[function(require,module,exports){
 // import our version etc
 const package = require('../pokeclicker/package.json');
 
@@ -11679,7 +12458,7 @@ window.Wiki = {
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":98,"./datatables":99,"./discord":100,"./game":101,"./markdown-renderer":109,"./navigation":110,"./notifications":111,"./pages/pokemon":112,"./typeahead":113}],103:[function(require,module,exports){
+},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/pokemon":114,"./typeahead":115}],106:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const saveChanges = (editor, filename, btn) => {
@@ -11786,7 +12565,7 @@ module.exports = {
   createMarkDownEditor,
 }
 
-},{"./markdown-renderer":109}],104:[function(require,module,exports){
+},{"./markdown-renderer":111}],107:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11802,23 +12581,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":27,"markdown-it-regexp":24}],105:[function(require,module,exports){
-var md     = require('markdown-it');
-var Plugin = require('markdown-it-regexp');
-
-var plugin = Plugin(
-  // regexp to match
-  /\{#([\w-]+)\}/,
-
-  // this function will be called when something matches
-  (match, utils) => {
-    return `<div id="${utils.escape(match[1])}"></div>`;
-  }
-);
-
-module.exports = plugin;
-
-},{"markdown-it":27,"markdown-it-regexp":24}],106:[function(require,module,exports){
+},{"markdown-it":30,"markdown-it-regexp":27}],108:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11836,7 +12599,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":27,"markdown-it-regexp":24}],107:[function(require,module,exports){
+},{"markdown-it":30,"markdown-it-regexp":27}],109:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11852,7 +12615,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":27,"markdown-it-regexp":24}],108:[function(require,module,exports){
+},{"markdown-it":30,"markdown-it-regexp":27}],110:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -11868,7 +12631,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":27,"markdown-it-regexp":24}],109:[function(require,module,exports){
+},{"markdown-it":30,"markdown-it-regexp":27}],111:[function(require,module,exports){
 const markdownit      = require('markdown-it');
 
 // Setup our markdown editor
@@ -11879,19 +12642,26 @@ const md = new markdownit({
     rowspan:    true,
     headerless: true,
   })
+  .use(require('markdown-it-attrs'), {
+    leftDelimiter: '{',
+    rightDelimiter: '}',
+    allowedAttributes: ['id', 'class'],
+  })
   .use(require('markdown-it-container'), 'text-center')
   .use(require('markdown-it-container'), 'text-end')
   .use(require('markdown-it-container'), 'table-auto')
   .use(require('markdown-it-container'), 'table-tight')
   .use(require('./markdown-plugins/hidden-comments.js'))
-  .use(require('./markdown-plugins/id-element.js'))
   .use(require('./markdown-plugins/image-size.js'))
   .use(require('./markdown-plugins/wiki-links-badge.js'))
   .use(require('./markdown-plugins/wiki-links.js'));
-md.renderer.rules.table_open = function(tokens, idx) {
+  
+// Use this for default rendering
+const proxy = (tokens, idx, options, env, self) => self.renderToken(tokens, idx, options);
+md.renderer.rules.table_open = (tokens, idx, options, env, self) => {
   return '<div class="table-responsive"><table class="table table-hover table-striped table-bordered">';
 };
-md.renderer.rules.table_close = function(tokens, idx) {
+md.renderer.rules.table_close = (tokens, idx, options, env, self) => {
   return '</table></div>';
 };
 
@@ -11899,7 +12669,7 @@ module.exports = {
   md,
 }
 
-},{"./markdown-plugins/hidden-comments.js":104,"./markdown-plugins/id-element.js":105,"./markdown-plugins/image-size.js":106,"./markdown-plugins/wiki-links-badge.js":107,"./markdown-plugins/wiki-links.js":108,"markdown-it":27,"markdown-it-container":21,"markdown-it-multimd-table":22}],110:[function(require,module,exports){
+},{"./markdown-plugins/hidden-comments.js":107,"./markdown-plugins/image-size.js":108,"./markdown-plugins/wiki-links-badge.js":109,"./markdown-plugins/wiki-links.js":110,"markdown-it":30,"markdown-it-attrs":21,"markdown-it-container":24,"markdown-it-multimd-table":25}],112:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 const { applyDatatables } = require('./datatables');
 const { createMarkDownEditor } = require('./markdown-editor');
@@ -12053,7 +12823,7 @@ module.exports = {
     gotoPage,
 };
 
-},{"./datatables":99,"./markdown-editor":103,"./markdown-renderer":109}],111:[function(require,module,exports){
+},{"./datatables":102,"./markdown-editor":106,"./markdown-renderer":111}],113:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -12076,7 +12846,7 @@ module.exports = {
   alert,
 };
 
-},{}],112:[function(require,module,exports){
+},{}],114:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -12135,7 +12905,7 @@ module.exports = {
     getEfficiency,
     getBestVitamins,
 }
-},{}],113:[function(require,module,exports){
+},{}],115:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [
@@ -12338,4 +13108,4 @@ module.exports = {
   searchOptions,
 };
 
-},{"./navigation":110}]},{},[102]);
+},{"./navigation":112}]},{},[105]);
