@@ -66,10 +66,29 @@ td.tight {
 .table-tight table.table {
   width: min-content;
 }
-.text-decoration-none a {
+.table-mutations table.table {
+  width: auto;
+  background: #5a4242;
+  border: #5a4242;
+}
+.table-mutations table.table td {
+  width: 80px;
+  height: 80px;
+  background-image: url('images/soil.png');
+  background-size: cover;
+  color: whitesmoke !important;
+}
+.table-mutations table.table td.mutation {
+  filter: hue-rotate(300deg);
+}
+.table-mutations table.table td.mutation > * {
+  filter: hue-rotate(-300deg);
+}
+.table-mutations table.table td a {
   text-decoration: none;
   color: inherit;
 }
+.text-decoration-none a,
 .text-decoration-none a:hover {
   text-decoration: none;
   color: inherit;

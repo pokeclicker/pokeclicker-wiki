@@ -12651,6 +12651,7 @@ const md = new markdownit({
   .use(require('markdown-it-container'), 'text-end')
   .use(require('markdown-it-container'), 'table-auto')
   .use(require('markdown-it-container'), 'table-tight')
+  .use(require('markdown-it-container'), 'table-mutations')
   .use(require('./markdown-plugins/hidden-comments.js'))
   .use(require('./markdown-plugins/image-size.js'))
   .use(require('./markdown-plugins/wiki-links-badge.js'))
