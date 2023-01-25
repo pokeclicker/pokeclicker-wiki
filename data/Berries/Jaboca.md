@@ -9,8 +9,8 @@ Purple squares indicate where mutations can occur.
 
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] |
-| [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] |
-| [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] {.mutation}| [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] {.mutation}| [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] |
+| [[File:Durin.png\|32px]] [[Berries/Durin]] | {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] | {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] |
+| [[File:Durin.png\|32px]] [[Berries/Durin]] | {.mutation}| {.mutation}| {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] |
 | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] |
 | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] |
 
