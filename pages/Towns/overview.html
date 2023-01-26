@@ -1,0 +1,26 @@
+<div class="table-responsive">
+    <table class="table table-hover table-striped table-bordered" data-order="[]">
+        <thead class="thead-dark">
+            <tr>
+                <th>Region</th>
+                <th>Sub Region</th>
+                <th>Town Name</th>
+                <th>Content</th>
+                <th>NPCs</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- ko foreach: Object.values(TownList).filter(t => t.region < GameConstants.Region.final) -->
+            <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Towns', $data.name); return false; }">
+                <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region]), attr: { 'data-order': $data.region }"></td>
+                <td data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name, attr: { 'data-order': $data.subRegion ?? 0 }"></td>
+                <td data-bind="text: $data.name"></td>
+                <td data-bind="foreach: $data.content">
+                    <span class="badge text-bg-secondary" data-bind="text: GameConstants.camelCaseToString($data.__proto__.constructor.name.replace(/(MoveTo|TownContent|Temporary)/, ''))"></span>
+                </td>
+                <td data-bind="text: $data.npcs?.length ?? '-'"></td>
+            </tr>
+            <!-- /ko -->
+        </tbody>
+    </table>
+</div>

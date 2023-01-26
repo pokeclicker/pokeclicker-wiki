@@ -128,6 +128,17 @@ const searchOptions = [
     type: 'Hatchery Helpers',
     page: h.name,
   })),
+  // Towns
+  {
+    display: 'Towns',
+    type: 'Towns',
+    page: '',
+  },
+  ...Object.values(TownList).map(t => ({
+    display: t.name,
+    type: 'Towns',
+    page: t.name,
+  })),
   // Routes
   {
     display: 'Routes',
