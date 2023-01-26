@@ -3,16 +3,15 @@
 ### Possible Planting Formations {#planting}
 
 You can fill your farm in the following way to obtain [[Berries/Jaboca]] berries.
-[[Berries/Jaboca]] squares indicate where mutations can occur.
+Purple squares indicate where mutations can occur.
 
-::: table-tight
+::: table-mutations
 
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] |
-| [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | [[File:Durin.png\|32px]] [[Berries/Durin]] |
-| [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | [[File:Durin.png\|32px]] [[Berries/Durin]] |
+| [[File:Durin.png\|32px]] [[Berries/Durin]] | {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] | {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] |
+| [[File:Durin.png\|32px]] [[Berries/Durin]] | {.mutation}| {.mutation}| {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] |
 | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] |
 | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] |
-
 
 :::
