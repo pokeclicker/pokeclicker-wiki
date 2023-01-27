@@ -29,7 +29,7 @@ All planting times refer the "Until Ripe" value of the first berry planted.
 | [[File:Pecha.png\|32px]] [[Berries/Pecha]]    | 00:01:00      | 00:00:40                              | `N/A`                                 |
 
 #### Mutations
-Cheri Berries can mutate into the following Berries.
+Persim Berries can mutate into the following Berries.
 
 | Used In                                       | Other Requirements |
 | :---:                                         | :---: |
@@ -37,7 +37,7 @@ Cheri Berries can mutate into the following Berries.
 | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]]  | [[File:Pecha.png\|32px]] [[Berries/Pecha]] [[File:Nanab.png\|32px]] [[Berries/Nanab]] [[File:Mago.png\|32px]] [[Berries/Mago]] [[File:Qualot.png\|32px]] [[Berries/Qualot]] [[File:Magost.png\|32px]] [[Berries/Magost]] [[File:Watmel.png\|32px]] [[Berries/Watmel]] |
 
 ### Acquisition
-Cheri Berries can be obtained from the following dungeons.
+Persim Berries can be obtained from the following dungeons.
 
 | Location	                        | Tier	    | Requirement   |
 | :---:                             | :---:     | :---:         |
