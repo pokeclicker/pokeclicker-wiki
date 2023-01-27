@@ -78,7 +78,7 @@ td.tight {
   background-size: cover;
   color: whitesmoke !important;
 }
-.table-mutations table.table tr td:nth-child(3):nth-last-child(1), td:nth-child(6):nth-last-child(1) {
+.table-mutations table.table tr td:nth-last-child(1) {
   display: none;
 }
 .table-mutations table.table td.mutation {
