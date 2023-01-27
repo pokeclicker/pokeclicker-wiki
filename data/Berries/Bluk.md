@@ -1,0 +1,49 @@
+## Mutation Strategy {#mutation}
+
+### Possible Planting Formations {#planting}
+
+You can fill your farm in the following way to obtain Bluk berries. Purple squares indicate where mutations can occur.
+
+**Base Formation**
+::: table-mutations
+| :----: | :----: |
+| [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | |
+| {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] |
+:::
+
+**Optimized Formation**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | |
+| {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | {.mutation} | {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] |
+| {.mutation} | {.mutation}| {.mutation}| {.mutation} | {.mutation} | |
+| [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | |
+| {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | {.mutation} | {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] |
+:::
+
+**Timing Table**
+All planting times refer the "Until Ripe" value of the first berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Leppa.png\|32px]] [[Berries/Leppa]]    | `N/A`         | `N/A`                                 | `N/A`                                 |
+| [[File:Chesto.png\|32px]] [[Berries/Chesto]]  | 00:00:40      | 00:00:26                              | `N/A`                                 |
+
+#### Mutations
+Bluk Berries can mutate into the following Berries.
+
+| Used In                                       | Other Requirements |
+| :---:                                         | :---: |
+| [[File:Cornn.png\|32px]] [[Berries/Cornn]]    | [[File:Leppa.png\|32px]] [[Berries/Leppa]] [[File:Wiki.png\|32px]] [[Berries/Wiki]] |
+| [[File:Payapa.png\|32px]] [[Berries/Payapa]]  | [[File:Wiki.png\|32px]] [[Berries/Wiki]] [[File:Cornn.png\|32px]] [[Berries/Cornn]] [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] |
+
+### Acquisition
+Bluk Berries can be obtained from the following dungeons.
+
+| Location	                        | Tier	    | Requirement   |
+| :---:                             | :---:     | :---:         |
+| [[Dungeons/Berry Forest]]	        | Epic  	| `N/A`         |
+| [[Dungeons/Pattern Bush]]	        | Epic  	| `N/A`         |
+| [[Dungeons/Radio Tower]]	        | Epic  	| `N/A`         |
+| [[Dungeons/Seafloor Cavern]]      | Epic  	| `N/A`         |
+| [[Dungeons/Eterna Forest]]        | Common	| `N/A`         |
+| [[Dungeons/Sea Spirit's Den]]     | Common	| `N/A`         |
