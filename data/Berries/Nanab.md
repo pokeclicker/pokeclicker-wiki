@@ -8,17 +8,17 @@ You can fill your farm in the following way to obtain Nanab berries. Purple squa
 ::: table-mutations
 | :----: | :----: |
 | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | {.mutation} | |
-| {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] |
+| {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | |
 :::
 
 **Optimized Formation**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | {.mutation} | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | {.mutation} | |
-| {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] |
+| {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | |
 | {.mutation} | {.mutation}| {.mutation}| {.mutation} | {.mutation} | |
 | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | {.mutation} | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | {.mutation} | |
-| {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] |
+| {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | |
 :::
 
 **Timing Table**
