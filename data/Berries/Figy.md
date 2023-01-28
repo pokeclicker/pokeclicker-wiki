@@ -7,18 +7,18 @@ You can fill your farm in the following way to obtain Figy berries. Purple squar
 **Base Formation**
 ::: table-mutations
 | :----: | :----: |
-| {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] |
-| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] |
+| {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
+| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
 :::
 
 **Optimized Formation**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] |
-| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] |
+| {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
+| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
 | {.mutation} | {.mutation}| {.mutation}| {.mutation} | {.mutation} | |
-| {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] |
-| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] |
+| {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
+| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
 :::
 
 ### Mutations
