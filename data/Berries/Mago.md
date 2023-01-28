@@ -7,18 +7,18 @@ You can fill your farm in the following way to obtain Mago berries. Purple squar
 **Base Formation**
 ::: table-mutations
 | :----: | :----: |
-| {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] |
-| [[File:Pecha.png\|32px]] [[Berries/Pecha]] | [[File:Pecha.png\|32px]] [[Berries/Pecha]] |
+| {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | |
+| [[File:Pecha.png\|32px]] [[Berries/Pecha]] | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | |
 :::
 
 **Optimized Formation**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | {.mutation} | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] |
-| [[File:Pecha.png\|32px]] [[Berries/Pecha]] | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | [[File:Pecha.png\|32px]] [[Berries/Pecha]] |
+| {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | {.mutation} | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | |
+| [[File:Pecha.png\|32px]] [[Berries/Pecha]] | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | |
 | {.mutation} | {.mutation}| {.mutation}| {.mutation} | {.mutation} | |
-| {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | {.mutation} | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] |
-| [[File:Pecha.png\|32px]] [[Berries/Pecha]] | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | [[File:Pecha.png\|32px]] [[Berries/Pecha]] |
+| {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | {.mutation} | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | |
+| [[File:Pecha.png\|32px]] [[Berries/Pecha]] | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | |
 :::
 
 ### Mutations
