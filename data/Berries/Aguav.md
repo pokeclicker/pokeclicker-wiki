@@ -7,18 +7,18 @@ You can fill your farm in the following way to obtain Aguav berries. Purple squa
 **Base Formation**
 ::: table-mutations
 | :----: | :----: |
-| {.mutation} | [[File:Rawst.png\|32px]] [[Berries/Rawst]] |
-| [[File:Rawst.png\|32px]] [[Berries/Rawst]] | [[File:Rawst.png\|32px]] [[Berries/Rawst]] |
+| {.mutation} | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | |
+| [[File:Rawst.png\|32px]] [[Berries/Rawst]] | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | |
 :::
 
 **Optimized Formation**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| {.mutation} | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | {.mutation} | {.mutation} | [[File:Rawst.png\|32px]] [[Berries/Rawst]] |
-| [[File:Rawst.png\|32px]] [[Berries/Rawst]] | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | {.mutation} | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | [[File:Rawst.png\|32px]] [[Berries/Rawst]] |
+| {.mutation} | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | {.mutation} | {.mutation} | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | |
+| [[File:Rawst.png\|32px]] [[Berries/Rawst]] | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | {.mutation} | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | |
 | {.mutation} | {.mutation}| {.mutation}| {.mutation} | {.mutation} | |
-| {.mutation} | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | {.mutation} | {.mutation} | [[File:Rawst.png\|32px]] [[Berries/Rawst]] |
-| [[File:Rawst.png\|32px]] [[Berries/Rawst]] | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | {.mutation} | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | [[File:Rawst.png\|32px]] [[Berries/Rawst]] |
+| {.mutation} | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | {.mutation} | {.mutation} | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | |
+| [[File:Rawst.png\|32px]] [[Berries/Rawst]] | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | {.mutation} | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | |
 :::
 
 ### Mutations
