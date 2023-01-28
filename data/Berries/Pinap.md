@@ -8,17 +8,17 @@ You can fill your farm in the following way to obtain Pinap berries. Purple squa
 ::: table-mutations
 | :----: | :----: |
 | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | |
-| {.mutation} | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] |
+| {.mutation} | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | |
 :::
 
 **Optimized Formation**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | |
-| {.mutation} | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | {.mutation} | {.mutation} | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] |
+| {.mutation} | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | {.mutation} | {.mutation} | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | |
 | {.mutation} | {.mutation}| {.mutation}| {.mutation} | {.mutation} | |
 | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | |
-| {.mutation} | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | {.mutation} | {.mutation} | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] |
+| {.mutation} | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | {.mutation} | {.mutation} | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | |
 :::
 
 **Timing Table**
