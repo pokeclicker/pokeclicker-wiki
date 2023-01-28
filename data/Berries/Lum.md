@@ -6,7 +6,7 @@ You can fill your farm in the following way to obtain Lum berries. Purple square
 
 **Base Formation**
 ::: table-mutations
-| :----: | :----: |
+| :----: | :----: | :----: |
 | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | [[File:Oran.png\|32px]] [[Berries/Oran]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | |
 | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | |
 | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
