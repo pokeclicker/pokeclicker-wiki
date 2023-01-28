@@ -8,17 +8,17 @@ You can fill your farm in the following way to obtain Bluk berries. Purple squar
 ::: table-mutations
 | :----: | :----: |
 | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | |
-| {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] |
+| {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | |
 :::
 
 **Optimized Formation**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | |
-| {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | {.mutation} | {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] |
+| {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | {.mutation} | {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | |
 | {.mutation} | {.mutation}| {.mutation}| {.mutation} | {.mutation} | |
 | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | |
-| {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | {.mutation} | {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] |
+| {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | {.mutation} | {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | |
 :::
 
 **Timing Table**
