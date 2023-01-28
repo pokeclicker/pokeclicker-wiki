@@ -8,17 +8,17 @@ You can fill your farm in the following way to obtain Razz berries. Purple squar
 ::: table-mutations
 | :----: | :----: |
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | |
-| {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] |
+| {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | |
 :::
 
 **Optimized Formation**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | |
-| {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | {.mutation} | {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] |
+| {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | {.mutation} | {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | |
 | {.mutation} | {.mutation}| {.mutation}| {.mutation} | {.mutation} | |
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | |
-| {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | {.mutation} | {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] |
+| {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | {.mutation} | {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | |
 :::
 
 **Timing Table**
