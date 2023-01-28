@@ -7,18 +7,18 @@ You can fill your farm in the following way to obtain Iapapa berries. Purple squ
 **Base Formation**
 ::: table-mutations
 | :----: | :----: |
-| {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] |
-| [[File:Aspear.png\|32px]] [[Berries/Aspear]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] |
+| {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | |
+| [[File:Aspear.png\|32px]] [[Berries/Aspear]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | |
 :::
 
 **Optimized Formation**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] |
-| [[File:Aspear.png\|32px]] [[Berries/Aspear]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] |
+| {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | |
+| [[File:Aspear.png\|32px]] [[Berries/Aspear]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | |
 | {.mutation} | {.mutation}| {.mutation}| {.mutation} | {.mutation} | |
-| {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] |
-| [[File:Aspear.png\|32px]] [[Berries/Aspear]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] |
+| {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | |
+| [[File:Aspear.png\|32px]] [[Berries/Aspear]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | |
 :::
 
 ### Mutations
