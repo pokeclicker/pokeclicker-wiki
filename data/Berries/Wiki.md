@@ -7,18 +7,18 @@ You can fill your farm in the following way to obtain Wiki berries. Purple squar
 **Base Formation**
 ::: table-mutations
 | :----: | :----: |
-| {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] |
-| [[File:Chesto.png\|32px]] [[Berries/Chesto]] | [[File:Chesto.png\|32px]] [[Berries/Chesto]] |
+| {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | |
+| [[File:Chesto.png\|32px]] [[Berries/Chesto]] | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | |
 :::
 
 **Optimized Formation**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] |
-| [[File:Chesto.png\|32px]] [[Berries/Chesto]] | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | [[File:Chesto.png\|32px]] [[Berries/Chesto]] |
+| {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | |
+| [[File:Chesto.png\|32px]] [[Berries/Chesto]] | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | |
 | {.mutation} | {.mutation}| {.mutation}| {.mutation} | {.mutation} | |
-| {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] |
-| [[File:Chesto.png\|32px]] [[Berries/Chesto]] | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | [[File:Chesto.png\|32px]] [[Berries/Chesto]] |
+| {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | |
+| [[File:Chesto.png\|32px]] [[Berries/Chesto]] | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | |
 :::
 
 ### Mutations
