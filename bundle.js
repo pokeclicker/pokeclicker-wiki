@@ -12286,6 +12286,20 @@ const applyDatatables = () => {
             if (rows < 40 || doNotProcess) return;
 
             $(element).DataTable({
+                // Remember page/search/order
+                stateSave: true,
+                stateSaveCallback: function(settings, data) {
+                    sessionStorage.setItem(`DataTables_${Wiki.pageType()}_${Wiki.pageName()}_${i}`, JSON.stringify(data));
+                    // Only keep tables position if on same page type/parent
+                    Object.keys(sessionStorage).forEach((key) => {
+                        if (key.startsWith('DataTables') && !key.includes(Wiki.pageType())) {
+                            delete sessionStorage[key];
+                        }
+                    })
+                },
+                stateLoadCallback: function(settings) {
+                    return JSON.parse(sessionStorage.getItem(`DataTables_${Wiki.pageType()}_${Wiki.pageName()}_${i}`) || '{}');
+                },
                 // Bootstrap style tables, with responsive table
                 dom: `<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>><'row table-responsive'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 text-center'p>>`,
                 // Our custom page implementation 
