@@ -8,10 +8,10 @@ Purple squares indicate where mutations can occur.
 ::: table-mutations
 
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] |
-| [[File:Durin.png\|32px]] [[Berries/Durin]] | {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] | {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] |
-| [[File:Durin.png\|32px]] [[Berries/Durin]] | {.mutation}| {.mutation}| {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] |
-| [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] |
-| [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] |
+| [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | |
+| [[File:Durin.png\|32px]] [[Berries/Durin]] | {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] | {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] | |
+| [[File:Durin.png\|32px]] [[Berries/Durin]] | {.mutation}| {.mutation}| {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] | |
+| [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | |
+| [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | |
 
 :::
