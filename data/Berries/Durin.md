@@ -6,7 +6,7 @@ You can fill your farm in the following way to obtain Durin berries. Purple squa
 
 **Base Formation**
 ::: table-mutations
-| :----: | :----: |
+| :----: | :----: | :----: |
 | [[File:Rabuta.png\|32px]] [[Berries/Rabuta]] | [[File:Rabuta.png\|32px]] [[Berries/Rabuta]] | [[File:Rabuta.png\|32px]] [[Berries/Rabuta]] | |
 | [[File:Rabuta.png\|32px]] [[Berries/Rabuta]] | [[File:Rabuta.png\|32px]] [[Berries/Rabuta]] {.mutation} | [[File:Rabuta.png\|32px]] [[Berries/Rabuta]] | |
 | [[File:Rabuta.png\|32px]] [[Berries/Rabuta]] | [[File:Rabuta.png\|32px]] [[Berries/Rabuta]] | [[File:Rabuta.png\|32px]] [[Berries/Rabuta]] | |
