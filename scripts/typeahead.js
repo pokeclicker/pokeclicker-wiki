@@ -93,12 +93,6 @@ const searchOptions = [
     type: 'Quest Lines',
     page: q.name,
   })),
-  // Farm
-    {
-      display: 'Farm',
-      type: 'Farm',
-      page: '',
-    },
   // Battle Cafe
   {
     display: 'Battle Café',
@@ -150,6 +144,17 @@ const searchOptions = [
     type: 'Routes',
     page: r.routeName,
   })),
+  // Farm
+  {
+    display: 'Farm',
+    type: 'Farm',
+    page: '',
+  },
+  {
+    display: 'Setups (Farm)',
+    type: 'Farm',
+    page: 'Setups',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
