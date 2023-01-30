@@ -6,7 +6,7 @@ You can fill your farm in the following way to obtain Pamtre berries. Purple squ
 
 **Base Formation**
 ::: table-mutations
-| :----: | :----: |
+| :----: | :----: | :----: |
 | [[File:Cornn.png\|32px]] [[Berries/Cornn]] | [[File:Cornn.png\|32px]] [[Berries/Cornn]] | [[File:Cornn.png\|32px]] [[Berries/Cornn]] | |
 | [[File:Cornn.png\|32px]] [[Berries/Cornn]] | [[File:Cornn.png\|32px]] [[Berries/Cornn]] {.mutation} | [[File:Cornn.png\|32px]] [[Berries/Cornn]] | |
 | [[File:Cornn.png\|32px]] [[Berries/Cornn]] | [[File:Cornn.png\|32px]] [[Berries/Cornn]] | [[File:Cornn.png\|32px]] [[Berries/Cornn]] | |
