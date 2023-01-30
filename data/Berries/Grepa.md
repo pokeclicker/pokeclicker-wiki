@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Hondew berries. Purple squares indicate where mutations can occur.
+You can fill your farm in the following way to obtain Grepa berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations
@@ -29,7 +29,7 @@ All planting times refer the "Until Ripe" value of the first berry planted.
 | [[File:Aguav.png\|32px]] [[Berries/Aguav]]    | `N/A`         | `N/A`                                 | `N/A`                                 |
 
 #### Mutations
-Hondew Berries can mutate into the following Berries.
+Grepa Berries can mutate into the following Berries.
 
 | Used In                                       | Other Requirements |
 | :---:                                         | :---: |
