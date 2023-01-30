@@ -6,7 +6,7 @@ You can fill your farm in the following way to obtain Watmel berries. Purple squ
 
 **Base Formation**
 ::: table-mutations
-| :----: | :----: |
+| :----: | :----: | :----: |
 | [[File:Magost.png\|32px]] [[Berries/Magost]] | [[File:Magost.png\|32px]] [[Berries/Magost]] | [[File:Magost.png\|32px]] [[Berries/Magost]] | |
 | [[File:Magost.png\|32px]] [[Berries/Magost]] | [[File:Magost.png\|32px]] [[Berries/Magost]] {.mutation} | [[File:Magost.png\|32px]] [[Berries/Magost]] | |
 | [[File:Magost.png\|32px]] [[Berries/Magost]] | [[File:Magost.png\|32px]] [[Berries/Magost]] | [[File:Magost.png\|32px]] [[Berries/Magost]] | |
