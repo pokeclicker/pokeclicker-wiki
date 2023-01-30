@@ -1,0 +1,36 @@
+## Mutation Strategy {#mutation}
+
+### Possible Planting Formations {#planting}
+
+You can fill your farm in the following way to obtain Kelpsy berries. Purple squares indicate where mutations can occur.
+
+**Base Formation**
+::: table-mutations
+| :----: | :----: |
+| [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | |
+| {.mutation} | [[File:Persim.png\|32px]] [[Berries/Persim]] | |
+:::
+
+**Optimized Formation**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | |
+| {.mutation} | [[File:Persim.png\|32px]] [[Berries/Persim]] | {.mutation} | {.mutation} | [[File:Persim.png\|32px]] [[Berries/Persim]] | |
+| {.mutation} | {.mutation}| {.mutation}| {.mutation} | {.mutation} | |
+| [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | |
+| {.mutation} | [[File:Persim.png\|32px]] [[Berries/Persim]] | {.mutation} | {.mutation} | [[File:Persim.png\|32px]] [[Berries/Persim]] | |
+:::
+
+**Timing Table**
+All planting times refer the "Until Ripe" value of the first berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Persim.png\|32px]] [[Berries/Persim]]  | `N/A`         | `N/A`                                 | `N/A`                                 |
+| [[File:Chesto.png\|32px]] [[Berries/Chesto]]  | 00:00:40      | 00:00:26                              | `N/A`                                 |
+
+#### Mutations
+Kelpsy Berries can mutate into the following Berries.
+
+| Used In                                       | Other Requirements |
+| :---:                                         | :---: |
+| [[File:Passho.png\|32px]] [[Berries/Passho]]  | [[File:Chesto.png\|32px]] [[Berries/Chesto]] [[File:Oran.png\|32px]] [[Berries/Oran]] [[File:Coba.png\|32px]] [[Berries/Coba]] |
