@@ -6,7 +6,7 @@ You can fill your farm in the following way to obtain Belue berries. Purple squa
 
 **Base Formation**
 ::: table-mutations
-| :----: | :----: |
+| :----: | :----: | :----: |
 | [[File:Nomel.png\|32px]] [[Berries/Nomel]] | [[File:Nomel.png\|32px]] [[Berries/Nomel]] | [[File:Nomel.png\|32px]] [[Berries/Nomel]] | |
 | [[File:Nomel.png\|32px]] [[Berries/Nomel]] | [[File:Nomel.png\|32px]] [[Berries/Nomel]] {.mutation} | [[File:Nomel.png\|32px]] [[Berries/Nomel]] | |
 | [[File:Nomel.png\|32px]] [[Berries/Nomel]] | [[File:Nomel.png\|32px]] [[Berries/Nomel]] | [[File:Nomel.png\|32px]] [[Berries/Nomel]] | |
