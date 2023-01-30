@@ -91,6 +91,11 @@ td.tight {
   text-decoration: none;
   color: inherit;
 }
+.table-mutations table.table img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 .text-decoration-none a,
 .text-decoration-none a:hover {
   text-decoration: none;
