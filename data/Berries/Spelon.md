@@ -6,7 +6,7 @@ You can fill your farm in the following way to obtain Spelon berries. Purple squ
 
 **Base Formation**
 ::: table-mutations
-| :----: | :----: |
+| :----: | :----: | :----: |
 | [[File:Tamato.png\|32px]] [[Berries/Tamato]] | [[File:Tamato.png\|32px]] [[Berries/Tamato]] | [[File:Tamato.png\|32px]] [[Berries/Tamato]] | |
 | [[File:Tamato.png\|32px]] [[Berries/Tamato]] | [[File:Tamato.png\|32px]] [[Berries/Tamato]] {.mutation} | [[File:Tamato.png\|32px]] [[Berries/Tamato]] | |
 | [[File:Tamato.png\|32px]] [[Berries/Tamato]] | [[File:Tamato.png\|32px]] [[Berries/Tamato]] | [[File:Tamato.png\|32px]] [[Berries/Tamato]] | |
