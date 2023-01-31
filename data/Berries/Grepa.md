@@ -22,14 +22,14 @@ You can fill your farm in the following way to obtain Grepa berries. Purple squa
 :::
 
 **Timing Table**
-All planting times refer the "Until Ripe" value of the first berry planted.
+All planting times refer to the "Until Ripe" value of the first berry planted. *(**Note**: Aquav and Figy berries possess equivalent growth times.)*
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
 | [[File:Figy.png\|32px]] [[Berries/Figy]]      | `N/A`         | `N/A`                                 | `N/A`                                 |
 | [[File:Aguav.png\|32px]] [[Berries/Aguav]]    | `N/A`         | `N/A`                                 | `N/A`                                 |
 
 #### Mutations
-Grepa Berries can mutate into the following Berries.
+Grepa Berries can mutate into the following berries.
 
 | Used In                                       | Other Requirements |
 | :---:                                         | :---: |
