@@ -17,8 +17,8 @@ You can fill your farm in the following way to obtain Occa berries. Purple squar
 | [[File:Razz.png\|32px]] [[Berries/Razz]] | {.mutation} | [[File:Figy.png\|32px]] [[Berries/Figy]] | {.mutation} | [[File:Razz.png\|32px]] [[Berries/Razz]] | |
 | [[File:Tamato.png\|32px]] [[Berries/Tamato]] | {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] | {.mutation} | [[File:Tamato.png\|32px]] [[Berries/Tamato]] | |
 | | {.mutation} | | {.mutation} | | |
-| [[File:Razz.png\|32px]] [[Berries/Razz]] | {.mutation} | [[File:Figy.png\|32px]] [[Berries/Figy]] | {.mutation} | [[File:Razz.png\|32px]] [[Berries/Razz]] | |
-| [[File:Tamato.png\|32px]] [[Berries/Tamato]] | {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] | {.mutation} | [[File:Tamato.png\|32px]] [[Berries/Tamato]] | |
+| [[File:Figy.png\|32px]] [[Berries/Figy]] | {.mutation} | [[File:Razz.png\|32px]] [[Berries/Razz]] | {.mutation} | [[File:Figy.png\|32px]] [[Berries/Figy]] | |
+| [[File:Spelon.png\|32px]] [[Berries/Spelon]] | {.mutation} | [[File:Tamato.png\|32px]] [[Berries/Tamato]] | {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] | |
 :::
 
 **Timing Table**
