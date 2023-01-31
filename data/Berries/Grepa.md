@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Grepa berries. Purple squares indicate where mutations can occur.
+You can fill your farm in the following way to obtain Grepa Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations
@@ -22,7 +22,7 @@ You can fill your farm in the following way to obtain Grepa berries. Purple squa
 :::
 
 **Timing Table**
-All planting times refer to the "Until Ripe" value of the first berry planted. *(**Note**: Aquav and Figy berries possess equivalent growth times.)*
+All planting times refer to the "Until Ripe" value of the first Berry planted. *(**Note**: Aquav and Figy Berries possess equivalent growth times.)*
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
 | [[File:Figy.png\|32px]] [[Berries/Figy]]      | `N/A`         | `N/A`                                 | `N/A`                                 |
