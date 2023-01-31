@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Wiki berries. Purple squares indicate where mutations can occur.
+You can fill your farm in the following way to obtain Wiki Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations
