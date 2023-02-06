@@ -1,5 +1,6 @@
 
 .vscode/
+.idea/
 node_modules/
 *.pem
 fiveserver.config.js
