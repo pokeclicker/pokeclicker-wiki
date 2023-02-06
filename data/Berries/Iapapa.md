@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Iapapa berries. Purple squares indicate where mutations can occur.
+You can fill your farm in the following way to obtain Iapapa Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations

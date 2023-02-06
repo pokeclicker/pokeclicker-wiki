@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Aguav berries. Purple squares indicate where mutations can occur.
+You can fill your farm in the following way to obtain Aguav Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations

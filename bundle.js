@@ -12866,7 +12866,7 @@ module.exports = {
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
     const proteinBoost = vitaminsUsed[GameConstants.VitaminType.Protein];
-    return Math.floor((baseAttack * attackBonusPercent) + proteinBoost);
+    return (baseAttack * attackBonusPercent) + proteinBoost;
 }
 
 const calcEggSteps = (vitaminsUsed, eggCycles) => {
@@ -12920,6 +12920,7 @@ module.exports = {
     getEfficiency,
     getBestVitamins,
 }
+
 },{}],115:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 

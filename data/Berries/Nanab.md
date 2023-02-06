@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Nanab berries. Purple squares indicate where mutations can occur.
+You can fill your farm in the following way to obtain Nanab Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations
@@ -22,7 +22,7 @@ You can fill your farm in the following way to obtain Nanab berries. Purple squa
 :::
 
 **Timing Table**
-All planting times refer the "Until Ripe" value of the first berry planted.
+All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
 | [[File:Aspear.png\|32px]] [[Berries/Aspear]]  | `N/A`         | `N/A`                                 | `N/A`                                 |
