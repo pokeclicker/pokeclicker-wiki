@@ -10,11 +10,11 @@
         <tbody data-bind="foreach: Object.values(dungeonList)">
             <tr class="text-nowrap clickable" data-bind="click: () => { Wiki.gotoPage('Dungeons', $data.name); return false; }">
                 <td data-bind="text: $data.name"></td>
-                <td>
+                <td data-bind="attr: { 'data-sort': $data.tokenCost }">
                     <img src="./images/dungeonToken.svg" width="18px"/>
                     <ko data-bind="text: $data.tokenCost.toLocaleString()"></ko>
                 </td>
-                <td data-bind="text: `❤️ ${$data.baseHealth.toLocaleString()}`"></td>
+                <td data-bind="text: `❤️ ${$data.baseHealth.toLocaleString()}`, attr: { 'data-sort': $data.baseHealth }"></td>
             </tr>
         </tbody>
     </table>
