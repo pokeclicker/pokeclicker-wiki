@@ -1,0 +1,22 @@
+<!-- ko foreach: App.game.dreamOrbController.orbs -->
+<div class="table-responsive">
+    <table class="table table-hover table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Item Name</th>
+                <th>Item Type</th>
+                <th>Chance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- ko foreach: Wiki.dreamOrbs.getOrbLoot($data) -->
+            <tr class="text-nowrap clickable" data-bind="click: () => { Wiki.gotoPage('Items', $data.name); return false; }">
+                <td data-bind="text: $data.name"></td>
+                <td data-bind="text: $data.itemType"></td>
+                <td data-bind="text: `${($data.chance * 100).toLocaleString()}%`"></td>
+            </tr>
+            <!-- /ko -->
+        </tbody>
+    </table>
+</div>
+<!-- /ko -->
