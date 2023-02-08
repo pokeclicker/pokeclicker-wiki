@@ -9,8 +9,26 @@ Clearing Dungeons requires active play. To enter a dungeon, select it on the Tow
 4. **Ladder** - Allows the player to progress to the next floor and also adds 10 seconds to the timer. You can either click "Go to next floor" or press Spacebar. This tile can only be encountered from Alola onwards.
 5. **A chest**- Many Items can be collected from chests by either clicking on them or by pressing the Spacebar.
 6. **A trainer**- Trainers are found on tiles and have teams of Pokémon that must all be defeated to progress. Wild Pokémon are almost always ~4 times more likely to appear on an enemy tile than a trainer, but in some dungeons this weighting is different. Defeating trainers yields the following rewards:
-  - Dungeon Trainers reward 4% of the dungeon cost as Dungeon Tokens [[File:dungeonToken.svg|18px]] and 50%
+*  - Dungeon Trainers reward 4% of the dungeon cost as Dungeon Tokens [[File:dungeonToken.svg|18px]] and 50%
  of the dungeon cost as Poké Dollars whenever they are defeated.
- - Dungeon Trainer Bosses reward 10% of the dungeon cost as Dungeon Tokens [[File:dungeonToken.svg|18px]]  and 100% of the dungeon cost as Poké Dollars whenever they are defeated.
+*  - Dungeon Trainer Bosses reward 10% of the dungeon cost as Dungeon Tokens [[File:dungeonToken.svg|18px]]  and 100% of the dungeon cost as Poké Dollars whenever they are defeated.
 
 Note: Amulet coin and other items that grant increased amounts of pokédollars **do not** affect the amount of money that you receive from Dungeon Trainers or Dungeon Trainer Bosses
+
+## Dungeon Perks and Mechanics
+
+### Clear Dependent Mechanics
+#### Dungeon Size
+
+Dungeons have a minimum size floor of 5x5 and a maximum of 10x10. From Alola onwards, dungeons have two floors: the first one with maximum size (10x10) and a second floor that starts with minimum size (5x5) and that increases with each subsequent region. Galar dungeons, for example, have a first floor that is 10x10 in size and a second floor that is 6x6 in size.
+Certain perks are granted to the player after clearing a Dungeon some number of times - these perks make clearing that particular Dungeon easier. When the number of clears reaches a power of ten (10, 100, 1000, etc.), the Dungeon size will shrink by 1 row and 1 column until it reaches the minimum size.
+
+ *For example, a Hoenn dungeon cleared 100 times will now be a 5x5 sized Hoenn Dungeon instead of the base 7x7 sized Hoenn Dungeon.*
+
+ If the dungeon has a second floor, then the second floor will get reduced first. If the second floor is already at minimum size, then the size reduction will remove this floor instead.
+
+ *For example, clearing an Alola dungeon 10 times will remove the second floor.*
+
+ The number of each type of tile decreases with the size of the dungeon. All dungeons will be square. Here is the breakdown of each type of tile based on size: For an NxN dungeon there are:
+
+## Dungeon Locations
