@@ -1,90 +1,22 @@
-I really don't understand how to make auto-generated wiki pages.... 
-
-Lest say I want to create a page for dream orbs... I would make a introductory text of what are they and where/how to get them and this would go in pokeclicker-wiki/data/Dream Orbs/overview-description.md. 
-
-But then I will want to have a list of the items each drem orb can give and there I have to options:
-
- a) forget about the auto-generated functions of this wiki and do it manually (easier but reaaaaly meeeh)
-
-b) make it auto-generated in pokeclicker-wiki/pages/Dream Orbs/overview.html that would be a html table starting with a easy header like this
-
-
-
-<div class="table-responsive">
-
-    <table class="table table-hover table-striped table-bordered">
-
-        <thead class="thead-dark">
-
-            <tr>
-
-                <th>Item</th>
-
-                <th>Chance</th>
-
-            </tr>
-
-        </thead>
-
-```
-
-But then I don't know how to call the data that is in pokeclicker/src/scripts/towns/DreamOrbController.ts in the body of the table
-
-I think should be something like:
-
-```
-
-<tbody data-bind="foreach: ??? ">
-
-    <td >??? </td>
-
-    <td >??? </td>
-
-```
-
-But I don't know what to put in the ??? To call the info
 <!-- ko foreach: App.game.dreamOrbController.orbs -->
-
-    <div>
-
-        <h1 data-bind="text: $data.color"></h1>
-
-        <table>
-
-            <thead>
-
-                <tr>
-
-                    <th>Item Name</th>
-
-                    <th>Item Type</th>
-
-                    <th>Chance</th>
-
-                </tr>
-
-            </thead>
-
-            <tbody>
-
-                <!-- ko foreach: Wiki.dreamOrbs.getOrbLoot($data) -->
-
-                <tr>
-
-                    <td data-bind="text: $data.name"></td>
-
-                    <td data-bind="text: $data.itemType"></td>
-
-                    <td data-bind="text: `${($data.chance * 100).toLocaleString()}%`"></td>
-
-                </tr>
-
-                <!-- /ko -->
-
-            </tbody>
-
-        </table>
-
-    </div>
-
-    <!-- /ko -->
+<div class="table-responsive">
+    <table class="table table-hover table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Item Name</th>
+                <th>Item Type</th>
+                <th>Chance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- ko foreach: Wiki.dreamOrbs.getOrbLoot($data) -->
+            <tr>
+                <td data-bind="text: $data.name"></td>
+                <td data-bind="text: $data.itemType"></td>
+                <td data-bind="text: `${($data.chance * 100).toLocaleString()}%`"></td>
+            </tr>
+            <!-- /ko -->
+        </tbody>
+    </table>
+</div>
+<!-- /ko -->
