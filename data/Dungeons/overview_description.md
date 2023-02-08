@@ -33,8 +33,8 @@ Certain perks are granted to the player after clearing a Dungeon some number of 
 
  **1 Boss Encounter Tile**
 **N chest Tiles**
-**2/*N+3 Non-Boss Encounter Tiles**
-**(N+1)/*(N-4) Empty Tiles**
+**2\*N+3 Non-Boss Encounter Tiles**
+**(N+1)\*(N-4) Empty Tiles**
 
 *Note: The entrance tile counts as an empty tile*
 
@@ -46,5 +46,32 @@ Dungeon Size | Chests | Non-Boss Encounter Tiles | Empty Tiles
 **8x8** | 8 | 19 | 36
 **9x9** | 9 | 21 | 50
 **10x10** | 10 | 23 | 66
+
+#### Flash Ability
+
+The Flash ability permanently reveals the contents (Chest, Encounter, Empty) of adjacent unexplored tiles.
+There are 3 different levels of flash that unlocks in function of the times the dungeon have been cleared:
+
+Number of Clears | Flash layout
+:--- | ---:
+**100** | O F O
+^ | F P F
+^ | O F O
+**250** | F F F
+^ | F P F
+^ | F F F
+**400** | O O F O O
+^ | O F F F O
+^ | F F P F F
+^ | O F F F O
+^ | O O F O O
+
+### Chests in Dungeons
+
+When a number of chests equal to a third of the dungeon's size rounded down are opened (for example, 2 chests in a 6x6 dungeon), all chest tiles are revealed. When a number of chests equal to half the dungeon's size rounded up are opened, the entire dungeon is revealed. However, each chest opened will also increase the HP of all encounters in the dungeon by 20%.
+
+### Dungeon Loot Regional Debuff
+
+When the furthest region reached is greater than 2 regions beyond a dungeon's region, all loot of a tier rarity greater than **Rare** (e.g: *Epic, Legendary, Mythic*) has a dramatically diminished drop rate. The below chart displays the relationship between the Highest Region Reached by the player and the Debuff Region. All Dungeons found in the Debuff Region, or in regions accessed prior to the Debuff Region, will have the debuff applied to the loot drop rate of all loot that belongs to one of the specified Tiers.
 
 ## Dungeon Locations
