@@ -155,6 +155,12 @@ const searchOptions = [
     type: 'Farm',
     page: 'Setups',
   },
+  // Pokérus
+  {
+    display: 'Pokérus',
+    type: 'Pokérus',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
