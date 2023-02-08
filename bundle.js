@@ -12469,10 +12469,11 @@ window.Wiki = {
   ...require('./markdown-renderer'),
   ...require('./discord'),
   pokemon: require('./pages/pokemon'),
+  dreamOrbs: require('./pages/dreamOrbs'),
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/pokemon":114,"./typeahead":115}],106:[function(require,module,exports){
+},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dreamOrbs":114,"./pages/pokemon":115,"./typeahead":116}],106:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const saveChanges = (editor, filename, btn) => {
@@ -12862,6 +12863,22 @@ module.exports = {
 };
 
 },{}],114:[function(require,module,exports){
+const getOrbLoot = (orb) => {
+  const weightSum = orb.items.reduce((acc, item) => acc + item.weight, 0);
+  return orb.items.map(item => {
+    return {
+      name: item.item.id,
+      itemType: ItemType[item.item.type],
+      chance: item.weight / weightSum,
+    }
+  });
+};
+
+module.exports = {
+  getOrbLoot
+};
+
+},{}],115:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -12921,7 +12938,7 @@ module.exports = {
     getBestVitamins,
 }
 
-},{}],115:[function(require,module,exports){
+},{}],116:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [
