@@ -1,0 +1,1 @@
+Dungeons include forests, caves, buildings, and other places that are accessible by spending Dungeon Tokens in which wild Pokémon are encountered. Apart from the entrance fee, they differ from routes in that only 60 seconds are given to find and defeat a "Boss Pokémon" or "Boss Trainer", after which the dungeon is considered cleared.
