@@ -10,7 +10,7 @@
         </thead>
         <tbody>
             <!-- ko foreach: Wiki.dreamOrbs.getOrbLoot($data) -->
-            <tr>
+            <tr class="text-nowrap clickable" data-bind="click: () => { Wiki.gotoPage('Items', $data.name); return false; }">
                 <td data-bind="text: $data.name"></td>
                 <td data-bind="text: $data.itemType"></td>
                 <td data-bind="text: `${($data.chance * 100).toLocaleString()}%`"></td>
