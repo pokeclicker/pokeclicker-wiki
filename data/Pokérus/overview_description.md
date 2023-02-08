@@ -40,3 +40,64 @@ Different methods of catching a Pokémon will yield different amounts of EVs. If
 
 #### EV yield
 
+EVs gained | Slow EVs | Catching Method
+:--- | :---: | ---:
+0.1 | 0.01 | Wild Pokémon
+1 | 0.1 | Evolution Item
+1 | 0.1 | Shop Bought Pokémon 
+1 | 0.1 | Safari Zone Pokémon 
+0.5 | 0.05 | Wanderer Pokémon 
+
+*Note: Base wanderers (wanderers attracted by any berry) don't give EVs*
+
+#### EV yield modifiers
+
+EV modifier | Method 
+:--- | ---:
+0x | Base wanderer
+3x | Pokémon is encountered and captured as a Dungeon Pokémon
+5x | Obtained Pokémon is Shiny.
+5x | Pokémon is obtained using a Repeatball
+10x | Pokémon is encountered and captured as a Dungeon Boss Pokémon
+10x | Pokémon is encountered and captured as a Mimic
+50x | Pokémon is encountered and captured as a Roaming Pokemon
+Variable | Rowap Berry Aura
+
+#### Examples
+
+Example 1: Catching a **Shiny Dungeon Pokémon** with a **Repeatball** yields:
+**0.1\*3\*5\*5 = 7.5** 
+
+Example 2: Catching a **Shiny Roaming Pokémon* yields:
+**0.1\*5\*50 = 25 EVs**
+
+Example 3: Catching a **Shiny Roaming Pokémon** with a **Repeatball** yields:
+**0.1\*5\*5\*50 = 125 EVs**
+
+### EV Damage Multiplier
+
+EVs increase the amount of damage that a Pokémon does. EVs multiply the damage done by a Pokémon. If your Pokémon has fewer than 50 EVs, a Pokémon's EV Damage Multiplier increases by 0.01 per EV, and consequently a Pokémon gains 1% extra damage per EV for the first 50 EVs.
+
+Pokemon that have: contracted Pokérus, have left the hatchery after contracting Pokérus *(ie: not Infected)*, and have gained less than 50 EVs are considered Contagious. However, Pokémon that fulfill all the above conditions but have gained 50 or more EVs are considered Resistant. See Pokérus States for more information on Pokérus States
+
+Beyond 50 EVs, Pokémon will still gain EVs at the same rate, but will see diminishing returns with respect to the EV Damage Multiplier bonus gained per EV gained. There is no limit to this multiplier.
+
+#### EV Attack Bonus at certain benchmarks
+
+Effort Value | Pokémon Damage Multiplier 
+:--- | ---:
+50 | 1,5x
+802 | 2x
+40,121 | 3x
+643,300 | 4x
+5,540,000 | 5x
+3.2E7 | 6x
+1.4E8 | 7x
+
+#### EV Formulas
+
+**When a Pokémon has fewer than 50 EVs:**
+EV Damage Multiplier = 1 + (EV/100)
+
+**When a Pokémon has greater than 50 EVs:**
+EV Damage Multiplier = EV\*log50(1.5)
