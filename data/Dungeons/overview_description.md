@@ -31,4 +31,20 @@ Certain perks are granted to the player after clearing a Dungeon some number of 
 
  The number of each type of tile decreases with the size of the dungeon. All dungeons will be square. Here is the breakdown of each type of tile based on size: For an NxN dungeon there are:
 
+ **1 Boss Encounter Tile**
+**N chest Tiles**
+**2/*N+3 Non-Boss Encounter Tiles**
+**(N+1)/*(N-4) Empty Tiles**
+
+*Note: The entrance tile counts as an empty tile*
+
+Dungeon Size | Chests | Non-Boss Encounter Tiles | Empty Tiles
+:--- | :---: | :---: | ---:
+**5x5** | 5 | 13 | 6
+**6x6** | 6 | 15 | 14
+**7x7** | 7 | 17 | 24
+**8x8** | 8 | 19 | 36
+**9x9** | 9 | 21 | 50
+**10x10** | 10 | 23 | 66
+
 ## Dungeon Locations
