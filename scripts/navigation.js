@@ -1,6 +1,7 @@
 const { md } = require('./markdown-renderer');
 const { applyDatatables } = require('./datatables');
 const { createMarkDownEditor } = require('./markdown-editor');
+const redirections = require('./redirections');
 
 // Load our error page for when we need it
 errorPage = '';
@@ -40,8 +41,21 @@ onhashchange = (event) => {
     }
     return;
   }
-  const [ type, name, other ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
+  let [ type, name, other ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
   if (type == 'loading') {
+    return;
+  }
+  const originalType = type;
+  const originalName = name;
+  let redirectTarget;
+  while (redirectTarget = redirections.redirect({type, name})) {
+    type = redirectTarget.type;
+    name = redirectTarget.name;
+    //TODO: remove debug log
+    console.log(`Redirecting from ${originalType}/${originalName} to ${type}/${name}`);
+  }
+  if (type !== originalType || name !== originalName) {
+    gotoPage(type, name ?? '', other);
     return;
   }
   pageType(type);

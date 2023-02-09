@@ -19,12 +19,12 @@ const searchOptions = [
   // Pokémon
   {
     display: 'Pokémon',
-    type: 'Pokemon',
+    type: 'Pokémon',
     page: '',
   },
   ...Object.values(pokemonList).map(p => ({
     display: p.name,
-    type: 'Pokemon',
+    type: 'Pokémon',
     page: p.name,
   })),
   // Dungeons

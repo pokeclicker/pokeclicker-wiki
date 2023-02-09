@@ -12473,7 +12473,7 @@ window.Wiki = {
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dreamOrbs":114,"./pages/pokemon":115,"./typeahead":116}],106:[function(require,module,exports){
+},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dreamOrbs":114,"./pages/pokemon":115,"./typeahead":117}],106:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const saveChanges = (editor, filename, btn) => {
@@ -12689,6 +12689,7 @@ module.exports = {
 const { md } = require('./markdown-renderer');
 const { applyDatatables } = require('./datatables');
 const { createMarkDownEditor } = require('./markdown-editor');
+const redirections = require('./redirections');
 
 // Load our error page for when we need it
 errorPage = '';
@@ -12728,8 +12729,21 @@ onhashchange = (event) => {
     }
     return;
   }
-  const [ type, name, other ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
+  let [ type, name, other ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
   if (type == 'loading') {
+    return;
+  }
+  const originalType = type;
+  const originalName = name;
+  let redirectTarget;
+  while (redirectTarget = redirections.redirect({type, name})) {
+    type = redirectTarget.type;
+    name = redirectTarget.name;
+    //TODO: remove debug log
+    console.log(`Redirecting from ${originalType}/${originalName} to ${type}/${name}`);
+  }
+  if (type !== originalType || name !== originalName) {
+    gotoPage(type, name ?? '', other);
     return;
   }
   pageType(type);
@@ -12839,7 +12853,7 @@ module.exports = {
     gotoPage,
 };
 
-},{"./datatables":102,"./markdown-editor":106,"./markdown-renderer":111}],113:[function(require,module,exports){
+},{"./datatables":102,"./markdown-editor":106,"./markdown-renderer":111,"./redirections":116}],113:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -12939,6 +12953,59 @@ module.exports = {
 }
 
 },{}],116:[function(require,module,exports){
+//TODO: remove duplicate (meant as an example)
+const redirections = [
+    ({type, name}) => {
+        if (type === 'Pokemon') {
+            return {
+                type: 'Pokémon',
+                name
+            };
+        }
+    },
+    {
+        type: 'Pokemon',
+        name: '*',
+        redirect: {
+            type: 'Pokémon'
+        }
+    }
+];
+
+const matches = (patternOrName, string) => {
+    if (typeof patternOrName === 'string') {
+        return patternOrName === string || patternOrName === '*';
+    } else if (patternOrName instanceof RegExp) {
+        return patternOrName.test(string);
+    } else {
+        return false;
+    }
+}
+
+const redirect = ({type, name}) => {
+    for (const redirection of redirections) {
+        if (typeof redirection === 'function') {
+            const result = redirection({type, name});
+            if (result) {
+                return result;
+            }
+        } else if (typeof redirection === 'object') {
+            if (matches(redirection.type, type) && matches(redirection.name, name)) {
+                return {
+                    type: redirection.redirect?.type ?? type,
+                    name: redirection.redirect?.name ?? name
+                };
+            }
+        }
+    }
+};
+
+module.exports = {
+    redirect,
+    redirections
+};
+
+},{}],117:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [
@@ -12960,12 +13027,12 @@ const searchOptions = [
   // Pokémon
   {
     display: 'Pokémon',
-    type: 'Pokemon',
+    type: 'Pokémon',
     page: '',
   },
   ...Object.values(pokemonList).map(p => ({
     display: p.name,
-    type: 'Pokemon',
+    type: 'Pokémon',
     page: p.name,
   })),
   // Dungeons
