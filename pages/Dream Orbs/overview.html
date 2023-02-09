@@ -12,7 +12,10 @@
         <tbody>
             <!-- ko foreach: Wiki.dreamOrbs.getOrbLoot($data) -->
             <tr class="text-nowrap clickable" data-bind="click: () => { Wiki.gotoPage('Items', $data.name); return false; }">
-                <td data-bind="text: $data.name"></td>
+                <td>
+                    <img class="table-image" data-bind="if: $data.image, attr: { src: `./pokeclicker/docs/${$data.image}`, alt: `Icon of item ${$data.name}` }"/>
+                    <ko data-bind="text: $data.name"></ko>
+                </td>
                 <td data-bind="text: $data.itemType"></td>
                 <td data-bind="text: `${($data.chance * 100).toLocaleString()}%`"></td>
             </tr>
