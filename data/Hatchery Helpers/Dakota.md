@@ -1,0 +1,1 @@
+*Purchased in @[[Mahogany City]] for 100,000 Dungeon Tokens*
