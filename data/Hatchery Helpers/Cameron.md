@@ -1,0 +1,1 @@
+*Purchased from Hoenn Berry master for 100,000 Farm Points*
