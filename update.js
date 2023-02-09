@@ -21,13 +21,18 @@ const glob = require('glob');
 console.log('Updating symlinks for images');
 
 // Get all our image files
-glob('pokeclicker/docs/assets/images/**/*', (err, res) => {
+const baseDir = 'pokeclicker/docs/assets/images/';
+glob(`${baseDir}**/*`, (err, res) => {
     if (err) {
         console.error('Error getting images for symlinks', err);
     } else {
       res.forEach(filePath => {
         // Get the file name
-        const fileName = filePath.replace(/.*\//, '');
+        let fileName = filePath.replace(/.*\//, '');
+
+        if (!fileName.includes('.')) {
+            fileName = filePath.replace(baseDir, '').replace('/', '-');
+        }
 
         // Ignore any files just named after IDs
         if (/^-?\d+(-?\w)?\./.test(fileName)) return;
