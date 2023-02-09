@@ -29,3 +29,9 @@ Gems = Stage N°/80
 
 **Note:** Currency Rewards are not awarded if your Battle Frontier run is Quit. You must lose your attempt normally to gain Pokémon Dollars and Battle Points
 
+Currency Reward | Formula
+:--- | ---:
+Pokémon Dollars | Stage Beaten^2^
+Battle Points\* | Stage Beaten^2^/100
+
+\* *Battle Points are rounded to the nearest whole number*
