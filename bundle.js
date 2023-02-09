@@ -13102,6 +13102,12 @@ const searchOptions = [
     type: 'Pokérus',
     page: '',
   },
+  // Dream Orbs
+  {
+    display: 'Dream Orbs',
+    type: 'Dream Orbs',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
