@@ -1,0 +1,1 @@
+*Purchased in @[[Cinnabar Island]] for 2,000 Diamonds*
