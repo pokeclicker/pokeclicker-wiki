@@ -95,3 +95,11 @@ Images should be located in the `/images/` folder
 ```
 [pokeclicker](https://pokeclicker.com) or [scroll to header info](#header-info) or [scroll to here](#here) {#here}
 ```
+
+### Comments
+
+If you want to add a comment that won't be seen in the render version you can use the following
+
+```
+[//] (Here goes your comment)
+```
