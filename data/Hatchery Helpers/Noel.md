@@ -1,0 +1,1 @@
+*Purchased in @[[Battle Frontier]] for 20,000 Battle Points*
