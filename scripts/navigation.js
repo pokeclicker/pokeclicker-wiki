@@ -53,8 +53,7 @@ onhashchange = (event) => {
     redirectCount++;
     type = redirectTarget.type;
     name = redirectTarget.name;
-    //TODO: remove debug log
-    console.log(`Redirecting from ${originalType}/${originalName} to ${type}/${name} [Redirect ${redirectCount}]`);
+    console.debug(`Redirecting from ${originalType}/${originalName} to ${type}/${name} [Redirect ${redirectCount}]`);
     //TODO: check for infinite loops, make sure we don't redirect to the same page
   }
   if (type !== originalType || name !== originalName) {
