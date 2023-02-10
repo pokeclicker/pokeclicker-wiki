@@ -12470,10 +12470,11 @@ window.Wiki = {
   ...require('./discord'),
   pokemon: require('./pages/pokemon'),
   dreamOrbs: require('./pages/dreamOrbs'),
+  dungeons: require('./pages/dungeons'),
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dreamOrbs":114,"./pages/pokemon":115,"./typeahead":116}],106:[function(require,module,exports){
+},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dreamOrbs":114,"./pages/dungeons":115,"./pages/pokemon":116,"./typeahead":117}],106:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const saveChanges = (editor, filename, btn) => {
@@ -12879,6 +12880,73 @@ module.exports = {
 };
 
 },{}],115:[function(require,module,exports){
+const tableClearCounts = [
+    {
+        clears: 0,
+        debuff: false
+    },
+    {
+        clears: 100,
+        debuff: false
+    },
+    {
+        clears: 500,
+        debuff: false
+    },
+    {
+        clears: 0,
+        debuff: true
+    }
+];
+
+const getDungeonLoot = (dungeon) => {
+    const tierWeights = tableClearCounts.map(clearSetup => dungeon.getLootTierWeights(clearSetup.clears, clearSetup.debuff));
+    const lootTiers = [];
+    for (let tier of Object.keys(tierWeights[0]).sort((a, b) => a - b)) {
+        const tierLoot = dungeon.lootTable[tier];
+        const tierWeightSum = tierLoot.reduce((acc, item) => acc + (item.weight ?? 1), 0);
+        const tierData = {
+            tier: GameConstants.camelCaseToString(tier),
+            items: [],
+        };
+        for (let item of tierLoot) {
+            const itemWeight = item.weight ?? 1;
+            const itemChance = itemWeight / tierWeightSum;
+            const itemGameData = UndergroundItems.getByName(item.loot) ?? ItemList[item.loot];
+            let pokemonData;
+            if (!itemGameData) {
+                pokemonData = pokemonMap[item.loot];
+            }
+            const itemData = {
+                item: itemGameData?.displayName ?? pokemonData?.name,
+                type: pokemonData ? 'pokemon' : 'item',
+                image: itemGameData?.image ?? (pokemonData ? `assets/images/pokemon/${pokemonData.id}.png` : null),
+                weight: item.weight,
+                chanceInTier: itemChance,
+                chances: []
+            };
+            for (let i = 0; i < tierWeights.length; i++) {
+                const tierWeight = tierWeights[i][tier];
+                const tierChance = itemChance * tierWeight;
+                itemData.chances.push({
+                    chance: tierChance,
+                    clears: tableClearCounts[i].clears,
+                    debuff: tableClearCounts[i].debuff
+                });
+            }
+            tierData.items.push(itemData);
+        }
+        lootTiers.push(tierData);
+    }
+    return lootTiers;
+};
+
+module.exports = {
+    getDungeonLoot,
+    tableClearCounts
+};
+
+},{}],116:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -12938,7 +13006,7 @@ module.exports = {
     getBestVitamins,
 }
 
-},{}],116:[function(require,module,exports){
+},{}],117:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [

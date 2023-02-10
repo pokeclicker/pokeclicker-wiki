@@ -55,6 +55,11 @@ blockquote {
 img.pixel {
   image-rendering: pixelated;
 }
+/* Images in tables - for example, small item icons next to text */
+.table-image {
+  height: 2em;
+  margin-right: 0.25em;
+}
 /* Table cell will be as small as possible */
 tr.tight,
 td.tight {
