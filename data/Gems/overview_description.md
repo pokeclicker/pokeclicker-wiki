@@ -1,5 +1,6 @@
 Gems are an item dropped when defeating any kind of Pokémon once the player has the Gem Case unlocked after defeat Giovanni Gym in Viridian City
-[[Gem_case.png]]
+
+[[File:Gem_case.png]]
 
 These typed Gems can be invested into the Gems tab to increase type effectivity, and your damage output. They can also be used to purchase and use flutes.
 
