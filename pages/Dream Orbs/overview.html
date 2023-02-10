@@ -13,7 +13,9 @@
             <!-- ko foreach: Wiki.dreamOrbs.getOrbLoot($data) -->
             <tr class="text-nowrap clickable" data-bind="click: () => { Wiki.gotoPage('Items', $data.name); return false; }">
                 <td>
-                    <img class="table-image" data-bind="if: $data.image, attr: { src: `./pokeclicker/docs/${$data.image}`, alt: `Icon of item ${$data.name}` }"/>
+                    <!-- ko if: $data.image -->
+                    <img class="table-image" data-bind="attr: { src: `./pokeclicker/docs/${$data.image}`, alt: `Icon of item ${$data.name}` }"/>
+                    <!-- /ko -->
                     <ko data-bind="text: $data.name"></ko>
                 </td>
                 <td data-bind="text: $data.itemType"></td>
