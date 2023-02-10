@@ -2,7 +2,7 @@ Dream Orbs are items obtained with the game closed that once open give random re
 
 ## Acquisition
 
-Dream Orbs are obtainable once the Force of Nature are captured (@[[Pokemon/Thundurus]], @[[Pokemon/Tornadus]] and @[[Pokemon/Landorus]]). From that point player will get 1 Dream Orb for each full consecutive hour with the game closed.
+Dream Orbs are obtainable once the Force of Nature are captured (@[[Pokemon/Thundurus]], @[[Pokemon/Tornadus]] and @[[Pokemon/Landorus]]). From that point player will get 1 Dream Orb for each full consecutive hour with the game closed.
 There are 3 colors of orbs: Pink, Green and Orange. Player only get Pink orbs at first, but can unlock the other 2 colors by getting the exclusive Pokémon in previous color (@[[Pokemon/Thundurus (Therian)]], @[[Pokemon/Tornadus (Therian)]] and @[[Pokemon/Landorus (Therian)]])
 
 ## Opening Orbs
