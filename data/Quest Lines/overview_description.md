@@ -1,0 +1,1 @@
+Questlines are special kinds of Quests where the player follows a series of steps to unlock progress in the current Region, unlock certain mechanics or receive different rewards like Items and Pokémon. Some are activated at certain points of the game while others require the player to check a Bulletin Board.
