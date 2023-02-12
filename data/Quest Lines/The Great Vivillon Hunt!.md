@@ -21,4 +21,4 @@ Step | Hint | Dungeon(s) | Vivillon Form
 30 | It has been spotted dancing in the moonlight | [[Dungeons/Mt Moon]] | [[Pokemon/Vivillon (High Plains)]]
 32 | It's surrounded by dragons | [[Dungeons/Dragonspiral Tower]] | [[Pokemon/Vivillon (Savanna)]]
 34 | It can be found at a very cold place | [[Dungeons/Frozen Cavern]] | [[Pokemon/Vivillon (Icy Snow)]]
-36 | Only the strongest Challengers can reach it | [[Battle Frontier]] stage 666 | [[Pokemon/Vivillon (Pokeball)]]
+36 | Only the strongest Challengers can reach it | [[Battle Frontier]] stage 666 | [[Pokemon/Vivillon (Poké Ball)]]
