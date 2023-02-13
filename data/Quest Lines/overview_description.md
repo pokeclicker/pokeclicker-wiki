@@ -5,8 +5,8 @@ Bulletin boards are places inside **starting towns** that can contain multiple q
 
 Region | City | N° of possible quests
 ---: | :--- | :---
-**Kanto (main) ** | Pallet Town | 1
-**Kanto (Sevii 4567) ** | Pummelo Island | 1
+**Kanto (main)** | Pallet Town | 1
+**Kanto (Sevii 4567)** | Pummelo Island | 1
 **Johto** | New Bark Town | 3
 **Hoenn** | Littleroot Town | 6
 **Sinnoh** | Twin leaf Town | 2
