@@ -11,8 +11,8 @@ Region | City | N° of possible quests
 **Hoenn** | Littleroot Town | 6
 **Sinnoh** | Twin leaf Town | 2
 **Kalos** | Vaniville Town | 4
-**Alola (main) ** | Proffesour Kukui's lab | 3
-**Alola (Hoppip) ** | Hoppip town | 1
+**Alola (main)** | Proffesour Kukui's lab | 3
+**Alola (Hoppip)** | Hoppip town | 1
 **Galar South** | Postwick | 2
 **Galar Isle of Armor** | master dojo | 2
 **Galar Crown Tundra** |Freezington | 3
