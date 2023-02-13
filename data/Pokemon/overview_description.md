@@ -32,4 +32,22 @@ The **Attack bonus** Can be increased using 2 different @[[Vitamins]] protein an
 * **Proteins** gives 1+ attack bonus. *In our example metapod will have 6 attack bonus after use 1 protein and 15 attack bonus after use 10 proteins. While Pidgeot (with 112 base attack) Will have 29 attack bonus after 1 protein and 38 after 10 proteins*
 * **Calcium** gives 1% of base attack as attack bonus. *Un our example metapod will have 5,2 attack bonus after 1 calcium and 7 attack bonus after 10 calcium. While Pidgeot will have 29,12 attack bonus after 1 calcium and 39,2 after 10 calcium*
 
+### Egg Steps
+
+Egg Steps Is the value that determinantes how long it will take for an egg to open. Routes gives different values of egg steps depending on their difficulty. Egg steps are agruped in egg cycles (1 egg cycle = 40 egg steps)
+
+The egg cycle value for each species begins with the canonical value, with alternate forms using the same value as the base form, and is subject to few modifiers:
+
+* An evolved Pokemon’s egg cycle value is 1.5 times the egg cycle value of their pre-evolved form. In the case of third-stage Pokemon, their egg cycle value is 1.5 times the egg cycle value of the second-stage Pokemon
+* A baby Pokemon’s egg cycle value is 0.8 times the egg cycle value of the base species
+There is a hard cap of 120 egg cycles, equaling 4800 steps, after all factors have been accounted for
+
+There are exceptions to this rule:
+
+* The egg cycle values for Sand Cloak and Trash Cloak forms of Burmy and Wormadam are 1.5x higher than their Plant Cloak counterparts, since Burmy (plant) evolves into Burmy (sand) and Burmy (trash).
+* Cherrim (sunshine) has 1.5x the egg cycle value of Cherrim (overcast)
+
+## Pokémon List
+**WARNING**
+This list include pokemon that are in code but **aren't** currently **Obtainable**
 
