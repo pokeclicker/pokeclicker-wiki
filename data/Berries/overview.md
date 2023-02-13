@@ -5,7 +5,7 @@
 Some berries have special abilities, also called Auras. These auras often affect other berry growth and mutation, but others may affect other sections of the game. These auras are frequently used to help players find shiny pokémon or breed more efficiently. Here is a list of berry auras.
 
 Aura | Effect | Notes | Berries
-:--- | :---: | :---: | ---:
+:--- | :---: | :---: | :---
 **Aura boost** | Boosts aura effects of the 8 surrounding berries | This aura can only be applied to a berry once and does not affect other berries with this effect. | @[[Berries/Lum]]
 **Overgrow** | Plants a berry of the same type in one of the 8 surrounding empty plots | Original berry needs to be ripe before this takes effect. This counts as a mutation and is affected by the same mutation Boosts and isn't stopped by Freeze mulch | @[[Berries/Rindo]] and @[[Berries/Pamtre]]
 **Parasite** | Transforms a berry in one of the 8 surrounding berries into the same berry as the parasite | Original berry needs to be ripe before this takes effect. This counts as a mutation and is affected by the same mutation Boosts. Parasite only affects berries in the taller and later stages. Seed and sprout cannot be taken over. The newly taken over berry will start its timer at the start of the same stage as it was taken over. This counts as a mutation and is affected by the same mutation Boosts and isn't stopped by Freeze mulch | @[[Berries/Occa]], @[[Berries/Kebia]] and @[[Berries/Colbur]]
