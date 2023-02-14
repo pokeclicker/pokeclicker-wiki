@@ -2,7 +2,7 @@
 
 ## Special Abilities (Auras)
 
-Some berries have special abilities, also called Auras. These auras often affect other berry growth and mutation, but others may affect other sections of the game. These auras are frequently used to help players find shiny pokémon or breed more efficiently. Here is a list of berry auras.
+Some berries have special abilities, also called Auras. These auras often affect other berry growth and mutation, but others may affect other sections of the game. These auras are frequently used to help players find shiny Pokémon or breed more efficiently. Here is a list of berry auras.
 
 Aura | Effect | Notes | Berries
 :--- | :---: | :---: | :---
@@ -18,7 +18,7 @@ Aura | Effect | Notes | Berries
 **Wither prevention** | Prevents other berries from withering while this is berry is ripe | A single berry with this ability will affect the entire field. Berries with this ability do not affect each other. Once this berry withers or is harvested other berries will reset their timers from the beginning of the Ripe stage. | @[[Berries/Petaya]]
 **Egg Growth** | Increases the growth speed of eggs in the hatchery | Effect is multiplicative over the whole field. Effect stacks with Blaze Cassette | @[[Berries/Chople]]
 **Shiny Chance** | Increases chance of finding Shiny Pokémon | Effect is multiplicative over the whole field. Effect stacks with Shiny Charm | @[[Berries/Starf]]
-**Atract Aura** | Increases chance of Pokémon wandering onto the farm | Effect is multiplicative over the whole field | @[[Berries/Roseli]]
+**Attract Aura** | Increases chance of Pokémon wandering onto the farm | Effect is multiplicative over the whole field | @[[Berries/Roseli]]
 **Roamer Chance** | Increases chance of finding Roaming Pokémon on routes | Effect is multiplicative over the whole field | @[[Berries/Jaboca]]
 **EV Gain** | Increases amount of EVs gained in all applicable situations. | Effect is multiplicative over the whole field | @[[Berries/Rowap]]
-**Repel** | Reduce the chances of wandering pokemons | This aura is additive and effect over the whole field | @[[Berries/Micle]]
+**Repel** | Reduce the chances of wandering Pokémon | This aura is additive and effect over the whole field | @[[Berries/Micle]]
