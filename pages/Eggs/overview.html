@@ -18,7 +18,7 @@
             </thead>
             <tbody data-bind="foreach: new Array(Math.max(...Object.values(App.game.breeding.hatchList).map(a => a[$data].length))).fill('')">
                 <tr data-bind="foreach: Object.keys(App.game.breeding.hatchList)">
-                    <td data-bind="with: Object.values(App.game.breeding.hatchList)[$data][$parents[1]][$parentContext.$index()]">
+                    <td data-bind="with: App.game.breeding.hatchList[$data][$parents[1]][$parentContext.$index()]">
                         <svg width="80px" viewBox="0 0 126.7 126.7" class="egg" xmlns="http://www.w3.org/2000/svg" data-bind="attr: {'data-type1': PokemonType[pokemonMap[$data].type[0] || 0], 'data-type2': PokemonType[pokemonMap[$data].type[1] || pokemonMap[$data].type[0] || 0]}">
                             <defs>
                                 <filter id="b" width="1.193" height="1.123" x="-.096" y="-.061" color-interpolation-filters="sRGB">
