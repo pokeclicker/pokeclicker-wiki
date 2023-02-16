@@ -1,13 +1,17 @@
 ##### This is a guide for how to help contribute to the wiki.
 
 ## How to edit pages
-Currently, you can only edit the wiki by opening a Pull Request to the [GitHub Repository](https://github.com/pokeclicker/pokeclicker-wiki). We will be working on adding a better tool in the future.
+Currently, There are two ways to edit the wiki:
+* By opening a Pull Request to the [GitHub Repository](https://github.com/pokeclicker/pokeclicker-wiki). This method is needed for create **New pages** And edit **Html pages**
+* Logging in the wiki through a Discord account. This method only work for edit already **existent Markdown Pages**
+*We will be working on adding a better tool in the future.*
 
 ### Edit markdown pages
-For editing markdown pages, you can test your changes by pressing the edit icon in the top right cornor of each page, and change the markup.
+For editing markdown pages, you can test your changes by pressing the **edit** icon in the top right cornor of each page, and change the markup.
 The changes will be shown live, and can then be added using either the GitHub website, or your GitHub tool of choice.
 All the standard markdown tools should be avaiable. If anything is missing, ask for it on discord!
 You can see some tips for markdown below, like how to make links for other wiki pages.
+[//] (Problems editing the markdown pages in Android? Change to desktop view to avoid Android duplicating words)
 
 ### Edit HTML pages
 To test your changes for HTML pages, you need to run the site locally. This can be done using a tool like VS Codes "Live Server".
