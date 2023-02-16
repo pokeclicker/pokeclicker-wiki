@@ -12968,6 +12968,11 @@ const searchOptions = [
     type: 'Pokemon',
     page: p.name,
   })),
+  {
+    display: 'Mega Pokémon',
+    type: 'Mega Pokemon',
+    page: '',
+  },
   // Dungeons
   {
     display: 'Dungeons',
