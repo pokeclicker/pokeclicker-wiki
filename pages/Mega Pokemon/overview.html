@@ -1,0 +1,96 @@
+<h4>Currently Obtainable Mega Pokémon</h4>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th class="align-middle">Pokémon</th>
+                <th class="text-center align-middle">Mega Stone</th>
+                <th class="text-center align-middle">Required Attack</th>
+                <th class="align-middle">Acquisition Method</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- ko foreach: pokemonList.filter(p => p.evolutions).flatMap(p => p.evolutions).filter(e => e.restrictions.find(r => r instanceof MegaEvolveRequirement)) -->
+            <tr data-bind="with: { basePokemon: PokemonHelper.getPokemonByName($data.basePokemon), megaPokemon: PokemonHelper.getPokemonByName($data.evolvedPokemon), info: megaInfo[$data.evolvedPokemon] }">
+                <td class="align-middle" data-bind="html: Wiki.md.renderInline(`[[Pokemon/${megaPokemon.name}]]`)"></td>
+                <td class="text-center align-middle" data-bind="text: $data.info?.megaStone || '-'"></td>
+                <td class="text-center align-middle" data-bind="text: ($data.basePokemon.attack * 500).toLocaleString()"></td>
+                <td class="align-middle" data-bind="html: Wiki.md.renderInline($data.info?.method ?? '') || '-'"></td>
+            </tr>
+            <!-- /ko -->
+        </tbody>
+    </table>
+</div>
+
+<script type="text/javascript">
+const megaInfo = {
+    'Mega Alakazam': {
+        megaStone: 'Alakazite',
+        method: `Trade for 1,000 Pink Shards in [[Towns/Laverre City]].`,
+    },
+    'Mega Gengar': {
+        megaStone: 'Gengarite',
+        method: `Encounter 666 [[Pokemon/Gastly]], 444 [[Pokemon/Haunter]], and 13 [[Pokemon/Gengar]] then battle Aster in [[Towns/Laverre City]].`,
+    },
+    'Mega Kangaskhan': {
+        megaStone: 'Kanghaskhanite',
+        method: `Rare chest drop in [[Dungeons/Glittering Cave]].`,
+    },
+    'Mega Aerodactyl': {
+        megaStone: 'Aerodactylite',
+        method: `Found by digging in the [[Underground]].`,
+    },
+    'Mega Ampharos': {
+        megaStone: 'Ampharosite',
+        method: `Enter the code given by the Electric Trainer in [[Towns/Courmarine City]] (including the question mark) in the Start -> Save menu.`,
+    },
+    'Mega Heracross': {
+        megaStone: 'Heracronite',
+        method: `Rare chest drop in [[Dungeons/Santalune Forest]].`,
+    },
+    'Mega Tyranitar': {
+        megaStone: 'Tyranitarite',
+        method: `Clear Grant's Gym 2000 or more times then battle Grant in [[Towns/Cyllage City]].`,
+    },
+    'Mega Gardevoir': {
+        megaStone: 'Gardevoirite',
+        method: `Battle Diantha in [[Towns/Lumiose City]].`,
+    },
+    'Mega Sableye': {
+        megaStone: 'Sablenite',
+        method: `Found by digging in the [[Underground]].`,
+    },
+    'Mega Mawile': {
+        megaStone: 'Mawilite',
+        method: `Found by digging in the [[Underground]].`,
+    },
+    'Mega Aggron': {
+        megaStone: 'Aggronite',
+        method: `Clear Grant's Gym 2,000 or more times then battle Grant in [[Towns/Cyllage City]].`,
+    },
+    'Mega Absol': {
+        megaStone: 'Absolite',
+        method: `Battle Calem in [[Towns/Kiloude City]].`,
+    },
+    'Mega Lopunny': {
+        megaStone: 'Lopunnite',
+        method: `Clear stage 690 in [[Battle Frontier]].`,
+    },
+    'Mega Garchomp': {
+        megaStone: 'Garchompite',
+        method: `Rare chest drop in [[Dungeons/Victory Road Kalos]].`,
+    },
+    'Mega Lucario': {
+        megaStone: 'Lucarionite',
+        method: `Defeat Korrina in [[Towns/Shalour City]].`,
+    },
+    'Mega Abomasnow': {
+        megaStone: 'Abomasite',
+        method: `Rare chest drop in [[Dungeons/Frost Cavern]].`,
+    },
+    'Mega Audino': {
+        megaStone: 'Audinite',
+        method: `Obtain the Therian forms of Tornadus, Thundurus, and Landorus from [[Dream Orbs]] then battle the Dream Researcher in [[Towns/Black and White Park]].`,
+    },
+};
+</script>
