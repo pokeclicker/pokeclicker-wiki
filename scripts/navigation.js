@@ -18,9 +18,18 @@ const applyBindings = ko.observable(false);
 
 // This is our main function for changing pages
 // Look at onhashchange for what happens after
-const gotoPage = (type, name, other) => {
+const gotoPage = (type, name, other, noHistory) => {
+  const hash = `#!${encodeURI(type).replace(/%20/g, '_')}/${encodeURI(name).replace(/%20/g, '_')}${other ? `/${other}`: ''}`;
+  if (noHistory) {
+    window.history.replaceState(null, null, hash);
+    window.dispatchEvent(new HashChangeEvent('hashchange', {
+      newURL: window.location.origin + window.location.pathname + window.location.hash,
+      oldURL: window.location.origin + '#!',
+    }));
+    return;
+  }
   // Update our page hash, so if we reload it will load this page
-  window.location.hash = `#!${encodeURI(type).replace(/%20/g, '_')}/${encodeURI(name).replace(/%20/g, '_')}${other ? `/${other}`: ''}`;
+  window.location.hash = hash;
 };
 
 // When the hash changes, we will load the new page
@@ -56,7 +65,7 @@ onhashchange = (event) => {
     //TODO: check for infinite loops, make sure we don't redirect to the same page
   }
   if (type !== originalType || name !== originalName) {
-    gotoPage(type, name ?? '', other);
+    gotoPage(type, name ?? '', other, true);
     return;
   }
   pageType(type);
