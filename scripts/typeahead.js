@@ -27,6 +27,11 @@ const searchOptions = [
     type: 'Pokémon',
     page: p.name,
   })),
+  {
+    display: 'Mega Pokémon',
+    type: 'Mega Pokemon',
+    page: '',
+  },
   // Dungeons
   {
     display: 'Dungeons',
