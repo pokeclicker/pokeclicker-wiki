@@ -13,7 +13,7 @@
         <table class="table table-hover table-striped table-bordered text-center">
             <thead>
                 <tr data-bind="foreach: Object.keys(App.game.breeding.hatchList)">
-                    <th class="col-2" data-bind="text: EggType[$data]"></th>
+                    <th class="col" data-bind="text: EggType[$data]"></th>
                 </tr>
             </thead>
             <tbody data-bind="foreach: new Array(Math.max(...Object.values(App.game.breeding.hatchList).map(a => a[$data].length))).fill('')">
