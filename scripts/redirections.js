@@ -14,7 +14,7 @@ const redirections = [
         redirect: {
             type: 'Pokémon'
         }
-    }
+    },
 ];
 
 const matches = (patternOrName, string) => {

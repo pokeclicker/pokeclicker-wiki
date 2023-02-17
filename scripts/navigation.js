@@ -49,11 +49,10 @@ onhashchange = (event) => {
   const originalName = name;
   let redirectTarget;
   let redirectCount = 0;
-  while (redirectTarget = redirections.redirect({type, name}) && redirectCount < 30) {
-    redirectCount++;
+  while (redirectCount++ < 30 && (redirectTarget = redirections.redirect({type, name}))) {
     type = redirectTarget.type;
     name = redirectTarget.name;
-    console.debug(`Redirecting from ${originalType}/${originalName} to ${type}/${name} [Redirect ${redirectCount}]`);
+    console.debug(`[Redirect ${redirectCount}] ${originalType}/${originalName} → ${type}/${name}`);
     //TODO: check for infinite loops, make sure we don't redirect to the same page
   }
   if (type !== originalType || name !== originalName) {
