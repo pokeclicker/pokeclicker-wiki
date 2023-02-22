@@ -55,7 +55,7 @@
                         </tr>
                         <!-- ko foreach: $data.items -->
                             <tr>
-                                <td class="text-nowrap clickable" data-bind="click: () => { Wiki.gotoPage($data.type === 'pokemon' ? 'Pokemon' : 'Items', $data.item); return false; }">
+                                <td class="text-nowrap clickable" data-bind="click: () => { Wiki.gotoPage($data.type === 'pokemon' ? 'Pokémon' : 'Items', $data.item); return false; }">
                                     <!-- ko if: $data.image -->
                                     <img class="table-image" data-bind="attr: { src: `./pokeclicker/docs/${$data.image}`, alt: `Icon of ${$data.type === 'pokemon' ? 'Pokémon' : $data.type} ${$data.item}` }"/>
                                     <!-- /ko -->
