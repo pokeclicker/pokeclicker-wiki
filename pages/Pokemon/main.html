@@ -353,6 +353,24 @@
                     </div>
                 </div>
                 <!-- /ko -->
+
+                <!--
+                    QUESTS
+                -->
+                <!-- ko if: $data[PokemonLocationType.QuestLineReward] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-quest-line-reward" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            Quest Line Reward
+                        </button>
+                    </h4>
+                    <div id="obtain-method-quest-line-reward" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.QuestLineReward])">
+                            <a class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Quest Lines/${$data}` }"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
             <!-- /ko -->
             </div>
         </div>
