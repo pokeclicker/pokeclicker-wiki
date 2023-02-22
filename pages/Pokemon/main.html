@@ -97,7 +97,7 @@
                     </h4>
                     <div id="obtain-method-roaming" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Roaming])">
-                            <span class="badge text-bg-secondary" data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region]) + `${$data.requirements ? ' 🔒' : ''}`,
+                            <span class="badge text-bg-secondary" data-bind="text: ($data.roamingGroup?.name ?? GameConstants.camelCaseToString(GameConstants.Region[$data.region])) + `${$data.requirements ? ' 🔒' : ''}`,
                             tooltip: {
                                 title: $data.requirements ?? '',
                                 html: false,
