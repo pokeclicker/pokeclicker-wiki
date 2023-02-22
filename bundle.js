@@ -12930,6 +12930,54 @@ const itemTypeCategories = {
     berry: 'Berries',
 };
 
+/**
+ * Returns a map of items to their chance of dropping in the given dungeon.
+ * Ignores the ignoreDebuff flag.
+ * @param dungeon
+ * @param clears
+ * @param debuffed
+ * @return {Map<Loot, number>}
+ */
+const getDungeonLootChancesIgnoringFlag = (dungeon, clears, debuffed = false) => {
+    const tierWeights = dungeon.getLootTierWeights(clears, debuffed);
+    const itemToChance = new Map();
+    for (let tier of Object.keys(tierWeights).sort((a, b) => a - b)) {
+        const tierLoot = dungeon.lootTable[tier];
+        const tierWeightSum = tierLoot.reduce((acc, item) => acc + (item.weight ?? 1), 0);
+        for (let item of tierLoot) {
+            const itemWeight = item.weight ?? 1;
+            const itemChance = itemWeight / tierWeightSum * tierWeights[tier];
+            itemToChance.set(item, itemChance);
+        }
+    }
+    return itemToChance;
+};
+
+/**
+ * Returns a map of items to their chance of dropping in the given dungeon.
+ * Takes into account the ignoreDebuff flag.
+ * If the debuff is active and there are items that ignore the debuff, the chance of all items is reduced based on the non-debuffed chance of those items.
+ * @param dungeon
+ * @param clears
+ * @param debuffed
+ * @return {Map<Loot, number>}
+ */
+const getDungeonLootChances = (dungeon, clears, debuffed = false) => {
+    const itemToChance = getDungeonLootChancesIgnoringFlag(dungeon, clears, debuffed);
+    if (debuffed && Object.values(dungeon.lootTable).flat().some(item => item.ignoreDebuff)) {
+        const chancesWithoutDebuff = getDungeonLootChancesIgnoringFlag(dungeon, clears, false);
+        const chanceForItemsIgnoringDebuff = Array.from(chancesWithoutDebuff.keys())
+            .filter(item => item.ignoreDebuff)
+            .map(item => chancesWithoutDebuff.get(item))
+            .reduce((acc, chance) => acc + chance, 0);
+        for (let item of itemToChance.keys()) {
+            const chanceIgnoringDebuff = item.ignoreDebuff ? chancesWithoutDebuff.get(item) : 0;
+            itemToChance.set(item, chanceIgnoringDebuff + itemToChance.get(item) * (1 - chanceForItemsIgnoringDebuff));
+        }
+    }
+    return itemToChance;
+};
+
 const getDungeonLoot = (dungeon) => {
     const tierWeights = tableClearCounts.map(clearSetup => dungeon.getLootTierWeights(clearSetup.clears, clearSetup.debuff));
     const lootTiers = [];
@@ -12984,6 +13032,7 @@ const getDungeonLoot = (dungeon) => {
 
 module.exports = {
     getDungeonLoot,
+    getDungeonLootChances,
     tableClearCounts,
     itemTypeCategories
 };
