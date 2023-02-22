@@ -19,17 +19,17 @@ const searchOptions = [
   // Pokémon
   {
     display: 'Pokémon',
-    type: 'Pokemon',
+    type: 'Pokémon',
     page: '',
   },
   ...Object.values(pokemonList).map(p => ({
     display: p.name,
-    type: 'Pokemon',
+    type: 'Pokémon',
     page: p.name,
   })),
   {
     display: 'Mega Pokémon',
-    type: 'Mega Pokemon',
+    type: 'Mega Pokémon',
     page: '',
   },
   // Dungeons
