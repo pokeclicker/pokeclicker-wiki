@@ -12975,10 +12975,10 @@ const redirections = [
         }
     },
     {
-        type: 'Pokemon',
+        type: 'Mega Pokemon',
         name: '*',
         redirect: {
-            type: 'Pokémon'
+            type: 'Mega Pokémon'
         }
     },
 ];
@@ -13048,7 +13048,7 @@ const searchOptions = [
   })),
   {
     display: 'Mega Pokémon',
-    type: 'Mega Pokemon',
+    type: 'Mega Pokémon',
     page: '',
   },
   // Dungeons

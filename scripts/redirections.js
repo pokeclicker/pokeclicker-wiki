@@ -9,10 +9,10 @@ const redirections = [
         }
     },
     {
-        type: 'Pokemon',
+        type: 'Mega Pokemon',
         name: '*',
         redirect: {
-            type: 'Pokémon'
+            type: 'Mega Pokémon'
         }
     },
 ];

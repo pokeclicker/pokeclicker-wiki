@@ -29,7 +29,7 @@ const searchOptions = [
   })),
   {
     display: 'Mega Pokémon',
-    type: 'Mega Pokemon',
+    type: 'Mega Pokémon',
     page: '',
   },
   // Dungeons
