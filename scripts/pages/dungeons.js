@@ -39,11 +39,11 @@ const itemTypeCategories = {
  * @param debuffed
  * @return {Map<Loot, number>}
  */
-const getDungeonLootChancesIgnoringFlag = (dungeon, clears, debuffed = false) => {
+const getDungeonLootChancesIgnoringFlag = (dungeon, clears, debuffed = false, requirement = () => true) => {
     const tierWeights = dungeon.getLootTierWeights(clears, debuffed);
     const itemToChance = new Map();
     for (let tier of Object.keys(tierWeights).sort((a, b) => a - b)) {
-        const tierLoot = dungeon.lootTable[tier];
+        const tierLoot = dungeon.lootTable[tier].filter(requirement);
         const tierWeightSum = tierLoot.reduce((acc, item) => acc + (item.weight ?? 1), 0);
         for (let item of tierLoot) {
             const itemWeight = item.weight ?? 1;
@@ -63,10 +63,10 @@ const getDungeonLootChancesIgnoringFlag = (dungeon, clears, debuffed = false) =>
  * @param debuffed
  * @return {Map<Loot, number>}
  */
-const getDungeonLootChances = (dungeon, clears, debuffed = false) => {
-    const itemToChance = getDungeonLootChancesIgnoringFlag(dungeon, clears, debuffed);
+const getDungeonLootChances = (dungeon, clears, debuffed = false, requirement = () => true) => {
+    const itemToChance = getDungeonLootChancesIgnoringFlag(dungeon, clears, debuffed, requirement);
     if (debuffed && Object.values(dungeon.lootTable).flat().some(item => item.ignoreDebuff)) {
-        const chancesWithoutDebuff = getDungeonLootChancesIgnoringFlag(dungeon, clears, false);
+        const chancesWithoutDebuff = getDungeonLootChancesIgnoringFlag(dungeon, clears, false, requirement);
         const chanceForItemsIgnoringDebuff = Array.from(chancesWithoutDebuff.keys())
             .filter(item => item.ignoreDebuff)
             .map(item => chancesWithoutDebuff.get(item))
