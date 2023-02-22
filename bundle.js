@@ -12924,6 +12924,12 @@ const tableClearCounts = [
     }
 ];
 
+const itemTypeCategories = {
+    pokemon: 'Pokémon',
+    item: 'Items',
+    berry: 'Berries',
+};
+
 const getDungeonLoot = (dungeon) => {
     const tierWeights = tableClearCounts.map(clearSetup => dungeon.getLootTierWeights(clearSetup.clears, clearSetup.debuff));
     const lootTiers = [];
@@ -12937,16 +12943,26 @@ const getDungeonLoot = (dungeon) => {
         for (let item of tierLoot) {
             const itemWeight = item.weight ?? 1;
             const itemChance = itemWeight / tierWeightSum;
-            const itemGameData = UndergroundItems.getByName(item.loot) ?? ItemList[item.loot];
+            let itemGameData = UndergroundItems.getByName(item.loot) ?? ItemList[item.loot];
+            let itemType = 'item';
+            if (!itemGameData && typeof BerryType[item.loot] === 'number') {
+                itemGameData = {
+                    displayName: item.loot,
+                    image: `assets/images/items/berry/${item.loot}.png`
+                };
+                itemType = 'berry';
+            }
             let pokemonData;
             if (!itemGameData) {
                 pokemonData = pokemonMap[item.loot];
+                itemType = 'pokemon';
             }
             const itemData = {
                 item: itemGameData?.displayName ?? pokemonData?.name,
-                type: pokemonData ? 'pokemon' : 'item',
+                type: itemType,
                 image: itemGameData?.image ?? (pokemonData ? `assets/images/pokemon/${pokemonData.id}.png` : null),
                 weight: item.weight,
+                ignoreDebuff: item.ignoreDebuff,
                 chanceInTier: itemChance,
                 chances: []
             };
@@ -12968,7 +12984,8 @@ const getDungeonLoot = (dungeon) => {
 
 module.exports = {
     getDungeonLoot,
-    tableClearCounts
+    tableClearCounts,
+    itemTypeCategories
 };
 
 },{}],116:[function(require,module,exports){
