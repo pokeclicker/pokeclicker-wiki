@@ -3,6 +3,7 @@ const getOrbLoot = (orb) => {
   return orb.items.map(item => {
     return {
       name: item.item.id,
+      image: item.item.type === ItemType.underground ? UndergroundItems.getByName(item.item.id)?.image : ItemList[item.item.id]?.image,
       itemType: ItemType[item.item.type],
       chance: item.weight / weightSum,
     }
