@@ -12921,6 +12921,14 @@ const tableClearCounts = [
     {
         clears: 0,
         debuff: true
+    },
+    {
+        clears: 100,
+        debuff: true
+    },
+    {
+        clears: 500,
+        debuff: true
     }
 ];
 
@@ -12980,17 +12988,15 @@ const getDungeonLootChances = (dungeon, clears, debuffed = false) => {
 
 const getDungeonLoot = (dungeon) => {
     const tierWeights = tableClearCounts.map(clearSetup => dungeon.getLootTierWeights(clearSetup.clears, clearSetup.debuff));
+    const itemChanceMaps = tableClearCounts.map(clearSetup => getDungeonLootChances(dungeon, clearSetup.clears, clearSetup.debuff));
     const lootTiers = [];
     for (let tier of Object.keys(tierWeights[0]).sort((a, b) => a - b)) {
         const tierLoot = dungeon.lootTable[tier];
-        const tierWeightSum = tierLoot.reduce((acc, item) => acc + (item.weight ?? 1), 0);
         const tierData = {
             tier: GameConstants.camelCaseToString(tier),
             items: [],
         };
         for (let item of tierLoot) {
-            const itemWeight = item.weight ?? 1;
-            const itemChance = itemWeight / tierWeightSum;
             let itemGameData = UndergroundItems.getByName(item.loot) ?? ItemList[item.loot];
             let itemType = 'item';
             if (!itemGameData && typeof BerryType[item.loot] === 'number') {
@@ -13011,14 +13017,11 @@ const getDungeonLoot = (dungeon) => {
                 image: itemGameData?.image ?? (pokemonData ? `assets/images/pokemon/${pokemonData.id}.png` : null),
                 weight: item.weight,
                 ignoreDebuff: item.ignoreDebuff,
-                chanceInTier: itemChance,
                 chances: []
             };
             for (let i = 0; i < tierWeights.length; i++) {
-                const tierWeight = tierWeights[i][tier];
-                const tierChance = itemChance * tierWeight;
                 itemData.chances.push({
-                    chance: tierChance,
+                    chance: itemChanceMaps[i].get(item),
                     clears: tableClearCounts[i].clears,
                     debuff: tableClearCounts[i].debuff
                 });

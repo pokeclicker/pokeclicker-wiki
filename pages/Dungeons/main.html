@@ -44,7 +44,7 @@
                     <tr>
                         <th colspan="2"></th>
                         <!-- ko foreach: Wiki.dungeons.tableClearCounts -->
-                            <th data-bind="text: $data.debuff ? 'Debuffed' : `${$data.clears} clear${$data.clears !== 1 ? 's' : ''}`"></th>
+                            <th data-bind="text: $data.debuff ? ('Debuffed' + (Wiki.dungeons.tableClearCounts.filter(cc => cc.debuff).length > 1 ? ` (${$data.clears} clear${$data.clears !== 1 ? 's' : ''})` : '')) : `${$data.clears} clear${$data.clears !== 1 ? 's' : ''}`"></th>
                         <!-- /ko -->
                     </tr>
                 </thead>
