@@ -13021,7 +13021,7 @@ const getDungeonLoot = (dungeon) => {
                 item: itemGameData?.displayName ?? pokemonData?.name,
                 type: itemType,
                 image: itemGameData?.image ?? (pokemonData ? `assets/images/pokemon/${pokemonData.id}.png` : null),
-                weight: item.weight,
+                weight: item.weight ?? 1,
                 ignoreDebuff: item.ignoreDebuff,
                 chances: []
             };
