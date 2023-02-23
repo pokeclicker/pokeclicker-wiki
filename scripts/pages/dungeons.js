@@ -41,13 +41,14 @@ const itemTypeCategories = {
  */
 const getDungeonLootChancesIgnoringFlag = (dungeon, clears, debuffed = false, requirement = () => true) => {
     const tierWeights = dungeon.getLootTierWeights(clears, debuffed);
+    const weightSum = Object.values(tierWeights).reduce((acc, weight) => acc + weight, 0);
     const itemToChance = new Map();
     for (let tier of Object.keys(tierWeights).sort((a, b) => a - b)) {
         const tierLoot = dungeon.lootTable[tier].filter(requirement);
         const tierWeightSum = tierLoot.reduce((acc, item) => acc + (item.weight ?? 1), 0);
         for (let item of tierLoot) {
             const itemWeight = item.weight ?? 1;
-            const itemChance = itemWeight / tierWeightSum * tierWeights[tier];
+            const itemChance = itemWeight / tierWeightSum * tierWeights[tier] / weightSum;
             itemToChance.set(item, itemChance);
         }
     }
