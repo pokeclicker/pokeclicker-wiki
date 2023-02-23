@@ -12972,16 +12972,18 @@ const getDungeonLootChancesIgnoringFlag = (dungeon, clears, debuffed = false, re
  * @return {Map<Loot, number>}
  */
 const getDungeonLootChances = (dungeon, clears, debuffed = false, requirement = () => true) => {
-    const itemToChance = getDungeonLootChancesIgnoringFlag(dungeon, clears, debuffed, requirement);
-    if (debuffed && Object.values(dungeon.lootTable).flat().some(item => item.ignoreDebuff)) {
+    const secondRoll = debuffed && Object.values(dungeon.lootTable).flat().some(item => item.ignoreDebuff);
+    const itemToChance = getDungeonLootChancesIgnoringFlag(dungeon, clears, debuffed,
+        secondRoll ? (item => requirement(item) && !item.ignoreDebuff) : requirement);
+    if (secondRoll) {
         const chancesWithoutDebuff = getDungeonLootChancesIgnoringFlag(dungeon, clears, false, requirement);
         const chanceForItemsIgnoringDebuff = Array.from(chancesWithoutDebuff.keys())
             .filter(item => item.ignoreDebuff)
             .map(item => chancesWithoutDebuff.get(item))
             .reduce((acc, chance) => acc + chance, 0);
-        for (let item of itemToChance.keys()) {
+        for (let item of chancesWithoutDebuff.keys()) {
             const chanceIgnoringDebuff = item.ignoreDebuff ? chancesWithoutDebuff.get(item) : 0;
-            itemToChance.set(item, chanceIgnoringDebuff + itemToChance.get(item) * (1 - chanceForItemsIgnoringDebuff));
+            itemToChance.set(item, chanceIgnoringDebuff + (itemToChance.get(item) ?? 0) * (1 - chanceForItemsIgnoringDebuff));
         }
     }
     return itemToChance;
