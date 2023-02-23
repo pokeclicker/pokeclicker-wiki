@@ -12948,7 +12948,10 @@ const itemTypeCategories = {
  */
 const getDungeonLootChancesIgnoringFlag = (dungeon, clears, debuffed = false, requirement = () => true) => {
     const tierWeights = dungeon.getLootTierWeights(clears, debuffed);
-    const weightSum = Object.values(tierWeights).reduce((acc, weight) => acc + weight, 0);
+    const weightSum = Object.keys(tierWeights)
+        .filter(tier => dungeon.lootTable[tier].some(requirement))
+        .map(tier => tierWeights[tier])
+        .reduce((acc, weight) => acc + weight, 0);
     const itemToChance = new Map();
     for (let tier of Object.keys(tierWeights).sort((a, b) => a - b)) {
         const tierLoot = dungeon.lootTable[tier].filter(requirement);
