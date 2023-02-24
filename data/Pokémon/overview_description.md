@@ -37,7 +37,7 @@ The **Attack bonus** can be increased using 2 different [[Vitamins]], [[Items/Pr
 
 Egg Steps is the value that determines how long it will take for an egg to hatch.
 Routes give a different number of egg steps depending on their difficulty.
-Egg steps are grouped in egg cycles (1 egg cycle = 40 egg steps)
+Egg steps are grouped in egg cycles (1 egg cycle = 40 egg steps).
 
 The egg cycle value for each species begins with the canonical value, with alternate forms using the same value as the base form, and it's subject to a few modifiers:
 
@@ -48,7 +48,7 @@ There is a hard cap of 120 egg cycles, equaling 4,800 egg steps, after all facto
 There are exceptions to this rule:
 
 * The egg cycle values for Sand Cloak and Trash Cloak forms of Burmy and Wormadam are 1.5x higher than their Plant Cloak counterparts, since [[Pokémon/Burmy (Plant)]] evolves into [[Pokémon/Burmy (Sand)]] and [[Pokémon/Burmy (Trash)]].
-* [[Pokémon/Cherrim (Sunshine)]] has 1.5x the egg cycle value of [[Pokémon/Cherrim (Overcast)]]
+* [[Pokémon/Cherrim (Sunshine)]] has 1.5x the egg cycle value of [[Pokémon/Cherrim (Overcast)]].
 
 ## Pokémon List
 **WARNING**
