@@ -24,17 +24,20 @@ Total Pokémon attack will increase while breeding according to the attack bonus
 
 ##### Attack Bonus
 
-The attack bonus is the extra damage a Pokémon gets each breeding. This is **always** calculated using the base attack, not the current attack.
+The attack bonus is the extra damage that a Pokémon will get each breeding cycle.
+This is **always** calculated using the base attack, not the current attack.
 The **base** Attack bonus is **25%** of their base attack.
 *Example: Metapod, that has 20 base attack, will have an attack bonus of 5. After 1 hatch its total attack will be 25, after 2 hatches it will be 30 and after 10 hatches it will be 70.*
 
-The **Attack bonus** can be increased using 2 different @[[Vitamins]] Protein and Calcium:
-* **Proteins** give 1+ attack bonus. *In our example, Metapod will have 6 attack bonus after using 1 Protein and 15 attack bonus after using 10 Proteins. While Pidgeot (with 112 base attack) will have 29 attack bonus after 1 Protein and 38 after 10 Proteins.*
+The **Attack bonus** can be increased using 2 different [[Vitamins]], [[Items/Protein]] and [[Items/Calcium]]:
+* **Protein** gives +1 attack bonus. *In our example, Metapod will have 6 attack bonus after using 1 Protein and 15 attack bonus after using 10 Proteins. While Pidgeot (with 112 base attack) will have 29 attack bonus after 1 Protein and 38 after 10 Proteins.*
 * **Calcium** gives 1% base attack as attack bonus. *In our example, Metapod will have 5.2 attack bonus after 1 Calcium and 7 attack bonus after 10 Calcium. While Pidgeot will have 29.12 attack bonus after 1 Calcium and 39.2 after 10 Calcium.*
 
 ### Egg Steps
 
-Egg Steps is the value that determines how long it will take for an egg to hatch. Routes give different numbers of egg steps depending on their difficulty. Egg steps are grouped in egg cycles (1 egg cycle = 40 egg steps)
+Egg Steps is the value that determines how long it will take for an egg to hatch.
+Routes give a different number of egg steps depending on their difficulty.
+Egg steps are grouped in egg cycles (1 egg cycle = 40 egg steps)
 
 The egg cycle value for each species begins with the canonical value, with alternate forms using the same value as the base form, and it's subject to a few modifiers:
 
@@ -44,10 +47,9 @@ There is a hard cap of 120 egg cycles, equaling 4,800 egg steps, after all facto
 
 There are exceptions to this rule:
 
-* The egg cycle values for Sand Cloak and Trash Cloak forms of Burmy and Wormadam are 1.5x higher than their Plant Cloak counterparts, since Burmy (Plant) evolves into Burmy (Sand) and Burmy (Trash).
-* Cherrim (Sunshine) has 1.5x the egg cycle value of Cherrim (Overcast)
+* The egg cycle values for Sand Cloak and Trash Cloak forms of Burmy and Wormadam are 1.5x higher than their Plant Cloak counterparts, since [[Pokémon/Burmy (Plant)]] evolves into [[Pokémon/Burmy (Sand)]] and [[Pokémon/Burmy (Trash)]].
+* [[Pokémon/Cherrim (Sunshine)]] has 1.5x the egg cycle value of [[Pokémon/Cherrim (Overcast)]]
 
 ## Pokémon List
 **WARNING**
-This list includes Pokémon that are in code but **aren't** currently **obtainable**.
-
+This list includes all Pokémon that are in the code, but some of them **are not** currently **obtainable**.
