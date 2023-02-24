@@ -12964,7 +12964,6 @@ module.exports = {
 }
 
 },{}],116:[function(require,module,exports){
-//TODO: remove duplicate (meant as an example)
 const redirections = [
     ({type, name}) => {
         if (type === 'Pokemon') {
