@@ -29,7 +29,7 @@ This is **always** calculated using the base attack, not the current attack.
 The **base** Attack bonus is **25%** of their base attack.
 *Example: Metapod, that has 20 base attack, will have an attack bonus of 5. After 1 hatch its total attack will be 25, after 2 hatches it will be 30 and after 10 hatches it will be 70.*
 
-The **Attack bonus** can be increased using 2 different [[Vitamins]], [[Items/Protein]] and [[Items/Calcium]]:
+The **Attack bonus** can be increased using 2 different [[Vitamins]]: [[Items/Protein]] and [[Items/Calcium]]:
 * **Protein** gives +1 attack bonus. *In our example, Metapod will have 6 attack bonus after using 1 Protein and 15 attack bonus after using 10 Proteins. While Pidgeot (with 112 base attack) will have 29 attack bonus after 1 Protein and 38 after 10 Proteins.*
 * **Calcium** gives 1% base attack as attack bonus. *In our example, Metapod will have 5.2 attack bonus after 1 Calcium and 7 attack bonus after 10 Calcium. While Pidgeot will have 29.12 attack bonus after 1 Calcium and 39.2 after 10 Calcium.*
 
