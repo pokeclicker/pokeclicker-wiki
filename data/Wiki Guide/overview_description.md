@@ -3,7 +3,7 @@
 ## How to edit pages
 Currently, There are two ways to edit the wiki:
 * By opening a Pull Request to the [GitHub Repository](https://github.com/pokeclicker/pokeclicker-wiki). This method is needed for create **New pages** And edit **Html pages**
-* Logging in the wiki through a Discord account. This method only work for edit already **existent Markdown Pages**
+* Logging into the wiki through a Discord account. This method only works for editing **existing Markdown Pages**
 *We will be working on adding a better tool in the future.*
 
 ### Edit markdown pages
