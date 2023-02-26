@@ -1,6 +1,6 @@
 ## Markdown tips
 
-# Headers use the `(#)` symbol {#header-info} {#headers}
+# Headers use the `(#)` symbol {#header-info}
 ### Add more for sub headings
 ```
 # Headers use the `(#)` symbol {#header-info}
