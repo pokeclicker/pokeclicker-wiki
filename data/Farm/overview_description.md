@@ -4,7 +4,7 @@ Two Quests can appear involving the usage of the Farm, asking for get Farm Point
 
 ## Usage
 
-_For a breakdown of harvest yields, flavors, and mutation configurations for the various types of Berries, consult the [[Berries]] specific pages. _
+_For a breakdown of harvest yields, flavors, and mutation configurations for the various types of Berries, consult the [[Berries]] specific pages._
 
 Before completing Kanto, the Farm can be accessed by clicking on its location on the map between Routes 14 and Route 15. Upon reaching Johto, it becomes available in the Shortcuts dropdown modal.
 
