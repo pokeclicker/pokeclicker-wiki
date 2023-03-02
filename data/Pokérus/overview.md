@@ -95,4 +95,4 @@ Effort Value | Pokémon Damage Multiplier
 EV Damage Multiplier = 1 + (EV / 100)
 
 **When a Pokémon has greater than 50 EVs:**
-EV Damage Multiplier = EV \^ (log(1.5)/log(50))
+EV Damage Multiplier = EV^(log(1.5)/log(50))
