@@ -13204,7 +13204,7 @@ searchOptions.forEach(a => {
 */
 
 function escapeRegExp(text) {
-  return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+  return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&').replace(/[eé]/g, '[eé]');
 }
 // This is the function which figures out the results to show
 var substringMatcher = (searchData) => {
