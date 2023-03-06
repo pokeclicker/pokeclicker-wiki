@@ -13134,6 +13134,12 @@ const searchOptions = [
     type: 'Vitamins',
     page: '',
   },
+  // Hatchery
+  {
+    display: 'Hatchery',
+    type: 'Hatchery',
+    page: '',
+  },
   // Hatchery Helpers
   {
     display: 'Hatchery Helpers',
