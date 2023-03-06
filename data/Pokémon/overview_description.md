@@ -26,7 +26,7 @@ Total Pokémon attack will increase while breeding according to the attack bonus
 
 The attack bonus is the extra damage that a Pokémon will get each breeding cycle.
 This is **always** calculated using the base attack, not the current attack.
-The **base** Attack bonus is **25%** of their base attack.
+The **base** Attack bonus is **25%** of the base attack.
 *Example: Metapod, that has 20 base attack, will have an attack bonus of 5. After 1 hatch its total attack will be 25, after 2 hatches it will be 30 and after 10 hatches it will be 70.*
 
 The **Attack bonus** can be increased using 2 different [[Vitamins]]: [[Items/Protein]] and [[Items/Calcium]]:
@@ -51,8 +51,7 @@ There are exceptions to this rule:
 * [[Pokémon/Cherrim (Sunshine)]] has 1.5x the egg cycle value of [[Pokémon/Cherrim (Overcast)]].
 
 ## Mega Evolution
-**WARNING** - (Information is subject to change. If information is found incorrect to any degree then the chosen information may be deleted)
-To Mega Evolve a Pokémon, (X) Pokémon must have an Attack Bonus 10 times their Base Attack Stat. The Base Attack Stat of any specified Pokémon can be viewed in the Pokédex menu.
+To Mega Evolve a Pokémon, (X) Pokémon must have an Attack stat 500 times their Base Attack stat. The Base Attack stat of any specified Pokémon can be viewed in the Pokédex menu.
 
 ## Pokémon List
 **WARNING**
