@@ -51,7 +51,7 @@ There are exceptions to this rule:
 * [[Pokémon/Cherrim (Sunshine)]] has 1.5x the egg cycle value of [[Pokémon/Cherrim (Overcast)]].
 
 ## Mega Evolution
-To Mega Evolve a Pokémon, (X) Pokémon must have an Attack stat 500 times their Base Attack stat. The Base Attack stat of any specified Pokémon can be viewed in the Pokédex menu.
+To Mega Evolve a Pokémon, the player needs to fulfill certain conditions first. Please check [[Mega Pokémon]] page for more details.
 
 ## Pokémon List
 **WARNING**
