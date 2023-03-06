@@ -1,7 +1,7 @@
-Questlines are special kinds of Quests where the player follows a series of steps to unlock progress in the current Region, unlock certain mechanics or receive different rewards like Items and Pokémon. Some are activated at certain points of the game while others require the player to check a Bulletin Board.
+Quest Lines are a special type of Quest that requires the player to follow a series of steps to unlock progress in the current Region, unlock certain mechanics, or receive various rewards such as Items and Pokémon. Some quest lines are activated upon progressing to a certain point in the game, while others can be accepted at a Bulletin Board.
 
 ## Bulletin Boards
-Bulletin boards are places inside **starting towns** that can contain multiple questlines the player can accept.
+Bulletin boards are located in **starting towns** and offer optional quest lines that the player can choose to accept.
 Region | City | N° of possible quests
 ---: | :--- | :---
 **Kanto (Main)** | Pallet Town | 1
