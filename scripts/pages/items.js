@@ -29,22 +29,43 @@ const getItemImage = (itemType, itemId) => {
 };
 
 const getItemPage = (itemType, itemId) => {
+    const categoryAndPage = getItemCategoryAndPage(itemType, itemId);
+    return `${categoryAndPage.category}/${categoryAndPage.page}`;
+};
+
+const getItemCategoryAndPage = (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
-            return `Items/${ItemList[itemId].displayName}`;
+            return {
+                category: 'Items',
+                page: ItemList[itemId].displayName,
+            };
         case ItemType.underground:
-            return `Items/${UndergroundItems.list.find((i) => i.name === itemId)?.name}`;
+            return {
+                category: 'Items',
+                page: UndergroundItems.list.find((i) => i.name === itemId)?.name,
+            }
         case ItemType.berry:
-            return `Berries/${BerryType[itemId]}`;
+            return {
+                category: 'Berries',
+                page: BerryType[itemId],
+            }
         case ItemType.gem:
-            return `Gems/${PokemonType[itemId]}`;
+            return {
+                category: 'Gems',
+                page: PokemonType[itemId],
+            };
         default:
-            return '';
+            return {
+                category: '',
+                page: '',
+            };
     }
 }
 
 module.exports = {
     getItemName,
     getItemImage,
-    getItemPage
+    getItemPage,
+    getItemCategoryAndPage,
 };
