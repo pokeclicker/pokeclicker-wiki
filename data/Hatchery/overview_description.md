@@ -53,9 +53,9 @@ The farm can be utilized to increase the egg steps yielded by Pokémon through t
 
 Note: Any Strategy that used Petaya will have a slightly different timing table. Once Petaya ripens it resets the timers of all other berries and sets them to infinity. Thus, other berries can be planted so that they ripen before Petaya, and should be timed so that Petaya ripens just before they wither.
 
-Note: this section is currently under construction. all these tables will be fixed eventually, i promise, just only so much i can do in a day
+Note: this section is currently under construction. all these tables will be fixed eventually, i promise, just only so much i can do in a day. todo: finish the berry matrixes, convert the timing tables, fix the expanded rate table
 
-## Optimal Strategy Rank Table
+## Optimal Strategies Rank Table
 
 |Berry Strategy | Efficiency Ranking |
 |---|---|
@@ -70,7 +70,7 @@ Note: this section is currently under construction. all these tables will be fix
 |Chople + Yache |8|
 |Chople + Haban|8|
 
-### Expanded Rate Table Calculations
+## Expanded Rate Table Calculations
 All calculations for Rank Table done [here](https://docs.google.com/spreadsheets/d/1kyQIpahGezv8tYYeQDoZMHjw6cVyGr7FD4MlXgbPr68/edit?usp=sharing).
 
 Legend:
@@ -95,77 +95,72 @@ Legend:
 | [[Chople]] + [[Babiri]] + [[Lum]]| 2.90x | 10 hours | 18 hours | {{ #expr: 10/(10 + 18) *100 round2}} % | {{ #expr: (10/(10 + 18)) * (2.90-1) + 1round2}} | 3|
 | [[Chople]] + [[Babiri]] + [[Petaya]] + [[Lum]]| 2.73x | 4 days 10 hours | 24 hours | {{ #expr: (4*24 + 10)/((4*24 + 10) + 24) *100 round2}} % | {{ #expr: ((4*24 + 10)/((4*24 + 10) + 24)) * (2.73-1) + 1round2}} | 1|
 
-==== Chople + Empty Rows ====
+## Chople + Empty Rows
 
 The easiest strategy for planting Chople berries is to leave empty rows separating each row of Chople berries. This is easy to do and requires no additional berries, but is also less efficient than other more complex strategies.
 
-{| class="wikitable" style="text-align: center;"
-|+ Farm - '''''Egg Step Bonus: 1.56x'''''
-|- style="height: 50px;"
-| style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| || ||  ||  ||
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| || ||  ||  ||
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|}
+**Egg Step Bonus: 1.56x**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| | | | | | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| | | | | | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+:::
 
-==== Chople + [[Yache]]/[[Haban]] ====
+## Chople + [[Yache]]/[[Haban]]
 
 A slightly more complex strategy for planting Chople berries is to plant berries that decrease growth rates ([[Yache]] or [[Haban]]) between each of the rows of Chople berries. While this takes Chople berries longer to grow, it also results in longer wither times for Chople berries. While this doesn't appear to be incredibly challenging to accomplish, and uses only 4th generation berries, the berries on the ends of each row receive a diminished growth aura effect relative to more central berries on the farm. This can make timing simultaneous ripeness of all berries on the farm challenging.
 
-{| class="wikitable" style="text-align: center;"
-|+ Farm - '''''Egg Step Bonus: 1.56x'''''
-|- style="height: 50px;"
-| style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| [[File:Yache.png|20px]]/[[File:Haban.png|20px]]<br>[[Yache]]/[[Haban]] || [[File:Yache.png|20px]]/[[File:Haban.png|20px]]<br>[[Yache]]/[[Haban]] ||  [[File:Yache.png|20px]]/[[File:Haban.png|20px]]<br>[[Yache]]/[[Haban]] ||  [[File:Yache.png|20px]]/[[File:Haban.png|20px]]<br>[[Yache]]/[[Haban]] || [[File:Yache.png|20px]]/[[File:Haban.png|20px]]<br>[[Yache]]/[[Haban]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| [[File:Yache.png|20px]]/[[File:Haban.png|20px]]<br>[[Yache]]/[[Haban]] || [[File:Yache.png|20px]]/[[File:Haban.png|20px]]<br>[[Yache]]/[[Haban]] ||  [[File:Yache.png|20px]]/[[File:Haban.png|20px]]<br>[[Yache]]/[[Haban]] ||  [[File:Yache.png|20px]]/[[File:Haban.png|20px]]<br>[[Yache]]/[[Haban]] || [[File:Yache.png|20px]]/[[File:Haban.png|20px]]<br>[[Yache]]/[[Haban]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|}
+**Egg Step Bonus: 1.56x**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Yache.png\|32px]] [[Berries/Yache]]|[[File:Yache.png\|32px]] [[Berries/Yache]] |[[File:Yache.png\|32px]] [[Berries/Yache]] |[[File:Yache.png\|32px]] [[Berries/Yache]] |[[File:Yache.png\|32px]] [[Berries/Yache]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+|[[File:Yache.png\|32px]] [[Berries/Yache]] |[[File:Yache.png\|32px]] [[Berries/Yache]] |[[File:Yache.png\|32px]] [[Berries/Yache]] |[[File:Yache.png\|32px]] [[Berries/Yache]] |[[File:Yache.png\|32px]] [[Berries/Yache]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+:::
 
-==== Chople + [[Petaya]] ====
+**Egg Step Bonus: 1.56x**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Haban.png\|32px]] [[Berries/Haban]]|[[File:Haban.png\|32px]] [[Berries/Haban]] |[[File:Haban.png\|32px]] [[Berries/Haban]] |[[File:Haban.png\|32px]] [[Berries/Haban]] |[[File:Haban.png\|32px]] [[Berries/Haban]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+|[[File:Haban.png\|32px]] [[Berries/Haban]] |[[File:Haban.png\|32px]] [[Berries/Haban]] |[[File:Haban.png\|32px]] [[Berries/Haban]] |[[File:Haban.png\|32px]] [[Berries/Haban]] |[[File:Haban.png\|32px]] [[Berries/Haban]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+:::
+
+
+## Chople + [[Petaya]]
 
 A strategy that is easier in many respects than Chople + Yache/Haban is Chople + [[Petaya]]. Petaya is one of the final berries to unlock, and it is one of the most challenging to do so, so it might not be the most accessible option. However, the aura effect of Petaya berries "freeze" the timers of ripe berries on the farm, locking them at infinity so long as the Petaya plant is ripe. This is an incredibly powerful effect as Petaya berries remain ripe for 5 days (no modifiers). Thus, this strategy provides a very stable setup for three rows of Chople berries for much longer than using two empty rows.
 
-{| class="wikitable" style="text-align: center;"
-|+ Farm - '''''Egg Step Bonus: 1.56x'''''
-|- style="height: 50px;"
-| style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| || || [[File:Petaya.png|30px]]<br>[[Petaya]] || ||
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| || || || ||
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|}
+**Egg Step Bonus: 1.56x**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| | |[[File:Petaya.png\|32px]] [[Berries/Petaya]] | | | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| | | | | | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+:::
 
-==== Chople + [[Babiri]] ====
+### Chople + [[Babiri]]
 
 Another somewhat easy strategy is Chople + [[Babiri]]. Ripe Babiri berries prevent mutations in the berries they are near. Thus, once they are unlocked four strategically placed Babiri berries can allow for a more full farm of Chople berries.
 
-{| class="wikitable" style="text-align: center;"
-|+ Farm - '''''Egg Step Bonus: 1.86x'''''
-|- style="height: 50px;"
-| style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Babiri.png|30px]]<br>[[Babiri]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Babiri.png|30px]]<br>[[Babiri]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Babiri.png|30px]]<br>[[Babiri]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Babiri.png|30px]]<br>[[Babiri]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|}
+**Egg Step Bonus: 1.86x**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]]|[[File:Babiri.png\|32px]] [[Berries/Babiri]] |[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Babiri.png\|32px]] [[Berries/Babiri]] |[[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+|[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Babiri.png\|32px]] [[Berries/Babiri]] |[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Babiri.png\|32px]] [[Berries/Babiri]] |[[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+:::
 
 ==== Chople + [[Lum]] ====
 
