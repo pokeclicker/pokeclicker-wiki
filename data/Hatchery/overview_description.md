@@ -1,10 +1,10 @@
-The **Pokémon Day Care** is a location in [[Kanto]] where [[Eggs]] and [[Fossils]] can be bred. Additionally, obtained [[Pokémon]] that have reached level 100 can be bred to receive an Attack bonus equal to 25% of its Base Attack.  The Pokémon Day Care is unlocked upon clearing '''Route 5''' of [[Kanto]].
+The **Pokémon Day Care** is a location in [[Kanto]] where [[Eggs]] and [[Fossils]] can be bred. Additionally, obtained [[Pokémon]] that have reached level 100 can be bred to receive an Attack bonus equal to 25% of its Base Attack.  The Pokémon Day Care is unlocked upon clearing [[Routes/Kanto Route 3]].
 
 One quest that can appear involves hatching a random amount of Eggs. These can be either purchased from [[Shops]], or from breeding level 100 Pokémon.
 
 # Usage
 
-As soon as [[Kanto Route 5]] is cleared, the Pokémon Day Care can be accessed by clicking on its location on the map on Route 5. Additionally, the Hatchery tab becomes available on the main page.
+As soon as [[Routes/Kanto Route 3]] is cleared, the Pokémon Day Care can be accessed by clicking on its location on the map on Route 3. Additionally, the Hatchery tab becomes available on the main page.
 
 There are three different types of hatch-able resources in Pokéclicker: obtained Pokémon Eggs, Fossils, and already obtained level 100 Pokémon. Pokémon Eggs are typically purchased in Shops and Fossils are typically mined from the [[Underground]]. The Egg/Fossil/Obtained Pokémon that can be bred each have their own distinct tab in the Pokémon Day Care modal.
 
