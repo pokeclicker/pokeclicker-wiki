@@ -45,7 +45,7 @@ Kanto routes marked with a \* are only accessible after Hoenn; if possible, a pr
 [^1]: All Magikarp Jump routes also drop Water Gems.
 
 ### Electric Gems
-| Region COPY| Route | Percentage |
+| Region | Route | Percentage |
 |--------|-------|------------|
 | Kanto | Route 10 | 12.5%|
 | Johto | Route 42| 20%|
