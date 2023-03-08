@@ -53,8 +53,6 @@ The farm can be utilized to increase the egg steps yielded by Pokémon through t
 
 Note: Any Strategy that used Petaya will have a slightly different timing table. Once Petaya ripens it resets the timers of all other berries and sets them to infinity. Thus, other berries can be planted so that they ripen before Petaya, and should be timed so that Petaya ripens just before they wither.
 
-Note: this section is currently under construction. all these tables will be fixed eventually, i promise, just only so much i can do in a day. todo: finish the berry matrixes, convert the timing tables, fix the expanded rate table
-
 ## Optimal Strategies Rank Table
 
 |Berry Strategy | Efficiency Ranking |
