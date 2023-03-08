@@ -84,16 +84,16 @@ Legend:
 
 | Full Strategy | MESBM | BD (hours) | MRT (hours) | U% | MESBM w/ U%| ER|
 |---|---|---|---|---|---|---|
-| [[Chople ]]| 1.56x | 10 hours | 10 hours | {{ #expr: 10/(10+10) * 100}} % | {{ #expr: (10/(10+10)) * (1.56-1) +1}}x | 8 |
-| [[Chople]] + [[Yache]]| 1.56x | {{ #expr: 10/0.7round2 }} hours | {{ #expr: 10/0.7round2 }} hours | {{ #expr: (10/0.7)/((10/0.7) + (10/0.7)) * 100}} % | {{ #expr: ((10/0.7)/((10/0.7) + (10/0.7))) * (1.56-1) + 1}}x | 8|
-| [[Chople]] + [[Haban]]| 1.56x | {{ #expr: 10/0.5round2 }} hours | {{ #expr: 10/0.5round2 }} hours | {{ #expr: (10/0.5)/((10/0.5) + (10/0.5)) *100}} % | {{ #expr: ((10/0.5)/((10/0.5) + (10/0.5))) * (1.56-1) + 1}}x | 8|
-| [[Chople]] + [[Petaya]]| 1.56x | 4 days 10 hours | 24 hours | {{ #expr: (4*24 + 10)/((4*24 + 10) + 24) *100 round2}} % | {{ #expr: ((4*24 + 10)/((4*24 + 10) + 24)) * (1.56-1) + 1round2}} | 5|
-| [[Chople]] + [[Lum]]| 2.43x | 10 hours | 10 hours | {{ #expr: 10/(10+10) * 100}} % | {{ #expr: (10/(10+10)) * (2.43-1) + 1round2}} | 4|
-| [[Chople]] + [[Lum]] + [[Petaya]]| 2.43x | 4 days 10 hours | 24 hours | {{ #expr: (4*24 + 10)/((4*24 + 10) + 24) *100 round2}} % | {{ #expr: ((4*24 + 10)/((4*24 + 10) + 24)) * (2.43-1) + 1round2}} | 2|
-| [[Chople]] + [[Babiri]] + [[Petaya]]| 1.81x | 4 days 10 hours | 24 hours | {{ #expr: (4*24 + 10)/((4*24 + 10) + 24) *100 round2}} % | {{ #expr: ((4*24 + 10)/((4*24 + 10) + 24)) * (1.81-1) + 1round2}} | 7|
-| [[Chople]] + [[Babiri]]| 1.86x | 10 hours | 18 hours | {{ #expr: 10/(10 + 18) *100 round2}} % | {{ #expr: (10/(10 + 18)) * (1.86-1) + 1round2}} | 6|
-| [[Chople]] + [[Babiri]] + [[Lum]]| 2.90x | 10 hours | 18 hours | {{ #expr: 10/(10 + 18) *100 round2}} % | {{ #expr: (10/(10 + 18)) * (2.90-1) + 1round2}} | 3|
-| [[Chople]] + [[Babiri]] + [[Petaya]] + [[Lum]]| 2.73x | 4 days 10 hours | 24 hours | {{ #expr: (4*24 + 10)/((4*24 + 10) + 24) *100 round2}} % | {{ #expr: ((4*24 + 10)/((4*24 + 10) + 24)) * (2.73-1) + 1round2}} | 1|
+| [[Chople ]]| 1.56x | 10 hours | 10 hours | 50% | 1.28x | 8 |
+| [[Chople]] + [[Yache]]| 1.56x | 14.29 hours | 14.29 hours | 50% | 1.28x | 8|
+| [[Chople]] + [[Haban]]| 1.56x | 20 hours | 20 hours | 50% | 1.28x | 8|
+| [[Chople]] + [[Petaya]]| 1.56x | 4 days 10 hours | 24 hours | 81.54% | 1.46x | 5|
+| [[Chople]] + [[Lum]]| 2.43x | 10 hours | 10 hours | 50% | 1.72x | 4|
+| [[Chople]] + [[Lum]] + [[Petaya]]| 2.43x | 4 days 10 hours | 24 hours | 81.54% | 2.17x | 2|
+| [[Chople]] + [[Babiri]] + [[Petaya]]| 1.81x | 4 days 10 hours | 24 hours | 81.54% | 1.66x | 7|
+| [[Chople]] + [[Babiri]]| 1.86x | 10 hours | 18 hours |35.71% | 1.31x | 6|
+| [[Chople]] + [[Babiri]] + [[Lum]]| 2.90x | 10 hours | 18 hours | 35.71% | 1.68 | 3|
+| [[Chople]] + [[Babiri]] + [[Petaya]] + [[Lum]]| 2.73x | 4 days 10 hours | 24 hours | 81.54% | 2.41x | 1|
 
 ## Chople + Empty Rows
 
@@ -162,147 +162,108 @@ Another somewhat easy strategy is Chople + [[Babiri]]. Ripe Babiri berries preve
 | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
 :::
 
-==== Chople + [[Lum]] ====
+### Chople + [[Lum]]
 
 Another somewhat easy strategy is Chople + [[Lum]]. Ripe Lum berries boost the auras of the berries they are near (max of one boost for each nearby berry). Thus, once they are unlocked four strategically placed Lum berries can allow for a farm of Chople berries with increased boosts.
 
-{| class="wikitable" style="text-align: center;"
-|+ Farm - '''''Egg Step Bonus: 2.43x'''''
-|- style="height: 50px;"
-| style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| || [[File:Lum.png|30px]]<br>[[Lum]] || || [[File:Lum.png|30px]]<br>[[Lum]] ||
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| || [[File:Lum.png|30px]]<br>[[Lum]] || || [[File:Lum.png|30px]]<br>[[Lum]] ||
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|}
+**Egg Step Bonus: 2.43x**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| |[[File:Lum.png\|32px]] [[Berries/Lum]] | |[[File:Lum.png\|32px]] [[Berries/Lum]] | | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| |[[File:Lum.png\|32px]] [[Berries/Lum]] | |[[File:Lum.png\|32px]] [[Berries/Lum]] | | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+:::
 
-==== Chople + Lum + Petaya ====
+### Chople + Lum + Petaya
 
 Combines Chople + Lum with a Petaya for a longer duration boost.
 
-{| class="wikitable" style="text-align: center;"
-|+ Farm - '''''Egg Step Bonus: 2.43x'''''
-|- style="height: 50px;"
-| style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| || [[File:Lum.png|30px]]<br>[[Lum]] || [[File:Petaya.png|30px]]<br>[[Petaya]] || [[File:Lum.png|30px]]<br>[[Lum]] ||
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| || [[File:Lum.png|30px]]<br>[[Lum]] || || [[File:Lum.png|30px]]<br>[[Lum]] ||
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|}
+**Egg Step Bonus: 2.43x**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| |[[File:Lum.png\|32px]] [[Berries/Lum]] |[[File:Petaya.png\|32px]] [[Berries/Petaya]] |[[File:Lum.png\|32px]] [[Berries/Lum]] | | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| |[[File:Lum.png\|32px]] [[Berries/Lum]] | |[[File:Lum.png\|32px]] [[Berries/Lum]] | | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+:::
 
-===== Timing Table =====
-{| class="collapsible wikitable"| style="text-align: center;"
-|+ ''All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times''
-! Berry !! Planting Time with <br> No Modifier !! Planting Time with <br> Mulch/Sprayduck || Planting Time with <br>  Mulch*Sprayduck
-|-
-| [[Petaya]] || - || - || -
-|-
-| [[Chople]] || 19 hours 59 minutes 59 seconds until ripe || 13 hours 19 mins 59 secs until ripe || 8 hours 53 mins 19 secs until ripe
-|-
-| [[Lum]] || 11 hours 59 minutes 59 seconds until ripe || 7 hours 59 mins 59 secs until ripe || 5 hours 19 mins 59 secs until ripe
-|-
-|}
+#### Timing Table
+All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times.
+| Berry | Planting Time with No Modifier | Planting Time with Mulch/Sprayduck | Planting Time with Mulch+Sprayduck |
+|---|---|---|---|
+| [[Petaya]] | - | - | -|
+| [[Chople]] | 19 hours 59 minutes 59 seconds until ripe | 13 hours 19 mins 59 secs until ripe | 8 hours 53 mins 19 secs until ripe|
+| [[Lum]] | 11 hours 59 minutes 59 seconds until ripe | 7 hours 59 mins 59 secs until ripe | 5 hours 19 mins 59 secs until ripe|
 
-==== Chople + Babiri + Petaya ====
+### Chople + Babiri + Petaya
 
 This strategy combines Chople + Babiri and Chople + Petaya, utilizing the effects of each berry for a farm with one fewer Chople, but far more longevity. A Petaya berry and strategically placed Babiri berries prolong the ripe times and prevent mutations of all ripe berries on the farm.
 
-{| class="wikitable" style="text-align: center;"
-|+ Farm - '''''Egg Step Bonus: 1.81x'''''
-|- style="height: 50px;"
-| style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Babiri.png|30px]]<br>[[Babiri]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Babiri.png|30px]]<br>[[Babiri]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Petaya.png|30px]]<br>[[Petaya]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Babiri.png|30px]]<br>[[Babiri]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Babiri.png|30px]]<br>[[Babiri]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|}
+**Egg Step Bonus: 1.81x**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]]|[[File:Babiri.png\|32px]] [[Berries/Babiri]] |[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Babiri.png\|32px]] [[Berries/Babiri]] |[[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+|[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Babiri.png\|32px]] [[Berries/Babiri]] |[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Babiri.png\|32px]] [[Berries/Babiri]] |[[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+:::
 
-===== Timing Table =====
-{| class="collapsible wikitable"| style="text-align: center;"
-|+ ''All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times''
-! Berry !! Planting Time with <br> No Modifier !! Planting Time with <br> Mulch/Sprayduck || Planting Time with <br>  Mulch*Sprayduck
-|-
-| [[Petaya]] || - || - || -
-|-
-| [[Babiri]] || - || - || -
-|-
-| [[Chople]] || 19 hours 59 minutes 59 seconds until ripe || 13 hours 19 mins 59 secs until ripe || 8 hours 53 mins 19 secs until ripe
+#### Timing Table
+All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times.
+| Berry | Planting Time with No Modifier | Planting Time with Mulch/Sprayduck |Planting Time with Mulch+Sprayduck|
+|---|---|---|---|
+| [[Petaya]] | - | - | -|
+| [[Babiri]] | - | - | -|
+| [[Chople]] | 19 hours 59 minutes 59 seconds until ripe | 13 hours 19 mins 59 secs until ripe | 8 hours 53 mins 19 secs until ripe|
 
-|}
-
-==== Chople + Babiri + Lum ====
+### Chople + Babiri + Lum
 
 This strategy combines Chople + Babiri and Chople + Lum, utilizing the effects of each berry for a farm with fewer Choples, but a far greater boost. Moving the Babiris and Lums like this lets us replace one Babiri while still avoiding any mutation risk.
 
-{| class="wikitable" style="text-align: center;"
-|+ Farm - '''''Egg Step Bonus: 2.90x'''''
-|- style="height: 50px;"
-| style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Lum.png|30px]]<br>[[Lum]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Lum.png|30px]]<br>[[Lum]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Babiri.png|30px]]<br>[[Babiri]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Babiri.png|30px]]<br>[[Babiri]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Lum.png|30px]]<br>[[Lum]] || [[File:Babiri.png|30px]]<br>[[Babiri]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Lum.png|30px]]<br>[[Lum]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|}
+**Egg Step Bonus: 2.90x**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]]|[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Babiri.png\|32px]] [[Berries/Babiri]] |[[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+|[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Lum.png\|32px]] [[Berries/Lum]] |[[File:Babiri.png\|32px]] [[Berries/Babiri]] |[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Lum.png\|32px]] [[Berries/Lum]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+:::
 
-===== Timing Table =====
-{| class="collapsible wikitable"| style="text-align: center;"
-|+ ''All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times''
-! Berry !! Planting Time with <br> No Modifier !! Planting Time with <br> Mulch/Sprayduck || Planting Time with <br>  Mulch*Sprayduck
-|-
-| [[Babiri]] || - || - || -
-|-
-| [[Chople]] || 10 hours until ripe || 6 hours 40 mins until ripe || 4 hours 26 mins 40 secs until ripe
-|-
-| [[Lum]] || 1 hours until ripe || 40 mins until ripe || 26 mins 40 secs until ripe
-|}
+#### Timing Table
+All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times.
+| Berry | Planting Time with No Modifier | Planting Time with Mulch/Sprayduck | Planting Time with  Mulch+Sprayduck |
+|---|---|---|---|
+| [[Babiri]] | - | - | -|
+| [[Chople]] | 10 hours until ripe | 6 hours 40 mins until ripe | 4 hours 26 mins 40 secs until ripe|
+| [[Lum]] | 1 hour until ripe | 40 mins until ripe | 26 mins 40 secs until ripe|
 
-==== Chople + Babiri + Petaya + Lum ====
+### Chople + Babiri + Petaya + Lum
 
 This strategy adds a Petaya berry to Chople + Babiri + Lum for a farm with one fewer Chople, but far more longevity.
 
-{| class="wikitable" style="text-align: center;"
-|+ Farm - '''''Egg Step Bonus: 2.73x'''''
-|- style="height: 50px;"
-| style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Lum.png|30px]]<br>[[Lum]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Chople.png|30px]]<br>[[Chople]] || style="width: 40px;" | [[File:Lum.png|30px]]<br>[[Lum]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Babiri.png|30px]]<br>[[Babiri]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Babiri.png|30px]]<br>[[Babiri]] || [[File:Petaya.png|30px]]<br>[[Petaya]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Lum.png|30px]]<br>[[Lum]] || [[File:Babiri.png|30px]]<br>[[Babiri]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Lum.png|30px]]<br>[[Lum]]
-|- style="height: 50px;"
-| [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]] || [[File:Chople.png|30px]]<br>[[Chople]]
-|}
+**Egg Step Bonus: 2.90x**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]]|[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Babiri.png\|32px]] [[Berries/Babiri]] |[[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+|[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Lum.png\|32px]] [[Berries/Lum]] |[[File:Babiri.png\|32px]] [[Berries/Babiri]] |[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Lum.png\|32px]] [[Berries/Lum]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+:::
 
-===== Timing Table =====
+#### Timing Table
 
 Note that [[Chople]] can mutate into [[Chilan]] at taller and later stages, so you may plant [[Chople]] according to the earlier time to give more increased egg step time, but risk having to replant a few plants or you can opt for the later time and have no risk of mutation at all.
 
-{| class="collapsible wikitable"| style="text-align: center;"
-|+ ''All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times''
-! Berry !! Planting Time with <br> No Modifier !! Planting Time with <br> Mulch/Sprayduck || Planting Time with <br>  Mulch*Sprayduck
-|-
-| [[Petaya]] || - || - || -
-|-
-| [[Babiri]] || - || - || -
-|-
-| [[Chople]] || 19 hours 59 minutes 59 seconds until ripe <br> 9 hours until ripe (no [[Chilan]] chance) || 13 hours 19 mins 59 secs until ripe <br> 6 hours until ripe (no [[Chilan]] chance) || 8 hours 53 mins 19 secs until ripe <br> 4 hours until ripe (no [[Chilan]] chance)
-|-
-| [[Lum]] || 11 hours 59 minutes 59 seconds until ripe || 7 hours 59 mins 59 secs until ripe || 5 hours 19 mins 59 secs until ripe
-|}
+All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times.
+| Berry | Planting Time with No Modifier | Planting Time with Mulch/Sprayduck | Planting Time with  Mulch+Sprayduck|
+|---|---|---|---|
+| [[Petaya]] | - | - | -|
+| [[Babiri]] | - | - | -|
+| [[Chople]] | 19 hours 59 minutes 59 seconds until ripe OR 9 hours until ripe (no [[Chilan]] chance) | 13 hours 19 mins 59 secs until ripe OR 6 hours until ripe (no [[Chilan]] chance) | 8 hours 53 mins 19 secs until ripe OR 4 hours until ripe (no [[Chilan]] chance)|
+| [[Lum]] | 11 hours 59 minutes 59 seconds until ripe | 7 hours 59 mins 59 secs until ripe | 5 hours 19 mins 59 secs until ripe|
