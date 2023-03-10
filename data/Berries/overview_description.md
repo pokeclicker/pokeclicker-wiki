@@ -6,12 +6,13 @@ Berries can be grown in the Farm to earn Farm Points. You can trade certain berr
 The Sprayduck, Squirtbottle, and Sprinklotad are all Oak Items that speed up or otherwise improve the process of growing berries.
 
 #### Wanderers
+
 Farms with at least one ripe Berry can attract Wandering Pokémon that are automatically caught without the use of a Pokéball. Some Berries can attract rare Pokémon and can thus be used strategically to complete the Pokédex. Wandering Pokémon can also be shiny, attracting a shiny Wandering Pokémon when the Farm has at least one empty plot is the condition for a Starf Berry to spawn on the Farm (in one of the empty plots).
 
 ### Mutations
 
-The first 10 berries are gotten in routes or dungeons, but after that the player needs to generate new berries through **mutation**. Each berry requires specific conditions to be able to mutate. The Kanto Berry Master (Cerulean City) will give a different hint daily for berry mutations.
+The first 10 berries are found in routes or dungeons, but after that the player needs to generate new berries through **mutation**. Each berry requires specific conditions to be able to mutate. The Kanto Berry Master (Cerulean City) will give a different hint daily for berry mutations.
 
-Most berries can start mutating once they are in the Berry stage (fully Ripe) until they die. Evolution *(a berry transforming into another)* and flavour mutations can happen in any moment since taller stage. For mutations involving flavor requirements all berries emit flavour points since taller stage  (berries have 0.5x flavor in the "taller" stage, 0.75x flavor in the "bloom" stage, and 1x flavor in the "berry" stage)
+Most berry mutations happen at the Berry (fully ripe) stage and have a chance to occur until they die. Evolution *(a berry transforming into another)* and flavor mutations can occur starting at the Taller stage. For mutations involving flavor requirements, all berries emit flavor points beginning at the Taller stage (berries have 0.5x flavor in the Taller stage, 0.75x flavor in the Bloom stage, and 1x flavor in the Berry stage).
 
-If the conditions for multiple mutations are met simultaneously, the mutation triggered will be random as well.
+If the conditions for multiple mutations are met simultaneously, the mutation triggered will be selected at random.
