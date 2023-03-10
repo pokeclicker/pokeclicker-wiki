@@ -115,6 +115,7 @@ const getDungeonLoot = (dungeon) => {
                 type: itemType,
                 image: itemGameData?.image ?? (pokemonData ? `assets/images/pokemon/${pokemonData.id}.png` : null),
                 weight: item.weight ?? 1,
+                requirement: item.requirement?.hint(),
                 ignoreDebuff: item.ignoreDebuff,
                 chances: []
             };
@@ -132,9 +133,21 @@ const getDungeonLoot = (dungeon) => {
     return lootTiers;
 };
 
+const hasLootWithRequirements = (dungeon) => {
+    for (let tier of Object.keys(dungeon.lootTable)) {
+        for (let item of dungeon.lootTable[tier]) {
+            if (item.requirement) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
 module.exports = {
     getDungeonLoot,
     getDungeonLootChances,
+    hasLootWithRequirements,
     tableClearCounts,
     itemTypeCategories
 };
