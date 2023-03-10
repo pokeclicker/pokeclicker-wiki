@@ -134,15 +134,21 @@ const getDungeonLoot = (dungeon) => {
 };
 
 const hasLootWithRequirements = (dungeon) => {
+    if (hasLootWithRequirements.cache.has(dungeon)) {
+        return hasLootWithRequirements.cache.get(dungeon);
+    }
     for (let tier of Object.keys(dungeon.lootTable)) {
         for (let item of dungeon.lootTable[tier]) {
             if (item.requirement) {
+                hasLootWithRequirements.cache.set(dungeon, true);
                 return true;
             }
         }
     }
+    hasLootWithRequirements.cache.set(dungeon, false);
     return false;
-}
+};
+hasLootWithRequirements.cache = new WeakMap();
 
 module.exports = {
     getDungeonLoot,
