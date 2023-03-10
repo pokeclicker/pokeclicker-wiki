@@ -103,6 +103,18 @@ const checkLootRequirements = (dungeon, clearSetup) => {
                 // if the requirement specifies a maximum or specific region and debuffed odds are being calculated, make sure the maximum required region triggers the debuff
                 return debuffRegion <= requirement.region;
             }
+        } else if (requirement instanceof ClearDungeonRequirement) {
+            if (requirement.dungeonIndex === GameConstants.getDungeonIndex(dungeon.name)) {
+                switch (requirement.option) {
+                    case GameConstants.AchievementOption.less:
+                        return clearSetup.clears < requirement.requiredValue;
+                    case GameConstants.AchievementOption.equal:
+                        return clearSetup.clears === requirement.requiredValue;
+                    case GameConstants.AchievementOption.more:
+                    default:
+                        return clearSetup.clears >= requirement.requiredValue;
+                }
+            }
         } else if (requirement instanceof MultiRequirement) {
             return requirement.requirements.every(checkRequirement);
         } else if (requirement instanceof OneFromManyRequirement) {
