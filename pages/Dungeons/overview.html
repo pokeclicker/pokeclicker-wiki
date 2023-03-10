@@ -1,8 +1,10 @@
 <div class="table-responsive">
-    <table class="table table-hover table-striped table-bordered">
+    <table class="table table-hover table-striped table-bordered" data-order="[[ 3, &quot;asc&quot; ]]">
         <thead class="thead-dark">
             <tr>
                 <th>Dungeon Name</th>
+                <th>Region</th>
+                <th>Subregion</th>
                 <th>Cost</th>
                 <th>Base HP</th>
             </tr>
@@ -10,6 +12,10 @@
         <tbody data-bind="foreach: Object.values(dungeonList)">
             <tr class="text-nowrap clickable" data-bind="click: () => { Wiki.gotoPage('Dungeons', $data.name); return false; }">
                 <td data-bind="text: $data.name"></td>
+                <!-- ko with: Object.values(TownList).find(town => town.dungeon === $data) -->
+                <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region])"></td>
+                <td data-bind="text: SubRegions.getSubRegionById($data.region, $data.subRegion).name"></td>
+                <!-- /ko -->
                 <td data-bind="attr: { 'data-sort': $data.tokenCost }">
                     <img src="./images/dungeonToken.svg" width="18px"/>
                     <ko data-bind="text: $data.tokenCost.toLocaleString()"></ko>
