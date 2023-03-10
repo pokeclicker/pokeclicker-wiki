@@ -10,7 +10,7 @@ Farms with at least one ripe Berry can attract Wandering Pokémon that are autom
 
 ### Mutations
 
-The first 10 berries are get in routes or dungeons, but after that player need to generate new berries through **mutation**. Each berry require a specific conditions to be able to mutate. Kanto berry master will give a different hint daily for berry mutations.
+The first 10 berries are gotten in routes or dungeons, but after that the player needs to generate new berries through **mutation**. Each berry requires specific conditions to be able to mutate. The Kanto Berry Master (Cerulean City) will give a different hint daily for berry mutations.
 
 Most berries can start mutating once they are in the Berry stage (fully Ripe) until they die. Evolution *(a berry transforming into another)* and flavour mutations can happen in any moment since taller stage. For mutations involving flavor requirements all berries emit flavour points since taller stage  (berries have 0.5x flavor in the "taller" stage, 0.75x flavor in the "bloom" stage, and 1x flavor in the "berry" stage)
 
