@@ -85,9 +85,42 @@ const getDungeonLootChances = (dungeon, clears, debuffed = false, requirement = 
     return itemToChance;
 };
 
+/**
+ * Returns a function that checks whether the requirements for a dungeon loot item are met.
+ * @param dungeon
+ * @param clearSetup
+ * @return {(function(*))|*}
+ */
+const checkLootRequirements = (dungeon, clearSetup) => {
+    const debuffRegion = (dungeon.optionalParameters?.dungeonRegionalDifficulty ?? GameConstants.getDungeonRegion(dungeon.name)) + 3;
+    // recursive requirement check
+    const checkRequirement = (requirement) => {
+        if (requirement instanceof MaxRegionRequirement) {
+            if ([GameConstants.AchievementOption.more, GameConstants.AchievementOption.equal].includes(requirement.option) && !clearSetup.debuff) {
+                // if the requirement specifies a minimum or specific region and non-debuffed odds are being calculated, make sure the minimum required region does not trigger the debuff
+                return debuffRegion > requirement.region;
+            } else if ([GameConstants.AchievementOption.less, GameConstants.AchievementOption.equal].includes(requirement.option) && clearSetup.debuff) {
+                // if the requirement specifies a maximum or specific region and debuffed odds are being calculated, make sure the maximum required region triggers the debuff
+                return debuffRegion <= requirement.region;
+            }
+        } else if (requirement instanceof MultiRequirement) {
+            return requirement.requirements.every(checkRequirement);
+        } else if (requirement instanceof OneFromManyRequirement) {
+            return requirement.requirements.some(checkRequirement);
+        }
+        return true;
+    };
+    return (item) => {
+        if (item.requirement) {
+            return checkRequirement(item.requirement);
+        }
+        return true;
+    };
+}
+
 const getDungeonLoot = (dungeon) => {
     const tierWeights = tableClearCounts.map(clearSetup => dungeon.getLootTierWeights(clearSetup.clears, clearSetup.debuff));
-    const itemChanceMaps = tableClearCounts.map(clearSetup => getDungeonLootChances(dungeon, clearSetup.clears, clearSetup.debuff));
+    const itemChanceMaps = tableClearCounts.map(clearSetup => getDungeonLootChances(dungeon, clearSetup.clears, clearSetup.debuff, checkLootRequirements(dungeon, clearSetup)));
     const lootTiers = [];
     for (let tier of Object.keys(tierWeights[0]).sort((a, b) => a - b)) {
         const tierLoot = dungeon.lootTable[tier];
