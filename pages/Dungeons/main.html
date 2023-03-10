@@ -62,10 +62,7 @@
                 <tbody>
                     <!-- ko foreach: Wiki.dungeons.getDungeonLoot($data) -->
                         <tr>
-                            <td style="font-weight: bold; text-transform: capitalize; text-align: center" data-bind="text: $data.tier, attr: { colspan: Wiki.dungeons.tableClearCounts.length + 2 }"></td>
-                            <!-- ko if: Wiki.dungeons.hasLootWithRequirements($parent) -->
-                            <td></td>
-                            <!-- /ko -->
+                            <td style="font-weight: bold; text-transform: capitalize; text-align: center" data-bind="text: $data.tier, attr: { colspan: Wiki.dungeons.tableClearCounts.length + 2 + (Wiki.dungeons.hasLootWithRequirements($parent) ? 1 : 0) }"></td>
                         </tr>
                         <!-- ko foreach: $data.items -->
                             <tr>
