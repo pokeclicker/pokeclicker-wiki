@@ -1,124 +1,127 @@
-## Best Gem Routes by Region
+## Best Gem Region
 
-Below is a table of the best routes in each region for each gem. Also a decent way to pick a route for those capture x-type pokemon quests.
-If multiple routes in a region are best, all are listed.
-Kanto routes marked with a \* are only accessible after Hoenn; if possible, a pre-Johto route will also be listed.
+Below is a table of the best routes and gyms in each region for each gem. Also a decent way to pick a route for those capture x-type pokemon quests.
+If multiple routes or gyms in a region are best, all are listed.
+Kanto routes and gyms marked with a \* are only accessible after Hoenn; if possible, a pre-Johto route or gym will also be listed.
 
 ### Normal Gems
-| Region | Route | Percentage |
-|--------|-------|------------|
-| Kanto | Routes 1, 16, 17, 18 | 100% |
-| Johto | Route 46 | 60% |
-| Hoenn | Route 116 | 50% |
-| Sinnoh | Route 201 | 66.7% |
-| Unova | Route 2 | 80% |
-| Kalos | Route 1 | 100% |
-| Alola | Routes 4, 6| 62.5% |
-| Galar | Soothing Wetlands, Challenge Road | 38.5% |
+| Region | Route | Percentage | Gym | Amount | Percentage |
+|--------|-------|------------|---|---|---|
+| Kanto | Routes 1, 16, 17, 18 | 100% | Falkner (Violet City) | 10 | 100% |
+| Johto | Route 46 | 60% | -|-|-|
+| Hoenn | Route 116 | 50% |Norman (Petalburg City) | 20 | 100% |
+| Sinnoh | Route 201 | 66.7% | -|-|-|
+| Unova | Route 2 | 80% | Cheren (Aspertia City) | 15 | 100%|
+| Kalos | Route 1 | 100% |-|-|-|
+| Alola | Routes 4, 6| 62.5% |-|-|-|
+| Galar | Soothing Wetlands, Challenge Road | 38.5% |-|-|-|
 
 ### Fire Gems
-| Region | Route | Percentage |
-|--------|-------|------------|
-| Kanto | Routes 7, 8 | 33.3% |
-| Johto | Route 37 | 20% |
-| Hoenn | Route 112 | 50% |
-| Sinnoh | Route 207 | 20% |
-| Unova | Route 4 | 16.7% |
-| Kalos | Route 18 | 25% |
-| Alola | Route 12 | 33.3% |
-| Galar | Route 3 | 17.6% |
+| Region | Route | Percentage | Gym | Amount | Percentage |
+|--------|-------|------------|---|---|---|
+| Kanto | Routes 7, 8 | 33.3% | Blaine (Cinnabar Island) | 20|100%|
+| Johto | Route 37 | 20% | -|-|-|
+| Hoenn | Route 112 | 50% | Flannery (Lavaridge Town) | 20 | 100% |
+| Sinnoh | Route 207 | 20% | Flint (League)  | 25 | 100% |
+| Unova | Route 4 | 16.7% | -|-|-|
+| Kalos | Route 18 | 25% | Malva (League) | 20 | 100%|
+| Alola | Route 12 | 33.3% | -|-|-|
+| Galar | Route 3 | 17.6% | Kabu (Motostoke) | 15 | 100% |
 
 
 ### Water Gems
-| Region | Route | Percentage |
-|--------|-------|------------|
-| Kanto | Routes 19, 20 | 100% |
-| Kanto\* | Green Path, Outcast Island| 100% |
-| Johto | Routes 40, 41 | 100% |
-| Hoenn | Routes 105, 106, 107, 108, 109, 122, 124, 125, 126, 127, 128, 129, 131, 132, 133, 134| 100% |
-| Sinnoh | Routes 219, 220, 223| 100% |
-| Unova | Routes 17, 21, Undella Bay | 100% |
-| Kalos | Azure Bay | 70% |
-| Alola[^1] | Routes 7, 9, 13, 14, Melemele Sea, Poni Breaker Coast| 100% |
-| Galar | West Lake Axewell | 100% |
+| Region | Route | Percentage | Gym | Amount | Percentage |
+|--------|-------|------------|---|---|---|
+| Kanto | Routes 19, 20 | 100% | Misty (Cerulean City)  | 10|100%  |
+| Kanto\* | Green Path, Outcast Island| 100% | Cissy (Mikan Island) | 10 | 100% |
+| Johto | Routes 40, 41 | 100% | Pryce (Mahogany Town) | 10 | 66% |
+| Hoenn | Routes 105, 106, 107, 108, 109, 122, 124, 125, 126, 127, 128, 129, 131, 132, 133, 134| 100% |  Wallace (League)| 30 | 100% |
+| Sinnoh | Routes 219, 220, 223| 100% | Crasher Wake (Pastoria City) | 15 | 100% |
+| Unova | Routes 17, 21, Undella Bay | 100% | Marlon (Humilau City) | 20 | 100% |
+| Kalos | Azure Bay | 70% | Siebold (League) | 20 | 100% |
+| Alola[^1] | Routes 7, 9, 13, 14, Melemele Sea, Poni Breaker Coast| 100% | -|-|-|
+| Galar | West Lake Axewell | 100% | Nessa (Hulbury) | 15 | 100% |
 
 [^1]: All Magikarp Jump routes also drop Water Gems.
 
 ### Electric Gems
-| Region | Route | Percentage |
-|--------|-------|------------|
-| Kanto | Route 10 | 12.5%|
-| Johto | Route 42| 20%|
-| Hoenn | Route 110| 20%|
-| Sinnoh | Route 202| 25%|
-| Unova | Route 8| 16.7%|
-| Kalos | Route 9 | 33.3%|
-| Alola | Route 12| 50%|
-| Galar | Route 4 | 20%|
+| Region | Route | Percentage | Gym | Amount | Percentage |
+|--------|-------|------------|---|---|---|
+| Kanto | Route 10 | 12.5%| Lt. Surge (Vermilion City) | 15 | 100% |
+| Johto | Route 42| 20%| Jasmine (Olivine City) | 10 | 66% |
+| Hoenn | Route 110| 20%| Wattson (Mauville City) | 20 | 100% |
+| Sinnoh | Route 202| 25%| Volkner (Sunnyshore City) | 20 | 100% |
+| Unova | Route 8| 16.7%| Elesa (Nimbasa City) | 20 |100% |
+| Kalos | Route 9 | 33.3%| Clemont (Lumiose City) | 15 | 100%|
+| Alola | Route 12| 50%|-|-|-|
+| Galar | Route 4 | 20%|-|-|-|
 
 
 ### Grass Gems
-| Region | Route | Percentage |
-|--------|-------|------------|
-| Kanto | Routes 5, 14, 15 | 50%|
-| Johto | Route 44 | 27.3%|
-| Hoenn | Route 114| 25%|
-| Sinnoh | Route 230| 31.3%|
-| Unova | Route 7 | 37.5%|
-| Kalos | Route 16 | 53.3%|
-| Alola | Route 11| 14.3%|
-| Galar | Hammerlocke Hills | 57.1%|
+| Region | Route | Percentage |Gym | Amount | Percentage |
+|--------|-------|------------|---|---|---|
+| Kanto | Routes 5, 14, 15 | 50%|Erika (Celadon City) | 15|100%|
+| Johto | Route 44 | 27.3%|-|-|-|
+| Hoenn | Route 114| 25%|Sidney (League) | 10|40%|
+| Sinnoh | Route 230| 31.3%|Gardenia (Eterna City) |15|100%|
+| Unova | Route 7 | 37.5%|-|-|-|
+| Kalos | Route 16 | 53.3%|Ramos (Coumarine City) |15|100%|
+| Alola | Route 11| 14.3%|-|-|-|
+| Galar | Hammerlocke Hills | 57.1%|Milo (Turffield) |10|100%|
 
 
 ### Ice Gems
-| Region | Route | Percentage |
-|--------|-------|------------|
-| Kanto\* | Valencia Island | 9.1% |
-| Johto | Route 28 | 6.7% |
-| Sinnoh | Route 217 | 100% |
-| Unova | Route 21 | 25% |
-| Kalos | Route 17 | 100% |
-| Alola | Poni Breaker Coast| 11.1% |
-| Galar | Route 10 | 81.8% |
+| Region | Route | Percentage |Gym | Amount | Percentage |
+|--------|-------|------------|---|---|---|
+|Kanto|-|-|Lorelei (League) | 20|80%|
+| Kanto\* | Valencia Island | 9.1% |-|-|-|
+| Johto | Route 28 | 6.7% |Pryce (Mahogany Town) | 10|66%|
+|Hoenn|-|-|Glacia (League) |25|100%|
+| Sinnoh | Route 217 | 100% |Candice (Snowpoint City)|20|100%|
+| Unova | Route 21 | 25% |-|-|-|
+| Kalos | Route 17 | 100% |Wulfric (Snowbelle City)|15|100%|
+| Alola | Poni Breaker Coast| 11.1% |-|-|-|
+| Galar | Route 10 | 81.8% |Melony (Circhester) |20|100%|
 
 
 ### Fighting Gems
-| Region | Route | Percentage |
-|--------|-------|------------|
-| Kanto | Route 3 | 16.7% |
-| Johto | Route 42, 46 | 20% |
-| Sinnoh | Route 211 | 30% |
-| Unova | Routes 1, 4, 8 | 16.7% |
-| Kalos | Route 11 | 33.3% |
-| Alola | Route3, Poni Grove| 28.6% |
-| Galar | Motostoke Outskirt | 30.8% |
+| Region | Route | Percentage |Gym | Amount | Percentage |
+|--------|-------|------------|---|---|---|
+| Kanto | Route 3 | 16.7% | Bruno (League)|15|60%|
+| Johto | Route 42, 46 | 20% |Chuck (Cianwood City) |10|100%|
+|Hoenn|-|-|Brawly (Dewford Town) |15|100%|
+| Sinnoh | Route 211 | 30% |Maylene (Veilstone City)|15|100%|
+| Unova | Routes 1, 4, 8 | 16.7% |Marshal (League) |30|100%|
+| Kalos | Route 11 | 33.3% |Korina (Shalour City) | 15|100%|
+| Alola | Route3, Poni Grove| 28.6% |Hala (Iki Town)|15|100%|
+| Galar | Motostoke Outskirt | 30.8% |Bea (Stow-on-Side)|20|100%|
 
 
 ### Poison Gems
-| Region | Route | Percentage |
-|--------|-------|------------|
-| Kanto | Routes 14, 15 | 62.5% |
-| Johto | Route 32 | 40% |
-| Hoenn | Route 110 | 30% |
-| Sinnoh | Route 224 | 41.2% |
-| Unova | Route 9 | 37.5% |
-| Kalos | Route 11 | 33.3% |
-| Alola | Route 9| 20% |
-| Galar | Old Cemetery | 28.6% |
+| Region | Route | Percentage |Gym | Amount | Percentage |
+|--------|-------|------------|---|---|---|
+| Kanto | Routes 14, 15 | 62.5% |Agatha (League) |25|100%|
+| Johto | Route 32 | 40% |Morty (Ecruteak City)|20|100%|
+| Hoenn | Route 110 | 30% |-|-|-|
+| Sinnoh | Route 224 | 41.2% |-|-|-|
+| Unova | Route 9 | 37.5% |Roxie (Virbank City)|15|100%|
+| Kalos | Route 11 | 33.3% |-|-|-|
+| Alola | Route 9| 20% |-|-|-|
+| Galar | Old Cemetery | 28.6% |Kalra (Master Dojo Battle Court) | 25|100%|
 
 
 ### Ground Gems
-| Region | Route | Percentage |
-|--------|-------|------------|
-| Kanto\* | Sevault Canyon | 63.6% |
-|Kanto|Route 9|25%|
-| Johto | Route 45 | 33.3% |
-| Hoenn | Route 111 | 55.6% |
-| Sinnoh | Route 228 | 50% |
-| Unova | Route 15 | 100% |
-| Kalos | Route 13 | 100% |
-| Alola | Haina Desert, Poni Coast| 100% |
-| Galar | Stony Wilderness | 50% |
+| Region | Route | Percentage |Gym | Amount | Percentage |
+|--------|-------|------------|---|---|---|
+| Kanto\* | Sevault Canyon | 63.6% |Luana (Kumquat Island)|5|50%|
+|Kanto|Route 9|25%|Giovanni (Viridian City)|25|100%|
+| Johto | Route 45 | 33.3% |-|-|-|
+| Hoenn | Route 111 | 55.6% |Roxanne (Rustboro City)|10|66.6%|
+| Sinnoh | Route 228 | 50% |Bertha (League)|25|100%|
+| Unova | Route 15 | 100% |Clay (Driftveil City)|20|100%|
+| Kalos | Route 13 | 100% |-|-|-|
+| Alola | Haina Desert, Poni Coast| 100% |Hapu (Exeggutor Island)|20|100%|
+| Galar | Stony Wilderness | 50% |-|-|-|
 
 
 ### Flying Gems
