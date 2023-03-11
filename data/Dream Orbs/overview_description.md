@@ -7,5 +7,4 @@ There are 3 colors of orbs: Pink, Green and Orange. Initially the player will on
 
 ## Opening Orbs
 
-Dream Orbs can be opened in White and Black Park in Unova (white circle in the following image). You can choose to open 1, 10, 100, 1000 and infinite Dream Orbs at once.
-![[File:DreamOrbsOpening.png]]
+Dream Orbs can be opened in White and Black Park in Unova. You can choose to open 1, 10, 100, 1000 and infinite Dream Orbs at once.
