@@ -1,6 +1,6 @@
-## Best Gem Region
+## Best Gem Locations by Region
 
-Below is a table of the best routes and gyms in each region for each gem. Also a decent way to pick a route for those capture x-type pokemon quests.
+Below is a table of the best routes and gyms in each region for each gem. Also a decent way to pick a route for those capture x-type Pokémon quests.
 If multiple routes or gyms in a region are best, all are listed.
 Kanto routes and gyms marked with a \* are only accessible after Hoenn; if possible, a pre-Johto route or gym will also be listed.
 
