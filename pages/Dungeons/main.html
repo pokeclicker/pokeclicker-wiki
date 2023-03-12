@@ -1,5 +1,27 @@
 <div>
     <!-- ko with: dungeonList[Wiki.pageName()] -->
+        <!-- ko with: Object.values(TownList).find(town => town.dungeon === $data) -->
+        <div>
+            <h3>Location:</h3>
+            <p data-bind="text: `Region: ${GameConstants.camelCaseToString(GameConstants.Region[$data.region])}`"></p>
+            <p data-bind="text: `Subregion: ${SubRegions.getSubRegionById($data.region, $data.subRegion).name}`"></p>
+            <!-- ko with: Object.values(TownList).filter(town => town.content.some(content => content instanceof MoveToDungeon && content.dungeon === $parent)) -->
+            <p data-bind="if: $data.length > 0">
+                <span>Accessed from: </span>
+                <!-- ko foreach: $data -->
+                    <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${$data.name}` }"></a>
+                <!-- /ko -->
+            </p>
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+        <!-- ko if: typeof $data.optionalParameters?.dungeonRegionalDifficulty === 'number' -->
+        <div>
+            <h3>Regional Difficulty:</h3>
+            <p data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.optionalParameters.dungeonRegionalDifficulty])"></p>
+            <!-- TODO: Explain regional difficulty -->
+        </div>
+        <!-- /ko -->
         <div>
             <h3>Cost:</h3>
             <p data-bind="text: $data.tokenCost.toLocaleString()"></p>
