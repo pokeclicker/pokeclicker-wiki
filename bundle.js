@@ -12469,11 +12469,12 @@ window.Wiki = {
   ...require('./markdown-renderer'),
   ...require('./discord'),
   pokemon: require('./pages/pokemon'),
+  farm: require('./pages/farm'),
   dreamOrbs: require('./pages/dreamOrbs'),
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dreamOrbs":114,"./pages/pokemon":115,"./typeahead":117}],106:[function(require,module,exports){
+},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dreamOrbs":114,"./pages/farm":115,"./pages/pokemon":116,"./typeahead":118}],106:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const saveChanges = (editor, filename, btn) => {
@@ -12863,7 +12864,7 @@ module.exports = {
     gotoPage,
 };
 
-},{"./datatables":102,"./markdown-editor":106,"./markdown-renderer":111,"./redirections":116}],113:[function(require,module,exports){
+},{"./datatables":102,"./markdown-editor":106,"./markdown-renderer":111,"./redirections":117}],113:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -12904,6 +12905,26 @@ module.exports = {
 };
 
 },{}],115:[function(require,module,exports){
+/**
+ * Returns the primary mutation for a berry.
+ * Filters out enigma mutations, as they cannot be used to obtain a berry for the first time.
+ * Unless includeBlankMutations is true, filters out blank mutations, as they are not regular mutations.
+ * @param berry the berry to get the primary mutation for, as a BerryType
+ * @param includeBlankMutations whether to include blank mutations in the results
+ * @return the primary mutation for the berry
+ */
+const getPrimaryMutation = (berry, includeBlankMutations = false) => {
+    return App.game.farming.mutations.filter(mutation => mutation.mutatedBerry === berry // mutation results in this berry
+        && (!mutation.berryReqs || mutation.berryReqs.length !== 1 || mutation.berryReqs[0] !== BerryType.Enigma) // mutation is not an enigma mutation
+        && !(mutation instanceof BlankMutation && !includeBlankMutations) // mutation is not a blank mutation or includeBlankMutations is true
+    )[0];
+};
+
+module.exports = {
+    getPrimaryMutation,
+};
+
+},{}],116:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -12963,7 +12984,7 @@ module.exports = {
     getBestVitamins,
 }
 
-},{}],116:[function(require,module,exports){
+},{}],117:[function(require,module,exports){
 const redirections = [
     ({type, name}) => {
         if (type === 'Pokemon') {
@@ -13015,7 +13036,7 @@ module.exports = {
     redirections
 };
 
-},{}],117:[function(require,module,exports){
+},{}],118:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [

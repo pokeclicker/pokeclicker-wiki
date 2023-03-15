@@ -27,12 +27,18 @@
                     </tr>
                     <tr>
                         <td>Harvest Amount</td>
-                        <td data-bind="text: `${$data.harvestAmount.toLocaleString()} berries`"></td>
+                        <td data-bind="text: `${$data.harvestAmount.toLocaleString()} berr${$data.harvestAmount === 1 ? 'y' : 'ies'}`"></td>
                     </tr>
                     <tr>
                         <td>Replant Chance</td>
                         <td data-bind="text: ($data.replantRate * 100) + '%'"></td>
                     </tr>
+                    <!-- ko if: Wiki.farm.getPrimaryMutation($data.type) -->
+                    <tr>
+                        <td>Mutation Chance</td>
+                        <td data-bind="text: (Wiki.farm.getPrimaryMutation($data.type)._mutationChance * 100) + '%'"></td>
+                    </tr>
+                    <!-- /ko -->
                     <tr>
                         <td>Farm Points</td>
                         <td>
