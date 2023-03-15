@@ -1,0 +1,56 @@
+<h3>Details</h3>
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th class="text-center align-middle">Weather</th>
+            <th class="text-center align-middle">Description</th>
+            <th class="text-center align-middle">Type Modifier(s)</th>
+            <th class="text-center align-middle">Weight</th>
+            <th class="text-center align-middle">Region</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: (() => {
+        var keys = Object.keys(Weather.weatherDistribution);
+        var regionWithAll = +keys[keys.length - 1] + 1;
+        const map = Object.values(Weather.weatherConditions).map((w) => {
+            let region = Object.values(Weather.weatherDistribution).findIndex(d => d.includes(w.type));
+            if (region === -1) {
+                region = regionWithAll;
+            }
+            return ({ ...w, region: region });
+        });
+        return map.sort((a, b) => a.region - b.region);
+    })()">
+        <tr>
+            <td class="align-middle">
+                <img data-bind="attr: { src: `./images/${WeatherType[$data.type]}.png` }" width="18px">
+                <ko data-bind="text: WeatherType[$data.type]"></ko>
+            </td>
+            <td class="align-middle" data-bind="text: $data.description"></td>
+            <td class="align-middle" data-bind="text: $data.multipliers.map(m => `${PokemonType[m.type]} x${m.multiplier}`).join(', ') || 'None'"></td>
+            <td class="align-middle" data-bind="text: $data.weight"></td>
+            <td class="align-middle" data-bind="text: $data.region === 0 ? 'All' : `${GameConstants.camelCaseToString(GameConstants.Region[$data.region])} onwards`"></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Pokémon Affected by Weather</h3>
+<h5 class="mt-3"><strong>Weather Evolutions</strong></h5>
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th class="text-center align-middle">Pokémon</th>
+            <th class="text-center align-middle">Evolution</th>
+            <th class="text-center align-middle">Required Weather</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: pokemonList.filter(p => p.evolutions).flatMap(p => p.evolutions).filter(e => e.restrictions.find(r => r instanceof WeatherRequirement))">
+        <tr>
+            <td data-bind="text: $data.basePokemon"></td>
+            <td data-bind="text: $data.evolvedPokemon"></td>
+            <td data-bind="text:
+                $data.restrictions.find(r => r instanceof WeatherRequirement).weather.map(w => WeatherType[w])
+                    .reduce((str, w, i, arr) => i === arr.length - 1 ? `${str}, or ${w}` : `${str}, ${w}`)"></td>
+        </tr>
+    </tbody>
+</table>

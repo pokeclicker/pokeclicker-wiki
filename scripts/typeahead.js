@@ -178,6 +178,12 @@ const searchOptions = [
     type: 'Dream Orbs',
     page: '',
   },
+  // Weather
+  {
+    display: 'Weather',
+    type: 'Weather',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
