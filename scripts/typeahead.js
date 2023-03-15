@@ -178,6 +178,12 @@ const searchOptions = [
     type: 'Dream Orbs',
     page: '',
   },
+  // Daily Deals
+  {
+    display: 'Daily Deals',
+    type: 'Daily Deals',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {

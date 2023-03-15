@@ -50,6 +50,10 @@ QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 
+const now = new Date();
+DailyDeal.generateDeals(5, now);
+BerryDeal.generateDeals(now);
+
 // Map our requirment hints to the requirement
 Requirement.prototype.toJSON = function() {
   const req = this.__proto__.constructor.name === 'LazyRequirementWrapper'
