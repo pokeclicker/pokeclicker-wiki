@@ -178,6 +178,12 @@ const searchOptions = [
     type: 'Dream Orbs',
     page: '',
   },
+  // Rare Hold Items
+  {
+    display: 'Rare Hold Items',
+    type: 'Rare Hold Items',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {

@@ -45,5 +45,11 @@
             <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Dungeons/${$data.name}` }"></a>
         <!-- /ko -->
     </div>
+    <div data-bind="if: pokemonList.some((p) => ([ItemType.item, ItemType.underground]).includes(p.heldItem?.type) && p.heldItem?.id == $data.name)">
+        <h3>Can be dropped by the following Pokémon:</h3>
+        <!-- ko foreach : pokemonList.filter((p) => ([ItemType.item, ItemType.underground]).includes(p.heldItem?.type) && p.heldItem?.id == $data.name) -->
+        <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokémon/${$data.name}` }"></a>
+        <!-- /ko -->
+    </div>
     <!-- /ko -->
 </div>
