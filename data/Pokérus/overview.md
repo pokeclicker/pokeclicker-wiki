@@ -18,12 +18,12 @@ Only Pokémon that fulfill the below conditions are capable of contracting the v
 
 There are 4 states of Pokérus as described below.
 
-State | Description
-:--- | ---:
-None | Base State. Pokémon can contract Pokérus. Pokémon cannot gain EVs.
-[[File:Infected.png]] | Pokémon has contracted Pokérus, but has yet to hatch once after contracting the virus. Pokémon cannot gain EVs.
-[[File:Contagious.png]] | Pokémon has contracted Pokérus, and is capable of spreading the virus. Pokémon can gain EVs.
-[[File:Resistant.png]] | Pokémon has contracted Pokérus, and is capable of spreading the virus. Pokémon can gain EVs, and has also accumulated 50 or more EVs.
+State | Name | Description
+:--- | :--- | ---:
+None | None | Base State. Pokémon can contract Pokérus. Pokémon cannot gain EVs.
+[[File:Infected.png]] | Infected | Pokémon has contracted Pokérus, but has yet to hatch once after contracting the virus. Pokémon cannot gain EVs.
+[[File:Contagious.png]] | Contagious | Pokémon has contracted Pokérus, and is capable of spreading the virus. Pokémon can gain EVs.
+[[File:Resistant.png]] | Resistant | Pokémon has contracted Pokérus, and is capable of spreading the virus. Pokémon can gain EVs, and has also accumulated 50 or more EVs.
 
 ## Effort Values (EVs)
 
