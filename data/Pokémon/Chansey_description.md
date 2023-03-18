@@ -1,1 +1,0 @@
-this is the hardest pkm to get
