@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-Starf can be obtained by encountering a shiny Wandering Pokémon while at least 1 plot on the [[Farm]] is empty. To start encountering Wandering Pokémon you need at least 1 ripe berry on your farm. There are a few recommended setups to obtain Starf berries.
+Starf can be obtained by encountering a shiny Wandering Pokémon while at least 1 plot on the [[Farm]] is empty. To start encountering Wandering Pokémon you need at least 1 ripe berry on your farm. There are a two recommended setups to obtain Starf berries.
 
 #### Roseli Setup
 You can fill your farm in the following way to have the best chance to obtain Starf berries without any additional berries. Note that the setup omits a 24th Roseli, as that would allow [[Berries/Custap]] berries to mutate, and omits a 23rd Roseli as that would allow [[Berries/Lansat]] Berries to mutate if [[Pokémon/Dialga]] has been caught. Purple squares indicate where mutations can occur.
