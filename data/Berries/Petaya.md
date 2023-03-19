@@ -80,6 +80,8 @@ Note: This table assumes you have given Haban 128 boost mulch and Babiri 52 boos
 | [[Kebia]] | 125 (optional) | 10:25 hours|
 | [[Kasib]] | 126 (optional) | 10:30 hours|
 
+In total 883 (or 1,134 counting the optional 2 last berries) Freeze Mulches are needed to use this method.
+
 ### What to do if Petaya doesn't spawn before other berries start dying
 
 <!--T:21-->
