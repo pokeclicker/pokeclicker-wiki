@@ -8,22 +8,22 @@ Two formations can be used. 10 mutation spots, [[Berries/Occa]] takeover possibl
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Occa.png\|32px]] [[Berries/Occa]] | {.mutation} | [[File:Passho.png\|32px]] [[Berries/Passho]] | {.mutation} | [[File:Occa.png\|32px]] [[Berries/Occa]] |
-| [[File:Wacan.png\|32px]] [[Berries/Wacan]] | {.mutation} | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | {.mutation} | [[File:Wacan.png\|32px]] [[Berries/Wacan]] |
-| | {.mutation} | | {.mutation} | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | {.mutation} | [[File:Occa.png\|32px]] [[Berries/Occa]] | {.mutation} | [[File:Passho.png\|32px]] [[Berries/Passho]] |
-| [[File:Rindo.png\|32px]] [[Berries/Rindo]] | {.mutation} | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | {.mutation} | [[File:Rindo.png\|32px]] [[Berries/Rindo]] |
+| [[File:Occa.png\|32px]] [[Berries/Occa]] | {.mutation} | [[File:Passho.png\|32px]] [[Berries/Passho]] | {.mutation} | [[File:Occa.png\|32px]] [[Berries/Occa]] | |
+| [[File:Wacan.png\|32px]] [[Berries/Wacan]] | {.mutation} | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | {.mutation} | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | |
+| | {.mutation} | | {.mutation} | | |
+| [[File:Passho.png\|32px]] [[Berries/Passho]] | {.mutation} | [[File:Occa.png\|32px]] [[Berries/Occa]] | {.mutation} | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
+| [[File:Rindo.png\|32px]] [[Berries/Rindo]] | {.mutation} | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | {.mutation} | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | |
 :::
 
 No [[Berries/Occa]] takeover, only 8 mutation spots:
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | {.mutation} | {.mutation} | {.mutation} | [[File:Rindo.png\|32px]] [[Berries/Rindo]] |
-| [[File:Wacan.png\|32px]] [[Berries/Wacan]] | {.mutation} | [[File:Occa.png\|32px]] [[Berries/Occa]]  | {.mutation} | [[File:Wacan.png\|32px]] [[Berries/Wacan]] |
-| [[File:Rindo.png\|32px]] [[Berries/Rindo]] | {.mutation} | {.mutation} | {.mutation} | [[File:Passho.png\|32px]] [[Berries/Passho]] |
-|  | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | |
+| | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | | |
+| [[File:Passho.png\|32px]] [[Berries/Passho]] | {.mutation} | {.mutation} | {.mutation} | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | |
+| [[File:Wacan.png\|32px]] [[Berries/Wacan]] | {.mutation} | [[File:Occa.png\|32px]] [[Berries/Occa]]  | {.mutation} | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | |
+| [[File:Rindo.png\|32px]] [[Berries/Rindo]] | {.mutation} | {.mutation} | {.mutation} | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
+|  | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | | |
 :::
 
 **Timing Table**
