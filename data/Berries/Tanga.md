@@ -6,9 +6,9 @@ A sample farm is below.
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Rindo.png\]] [[Berries/Rindo]] | [[File:Rindo.png\]] [[Berries/Rindo]] | [[File:Rindo.png\]] [[Berries/Rindo]] | [[File:Rindo.png\]] [[Berries/Rindo]] | [[File:Rindo.png\]] [[Berries/Rindo]] | |
-| [[File:Rindo.png\]] [[Berries/Rindo]] | {.mutation} | [[File:Rindo.png\]] [[Berries/Rindo]] | {.mutation} | [[File:Rindo.png\]] [[Berries/Rindo]] | |
-| [[File:Rindo.png\]] [[Berries/Rindo]] | [[File:Rindo.png\]] [[Berries/Rindo]] | [[File:Rindo.png\]] [[Berries/Rindo]] | [[File:Rindo.png\]] [[Berries/Rindo]] | [[File:Rindo.png\]] [[Berries/Rindo]] | |
-| [[File:Rindo.png\]] [[Berries/Rindo]] | {.mutation} | [[File:Rindo.png\]] [[Berries/Rindo]] | {.mutation} | [[File:Rindo.png\]] [[Berries/Rindo]] | |
-| [[File:Rindo.png\]] [[Berries/Rindo]] | [[File:Rindo.png\]] [[Berries/Rindo]] | [[File:Rindo.png\]] [[Berries/Rindo]] | [[File:Rindo.png\]] [[Berries/Rindo]] | [[File:Rindo.png\]] [[Berries/Rindo]] | |
+| [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | |
+| [[File:Rindo.png\|32px]] [[Berries/Rindo]] | {.mutation} | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | {.mutation} | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | |
+| [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | |
+| [[File:Rindo.png\|32px]] [[Berries/Rindo]] | {.mutation} | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | {.mutation} | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | |
+| [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | |
 :::
