@@ -29,7 +29,7 @@ Wiki Berries can mutate into the following Berries.
 | [[File:Hondew.png\|32px]] [[Berries/Hondew]]  | [[File:Figy.png\|32px]] [[Berries/Figy]] [[File:Aguav.png\|32px]] [[Berries/Aguav]] |
 | [[File:Cornn.png\|32px]] [[Berries/Cornn]]    | [[File:Leppa.png\|32px]] [[Berries/Leppa]] [[File:Bluk.png\|32px]] [[Berries/Bluk]] |
 | [[File:Coba.png\|32px]] [[Berries/Coba]]      | [[File:Aguav.png\|32px]] [[Berries/Aguav]] |
-| [[File:Payapa.png\|32px]] [[Berries/Payapa]]  | [[File:Bluk.png\|32px]] [[Berries/Bluk]] [[File:Cornn\|32px]] [[Berries/Cornn]] [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] |
+| [[File:Payapa.png\|32px]] [[Berries/Payapa]]  | [[File:Bluk.png\|32px]] [[Berries/Bluk]] [[File:Cornn.png\|32px]] [[Berries/Cornn]] [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] |
 
 ### Acquisition
 Wiki Berries can be obtained from the following dungeons.
