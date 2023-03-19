@@ -1,6 +1,6 @@
 ## Acquisition
 
-Tanga berries can be obtained by surrounding an empty plot with eight [[Rindo]] berries.
+Tanga berries can be obtained by surrounding an empty plot with eight [[Berries/Rindo]] berries.
 
 A sample farm is below.
 
