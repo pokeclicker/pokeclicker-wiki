@@ -31,7 +31,7 @@
                         <select class="form-control" data-bind="
                             options: GameHelper.enumSelectOption(BerryType),
                             optionsValue: 'value',
-                            optionsText: 'name',
+                            optionsText: (item) => { return item.value == -1 ? 'None' : `#${item.value + 1} - ${item.name}` },
                             value: Wiki.farmSimulator.selectedPlot()?._berry()"
                             onchange="Wiki.farmSimulator.setPlotBerry(this.value)">
                         </select>

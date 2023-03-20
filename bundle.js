@@ -13034,10 +13034,17 @@ const getStageTimes = ko.pureComputed(() => {
         return stages;
     }
 
+    const isPetaya = selectedPlot().berry === BerryType.Petaya;
+    const petayaEffect = App.game.farming.berryInFarm(BerryType.Petaya, PlotStage.Berry, true) && !isPetaya;
+
     stages.forEach((stage, idx) => {
         const growthTime = App.game.farming.berryData[selectedPlot().berry].growthTime[idx];
         const growthMultiplier = App.game.farming.getGrowthMultiplier() * selectedPlot().getGrowthMultiplier();
-        stages[idx].timeLeft = GameConstants.formatTimeFullLetters(growthTime / growthMultiplier);
+        if (growthMultiplier == 0 || (petayaEffect && stage.stage == 'Wither')) {
+            stages[idx].timeLeft = '∞';
+        } else {
+            stages[idx].timeLeft = GameConstants.formatTimeFullLetters(growthTime / growthMultiplier);
+        }
     });
 
     return stages;
