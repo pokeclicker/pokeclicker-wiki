@@ -44,6 +44,7 @@ App.game = new Game(
   new DreamOrbController()
 );
 App.game.farming.initialize();
+App.game.farming.plotList.forEach((p) => p.isUnlocked = true);
 App.game.breeding.initialize();
 SafariPokemonList.generateSafariLists();
 QuestLineHelper.loadQuestLines();

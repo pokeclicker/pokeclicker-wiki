@@ -1,0 +1,159 @@
+<div class="justify-content-center row">
+    <div class="col-12 col-lg-4">
+        <div id="plotList" class="row text-center" data-bind="foreach: App.game.farming.plotList">
+            <!-- ko if: $index() % GameConstants.FARM_PLOT_WIDTH == 0 -->
+            <div class="w-100 mb-1"></div>
+            <!-- /ko -->
+            <div class="plot col ps-1 pe-1">
+                <div class="plot-content" style="cursor: pointer;"
+                    data-bind="class: FarmController.calculateCssClass(), click: () => { Wiki.farmSimulator.selectPlot($index()); }">
+                    <div class="plotImage">
+                        <img style="width: 100%;" src="./images/farm/soil.png" data-bind="class: FarmController.calcMulchClass($data)">
+                        <div class="plotButton"
+                            data-bind="ifnot: $data.isEmpty(),
+                            tooltip: {title: $data.tooltip(), trigger: 'hover', animation: false, html: true}">
+                            <img width="100%" height="100%" src=""
+                                style="width: 68.75%; max-height: 100%; image-rendering: pixelated;"
+                                data-bind="attr:{ src: Wiki.farmSimulator.getImage($data)}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-5 pt-2">
+        <div class="card">
+            <div class="card-header">Selected Plot</div>
+            <div class="card-body">
+                <div class="row mb-2">
+                    <label class="col-sm-4 col-form-label">Berry:</label>
+                    <div class="col-sm-8">
+                        <select class="form-control" data-bind="
+                            options: GameHelper.enumSelectOption(BerryType),
+                            optionsValue: 'value',
+                            optionsText: 'name',
+                            value: Wiki.farmSimulator.selectedPlot()?._berry()"
+                            onchange="Wiki.farmSimulator.setPlotBerry(this.value)">
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <label class="col-sm-4 col-form-label">Stage:</label>
+                    <div class="col-sm-8">
+                        <select class="form-control" data-bind="
+                            options: GameHelper.enumSelectOption(PlotStage),
+                            optionsValue: 'value',
+                            optionsText: 'name',
+                            value: Wiki.farmSimulator.selectedPlot()?.stage()"
+                            onchange="Wiki.farmSimulator.setPlotStage(this.value)">
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="col-sm-4 col-form-label">Mulch:</label>
+                    <div class="col-sm-8">
+                        <select class="form-control" data-bind="
+                            options: GameHelper.enumSelectOption(MulchType),
+                            optionsValue: 'value',
+                            optionsText: (item) => { return item.name.replace('_', ' ') },
+                            value: Wiki.farmSimulator.selectedPlot()?._mulch()"
+                            onchange="Wiki.farmSimulator.selectedPlot()?._mulch(this.value)">
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mt-2">
+            <div class="card-header">Berry Details</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="row">
+                            <label class="col-sm-7 col-form-label col-form-label-sm">Harvest Amount:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control-plaintext form-control-sm" data-bind="attr: { value: Wiki.farmSimulator.getHarvestAmount() }">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-7 col-form-label col-form-label-sm">Farm Points:</label>
+                            <div class="col-sm-5">
+                                <input type="text"class="form-control-plaintext form-control-sm" data-bind="attr: { value: Wiki.farmSimulator.getFarmPointAmount() }">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-7 col-form-label col-form-label-sm">Color:</label>
+                            <div class="col-sm-5">
+                                <input type="text"class="form-control-plaintext form-control-sm" data-bind="attr: { value: Wiki.farmSimulator.getBerryColor() }">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <!-- ko foreach: GameHelper.enumNumbers(FlavorType) -->
+                        <div class="row">
+                            <label class="col-sm-7 col-form-label col-form-label-sm" data-bind="text: `${FlavorType[$data]}:`"></label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control-plaintext form-control-sm" data-bind="attr: { value: Wiki.farmSimulator.getFlavorValue($data) }">
+                            </div>
+                        </div>
+                        <!-- /ko -->
+                    </div>
+                </div>
+                <hr />
+                <div class="d-flex flex-row justify-content-around text-center">
+                    <!-- ko foreach: Wiki.farmSimulator.getStageTimes() -->
+                    <div>
+                        <div data-bind="text: $data.stage"></div>
+                        <div class="small" data-bind="text: $data.timeLeft"></div>
+                    </div>
+                    <!-- /ko -->
+                </div>
+                <hr />
+                <div class="d-flex flex-row justify-content-around text-center">
+                    <div>
+                        <div>Aura Emitted</div>
+                        <div class="small" data-bind="text: Wiki.farmSimulator.getEmittingAura()"></div>
+                    </div>
+                    <div>
+                        <div>Aura(s) Received</div>
+                        <div class="small" data-bind="html: Wiki.farmSimulator.getReceivedAuras()"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-3 pt-2">
+        <div class="card">
+            <div class="card-header">Possible Mutations</div>
+            <div class="card-body">
+                <div class="card-text">
+                    <!-- ko foreach: Wiki.farmSimulator.getPossibleMutations() -->
+                    <div data-bind="text: $data"></div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+        <div class="card mt-2">
+            <div class="card-header">External Auras</div>
+            <div class="card-body">
+                <div class="card-text">
+                    <!-- ko foreach: Wiki.farmSimulator.getExternalAuras() -->
+                    <div data-bind="text: $data"></div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+        <div class="card mt-2">
+            <div class="card-header">Possible Wanderers</div>
+            <div class="card-body">
+                <div class="card-text">
+                    <!-- ko foreach: Wiki.farmSimulator.getPossibleWanderers() -->
+                    <div data-bind="text: $data"></div>
+                    <!-- /ko -->
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="small text-muted">Base Wanderers Not Shown</div>
+            </div>
+        </div>
+    </div>
+</div>
