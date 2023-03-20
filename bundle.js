@@ -12907,7 +12907,6 @@ module.exports = {
 
 },{}],115:[function(require,module,exports){
 const selectedPlot = ko.observable(undefined);
-const possibleMutations = ko.observable([]);
 
 const selectPlot = (plotIndex) => {
     selectedPlot(App.game.farming.plotList[plotIndex]);
@@ -13066,6 +13065,38 @@ const getReceivedAuras = ko.pureComputed(() => {
     return auras || '-';
 });
 
+const clearAllPlots = () => {
+    if (!confirm('All plots will be cleared. Continue?')) {
+        return;
+    }
+
+    App.game.farming.plotList.forEach((plot) => {
+        plot._berry(BerryType.None);
+        plot._mulch(MulchType.None);
+    });
+}
+
+const exportFarm = () => {
+    const data = App.game.farming.plotList.map((plot) => {
+        return {
+            berry: plot.berry,
+            age: plot.age,
+            mulch: plot.mulch,
+        };
+    });
+    prompt('Save the below text to restore the farm to this state.', btoa(JSON.stringify(data)));
+};
+
+const importFarm = () => {
+    const input = prompt();
+    const data = JSON.parse(atob(input));
+    App.game.farming.plotList.forEach((plot, idx) => {
+        plot._berry(data[idx].berry);
+        plot._age(data[idx].age);
+        plot._mulch(data[idx].mulch);
+    });
+};
+
 
 module.exports = {
     selectedPlot,
@@ -13073,7 +13104,6 @@ module.exports = {
     selectPlot,
     setPlotBerry,
     setPlotStage,
-    possibleMutations,
     getPossibleMutations,
     getExternalAuras,
     getPossibleWanderers,
@@ -13084,6 +13114,9 @@ module.exports = {
     getStageTimes,
     getEmittingAura,
     getReceivedAuras,
+    clearAllPlots,
+    exportFarm,
+    importFarm,
 }
 },{}],116:[function(require,module,exports){
 
