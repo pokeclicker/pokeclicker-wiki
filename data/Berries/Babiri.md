@@ -14,5 +14,12 @@ Babiri can be mutated by surrounding a plot with four Shuca and four Charti berr
 All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times,
 |Berry| 	Planting Time with No Modifier|	Planting Time with Mulch or Sprayduck |	Planting Time with Mulch & Sprayduck|
 |---|---|---|---|
-|Shuca| 	- |	- |	-|
-|Charti 	|10 hours 30 mins until ripe |	7 hours until ripe |	4 hours 40 mins until ripe |
+|[[File:Shuca.png\|32px]] [[Berries/Shuca]]| 	`N/A` |	`N/A` |	`N/A` |
+|[[File:Charti.png\|32px]] [[Berries/Charti]] |10 hours 30 mins until ripe |	7 hours until ripe |	4 hours 40 mins until ripe |
+
+#### Mutations
+Babiri Berries can be used to mutate the following Berries.
+
+| Used In                                       | Other Requirements |
+| :---:                                         | :---: |
+| [[File:Petaya.png\|32px]] [[Berries/Petaya]]  | [[File:Occa.png\|32px]] [[Berries/Occa]] [[File:Passho.png\|32px]] [[Berries/Passho]] [[File:Wacan.png\|32px]] [[Berries/Wacan]] [[File:Rindo.png\|32px]] [[Berries/Rindo]] [[File:Yache.png\|32px]] [[Berries/Yache]] [[File:Chople.png\|32px]] [[Berries/Chople]] [[File:Kebia.png\|32px]] [[Berries/Kebia]] [[File:Shuca.png\|32px]] [[Berries/Shuca]] [[File:Coba.png\|32px]] [[Berries/Coba]] [[File:Payapa.png\|32px]] [[Berries/Payapa]] [[File:Tanga.png\|32px]] [[Berries/Tanga]] [[File:Charti.png\|32px]] [[Berries/Charti]] [[File:Kasib.png\|32px]] [[Berries/Kasib]] [[File:Haban.png\|32px]] [[Berries/Haban]] [[File:Colbur.png\|32px]] [[Berries/Colbur]] [[File:Chilan.png\|32px]] [[Berries/Chilan]] [[File:Roseli.png\|32px]] [[Berries/Roseli]] |
