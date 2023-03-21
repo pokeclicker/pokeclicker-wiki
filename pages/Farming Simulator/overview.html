@@ -19,7 +19,7 @@
                         <!-- ko with: Wiki.farmSimulator.getPlotMutations()[$index()] -->
                         <div class="position-absolute small" style="top: 0; right: 5px;"
                             data-bind="visible: $data.length, tooltip: {
-                                title: `Mutations can occur here:<br /><br />${$data.join('<br />')}`,
+                                title: `Mutations can occur here:<br /><br />${$data.map(m => m.tooltip).join('<br />')}`,
                                 html: true,
                                 placement: 'bottom',
                                 trigger: 'hover'

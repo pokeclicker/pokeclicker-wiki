@@ -12958,16 +12958,22 @@ const getPlotMutations = ko.pureComputed(() => {
 
     App.game.farming.mutations.forEach((mutation) => {
         const mutationPlots = mutation.getMutationPlots();
-        if (mutationPlots.length) {
-            mutationPlots.forEach((plot) => plotMutations[plot].push(BerryType[mutation.mutatedBerry]));
-        }
+        mutationPlots.forEach((plot) => {
+            const berry = BerryType[mutation.mutatedBerry];
+            const chance = mutation.mutationChance(plot) * App.game.farming.getMutationMultiplier() * App.game.farming.plotList[plot].getMutationMultiplier();
+            plotMutations[plot].push({
+                berry: berry,
+                chance: chance,
+                tooltip: `${berry} (${+(chance * 100).toFixed(4)}%)`,
+            })
+        });
     });
 
     return plotMutations;
 });
 
 const getPossibleMutations = ko.pureComputed(() => {
-    return Array.from(new Set(getPlotMutations().flat()));
+    return Array.from(new Set(getPlotMutations().flat().map(m => m.berry)));
 });
 
 const getExternalAuras = ko.pureComputed(() => {
