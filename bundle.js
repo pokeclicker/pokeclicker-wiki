@@ -12416,12 +12416,19 @@ App.game = new Game(
   new DreamOrbController()
 );
 App.game.farming.initialize();
-App.game.farming.plotList.forEach((p) => p.isUnlocked = true);
 App.game.breeding.initialize();
 SafariPokemonList.generateSafariLists();
 QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
+
+// Farming Simulator
+App.game.farming.plotList.forEach((p) => p.isUnlocked = true);
+App.game.farming.mutations.forEach(m => {
+  Object.defineProperty(m, 'unlocked', {
+    get: function() { return true; }
+  });
+});
 
 // Map our requirment hints to the requirement
 Requirement.prototype.toJSON = function() {
@@ -12942,19 +12949,25 @@ const setPlotStage = (plotStage) => {
         selectedPlot()._age(0);
     } else {
         const berryData = App.game.farming.berryData[selectedPlot()._berry()];
-        selectedPlot()._age(berryData.growthTime[plotStage]);
+        selectedPlot()._age(berryData?.growthTime[plotStage] ?? 0);
     }
 }
 
-const getPossibleMutations = ko.pureComputed(() => {
-    const set = new Set();
+const getPlotMutations = ko.pureComputed(() => {
+    const plotMutations = App.game.farming.plotList.map((_) => []);
+
     App.game.farming.mutations.forEach((mutation) => {
         const mutationPlots = mutation.getMutationPlots();
         if (mutationPlots.length) {
-            set.add(BerryType[mutation.mutatedBerry]);
+            mutationPlots.forEach((plot) => plotMutations[plot].push(BerryType[mutation.mutatedBerry]));
         }
     });
-    return Array.from(set);
+
+    return plotMutations;
+});
+
+const getPossibleMutations = ko.pureComputed(() => {
+    return Array.from(new Set(getPlotMutations().flat()));
 });
 
 const getExternalAuras = ko.pureComputed(() => {
@@ -13097,13 +13110,13 @@ const importFarm = () => {
     });
 };
 
-
 module.exports = {
     selectedPlot,
     getImage,
     selectPlot,
     setPlotBerry,
     setPlotStage,
+    getPlotMutations,
     getPossibleMutations,
     getExternalAuras,
     getPossibleWanderers,

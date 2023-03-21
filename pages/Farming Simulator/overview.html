@@ -16,6 +16,15 @@
                                 style="width: 68.75%; max-height: 100%; image-rendering: pixelated;"
                                 data-bind="attr:{ src: Wiki.farmSimulator.getImage($data)}">
                         </div>
+                        <!-- ko with: Wiki.farmSimulator.getPlotMutations()[$index()] -->
+                        <div class="position-absolute small" style="top: 0; right: 5px;"
+                            data-bind="visible: $data.length, tooltip: {
+                                title: `Mutations can occur here:<br /><br />${$data.join('<br />')}`,
+                                html: true,
+                                placement: 'bottom',
+                                trigger: 'hover'
+                            }">M</div>
+                        <!-- /ko -->
                     </div>
                 </div>
             </div>

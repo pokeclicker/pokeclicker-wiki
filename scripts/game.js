@@ -44,12 +44,19 @@ App.game = new Game(
   new DreamOrbController()
 );
 App.game.farming.initialize();
-App.game.farming.plotList.forEach((p) => p.isUnlocked = true);
 App.game.breeding.initialize();
 SafariPokemonList.generateSafariLists();
 QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
+
+// Farming Simulator
+App.game.farming.plotList.forEach((p) => p.isUnlocked = true);
+App.game.farming.mutations.forEach(m => {
+  Object.defineProperty(m, 'unlocked', {
+    get: function() { return true; }
+  });
+});
 
 // Map our requirment hints to the requirement
 Requirement.prototype.toJSON = function() {
