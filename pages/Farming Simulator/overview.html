@@ -10,14 +10,13 @@
                     <div class="plotImage">
                         <img style="width: 100%;" src="./images/farm/soil.png" data-bind="class: FarmController.calcMulchClass($data)">
                         <div class="plotButton"
-                            data-bind="ifnot: $data.isEmpty(),
-                            tooltip: {title: $data.tooltip(), trigger: 'hover', animation: false, html: true}">
+                            data-bind="ifnot: $data.isEmpty()">
                             <img width="100%" height="100%" src=""
                                 style="width: 68.75%; max-height: 100%; image-rendering: pixelated;"
                                 data-bind="attr:{ src: Wiki.farmSimulator.getImage($data)}">
                         </div>
                         <!-- ko with: Wiki.farmSimulator.getPlotMutations()[$index()] -->
-                        <div class="position-absolute small" style="top: 0; right: 5px;"
+                        <div class="position-absolute small fw-bold text-dark" style="top: 0; right: 5px;"
                             data-bind="visible: $data.length, tooltip: {
                                 title: `Mutations can occur here:<br /><br />${$data.map(m => m.tooltip).join('<br />')}`,
                                 html: true,
@@ -29,21 +28,13 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-end">
-            <button class="btn btn-primary me-1" data-bind="click: () => { Wiki.farmSimulator.importFarm() }">Import</button>
-            <button class="btn btn-primary me-1" data-bind="click: () => { Wiki.farmSimulator.exportFarm() }">Export</button>
-            <button class="btn btn-primary" data-bind="click: () => { Wiki.farmSimulator.clearAllPlots() }">Clear Plots</button>
-        </div>
-        
-    </div>
-    <div class="col-12 col-lg-5 pt-2">
+
         <div class="card">
-            <div class="card-header">Selected Plot</div>
-            <div class="card-body">
+            <div class="card-body pb-2">
                 <div class="row mb-2">
-                    <label class="col-sm-4 col-form-label">Berry:</label>
+                    <label class="col-sm-4 col-form-label form-control-sm">Berry:</label>
                     <div class="col-sm-8">
-                        <select class="form-control" data-bind="
+                        <select class="form-select form-select-sm" data-bind="
                             options: GameHelper.enumSelectOption(BerryType),
                             optionsValue: 'value',
                             optionsText: (item) => { return item.value == -1 ? 'None' : `#${item.value + 1} - ${item.name}` },
@@ -53,9 +44,9 @@
                     </div>
                 </div>
                 <div class="row mb-2">
-                    <label class="col-sm-4 col-form-label">Stage:</label>
+                    <label class="col-sm-4 col-form-label form-control-sm">Stage:</label>
                     <div class="col-sm-8">
-                        <select class="form-control" data-bind="
+                        <select class="form-select form-select-sm" data-bind="
                             options: GameHelper.enumSelectOption(PlotStage),
                             optionsValue: 'value',
                             optionsText: 'name',
@@ -65,9 +56,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <label class="col-sm-4 col-form-label">Mulch:</label>
+                    <label class="col-sm-4 col-form-label form-control-sm">Mulch:</label>
                     <div class="col-sm-8">
-                        <select class="form-control" data-bind="
+                        <select class="form-select form-select-sm" data-bind="
                             options: GameHelper.enumSelectOption(MulchType),
                             optionsValue: 'value',
                             optionsText: (item) => { return item.name.replace('_', ' ') },
@@ -76,29 +67,52 @@
                         </select>
                     </div>
                 </div>
+                <hr class="my-2" />
+                <div class="d-flex justify-content-around">
+                    <div class="form-group form-check mb-0">
+                        <input type="checkbox" class="form-check-input" id="sprayduck-checkbox" onchange="App.game.oakItems.itemList[OakItemType.Sprayduck].isActive = this.checked">
+                        <label class="form-check-label" for="sprayduck-checkbox">Sprayduck</label>
+                    </div>
+                    <div class="form-group form-check mb-0">
+                        <input type="checkbox" class="form-check-input" id="squirtbottle-checkbox" onchange="App.game.oakItems.itemList[OakItemType.Squirtbottle].isActive = this.checked">
+                        <label class="form-check-label" for="squirtbottle-checkbox">Squirtbottle</label>
+                    </div>
+                </div>
+                <hr class="my-2" />
+                <div class="d-flex justify-content-center mt-2">
+                    <button class="btn btn-sm btn-primary me-1" data-bind="click: () => { Wiki.farmSimulator.importFarmPrompt() }">Import</button>
+                    <button class="btn btn-sm btn-primary me-1" data-bind="click: () => { Wiki.farmSimulator.exportFarm() }">Export</button>
+                    <button class="btn btn-sm btn-primary" data-bind="click: () => { Wiki.farmSimulator.clearAllPlots() }">Clear Farm</button>
+                </div>
             </div>
         </div>
+    </div>
+    <div class="col-12 col-lg-5">
+        
         <div class="card mt-2">
-            <div class="card-header">Berry Details</div>
+            <div class="card-header">Plot / Berry Details</div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-6">
                         <div class="row">
                             <label class="col-sm-7 col-form-label col-form-label-sm">Harvest Amount:</label>
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control-plaintext form-control-sm" data-bind="attr: { value: Wiki.farmSimulator.getHarvestAmount() }">
+                            <div class="col-sm-5 text-center">
+                                <!--<input type="text" class="form-control-plaintext form-control-sm" data-bind="attr: { value: Wiki.farmSimulator.getHarvestAmount() }">-->
+                                <knockout class="small" data-bind="text: Wiki.farmSimulator.getHarvestAmount()"></knockout>
                             </div>
                         </div>
                         <div class="row">
                             <label class="col-sm-7 col-form-label col-form-label-sm">Farm Points:</label>
-                            <div class="col-sm-5">
-                                <input type="text"class="form-control-plaintext form-control-sm" data-bind="attr: { value: Wiki.farmSimulator.getFarmPointAmount() }">
+                            <div class="col-sm-5 text-center">
+                                <!--<input type="text"class="form-control-plaintext form-control-sm" data-bind="attr: { value: Wiki.farmSimulator.getFarmPointAmount() }">-->
+                                <knockout class="small" data-bind="text: Wiki.farmSimulator.getFarmPointAmount()"></knockout>
                             </div>
                         </div>
                         <div class="row">
                             <label class="col-sm-7 col-form-label col-form-label-sm">Color:</label>
-                            <div class="col-sm-5">
-                                <input type="text"class="form-control-plaintext form-control-sm" data-bind="attr: { value: Wiki.farmSimulator.getBerryColor() }">
+                            <div class="col-sm-5 text-center">
+                                <!--<input type="text"class="form-control-plaintext form-control-sm" data-bind="attr: { value: Wiki.farmSimulator.getBerryColor() }">-->
+                                <knockout class="small" data-bind="text: Wiki.farmSimulator.getBerryColor()"></knockout>
                             </div>
                         </div>
                     </div>
@@ -106,8 +120,9 @@
                         <!-- ko foreach: GameHelper.enumNumbers(FlavorType) -->
                         <div class="row">
                             <label class="col-sm-7 col-form-label col-form-label-sm" data-bind="text: `${FlavorType[$data]}:`"></label>
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control-plaintext form-control-sm" data-bind="attr: { value: Wiki.farmSimulator.getFlavorValue($data) }">
+                            <div class="col-sm-5 text-center">
+                                <!--<input type="text" class="form-control-plaintext form-control-sm" data-bind="attr: { value: Wiki.farmSimulator.getFlavorValue($data) }">-->
+                                <knockout class="small" data-bind="text: Wiki.farmSimulator.getFlavorValue($data)"></knockout>
                             </div>
                         </div>
                         <!-- /ko -->
@@ -117,7 +132,7 @@
                 <div class="d-flex flex-row justify-content-around text-center">
                     <!-- ko foreach: Wiki.farmSimulator.getStageTimes() -->
                     <div>
-                        <div data-bind="text: $data.stage"></div>
+                        <div class="" data-bind="text: $data.stage"></div>
                         <div class="small" data-bind="text: $data.timeLeft"></div>
                     </div>
                     <!-- /ko -->
@@ -125,11 +140,11 @@
                 <hr />
                 <div class="d-flex flex-row justify-content-around text-center">
                     <div>
-                        <div>Aura Emitted</div>
+                        <div class="">Aura Emitted</div>
                         <div class="small" data-bind="text: Wiki.farmSimulator.getEmittingAura()"></div>
                     </div>
                     <div>
-                        <div>Aura(s) Received</div>
+                        <div class="">Aura(s) Received</div>
                         <div class="small" data-bind="html: Wiki.farmSimulator.getReceivedAuras()"></div>
                     </div>
                 </div>
@@ -140,7 +155,7 @@
         <div class="card">
             <div class="card-header">Possible Mutations</div>
             <div class="card-body">
-                <div class="card-text">
+                <div class="card-text small">
                     <!-- ko foreach: Wiki.farmSimulator.getPossibleMutations() -->
                     <div data-bind="text: $data"></div>
                     <!-- /ko -->
@@ -150,7 +165,7 @@
         <div class="card mt-2">
             <div class="card-header">External Auras</div>
             <div class="card-body">
-                <div class="card-text">
+                <div class="card-text small">
                     <!-- ko foreach: Wiki.farmSimulator.getExternalAuras() -->
                     <div data-bind="text: $data"></div>
                     <!-- /ko -->
@@ -160,7 +175,7 @@
         <div class="card mt-2">
             <div class="card-header">Possible Wanderers</div>
             <div class="card-body">
-                <div class="card-text">
+                <div class="card-text small">
                     <!-- ko foreach: Wiki.farmSimulator.getPossibleWanderers() -->
                     <div data-bind="text: $data"></div>
                     <!-- /ko -->

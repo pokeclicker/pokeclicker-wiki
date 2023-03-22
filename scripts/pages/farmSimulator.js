@@ -49,7 +49,7 @@ const getPlotMutations = ko.pureComputed(() => {
             plotMutations[plot].push({
                 berry: berry,
                 chance: chance,
-                tooltip: `${berry} (${+(chance * 100).toFixed(4)}%)`,
+                tooltip: `${berry} (${(+(chance * 100).toFixed(4)).toLocaleString()}%)`,
             })
         });
     });
@@ -191,9 +191,15 @@ const exportFarm = () => {
     prompt('Save the below text to restore the farm to this state.', btoa(JSON.stringify(data)));
 };
 
-const importFarm = () => {
+const importFarmPrompt = () => {
     const input = prompt();
-    const data = JSON.parse(atob(input));
+    if (input) {
+        importFarm(input);
+    }
+};
+
+const importFarm = (str) => {
+    const data = JSON.parse(atob(str));
     App.game.farming.plotList.forEach((plot, idx) => {
         plot._berry(data[idx].berry);
         plot._age(data[idx].age);
@@ -220,5 +226,5 @@ module.exports = {
     getReceivedAuras,
     clearAllPlots,
     exportFarm,
-    importFarm,
+    importFarmPrompt,
 }

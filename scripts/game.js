@@ -45,6 +45,7 @@ App.game = new Game(
 );
 App.game.farming.initialize();
 App.game.breeding.initialize();
+App.game.oakItems.initialize();
 SafariPokemonList.generateSafariLists();
 QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
@@ -57,6 +58,8 @@ App.game.farming.mutations.forEach(m => {
     get: function() { return true; }
   });
 });
+// Set Oak Items to max level
+App.game.oakItems.itemList.forEach((item) => item.level = item.maxLevel);
 
 // Map our requirment hints to the requirement
 Requirement.prototype.toJSON = function() {
