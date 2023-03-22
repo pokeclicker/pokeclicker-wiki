@@ -181,13 +181,25 @@ const clearAllPlots = () => {
 }
 
 const exportFarm = () => {
-    const data = App.game.farming.plotList.map((plot) => {
-        return {
-            berry: plot.berry,
-            age: plot.age,
-            mulch: plot.mulch,
+    const data = {
+        plots: App.game.farming.plotList.map((plot) => {
+            return {
+                berry: plot.berry,
+                age: plot.age,
+                mulch: plot.mulch,
+            };
+        }),
+        oakItems: {},
+    };
+
+    [OakItemType.Sprayduck, OakItemType.Squirtbottle].forEach((t) => {
+        const oakItem = App.game.oakItems.itemList[t];
+        data.oakItems[t] = {
+            level: oakItem.level,
+            active: oakItem.isActive,
         };
     });
+
     prompt('Save the below text to restore the farm to this state.', btoa(JSON.stringify(data)));
 };
 
@@ -201,9 +213,16 @@ const importFarmPrompt = () => {
 const importFarm = (str) => {
     const data = JSON.parse(atob(str));
     App.game.farming.plotList.forEach((plot, idx) => {
-        plot._berry(data[idx].berry);
-        plot._age(data[idx].age);
-        plot._mulch(data[idx].mulch);
+        plot._berry(data.plots[idx].berry);
+        plot._age(data.plots[idx].age);
+        plot._mulch(data.plots[idx].mulch);
+    });
+    Object.keys(data.oakItems).forEach((key) => {
+        const oakItem = App.game.oakItems.itemList[key];
+        if (oakItem) {
+            oakItem.level = data.oakItems[key].level;
+            oakItem.isActive = data.oakItems[key].active;
+        }
     });
 };
 

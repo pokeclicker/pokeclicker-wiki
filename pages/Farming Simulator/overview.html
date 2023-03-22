@@ -16,7 +16,7 @@
                                 data-bind="attr:{ src: Wiki.farmSimulator.getImage($data)}">
                         </div>
                         <!-- ko with: Wiki.farmSimulator.getPlotMutations()[$index()] -->
-                        <div class="position-absolute small fw-bold text-dark" style="top: 0; right: 5px;"
+                        <div class="position-absolute small fw-bold text-dark" style="top: 1px; right: 6px;"
                             data-bind="visible: $data.length, tooltip: {
                                 title: `Mutations can occur here:<br /><br />${$data.map(m => m.tooltip).join('<br />')}`,
                                 html: true,
@@ -68,15 +68,21 @@
                     </div>
                 </div>
                 <hr class="my-2" />
-                <div class="d-flex justify-content-around">
-                    <div class="form-group form-check mb-0">
-                        <input type="checkbox" class="form-check-input" id="sprayduck-checkbox" onchange="App.game.oakItems.itemList[OakItemType.Sprayduck].isActive = this.checked">
-                        <label class="form-check-label" for="sprayduck-checkbox">Sprayduck</label>
+                <div class="d-flex flex-row flex-wrap justify-content-around">
+                    <!-- ko foreach: [OakItemType.Sprayduck, OakItemType.Squirtbottle] -->
+                    <div class="d-flex align-items-center" data-bind="with: App.game.oakItems.itemList[$data]">
+                        <div class="form-check form-check-inline mb-0">
+                            <input type="checkbox" class="form-check-input"
+                                data-bind="attr: { id: `oak-item-${$data.name}-checkbox` }, checked: $data.isActiveKO">
+                            <label class="form-check-label" data-bind="text: $data.displayName, attr: { for: `oak-item-${$data.name}-checkbox` }"></label>
+                        </div>
+                        <select class="form-select form-select-sm w-auto" data-bind="
+                            options: new Array($data.maxLevel + 1).fill().map((_, i) => i),
+                            value: $data.levelKO
+                        ">
+                        </select>
                     </div>
-                    <div class="form-group form-check mb-0">
-                        <input type="checkbox" class="form-check-input" id="squirtbottle-checkbox" onchange="App.game.oakItems.itemList[OakItemType.Squirtbottle].isActive = this.checked">
-                        <label class="form-check-label" for="squirtbottle-checkbox">Squirtbottle</label>
-                    </div>
+                    <!-- /ko -->
                 </div>
                 <hr class="my-2" />
                 <div class="d-flex justify-content-center mt-2">
