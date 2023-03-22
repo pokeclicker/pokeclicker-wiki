@@ -20,13 +20,13 @@ The following is a list of Pokémon obtainable in Kanto which cannot be found on
 |[[Items/Linking Cord]]|4|[[Pokémon/Alakazam]], [[Pokémon/Machamp]], [[Pokémon/Golem]], [[Pokémon/Gengar]]|
 
 ### Shopmons
-|Location|Pokemon|Cost (QP)|
+|Location|Pokemon|Cost|
 |---|---|---|
-|[[Towns/Celadon City]]|[[Pokémon/Eevee]]|4,000|
-|[[Towns/Celadon City]]|[[Pokémon/Jynx]]|2,000|
-|[[Towns/Celadon City]]|[[Pokémon/Porygon]]|2,000|
-|[[Towns/Celadon City]]|[[Pokémon/Mr. Mime]]|1,000|
-|[[Towns/Celadon City]]|[[Pokémon/Lickitung]]|1,000|
+|[[Towns/Celadon City]]|[[Pokémon/Eevee]]| [[File:questPoint.svg\|20px]] 4,000|
+|[[Towns/Celadon City]]|[[Pokémon/Jynx]]|[[File:questPoint.svg\|20px]] 2,000|
+|[[Towns/Celadon City]]|[[Pokémon/Porygon]]|[[File:questPoint.svg\|20px]] 2,000|
+|[[Towns/Celadon City]]|[[Pokémon/Mr. Mime]]|[[File:questPoint.svg\|20px]] 1,000|
+|[[Towns/Celadon City]]|[[Pokémon/Lickitung]]|[[File:questPoint.svg\|20px]] 1,000|
 
 ### Eggs
 All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries/Passho]], and [[Berries/Rindo]] berries.
@@ -55,4 +55,3 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 
 [[Pokémon/Scyther]] is also often obtained as a Wandering Pokemon in the [[Farm]].
 [[Pokémon/Chansey]] can also be obtained as a client-exclusive Pokemon at [[Towns/Client_Island]] in the Sevii Islands.
-
