@@ -57,6 +57,8 @@ EV modifier | Method
 10x | Pokémon is encountered and captured as a Mimic
 50x | Pokémon is encountered and captured as a Roaming Pokemon
 Variable | Rowap Berry Aura
+1.5x | [[File:Macho_Brace.png]]  [[Items/Macho_Brace]] Held Item
+2x | [[File:Power_Bracer.png]]  [[Items/Power_Bracer]] Held Item
 
 #### Examples
 
