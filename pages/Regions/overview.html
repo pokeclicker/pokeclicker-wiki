@@ -5,14 +5,18 @@
             <tr>
                 <th>Region</th>
                 <th>Sub Regions</th>
+                <th>Towns</th>
                 <th>Routes</th>
+                <th>Dungeons</th>
             </tr>
         </thead>
         <tbody data-bind="foreach: GameHelper.enumStrings(GameConstants.Region).filter(r => !['none', 'final'].includes(r))">
             <tr class="text-nowrap clickable" data-bind="click: () => { Wiki.gotoPage('Regions', GameConstants.camelCaseToString($data)); return false; }">
                 <td data-bind="text: GameConstants.camelCaseToString($data), attr: { 'data-order': $data.region }"></td>
                 <td data-bind="text: SubRegions.list[GameConstants.Region[$data]].length - 1"></td>
+                <td data-bind="text: Object.values(TownList).filter(t => t.region == GameConstants.Region[$data]).length"></td>
                 <td data-bind="text: Routes.getRoutesByRegion(GameConstants.Region[$data]).length"></td>
+                <td data-bind="text: GameConstants.RegionDungeons[GameConstants.Region[$data]].length"></td>
             </tr>
         </tbody>
     </table>
