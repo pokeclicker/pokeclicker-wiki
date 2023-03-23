@@ -13440,6 +13440,17 @@ const searchOptions = [
     type: 'Hatchery Helpers',
     page: h.name,
   })),
+  // Regions
+  {
+    display: 'Regions',
+    type: 'Regions',
+    page: '',
+  },
+  ...GameHelper.enumStrings(GameConstants.Region).filter(r => !['none', 'final'].includes(r)).map(r => ({
+    display: GameConstants.camelCaseToString(r),
+    type: 'Regions',
+    page: GameConstants.camelCaseToString(r),
+  })),
   // Towns
   {
     display: 'Towns',
