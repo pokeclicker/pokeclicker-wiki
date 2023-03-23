@@ -51,9 +51,9 @@ QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 
-// Farming Simulator
-App.game.farming.plotList.forEach((p) => p.isUnlocked = true);
-App.game.farming.mutations.forEach(m => {
+// Farm Simulator
+App.game.farming.plotList.forEach((p) => p.isUnlocked = true); // All plots unlocked
+App.game.farming.mutations.forEach(m => { // All mutations unlocked
   Object.defineProperty(m, 'unlocked', {
     get: function() { return true; }
   });

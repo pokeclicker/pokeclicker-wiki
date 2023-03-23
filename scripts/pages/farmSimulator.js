@@ -1,7 +1,10 @@
 const selectedPlot = ko.observable(undefined);
+const selectedPlotIndex = ko.observable(undefined);
+const plotLabelsEnabled = ko.observable(false);
 
 const selectPlot = (plotIndex) => {
     selectedPlot(App.game.farming.plotList[plotIndex]);
+    selectedPlotIndex(plotIndex);
     $('#plotList > .plot > .plot-content').removeClass('selected');
     $(`#plotList > .plot:eq(${plotIndex}) > .plot-content`).addClass('selected');
 };
@@ -49,7 +52,7 @@ const getPlotMutations = ko.pureComputed(() => {
             plotMutations[plot].push({
                 berry: berry,
                 chance: chance,
-                tooltip: `${berry} (${(+(chance * 100).toFixed(4)).toLocaleString()}%)`,
+                tooltip: `${berry} (${formatMutationChance(chance)})`,
             })
         });
     });
@@ -57,9 +60,21 @@ const getPlotMutations = ko.pureComputed(() => {
     return plotMutations;
 });
 
-const getPossibleMutations = ko.pureComputed(() => {
+const getAllPossibleMutations = ko.pureComputed(() => {
     return Array.from(new Set(getPlotMutations().flat().map(m => m.berry)));
 });
+
+const getSelectedPlotMutations = () => {
+    if (!selectedPlot()) {
+        return [];
+    }
+
+    return getPlotMutations()[selectedPlotIndex()];
+}
+
+const formatMutationChance = (chance) => {
+    return `${+(chance * 100).toFixed(4)}%`;
+};
 
 const getExternalAuras = ko.pureComputed(() => {
     const externalAuras = [];
@@ -77,24 +92,28 @@ const getExternalAuras = ko.pureComputed(() => {
     return externalAuras;
 });
 
-const getPossibleWanderers = ko.pureComputed(() => {
-    const set = new Set();
-    App.game.farming.plotList.forEach((plot) => {
+const getPlotWanderers = ko.pureComputed(() => {
+    return App.game.farming.plotList.map((plot) => {
         if (plot.berry === BerryType.None) {
-            return;
+            return [];
         }
-        plot.berryData.wander.forEach((w) => set.add(w));
-    });
 
-    // remove base wanderers
-    set.forEach((w) => {
-        if (Berry.baseWander.includes(w)) {
-            set.delete(w);
-        }
+        // remove base wanderers
+        return plot.berryData.wander.filter(w => !Berry.baseWander.includes(w));
     });
-
-    return Array.from(set);
 });
+
+const getAllPossibleWanderers = ko.pureComputed(() => {
+    return Array.from(new Set(getPlotWanderers().flat()));
+});
+
+const getSelectedPlotWanderers = () => {
+    if (!selectedPlot()) {
+        return [];
+    }
+
+    return getPlotWanderers()[selectedPlotIndex()];
+}
 
 const getHarvestAmount = () => {
     if (!selectedPlot() || selectedPlot()._berry() == -1) {
@@ -157,7 +176,9 @@ const getEmittingAura = ko.pureComputed(() => {
     if (!selectedPlot() || selectedPlot()._berry() == -1 || selectedPlot().emittingAura.type() == null) {
         return '-';
     }
-    return `${AuraType[selectedPlot().emittingAura.type()]}: ${selectedPlot().berry === BerryType.Micle ? `+${(selectedPlot().emittingAura.value() * 100).toFixed(2)}%` : `×${selectedPlot().emittingAura.value().toFixed(2)}`}`;
+    return `${AuraType[selectedPlot().emittingAura.type()]}: ${selectedPlot().berry === BerryType.Micle
+        ? `+${(selectedPlot().emittingAura.value() * 100).toFixed(2)}%`
+        : `×${selectedPlot().emittingAura.value().toFixed(2)}`}`;
 });
 
 const getReceivedAuras = ko.pureComputed(() => {
@@ -228,14 +249,19 @@ const importFarm = (str) => {
 
 module.exports = {
     selectedPlot,
-    getImage,
+    plotLabelsEnabled,
     selectPlot,
+    getImage,
     setPlotBerry,
     setPlotStage,
     getPlotMutations,
-    getPossibleMutations,
+    getAllPossibleMutations,
+    getSelectedPlotMutations,
+    formatMutationChance,
     getExternalAuras,
-    getPossibleWanderers,
+    getPlotWanderers,
+    getAllPossibleWanderers,
+    getSelectedPlotWanderers,
     getHarvestAmount,
     getFarmPointAmount,
     getBerryColor,

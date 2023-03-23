@@ -15,14 +15,26 @@
                                 style="width: 68.75%; max-height: 100%; image-rendering: pixelated;"
                                 data-bind="attr:{ src: Wiki.farmSimulator.getImage($data)}">
                         </div>
+                        <span class="badge bg-dark position-absolute start-50 translate-middle w-100 px-0" style="top: 10px; border-radius: 0;"
+                            data-bind="text: $data.berry === BerryType.None ? '' : `${BerryType[$data.berry]}`,
+                                visible: Wiki.farmSimulator.plotLabelsEnabled()"></span>
+                        <!--
+                        <span class="position-absolute border border-2 border-dark rounded-circle bg-white p-1" style="top: 3px; left: 4px;"
+                            data-bind="visible: $data.berry !== BerryType.None, tooltip: {
+                                title: 'test',
+                                trigger: 'hover',
+                                animation: false,
+                                html: true
+                            }"></span>
+                        -->
                         <!-- ko with: Wiki.farmSimulator.getPlotMutations()[$index()] -->
-                        <div class="position-absolute small fw-bold text-dark" style="top: 1px; right: 6px;"
+                        <span class="position-absolute border border-2 border-dark rounded-circle bg-success p-1" style="bottom: 3px; right: 4px;"
                             data-bind="visible: $data.length, tooltip: {
                                 title: `Mutations can occur here:<br /><br />${$data.map(m => m.tooltip).join('<br />')}`,
                                 html: true,
-                                placement: 'bottom',
-                                trigger: 'hover'
-                            }">M</div>
+                                trigger: 'hover',
+                                placement: 'bottom'
+                            }"></span>                            
                         <!-- /ko -->
                     </div>
                 </div>
@@ -68,10 +80,10 @@
                     </div>
                 </div>
                 <hr class="my-2" />
-                <div class="d-flex flex-row flex-wrap justify-content-around">
+                <div class="d-flex flex-row flex-wrap justify-content-around small">
                     <!-- ko foreach: [OakItemType.Sprayduck, OakItemType.Squirtbottle] -->
                     <div class="d-flex align-items-center" data-bind="with: App.game.oakItems.itemList[$data]">
-                        <div class="form-check form-check-inline mb-0">
+                        <div class="form-check form-check-inline mb-0" style="padding-top: 1px;">
                             <input type="checkbox" class="form-check-input"
                                 data-bind="attr: { id: `oak-item-${$data.name}-checkbox` }, checked: $data.isActiveKO">
                             <label class="form-check-label" data-bind="text: $data.displayName, attr: { for: `oak-item-${$data.name}-checkbox` }"></label>
@@ -85,10 +97,14 @@
                     <!-- /ko -->
                 </div>
                 <hr class="my-2" />
-                <div class="d-flex justify-content-center mt-2">
+                <div class="d-flex justify-content-center align-items-center mt-2">
+                    <input type="checkbox" class="btn-check" id="plot-labels-checkbox" autocomplete="off" data-bind="checked: Wiki.farmSimulator.plotLabelsEnabled">
+                    <label class="btn btn-secondary btn-sm me-auto" for="plot-labels-checkbox"
+                        data-bind="text: Wiki.farmSimulator.plotLabelsEnabled() ? '&check; Labels' : '&times; Labels'"></label>
+
                     <button class="btn btn-sm btn-primary me-1" data-bind="click: () => { Wiki.farmSimulator.importFarmPrompt() }">Import</button>
                     <button class="btn btn-sm btn-primary me-1" data-bind="click: () => { Wiki.farmSimulator.exportFarm() }">Export</button>
-                    <button class="btn btn-sm btn-primary" data-bind="click: () => { Wiki.farmSimulator.clearAllPlots() }">Clear Farm</button>
+                    <button class="btn btn-sm btn-primary me-1" data-bind="click: () => { Wiki.farmSimulator.clearAllPlots() }">Clear</button>
                 </div>
             </div>
         </div>
@@ -103,21 +119,18 @@
                         <div class="row">
                             <label class="col-sm-7 col-form-label col-form-label-sm">Harvest Amount:</label>
                             <div class="col-sm-5 text-center">
-                                <!--<input type="text" class="form-control-plaintext form-control-sm" data-bind="attr: { value: Wiki.farmSimulator.getHarvestAmount() }">-->
                                 <knockout class="small" data-bind="text: Wiki.farmSimulator.getHarvestAmount()"></knockout>
                             </div>
                         </div>
                         <div class="row">
                             <label class="col-sm-7 col-form-label col-form-label-sm">Farm Points:</label>
                             <div class="col-sm-5 text-center">
-                                <!--<input type="text"class="form-control-plaintext form-control-sm" data-bind="attr: { value: Wiki.farmSimulator.getFarmPointAmount() }">-->
                                 <knockout class="small" data-bind="text: Wiki.farmSimulator.getFarmPointAmount()"></knockout>
                             </div>
                         </div>
                         <div class="row">
                             <label class="col-sm-7 col-form-label col-form-label-sm">Color:</label>
                             <div class="col-sm-5 text-center">
-                                <!--<input type="text"class="form-control-plaintext form-control-sm" data-bind="attr: { value: Wiki.farmSimulator.getBerryColor() }">-->
                                 <knockout class="small" data-bind="text: Wiki.farmSimulator.getBerryColor()"></knockout>
                             </div>
                         </div>
@@ -127,7 +140,6 @@
                         <div class="row">
                             <label class="col-sm-7 col-form-label col-form-label-sm" data-bind="text: `${FlavorType[$data]}:`"></label>
                             <div class="col-sm-5 text-center">
-                                <!--<input type="text" class="form-control-plaintext form-control-sm" data-bind="attr: { value: Wiki.farmSimulator.getFlavorValue($data) }">-->
                                 <knockout class="small" data-bind="text: Wiki.farmSimulator.getFlavorValue($data)"></knockout>
                             </div>
                         </div>
@@ -138,7 +150,7 @@
                 <div class="d-flex flex-row justify-content-around text-center">
                     <!-- ko foreach: Wiki.farmSimulator.getStageTimes() -->
                     <div>
-                        <div class="" data-bind="text: $data.stage"></div>
+                        <div class="mb-2" data-bind="text: $data.stage"></div>
                         <div class="small" data-bind="text: $data.timeLeft"></div>
                     </div>
                     <!-- /ko -->
@@ -146,12 +158,33 @@
                 <hr />
                 <div class="d-flex flex-row justify-content-around text-center">
                     <div>
-                        <div class="">Aura Emitted</div>
+                        <div class="mb-2">Aura Emitted</div>
                         <div class="small" data-bind="text: Wiki.farmSimulator.getEmittingAura()"></div>
                     </div>
                     <div>
-                        <div class="">Aura(s) Received</div>
+                        <div class="mb-2">Aura(s) Received</div>
                         <div class="small" data-bind="html: Wiki.farmSimulator.getReceivedAuras()"></div>
+                    </div>
+                </div>
+                <hr />
+                <div class="d-flex flex-row justify-content-around text-center">
+                    <div>
+                        <div class="mb-2">Mutations</div>
+                        <div class="small" data-bind="with: Wiki.farmSimulator.getSelectedPlotMutations()">
+                            <knockout data-bind="visible: !$data.length">-</knockout>
+                            <!-- ko foreach: $data -->
+                            <div data-bind="text: `${$data.berry} (${Wiki.farmSimulator.formatMutationChance($data.chance)})`"></div>
+                            <!-- /ko -->
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-2">Wanderers</div>
+                        <div class="small" data-bind="with: Wiki.farmSimulator.getSelectedPlotWanderers()">
+                            <knockout data-bind="visible: !$data.length">-</knockout>
+                            <!-- ko foreach: $data -->
+                            <div data-bind="text: $data"></div>
+                            <!-- /ko -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -159,10 +192,10 @@
     </div>
     <div class="col-12 col-lg-3 pt-2">
         <div class="card">
-            <div class="card-header">Possible Mutations</div>
+            <div class="card-header">All Possible Mutations</div>
             <div class="card-body">
                 <div class="card-text small">
-                    <!-- ko foreach: Wiki.farmSimulator.getPossibleMutations() -->
+                    <!-- ko foreach: Wiki.farmSimulator.getAllPossibleMutations() -->
                     <div data-bind="text: $data"></div>
                     <!-- /ko -->
                 </div>
@@ -179,10 +212,10 @@
             </div>
         </div>
         <div class="card mt-2">
-            <div class="card-header">Possible Wanderers</div>
+            <div class="card-header">All Possible Wanderers</div>
             <div class="card-body">
                 <div class="card-text small">
-                    <!-- ko foreach: Wiki.farmSimulator.getPossibleWanderers() -->
+                    <!-- ko foreach: Wiki.farmSimulator.getAllPossibleWanderers() -->
                     <div data-bind="text: $data"></div>
                     <!-- /ko -->
                 </div>
