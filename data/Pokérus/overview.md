@@ -18,12 +18,12 @@ Only Pokémon that fulfill the below conditions are capable of contracting the v
 
 There are 4 states of Pokérus as described below.
 
-State | Description
-:--- | ---:
-None | Base State. Pokémon can contract Pokérus. Pokémon cannot gain EVs.
-[[File:Infected.png]] | Pokémon has contracted Pokérus, but has yet to hatch once after contracting the virus. Pokémon cannot gain EVs.
-[[File:Contagious.png]] | Pokémon has contracted Pokérus, and is capable of spreading the virus. Pokémon can gain EVs.
-[[File:Resistant.png]] | Pokémon has contracted Pokérus, and is capable of spreading the virus. Pokémon can gain EVs, and has also accumulated 50 or more EVs.
+State | Name | Description
+:--- | :--- | ---:
+None | None | Base State. Pokémon can contract Pokérus. Pokémon cannot gain EVs.
+[[File:Infected.png]] | Infected | Pokémon has contracted Pokérus, but has yet to hatch once after contracting the virus. Pokémon cannot gain EVs.
+[[File:Contagious.png]] | Contagious | Pokémon has contracted Pokérus, and is capable of spreading the virus. Pokémon can gain EVs.
+[[File:Resistant.png]] | Resistant | Pokémon has contracted Pokérus, and is capable of spreading the virus. Pokémon can gain EVs, and has also accumulated 50 or more EVs.
 
 ## Effort Values (EVs)
 
@@ -57,6 +57,8 @@ EV modifier | Method
 10x | Pokémon is encountered and captured as a Mimic
 50x | Pokémon is encountered and captured as a Roaming Pokemon
 Variable | Rowap Berry Aura
+1.5x | [[File:Macho_Brace.png\|40px]]  [[Items/Macho_Brace]] Held Item
+2x | [[File:Power_Bracer.png\|40px]]  [[Items/Power_Bracer]] Held Item
 
 #### Examples
 
@@ -81,7 +83,7 @@ Beyond 50 EVs, Pokémon will still gain EVs at the same rate, but will see dimin
 
 Effort Value | Pokémon Damage Multiplier
 :--- | ---:
-50 | 1,5x
+50 | 1.5x
 802 | 2x
 40,121 | 3x
 643,300 | 4x
@@ -95,4 +97,4 @@ Effort Value | Pokémon Damage Multiplier
 EV Damage Multiplier = 1 + (EV / 100)
 
 **When a Pokémon has greater than 50 EVs:**
-EV Damage Multiplier = EV \* log50(1.5)
+EV Damage Multiplier = EV^(log(1.5)/log(50))
