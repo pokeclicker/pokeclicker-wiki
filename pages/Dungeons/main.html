@@ -18,8 +18,9 @@
         <!-- ko if: typeof $data.optionalParameters?.dungeonRegionalDifficulty === 'number' -->
         <div>
             <h3>Regional Difficulty:</h3>
+            <p>This dungeons difficulty is not based on it's region, but instead:</p>
             <p data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.optionalParameters.dungeonRegionalDifficulty])"></p>
-            <!-- TODO: Explain regional difficulty -->
+            <p>This is relavant for stuff like loot debuff, HP and experience.
         </div>
         <!-- /ko -->
         <div>
