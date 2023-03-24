@@ -12422,6 +12422,10 @@ QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 
+const now = new Date();
+DailyDeal.generateDeals(5, now);
+BerryDeal.generateDeals(now);
+
 // Map our requirment hints to the requirement
 Requirement.prototype.toJSON = function() {
   const req = this.__proto__.constructor.name === 'LazyRequirementWrapper'
@@ -12473,7 +12477,7 @@ window.Wiki = {
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dreamOrbs":114,"./pages/pokemon":115,"./typeahead":116}],106:[function(require,module,exports){
+},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dreamOrbs":114,"./pages/pokemon":115,"./typeahead":117}],106:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const saveChanges = (editor, filename, btn) => {
@@ -12689,6 +12693,7 @@ module.exports = {
 const { md } = require('./markdown-renderer');
 const { applyDatatables } = require('./datatables');
 const { createMarkDownEditor } = require('./markdown-editor');
+const redirections = require('./redirections');
 
 // Load our error page for when we need it
 errorPage = '';
@@ -12705,9 +12710,18 @@ const applyBindings = ko.observable(false);
 
 // This is our main function for changing pages
 // Look at onhashchange for what happens after
-const gotoPage = (type, name, other) => {
+const gotoPage = (type, name, other, noHistory) => {
+  const hash = `#!${encodeURI(type).replace(/%20/g, '_')}/${encodeURI(name).replace(/%20/g, '_')}${other ? `/${other}`: ''}`;
+  if (noHistory) {
+    window.history.replaceState(null, null, hash);
+    window.dispatchEvent(new HashChangeEvent('hashchange', {
+      newURL: window.location.origin + window.location.pathname + window.location.hash,
+      oldURL: window.location.origin + '#!',
+    }));
+    return;
+  }
   // Update our page hash, so if we reload it will load this page
-  window.location.hash = `#!${encodeURI(type).replace(/%20/g, '_')}/${encodeURI(name).replace(/%20/g, '_')}${other ? `/${other}`: ''}`;
+  window.location.hash = hash;
 };
 
 // When the hash changes, we will load the new page
@@ -12728,8 +12742,22 @@ onhashchange = (event) => {
     }
     return;
   }
-  const [ type, name, other ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
+  let [ type, name, other ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
   if (type == 'loading') {
+    return;
+  }
+  const originalType = type;
+  const originalName = name;
+  let redirectTarget;
+  let redirectCount = 0;
+  while (redirectCount++ < 30 && (redirectTarget = redirections.redirect({type, name}))) {
+    type = redirectTarget.type;
+    name = redirectTarget.name;
+    console.debug(`[Redirect ${redirectCount}] ${originalType}/${originalName} → ${type}/${name}`);
+    //TODO: check for infinite loops, make sure we don't redirect to the same page
+  }
+  if (type !== originalType || name !== originalName) {
+    gotoPage(type, name ?? '', other, true);
     return;
   }
   pageType(type);
@@ -12839,7 +12867,7 @@ module.exports = {
     gotoPage,
 };
 
-},{"./datatables":102,"./markdown-editor":106,"./markdown-renderer":111}],113:[function(require,module,exports){
+},{"./datatables":102,"./markdown-editor":106,"./markdown-renderer":111,"./redirections":116}],113:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -12940,6 +12968,58 @@ module.exports = {
 }
 
 },{}],116:[function(require,module,exports){
+const redirections = [
+    ({type, name}) => {
+        if (type === 'Pokemon') {
+            return {
+                type: 'Pokémon',
+                name
+            };
+        }
+    },
+    {
+        type: 'Mega Pokemon',
+        name: '*',
+        redirect: {
+            type: 'Mega Pokémon'
+        }
+    },
+];
+
+const matches = (patternOrName, string) => {
+    if (typeof patternOrName === 'string') {
+        return patternOrName === string || patternOrName === '*';
+    } else if (patternOrName instanceof RegExp) {
+        return patternOrName.test(string);
+    } else {
+        return false;
+    }
+}
+
+const redirect = ({type, name}) => {
+    for (const redirection of redirections) {
+        if (typeof redirection === 'function') {
+            const result = redirection({type, name});
+            if (result) {
+                return result;
+            }
+        } else if (typeof redirection === 'object') {
+            if (matches(redirection.type, type) && matches(redirection.name, name)) {
+                return {
+                    type: redirection.redirect?.type ?? type,
+                    name: redirection.redirect?.name ?? name
+                };
+            }
+        }
+    }
+};
+
+module.exports = {
+    redirect,
+    redirections
+};
+
+},{}],117:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [
@@ -12961,17 +13041,17 @@ const searchOptions = [
   // Pokémon
   {
     display: 'Pokémon',
-    type: 'Pokemon',
+    type: 'Pokémon',
     page: '',
   },
   ...Object.values(pokemonList).map(p => ({
     display: p.name,
-    type: 'Pokemon',
+    type: 'Pokémon',
     page: p.name,
   })),
   {
     display: 'Mega Pokémon',
-    type: 'Mega Pokemon',
+    type: 'Mega Pokémon',
     page: '',
   },
   // Dungeons
@@ -13058,6 +13138,12 @@ const searchOptions = [
     type: 'Vitamins',
     page: '',
   },
+  // Hatchery
+  {
+    display: 'Hatchery',
+    type: 'Hatchery',
+    page: '',
+  },
   // Hatchery Helpers
   {
     display: 'Hatchery Helpers',
@@ -13068,6 +13154,17 @@ const searchOptions = [
     display: h.name,
     type: 'Hatchery Helpers',
     page: h.name,
+  })),
+  // Regions
+  {
+    display: 'Regions',
+    type: 'Regions',
+    page: '',
+  },
+  ...GameHelper.enumStrings(GameConstants.Region).filter(r => !['none', 'final'].includes(r)).map(r => ({
+    display: GameConstants.camelCaseToString(r),
+    type: 'Regions',
+    page: GameConstants.camelCaseToString(r),
   })),
   // Towns
   {
@@ -13114,6 +13211,12 @@ const searchOptions = [
     type: 'Dream Orbs',
     page: '',
   },
+  // Daily Deals
+  {
+    display: 'Daily Deals',
+    type: 'Daily Deals',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
@@ -13128,7 +13231,7 @@ searchOptions.forEach(a => {
 */
 
 function escapeRegExp(text) {
-  return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+  return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&').replace(/[eé]/g, '[eé]');
 }
 // This is the function which figures out the results to show
 var substringMatcher = (searchData) => {

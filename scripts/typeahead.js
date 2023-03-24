@@ -19,17 +19,17 @@ const searchOptions = [
   // Pokémon
   {
     display: 'Pokémon',
-    type: 'Pokemon',
+    type: 'Pokémon',
     page: '',
   },
   ...Object.values(pokemonList).map(p => ({
     display: p.name,
-    type: 'Pokemon',
+    type: 'Pokémon',
     page: p.name,
   })),
   {
     display: 'Mega Pokémon',
-    type: 'Mega Pokemon',
+    type: 'Mega Pokémon',
     page: '',
   },
   // Dungeons
@@ -116,6 +116,12 @@ const searchOptions = [
     type: 'Vitamins',
     page: '',
   },
+  // Hatchery
+  {
+    display: 'Hatchery',
+    type: 'Hatchery',
+    page: '',
+  },
   // Hatchery Helpers
   {
     display: 'Hatchery Helpers',
@@ -126,6 +132,17 @@ const searchOptions = [
     display: h.name,
     type: 'Hatchery Helpers',
     page: h.name,
+  })),
+  // Regions
+  {
+    display: 'Regions',
+    type: 'Regions',
+    page: '',
+  },
+  ...GameHelper.enumStrings(GameConstants.Region).filter(r => !['none', 'final'].includes(r)).map(r => ({
+    display: GameConstants.camelCaseToString(r),
+    type: 'Regions',
+    page: GameConstants.camelCaseToString(r),
   })),
   // Towns
   {
@@ -172,6 +189,18 @@ const searchOptions = [
     type: 'Dream Orbs',
     page: '',
   },
+  // Daily Deals
+  {
+    display: 'Daily Deals',
+    type: 'Daily Deals',
+    page: '',
+  },
+  // Weather
+  {
+    display: 'Weather',
+    type: 'Weather',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
@@ -186,7 +215,7 @@ searchOptions.forEach(a => {
 */
 
 function escapeRegExp(text) {
-  return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+  return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&').replace(/[eé]/g, '[eé]');
 }
 // This is the function which figures out the results to show
 var substringMatcher = (searchData) => {
