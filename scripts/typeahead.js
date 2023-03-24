@@ -189,6 +189,12 @@ const searchOptions = [
     type: 'Dream Orbs',
     page: '',
   },
+  // Daily Deals
+  {
+    display: 'Daily Deals',
+    type: 'Daily Deals',
+    page: '',
+  },
   // Weather
   {
     display: 'Weather',
