@@ -12422,6 +12422,10 @@ QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 
+const now = new Date();
+DailyDeal.generateDeals(5, now);
+BerryDeal.generateDeals(now);
+
 // Map our requirment hints to the requirement
 Requirement.prototype.toJSON = function() {
   const req = this.__proto__.constructor.name === 'LazyRequirementWrapper'
@@ -13134,6 +13138,12 @@ const searchOptions = [
     type: 'Vitamins',
     page: '',
   },
+  // Hatchery
+  {
+    display: 'Hatchery',
+    type: 'Hatchery',
+    page: '',
+  },
   // Hatchery Helpers
   {
     display: 'Hatchery Helpers',
@@ -13144,6 +13154,17 @@ const searchOptions = [
     display: h.name,
     type: 'Hatchery Helpers',
     page: h.name,
+  })),
+  // Regions
+  {
+    display: 'Regions',
+    type: 'Regions',
+    page: '',
+  },
+  ...GameHelper.enumStrings(GameConstants.Region).filter(r => !['none', 'final'].includes(r)).map(r => ({
+    display: GameConstants.camelCaseToString(r),
+    type: 'Regions',
+    page: GameConstants.camelCaseToString(r),
   })),
   // Towns
   {
@@ -13190,6 +13211,12 @@ const searchOptions = [
     type: 'Dream Orbs',
     page: '',
   },
+  // Daily Deals
+  {
+    display: 'Daily Deals',
+    type: 'Daily Deals',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
@@ -13204,7 +13231,7 @@ searchOptions.forEach(a => {
 */
 
 function escapeRegExp(text) {
-  return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+  return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&').replace(/[eé]/g, '[eé]');
 }
 // This is the function which figures out the results to show
 var substringMatcher = (searchData) => {

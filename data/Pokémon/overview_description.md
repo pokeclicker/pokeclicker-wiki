@@ -26,7 +26,7 @@ Total Pokémon attack will increase while breeding according to the attack bonus
 
 The attack bonus is the extra damage that a Pokémon will get each breeding cycle.
 This is **always** calculated using the base attack, not the current attack.
-The **base** Attack bonus is **25%** of their base attack.
+The **base** Attack bonus is **25%** of the base attack.
 *Example: Metapod, that has 20 base attack, will have an attack bonus of 5. After 1 hatch its total attack will be 25, after 2 hatches it will be 30 and after 10 hatches it will be 70.*
 
 The **Attack bonus** can be increased using 2 different [[Vitamins]]: [[Items/Protein]] and [[Items/Calcium]]:
@@ -49,6 +49,9 @@ There are exceptions to this rule:
 
 * The egg cycle values for Sand Cloak and Trash Cloak forms of Burmy and Wormadam are 1.5x higher than their Plant Cloak counterparts, since [[Pokémon/Burmy (Plant)]] evolves into [[Pokémon/Burmy (Sand)]] and [[Pokémon/Burmy (Trash)]].
 * [[Pokémon/Cherrim (Sunshine)]] has 1.5x the egg cycle value of [[Pokémon/Cherrim (Overcast)]].
+
+## Mega Evolution
+To Mega Evolve a Pokémon, the player needs to fulfill certain conditions first. Please check [[Mega Pokémon]] page for more details.
 
 ## Pokémon List
 **WARNING**
