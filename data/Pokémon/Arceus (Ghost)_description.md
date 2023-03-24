@@ -1,0 +1,1 @@
+**This Pokémon is currently unobtainable**
