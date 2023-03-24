@@ -25,3 +25,45 @@
         </tbody>
     </table>
 </div>
+<br>
+<h2>Trivia</h2>
+<p>To complete all Dungeon achievements, you will need the following number of Dungeon Tokens:</p>
+<div class="table-responsive">
+    <table class="table table-hover table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Region</th>
+                <th>1 Time</th>
+                <th>10 Times</th>
+                <th>100 Times</th>
+                <th>500 Times</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r != GameConstants.Region.final && r != GameConstants.Region.none)">
+            <tr data-bind="with: { region: GameConstants.camelCaseToString(GameConstants.Region[$data]), total: GameConstants.RegionDungeons[$data].map(d => dungeonList[d]).reduce((sum, d) => sum + d.tokenCost, 0) }">
+                <td data-bind="text: $data.region"></td>
+                <td><img src="./images/dungeonToken.svg" width="18px"/> 
+                    <ko data-bind="text: $data.total.toLocaleString()"></ko></td>
+                <td><img src="./images/dungeonToken.svg" width="18px"/> 
+                    <ko data-bind="text: ($data.total * 10).toLocaleString()"></ko></td>
+                <td><img src="./images/dungeonToken.svg" width="18px"/> 
+                    <ko data-bind="text: ($data.total * 100).toLocaleString()"></ko></td>
+                <td><img src="./images/dungeonToken.svg" width="18px"/> 
+                    <ko data-bind="text: ($data.total * 500).toLocaleString()"></ko></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr data-bind="with: {total: Object.values(GameConstants.RegionDungeons).flat().map(d => dungeonList[d]).reduce((sum, d) => sum + d.tokenCost, 0)}">
+                <td>Total</td>
+                <td><img src="./images/dungeonToken.svg" width="18px"/> 
+                    <ko data-bind="text: $data.total.toLocaleString()"></ko></td>
+                <td><img src="./images/dungeonToken.svg" width="18px"/> 
+                    <ko data-bind="text: ($data.total * 10).toLocaleString()"></ko></td>
+                <td><img src="./images/dungeonToken.svg" width="18px"/> 
+                    <ko data-bind="text: ($data.total * 100).toLocaleString()"></ko></td>
+                <td><img src="./images/dungeonToken.svg" width="18px"/> 
+                    <ko data-bind="text: ($data.total * 500).toLocaleString()"></ko></td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
