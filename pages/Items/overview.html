@@ -3,6 +3,7 @@
         <thead class="thead-dark">
             <tr>
                 <th>Item Name</th>
+                <th>Category</th>
                 <th>Description</th>
             </tr>
         </thead>
@@ -10,12 +11,14 @@
             <!-- ko foreach: Object.values(ItemList) -->
             <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Items', $data.displayName); return false; }">
                 <td data-bind="text: $data.displayName"></td>
-                <td data-bind="html: $data.description"></td>
+                <td data-bind="html: GameConstants.camelCaseToString($data.constructor.name)"></td>
+                <td data-bind="html: $data.description"></td>          
             </tr>
             <!-- /ko -->
             <!-- ko foreach: UndergroundItems.list.filter((ui) => !Object.values(ItemList).some((i) => i.displayName == ui.displayName)) -->
             <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Items', $data.displayName); return false; }">
                 <td data-bind="text: $data.displayName"></td>
+                <td data-bind="html: GameConstants.camelCaseToString($data.constructor.name)"></td>
                 <td>An item found in the underground</td>
             </tr>
             <!-- /ko -->
