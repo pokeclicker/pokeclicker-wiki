@@ -45,6 +45,7 @@ App.game = new Game(
 );
 App.game.farming.initialize();
 App.game.breeding.initialize();
+App.game.oakItems.initialize();
 SafariPokemonList.generateSafariLists();
 QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
@@ -53,6 +54,16 @@ BattleFrontierBattle.generateNewEnemy();
 const now = new Date();
 DailyDeal.generateDeals(5, now);
 BerryDeal.generateDeals(now);
+
+// Farm Simulator
+App.game.farming.plotList.forEach((p) => p.isUnlocked = true); // All plots unlocked
+App.game.farming.mutations.forEach(m => { // All mutations unlocked
+  Object.defineProperty(m, 'unlocked', {
+    get: function() { return true; }
+  });
+});
+// Set Oak Items to max level
+App.game.oakItems.itemList.forEach((item) => item.level = item.maxLevel);
 
 // Map our requirment hints to the requirement
 Requirement.prototype.toJSON = function() {

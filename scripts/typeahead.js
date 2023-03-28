@@ -173,6 +173,11 @@ const searchOptions = [
     page: '',
   },
   {
+    display: 'Farm Simulator',
+    type: 'Farm Simulator',
+    page: '',
+  },
+  {
     display: 'Setups (Farm)',
     type: 'Farm',
     page: 'Setups',
