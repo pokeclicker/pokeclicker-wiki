@@ -2725,7 +2725,7 @@ module.exports = function multimd_table_plugin(md, options) {
         head = state.bMarks[line] + state.blkIndent,
         end = state.skipSpacesBack(state.eMarks[line], head),
         bounds = [], pos, posjump,
-        escape = false, code = false, serial = 0;
+        escape = false, code = false;
 
     /* Scan for valid pipe character position */
     for (pos = start; pos < end; pos++) {
@@ -2737,12 +2737,8 @@ module.exports = function multimd_table_plugin(md, options) {
           /* make \` closes the code sequence, but not open it;
              the reason is that `\` is correct code block */
           /* eslint-disable-next-line brace-style */
-          if (posjump > pos) {
-            if (!code) {
-              if (serial === 0) { serial = posjump - pos; } else if (serial === posjump - pos) { serial = 0; }
-            }
-            pos = posjump;
-          } else if (code || (!escape && !serial)) { code = !code; }
+          if (posjump > pos) { pos = posjump; }
+          else if (code || !escape) { code = !code; }
           escape = false; break;
         case 0x7c /* | */:
           if (!code && !escape) { bounds.push(pos); }
@@ -12180,7 +12176,7 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":1,"call-bind/callBound":2,"for-each":5,"gopd":9,"has-tostringtag/shams":12,"is-typed-array":18}],101:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
-  "version": "0.10.6",
+  "version": "0.10.10",
   "description": "PokéClicker repository",
   "main": "index.js",
   "scripts": {
@@ -12219,7 +12215,7 @@ module.exports={
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "bootstrap-notify": "^3.1.3",
-    "browser-sync": "^2.27.11",
+    "browser-sync": "^2.28.3",
     "cross-env": "^7.0.2",
     "del": "^5.1.0",
     "es6-promise": "^4.2.8",
@@ -12252,7 +12248,7 @@ module.exports={
     "natives": "^1.1.6",
     "ts-loader": "^8.0.4",
     "typescript": "^3.7.4",
-    "webpack": "^5.75.0",
+    "webpack": "^5.76.0",
     "webpack-cli": "^3.3.12",
     "webpack-stream": "^6.1.0"
   },
