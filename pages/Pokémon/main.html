@@ -40,6 +40,13 @@
                         <td>Catch Rate</td>
                         <td data-bind="text: PokemonFactory.catchRateHelper($data.catchRate, true) + '%'"></td>
                     </tr>
+                    <tr data-bind="if: $data.heldItem">
+                        <td>Rare Hold Item</td>
+                        <td>
+                            <img style="height: 1.5em" data-bind="attr: { src: `./pokeclicker/docs/${Wiki.items.getItemImage($data.heldItem.type, $data.heldItem.id)}` }" class="item" />
+                            <a data-bind="text: Wiki.items.getItemName($data.heldItem.type, $data.heldItem.id), attr: { href: `#!${Wiki.items.getItemPage($data.heldItem.type, $data.heldItem.id)}` }"></a>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>

@@ -189,6 +189,12 @@ const searchOptions = [
     type: 'Dream Orbs',
     page: '',
   },
+  // Rare Hold Items
+  {
+    display: 'Rare Hold Items',
+    type: 'Rare Hold Items',
+    page: '',
+  },
   // Daily Deals
   {
     display: 'Daily Deals',
