@@ -193,6 +193,8 @@ const searchOptions = [
   {
     display: 'Rare Hold Items',
     type: 'Rare Hold Items',
+    page: '',
+  },
   // Daily Deals
   {
     display: 'Daily Deals',
