@@ -77,7 +77,7 @@ Note: This table assumes you have given Haban 128 boost mulch and Babiri 52 boos
 | [[Berries/Kebia]] | 126 (optional) | 10:30 hours|
 | [[Berries/Kasib]] | 126 (optional) | 10:30 hours|
 
-In total 1006 (or 1,258 counting the optional 2 last berries) Freeze Mulches are needed to use this method.
+In total 1,006 (or 1,258 counting the optional 2 last berries) Freeze Mulches are needed to use this method.
 
 ### What to do if Petaya doesn't spawn before other berries start dying
 The berry that will die first is [[Berries/Wacan]] — it will die around 1 hours 25 mins after it ripens. This ''should'' be enough for you to get a Petaya to spawn. If the [[Berries/Wacan]] dies before mutation, you will have to replant [[Berries/Chilan]], [[Berries/Tanga]], and [[Berries/Wacan]]. If you start within 38 minutes of [[Berries/Wacan]] dying (1 hour 15 minutes with boost mulch), you ''should'' be able to get one more full [[Berries/Wacan]] cycle before the [[Berries/Coba]] dies and you have to start over. The ability to do this increases overall chance of mutation to 99% or 84.4% without [[Items/Squirtbottle]].
