@@ -12176,7 +12176,7 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":1,"call-bind/callBound":2,"for-each":5,"gopd":9,"has-tostringtag/shams":12,"is-typed-array":18}],101:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
-  "version": "0.10.9",
+  "version": "0.10.10",
   "description": "PokéClicker repository",
   "main": "index.js",
   "scripts": {
@@ -12215,7 +12215,7 @@ module.exports={
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "bootstrap-notify": "^3.1.3",
-    "browser-sync": "^2.27.11",
+    "browser-sync": "^2.28.3",
     "cross-env": "^7.0.2",
     "del": "^5.1.0",
     "es6-promise": "^4.2.8",
@@ -12248,7 +12248,7 @@ module.exports={
     "natives": "^1.1.6",
     "ts-loader": "^8.0.4",
     "typescript": "^3.7.4",
-    "webpack": "^5.75.0",
+    "webpack": "^5.76.0",
     "webpack-cli": "^3.3.12",
     "webpack-stream": "^6.1.0"
   },
@@ -12484,12 +12484,15 @@ window.Wiki = {
   ...require('./markdown-renderer'),
   ...require('./discord'),
   pokemon: require('./pages/pokemon'),
+  farm: require('./pages/farm'),
+  items: require('./pages/items'),
   dreamOrbs: require('./pages/dreamOrbs'),
-  farmSimulator: require('./pages/farmSimulator'),
+  dungeons: require('./pages/dungeons'),
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dreamOrbs":114,"./pages/farmSimulator":115,"./pages/pokemon":116,"./typeahead":118}],106:[function(require,module,exports){
+},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dreamOrbs":114,"./pages/dungeons":115,"./pages/farm":116,"./pages/items":117,"./pages/pokemon":118,"./typeahead":120}],106:[function(require,module,exports){
+
 const { md } = require('./markdown-renderer');
 
 const saveChanges = (editor, filename, btn) => {
@@ -12878,8 +12881,6 @@ module.exports = {
     pageName,
     gotoPage,
 };
-
-},{"./datatables":102,"./markdown-editor":106,"./markdown-renderer":111,"./redirections":117}],113:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -12920,283 +12921,305 @@ module.exports = {
 };
 
 },{}],115:[function(require,module,exports){
-const selectedPlot = ko.observable(undefined);
-const selectedPlotIndex = ko.observable(undefined);
-const plotLabelsEnabled = ko.observable(false);
+const tableClearCounts = [
+    {
+        clears: 0,
+        debuff: false
+    },
+    {
+        clears: 100,
+        debuff: false
+    },
+    {
+        clears: 500,
+        debuff: false
+    },
+    {
+        clears: 0,
+        debuff: true
+    },
+    {
+        clears: 100,
+        debuff: true
+    },
+    {
+        clears: 500,
+        debuff: true
+    }
+];
 
-const selectPlot = (plotIndex) => {
-    selectedPlot(App.game.farming.plotList[plotIndex]);
-    selectedPlotIndex(plotIndex);
-    $('#plotList > .plot > .plot-content').removeClass('selected');
-    $(`#plotList > .plot:eq(${plotIndex}) > .plot-content`).addClass('selected');
+const itemTypeCategories = {
+    pokemon: 'Pokémon',
+    item: 'Items',
+    berry: 'Berries',
 };
 
-const getImage = (plot) => {
-    if (plot.berry === BerryType.None) {
-        return '';
+/**
+ * Returns a map of items to their chance of dropping in the given dungeon.
+ * Ignores the ignoreDebuff flag.
+ * @param dungeon
+ * @param clears
+ * @param debuffed
+ * @return {Map<Loot, number>}
+ */
+const getDungeonLootChancesIgnoringFlag = (dungeon, clears, debuffed = false, requirement = () => true) => {
+    const tierWeights = dungeon.getLootTierWeights(clears, debuffed);
+    const weightSum = Object.keys(tierWeights)
+        .filter(tier => dungeon.lootTable[tier].some(requirement))
+        .map(tier => tierWeights[tier])
+        .reduce((acc, weight) => acc + weight, 0);
+    const itemToChance = new Map();
+    for (let tier of Object.keys(tierWeights).sort((a, b) => a - b)) {
+        const tierLoot = dungeon.lootTable[tier].filter(requirement);
+        const tierWeightSum = tierLoot.reduce((acc, item) => acc + (item.weight ?? 1), 0);
+        for (let item of tierLoot) {
+            const itemWeight = item.weight ?? 1;
+            const itemChance = itemWeight / tierWeightSum * tierWeights[tier] / weightSum;
+            itemToChance.set(item, itemChance);
+        }
     }
-    if (plot.stage() === PlotStage.Seed) {
-        return './images/farm/AllTreeSeed.png';
-    } else if (plot.stage() === PlotStage.Sprout) {
-        return './images/farm/AllTreeSprout.png';
-    }
-    return `./images/${BerryType[plot.berry]}Tree${PlotStage[plot.stage()]}.png`;
-}
-
-const setPlotBerry = (berry) => {
-    if (selectedPlot() === undefined) {
-        return;
-    }
-    selectedPlot()._berry(berry);
-    setPlotStage(PlotStage.Berry);
-}
-
-const setPlotStage = (plotStage) => {
-    if (selectedPlot() === undefined) {
-        return;
-    }
-    if (plotStage == PlotStage.Seed) {
-        selectedPlot()._age(0);
-    } else {
-        const berryData = App.game.farming.berryData[selectedPlot()._berry()];
-        selectedPlot()._age(berryData?.growthTime[plotStage] ?? 0);
-    }
-}
-
-const getPlotMutations = ko.pureComputed(() => {
-    const plotMutations = App.game.farming.plotList.map((_) => []);
-
-    App.game.farming.mutations.forEach((mutation) => {
-        const mutationPlots = mutation.getMutationPlots();
-        mutationPlots.forEach((plot) => {
-            const berry = BerryType[mutation.mutatedBerry];
-            const chance = mutation.mutationChance(plot) * App.game.farming.getMutationMultiplier() * App.game.farming.plotList[plot].getMutationMultiplier();
-            plotMutations[plot].push({
-                berry: berry,
-                chance: chance,
-                tooltip: `${berry} (${formatMutationChance(chance)})`,
-            })
-        });
-    });
-
-    return plotMutations;
-});
-
-const getAllPossibleMutations = ko.pureComputed(() => {
-    return Array.from(new Set(getPlotMutations().flat().map(m => m.berry)));
-});
-
-const getSelectedPlotMutations = () => {
-    if (!selectedPlot()) {
-        return [];
-    }
-
-    return getPlotMutations()[selectedPlotIndex()];
-}
-
-const formatMutationChance = (chance) => {
-    return `${+(chance * 100).toFixed(4)}%`;
+    return itemToChance;
 };
 
-const getExternalAuras = ko.pureComputed(() => {
-    const externalAuras = [];
-    App.game.farming.externalAuras.forEach((aura, idx) => {
-        if (!aura) {
-            return;
+/**
+ * Returns a map of items to their chance of dropping in the given dungeon.
+ * Takes into account the ignoreDebuff flag.
+ * If the debuff is active and there are items that ignore the debuff, the chance of all items is reduced based on the non-debuffed chance of those items.
+ * @param dungeon
+ * @param clears
+ * @param debuffed
+ * @return {Map<Loot, number>}
+ */
+const getDungeonLootChances = (dungeon, clears, debuffed = false, requirement = () => true) => {
+    const secondRoll = debuffed && Object.values(dungeon.lootTable).flat().some(item => item.ignoreDebuff);
+    const itemToChance = getDungeonLootChancesIgnoringFlag(dungeon, clears, debuffed,
+        secondRoll ? (item => requirement(item) && !item.ignoreDebuff) : requirement);
+    if (secondRoll) {
+        const chancesWithoutDebuff = getDungeonLootChancesIgnoringFlag(dungeon, clears, false, requirement);
+        const chanceForItemsIgnoringDebuff = Array.from(chancesWithoutDebuff.keys())
+            .filter(item => item.ignoreDebuff)
+            .map(item => chancesWithoutDebuff.get(item))
+            .reduce((acc, chance) => acc + chance, 0);
+        for (let item of chancesWithoutDebuff.keys()) {
+            const chanceIgnoringDebuff = item.ignoreDebuff ? chancesWithoutDebuff.get(item) : 0;
+            itemToChance.set(item, chanceIgnoringDebuff + (itemToChance.get(item) ?? 0) * (1 - chanceForItemsIgnoringDebuff));
         }
-        if (aura() !== 1 && idx !== AuraType.Repel) {
-            externalAuras.push(`${AuraType[idx]}: ×${aura().toFixed(2)}`);
-        } else if (aura() !== 0 && idx === AuraType.Repel) {
-            externalAuras.push(`${AuraType[idx]}: ${(aura() * 100).toFixed(2)}%`);
+    }
+    return itemToChance;
+};
+
+/**
+ * Returns a function that checks whether the requirements for a dungeon loot item are met.
+ * @param dungeon
+ * @param clearSetup
+ * @return {(function(*))|*}
+ */
+const checkLootRequirements = (dungeon, clearSetup) => {
+    const debuffRegion = (dungeon.optionalParameters?.dungeonRegionalDifficulty ?? GameConstants.getDungeonRegion(dungeon.name)) + 3;
+    // recursive requirement check
+    const checkRequirement = (requirement) => {
+        if (requirement instanceof MaxRegionRequirement) {
+            if ([GameConstants.AchievementOption.more, GameConstants.AchievementOption.equal].includes(requirement.option) && !clearSetup.debuff) {
+                // if the requirement specifies a minimum or specific region and non-debuffed odds are being calculated, make sure the minimum required region does not trigger the debuff
+                return debuffRegion > requirement.region;
+            } else if ([GameConstants.AchievementOption.less, GameConstants.AchievementOption.equal].includes(requirement.option) && clearSetup.debuff) {
+                // if the requirement specifies a maximum or specific region and debuffed odds are being calculated, make sure the maximum required region triggers the debuff
+                return debuffRegion <= requirement.region;
+            }
+        } else if (requirement instanceof ClearDungeonRequirement) {
+            if (requirement.dungeonIndex === GameConstants.getDungeonIndex(dungeon.name)) {
+                switch (requirement.option) {
+                    case GameConstants.AchievementOption.less:
+                        return clearSetup.clears < requirement.requiredValue;
+                    case GameConstants.AchievementOption.equal:
+                        return clearSetup.clears === requirement.requiredValue;
+                    case GameConstants.AchievementOption.more:
+                    default:
+                        return clearSetup.clears >= requirement.requiredValue;
+                }
+            }
+        } else if (requirement instanceof MultiRequirement) {
+            return requirement.requirements.every(checkRequirement);
+        } else if (requirement instanceof OneFromManyRequirement) {
+            return requirement.requirements.some(checkRequirement);
         }
-    });
-
-    return externalAuras;
-});
-
-const getPlotWanderers = ko.pureComputed(() => {
-    return App.game.farming.plotList.map((plot) => {
-        if (plot.berry === BerryType.None) {
-            return [];
-        }
-
-        // remove base wanderers
-        return plot.berryData.wander.filter(w => !Berry.baseWander.includes(w));
-    });
-});
-
-const getAllPossibleWanderers = ko.pureComputed(() => {
-    return Array.from(new Set(getPlotWanderers().flat()));
-});
-
-const getSelectedPlotWanderers = () => {
-    if (!selectedPlot()) {
-        return [];
-    }
-
-    return getPlotWanderers()[selectedPlotIndex()];
-}
-
-const getHarvestAmount = () => {
-    if (!selectedPlot() || selectedPlot()._berry() == -1) {
-        return '-';
-    }
-    return selectedPlot().harvestAmount().toLocaleString();
-}
-
-const getFarmPointAmount = () => {
-    if (!selectedPlot() || selectedPlot()._berry() == -1) {
-        return '-';
-    }
-    return App.game.farming.berryData[selectedPlot().berry].farmValue.toLocaleString();
-}
-
-const getBerryColor = () => {
-    if (!selectedPlot() || selectedPlot()._berry() == -1) {
-        return '-';
-    }
-    return BerryColor[App.game.farming.berryData[selectedPlot().berry].color];
-}
-
-const getFlavorValue = (flavorType) => {
-    if (!selectedPlot() || selectedPlot()._berry() == -1) {
-        return '-';
-    }
-    return App.game.farming.berryData[selectedPlot().berry].flavors.find(f => f.type === flavorType).value;
-}
-
-const getStageTimes = ko.pureComputed(() => {
-    const stages = [
-        { stage: 'Sprout', timeLeft: '-' },
-        { stage: 'Taller', timeLeft: '-' },
-        { stage: 'Bloom', timeLeft: '-' },
-        { stage: 'Berry', timeLeft: '-' },
-        { stage: 'Wither', timeLeft: '-' },
-    ];
-
-    if (!selectedPlot() || selectedPlot()._berry() == -1) {
-        return stages;
-    }
-
-    const isPetaya = selectedPlot().berry === BerryType.Petaya;
-    const petayaEffect = App.game.farming.berryInFarm(BerryType.Petaya, PlotStage.Berry, true) && !isPetaya;
-
-    stages.forEach((stage, idx) => {
-        const growthTime = App.game.farming.berryData[selectedPlot().berry].growthTime[idx];
-        const growthMultiplier = App.game.farming.getGrowthMultiplier() * selectedPlot().getGrowthMultiplier();
-        if (growthMultiplier == 0 || (petayaEffect && stage.stage == 'Wither')) {
-            stages[idx].timeLeft = '∞';
-        } else {
-            stages[idx].timeLeft = GameConstants.formatTimeFullLetters(growthTime / growthMultiplier);
-        }
-    });
-
-    return stages;
-});
-
-const getEmittingAura = ko.pureComputed(() => {
-    if (!selectedPlot() || selectedPlot()._berry() == -1 || selectedPlot().emittingAura.type() == null) {
-        return '-';
-    }
-    return `${AuraType[selectedPlot().emittingAura.type()]}: ${selectedPlot().berry === BerryType.Micle
-        ? `+${(selectedPlot().emittingAura.value() * 100).toFixed(2)}%`
-        : `×${selectedPlot().emittingAura.value().toFixed(2)}`}`;
-});
-
-const getReceivedAuras = ko.pureComputed(() => {
-    if (!selectedPlot() || selectedPlot()._berry() == -1) {
-        return '-';
-    }
-
-    const auras = selectedPlot().formattedAuras();
-    return auras || '-';
-});
-
-const clearAllPlots = () => {
-    if (!confirm('All plots will be cleared. Continue?')) {
-        return;
-    }
-
-    App.game.farming.plotList.forEach((plot) => {
-        plot._berry(BerryType.None);
-        plot._mulch(MulchType.None);
-    });
-}
-
-const exportFarm = () => {
-    const data = {
-        plots: App.game.farming.plotList.map((plot) => {
-            return {
-                berry: plot.berry,
-                age: plot.age,
-                mulch: plot.mulch,
-            };
-        }),
-        oakItems: {},
+        return true;
     };
-
-    [OakItemType.Sprayduck, OakItemType.Squirtbottle].forEach((t) => {
-        const oakItem = App.game.oakItems.itemList[t];
-        data.oakItems[t] = {
-            level: oakItem.level,
-            active: oakItem.isActive,
-        };
-    });
-
-    prompt('Save the below text to restore the farm to this state.', btoa(JSON.stringify(data)));
-};
-
-const importFarmPrompt = () => {
-    const input = prompt();
-    if (input) {
-        importFarm(input);
-    }
-};
-
-const importFarm = (str) => {
-    const data = JSON.parse(atob(str));
-    App.game.farming.plotList.forEach((plot, idx) => {
-        plot._berry(data.plots[idx].berry);
-        plot._age(data.plots[idx].age);
-        plot._mulch(data.plots[idx].mulch);
-    });
-    Object.keys(data.oakItems).forEach((key) => {
-        const oakItem = App.game.oakItems.itemList[key];
-        if (oakItem) {
-            oakItem.level = data.oakItems[key].level;
-            oakItem.isActive = data.oakItems[key].active;
+    return (item) => {
+        if (item.requirement) {
+            return checkRequirement(item.requirement);
         }
-    });
+        return true;
+    };
+}
+
+const getDungeonLoot = (dungeon) => {
+    const tierWeights = tableClearCounts.map(clearSetup => dungeon.getLootTierWeights(clearSetup.clears, clearSetup.debuff));
+    const itemChanceMaps = tableClearCounts.map(clearSetup => getDungeonLootChances(dungeon, clearSetup.clears, clearSetup.debuff, checkLootRequirements(dungeon, clearSetup)));
+    const lootTiers = [];
+    for (let tier of Object.keys(tierWeights[0]).sort((a, b) => a - b)) {
+        const tierLoot = dungeon.lootTable[tier];
+        const tierData = {
+            tier: GameConstants.camelCaseToString(tier),
+            items: [],
+        };
+        for (let item of tierLoot) {
+            let itemGameData = UndergroundItems.getByName(item.loot) ?? ItemList[item.loot];
+            let itemType = 'item';
+            if (!itemGameData && typeof BerryType[item.loot] === 'number') {
+                itemGameData = {
+                    displayName: item.loot,
+                    image: `assets/images/items/berry/${item.loot}.png`
+                };
+                itemType = 'berry';
+            }
+            let pokemonData;
+            if (!itemGameData) {
+                pokemonData = pokemonMap[item.loot];
+                itemType = 'pokemon';
+            }
+            const itemData = {
+                item: itemGameData?.displayName ?? pokemonData?.name,
+                type: itemType,
+                image: itemGameData?.image ?? (pokemonData ? `assets/images/pokemon/${pokemonData.id}.png` : null),
+                weight: item.weight ?? 1,
+                requirement: item.requirement?.hint(),
+                ignoreDebuff: item.ignoreDebuff,
+                chances: []
+            };
+            for (let i = 0; i < tierWeights.length; i++) {
+                itemData.chances.push({
+                    chance: itemChanceMaps[i].get(item),
+                    clears: tableClearCounts[i].clears,
+                    debuff: tableClearCounts[i].debuff
+                });
+            }
+            tierData.items.push(itemData);
+        }
+        lootTiers.push(tierData);
+    }
+    return lootTiers;
+};
+
+const hasLootWithRequirements = (dungeon) => {
+    if (hasLootWithRequirements.cache.has(dungeon)) {
+        return hasLootWithRequirements.cache.get(dungeon);
+    }
+    for (let tier of Object.keys(dungeon.lootTable)) {
+        for (let item of dungeon.lootTable[tier]) {
+            if (item.requirement) {
+                hasLootWithRequirements.cache.set(dungeon, true);
+                return true;
+            }
+        }
+    }
+    hasLootWithRequirements.cache.set(dungeon, false);
+    return false;
+};
+hasLootWithRequirements.cache = new WeakMap();
+
+module.exports = {
+    getDungeonLoot,
+    getDungeonLootChances,
+    hasLootWithRequirements,
+    tableClearCounts,
+    itemTypeCategories
+};
+
+},{}],116:[function(require,module,exports){
+/**
+ * Returns the primary mutation for a berry.
+ * Filters out enigma mutations, as they cannot be used to obtain a berry for the first time.
+ * Unless includeBlankMutations is true, filters out blank mutations, as they are not regular mutations.
+ * @param berry the berry to get the primary mutation for, as a BerryType
+ * @param includeBlankMutations whether to include blank mutations in the results
+ * @return the primary mutation for the berry
+ */
+const getPrimaryMutation = (berry, includeBlankMutations = false) => {
+    return App.game.farming.mutations.filter(mutation => mutation.mutatedBerry === berry // mutation results in this berry
+        && (!mutation.berryReqs || mutation.berryReqs.length !== 1 || mutation.berryReqs[0] !== BerryType.Enigma) // mutation is not an enigma mutation
+        && !(mutation instanceof BlankMutation && !includeBlankMutations) // mutation is not a blank mutation or includeBlankMutations is true
+    )[0];
 };
 
 module.exports = {
-    selectedPlot,
-    plotLabelsEnabled,
-    selectPlot,
-    getImage,
-    setPlotBerry,
-    setPlotStage,
-    getPlotMutations,
-    getAllPossibleMutations,
-    getSelectedPlotMutations,
-    formatMutationChance,
-    getExternalAuras,
-    getPlotWanderers,
-    getAllPossibleWanderers,
-    getSelectedPlotWanderers,
-    getHarvestAmount,
-    getFarmPointAmount,
-    getBerryColor,
-    getFlavorValue,
-    getStageTimes,
-    getEmittingAura,
-    getReceivedAuras,
-    clearAllPlots,
-    exportFarm,
-    importFarmPrompt,
+    getPrimaryMutation,
+};
+
+},{}],117:[function(require,module,exports){
+const getItemName =  (itemType, itemId) => {
+    switch (itemType) {
+        case ItemType.item:
+            return ItemList[itemId].displayName;
+        case ItemType.underground:
+            return UndergroundItems.list.find((i) => i.name === itemId)?.name;
+        case ItemType.berry:
+            return BerryType[itemId];
+        case ItemType.gem:
+            return PokemonType[itemId] + ' Gem';
+        default:
+            return 'Unknown Item';
+    }
 }
 
-},{}],116:[function(require,module,exports){
+const getItemImage = (itemType, itemId) => {
+    switch (itemType) {
+        case ItemType.item:
+            return `assets/images/items/${ItemList[itemId].imageDirectory}/${ItemList[itemId].name}.png`;
+        case ItemType.underground:
+            return UndergroundItems.list.find((i) => i.name === itemId)?.image;
+        case ItemType.berry:
+            return `assets/images/items/berry/${BerryType[itemId]}.png`;
+        case ItemType.gem:
+            return Gems.image(itemId);
+        default:
+            return '';
+    }
+};
+
+const getItemPage = (itemType, itemId) => {
+    const categoryAndPage = getItemCategoryAndPage(itemType, itemId);
+    return `${categoryAndPage.category}/${categoryAndPage.page}`;
+};
+
+const getItemCategoryAndPage = (itemType, itemId) => {
+    switch (itemType) {
+        case ItemType.item:
+            return {
+                category: 'Items',
+                page: ItemList[itemId].displayName,
+            };
+        case ItemType.underground:
+            return {
+                category: 'Items',
+                page: UndergroundItems.list.find((i) => i.name === itemId)?.name,
+            }
+        case ItemType.berry:
+            return {
+                category: 'Berries',
+                page: BerryType[itemId],
+            }
+        case ItemType.gem:
+            return {
+                category: 'Gems',
+                page: PokemonType[itemId],
+            };
+        default:
+            return {
+                category: '',
+                page: '',
+            };
+    }
+}
+
+module.exports = {
+    getItemName,
+    getItemImage,
+    getItemPage,
+    getItemCategoryAndPage,
+};
+
+},{}],118:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -13256,7 +13279,7 @@ module.exports = {
     getBestVitamins,
 }
 
-},{}],117:[function(require,module,exports){
+},{}],119:[function(require,module,exports){
 const redirections = [
     ({type, name}) => {
         if (type === 'Pokemon') {
@@ -13308,7 +13331,7 @@ module.exports = {
     redirections
 };
 
-},{}],118:[function(require,module,exports){
+},{}],120:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [
@@ -13503,6 +13526,12 @@ const searchOptions = [
   {
     display: 'Dream Orbs',
     type: 'Dream Orbs',
+    page: '',
+  },
+  // Rare Hold Items
+  {
+    display: 'Rare Hold Items',
+    type: 'Rare Hold Items',
     page: '',
   },
   // Daily Deals

@@ -10,7 +10,10 @@ window.Wiki = {
   ...require('./markdown-renderer'),
   ...require('./discord'),
   pokemon: require('./pages/pokemon'),
+  farm: require('./pages/farm'),
+  items: require('./pages/items'),
   dreamOrbs: require('./pages/dreamOrbs'),
   farmSimulator: require('./pages/farmSimulator'),
+  dungeons: require('./pages/dungeons'),
   ...require('./navigation'),
 }
