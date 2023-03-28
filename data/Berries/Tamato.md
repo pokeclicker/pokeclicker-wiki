@@ -25,7 +25,7 @@ You can fill your farm in the following way to obtain Tamato Berries. Purple squ
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Pomeg.png\|32px]] [[Berries/Pomeg]]    | 00:03:20         | 00:20:00                                 | `N/A`                                 |
+| [[File:Pomeg.png\|32px]] [[Berries/Pomeg]]    |`N/A`          | `N/A`                               | `N/A`                                 |
 | [[File:Razz.png\|32px]] [[Berries/Razz]]      | 00:04:10      | 00:02:47                              | `N/A`                                 |
 
 #### Mutations

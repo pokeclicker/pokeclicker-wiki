@@ -51,6 +51,10 @@ QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 
+const now = new Date();
+DailyDeal.generateDeals(5, now);
+BerryDeal.generateDeals(now);
+
 // Farm Simulator
 App.game.farming.plotList.forEach((p) => p.isUnlocked = true); // All plots unlocked
 App.game.farming.mutations.forEach(m => { // All mutations unlocked
