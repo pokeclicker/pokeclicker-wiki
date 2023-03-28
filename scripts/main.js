@@ -11,5 +11,6 @@ window.Wiki = {
   ...require('./discord'),
   pokemon: require('./pages/pokemon'),
   dreamOrbs: require('./pages/dreamOrbs'),
+  dungeons: require('./pages/dungeons'),
   ...require('./navigation'),
 }

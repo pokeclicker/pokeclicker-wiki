@@ -57,20 +57,56 @@
         <br/>
         <div>
             <h3>Possible Loot:</h3>
-            <!-- ko foreach: Object.entries($data.lootTable) -->
-                <h5 data-bind="text: $data[0]"></h5>
-                <!-- ko foreach: $data[1] -->
-                    <!-- ko if: ItemList[$data.loot] -->
-                        <a class="badge text-bg-secondary" href="#" data-bind="text: ItemList[$data.loot].displayName, attr: { href: `#!Items/${ItemList[$data.loot].displayName}` }"></a>
-                    <!-- /ko -->
-                    <!-- ko if: UndergroundItems.list.some((ui) => ui.name == $data.loot) && !ItemList[$data.loot] -->
-                        <a class="badge text-bg-secondary" href="#" data-bind="text: UndergroundItems.list.find((ui) => ui.name == $data.loot).displayName, attr: { href: `#!Items/${UndergroundItems.list.find((ui) => ui.displayName == $data.loot).displayName}` }"></a>
-                    <!-- /ko -->
-                    <!-- ko ifnot: ItemList[$data.loot] || UndergroundItems.list.some((ui) => ui.name == $data.loot) -->
-                        <span class="badge text-bg-secondary" data-bind="text: $data.loot"></span>
-                    <!-- /ko -->
-                <!-- /ko -->
+            <!-- ko if: Wiki.dungeons.hasLootWithRequirements($data) -->
+            <p>
+                This table assumes that all requirements are met, which isn't always possible.
+            </p>
             <!-- /ko -->
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Weight</th>
+                        <th style="text-align: center" data-bind="attr: { colspan: Wiki.dungeons.tableClearCounts.length }">Chance</th>
+                        <!-- ko if: Wiki.dungeons.hasLootWithRequirements($data) -->
+                        <th>Requirement</th>
+                        <!-- /ko -->
+                    </tr>
+                    <tr>
+                        <th colspan="2"></th>
+                        <!-- ko foreach: Wiki.dungeons.tableClearCounts -->
+                            <th data-bind="text: $data.debuff ? ('Debuffed' + (Wiki.dungeons.tableClearCounts.filter(cc => cc.debuff).length > 1 ? ` (${$data.clears} clear${$data.clears !== 1 ? 's' : ''})` : '')) : `${$data.clears} clear${$data.clears !== 1 ? 's' : ''}`"></th>
+                        <!-- /ko -->
+                        <!-- ko if: Wiki.dungeons.hasLootWithRequirements($data) -->
+                        <th></th>
+                        <!-- /ko -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- ko foreach: Wiki.dungeons.getDungeonLoot($data) -->
+                        <tr>
+                            <td style="font-weight: bold; text-transform: capitalize; text-align: center" data-bind="text: $data.tier, attr: { colspan: Wiki.dungeons.tableClearCounts.length + 2 + (Wiki.dungeons.hasLootWithRequirements($parent) ? 1 : 0) }"></td>
+                        </tr>
+                        <!-- ko foreach: $data.items -->
+                            <tr>
+                                <td class="text-nowrap clickable" data-bind="click: () => { Wiki.gotoPage(Wiki.dungeons.itemTypeCategories[$data.type], $data.item); return false; }">
+                                    <!-- ko if: $data.image -->
+                                    <img class="table-image" data-bind="attr: { src: `./pokeclicker/docs/${$data.image}`, alt: `Icon of ${$data.type === 'pokemon' ? 'Pokémon' : $data.type} ${$data.item}` }"/>
+                                    <!-- /ko -->
+                                    <ko data-bind="text: $data.item"></ko>
+                                </td>
+                                <td data-bind="text: $data.weight ?? 'N/A'"></td>
+                                <!-- ko foreach: $data.chances -->
+                                    <td data-bind="text: typeof $data.chance === 'number' ? ($data.chance >= 0.0001 ? $data.chance.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }) : ('<' + 0.0001.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }))) : ($data.chance ?? '-')"></td>
+                                <!-- /ko -->
+                                <!-- ko if: Wiki.dungeons.hasLootWithRequirements($parents[1]) -->
+                                <td data-bind="text: $data.requirement ?? '-'"></td>
+                                <!-- /ko -->
+                            </tr>
+                        <!-- /ko -->
+                    <!-- /ko -->
+                </tbody>
+            </table>
         </div>
         
     <!-- /ko -->
