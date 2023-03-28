@@ -49,6 +49,7 @@ There are exceptions to this rule:
 
 * The egg cycle values for Sand Cloak and Trash Cloak forms of Burmy and Wormadam are 1.5x higher than their Plant Cloak counterparts, since [[Pokémon/Burmy (Plant)]] evolves into [[Pokémon/Burmy (Sand)]] and [[Pokémon/Burmy (Trash)]].
 * [[Pokémon/Cherrim (Sunshine)]] has 1.5x the egg cycle value of [[Pokémon/Cherrim (Overcast)]].
+* All Mega Evolved Pokémon have 1.5x the egg cycle value of their base form.
 
 ## Mega Evolution
 To Mega Evolve a Pokémon, the player needs to fulfill certain conditions first. Please check [[Mega Pokémon]] page for more details.

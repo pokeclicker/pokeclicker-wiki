@@ -2725,7 +2725,7 @@ module.exports = function multimd_table_plugin(md, options) {
         head = state.bMarks[line] + state.blkIndent,
         end = state.skipSpacesBack(state.eMarks[line], head),
         bounds = [], pos, posjump,
-        escape = false, code = false;
+        escape = false, code = false, serial = 0;
 
     /* Scan for valid pipe character position */
     for (pos = start; pos < end; pos++) {
@@ -2737,8 +2737,12 @@ module.exports = function multimd_table_plugin(md, options) {
           /* make \` closes the code sequence, but not open it;
              the reason is that `\` is correct code block */
           /* eslint-disable-next-line brace-style */
-          if (posjump > pos) { pos = posjump; }
-          else if (code || !escape) { code = !code; }
+          if (posjump > pos) {
+            if (!code) {
+              if (serial === 0) { serial = posjump - pos; } else if (serial === posjump - pos) { serial = 0; }
+            }
+            pos = posjump;
+          } else if (code || (!escape && !serial)) { code = !code; }
           escape = false; break;
         case 0x7c /* | */:
           if (!code && !escape) { bounds.push(pos); }
@@ -12176,7 +12180,7 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":1,"call-bind/callBound":2,"for-each":5,"gopd":9,"has-tostringtag/shams":12,"is-typed-array":18}],101:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
-  "version": "0.10.9",
+  "version": "0.10.6",
   "description": "PokéClicker repository",
   "main": "index.js",
   "scripts": {
@@ -13422,6 +13426,12 @@ const searchOptions = [
   {
     display: 'Daily Deals',
     type: 'Daily Deals',
+    page: '',
+  },
+  // Weather
+  {
+    display: 'Weather',
+    type: 'Weather',
     page: '',
   },
 ];
