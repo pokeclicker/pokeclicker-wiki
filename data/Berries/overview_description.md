@@ -16,3 +16,5 @@ The first 10 berries are found in routes or dungeons, but after that the player 
 Most berry mutations happen at the Berry (fully ripe) stage and have a chance to occur until they die. Evolution *(a berry transforming into another)* and flavor mutations can occur starting at the Taller stage. For mutations involving flavor requirements, all berries emit flavor points beginning at the Taller stage (berries have 0.5x flavor in the Taller stage, 0.75x flavor in the Bloom stage, and 1x flavor in the Berry stage).
 
 If the conditions for multiple mutations are met simultaneously, the mutation triggered will be selected at random.
+
+[Here is a Walkthrough](https://docs.google.com/document/d/1TE5cAKSlA7TAliA001_mIiO1odZ6e4yUEMre0GBW1to/edit) for unlocking all of the Farm Slots in order.
