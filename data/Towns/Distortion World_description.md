@@ -1,0 +1,1 @@
+This dungeon can be cleared once during the  [[Quest Lines/A New World]] quest line, which also unlocks the [[Dungeons/Lake Valor]], [[Dungeons/Lake Acuity]] and [[Dungeons/Lake Verity]] dungeon(s). Afterwards, the [[Quest Lines/Zero's Ambition]]  quest line is required to access the dungeon again."

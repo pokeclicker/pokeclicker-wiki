@@ -40,6 +40,13 @@
                         <td>Catch Rate</td>
                         <td data-bind="text: PokemonFactory.catchRateHelper($data.catchRate, true) + '%'"></td>
                     </tr>
+                    <tr data-bind="if: $data.heldItem">
+                        <td>Rare Hold Item</td>
+                        <td>
+                            <img style="height: 1.5em" data-bind="attr: { src: `./pokeclicker/docs/${Wiki.items.getItemImage($data.heldItem.type, $data.heldItem.id)}` }" class="item" />
+                            <a data-bind="text: Wiki.items.getItemName($data.heldItem.type, $data.heldItem.id), attr: { href: `#!${Wiki.items.getItemPage($data.heldItem.type, $data.heldItem.id)}` }"></a>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -97,7 +104,7 @@
                     </h4>
                     <div id="obtain-method-roaming" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Roaming])">
-                            <span class="badge text-bg-secondary" data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region]) + `${$data.requirements ? ' 🔒' : ''}`,
+                            <span class="badge text-bg-secondary" data-bind="text: ($data.roamingGroup?.name ?? GameConstants.camelCaseToString(GameConstants.Region[$data.region])) + `${$data.requirements ? ' 🔒' : ''}`,
                             tooltip: {
                                 title: $data.requirements ?? '',
                                 html: false,
@@ -349,6 +356,80 @@
                     <div id="obtain-method-discord" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Discord])">
                             <a target="_BLANK" href="https://discord.gg/a6DFe4p" class="badge text-bg-secondary" data-bind="text: `${$data.toLocaleString()} points`"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+
+                <!--
+                    QUEST REWARD
+                -->
+                <!-- ko if: $data[PokemonLocationType.QuestLineReward] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-quest" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            Quest Reward
+                        </button>
+                    </h4>
+                    <div id="obtain-method-quest" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.QuestLineReward])">
+                            <a target="_BLANK" href="#" class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Quest_Lines/${$data}` }"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+
+                <!--
+                    TEMP BATTLES
+                -->
+                <!-- ko if: $data[PokemonLocationType.TempBattleReward] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-tempbattle" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            Temporary Battle
+                        </button>
+                    </h4>
+                    <div id="obtain-method-tempbattle" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.TempBattleReward])">
+                            <!--<a target="_BLANK" href="#" class="badge text-bg-secondary" data-bind="text: $data"></a>-->
+                            <span class="badge text-bg-secondary" data-bind="text: $data"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+
+                <!--
+                    GYM REWARD
+                -->
+                <!-- ko if: $data[PokemonLocationType.GymReward] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-gym" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            Gym Reward
+                        </button>
+                    </h4>
+                    <div id="obtain-method-gym" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.GymReward])">
+                            <!--<a target="_BLANK" href="#" class="badge text-bg-secondary" data-bind="text: $data"></a>-->
+                            <span class="badge text-bg-secondary" data-bind="text: $data"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+
+                <!--
+                    DUNGEON REWARD
+                -->
+                <!-- ko if: $data[PokemonLocationType.DungeonReward] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-dungeon" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            Dungeon Reward
+                        </button>
+                    </h4>
+                    <div id="obtain-method-dungeon" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.DungeonReward])">
+                            <a target="_BLANK" href="#" class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Dungeons/${$data}` }"></a>
                         </div>
                     </div>
                 </div>
