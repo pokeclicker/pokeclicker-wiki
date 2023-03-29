@@ -19,33 +19,85 @@
                         <img data-bind="attr: {src: './pokeclicker/docs/' + $data.image}"/>
                     </td>
                 </tr>
-                <tr data-bind="if: $data.basePrice > 0 && $data.basePrice <= 1e11">
+                <tr>
+                    <td class="align-middle">Category</td>
+                    <td data-bind="text: GameConstants.camelCaseToString($data.constructor.name)"></td>
+                </tr>
+                <tr data-bind="if: $data.basePrice > 0 && $data.basePrice <= 1e11
+                    && Object.values(TownList).some((t) => t.content.some((c) => c instanceof Shop && c.items.some((i) => i.name == $data.name)))">
                     <td>Price</td>
                     <td>
                         <img data-bind="attr: { src: `./images/${GameConstants.Currency[$data.currency]}.svg` }" width="18px"/>
                         <ko data-bind="text: $data.basePrice.toLocaleString()"></ko>
                     </td>
                 </tr>
+                <!-- ko with: Object.values(GemDeal.list).flatMap((d) => d()).find((d) => d.item.itemType.name == $data.name) -->
+                <tr data-bind="if: $data">
+                    <td>Trade</td>
+                    <td data-bind="foreach: $data.gems">
+                        <div>
+                            <img width="24" data-bind="attr: { src: `./images/${PokemonType[$data.gemType]} Gem.png` }" />
+                            <knockout data-bind="text: `${$data.amount.toLocaleString()} x ${PokemonType[$data.gemType]}`"></knockout>
+                        </div>
+                    </td>
+                </tr>
+                <!-- /ko -->
+                <!-- ko with: Object.values(ShardDeal.list).flatMap((d) => d()).find((d) => d.item.itemType.name == $data.name) -->
+                <!-- We assume that the Shard cost is the same everywhere this item is tradeable (it currently is) -->
+                <tr data-bind="if: $data">
+                    <td>Trade</td>
+                    <td>
+                        <!-- ko foreach: $data.shards -->
+                        <div>
+                            <img width="24" data-bind="attr: { src: `./images/${$data.shardType.name}.png` }" />
+                            <knockout data-bind="text: `${$data.amount.toLocaleString()} x ${$data.shardType.name}`"></knockout>
+                        </div>
+                        <!-- /ko -->
+                        <div>
+                            <img data-bind="attr: { src: './images/questPoint.svg' }" width="18px"/>
+                            <ko data-bind="text: $data.questPointCost.toLocaleString()"></ko>
+                        </div>
+                    </td>
+                </tr>
+                <!-- /ko -->
             </tbody>
         </table>
     </div>
-    <div data-bind="if: $data.description">
+    <div class="mt-3" data-bind="if: $data.description">
         <h3>Description:</h3>
         <div data-bind="html: $data.description"></div>
     </div>
-    <div data-bind="if: Object.values(TownList).some((t) => t.content.some((c) => c instanceof Shop && c.items.some((i) => i.name == $data.name)))">
+    <!-- Shop Purchase -->
+    <div class="mt-3" data-bind="if: Object.values(TownList).some((t) => t.content.some((c) => c instanceof Shop && c.items.some((i) => i.name == $data.name)))">
         <h3>Can be purchased in the following towns:</h3>
         <!-- ko foreach : Object.values(TownList).filter((t) => t.content.some((c) => c instanceof Shop && c.items.some((i) => i.name == $data.name))) -->
-        <span class="badge text-bg-secondary" data-bind="text: $data.name"></span>
+        <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${$data.name}` }"></a>
         <!-- /ko -->
     </div>
-    <div data-bind="if: Object.values(dungeonList).some((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name)))">
+    <!-- Gem Trade -->
+    <div class="mt-3" data-bind="if: Object.values(GemDeal.list).flatMap((d) => d()).find((d) => d.item.itemType.name == $data.name)">
+        <h3>Can be traded for Gems in the following town:</h3>
+        <div data-bind="with: () => {
+            const dealRegion = Object.keys(GemDeal.list).find((key) => GemDeal.list[key]().some((d) => d.item.itemType.name == $data.name));
+            return Object.values(TownList).filter((t) => t.region == dealRegion).find((t) => t.content.some((c) => c instanceof GemMasterShop))
+        }">
+            <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${$data.name}` }"></a>
+        </div>
+    </div>
+    <!-- Shard Trade -->
+    <div class="mt-3" data-bind="if: Object.values(ShardDeal.list).flatMap((d) => d()).find((d) => d.item.itemType.name == $data.name)">
+        <h3>Can be traded for Shards in the following towns:</h3>
+        <div data-bind="foreach: Object.keys(ShardDeal.list).filter((key) => ShardDeal.list[key]().some((d) => d.item.itemType.name == $data.name))">
+            <a class="badge text-bg-secondary" href="#!" data-bind="text: GameConstants.ShardTraderLocations[$data], attr: { href: `#!Towns/${GameConstants.ShardTraderLocations[$data]}` }"></a>
+        </div>
+    </div>
+    <div class="mt-3" data-bind="if: Object.values(dungeonList).some((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name)))">
         <h3>Can be found in the following dungeons:</h3>
         <!-- ko foreach : Object.values(dungeonList).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name))) -->
-            <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Dungeons/${$data.name}` }"></a>
+        <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Dungeons/${$data.name}` }"></a>
         <!-- /ko -->
     </div>
-    <div data-bind="if: pokemonList.some((p) => ([ItemType.item, ItemType.underground]).includes(p.heldItem?.type) && p.heldItem?.id == $data.name)">
+    <div class="mt-3" data-bind="if: pokemonList.some((p) => ([ItemType.item, ItemType.underground]).includes(p.heldItem?.type) && p.heldItem?.id == $data.name)">
         <h3>Can be dropped by the following Pokémon:</h3>
         <!-- ko foreach : pokemonList.filter((p) => ([ItemType.item, ItemType.underground]).includes(p.heldItem?.type) && p.heldItem?.id == $data.name) -->
         <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokémon/${$data.name}` }"></a>
