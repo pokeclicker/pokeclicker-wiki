@@ -10,11 +10,11 @@ The gems allows you to increase the damage efectivity of all your types from the
 
 Efectivity | Base Multiplier | Maxed multiplier
 :--- | :---: | ---:
-Inmune | 0.0x | 1.0x
+Immune | 0.0x | 1.0x
 Not very | 0.5x | 1.5x
 Neutral | 1.0x | 2.0x
 Very | 2.0x | 3.0x
-*Note: It is recommended to start improving inmune*
+*Note: It is recommended to start improving immune*
 
 This +1x is divided in 10 upgrade levels of +0.1x with increasing price:
 
