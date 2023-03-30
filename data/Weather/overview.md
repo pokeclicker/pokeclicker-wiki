@@ -2,9 +2,16 @@
 
 Pokémon | Required Weather | Route(s)
 :--- | :--- | :---
-Castform (Sunny) | Sunny | Hoenn 119
-Castform (Rainy) | Rain or Thunderstorm | Hoenn 119
-Castform (Snowy) | Snow, Blizzard, Hail, or Fog | Hoenn 119
-Cramorant (Gulping) | Rain | Axew's Eye, Bridge Field, Stony Wilderness, Lake of Outrage, Galar Route 9, Circhester Bay, Forest of Focus, Challenge Beach, Training Lowlands
-Gramorant (Gorging) | Thunderstorm | Axew's Eye, Galar Route 9, Circhester Bay, Forest of Focus, Challenge Beach, Training Lowlands
-Eiscue (No Ice Face) | Sunny | Galar Route 10, Frigid Sea
+[[Pokemon/Castform (Sunny)]] | Sunny | [[Routes/Hoenn Route 119]]
+[[Pokemon/Castform (Rainy)]] | Rain or Thunderstorm | [[Routes/Hoenn Route 119]]
+[[Pokemon/Castform (Snowy)]] | Snow, Blizzard, Hail, or Fog | [[Routes/Hoenn Route 119]]
+[[Pokemon/Cramorant (Gulping)]] | Rain | [[Routes/Axew's Eye]], [[Routes/Bridge Field]], [[Routes/Stony Wilderness]], [[Routes/Lake of Outrage]], [[Routes/Galar Route 9]], [[Routes/Circhester Bay]], [[Routes/Forest of Focus]], [[Routes/Challenge Beach]], [[Routes/Training Lowlands]]
+[[Pokemon/Gramorant (Gorging)]] | Thunderstorm | [[Routes/Axew's Eye]], [[Routes/Galar Route 9]], [[Routes/Circhester Bay]], [[Routes/Forest of Focus]], [[Routes/Challenge Beach]], [[Routes/Training Lowlands]]
+[[Pokemon/Eiscue (No Ice Face)]] | Sunny | [[Routes/Galar Route 10]], [[Routes/Frigid Sea]]
+
+##### **Unique Weather Encounters**
+
+Pokémon | Requirements | Required Weather | Near to | Notes
+:--- | :--- | :--- | :--- | :---
+Wild Houndoom Horde | Sunny | Captured [[Pokemon/Houndour]] and defeated [[Towns/Pokémon League Kalos]] | [[Routes/Kalos Route 16]] | Awards Houndoominite to evolve [[Pokemon/Mega Houndoom]]
+Wild Manectrike Horde | Thunderstorm | Captured [[Pokemon/Manectrike]] and defeated [[Towns/Pokémon League Kalos]] | [[Routes/Kalos Route 16]] | Awards Manectite to evolve [[Pokemon/Mega Manectrike]]
