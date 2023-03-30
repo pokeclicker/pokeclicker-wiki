@@ -14,4 +14,4 @@ Pokémon | Required Weather | Route(s)
 Pokémon | Requirements | Required Weather | Near to | Notes
 :--- | :--- | :--- | :--- | :---
 Wild Houndoom Horde | Captured 500 [[Pokemon/Houndour]] and defeated [[Towns/Pokémon League Kalos]] | Sunny | [[Routes/Kalos Route 16]] | Awards Houndoominite to evolve [[Pokemon/Mega Houndoom]]
-Wild Manectrike Horde | Captured 500 [[Pokemon/Manectric]] and defeated [[Towns/Pokémon League Kalos]] | Thunderstorm | [[Routes/Kalos Route 16]] | Awards Manectite to evolve [[Pokemon/Mega Manectric]]
+Wild Manectrike Horde | Captured 500 [[Pokemon/Electrike]] and defeated [[Towns/Pokémon League Kalos]] | Thunderstorm | [[Routes/Kalos Route 16]] | Awards Manectite to evolve [[Pokemon/Mega Manectric]]
