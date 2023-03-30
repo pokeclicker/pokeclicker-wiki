@@ -1,3 +1,4 @@
+
 Pokémon | Required Weather | Route(s)
 :--- | :--- | :---
 [[Pokemon/Castform (Sunny)]] | Sunny | [[Routes/Hoenn Route 119]]
@@ -11,5 +12,5 @@ Pokémon | Required Weather | Route(s)
 
 Pokémon | Requirements | Required Weather | Near to | Notes
 :--- | :--- | :--- | :--- | :---
-Wild Houndoom Horde | Sunny | Captured [[Pokemon/Houndour]] and defeated [[Towns/Pokémon League Kalos]] | [[Routes/Kalos Route 16]] | Awards Houndoominite to evolve [[Pokemon/Mega Houndoom]]
-Wild Manectrike Horde | Thunderstorm | Captured [[Pokemon/Manectrike]] and defeated [[Towns/Pokémon League Kalos]] | [[Routes/Kalos Route 16]] | Awards Manectite to evolve [[Pokemon/Mega Manectrike]]
+Wild Houndoom Horde | Captured 500 [[Pokemon/Houndour]] and defeated [[Towns/Pokémon League Kalos]] | Sunny | [[Routes/Kalos Route 16]] | Awards Houndoominite to evolve [[Pokemon/Mega Houndoom]]
+Wild Manectrike Horde | Captured 500 [[Pokemon/Manectrike]] and defeated [[Towns/Pokémon League Kalos]] | Thunderstorm | [[Routes/Kalos Route 16]] | Awards Manectite to evolve [[Pokemon/Mega Manectrike]]
