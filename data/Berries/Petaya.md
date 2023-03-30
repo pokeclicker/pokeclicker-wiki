@@ -87,23 +87,23 @@ All planting times use the time-to-ripe remaining of the first planted berry for
 | Berry | Planting Time with No Modifier | Planting Time with Mulch or Sprayduck | Planting Time with  Mulch & Sprayduck |
 |---|---|---|---|
 | [[File:Haban.png\|32px]] [[Berries/Haban]] | - | - | -|
-| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | 20 hours until ripe | 14 hours until ripe | 10 hours until ripe|
-| [[File:Yache.png\|32px]] [[Berries/Yache]] | 12 hours until ripe | 8 hours until ripe | 5 hours 20 mins until ripe|
-| [[File:Shuca.png\|32px]] [[Berries/Shuca]] | 10 hours 56 mins 25 secs until ripe | 7 hours 17 mins 36 secs until ripe | 4 hours 51 mins 44 secs until ripe|
-| [[File:Charti.png\|32px]] [[Berries/Charti]] | 10 hours 26 mins 25 secs until ripe | 6 hours 57 mins 36 secs until ripe | 4 hours 38 mins 24 secs until ripe|
-| [[File:Chople.png\|32px]] [[Berries/Chople]]| 9 hours 56 mins 25 secs until ripe | 6 hours 37 mins 36 secs until ripe | 4 hours 25 mins 4 secs until ripe|
-| [[File:Payapa.png\|32px]] [[Berries/Payapa]] | 9 hours 26 mins 25 secs until ripe | 6 hours 17 mins 36 secs until ripe |4 hours 11 mins 44 secs until ripe|
-| [[File:Rindo.png\|32px]] [[Berries/Rindo]] | 7 hours 56 mins 25 secs until ripe | 5 hours 17 mins 36 secs until ripe | 3 hours 31 mins 44 secs until ripe|
-| [[File:Colbur.png\|32px]] [[Berries/Colbur]] | 7 hours 26 mins 25 secs until ripe | 4 hours 57 mins 36 secs until ripe | 3 hours 18 mins 24 secs until ripe|
-| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | 6 hours 56 mins 25 secs until ripe | 4 hours 37 mins 36 secs until ripe | 3 hours 5 mins 4 secs until ripe|
-| [[File:Occa.png\|32px]] [[Berries/Occa]] |6 hours 2 mins 25 secs until ripe | 4 hours 1 min 36 secs until ripe | 2 hours 38 mins 24 secs until ripe|
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | 5 hours 56 mins 25 secs until ripe | 3 hours 57 mins 36 secs until ripe | 2 hours 38 mins 24 secs until ripe|
-| [[File:Coba.png\|32px]] [[Berries/Coba]] | 5 hours 26 mins 25 secs until ripe | 3 hours 37 mins 36 secs until ripe | 2 hours 25 mins 4 secs until ripe|
-| [[File:Chilan.png\|32px]] [[Berries/Chilan]] | 1 hour 56 mins 25 secs until ripe | 1 hour 17 mins 36 secs until ripe | 51 mins 44 secs until ripe|
-| [[File:Tanga.png\|32px]] [[Berries/Tanga]] | 56 mins 25 secs until ripe | 37 mins 36 secs until ripe | 25 mins 4 secs until ripe|
-| [[File:Wacan.png\|32px]] [[Berries/Wacan]] | 26 mins 25 secs until ripe | 17 mins 36 secs until ripe | 11 mins 44 secs until ripe|
-| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | 10 mins until ripe | 6 mins 40 secs until ripe | 4 mins 27 secs|
-| [[File:Kasib.png\|32px]] [[Berries/Kasib]] | 5 mins until ripe | 3 mins 20 secs until ripe | 2 mins 13 secs|
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | 20:00:00 until ripe | 14:00:00 until ripe | 10:00:00 until ripe|
+| [[File:Yache.png\|32px]] [[Berries/Yache]] | 12:00:00 until ripe | 8:00:00 until ripe | 5:20:00 until ripe|
+| [[File:Shuca.png\|32px]] [[Berries/Shuca]] | 11:03:35 until ripe |	7:22:24 until ripe |	4:54:56 until ripe|
+| [[File:Charti.png\|32px]] [[Berries/Charti]] | 10:33:35 until ripe |	7:02:24 until ripe |	4:41:36 until ripe|
+| [[File:Chople.png\|32px]] [[Berries/Chople]]| 10:03:35 until ripe |	6:42:24 until ripe |	4:28:16 until ripe|
+| [[File:Payapa.png\|32px]] [[Berries/Payapa]] | 9:33:35 until ripe |	6:22:24 until ripe |	4:14:56 until ripe|
+| [[File:Rindo.png\|32px]] [[Berries/Rindo]] | 8:03:35 until ripe |	5:22:24 until ripe |	3:34:56 until ripe|
+| [[File:Colbur.png\|32px]] [[Berries/Colbur]] |7:33:35 until ripe |	5:02:24 until ripe |	3:21:36 until ripe|
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | 7:03:35 until ripe |	4:42:24 until ripe |	3:08:16 until ripe|
+| [[File:Occa.png\|32px]] [[Berries/Occa]] |6:09:35	until ripe | 4:06:24 until ripe |	2:44:16 until ripe|
+| [[File:Passho.png\|32px]] [[Berries/Passho]] | 6:03:35 until ripe |	4:02:24	until ripe | 2:41:36 until ripe|
+| [[File:Coba.png\|32px]] [[Berries/Coba]] | 5:33:35 until ripe |	3:42:24 until ripe |	2:28:16 until ripe|
+| [[File:Chilan.png\|32px]] [[Berries/Chilan]] | 2:03:35 until ripe |	1:22:24 until ripe |	0:54:56 until ripe|
+| [[File:Tanga.png\|32px]] [[Berries/Tanga]] | 1:03:35 until ripe |	0:42:24 until ripe |	0:28:16 until ripe|
+| [[File:Wacan.png\|32px]] [[Berries/Wacan]] | 0:33:35	until ripe | 0:22:24 until ripe |	0:14:56 until ripe|
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | 0:10:00 until ripe | 0:06:40 until ripe |	0:04:27 until ripe|
+| [[File:Kasib.png\|32px]] [[Berries/Kasib]] | 0:05:00	until ripe | 0:03:20 until ripe |	0:02:13 until ripe|
 
 If [[Berries/Wacan]] dies, harvest and replant [[Berries/Chilan]], [[Berries/Tanga]], and [[Berries/Wacan]] following this table to get the setup again. Note that you will want to make sure [[Berries/Coba]] and [[Berries/Shuca]] have at least about 2 hours 46 mins left on their timers (3 hours 26 mins without boost mulch) for another full [[Berries/Wacan]] cycle. You may want to replant [[Berries/Kasib]] as well to avoid [[Berries/Shuca]] dying before [[Berries/Coba]], but this is not very important at this time.
 
