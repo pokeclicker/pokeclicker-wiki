@@ -54,6 +54,8 @@ BattleFrontierBattle.generateNewEnemy();
 const now = new Date();
 DailyDeal.generateDeals(5, now);
 BerryDeal.generateDeals(now);
+GemDeal.generateDeals();
+ShardDeal.generateDeals();
 
 // Farm Simulator
 App.game.farming.plotList.forEach((p) => p.isUnlocked = true); // All plots unlocked
