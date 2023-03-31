@@ -1,0 +1,1 @@
+When equipped, the Shiny Charm increases the probability of encountering a shiny Pokémon (this includes in the wild, in dungeons, in gyms, hatching eggs, etc.).

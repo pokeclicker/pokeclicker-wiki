@@ -15,5 +15,6 @@ window.Wiki = {
   dreamOrbs: require('./pages/dreamOrbs'),
   farmSimulator: require('./pages/farmSimulator'),
   dungeons: require('./pages/dungeons'),
+  oakItems: require('./pages/oakItems'),
   ...require('./navigation'),
 }

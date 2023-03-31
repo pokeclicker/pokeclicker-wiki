@@ -1,0 +1,1 @@
+When equipped, the Blaze Cassette speeds up the process of hatching eggs.

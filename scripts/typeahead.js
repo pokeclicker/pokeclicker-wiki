@@ -212,6 +212,17 @@ const searchOptions = [
     type: 'Weather',
     page: '',
   },
+  // Oak Itens
+  {
+    display: 'Oak Items',
+    type: 'Oak Items',
+    page: '',
+  },
+  ...App.game.oakItems.itemList.map(o => ({
+    display: o.displayName,
+    type: 'Oak Items',
+    page: o.displayName,
+  })),
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {

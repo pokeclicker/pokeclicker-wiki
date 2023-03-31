@@ -1,0 +1,1 @@
+When equipped, the Treasure Scanner provides a chance to multiply items mined in the Underground. It only starts taking effect upon fully uncovering an item. After duplicating an item, it activates again, providing *another* chance to reward the same item. This can happen a maximum of three times, potentially giving four of the same item after uncovering one.
