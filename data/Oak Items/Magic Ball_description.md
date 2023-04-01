@@ -1,0 +1,1 @@
+When equipped, the Magic Ball gives a bonus to the players Pokémon catch rate.

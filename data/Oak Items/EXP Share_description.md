@@ -1,0 +1,1 @@
+When equipped, the EXP Share increases the amount of experience Pokémon gain from battles.

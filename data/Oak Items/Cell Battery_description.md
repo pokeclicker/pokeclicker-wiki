@@ -1,0 +1,1 @@
+When equipped, the Cell Battery increases the amount of Mining Energy gained passively.

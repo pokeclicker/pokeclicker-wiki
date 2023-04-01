@@ -12491,10 +12491,11 @@ window.Wiki = {
   dreamOrbs: require('./pages/dreamOrbs'),
   farmSimulator: require('./pages/farmSimulator'),
   dungeons: require('./pages/dungeons'),
+  oakItems: require('./pages/oakItems'),
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dreamOrbs":114,"./pages/dungeons":115,"./pages/farm":116,"./pages/farmSimulator":117,"./pages/items":118,"./pages/pokemon":119,"./typeahead":121}],106:[function(require,module,exports){
+},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dreamOrbs":114,"./pages/dungeons":115,"./pages/farm":116,"./pages/farmSimulator":117,"./pages/items":118,"./pages/oakItems":119,"./pages/pokemon":120,"./typeahead":122}],106:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const saveChanges = (editor, filename, btn) => {
@@ -12884,7 +12885,7 @@ module.exports = {
     gotoPage,
 };
 
-},{"./datatables":102,"./markdown-editor":106,"./markdown-renderer":111,"./redirections":120}],113:[function(require,module,exports){
+},{"./datatables":102,"./markdown-editor":106,"./markdown-renderer":111,"./redirections":121}],113:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -13513,6 +13514,80 @@ module.exports = {
 };
 
 },{}],119:[function(require,module,exports){
+const getOakItemBonus = (oakItem, level) => {
+    const bonus = oakItem.bonusList[level];
+    switch (oakItem.name) {
+        case OakItemType.Magic_Ball:
+            return `+${bonus}% Catch Rate`;
+        case OakItemType.Amulet_Coin:
+            return `x${bonus} Coins Earned`;
+        case OakItemType.Rocky_Helmet:
+            return `x${bonus} Click Damage`;
+        case OakItemType.Exp_Share:
+            return `x${bonus} EXP Earned`;
+        case OakItemType.Sprayduck:
+            return `x${bonus} Growth Speed`;
+        case OakItemType.Shiny_Charm:
+            return `x${bonus} Shiny Chance`;
+        case OakItemType.Blaze_Cassette:
+            return `x${bonus} Hatching Speed`;
+        case OakItemType.Cell_Battery:
+            return `x${bonus} Energy Regeneration`;
+        case OakItemType.Squirtbottle:
+            return `x${bonus} Mutation Rate`;
+        case OakItemType.Sprinklotad:
+            return `x${bonus} Replant Rate`;
+        case OakItemType.Explosive_Charge:
+            return `${bonus} Tiles Damaged`;
+        case OakItemType.Treasure_Scanner:
+            return `${bonus}% Item Duplication Chance`;
+        default:
+            return oakItem.bonusSymbol == '%' ? `+${bonus}%` : `${oakItem.bonusSymbol}${bonus}`;
+    }
+};
+
+const getOakItemUpgradeReq = (oakItem, level) => {
+    const prevLevelExp = level > 0 ? oakItem.expList[level - 1] : 0;
+    const req = Math.ceil((oakItem.expList[level] - prevLevelExp) / oakItem.expGain);
+    return getOakItemUpgradeReqText(oakItem.name, req.toLocaleString());
+};
+
+const getOakItemUpgradeReqText = (oakItemType, val) => {
+    switch (oakItemType) {
+        case OakItemType.Magic_Ball:
+            return `Capture ${val} Pokémon`;
+        case OakItemType.Amulet_Coin:
+            return `Defeat ${val} Pokémon`;
+        case OakItemType.Rocky_Helmet:
+            return `Click ${val} times`;
+        case OakItemType.Exp_Share:
+            return `Defeat ${val} Pokémon`;
+        case OakItemType.Sprayduck:
+            return `Gain ${val} berry harvest experience`;
+        case OakItemType.Shiny_Charm:
+            return `Encounter ${val} Shiny Pokémon`;
+        case OakItemType.Blaze_Cassette:
+            return `Hatch ${val} Eggs`;
+        case OakItemType.Cell_Battery:
+            return `Mine ${val} items in the Underground`;
+        case OakItemType.Squirtbottle:
+            return `Trigger ${val} berry mutations`;
+        case OakItemType.Sprinklotad:
+            return `Trigger ${val} berry replants`;
+        case OakItemType.Explosive_Charge:
+            return `Dig deeper ${val} times`;
+        case OakItemType.Treasure_Scanner:
+            return `Mine ${val} items in the Underground`;
+        default:
+            return val;
+    }
+};
+
+module.exports = {
+    getOakItemBonus,
+    getOakItemUpgradeReq,
+};
+},{}],120:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -13572,7 +13647,7 @@ module.exports = {
     getBestVitamins,
 }
 
-},{}],120:[function(require,module,exports){
+},{}],121:[function(require,module,exports){
 const redirections = [
     ({type, name}) => {
         if (type === 'Pokemon') {
@@ -13624,7 +13699,7 @@ module.exports = {
     redirections
 };
 
-},{}],121:[function(require,module,exports){
+},{}],122:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [
@@ -13839,6 +13914,17 @@ const searchOptions = [
     type: 'Weather',
     page: '',
   },
+  // Oak Itens
+  {
+    display: 'Oak Items',
+    type: 'Oak Items',
+    page: '',
+  },
+  ...App.game.oakItems.itemList.map(o => ({
+    display: o.displayName,
+    type: 'Oak Items',
+    page: o.displayName,
+  })),
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {

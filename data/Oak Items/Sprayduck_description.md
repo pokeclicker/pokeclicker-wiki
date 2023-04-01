@@ -1,0 +1,1 @@
+When equipped, the Sprayduck increases the speed at which [[Berries]] grow (and wither) on the [[Farm]].

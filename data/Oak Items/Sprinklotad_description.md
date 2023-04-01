@@ -1,0 +1,1 @@
+When equipped, the Spinklotad increases the chance of [[Berries]] replanting themselves if left to wither on the [[Farm]].
