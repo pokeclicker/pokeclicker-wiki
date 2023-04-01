@@ -1,0 +1,1 @@
+When equipped, the Explosive Charge causes new mining layers in the Underground to start with damaged tiles. Any tiles it affects will have a single layer removed.

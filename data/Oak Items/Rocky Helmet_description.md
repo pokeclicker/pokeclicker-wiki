@@ -1,0 +1,1 @@
+When equipped, the Rocky Helmet increases the damage of clicks.

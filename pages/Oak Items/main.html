@@ -1,0 +1,70 @@
+<div>
+    <!-- ko ifnot: App.game.oakItems.itemList.find((i) => i.displayName == Wiki.pageName()) -->
+    <h3>Oak Item not found...</h3>
+    <!-- /ko -->
+    <!-- ko with: App.game.oakItems.itemList.find((i) => i.displayName == Wiki.pageName()) -->
+    <div class="float-lg-end col-lg-3 ms-2">
+        <table class="table table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th class="text-center" colspan="2" data-bind="text: Wiki.pageName()"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center" colspan="2">
+                        <img data-bind="attr: {src: `images/${OakItemType[$data.name]}.png`}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="align-middle">Effect</td>
+                    <td data-bind="text: $data.description"></td>
+                </tr>
+                <tr>
+                    <td class="align-middle">Acquisition</td>
+                    <td>
+                        <!-- ko ifnot: $data instanceof BoughtOakItem -->
+                        <knockout data-bind="text: `Capture ${$data.unlockReq} unique Pokemon`"></knockout>
+                        <!-- /ko -->
+                        <!-- ko if: $data instanceof BoughtOakItem -->
+                        <knockout data-bind="with: { oakItem: $data, shopItem: ItemList[OakItemType[$data.name]] }">
+                            <knockout data-bind="text: `Purchase at ${oakItem.shopName} for ${shopItem.basePrice.toLocaleString()}`"></knockout>
+                            <img class="ms-1" width="18" data-bind="attr: { src: `./images/${GameConstants.Currency[shopItem.currency]}.svg` }">
+                        </knockout>
+                        <!-- /ko -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Level</th>
+                    <th>Effect</th>
+                    <th>Upgrade Requirement</th>
+                    <th style="text-align: right;">Upgrade Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- ko foreach: new Array($data.maxLevel + 1) -->
+                    <td data-bind="text: $index()"></td>
+                    <td data-bind="text: Wiki.oakItems.getOakItemBonus($parent, $index())"></td>
+                    <td data-bind="text: $index() == $parent.maxLevel ? 'N/A' : Wiki.oakItems.getOakItemUpgradeReq($parent, $index())"></td>
+                    <td style="text-align: right;">
+                        <!-- ko if: $parent.costList[$index()] -->
+                        <knockout data-bind="text: $parent.costList[$index()].amount.toLocaleString()"></knockout>
+                        <img width="18" data-bind="attr: { src: `./images/${Currency[$parent.costList[$index()].currency]}.svg` }" />
+                        <!-- /ko -->
+                        <!-- ko ifnot: $parent.costList[$index()] -->
+                        <span>N/A</span>
+                        <!-- /ko -->
+                    </td>
+                </tr>
+                <!-- /ko -->
+            </tbody>
+        </table>
+    </div>
+    <!-- /ko -->
+</div>

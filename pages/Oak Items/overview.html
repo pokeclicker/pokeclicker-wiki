@@ -1,0 +1,31 @@
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Oak Item</th>
+            <th>Effect</th>
+            <th>Acquisition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ko foreach: App.game.oakItems.itemList -->
+        <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Oak Items', $data.displayName); return false; }">
+            <td class="align-middle">
+                <img width="28" class="me-1" data-bind="attr: { src: `./images/${OakItemType[$data.name]}.png` }" />
+                <knockout data-bind="text: $data.displayName"></knockout>
+            </td>
+            <td class="align-middle" data-bind="text: $data.description"></td>
+            <td class="align-middle">
+                <!-- ko ifnot: $data instanceof BoughtOakItem -->
+                <knockout data-bind="text: `Capture ${$data.unlockReq} unique Pokemon`"></knockout>
+                <!-- /ko -->
+                <!-- ko if: $data instanceof BoughtOakItem -->
+                <knockout data-bind="with: { oakItem: $data, shopItem: ItemList[OakItemType[$data.name]] }">
+                    <knockout data-bind="text: `Purchase at ${oakItem.shopName} for ${shopItem.basePrice.toLocaleString()}`"></knockout>
+                    <img class="ms-1" width="18" data-bind="attr: { src: `./images/${GameConstants.Currency[shopItem.currency]}.svg` }">
+                </knockout>
+                <!-- /ko -->
+            </td>
+        </tr>
+        <!-- /ko -->
+    </tbody>
+</table>

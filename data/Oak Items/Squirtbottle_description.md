@@ -1,0 +1,1 @@
+When equipped, the Squirtbottle increases the chance of Berry mutations occuring on the [[Farm]].
