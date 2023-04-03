@@ -12,7 +12,9 @@ You can fill your farm in the following way to obtain Petaya berries. Note that 
 | [[File:Occa.png\|32px]] [[Berries/Occa]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Chilan.png\|32px]] [[Berries/Chilan]] | |
 :::
 
-### Timings
+### External Timers
+Please note that these timers are from the moment Haban is planted, so, for example, 2 hours 40 minutes **after** planting Haban and Babiri, you should plant Yache. These are **not** time until Haban is ripe. For those, please refer to the **Timing Table** section lower in the page.
+
 |Berry | Time | Mulch Amount|
 |---|---|---|
 | [[Berries/Haban]] | --- | 128|
