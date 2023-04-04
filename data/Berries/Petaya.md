@@ -113,8 +113,8 @@ All planting times use the time-to-ripe remaining of the first planted berry for
 | Berry | Planting Time with No Modifier|  Planting Time with Mulch | Planting Time with Mulch & Sprayduck|
 |---|---|---|---|
 | [[File:Chilan.png\|32px]] [[Berries/Chilan]] | `N/A` | `N/A` | `N/A`|
-| [[File:Tanga.png\|32px]] [[Berries/Tanga]] | 1 hour 7 mins 45 seconds until ripe | 45 mins 10 secs until ripe | 30 mins 7 secs until ripe |
-| [[File:Wacan.png\|32px]] [[Berries/Wacan]] | 37 mins 45 secs until ripe |  25 mins 10 secs until ripe | 16 mins 47 secs until ripe|
+| [[File:Tanga.png\|32px]] [[Berries/Tanga]] | 1 hour 3 mins 35 seconds until ripe | 42 mins 24 secs until ripe | 28 mins 16 secs until ripe |
+| [[File:Wacan.png\|32px]] [[Berries/Wacan]] | 33 mins 35 secs until ripe |  22 mins 24 secs until ripe | 14 mins 56 secs until ripe|
 
 #### Mutations
 Petaya Berries can be used to mutate the following Berries.
