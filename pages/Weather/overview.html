@@ -2,7 +2,7 @@
 <table class="table table-bordered table-striped table-hover">
     <thead>
         <tr>
-            <th class="text-center align-middle">Weather</th>
+            <th class="text-center align-middle" colspan="2">Weather</th>
             <th class="text-center align-middle">Description</th>
             <th class="text-center align-middle">Type Modifier(s)</th>
             <th class="text-center align-middle">Weight</th>
@@ -22,10 +22,10 @@
         return map.sort((a, b) => a.region - b.region);
     })()">
         <tr>
-            <td class="align-middle">
-                <img data-bind="attr: { src: `./images/${WeatherType[$data.type]}.png` }" width="18px">
-                <ko data-bind="text: WeatherType[$data.type]"></ko>
+            <td class="align-middle text-center tight" data-bind="style: { 'background-color': Weather.weatherConditions[$data.type].color }">
+                <img data-bind="attr: { src: `./pokeclicker/docs/assets/images/weather/${WeatherType[$data.type]}.png` }" width="24px">
             </td>
+            <td class="align-middle" data-bind="text: WeatherType[$data.type]"></td>
             <td class="align-middle" data-bind="text: $data.description"></td>
             <td class="align-middle" data-bind="text: $data.multipliers.map(m => `${PokemonType[m.type]} x${m.multiplier}`).join(', ') || 'None'"></td>
             <td class="align-middle" data-bind="text: $data.weight"></td>
