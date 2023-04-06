@@ -1,0 +1,1 @@
+>Increased catch rate on routes with less Pokémon defeated
