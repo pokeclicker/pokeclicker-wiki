@@ -13297,34 +13297,46 @@ const getFlavorValue = (flavorType) => {
     return App.game.farming.berryData[selectedPlot().berry].flavors.find(f => f.type === flavorType).value;
 }
 
-const getStageTimes = ko.pureComputed(() => {
-    const stages = [
-        { stage: 'Sprout', timeLeft: '-' },
-        { stage: 'Taller', timeLeft: '-' },
-        { stage: 'Bloom', timeLeft: '-' },
-        { stage: 'Berry', timeLeft: '-' },
-        { stage: 'Wither', timeLeft: '-' },
-    ];
-
-    if (!selectedPlot() || selectedPlot()._berry() == -1) {
-        return stages;
-    }
-
-    const isPetaya = selectedPlot().berry === BerryType.Petaya;
-    const petayaEffect = App.game.farming.berryInFarm(BerryType.Petaya, PlotStage.Berry, true) && !isPetaya;
-
-    stages.forEach((stage, idx) => {
-        const growthTime = App.game.farming.berryData[selectedPlot().berry].growthTime[idx];
-        const growthMultiplier = App.game.farming.getGrowthMultiplier() * selectedPlot().getGrowthMultiplier();
-        if (growthMultiplier == 0 || (petayaEffect && stage.stage == 'Wither')) {
-            stages[idx].timeLeft = '∞';
-        } else {
-            stages[idx].timeLeft = GameConstants.formatTimeFullLetters(growthTime / growthMultiplier);
+const getStageTimes = (calcTotalLifeTime = false) => {
+    return ko.pureComputed(() => {
+        const stages = [
+            { stage: 'Sprout', timeLeft: '-' },
+            { stage: 'Taller', timeLeft: '-' },
+            { stage: 'Bloom', timeLeft: '-' },
+            { stage: 'Berry', timeLeft: '-' },
+            { stage: 'Wither', timeLeft: '-' },
+        ];
+    
+        if (!selectedPlot() || selectedPlot()._berry() == -1) {
+            return stages;
         }
-    });
+    
+        const isPetaya = selectedPlot().berry === BerryType.Petaya;
+        const petayaEffect = App.game.farming.berryInFarm(BerryType.Petaya, PlotStage.Berry, true) && !isPetaya;
+        const dummyPlot = new Plot(true, selectedPlot().berry, 0, selectedPlot().mulch, selectedPlot().mulchTimeLeft, selectedPlot().index);
+        let totalLifeTime = 0;
 
-    return stages;
-});
+        stages.forEach((stage, idx) => {
+            const prevStageTime = idx == 0 ? 0 : App.game.farming.berryData[selectedPlot().berry].growthTime[idx - 1];
+            const growthTime = App.game.farming.berryData[selectedPlot().berry].growthTime[idx] - prevStageTime;
+            dummyPlot._age(growthTime);
+            const growthMultiplier = App.game.farming.getGrowthMultiplier() * dummyPlot.getGrowthMultiplier();
+
+            if (growthMultiplier == 0 || (petayaEffect && stage.stage == 'Wither')) {
+                stages[idx].timeLeft = '∞';
+            } else {
+                const timeLeft = growthTime / growthMultiplier;
+                stages[idx].timeLeft = GameConstants.formatTimeFullLetters(timeLeft + totalLifeTime);
+
+                if (calcTotalLifeTime) {
+                    totalLifeTime += timeLeft;
+                }
+            }
+        });
+
+        return stages;
+    });
+}
 
 const getEmittingAura = ko.pureComputed(() => {
     if (!selectedPlot() || selectedPlot()._berry() == -1 || selectedPlot().emittingAura.type() == null) {

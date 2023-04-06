@@ -147,13 +147,32 @@
                     </div>
                 </div>
                 <hr />
-                <div class="d-flex flex-row justify-content-around text-center">
-                    <!-- ko foreach: Wiki.farmSimulator.getStageTimes() -->
-                    <div>
-                        <div class="mb-2" data-bind="text: $data.stage"></div>
-                        <div class="small" data-bind="text: $data.timeLeft"></div>
-                    </div>
-                    <!-- /ko -->
+                <div class="table-response">
+                    <table class="table table-sm table-hover text-center">
+                        <thead>
+                            <tr>
+                                <th>Sprout</th>
+                                <th>Taller</th>
+                                <th>Bloom</th>
+                                <th>Berry</th>
+                                <th>Wither</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="small text-muted" colspan="5">Time From Previous Stage</td></tr>
+                            <tr>
+                                <!-- ko foreach: Wiki.farmSimulator.getStageTimes(false) -->
+                                <td class="small" data-bind="text: $data.timeLeft"></td>
+                                <!-- /ko -->
+                            </tr>
+                            <tr><td class="small text-muted" colspan="5">Time Since Planted</td></tr>
+                            <tr>
+                                <!-- ko foreach: Wiki.farmSimulator.getStageTimes(true) -->
+                                <td class="small border-bottom-0" data-bind="text: $data.timeLeft"></td>
+                                <!-- /ko -->
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <hr />
                 <div class="d-flex flex-row justify-content-around text-center">
