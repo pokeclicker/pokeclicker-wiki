@@ -12926,32 +12926,44 @@ module.exports = {
 };
 
 },{}],115:[function(require,module,exports){
-const tableClearCounts = [
-    {
-        clears: 0,
-        debuff: false
-    },
-    {
-        clears: 100,
-        debuff: false
-    },
-    {
-        clears: 500,
-        debuff: false
-    },
-    {
-        clears: 0,
-        debuff: true
-    },
-    {
-        clears: 100,
-        debuff: true
-    },
-    {
-        clears: 500,
-        debuff: true
+const getTableClearCounts = (dungeon) => {
+    const hasItemsThatIgnoreDebuff = Object.values(dungeon.lootTable).flat().some(item => item.ignoreDebuff);
+
+    const tableClearCounts = [
+        {
+            clears: 0,
+            debuff: false,
+            header: '0 clears'
+        },
+        {
+            clears: 100,
+            debuff: false,
+            header: '100 clears'
+        },
+        {
+            clears: 250,
+            debuff: false,
+            header: '250 clears'
+        },
+        {
+            clears: 500,
+            debuff: false,
+            header: '500 clears'
+        }
+    ];
+
+    if (hasItemsThatIgnoreDebuff) {
+        tableClearCounts.push(...tableClearCounts.map(clearSetup => ({...clearSetup, debuff: true, header: `Debuffed (${clearSetup.header})`})))
+    } else {
+        tableClearCounts.push({
+            clears: 0,
+            debuff: true,
+            header: 'Debuffed'
+        });
     }
-];
+
+    return tableClearCounts;
+};
 
 const itemTypeCategories = {
     pokemon: 'Pokémon',
@@ -13094,6 +13106,7 @@ const getLootTierWeights = (dungeon, clears, debuffed, requirement = () => true)
 };
 
 const getDungeonLoot = (dungeon) => {
+    const tableClearCounts = getTableClearCounts(dungeon)
     const tierWeights = tableClearCounts.map(clearSetup => getLootTierWeights(dungeon, clearSetup.clears, clearSetup.debuff, checkLootRequirements(dungeon, clearSetup)));
     const itemChanceMaps = tableClearCounts.map(clearSetup => getDungeonLootChances(dungeon, clearSetup.clears, clearSetup.debuff, checkLootRequirements(dungeon, clearSetup)));
     const lootTiers = [];
@@ -13162,7 +13175,7 @@ module.exports = {
     getDungeonLoot,
     getDungeonLootChances,
     hasLootWithRequirements,
-    tableClearCounts,
+    getTableClearCounts,
     itemTypeCategories
 };
 
