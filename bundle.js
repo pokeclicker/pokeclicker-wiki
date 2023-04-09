@@ -12927,6 +12927,10 @@ module.exports = {
 
 },{}],115:[function(require,module,exports){
 const getTableClearCounts = (dungeon) => {
+    if (getTableClearCounts.cache.has(dungeon)) {
+        return getTableClearCounts.cache.get(dungeon);
+    }
+
     const hasItemsThatIgnoreDebuff = Object.values(dungeon.lootTable).flat().some(item => item.ignoreDebuff);
 
     const tableClearCounts = [
@@ -12962,8 +12966,11 @@ const getTableClearCounts = (dungeon) => {
         });
     }
 
+    getTableClearCounts.cache.set(dungeon, tableClearCounts);
+
     return tableClearCounts;
 };
+getTableClearCounts.cache = new WeakMap();
 
 const itemTypeCategories = {
     pokemon: 'Pokémon',
