@@ -40,7 +40,7 @@ const itemTypeCategories = {
  * @return {Map<Loot, number>}
  */
 const getDungeonLootChancesIgnoringFlag = (dungeon, clears, debuffed = false, requirement = () => true) => {
-    const tierWeights = dungeon.getLootTierWeights(clears, debuffed);
+    const tierWeights = getLootTierWeights(dungeon, clears, debuffed, requirement);
     const weightSum = Object.keys(tierWeights)
         .filter(tier => dungeon.lootTable[tier].some(requirement))
         .map(tier => tierWeights[tier])
@@ -130,11 +130,46 @@ const checkLootRequirements = (dungeon, clearSetup) => {
     };
 }
 
+/**
+ * Returns the loot tier weights for a given dungeon, clear setup and requirement check.
+ * @param dungeon
+ * @param clears
+ * @param debuffed
+ * @param requirement
+ * @return {Record<string, number>} object mapping loot tiers to weights
+ */
+const getLootTierWeights = (dungeon, clears, debuffed, requirement = () => true) => {
+    const lootToRequirementMap = new Map();
+
+    // Replace requirements with ours
+    for (let tier of Object.keys(dungeon.lootTable)) {
+        for (let item of Object.values(dungeon.lootTable[tier])) {
+            const originalRequirement = item.requirement;
+            lootToRequirementMap.set(item, originalRequirement);
+            item.requirement = {
+                // Pass item with original requirement
+                isCompleted: () => requirement({...item, requirement: originalRequirement})
+            };
+        }
+    }
+
+    const tierWeights = dungeon.getLootTierWeights(clears, debuffed);
+
+    // Restore requirements
+    for (let tier of Object.keys(dungeon.lootTable)) {
+        for (let item of Object.values(dungeon.lootTable[tier])) {
+            item.requirement = lootToRequirementMap.get(item);
+        }
+    }
+
+    return tierWeights;
+};
+
 const getDungeonLoot = (dungeon) => {
-    const tierWeights = tableClearCounts.map(clearSetup => dungeon.getLootTierWeights(clearSetup.clears, clearSetup.debuff));
+    const tierWeights = tableClearCounts.map(clearSetup => getLootTierWeights(dungeon, clearSetup.clears, clearSetup.debuff, checkLootRequirements(dungeon, clearSetup)));
     const itemChanceMaps = tableClearCounts.map(clearSetup => getDungeonLootChances(dungeon, clearSetup.clears, clearSetup.debuff, checkLootRequirements(dungeon, clearSetup)));
     const lootTiers = [];
-    for (let tier of Object.keys(tierWeights[0]).sort((a, b) => a - b)) {
+    for (let tier of Object.keys(dungeon.lootTable).sort((a, b) => a - b)) {
         const tierLoot = dungeon.lootTable[tier];
         const tierData = {
             tier: GameConstants.camelCaseToString(tier),
