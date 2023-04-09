@@ -3,7 +3,7 @@
 ### Possible Planting Formations {#planting}
 
 **WARNING:** Trying to mutate Pinkan while having the [[Items/Sprinklotad]] equipped may result in your Watmel mutating into Shuca.
-Also, you MUST have started the Questline [[Quest Line/Team Rocket's Pinkan Theme Park]] in order to be able to mutate this berry.
+Also, you MUST have started the Questline [[Quest Lines/Team Rocket's Pinkan Theme Park]] in order to be able to mutate this berry.
 You can fill your farm in the following way to obtain Pinkan Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
