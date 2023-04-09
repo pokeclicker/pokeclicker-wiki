@@ -2,7 +2,7 @@
 
 The Payapa berry can be acquired by surrounding a plot with a [[Berries/Wiki]] berry, a [[Berries/Cornn]] berry, a [[Berries/Bluk]] berry, and a [[Berries/Pamtre]] berry.
 
-Below is a sample farm. Note that Pamtre will mutate into [[Berries/Kebia]] with the [[Items/Rocky Helmet]] equipped, and Cornn will mutate into [[Berries/Charti]] with the [[Items/Cell Battery]] equipped.
+Below is a sample farm. Note that Pamtre will mutate into [[Berries/Kebia]] with the [[Oak Items/Rocky Helmet]] equipped, and Cornn will mutate into [[Berries/Charti]] with the [[Oak Items/Cell Battery]] equipped.
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
