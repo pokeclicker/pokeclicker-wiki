@@ -2,7 +2,7 @@
 
 As you enter subsequent [[Regions]], the odds of obtaining Pokémon from Eggs from prior Regions decreases to 50% of its prior rate.
 The Kanto and Johto pools are given equal odds in every region (excluding Kanto).
-The [[Items/Mystery Egg]] will pull randomly from its own poll and all typed egg pools, making it most useful when you have not obtained any egg Pokémon for that region yet.
+The [[Items/Mystery Egg]] will pull randomly from its own pool and all typed egg pools, making it most useful when you have not obtained any egg Pokémon for that region yet.
 
 ## Tips and Tricks
 
