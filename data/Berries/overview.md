@@ -18,7 +18,7 @@ Aura | Effect | Notes | Berries
 **Wither Prevention** | Prevents other berries from withering while this is berry is ripe | A single berry with this ability will affect the entire field. Berries with this ability do not affect each other. Once this berry withers or is harvested other berries will reset their timers from the beginning of the Ripe stage. | @[[Berries/Petaya]]
 **Egg Growth** | Increases the growth speed of eggs in the hatchery | Effect is multiplicative over the whole field. Effect stacks with Blaze Cassette | @[[Berries/Chople]]
 **Shiny Chance** | Increases chance of finding Shiny Pokémon | Effect is multiplicative over the whole field. Effect stacks with Shiny Charm | @[[Berries/Starf]]
-**Atract Aura** | Increases chance of Pokémon wandering onto the farm | Effect is multiplicative over the whole field | @[[Berries/Roseli]]
+**Attract Aura** | Increases chance of Pokémon wandering onto the farm | Effect is multiplicative over the whole field | @[[Berries/Roseli]]
 **Roamer Chance** | Increases chance of finding Roaming Pokémon on routes | Effect is multiplicative over the whole field | @[[Berries/Jaboca]]
 **EV Gain** | Increases amount of EVs gained in all applicable situations. | Effect is multiplicative over the whole field | @[[Berries/Rowap]]
 **Repel** | Reduce the chances of wandering pokemons | This aura is additive and effect over the whole field | @[[Berries/Micle]]
