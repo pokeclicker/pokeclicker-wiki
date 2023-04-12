@@ -4,6 +4,7 @@
             <tr>
                 <th class="col-1">ID</th>
                 <th class="col-1">Berry</th>
+                <th>Exp</th>
                 <th>Harvest Amount</th>
                 <th>Farm Points</th>
                 <th>Growth Time</th>
@@ -16,6 +17,7 @@
                     <img height="30px" data-bind="attr: {src: './pokeclicker/docs/' + FarmController.getBerryImage($data.type)}"/>
                 </td>
                 <td data-bind="text: BerryType[$data.type]"></td>
+                <td data-bind="text: $data.exp"></td>
                 <td data-bind="text: $data.harvestAmount"></td>
                 <td>
                     <img src="./images/farmPoint.svg" width="18px"/>
