@@ -26,6 +26,10 @@
                         <td data-bind="html: GameConstants.formatSecondsToTime($data.growthTime[PlotStage.Bloom])"></td>
                     </tr>
                     <tr>
+                        <td>Exp</td>
+                        <td data-bind="text: $data.exp"></td>
+                    </tr>
+                    <tr>
                         <td>Harvest Amount</td>
                         <td data-bind="text: `${$data.harvestAmount.toLocaleString()} berr${$data.harvestAmount === 1 ? 'y' : 'ies'}`"></td>
                     </tr>
