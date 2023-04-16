@@ -14128,6 +14128,12 @@ const searchOptions = [
     type: 'Daily Deals',
     page: '',
   },
+  // Deal Chains
+  {
+    display: 'Daily Deal Chains',
+    type: 'Daily Deal Chains',
+    page: ''
+  },
   // Weather
   {
     display: 'Weather',
