@@ -1,0 +1,48 @@
+
+<knockout data-bind="with: { dealChains: ko.observableArray() }">
+<div class="d-flex justify-content-end">
+    <input id="dealChainFromDate" type="date" data-bind="value: (() => {
+        const date = new Date();
+        const month = (date.getMonth() + 1).toString().padStart(2, '0');
+        return `${date.getFullYear()}-${month}-${date.getDate()}`;
+    })()" />
+    <input id="dealChainToDate" type="date" data-bind="value: (() => {
+        const today = new Date();
+        const date = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 14);
+        const month = (date.getMonth() + 1).toString().padStart(2, '0');
+        return `${date.getFullYear()}-${month}-${date.getDate()}`;
+    })()" />
+    <button data-bind="click: () => { $data.dealChains(Wiki.getDealChains(5, new Date(document.getElementById('dealChainFromDate').value), new Date(document.getElementById('dealChainToDate').value))) }">
+        Generate Chains
+    </button>
+</div>
+
+<div class="table-responsive" data-bind="foreach: $data.dealChains">
+    <h2 data-bind="text: `×${$data.profit.toLocaleString()}`"></h2>
+    <h3 data-bind="text: `${$data.deals[0].date.toISOString().split('T')[0]} to ${$data.deals.slice(-1)[0].date.toISOString().split('T')[0]}`"></h3>
+    <table class="table table-striped mb-4">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Give</th>
+                <th></th>
+                <th>Receive</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: $data.deals.reverse()">
+            <tr>
+                <td data-bind="text: $data.date.toISOString().split('T')[0]"></td>
+                <td class="align-middle">
+                    <img data-bind="attr: { src: `./images/${item1.name}.png` }" width="28px" class="me-2">
+                    <ko data-bind="text: `${amount1} × ${item1.name}`"></ko>
+                </td>
+                <td class="align-middle">→</td>
+                <td class="align-middle">
+                    <img data-bind="attr: { src: `./images/${item2.name}.png` }" width="28px" class="me-2">
+                    <ko data-bind="text: `${amount2} × ${item2.name}`"></ko>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</knockout>

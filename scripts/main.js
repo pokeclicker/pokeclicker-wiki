@@ -16,5 +16,6 @@ window.Wiki = {
   farmSimulator: require('./pages/farmSimulator'),
   dungeons: require('./pages/dungeons'),
   oakItems: require('./pages/oakItems'),
+  getDealChains: require('./pages/dealChains').getDealChains,
   ...require('./navigation'),
 }
