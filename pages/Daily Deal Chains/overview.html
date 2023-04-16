@@ -20,10 +20,22 @@
                     return `${date.getFullYear()}-${month}-${date.getDate()}`;
                 })()" />
             </div>
+            <div class="form-group col mb-2 mr-1">
+                <label>Max Slots</label>
+                <input class="form-control" id="dealChainMaxSlots" type="number" min="3" max="5" step="1" value="5" onchange="if (this.value > 5) { this.value = 5 } else if (this.value < 3) { this.value = 3} this.value = Math.floor(value)" />
+            </div>
+        </div>
+        <div class="row">
             <div class="form-group col mb-2 text-center">
                 <button
                     class="btn btn-primary"
-                    data-bind="click: () => { $data.dealChains(Wiki.getDealChains(5, new Date(document.getElementById('dealChainFromDate').value), new Date(document.getElementById('dealChainToDate').value))) }">
+                    data-bind="click: () => {
+                        $data.dealChains(Wiki.getDealChains(
+                            document.getElementById('dealChainMaxSlots').value,
+                            new Date(document.getElementById('dealChainFromDate').value),
+                            new Date(document.getElementById('dealChainToDate').value)
+                        ))
+                    }">
                     Generate Chains
                 </button>
             </div>
