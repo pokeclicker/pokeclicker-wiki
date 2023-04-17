@@ -17,7 +17,7 @@
                     const today = new Date();
                     const date = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 14);
                     const month = (date.getMonth() + 1).toString().padStart(2, '0');
-                    return `${date.getFullYear()}-${month}-${date.getDate()}`;
+                    return `${date.getFullYear()}-${month}-${date.getDate().toString().padStart(2, '0')}`;
                 })()" />
             </div>
             <div class="form-group col mb-2 mr-1">
