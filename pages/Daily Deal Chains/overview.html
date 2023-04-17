@@ -44,8 +44,7 @@
 </div>
 
 <div class="table-responsive" data-bind="foreach: $data.dealChains">
-    <h2 class="pt-4" data-bind="text: `×${$data.profit.toLocaleString()}`"></h2>
-    <h3 data-bind="text: `${$data.deals[0].date.toISOString().split('T')[0]} to ${$data.deals.slice(-1)[0].date.toISOString().split('T')[0]}`"></h3>
+    <h4 class="pt-4"><ko data-bind="text: `${$data.deals[0].date.toISOString().split('T')[0]} → ${$data.deals.slice(-1)[0].date.toISOString().split('T')[0]}`"></ko> | <img src="./images/diamond.svg" height="26px"/> <ko data-bind="text: `× ${$data.profit.toLocaleString()}`"></ko></h4>
     <table class="table table-striped mb-4">
         <thead>
             <tr>
