@@ -1,0 +1,73 @@
+
+<knockout data-bind="with: { dealChains: ko.observableArray() }">
+<div>
+    <form>
+        <div class="row justify-content-evenly align-items-end">
+            <div class="form-group col mb-2 mr-1">
+                <label>From Date</label>
+                <input class="form-control" id="dealChainFromDate" type="date" data-bind="value: (() => {
+                    const date = new Date();
+                    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+                    return `${date.getFullYear()}-${month}-${date.getDate()}`;
+                })()" />
+            </div>
+            <div class="form-group col mb-2 mr-1">
+                <label>To Date</label>
+                <input class="form-control" id="dealChainToDate" type="date" data-bind="value: (() => {
+                    const today = new Date();
+                    const date = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 14);
+                    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+                    return `${date.getFullYear()}-${month}-${date.getDate().toString().padStart(2, '0')}`;
+                })()" />
+            </div>
+            <div class="form-group col mb-2 mr-1">
+                <label>Max Slots</label>
+                <input class="form-control" id="dealChainMaxSlots" type="number" min="3" max="5" step="1" value="5" onchange="if (this.value > 5) { this.value = 5 } else if (this.value < 3) { this.value = 3} this.value = Math.floor(value)" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col mb-2 text-center">
+                <button
+                    class="btn btn-primary"
+                    data-bind="click: () => {
+                        $data.dealChains(Wiki.getDealChains(
+                            document.getElementById('dealChainMaxSlots').value,
+                            new Date(document.getElementById('dealChainFromDate').value),
+                            new Date(document.getElementById('dealChainToDate').value)
+                        ))
+                    }">
+                    Generate Chains
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="table-responsive" data-bind="foreach: $data.dealChains">
+    <h4 class="pt-4"><ko data-bind="text: `${$data.deals[0].date.toISOString().split('T')[0]} → ${$data.deals.slice(-1)[0].date.toISOString().split('T')[0]}`"></ko> | <img src="./images/diamond.svg" height="26px"/> <ko data-bind="text: `× ${$data.profit.toLocaleString()}`"></ko></h4>
+    <table class="table table-striped mb-4">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Give</th>
+                <th></th>
+                <th>Receive</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: $data.deals.reverse()">
+            <tr>
+                <td data-bind="text: $data.date.toISOString().split('T')[0]"></td>
+                <td class="align-middle">
+                    <img data-bind="attr: { src: `./images/${item1.name}.png` }" width="28px" class="me-2">
+                    <ko data-bind="text: `${amount1} × ${item1.name}`"></ko>
+                </td>
+                <td class="align-middle">→</td>
+                <td class="align-middle">
+                    <img data-bind="attr: { src: `./images/${item2.name}.png` }" width="28px" class="me-2">
+                    <ko data-bind="text: `${amount2} × ${item2.name}`"></ko>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</knockout>
