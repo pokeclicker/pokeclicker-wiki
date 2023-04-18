@@ -1,20 +1,73 @@
 <div>
-    <h3>HP per level</h3>
-    <table class="table table-hover table-bordered">
+    <h3>Milestones</h3>
+    <p>Note that the Enemy Health is per individual Pokémon and not the Total HP of the stage.</p>
+    <table class="table table-hover table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Stage</th>
+                <th>Reward</th>
+                <th>Enemy Health</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: BattleFrontierMilestones.milestoneRewards">
+            <tr>
+                <td data-bind="text: $data.stage.toLocaleString()"></td>
+                <td>
+                    <ko data-bind="text: $data.description"></ko>
+                    <img data-bind="attr: { src: `./pokeclicker/docs/${$data.image}` }" width="28px"/>
+                </td>
+                <td data-bind="text: (() => {
+                    BattleFrontierRunner.stage = ko.observable($data.stage);
+                    BattleFrontierBattle.generateNewEnemy();
+                    return BattleFrontierBattle.enemyPokemon.peek().health().toLocaleString();
+                  })()"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+<div>
+    <h3>Battle Frontier Statistics</h3>
+    <table class="table table-hover table-striped table-bordered" data-bind="with: { stage: ko.observable(100), enemyPokemon: ko.observable(BattleFrontierBattle.enemyPokemon.peek()) }">
         <thead class="thead-dark">
             <tr>
                 <th>Level</th>
-                <th>HP per Pokémon</th>
-                <th>HP in total</th>
-                <th>Damage required (after types)</th>
+                <th><input type="number" min="1" step="1" value="100" data-bind="event: { input: (data, e) => {
+                    BattleFrontierRunner.stage = ko.observable(+e.target.value);
+                    BattleFrontierBattle.generateNewEnemy();
+                    $data.stage(+e.target.value);
+                    $data.enemyPokemon(BattleFrontierBattle.enemyPokemon());
+                } }"/></th>
             </tr>
         </thead>
         <tbody>
             <tr>
-               <td><input type="number" min="1" step="1" value="100" oninput="BattleFrontierRunner.stage(+value); BattleFrontierBattle.generateNewEnemy();"/></td>
-               <td data-bind="text: BattleFrontierBattle.enemyPokemon().health().toLocaleString('en-US')"></td>
-               <td data-bind="text: (BattleFrontierBattle.enemyPokemon().health() * 3).toLocaleString('en-US')"></td>
-               <td data-bind="text: Math.ceil(BattleFrontierBattle.enemyPokemon().health() * 3 / 30).toLocaleString('en-US')"></td>
+                <td>HP per Pokémon</td>
+               <td data-bind="text: $data.enemyPokemon().health().toLocaleString('en-US')"></td>
+            </tr>
+            <tr>
+                <td>HP in Total</td>
+                <td data-bind="text: ($data.enemyPokemon().health() * 3).toLocaleString('en-US')"></td>
+            </tr>
+            <tr>
+                <td>Damage required (after types)</td>
+                <td data-bind="text: Math.ceil($data.enemyPokemon().health() * 3 / 30).toLocaleString('en-US')"></td>
+            </tr>
+            <tr>
+                <td>Battle Points</td>
+                <td data-bind="text: Math.max(1, Math.round(($data.stage() ** 2) / 100)).toLocaleString()"></td>       
+            </tr>
+            <tr>
+                <td>PokéDollars</td>
+                <td data-bind="text: Math.max(100, Math.round($data.stage() ** 2)).toLocaleString()"></td>     
+            </tr>
+            <tr>
+                <td>Egg Steps per Pokémon</td>
+                <td data-bind="text: Math.round($data.stage() ** (1/2)).toLocaleString()"></td>  
+            </tr>
+            <tr>
+                <td>Gems per Pokémon</td>
+                <td data-bind="text: Math.ceil($data.stage() / 80).toLocaleString()"></td> 
             </tr>
         </tbody>
     </table>
