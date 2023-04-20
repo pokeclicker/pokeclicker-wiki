@@ -1,3 +1,3 @@
 ## Prerequisites
 
-In order to be able to accept this quest in **New Bark town** Bulletin Board player have to be in Catch Pokémon step of Whirl Guardian Questline and capture Raikou, Entei and Suicune.
+This quest will become available at the [[Towns/New Bark Town]] Bulletin Board after capturing [[Pokemon/Raikou]], [[Pokemon/Entei]], and [[Pokemon/Suicune]] and completing step 9 of the [[Quest Lines/Whirl Guardian]] quest.
