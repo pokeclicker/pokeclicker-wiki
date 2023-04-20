@@ -1,5 +1,7 @@
 ## Rewards
 
-After finish this quest player can get [[Pokemon/Pinkan Pidgeotto]] by breeding and leveling their Pinkan Pidgey
+After completing this quest the player can obtain [[Pokemon/Pinkan Pidgeotto]] by breeding and leveling up their [[Pokemon/Pinkan Pidgey]].
 
-*Note: Step 6 doesn't count the amount of plates but the gained amount, so selling or trading plates will end in a decrease in the gained amount. If the amount is negative, refreshing the game will give it back to 0
+## Notes
+
+* While on step 6 avoid selling or trading Pixie Plates as this will cause the step progress to decrease, potentially going negative. If this happens refresh your game to reset the amount to zero.
