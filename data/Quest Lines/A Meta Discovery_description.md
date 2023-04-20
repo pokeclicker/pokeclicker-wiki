@@ -1,1 +1,1 @@
-In order to be able to accept this quest in Littleroot town Bulletin Board player have to finish [[Quest Line/Wish Maker]] quest
+This quest will become available at the Littleroot Town Bulletin Board upon completing the [[Quest Line/Wish Maker]] quest.
