@@ -1,3 +1,3 @@
 ## Prerequisites
 
-In order to be able to accept this quest in **Vaniville City Bulletin Board** player have to had already defeated **Snowville City Gym**
+This quest will become available at the [[Towns/Vaniville Town]] Bulletin Board after defeating Wulfric in the [[Towns/Snowbelle City]] Gym.
