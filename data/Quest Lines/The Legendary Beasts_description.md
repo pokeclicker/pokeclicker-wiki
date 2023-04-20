@@ -1,3 +1,3 @@
 ## Prerequisites
 
-In order to be able to accept this quest in **New Bark town** Bulletin Board player have to Defeat Ecruteak city gym
+This quest will become available at the [[Towns/New Bark Town]] Bulletin Board after completing Johto Route 37.
