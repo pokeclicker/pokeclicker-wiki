@@ -1,3 +1,3 @@
 ## Reward
 
-This quest reward a [[Pokemon/Meta Groudon]] to the player.
+The player will obtain [[Pokemon/Meta Groudon]] upon completing this quest.
