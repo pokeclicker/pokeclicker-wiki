@@ -1,2 +1,2 @@
 ## Rewards
-After this quest player is rewarded with a [[Pokemon/Detective Raichu]]
+The player will obtain [[Pokemon/Detective Raichu]] upon completing this quest.
