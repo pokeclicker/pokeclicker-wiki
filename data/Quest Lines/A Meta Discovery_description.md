@@ -1,1 +1,1 @@
-This quest will become available at the [[Towns/Littleroot Town] Bulletin Board upon completing the [[Quest Lines/Wish Maker]] quest.
+This quest will become available at the [[Towns/Littleroot Town]] Bulletin Board upon completing the [[Quest Lines/Wish Maker]] quest.
