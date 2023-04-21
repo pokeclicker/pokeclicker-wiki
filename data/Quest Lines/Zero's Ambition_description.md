@@ -1,0 +1,1 @@
+This quest will become available at the [[Towns/Twinleaf Town]] Bulletin Board after becoming Sinnoh League Champion and capturing [[Pokemon/Uxie]], [[Pokemon/Mesprit]], and [[Pokemon/Azelf]].
