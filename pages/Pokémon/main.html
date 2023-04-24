@@ -199,7 +199,7 @@
                             <a class="badge text-bg-secondary" data-bind="text: $data.basePokemon + `${$data.restrictions ? ' 🔒' : ''}`,
                             attr: { href: `#!Pokemon/${$data.basePokemon}` },
                             tooltip: {
-                                title: $data.restrictions.map(r => r.hint()).join('<br/>') ?? '',
+                                title: ($data.restrictions.map(r => r.hint()).join('<br/>') ?? '') + ($data.stone != null ? '<br/> Requires ' + ItemList[GameConstants.StoneType[$data.stone]]._displayName : ''),
                                 html: true,
                                 placement: 'bottom',
                                 trigger: 'hover'
