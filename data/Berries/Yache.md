@@ -1,6 +1,6 @@
 ## Mutation Strategy
 
-Yache can be mutated by surrounding a Passho berry with empty plots.
+Yache can be mutated by surrounding a Passho berry with empty plots. You can fill your farm in the following way to obtain Yache Berries. Purple squares indicate where mutations can occur.
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
