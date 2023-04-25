@@ -46,7 +46,9 @@
                 <div class="row mb-2">
                     <label class="col-sm-4 col-form-label form-control-sm">Berry:</label>
                     <div class="col-sm-8">
-                        <select class="form-select form-select-sm" data-bind="
+                        <button id="copyButton" value="12" class="btn btn-sm btn-primary me-1" data-bind="click: () => {this.value = $('#berryOption').val()}">Copy</button>
+	                    <button id="pasteButton" class="btn btn-sm btn-primary me-1" data-bind="click: () => {Wiki.farmSimulator.setPlotBerry($('#copyButton').val())}">Paste</button>
+                        <select id="berryOption" class="form-select form-select-sm" data-bind="
                             options: GameHelper.enumSelectOption(BerryType),
                             optionsValue: 'value',
                             optionsText: (item) => { return item.value == -1 ? 'None' : `#${item.value + 1} - ${item.name}` },
