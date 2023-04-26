@@ -221,7 +221,9 @@
                     </h4>
                     <div id="obtain-method-egg" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Egg])">
-                            <span class="badge text-bg-secondary" data-bind="text: `${$data} Egg`"></span>
+                            <a href="#!" class="badge text-bg-secondary" data-bind="
+                            attr: { href: `#!Items/${$data} Egg` },
+                            text: `${$data} Egg`"></a>
                         </div>
                     </div>
                 </div>
@@ -275,7 +277,9 @@
                     </h4>
                     <div id="obtain-method-shop" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Shop])">
-                            <span class="badge text-bg-secondary" data-bind="text: $data"></span>
+                            <a href="#!" class="badge text-bg-secondary" data-bind="
+                            attr: { href: `#!Towns/${$data}` },
+                            text: $data"></a>
                         </div>
                     </div>
                 </div>
