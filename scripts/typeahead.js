@@ -223,6 +223,12 @@ const searchOptions = [
     type: 'Oak Items',
     page: o.displayName,
   })),
+  // Temporary Battles
+  {
+    display: 'Temporary Battles',
+    type: 'Temporary Battles',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {

@@ -12492,10 +12492,11 @@ window.Wiki = {
   farmSimulator: require('./pages/farmSimulator'),
   dungeons: require('./pages/dungeons'),
   oakItems: require('./pages/oakItems'),
+  tempBattles: require('./pages/tempBattles'),
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dreamOrbs":114,"./pages/dungeons":115,"./pages/farm":116,"./pages/farmSimulator":117,"./pages/items":118,"./pages/oakItems":119,"./pages/pokemon":120,"./typeahead":122}],106:[function(require,module,exports){
+},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dreamOrbs":114,"./pages/dungeons":115,"./pages/farm":116,"./pages/farmSimulator":117,"./pages/items":118,"./pages/oakItems":119,"./pages/pokemon":120,"./pages/tempBattles":121,"./typeahead":123}],106:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const saveChanges = (editor, filename, btn) => {
@@ -12885,7 +12886,7 @@ module.exports = {
     gotoPage,
 };
 
-},{"./datatables":102,"./markdown-editor":106,"./markdown-renderer":111,"./redirections":121}],113:[function(require,module,exports){
+},{"./datatables":102,"./markdown-editor":106,"./markdown-renderer":111,"./redirections":122}],113:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -13636,6 +13637,42 @@ module.exports = {
 }
 
 },{}],121:[function(require,module,exports){
+const getRequirements = (tempBattle) => {
+    const requirements = [];
+    tempBattle.requirements?.forEach((req) => {
+        let hint = req.hint();
+        switch (req.constructor) {
+            case RouteKillRequirement:
+                hint = `Defeat ${req.requiredValue} or more Pokémon on ${Routes.getName(req.route, req.region, true)}.`;
+                break;
+            case ClearDungeonRequirement:
+                hint = `Clear the ${GameConstants.RegionDungeons.flat()[req.dungeonIndex]} dungeon ${req.requiredValue} or more time(s).`;
+                break;
+            case QuestLineStepCompletedRequirement:
+                hint = req.option == GameConstants.AchievementOption.equal
+                    ? `Complete step ${req.questIndex + 1} in the ${req.questLineName} quest line.`
+                    : `Have not completed step ${req.questIndex + 1} in the ${req.questLineName} quest line.`;
+                break;
+            case GymBadgeRequirement:
+                hint = req.option == GameConstants.AchievementOption.more
+                    ? `Obtained the ${GameConstants.camelCaseToString(BadgeEnums[req.badge])} badge.`
+                    : `Have not obtained the ${GameConstants.camelCaseToString(BadgeEnums[req.badge])} badge.`;
+                break;
+            case TemporaryBattleRequirement:
+                hint = `Defeated ${req.battleName}.`;
+                break;
+        }
+        requirements.push(hint);
+    });
+
+    return requirements;
+};
+
+module.exports = {
+    getRequirements,
+}
+
+},{}],122:[function(require,module,exports){
 const redirections = [
     ({type, name}) => {
         if (type === 'Pokemon') {
@@ -13687,7 +13724,7 @@ module.exports = {
     redirections
 };
 
-},{}],122:[function(require,module,exports){
+},{}],123:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [
@@ -13913,6 +13950,12 @@ const searchOptions = [
     type: 'Oak Items',
     page: o.displayName,
   })),
+  // Temporary Battles
+  {
+    display: 'Temporary Battles',
+    type: 'Temporary Battles',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
