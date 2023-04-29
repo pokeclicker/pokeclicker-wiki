@@ -1,3 +1,3 @@
 ## Reward
 
-This quest rewards a [[Pokemon/Magearna (Original Color)]] to the player.
+The player will obtain [[Pokemon/Magearna (Original Color)]] upon completing this quest.

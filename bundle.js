@@ -12492,11 +12492,12 @@ window.Wiki = {
   farmSimulator: require('./pages/farmSimulator'),
   dungeons: require('./pages/dungeons'),
   oakItems: require('./pages/oakItems'),
+  getDealChains: require('./pages/dealChains').getDealChains,
   tempBattles: require('./pages/tempBattles'),
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dreamOrbs":114,"./pages/dungeons":115,"./pages/farm":116,"./pages/farmSimulator":117,"./pages/items":118,"./pages/oakItems":119,"./pages/pokemon":120,"./pages/tempBattles":121,"./typeahead":123}],106:[function(require,module,exports){
+},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dealChains":114,"./pages/dreamOrbs":115,"./pages/dungeons":116,"./pages/farm":117,"./pages/farmSimulator":118,"./pages/items":119,"./pages/oakItems":120,"./pages/pokemon":121,"./pages/tempBattles":122,"./typeahead":124}],106:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const saveChanges = (editor, filename, btn) => {
@@ -12886,7 +12887,7 @@ module.exports = {
     gotoPage,
 };
 
-},{"./datatables":102,"./markdown-editor":106,"./markdown-renderer":111,"./redirections":122}],113:[function(require,module,exports){
+},{"./datatables":102,"./markdown-editor":106,"./markdown-renderer":111,"./redirections":123}],113:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -12910,6 +12911,170 @@ module.exports = {
 };
 
 },{}],114:[function(require,module,exports){
+
+class DealProfit {
+    constructor(type, amount) {
+        this.type = type;
+        this.amount = amount;
+    }
+}
+
+const calculateProfit = (deal) => {
+    if (deal.item1.valueType != UndergroundItemValueType.Diamond)
+        deal.item1.value = 0;
+    if (deal.item2.valueType != UndergroundItemValueType.Diamond)
+        deal.item2.value = 0;
+    if (deal.item1.value || deal.item2.value) {
+        // An item is worth diamonds
+        const profit =
+            deal.item2.value * deal.amount2 - deal.item1.value * deal.amount1;
+        return new DealProfit("diamond", profit);
+    } else {
+        // Neither item is worth diamonds
+        const profit = deal.amount2 - deal.amount1;
+        return new DealProfit("item", profit);
+    }
+};
+
+const getDealsList = (fromDate, toDate, maxDeals) => {
+    const dealsList = [];
+    let date = fromDate;
+    let i = 0;
+    while (date < toDate) {
+        date = new Date(
+            fromDate.getFullYear(),
+            fromDate.getMonth(),
+            fromDate.getDate() + i
+        );
+        DailyDeal.generateDeals(maxDeals, date);
+
+        const deals = [...DailyDeal.list()]
+        dealsList.push(
+            deals
+                .map((deal) => ({ ...deal, profit: calculateProfit(deal), date }))
+.sort((a, b) => {
+                    // when processing deals, we want to make sure all possible links
+                    // have been processed. Sometimes, there is a deal on the same day
+                    // which we can link to, so we sort the deals within each day to
+                    // make sure those linkables have been processed
+
+                    // if `b` can link to `a`, `a` should sort after `b` (and vice versa)
+                    if (a.item1 == b.item2) return 1;
+                    if (b.item1 == a.item2) return -1;
+
+                    // if `a` can be linked from something sort `a` after `b`
+                    if (dealsList.find((x) => a.item1 == x.item2)) return 1;
+                    // if `b` can be linked from something, sort `a` before `b`
+                    if (dealsList.find((x) => b.item1 == x.item2)) return -1;
+
+                    return 0;
+                })
+        );
+
+        i++;
+    }
+    return dealsList.flat();
+};
+
+const addChain = (start, chainLinks, chainList, minProfit = 0.1, limit) => {
+    const profit = start.profit - start.deal.item1.value;
+        const chain = [];
+        let link = start;
+
+        while (link != undefined) {
+            chain.push(link.deal);
+            link = chainLinks.list[link.next];
+        }
+
+        if (profit >= minProfit) {
+            chainList.push({ profit: profit, deals: chain });
+            chainList.sort((a, b) => b.profit - a.profit);
+
+            if (chainList.length > limit) {
+                chainList.pop();
+            }
+        }
+};
+
+const betterToSell = (deal, next) => {
+    // If we wouldn't get diamonds from selling item2, we only stand to gain
+    const isDia = deal.amount2 < 100 && deal.amount2 > 0;
+
+    // If we would be better off selling item2 of this deal,
+    // then we shouldn't suggest feeding it into the chain
+    return isDia && next.profit < deal.item2.value;
+};
+
+function getDealChains(
+    maxSlots,
+    fromDate = new Date(),
+    toDate = new Date(
+        fromDate.getFullYear(),
+        fromDate.getMonth(),
+        fromDate.getDate() + 14
+    ),
+    limit = 20,
+) {
+    if (isNaN(maxSlots) || maxSlots <= 0 || maxSlots > 5) {
+        maxSlots = 3;
+    }
+
+    const dailyDeals = getDealsList(fromDate, toDate, maxSlots);
+    const chainList = [];
+
+    const chainLinks = dailyDeals.reduceRight(
+        (res, deal) => {
+            // Link to the best future deal
+            let next = res.bestStartingWith[deal.item2.name];
+
+            // Don't link to a bad chain
+            if (next != undefined && betterToSell(deal, res.list[next])) {
+                next = undefined;
+            }
+
+            const chainlink = { deal: deal, next: next, linkedFrom: [] };
+            const index = res.list.length;
+
+            // Calculate chain value from this deal
+            if (next != undefined) {
+                const nextlink = res.list[next];
+                nextlink.linkedFrom.push(index);
+                chainlink.profit =
+                    (nextlink.profit * deal.amount2) / deal.amount1;
+            } else {
+                const val =
+                    deal.item2.value > 100 || deal.item2.value < 0
+                        ? 0
+                        : deal.item2.value;
+                chainlink.profit = (val * deal.amount2) / deal.amount1;
+            }
+
+            // update bestStartingWith
+            const bestItem1 = res.list[res.bestStartingWith[deal.item1.name]];
+            if (
+                chainlink.profit > 0 &&
+                (!bestItem1 || bestItem1.profit < chainlink.profit)
+            ) {
+                res.bestStartingWith[deal.item1.name] = index;
+            }
+
+            res.list.push(chainlink);
+            return res;
+        },
+        { bestStartingWith: {}, list: [] }
+    );
+
+    // build chainList
+    // only add chains using the start, ie those that aren't linkedFrom anything
+    chainLinks.list.forEach((link) => link.linkedFrom.length || addChain(link, chainLinks, chainList, 0.1, limit));
+
+    return chainList;
+}
+
+module.exports = {
+    getDealChains,
+}
+},{}],115:[function(require,module,exports){
 const getOrbLoot = (orb) => {
   const weightSum = orb.items.reduce((acc, item) => acc + item.weight, 0);
   return orb.items.map(item => {
@@ -12926,33 +13091,52 @@ module.exports = {
   getOrbLoot
 };
 
-},{}],115:[function(require,module,exports){
-const tableClearCounts = [
-    {
-        clears: 0,
-        debuff: false
-    },
-    {
-        clears: 100,
-        debuff: false
-    },
-    {
-        clears: 500,
-        debuff: false
-    },
-    {
-        clears: 0,
-        debuff: true
-    },
-    {
-        clears: 100,
-        debuff: true
-    },
-    {
-        clears: 500,
-        debuff: true
+},{}],116:[function(require,module,exports){
+const getTableClearCounts = (dungeon) => {
+    if (getTableClearCounts.cache.has(dungeon)) {
+        return getTableClearCounts.cache.get(dungeon);
     }
-];
+
+    const hasItemsThatIgnoreDebuff = Object.values(dungeon.lootTable).flat().some(item => item.ignoreDebuff);
+
+    const tableClearCounts = [
+        {
+            clears: 0,
+            debuff: false,
+            header: '0 clears'
+        },
+        {
+            clears: 100,
+            debuff: false,
+            header: '100 clears'
+        },
+        {
+            clears: 250,
+            debuff: false,
+            header: '250 clears'
+        },
+        {
+            clears: 500,
+            debuff: false,
+            header: '500 clears'
+        }
+    ];
+
+    if (hasItemsThatIgnoreDebuff) {
+        tableClearCounts.push(...tableClearCounts.map(clearSetup => ({...clearSetup, debuff: true, header: `Debuffed (${clearSetup.header})`})))
+    } else {
+        tableClearCounts.push({
+            clears: 0,
+            debuff: true,
+            header: 'Debuffed'
+        });
+    }
+
+    getTableClearCounts.cache.set(dungeon, tableClearCounts);
+
+    return tableClearCounts;
+};
+getTableClearCounts.cache = new WeakMap();
 
 const itemTypeCategories = {
     pokemon: 'Pokémon',
@@ -12969,7 +13153,7 @@ const itemTypeCategories = {
  * @return {Map<Loot, number>}
  */
 const getDungeonLootChancesIgnoringFlag = (dungeon, clears, debuffed = false, requirement = () => true) => {
-    const tierWeights = dungeon.getLootTierWeights(clears, debuffed);
+    const tierWeights = getLootTierWeights(dungeon, clears, debuffed, requirement);
     const weightSum = Object.keys(tierWeights)
         .filter(tier => dungeon.lootTable[tier].some(requirement))
         .map(tier => tierWeights[tier])
@@ -13059,11 +13243,47 @@ const checkLootRequirements = (dungeon, clearSetup) => {
     };
 }
 
+/**
+ * Returns the loot tier weights for a given dungeon, clear setup and requirement check.
+ * @param dungeon
+ * @param clears
+ * @param debuffed
+ * @param requirement
+ * @return {Record<string, number>} object mapping loot tiers to weights
+ */
+const getLootTierWeights = (dungeon, clears, debuffed, requirement = () => true) => {
+    const lootToRequirementMap = new Map();
+
+    // Replace requirements with ours
+    for (let tier of Object.keys(dungeon.lootTable)) {
+        for (let item of Object.values(dungeon.lootTable[tier])) {
+            const originalRequirement = item.requirement;
+            lootToRequirementMap.set(item, originalRequirement);
+            item.requirement = {
+                // Pass item with original requirement
+                isCompleted: () => requirement({...item, requirement: originalRequirement})
+            };
+        }
+    }
+
+    const tierWeights = dungeon.getLootTierWeights(clears, debuffed);
+
+    // Restore requirements
+    for (let tier of Object.keys(dungeon.lootTable)) {
+        for (let item of Object.values(dungeon.lootTable[tier])) {
+            item.requirement = lootToRequirementMap.get(item);
+        }
+    }
+
+    return tierWeights;
+};
+
 const getDungeonLoot = (dungeon) => {
-    const tierWeights = tableClearCounts.map(clearSetup => dungeon.getLootTierWeights(clearSetup.clears, clearSetup.debuff));
+    const tableClearCounts = getTableClearCounts(dungeon)
+    const tierWeights = tableClearCounts.map(clearSetup => getLootTierWeights(dungeon, clearSetup.clears, clearSetup.debuff, checkLootRequirements(dungeon, clearSetup)));
     const itemChanceMaps = tableClearCounts.map(clearSetup => getDungeonLootChances(dungeon, clearSetup.clears, clearSetup.debuff, checkLootRequirements(dungeon, clearSetup)));
     const lootTiers = [];
-    for (let tier of Object.keys(tierWeights[0]).sort((a, b) => a - b)) {
+    for (let tier of Object.keys(dungeon.lootTable).sort((a, b) => a - b)) {
         const tierLoot = dungeon.lootTable[tier];
         const tierData = {
             tier: GameConstants.camelCaseToString(tier),
@@ -13128,11 +13348,11 @@ module.exports = {
     getDungeonLoot,
     getDungeonLootChances,
     hasLootWithRequirements,
-    tableClearCounts,
+    getTableClearCounts,
     itemTypeCategories
 };
 
-},{}],116:[function(require,module,exports){
+},{}],117:[function(require,module,exports){
 /**
  * Returns the primary mutation for a berry.
  * Filters out enigma mutations, as they cannot be used to obtain a berry for the first time.
@@ -13152,7 +13372,7 @@ module.exports = {
     getPrimaryMutation,
 };
 
-},{}],117:[function(require,module,exports){
+},{}],118:[function(require,module,exports){
 const selectedPlot = ko.observable(undefined);
 const selectedPlotIndex = ko.observable(undefined);
 const plotLabelsEnabled = ko.observable(false);
@@ -13298,34 +13518,46 @@ const getFlavorValue = (flavorType) => {
     return App.game.farming.berryData[selectedPlot().berry].flavors.find(f => f.type === flavorType).value;
 }
 
-const getStageTimes = ko.pureComputed(() => {
-    const stages = [
-        { stage: 'Sprout', timeLeft: '-' },
-        { stage: 'Taller', timeLeft: '-' },
-        { stage: 'Bloom', timeLeft: '-' },
-        { stage: 'Berry', timeLeft: '-' },
-        { stage: 'Wither', timeLeft: '-' },
-    ];
-
-    if (!selectedPlot() || selectedPlot()._berry() == -1) {
-        return stages;
-    }
-
-    const isPetaya = selectedPlot().berry === BerryType.Petaya;
-    const petayaEffect = App.game.farming.berryInFarm(BerryType.Petaya, PlotStage.Berry, true) && !isPetaya;
-
-    stages.forEach((stage, idx) => {
-        const growthTime = App.game.farming.berryData[selectedPlot().berry].growthTime[idx];
-        const growthMultiplier = App.game.farming.getGrowthMultiplier() * selectedPlot().getGrowthMultiplier();
-        if (growthMultiplier == 0 || (petayaEffect && stage.stage == 'Wither')) {
-            stages[idx].timeLeft = '∞';
-        } else {
-            stages[idx].timeLeft = GameConstants.formatTimeFullLetters(growthTime / growthMultiplier);
+const getStageTimes = (calcTotalLifeTime = false) => {
+    return ko.pureComputed(() => {
+        const stages = [
+            { stage: 'Sprout', timeLeft: '-' },
+            { stage: 'Taller', timeLeft: '-' },
+            { stage: 'Bloom', timeLeft: '-' },
+            { stage: 'Berry', timeLeft: '-' },
+            { stage: 'Wither', timeLeft: '-' },
+        ];
+    
+        if (!selectedPlot() || selectedPlot()._berry() == -1) {
+            return stages;
         }
-    });
+    
+        const isPetaya = selectedPlot().berry === BerryType.Petaya;
+        const petayaEffect = App.game.farming.berryInFarm(BerryType.Petaya, PlotStage.Berry, true) && !isPetaya;
+        const dummyPlot = new Plot(true, selectedPlot().berry, 0, selectedPlot().mulch, selectedPlot().mulchTimeLeft, selectedPlot().index);
+        let totalLifeTime = 0;
 
-    return stages;
-});
+        stages.forEach((stage, idx) => {
+            const prevStageTime = idx == 0 ? 0 : App.game.farming.berryData[selectedPlot().berry].growthTime[idx - 1];
+            const growthTime = App.game.farming.berryData[selectedPlot().berry].growthTime[idx] - prevStageTime;
+            dummyPlot._age(growthTime);
+            const growthMultiplier = App.game.farming.getGrowthMultiplier() * dummyPlot.getGrowthMultiplier();
+
+            if (growthMultiplier == 0 || (petayaEffect && stage.stage == 'Wither')) {
+                stages[idx].timeLeft = '∞';
+            } else {
+                const timeLeft = growthTime / growthMultiplier;
+                stages[idx].timeLeft = GameConstants.formatTimeFullLetters(timeLeft + totalLifeTime);
+
+                if (calcTotalLifeTime) {
+                    totalLifeTime += timeLeft;
+                }
+            }
+        });
+
+        return stages;
+    });
+}
 
 const getEmittingAura = ko.pureComputed(() => {
     if (!selectedPlot() || selectedPlot()._berry() == -1 || selectedPlot().emittingAura.type() == null) {
@@ -13429,7 +13661,7 @@ module.exports = {
     importFarmPrompt,
 }
 
-},{}],118:[function(require,module,exports){
+},{}],119:[function(require,module,exports){
 const getItemName =  (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
@@ -13502,7 +13734,7 @@ module.exports = {
     getItemCategoryAndPage,
 };
 
-},{}],119:[function(require,module,exports){
+},{}],120:[function(require,module,exports){
 const getOakItemBonus = (oakItem, level) => {
     const bonus = oakItem.bonusList[level];
     switch (oakItem.name) {
@@ -13576,7 +13808,7 @@ module.exports = {
     getOakItemBonus,
     getOakItemUpgradeReq,
 };
-},{}],120:[function(require,module,exports){
+},{}],121:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -13636,7 +13868,7 @@ module.exports = {
     getBestVitamins,
 }
 
-},{}],121:[function(require,module,exports){
+},{}],122:[function(require,module,exports){
 const getRequirements = (tempBattle) => {
     const requirements = [];
     tempBattle.requirements?.forEach((req) => {
@@ -13672,7 +13904,7 @@ module.exports = {
     getRequirements,
 }
 
-},{}],122:[function(require,module,exports){
+},{}],123:[function(require,module,exports){
 const redirections = [
     ({type, name}) => {
         if (type === 'Pokemon') {
@@ -13724,7 +13956,7 @@ module.exports = {
     redirections
 };
 
-},{}],123:[function(require,module,exports){
+},{}],124:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [
@@ -13932,6 +14164,12 @@ const searchOptions = [
     display: 'Daily Deals',
     type: 'Daily Deals',
     page: '',
+  },
+  // Deal Chains
+  {
+    display: 'Daily Deal Chains',
+    type: 'Daily Deal Chains',
+    page: ''
   },
   // Weather
   {

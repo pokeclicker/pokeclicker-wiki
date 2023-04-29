@@ -4,6 +4,7 @@
             <tr>
                 <th class="col-1">ID</th>
                 <th class="col-1">Berry</th>
+                <th>Exp</th>
                 <th>Harvest Amount</th>
                 <th>Farm Points</th>
                 <th>Growth Time</th>
@@ -16,12 +17,13 @@
                     <img height="30px" data-bind="attr: {src: './pokeclicker/docs/' + FarmController.getBerryImage($data.type)}"/>
                 </td>
                 <td data-bind="text: BerryType[$data.type]"></td>
+                <td data-bind="text: $data.exp"></td>
                 <td data-bind="text: $data.harvestAmount"></td>
-                <td>
+                <td data-bind="attr: { 'data-sort': $data.farmValue }">
                     <img src="./images/farmPoint.svg" width="18px"/>
                     <ko data-bind="text: $data.farmValue.toLocaleString()"></ko>
                 </td>
-                <td data-bind="html: `${GameConstants.formatSecondsToTime($data.growthTime[3]).replace(/<\/br>/g, ' ')} to Ripe<br/>${GameConstants.formatSecondsToTime($data.growthTime[4] - $data.growthTime[3]).replace(/<\/br>/g, ' ')} to Death`"></td>
+                <td data-bind="attr: { 'data-sort': $data.growthTime[3] }, html: `${GameConstants.formatSecondsToTime($data.growthTime[3]).replace(/<\/br>/g, ' ')} to Ripe<br/>${GameConstants.formatSecondsToTime($data.growthTime[4] - $data.growthTime[3]).replace(/<\/br>/g, ' ')} to Death`"></td>
             </tr>
         </tbody>
     </table>

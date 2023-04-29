@@ -46,6 +46,7 @@ Additional Breeding Queue slots can be obtained by progressing to the next regio
 | Unova | 32|
 | Kalos | 64|
 | Alola| 96|
+| Galar| 128|
 
 # Farm Strategies
 

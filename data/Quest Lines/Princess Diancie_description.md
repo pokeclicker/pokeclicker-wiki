@@ -1,3 +1,3 @@
 ## Prerequisites
 
-In order to be able to accept this quest in **Vaniville town** Bulletin Board player have to beat all E4 trainers and have [[Pokemon/Doublade]]
+This quest will become available at the [[Towns/Vaniville Town]] Bulletin Board after obtaining [[Pokemon/Doublade]] and defeating the Kalos League Elite Four.

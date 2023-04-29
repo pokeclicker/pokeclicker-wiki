@@ -1,1 +1,1 @@
-In order to be able to accept this quest in **Vaniville town** Bulletin Board player have to already catch [[Pokemon/Detective Pikachu]]
+This quest will become available at the [[Towns/Vaniville Town]] Bulletin Board after catching [[Pokemon/Detective Pikachu]].

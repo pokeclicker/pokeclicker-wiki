@@ -1,0 +1,1 @@
+>A Luxury Poké Ball, awards a random currency for catches

@@ -1,1 +1,1 @@
-In order to be able to accept this quest in **Proffesour Kukui's lab** Bulletin Board player have to Be Alola League Champion
+This quest will become available at the [[Towns/Professor Kukui's Lab]] Bulletin Board upon becoming the Alola League Champion.

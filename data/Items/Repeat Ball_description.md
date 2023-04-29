@@ -1,0 +1,1 @@
+>Increased catch rate and EV gain rate with more catches

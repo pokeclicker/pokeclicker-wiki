@@ -1,3 +1,3 @@
 ## Prerequisites
 
-In order to be able to accept this quest in **Freezington** Bulletin Board player have to be Galar league champion
+This quest will become available at the [[Towns/Freezington]] Bulletin Board after becoming Galar League Champion.

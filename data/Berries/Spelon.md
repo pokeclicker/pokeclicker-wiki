@@ -2,6 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
+**WARNING:** Upon successfully mutating a Spelon, make sure to have [[Oak Items/Blaze Cassette]] unequipped since it may cause it to mutate into a [[Berries/Chople]].
 You can fill your farm in the following way to obtain Spelon Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**

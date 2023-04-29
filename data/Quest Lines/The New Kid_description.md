@@ -1,3 +1,3 @@
 ## Prerequisites
 
-In order to be able to accept this quest in **Vaniville town** Bulletin Board player have to be Kalos league champion
+This quest will become available at the [[Towns/Vaniville Town]] Bulletin Board after becoming the Kalos League Champion.
