@@ -1,0 +1,1 @@
+Temporary Battles refer to special battles where the player faces a trainer or Pokémon once to unlock other areas or progress a quest line. After being defeated these battles become inaccessible. Some battles appear as buttons in a town or dungeon while others can be a sprite on the overworld map.
