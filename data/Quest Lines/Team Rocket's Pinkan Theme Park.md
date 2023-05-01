@@ -1,6 +1,7 @@
 ## Rewards
 
 After completing this quest the player can obtain [[Pokemon/Pinkan Pidgeotto]] by breeding and leveling up their [[Pokemon/Pinkan Pidgey]].
+Access to Officer Jenny's Pinkan Trade Shop (Pinkan Arbok, Pinkan Oddish, Pinkan Poliwhirl, Pinkan Geodude, Pinkan Weezing, Pinkan Scyther,Pinkan  Electabuzz.)
 
 ## Notes
 
