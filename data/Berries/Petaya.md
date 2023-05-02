@@ -56,7 +56,7 @@ If you intend to use [[Items/Freeze Mulch]] to make the setup live longer, you m
 ### Petaya with Freeze Mulch (easy mode)
 Mutating a Petaya with Freeze Mulch makes the entire thing incredibly easy.  What you need to do is plant all the berries simultaneously, as seen in the mutation formation, and then simply apply the appropriate amount of freeze mulch to the berry seeds, such that when the freeze mulch runs out the berry would start growing as if you had just planted it according to the timing table.  Below is a table for how much freeze mulch each berry needs for the timings to be correct.  Kasib and Kebia have such a short growth time (5 and 10 minutes without Sprayduck) that it's probably worth just planting them when the rest of the berries are nearly ripe, hence the optional.
 
-Note: This table assumes you have given Haban 128 boost mulch and Babiri 52 boost Mulch, and maxed Sprayduck is equipped.
+**Note: This table assumes you have given Haban 128 Boost mulch and Babiri 52 Boost Mulch, and maxed [[Oak Items/Sprayduck]] is equipped.**
 
 | Berry | Freeze mulch needed | Time Displayed |
 |---|---|---|
