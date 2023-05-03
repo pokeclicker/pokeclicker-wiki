@@ -1,1 +1,1 @@
-In order to be able to accept this quest in **Pummelo Island** Bulletin Board player have to be Orange league champion
+This quest will become available at the [[Towns/Pummelo Island]] Bulletin Board after becoming the Orange League Champion.

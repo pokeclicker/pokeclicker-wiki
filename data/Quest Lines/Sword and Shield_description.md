@@ -1,3 +1,3 @@
 ## Prerequisites
 
-In order to be able to accept this quest in **Postwick town** Bulletin Board player have to be Galar league champion
+This quest will become available at the [[Towns/Postwick]] Bulletin Board after becoming the Galar League Champion.

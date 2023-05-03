@@ -1,3 +1,3 @@
 ## Prerequisites
 
-In order to be able to accept this quest in **Master dojo** Bulletin Board player have to Defeat Ash in Alola
+This quest will become available at the [[Towns/Master Dojo]] Bulletin Board after defeating Ash in Alola.

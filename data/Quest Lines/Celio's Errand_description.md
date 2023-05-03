@@ -1,3 +1,3 @@
 ## Prerequisites
 
-In order to be able to accept this quest in **Littleroot town** Bulletin Board player have to be Hoenn league champion
+This quest will become available at the [[Towns/Littleroot Town]] Bulletin Board after becoming the Hoenn League Champion.
