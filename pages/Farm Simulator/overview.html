@@ -4,7 +4,7 @@
             <!-- ko if: $index() % GameConstants.FARM_PLOT_WIDTH == 0 -->
             <div class="w-100 mb-1"></div>
             <!-- /ko -->
-            <div class="plot col ps-1 pe-1">
+            <div class="plot col ps-1 pe-1" data-bind="event: { contextmenu: (_, e) => { Wiki.farmSimulator.showPlotContextMenu(e, $index()); return false; } }">
                 <div class="plot-content" style="cursor: pointer;"
                     data-bind="class: FarmController.calculateCssClass(), click: () => { Wiki.farmSimulator.selectPlot($index()); }">
                     <div class="plotImage">
@@ -244,4 +244,10 @@
             </div>
         </div>
     </div>
+</div>
+<div class="text-muted small">* Right click a plot to copy/paste.</div>
+
+<div class="dropdown-menu dropdown-menu-sm dropdown-menu-dark" id="plot-context-menu">
+    <button class="dropdown-item" data-action="copy">Copy</button>
+    <button class="dropdown-item" data-action="paste">Paste</button>
 </div>

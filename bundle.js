@@ -13633,6 +13633,36 @@ const importFarm = (str) => {
     });
 };
 
+let contextMenuSetup = false;
+let copiedPlot = { berry: BerryType.None, age: 0, mulch: MulchType.None };
+
+const showPlotContextMenu = (event, plotIndex) => {
+    const $menu = $('#plot-context-menu');
+
+    if (!contextMenuSetup) {
+        $menu.on('click', 'button', (e) => {
+            const action = $(e.target).data('action');
+            const plot = App.game.farming.plotList[$menu.data('plot-index')];
+            if (action == 'copy') {
+                copiedPlot = { berry: plot.berry, age: plot.age, mulch: plot.mulch };
+            } else if (action == 'paste') {
+                plot.berry = copiedPlot.berry;
+                plot.age = copiedPlot.age;
+                plot.mulch = copiedPlot.mulch;
+            }
+        });
+
+        $('body').click(() => $menu.hide()); // hide menu when clicking off
+        contextMenuSetup = true;
+    }
+
+    $menu.css({
+        display: 'absolute',
+        top: event.pageY,
+        left: event.pageX
+    }).data('plot-index', plotIndex).show();
+};
+
 module.exports = {
     selectedPlot,
     plotLabelsEnabled,
@@ -13658,6 +13688,7 @@ module.exports = {
     clearAllPlots,
     exportFarm,
     importFarmPrompt,
+    showPlotContextMenu,
 }
 
 },{}],119:[function(require,module,exports){
