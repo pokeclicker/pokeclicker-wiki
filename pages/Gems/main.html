@@ -21,7 +21,7 @@
                         <td data-bind="text: GameConstants.Region[$data]" rowspan="2"></td>
                         <td>Gym</td>
                         <td data-bind="text: (() => {
-                            var regionGyms = GameConstants.RegionGyms[$data];
+                            var regionGyms = GameConstants.RegionGyms[$data].filter((g) => !g.includes('Trial'));
                             var amountPerGym = regionGyms
                                 .map((g) => {
                                     var totalMons = GymList[g].pokemons.length;
