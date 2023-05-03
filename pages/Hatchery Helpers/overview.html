@@ -4,9 +4,9 @@
         <thead class="thead-dark">
             <tr>
                 <th class="col-3">Helper</th>
-                <th class="col-3">Cost</th>
-                <th class="col-3">Attack Efficiency</th>
+                <th class="col-3">Cost Per Hatch</th>                
                 <th class="col-3">Step Efficiency</th>
+                <th class="col-3">Attack Efficiency</th>
             </tr>
         </thead>
         <tbody>
@@ -19,11 +19,52 @@
                 <td class="text-nowrap">
                     <img width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/currency/${GameConstants.Currency[$data.cost.currency]}.svg` }"/>
                     <ko data-bind="text: $data.cost.amount.toLocaleString()"></ko>
-                </td>
-                <td data-bind="text: `${$data.attackEfficiencyBase}%`"></td>
+                </td>                
                 <td data-bind="text: `${$data.stepEfficiencyBase}%`"></td>
+                <td data-bind="text: `${$data.attackEfficiencyBase}%`"></td>
             </tr>
             <!-- /ko -->
         </tbody>
     </table>
 </div>
+<h2>Hatchery Helper Stats</h2>
+<!-- ko with: [{ value: 10, label: '+10%' }, { value: 25, label: '+25%' }, { value: 50, label: 'Max' }] -->
+<ul class="nav nav-tabs" role="tablist" data-bind="foreach: $data">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="tab" type="button" role="tab"
+            data-bind="text: $data.label, attr: { id: `tab-${$index()}`, 'data-bs-target': `#tab-${$index()}-pane` }, css: { active: $index() == 0 }"></button>
+    </li>
+</ul>
+<div class="tab-content mb-2" data-bind="foreach: $data">
+    <div class="tab-pane fade" role="tabpanel" data-bind="attr: { id: `tab-${$index()}-pane` }, css: { show: $index() == 0, active: $index() == 0 }">
+        <h4 data-bind="text: `${$data.label}` + ' Stats'"></h4>
+        <p>Requires <knockout data-bind="text: ($data.value ** 2 * 50).toLocaleString()"></knockout> hatches.</p>
+        <table class="table table-hover table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th class="col-3">Helper</th>
+                    <th class="col-3">Cost</th>
+                    <th class="col-3">Step Efficiency</th>
+                    <th class="col-3">Attack Efficiency</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- ko foreach: HatcheryHelpers.list -->
+                <tr>
+                    <td class="text-nowrap">
+                        <img data-bind="attr: { src: `./pokeclicker/docs/assets/images/profile/trainer-${$data.trainerSprite}.png` }"/>
+                        <ko data-bind="text: $data.name"></ko>
+                    </td>
+                    <td class="text-nowrap">
+                        <img width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/currency/${GameConstants.Currency[$data.cost.currency]}.svg` }"/>
+                        <ko data-bind="text: ($data.cost.amount * $parent.value ** 2 * 50).toLocaleString()"></ko>
+                    </td>
+                    <td data-bind="text: `${$data.stepEfficiencyBase + $parent.value}%`"></td>
+                    <td data-bind="text: `${$data.attackEfficiencyBase + $parent.value}%`"></td>
+                </tr>
+                <!-- /ko -->
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- /ko -->
