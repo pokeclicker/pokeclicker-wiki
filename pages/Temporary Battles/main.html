@@ -1,0 +1,114 @@
+<div>
+    <!-- ko ifnot: TemporaryBattleList[Wiki.pageName()] -->
+    <h3>Temporary Battle not found...</h3>
+    <!-- /ko -->
+    <!-- ko with: TemporaryBattleList[Wiki.pageName()] -->
+    <div class="float-lg-end col-lg-3 m-2">
+        <table class="table table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th class="text-center" colspan="2" data-bind="text: Wiki.pageName()"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center" colspan="2">
+                        <img data-bind="attr: { src: `./pokeclicker/docs/${$data.getImage()}` }"/>
+                    </td>
+                </tr>
+                <!-- ko with: { town: $data.optionalArgs?.returnTown ? TownList[$data.optionalArgs.returnTown] : $data.getTown(), isOverworld: $data.optionalArgs?.returnTown !== undefined } -->
+                <tr>
+                    <td>Region</td>
+                    <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.town.region])"></td>
+                </tr>
+                <tr>
+                    <td>Sub Region</td>
+                    <td data-bind="text: SubRegions.getSubRegionById($data.town.region, $data.town.subRegion).name"></td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td data-bind="text: $data.isOverworld ? `Near ${$data.town.name}` : $data.town.name"></td>
+                </tr>
+                <tr>
+                    <td>Location Type</td>
+                    <td data-bind="text: $data.isOverworld ? 'Map' : $data.town instanceof DungeonTown ? 'Dungeon' : 'Town'"></td>
+                </tr>
+                <!-- /ko -->
+            </tbody>
+        </table>
+    </div>
+    <h3>Pokémon Team</h3>
+    <!-- ko ifnot: $data.pokemons.some(p => p.requirements?.length) -->
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Pokémon</th>
+                    <th>HP</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: $data.pokemons">
+                <tr>
+                    <td class="align-middle">
+                        <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
+                        <knockout data-bind="text: $data.name"></knockout>
+                    </td>
+                    <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: $data.pokemons.some(p => p.requirements?.length) -->
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Starter</th>
+                    <th>Pokémon</th>
+                    <th>HP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- ko foreach: $data.pokemons.filter((p) => !p.requirements?.length) -->
+                <tr>
+                    <!-- ko if: $index() == 0 -->
+                    <td class="align-middle" data-bind="attr: { rowspan: $parent.pokemons.filter((p) => !p.requirements?.length).length }">All</td>
+                    <!-- /ko -->
+                    <td class="align-middle">
+                        <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
+                        <knockout data-bind="text: $data.name"></knockout>
+                    </td>
+                    <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
+                </tr>
+                <!-- /ko -->
+                <tr>
+                   <td class="bg-primary text-center small" colspan="3">Party will differ based on which regional starter the player selected.</td> 
+                </tr>
+            </tbody>
+            <tbody data-bind="foreach: Object.entries($data.pokemons.filter((p) => p.requirements?.some((r) => r instanceof StarterRequirement))
+                .reduce((map, p) => {
+                    const req = p.requirements.find((r) => r instanceof StarterRequirement);
+                    const starter = GameConstants.RegionalStarters[req.region][req.starter];
+                    return { ...map, [starter]: [...(map[starter] || []), p] };
+                }, {}))">
+                <!-- ko foreach: $data[1] -->
+                <tr>
+                    <!-- ko if: $index() == 0 -->
+                    <td class="align-middle" data-bind="text: PokemonHelper.getPokemonById($parent[0]).name, attr: { rowspan: $parent[1].length }"></td>
+                    <!-- /ko -->
+                    <td class="align-middle">
+                        <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
+                        <knockout data-bind="text: $data.name"></knockout>
+                    </td>
+                    <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
+                </tr>
+                <!-- /ko -->
+            </tbody>
+        </table>
+    </div>
+    <!-- /ko -->
+
+    <!-- /ko -->
+</div>
