@@ -22,7 +22,7 @@ The farm can also produce helpful effects (external auras) such as increasing eg
 
 ## Mutating Berries
 
-_Note: if you have not yet unlocked all the plots on the farm and need to mutate berries #9 Persim through #25 Grepa, please use the [Walkthrough] (https://docs.google.com/document/d/1TE5cAKSlA7TAliA001_mIiO1odZ6e4yUEMre0GBW1to/edit?usp=sharing)  link for an optimized planting formation to mutate those berries within the limited available farm plots._
+_Note: if you have not yet unlocked all the plots on the farm and need to mutate berries #9 Persim through #25 Grepa, please use the [Walkthrough](https://docs.google.com/document/d/1TE5cAKSlA7TAliA001_mIiO1odZ6e4yUEMre0GBW1to/edit?usp=sharing)  link for an optimized planting formation to mutate those berries within the limited available farm plots._
 
 Mutating Berries is a fairly simple process - plant berries in the correct setup and at the proper timings, wait for berries to be ripe, and then hope that RNG favors you. Generally speaking, for a mutation to occur the berries required for a mutation to occur must all be ripe on the farm simultaneously. Thus, on each individual berry page, you will find an Optimized Planting Formation to maximize your chances of a mutation occurring, as well as a Timing Chart, to help you plant berries at the correct times such that all berries will become ripe simultaneously.
 
