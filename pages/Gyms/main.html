@@ -17,13 +17,13 @@
                         <img data-bind="attr: { src: `./pokeclicker/docs/${$data.imagePath}` }"/>
                     </td>
                 </tr>
-                <tr>
+                <tr data-bind="with: $data.parent ?? TownList[$data.town]">
                     <td>Region</td>
-                    <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.parent.region])"></td>
+                    <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region])"></td>
                 </tr>
-                <tr>
+                <tr data-bind="with: $data.parent ?? TownList[$data.town]">
                     <td>Sub Region</td>
-                    <td data-bind="text: SubRegions.getSubRegionById($data.parent.region, $data.parent.subRegion).name"></td>
+                    <td data-bind="text: SubRegions.getSubRegionById($data.region, $data.subRegion).name"></td>
                 </tr>
                 <tr>
                     <td>Money</td>
