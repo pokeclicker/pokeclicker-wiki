@@ -8,7 +8,7 @@
         <table class="table table-hover table-striped table-bordered">
             <thead>
                 <tr>
-                    <th class="text-center" colspan="2" data-bind="text: Wiki.pageName()"></th>
+                    <th class="text-center" colspan="2" data-bind="text: $data.leaderName.replace(/\d/g, '')"></th>
                 </tr>
             </thead>
             <tbody>
