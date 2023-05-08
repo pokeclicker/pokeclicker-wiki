@@ -1,0 +1,22 @@
+<h3 class="my-2">Gym List</h3>
+<p>Click a row to view more information about the gym.</p>
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Order</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Badge Name</th>
+            <th>Requirements</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: Object.values(GymList)">
+        <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Gyms', $data.name); return false; }">
+            <td class="align-middle" data-bind="text: $data.badgeReward"></td>
+            <td class="align-middle" data-bind="text: $data.leaderName"></td>
+            <td class="align-middle" data-bind="text: $data.parent?.name ?? $data.town"></td>
+            <td class="align-middle" data-bind="text: BadgeEnums[$data.badgeReward]"></td>
+            <td data-bind="html: $data.requirements.map(r => r.hint()).join('</br>')"></td>
+        </tr>
+    </tbody>
+</table>
