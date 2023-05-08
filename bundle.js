@@ -14155,6 +14155,17 @@ const searchOptions = [
     type: 'Towns',
     page: t.name,
   })),
+  // Gyms
+  {
+    display: 'Gyms',
+    type: 'Gyms',
+    page: '',
+  },
+  ...Object.entries(GymList).map(([key, gym]) => ({
+    display: gym.leaderName,
+    type: 'Gyms',
+    page: key,
+  })),
   // Routes
   {
     display: 'Routes',
