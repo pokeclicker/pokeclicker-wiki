@@ -10,13 +10,13 @@
             <th>Requirements</th>
         </tr>
     </thead>
-    <tbody data-bind="foreach: Object.values(GymList)">
-        <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Gyms', $data.name); return false; }">
-            <td class="align-middle" data-bind="text: $data.badgeReward"></td>
-            <td class="align-middle" data-bind="text: $data.leaderName"></td>
-            <td class="align-middle" data-bind="text: $data.parent?.name ?? $data.town"></td>
-            <td class="align-middle" data-bind="text: BadgeEnums[$data.badgeReward]"></td>
-            <td data-bind="html: $data.requirements.map(r => r.hint()).join('</br>')"></td>
+    <tbody data-bind="foreach: Object.entries(GymList)">
+        <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Gyms', $data[0]); return false; }">
+            <td class="align-middle" data-bind="text: $data[1].badgeReward"></td>
+            <td class="align-middle" data-bind="text: $data[1].leaderName"></td>
+            <td class="align-middle" data-bind="text: $data[1].parent?.name ?? $data[1].town"></td>
+            <td class="align-middle" data-bind="text: BadgeEnums[$data[1].badgeReward]"></td>
+            <td data-bind="html: $data[1].requirements.map(r => r.hint()).join('</br>')"></td>
         </tr>
     </tbody>
 </table>
