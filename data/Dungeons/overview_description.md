@@ -97,11 +97,11 @@ Additionally, loot items can have weights inside of their tier. Items with a hig
 #### Tier info
 Tier | Base Loot Chance (sum of all items of the tier)
 :--- | ---:
-[[File:chest-common.png\|25px]] Common | 75%
-[[File:chest-rare.png\|25px]] Rare | 20%
-[[File:chest-epic.png\|25px]] Epic | 4%
-[[File:chest-legendary.png\|25px]] Legendary | 0.99%
-[[File:chest-mythic.png\|25px]] Mythic | 0.01%
+[[File:chest-common.png\|40px]] Common | 75%
+[[File:chest-rare.png\|40px]] Rare | 20%
+[[File:chest-epic.png\|40px]] Epic | 4%
+[[File:chest-legendary.png\|40px]] Legendary | 0.99%
+[[File:chest-mythic.png\|40px]] Mythic | 0.01%
 
 **Example 1:** Mt. Moon has XClick and Greatball as 2 of its 5 lootable items from Dungeon chests. The XClick is in the **Common** Tier while the Greatball has the **Mythic** Tier. This means that the XClick is much more likely to drop from a chest than a Greatball.
 
