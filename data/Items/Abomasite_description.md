@@ -1,2 +1,2 @@
 ## Description:
-Use it to mega evolve Abomasnow
+Used to mega evolve Abomasnow
