@@ -123,7 +123,7 @@ td.tight {
 
 /* Egg Patterns */
 .egg[data-type1=Bug] .egg-main {
-  fill: #9df68e
+  fill: #b9cc33
 }
 
 .egg[data-type1=Dark] .egg-main {
@@ -198,9 +198,12 @@ td.tight {
   fill: #5ab690
 }
 
-.egg[data-type2=Dark] .egg-spot,
-.egg[data-type2=Dragon] .egg-spot {
+.egg[data-type2=Dark] .egg-spot {
   fill: #111
+}
+
+.egg[data-type2=Dragon] .egg-spot {
+  fill: #432489
 }
 
 .egg[data-type2=Electric] .egg-spot {
@@ -216,7 +219,7 @@ td.tight {
 }
 
 .egg[data-type2=Fire] .egg-spot {
-  fill: #fafb00
+  fill: #ff9100
 }
 
 .egg[data-type2=Flying] .egg-spot {
