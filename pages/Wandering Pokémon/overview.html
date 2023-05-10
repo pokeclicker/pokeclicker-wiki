@@ -53,7 +53,7 @@
             </tr>
         </thead>
         <tbody data-bind="foreach: App.game.farming.berryData">
-            <!-- ko foreach: $data.wander.filter((w) => !Berry.baseWander.some((b) => w === b)).filter((w) => !Berry.colorWander[$data.color].some((b) => w === b)) -->
+            <!-- ko foreach: $data.wander.filter((w) => !Berry.baseWander.some((b) => w === b) && !Berry.colorWander[$data.color].some((b) => w === b)) -->
             <tr>
                 <td>
                     <img height="30px" data-bind="attr: {src: './pokeclicker/docs/' + FarmController.getBerryImage($parent.type)}"/>
