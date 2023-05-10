@@ -1,0 +1,74 @@
+<div>
+    <h3>Base Wanderers</h3>
+    <p>Base Wanderers refer to Pokémon attracted by any berry. Unlike the other types of wanderers, the Pokémon in this list gain no EVs if captured using this method.</p>
+    <table class="table table-hover table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Region</th>
+                <th>Pokémon</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: Berry.baseWander">
+            <tr>
+                <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[PokemonHelper.calcNativeRegion($data)])"></td>
+                <td>
+                    <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data).id + '.png'}" />
+                    <a data-bind="text: $data, attr: { href: `#!Pokemon/${$data}` }"></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Color Wanderers</h3>
+    <p>Color Wanderers refer to Pokémon attracted by a Berry's specific color. Check <a href="#!Berries">Berries</a> page to see each Berry's color.</p>
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>Color</th>
+                <th>Region</th>
+                <th>Pokémon</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: Object.keys(Berry.colorWander)">
+            <!-- ko foreach: Berry.colorWander[$data] -->
+            <tr data-bind="style: { 'background-color': $parentContext.$index() % 2 == 0 ? 'rgba(0,0,0,.05)' : '' }">
+                <!-- ko if: $index() == 0 -->
+                <td class="align-middle" data-bind="text: BerryColor[$parent], attr: { rowspan: Berry.colorWander[$parent].length }"></td>
+                <!-- /ko -->
+                <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[PokemonHelper.calcNativeRegion($data)])"></td>
+                <td>
+                    <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data).id + '.png'}" />
+                    <a data-bind="text: $data, attr: { href: `#!Pokemon/${$data}` }"></a>
+                </td>
+            </tr>
+            <!-- /ko -->
+        </tbody>
+    </table>
+    <h3>Specific Berry Wanderers</h3>
+    <table class="table table-hover table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Berry</th>
+                <th>Region</th>
+                <th>Pokémon</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: App.game.farming.berryData">
+            <!-- ko foreach: $data.wander.filter((w) => !Berry.baseWander.some((b) => w === b)).filter((w) => !Berry.colorWander[$data.color].some((b) => w === b)) -->
+            <tr>
+                <td>
+                    <img height="30px" data-bind="attr: {src: './pokeclicker/docs/' + FarmController.getBerryImage($parent.type)}"/>
+                    <a data-bind="text: BerryType[$parent.type], attr: { href: `#!Berries/${[BerryType[$parent.type]]}` }"></a>
+                </td>
+                <td>
+                    <p data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[PokemonHelper.calcNativeRegion($data)])"></p>
+                </td>
+                <td>
+                    <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data).id + '.png'}" />
+                    <a data-bind="text: $data, attr: { href: `#!Pokemon/${$data}` }"></a>
+                    <br>
+                </td>
+            </tr>
+            <!-- /ko -->
+        </tbody>
+    </table>
+</div>

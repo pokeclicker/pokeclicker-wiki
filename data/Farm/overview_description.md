@@ -18,7 +18,7 @@ Berries can be obtained by planting obtained Berries in special configurations. 
 
 Mulch and Berry Shovel can be bought in Goldenrod City, Mauville City, Hearthome City. Mulches can be applied to Berry plants to speed up growth (Boost Mulch), increase harvest yield (Rich Mulch), increase mutation chance (Surprise Mulch), or all the above with a slightly reduced boost for all three (Amaze Mulch). Berry Shovels can be used to clear occupied plots.
 
-The farm can also produce helpful effects (external auras) such as increasing egg steps for faster breeding and better shiny chance.
+The farm can also produce helpful effects (external auras) such as increasing egg steps for faster breeding and better shiny chance. It can also attract specific Pokémon which are referred to as [[Wandering Pokémon]].
 
 ## Mutating Berries
 
