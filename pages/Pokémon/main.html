@@ -50,7 +50,7 @@
                 </tbody>
             </table>
         </div>
-        <div data-bind="visible: $data.evolutions?.filter(e => e.trigger !== EvoTrigger.NONE)" class="mb-3">
+        <div data-bind="visible: $data.evolutions?.filter(e => e.trigger !== EvoTrigger.NONE).length" class="mb-3">
             <h3>Evolves into:</h3>
             <!-- ko foreach: [...new Set($data.evolutions?.filter(e => e.trigger !== EvoTrigger.NONE).map(e => e.evolvedPokemon))] -->
                 <a href="#!" class="badge text-bg-secondary" data-bind="
