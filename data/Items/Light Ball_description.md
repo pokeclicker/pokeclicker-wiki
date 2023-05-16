@@ -1,1 +1,1 @@
-Can be obtained by defeating Red in Mt.Silver Located in Johto
+Can be obtained multiple times by defeating Red in Mt. Silver located in Johto
