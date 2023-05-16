@@ -1,1 +1,1 @@
-Can be obtained multiple times by defeating Red in Mt. Silver located in Johto
+Can be obtained multiple times by defeating [[Temporary Battles/Red]] in Mt. Silver located in Johto.
