@@ -57,7 +57,7 @@
                 <tr>
                     <td class="align-middle">
                         <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
-                        <knockout data-bind="text: $data.name"></knockout>
+                        <a class="text-secondary" href="#!" data-bind="text: $data.name, attr: {href: `#!Pokemon/${$data.name}` }"></a>
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
                 </tr>
