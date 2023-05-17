@@ -25,6 +25,10 @@
                     <td>Sub Region</td>
                     <td data-bind="text: SubRegions.getSubRegionById($data.region, $data.subRegion).name"></td>
                 </tr>
+                <tr data-bind="with: $data.parent ?? $data.town">
+                    <td>Town</td>
+                    <td><a class="text-decoration-none" href="#!" href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${Wiki.pageName()}` }"></a></td>
+                </tr>
                 <tr>
                     <td>Money</td>
                     <td>
