@@ -7,7 +7,7 @@ Kanto routes and gyms marked with a \* are only accessible after Hoenn; if possi
 ### Normal Gems
 | Region | Route | Percentage | Gym | Amount | Percentage |
 |--------|-------|------------|---|---|---|
-| Kanto | Routes 1, 16, 17, 18 | 100%  |
+| Kanto | Routes 1, 16, 17, 18 | 100%  |-|-|-|
 | Johto | Route 46 | 60% |Falkner (Violet City) | 10 | 100%|
 | Hoenn | Route 116 | 50% |Norman (Petalburg City) | 20 | 100% |
 | Sinnoh | Route 201 | 66.7% | -|-|-|
