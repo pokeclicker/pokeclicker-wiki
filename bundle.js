@@ -14247,6 +14247,12 @@ const searchOptions = [
     type: 'Temporary Battles',
     page: '',
   },
+  // Wandering Pokémon
+  {
+    display: 'Wandering Pokémon',
+    type: 'Wandering Pokémon',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
