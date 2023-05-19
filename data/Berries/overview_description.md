@@ -7,7 +7,7 @@ The Sprayduck, Squirtbottle, and Sprinklotad are all Oak Items that speed up or 
 
 #### Wanderers
 
-Farms with at least one ripe Berry can attract Wandering Pokémon that are automatically caught without the use of a Pokéball. Some Berries can attract rare Pokémon and can thus be used strategically to complete the Pokédex. Wandering Pokémon can also be shiny, attracting a shiny Wandering Pokémon when the Farm has at least one empty plot is the condition for a Starf Berry to spawn on the Farm (in one of the empty plots).
+Farms with at least one ripe Berry can attract [[Wandering Pokémon]] that are automatically caught without the use of a Pokéball. Some Berries can attract rare Pokémon and can thus be used strategically to complete the Pokédex. Wandering Pokémon can also be shiny, attracting a shiny Wandering Pokémon when the Farm has at least one empty plot is the condition for a Starf Berry to spawn on the Farm (in one of the empty plots).
 
 ### Mutations
 
