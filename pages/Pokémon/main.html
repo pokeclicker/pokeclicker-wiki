@@ -50,12 +50,12 @@
                 </tbody>
             </table>
         </div>
-        <div data-bind="visible: $data.evolutions">
+        <div data-bind="visible: $data.evolutions?.filter(e => e.trigger !== EvoTrigger.NONE).length" class="mb-3">
             <h3>Evolves into:</h3>
-            <!-- ko foreach: $data.evolutions -->
+            <!-- ko foreach: [...new Set($data.evolutions?.filter(e => e.trigger !== EvoTrigger.NONE).map(e => e.evolvedPokemon))] -->
                 <a href="#!" class="badge text-bg-secondary" data-bind="
-                    attr: { href: `#!Pokemon/${$data.evolvedPokemon}` },
-                    text: $data.evolvedPokemon"></a>
+                    attr: { href: `#!Pokemon/${$data}` },
+                    text: $data"></a>
             <!-- /ko -->
         </div>
         <div data-bind="visible: Object.entries(PokemonHelper.getPokemonLocations($data.name)).length">
@@ -187,7 +187,7 @@
                 <!--
                     EVOLUTIONS
                 -->
-                <!-- ko if: $data[PokemonLocationType.Evolution] -->
+                <!-- ko if: $data[PokemonLocationType.Evolution]?.filter(e => e.stone == null || e.stone != GameConstants.StoneType.None).length -->
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-evolution" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
@@ -195,11 +195,11 @@
                         </button>
                     </h4>
                     <div id="obtain-method-evolution" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Evolution])">
+                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Evolution]?.filter(e => e.stone == null || e.stone != GameConstants.StoneType.None))">
                             <a class="badge text-bg-secondary" data-bind="text: $data.basePokemon + `${$data.restrictions ? ' 🔒' : ''}`,
                             attr: { href: `#!Pokemon/${$data.basePokemon}` },
                             tooltip: {
-                                title: ($data.restrictions.map(r => r.hint()).join('<br/>') ?? '') + ($data.stone != null ? '<br/> Requires ' + ItemList[GameConstants.StoneType[$data.stone]]._displayName : ''),
+                                title: ($data.restrictions.filter(r => !(r instanceof MegaEvolveRequirement)).map(r => r.hint()).join('<br/>') ?? '') + ($data.stone > -1 ? '<br/> Requires ' + ItemList[GameConstants.StoneType[$data.stone]]._displayName : ''),
                                 html: true,
                                 placement: 'bottom',
                                 trigger: 'hover'
