@@ -3,7 +3,7 @@
         <!-- ko with: Object.values(TownList).find(town => town.dungeon === $data) -->
         <div>
             <h3>Location:</h3>
-            <p href="#!" data-bind="text: `Region: ${GameConstants.camelCaseToString(GameConstants.Region[$data.region])}`"></p>
+            <p data-bind="text: `Region: ${GameConstants.camelCaseToString(GameConstants.Region[$data.region])}`"></p>
             <p data-bind="text: `Subregion: ${SubRegions.getSubRegionById($data.region, $data.subRegion).name}`"></p>
             <!-- ko with: Object.values(TownList).filter(town => town.content.some(content => content instanceof MoveToDungeon && content.dungeon === $parent)) -->
             <p data-bind="if: $data.length > 0">
