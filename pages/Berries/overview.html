@@ -4,6 +4,7 @@
             <tr>
                 <th class="col-1">ID</th>
                 <th class="col-1">Berry</th>
+                <th>Color</th>
                 <th>Exp</th>
                 <th>Harvest Amount</th>
                 <th>Farm Points</th>
@@ -17,6 +18,7 @@
                     <img height="30px" data-bind="attr: {src: './pokeclicker/docs/' + FarmController.getBerryImage($data.type)}"/>
                 </td>
                 <td data-bind="text: BerryType[$data.type]"></td>
+                <td data-bind="text: BerryColor[$data.color]"></td>
                 <td data-bind="text: $data.exp"></td>
                 <td data-bind="text: $data.harvestAmount"></td>
                 <td data-bind="attr: { 'data-sort': $data.farmValue }">

@@ -12869,6 +12869,7 @@ $(document).ready(() => {
   window.location.hash = '#!loading';
   gotoPage(decodeURIComponent(type || ''), decodeURIComponent(name || ''));
 
+  ko.applyBindings({}, document.getElementById('tab-title'));
   ko.applyBindings({}, document.getElementById('nav-bar'));
   ko.applyBindings({}, document.getElementById('page-title'));
   ko.applyBindings({}, document.getElementById('page-table-of-contents'));
@@ -14244,6 +14245,12 @@ const searchOptions = [
   {
     display: 'Temporary Battles',
     type: 'Temporary Battles',
+    page: '',
+  },
+  // Wandering Pokémon
+  {
+    display: 'Wandering Pokémon',
+    type: 'Wandering Pokémon',
     page: '',
   },
 ];
