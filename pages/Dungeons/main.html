@@ -33,20 +33,50 @@
         </div>
         <div>
             <h3>Bosses:</h3>
-            <!-- ko foreach: $data.bossList -->
-                <!-- ko if: $data.baseHealth -->
-                    <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a>
-                <!-- /ko -->
-                <!-- ko ifnot: $data.baseHealth -->
-                    <span class="badge text-bg-secondary" data-bind="text: $data.name"></span>
-                <!-- /ko -->
-            <!-- /ko -->
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tbody>
+                        <!-- ko foreach: $data.bossList -->
+                            <tr>
+                                <!-- ko if: $data.baseHealth -->
+                                    <th scope="row"><a class="text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a></th>
+                                    <td><img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data.name).id + '.png'}"/></td>
+                                    <td data-bind="text: $data.baseHealth"></td>
+                                <!-- /ko -->
+                                <!-- ko ifnot: $data.baseHealth -->
+                                    <th scope="row" data-bind="text: $data.name"></th>
+                                    <!-- ko ifnot: $data.subTrainerClass -->
+                                        <td><img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/npcs/' + $data.trainerClass + '.png'}"/></td>
+                                    <!-- /ko -->
+                                    <!-- ko if: $data.subTrainerClass -->
+                                        <td><img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/npcs/' + $data.trainerClass + ' ' + $data.subTrainerClass + '.png'}"/></td>
+                                    <!-- /ko -->
+                                    <td class="p-0">
+                                        <table class="table table-bordered m-0 p-0">
+                                            <tbody>
+                                                <!-- ko foreach: $data.team -->
+                                                    <tr>
+                                                        <td><a class="text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a></td>
+                                                        <td><img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data.name).id + '.png'}"/></td>
+                                                        <td data-bind="text: $data.maxHealth"></td>
+                                                    </tr>
+                                                <!-- /ko -->
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                <!-- /ko -->
+                            </tr>
+                        <!-- /ko -->
+                    </tbody>
+                </table>
+            </div>
         </div>
         <br/>
         <div>
             <h3>Encounters:</h3>
             <!-- ko foreach: $data.enemyList -->
                 <!-- ko ifnot: $data.name -->
+                    <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == ($data.pokemon || $data)).id + '.png'}"/>
                     <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.pokemon || $data, attr: { href: `#!Pokemon/${$data.pokemon || $data}` }"></a>
                 <!-- /ko -->
                 <!-- ko if: $data.name -->
