@@ -1,0 +1,1 @@
+Can be put in the hatchery to obtain Tirtouga
