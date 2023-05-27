@@ -2,9 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-Enigma can be obtained by linking your game to a Discord account, obtaining 4 different hints from the Kanto Berry Master and surrounding an empty plot with berries according to those hints.
-
-To link your Discord account, click on Start Menu, then Save, then on the Link Discord button. This will redirect to a Discord page, please click on the Authorize button. Now your save is linked to your Discord account.
+Enigma can be obtained by getting 4 different hints from the Kanto Berry Master and surrounding an empty plot with berries according to those hints. These hints depend on the Trainer ID, so each profile will have a different Enigma configuration.
 
 You can fill your farm in the following way to obtain Enigma Berries. Purple squares indicate where mutations can occur.
 
