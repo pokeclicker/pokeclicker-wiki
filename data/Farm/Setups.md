@@ -81,7 +81,7 @@ _**Harvest Aura Bonuses:
 :::
 
 ### Passho + Petaya
-This setup yield slightly fewer berries per harvesting cycle, in exchange for vastly increased Passho ripeness time.
+This setup will yield slightly fewer berries per harvesting cycle, in exchange for vastly increased Passho ripeness time.
 
 - Example: Despite the Petaya berry taking a slot away from a Passho berry, growing 10 Aguav berries would still yield 654 Aguav berries per harvesting cycle (1,311 with Rich Mulch). However, the Petaya berry will keep all Passho berries ripe for at least 64 hours. Farmhand Jessie could harvest 618,240 Aguav berries (harvesting in 4 minute cycles) over this time.
 
@@ -128,8 +128,8 @@ _**Harvest Aura Bonus: 8.14x**_
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Starf.png\|32px]] [[Berries/Starf]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Starf.png\|32px]] [[Berries/Starf]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Starf.png\|32px]] [[Berries/Starf]] | [[File:Passho.png\|32px]] [[Berries/[k]] | [[File:Starf.png\|32px]] [[Berries/Starf]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/[k]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
+| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Starf.png\|32px]] [[Berries/Starf]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Starf.png\|32px]] [[Berries/Starf]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
+| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 :::
 
 ## EV Yield Setup
