@@ -1,3 +1,8 @@
+There are a number of Farming Setups not related to [Breeding Pokemon faster](#!Hatchery/ "Hatchery") or  [Increasing Shiny Chance](https://pokeclicker.miraheze.org/wiki/Shiny_Chance "Shiny Chance")  that are quite useful, particularly when either mutating berries or trying to harvest mutated berries faster, or, even without mutating berries, if you just want to harvest a lot of berries to trade to the  [Berry Master](https://pokeclicker.miraheze.org/wiki/Berry_Master "Berry Master").
+Here are some useful berry setups to know.
+
+_Note: Aura Received is multiplicative from all the auras affecting a berry. If a Berry receives the aura from 4 aura berries each at 1.3x aura output, that Berry receives 1.3^4 = 2.8561, or ~2.86x as an aura multiplier. If a Berry receives auras from 3 berries, two at 1.3x and one at 1.2x, the berry receives 1.3^2 * 1.2x = 2.028, or ~2.03x aura output_
+
 ## Growth Aura Setups
 Blue squares show Boost Mulch being recommended. If you are ready to harvest the boosted berry use Rich Mulch for maximum harvesting gain.
 
@@ -12,9 +17,9 @@ _**Growth Aura Received: 8.16x**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | | | | | |
-| | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | |
-| | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Petaya.png\32px]] [[Berries/Petaya]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | |
-| | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | |
+| | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | |
+| | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Petaya.png|32px]] [[Berries/Petaya]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | |
+| | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | |
 | | | | | |
 
 ### Wacan + 4 Lum
@@ -23,11 +28,11 @@ This is the ideal single berry setup, with the target berry in the central plot 
 _**Growth Aura Received: 10.33x**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| | | [[File:Lum.png\32px]] [[Berries/Lum]] | | |
-| | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | |
-| [[File:Lum.png\32px]] [[Berries/Lum]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Petaya.png\32px]] [[Berries/Petaya]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Lum.png\32px]] [[Berries/Lum]] |
-| | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | |
-| | | [[File:Lum.png\32px]] [[Berries/Lum]] | | |
+| | | [[File:Lum.png|32px]] [[Berries/Lum]] | | |
+| | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | |
+| [[File:Lum.png|32px]] [[Berries/Lum]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Petaya.png|32px]] [[Berries/Petaya]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Lum.png|32px]] [[Berries/Lum]] |
+| | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | |
+| | | [[File:Lum.png|32px]] [[Berries/Lum]] | | |
 
 ### Wacan + 2-3 Lum
 Even if the berry you're trying to affect with an aura isn't in the exact center, it is still significantly faster to add Lum berries to setups.
@@ -35,20 +40,20 @@ Even if the berry you're trying to affect with an aura isn't in the exact center
 _**Growth Aura Received: 10.03x**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| | [[File:Lum.png\32px]] [[Berries/Lum]] | | | |
-| [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | | |
-| [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Petaya.png\32px]] [[Berries/Petaya]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Lum.png\32px]] [[Berries/Lum]] | |
-| [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | | |
-| | [[File:Lum.png\32px]] [[Berries/Lum]] | | | |
+| | [[File:Lum.png|32px]] [[Berries/Lum]] | | | |
+| [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | | |
+| [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Petaya.png|32px]] [[Berries/Petaya]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Lum.png|32px]] [[Berries/Lum]] | |
+| [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | | |
+| | [[File:Lum.png|32px]] [[Berries/Lum]] | | | |
 
 _**Growth Aura Received: 9.46x**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | | | | | |
-| | [[File:Lum.png\32px]] [[Berries/Lum]] | | | |
-| [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | | |
-| [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Petaya.png\32px]] [[Berries/Petaya]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Lum.png\32px]] [[Berries/Lum]] | |
-| [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | | |
+| | [[File:Lum.png|32px]] [[Berries/Lum]] | | | |
+| [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | | |
+| [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Petaya.png|32px]] [[Berries/Petaya]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Lum.png|32px]] [[Berries/Lum]] | |
+| [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | | |
 
 ## Harvest Aura Setups
 These setups are the most efficient setups for harvesting the greatest amount of berries.
@@ -64,11 +69,11 @@ _**Harvest Aura Bonuses:
 6 Plots: 4.83x - 4 Plots: 2.86x**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
-| [[File:Aguav.png\32px]] [[Berries/Aguav]] | [[File:Aguav.png\32px]] [[Berries/Aguav]] | [[File:Aguav.png\32px]] [[Berries/Aguav]] | [[File:Aguav.png\32px]] [[Berries/Aguav]] | [[File:Aguav.png\32px]] [[Berries/Aguav]] |
-| [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
-| [[File:Aguav.png\32px]] [[Berries/Aguav]] | [[File:Aguav.png\32px]] [[Berries/Aguav]] | [[File:Aguav.png\32px]] [[Berries/Aguav]] | [[File:Aguav.png\32px]] [[Berries/Aguav]] | [[File:Aguav.png\32px]] [[Berries/Aguav]] |
-| [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
+| [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
+| [[File:Aguav.png|32px]] [[Berries/Aguav]] | [[File:Aguav.png|32px]] [[Berries/Aguav]] | [[File:Aguav.png|32px]] [[Berries/Aguav]] | [[File:Aguav.png|32px]] [[Berries/Aguav]] | [[File:Aguav.png|32px]] [[Berries/Aguav]] |
+| [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
+| [[File:Aguav.png|32px]] [[Berries/Aguav]] | [[File:Aguav.png|32px]] [[Berries/Aguav]] | [[File:Aguav.png|32px]] [[Berries/Aguav]] | [[File:Aguav.png|32px]] [[Berries/Aguav]] | [[File:Aguav.png|32px]] [[Berries/Aguav]] |
+| [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
 
 ### Passho + Petaya
 This setup yield slightly fewer berries per harvesting cycle, in exchange for vastly increased Passho ripeness time.
@@ -82,11 +87,11 @@ _**Harvest Aura Bonuses:
 1 Plot: 3.71x - 1 Plot: 2.2x**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Petaya.png\32px]] [[Berries/Petaya]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
-| [[File:Aguav.png\32px]] [[Berries/Aguav]] | [[File:Aguav.png\32px]] [[Berries/Aguav]] | [[File:Aguav.png\32px]] [[Berries/Aguav]] | [[File:Aguav.png\32px]] [[Berries/Aguav]] | [[File:Aguav.png\32px]] [[Berries/Aguav]] |
-| [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
-| [[File:Aguav.png\32px]] [[Berries/Aguav]] | [[File:Aguav.png\32px]] [[Berries/Aguav]] | [[File:Aguav.png\32px]] [[Berries/Aguav]] | [[File:Aguav.png\32px]] [[Berries/Aguav]] | [[File:Aguav.png\32px]] [[Berries/Aguav]] |
-| [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
+| [[File:Petaya.png|32px]] [[Berries/Petaya]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
+| [[File:Aguav.png|32px]] [[Berries/Aguav]] | [[File:Aguav.png|32px]] [[Berries/Aguav]] | [[File:Aguav.png|32px]] [[Berries/Aguav]] | [[File:Aguav.png|32px]] [[Berries/Aguav]] | [[File:Aguav.png|32px]] [[Berries/Aguav]] |
+| [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
+| [[File:Aguav.png|32px]] [[Berries/Aguav]] | [[File:Aguav.png|32px]] [[Berries/Aguav]] | [[File:Aguav.png|32px]] [[Berries/Aguav]] | [[File:Aguav.png|32px]] [[Berries/Aguav]] | [[File:Aguav.png|32px]] [[Berries/Aguav]] |
+| [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
 
 ## Growth and Harvest Aura Setup (Wacan + Passho Handoff)
 Combining the Wacan and Passho setups is incredibly useful when trying to quickly grow and harvest multiple Gen 5 berries that have a base 0.5 berry harvest yield, such as Starf or Petaya. This two-part setup, going from the Wacan formation to the following Passho formation, is the most efficient way to harvest more of these berries in the shortest amount of time.
@@ -104,20 +109,20 @@ Using this strategy will yield 32 (28 cumulative) Gen 5 berries harvested per cy
 _**Growth Bonus: 8.14x**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] |
-| [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Starf.png\32px]] [[Berries/Starf]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Starf.png\32px]] [[Berries/Starf]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] |
-| [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] |
-| [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Starf.png\32px]] [[Berries/Starf]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Starf.png\32px]] [[Berries/Starf]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] |
-| [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] | [[File:Wacan.png\32px]] [[Berries/Wacan]] |
+| [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] |
+| [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Starf.png|32px]] [[Berries/Starf]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Starf.png|32px]] [[Berries/Starf]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] |
+| [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] |
+| [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Starf.png|32px]] [[Berries/Starf]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Starf.png|32px]] [[Berries/Starf]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] |
+| [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] | [[File:Wacan.png|32px]] [[Berries/Wacan]] |
 
 _**Harvest Aura Bonus: 8.14x**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
-| [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Starf.png\32px]] [[Berries/Starf]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Starf.png\32px]] [[Berries/Starf]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
-| [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
-| [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Starf.png\32px]] [[Berries/Starf]] | [[File:Passho.png\32px]] [[Berries/[k]] | [[File:Starf.png\32px]] [[Berries/Starf]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
-| [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/[k]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
+| [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
+| [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Starf.png|32px]] [[Berries/Starf]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Starf.png|32px]] [[Berries/Starf]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
+| [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
+| [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Starf.png|32px]] [[Berries/Starf]] | [[File:Passho.png|32px]] [[Berries/[k]] | [[File:Starf.png|32px]] [[Berries/Starf]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
+| [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/[k]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
 
 ## EV Yield Setup
 [EV](#!Pokérus "Pokérus") yield is affected by the Rowap berry. The setup below increases the yield of EVs gained in all applicable situations.
@@ -125,11 +130,11 @@ _**Harvest Aura Bonus: 8.14x**_
 _**EV Gain Bonus: 2.54x**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Rowap.png\32px]] [[Berries/Rowap]] | [[File:Rowap.png\32px]] [[Berries/Rowap]] | [[File:Rowap.png\32px]] [[Berries/Rowap]] | [[File:Rowap.png\32px]] [[Berries/Rowap]] | [[File:Rowap.png\32px]] [[Berries/Rowap]] |
-| [[File:Rowap.png\32px]] [[Berries/Rowap]] | [[File:Lum.png\32px]] [[Berries/Lum]] | [[File:Rowap.png\32px]] [[Berries/Rowap]] | [[File:Lum.png\32px]] [[Berries/Lum]] | [[File:Rowap.png\32px]] [[Berries/Rowap]] |
-| [[File:Rowap.png\32px]] [[Berries/Rowap]] | [[File:Rowap.png\32px]] [[Berries/Rowap]] | [[File:Rowap.png\32px]] [[Berries/Rowap]] | [[File:Rowap.png\32px]] [[Berries/Rowap]] | [[File:Rowap.png\32px]] [[Berries/Rowap]] |
-| [[File:Rowap.png\32px]] [[Berries/Rowap]] | [[File:Lum.png\32px]] [[Berries/Lum]] | [[File:Rowap.png\32px]] [[Berries/Rowap]] | [[File:Lum.png\32px]] [[Berries/Lum]] | [[File:Rowap.png\32px]] [[Berries/Rowap]] |
-| [[File:Rowap.png\32px]] [[Berries/Rowap]] | [[File:Rowap.png\32px]] [[Berries/Rowap]] | [[File:Rowap.png\32px]] [[Berries/Rowap]] | [[File:Rowap.png\32px]] [[Berries/Rowap]] | [[File:Rowap.png\32px]] [[Berries/Rowap]] |
+| [[File:Rowap.png|32px]] [[Berries/Rowap]] | [[File:Rowap.png|32px]] [[Berries/Rowap]] | [[File:Rowap.png|32px]] [[Berries/Rowap]] | [[File:Rowap.png|32px]] [[Berries/Rowap]] | [[File:Rowap.png|32px]] [[Berries/Rowap]] |
+| [[File:Rowap.png|32px]] [[Berries/Rowap]] | [[File:Lum.png|32px]] [[Berries/Lum]] | [[File:Rowap.png|32px]] [[Berries/Rowap]] | [[File:Lum.png|32px]] [[Berries/Lum]] | [[File:Rowap.png|32px]] [[Berries/Rowap]] |
+| [[File:Rowap.png|32px]] [[Berries/Rowap]] | [[File:Rowap.png|32px]] [[Berries/Rowap]] | [[File:Rowap.png|32px]] [[Berries/Rowap]] | [[File:Rowap.png|32px]] [[Berries/Rowap]] | [[File:Rowap.png|32px]] [[Berries/Rowap]] |
+| [[File:Rowap.png|32px]] [[Berries/Rowap]] | [[File:Lum.png|32px]] [[Berries/Lum]] | [[File:Rowap.png|32px]] [[Berries/Rowap]] | [[File:Lum.png|32px]] [[Berries/Lum]] | [[File:Rowap.png|32px]] [[Berries/Rowap]] |
+| [[File:Rowap.png|32px]] [[Berries/Rowap]] | [[File:Rowap.png|32px]] [[Berries/Rowap]] | [[File:Rowap.png|32px]] [[Berries/Rowap]] | [[File:Rowap.png|32px]] [[Berries/Rowap]] | [[File:Rowap.png|32px]] [[Berries/Rowap]] |
 
 ## Wandering Pokémon Setups
 [[Wandering Pokémon]] are attracted to ripe berries. For the maximum chance of attracting a desired wandering Pokémon, use one of the setups below.
@@ -142,11 +147,11 @@ _**Attract Aura: 1.51x,
 Encounter Chance per 1.5s: 1.29%**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Roseli.png\32px]] [[Berries/Roseli]] | [[File:Roseli.png\32px]] [[Berries/Roseli]] | [[File:Roseli.png\32px]] [[Berries/Roseli]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
-| [[File:Roseli.png\32px]] [[Berries/Roseli]] | [[File:Lum.png\32px]] [[Berries/Lum]] | [[File:Roseli.png\32px]] [[Berries/Roseli]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
-| [[File:Roseli.png\32px]] [[Berries/Roseli]] | [[File:Roseli.png\32px]] [[Berries/Roseli]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
-| [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
-| [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
+| [[File:Roseli.png|32px]] [[Berries/Roseli]] | [[File:Roseli.png|32px]] [[Berries/Roseli]] | [[File:Roseli.png|32px]] [[Berries/Roseli]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
+| [[File:Roseli.png|32px]] [[Berries/Roseli]] | [[File:Lum.png|32px]] [[Berries/Lum]] | [[File:Roseli.png|32px]] [[Berries/Roseli]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
+| [[File:Roseli.png|32px]] [[Berries/Roseli]] | [[File:Roseli.png|32px]] [[Berries/Roseli]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
+| [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
+| [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
 
 ### Roseli + Lum + Petaya + Attracting Berry
 For a significantly longer uptime than the above setup to attract a wandering Pokémon - perhaps if you're looking for a specific Pokémon or group of Pokémon to turn shiny for example - replace a Roseli berry with a Petaya berry.
@@ -156,11 +161,11 @@ _**Attract Aura: 1.42x<,
 Encounter Chance per 1.5s: 1.28%**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Roseli.png\32px]] [[Berries/Roseli]] | [[File:Roseli.png\32px]] [[Berries/Roseli]] | [[File:Roseli.png\32px]] [[Berries/Roseli]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
-| [[File:Roseli.png\32px]] [[Berries/Roseli]] | [[File:Lum.png\32px]] [[Berries/Lum]] | [[File:Roseli.png\32px]] [[Berries/Roseli]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
-| [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Roseli.png\32px]] [[Berries/Roseli]] | [[File:Petaya.png\32px]] [[Berries/Petaya]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
-| [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
-| [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] | [[File:Passho.png\32px]] [[Berries/Passho]] |
+| [[File:Roseli.png|32px]] [[Berries/Roseli]] | [[File:Roseli.png|32px]] [[Berries/Roseli]] | [[File:Roseli.png|32px]] [[Berries/Roseli]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
+| [[File:Roseli.png|32px]] [[Berries/Roseli]] | [[File:Lum.png|32px]] [[Berries/Lum]] | [[File:Roseli.png|32px]] [[Berries/Roseli]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
+| [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Roseli.png|32px]] [[Berries/Roseli]] | [[File:Petaya.png|32px]] [[Berries/Petaya]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
+| [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
+| [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] | [[File:Passho.png|32px]] [[Berries/Passho]] |
 
 ## Regaining Lost Gen 5 Berries
 Shoveled your only copy of a Gen 5 berry by accident? You can use [[Berries/Enigma]] berries to mutate another rather than having to go through the original mutation process.
@@ -169,11 +174,11 @@ Here is the setup you need to mutate a Petaya berry if you shovel your only one 
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} |
-| [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} | [[File:Enigma.png\32px]] [[Berries/Enigma]] {.mutation} | [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} | [[File:Enigma.png\32px]] [[Berries/Enigma]] {.mutation} | [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} |
-| [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} |
-| [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} | [[File:Enigma.png\32px]] [[Berries/Enigma]] {.mutation} | [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} | [[File:Enigma.png\32px]] [[Berries/Enigma]] {.mutation} | [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} |
-| [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\32px]] [[Berries/Payapa]] {.mutation} |
+| [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} |
+| [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Enigma.png|32px]] [[Berries/Enigma]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Enigma.png|32px]] [[Berries/Enigma]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} |
+| [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} |
+| [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Enigma.png|32px]] [[Berries/Enigma]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Enigma.png|32px]] [[Berries/Enigma]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} |
+| [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} |
 
 ## Roaming Pokémon Setup
 Trying to attract a roaming Pokémon? The [[Berries/Jaboca]] berry can help boost your roaming encounter chances, and Lum can help boost those odds further.
@@ -181,11 +186,11 @@ Trying to attract a roaming Pokémon? The [[Berries/Jaboca]] berry can help boos
 _**Roaming Pokémon Chance: 2.54x**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Jaboca.png\32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\32px]] [[Berries/Jaboca]] |
-| [[File:Jaboca.png\32px]] [[Berries/Jaboca]] | [[File:Lum.png\32px]] [[Berries/Lum]] | [[File:Jaboca.png\32px]] [[Berries/Jaboca]] | [[File:Lum.png\32px]] [[Berries/Lum]] | [[File:Jaboca.png\32px]] [[Berries/Jaboca]] |
-| [[File:Jaboca.png\32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\32px]] [[Berries/Jaboca]] |
-| [[File:Jaboca.png\32px]] [[Berries/Jaboca]] | [[File:Lum.png\32px]] [[Berries/Lum]] | [[File:Jaboca.png\32px]] [[Berries/Jaboca]] | [[File:Lum.png\32px]] [[Berries/Lum]] | [[File:Jaboca.png\32px]] [[Berries/Jaboca]] |
-| [[File:Jaboca.png\32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\32px]] [[Berries/Jaboca]] |
+| [[File:Jaboca.png|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png|32px]] [[Berries/Jaboca]] |
+| [[File:Jaboca.png|32px]] [[Berries/Jaboca]] | [[File:Lum.png|32px]] [[Berries/Lum]] | [[File:Jaboca.png|32px]] [[Berries/Jaboca]] | [[File:Lum.png|32px]] [[Berries/Lum]] | [[File:Jaboca.png|32px]] [[Berries/Jaboca]] |
+| [[File:Jaboca.png|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png|32px]] [[Berries/Jaboca]] |
+| [[File:Jaboca.png|32px]] [[Berries/Jaboca]] | [[File:Lum.png|32px]] [[Berries/Lum]] | [[File:Jaboca.png|32px]] [[Berries/Jaboca]] | [[File:Lum.png|32px]] [[Berries/Lum]] | [[File:Jaboca.png|32px]] [[Berries/Jaboca]] |
+| [[File:Jaboca.png|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png|32px]] [[Berries/Jaboca]] |
 
 ## Squirtbottle Leveling Strategies
 Here are a few highly efficient strategies on how to level up the Squirtbottle based on which berries you have unlocked.
@@ -197,11 +202,11 @@ If you want to be able to gain experience more passively, then the best strategy
 **Farm**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Occa.png\32px]] [[Berries/Occa]] | [[File:Kebia.png\32px]] [[Berries/Kebia]] | [[File:Occa.png\32px]] [[Berries/Occa]] | [[File:Kebia.png\32px]] [[Berries/Kebia]] | [[File:Occa.png\32px]] [[Berries/Occa]] |
-| [[File:Kebia.png\32px]] [[Berries/Kebia]] | [[File:Occa.png\32px]] [[Berries/Occa]] | [[File:Kebia.png\32px]] [[Berries/Kebia]] | [[File:Occa.png\32px]] [[Berries/Occa]] | [[File:Kebia.png\32px]] [[Berries/Kebia]] |
-| [[File:Occa.png\32px]] [[Berries/Occa]] | [[File:Kebia.png\32px]] [[Berries/Kebia]] | [[File:Occa.png\32px]] [[Berries/Occa]] | [[File:Kebia.png\32px]] [[Berries/Kebia]] | [[File:Occa.png\32px]] [[Berries/Occa]] |
-| [[File:Kebia.png\32px]] [[Berries/Kebia]] | [[File:Occa.png\32px]] [[Berries/Occa]] | [[File:Kebia.png\32px]] [[Berries/Kebia]] | [[File:Occa.png\32px]] [[Berries/Occa]] | [[File:Kebia.png\32px]] [[Berries/Kebia]] |
-| [[File:Occa.png\32px]] [[Berries/Occa]] | [[File:Kebia.png\32px]] [[Berries/Kebia]] | [[File:Occa.png\32px]] [[Berries/Occa]] | [[File:Kebia.png\32px]] [[Berries/Kebia]] | [[File:Occa.png\32px]] [[Berries/Occa]] |
+| [[File:Occa.png|32px]] [[Berries/Occa]] | [[File:Kebia.png|32px]] [[Berries/Kebia]] | [[File:Occa.png|32px]] [[Berries/Occa]] | [[File:Kebia.png|32px]] [[Berries/Kebia]] | [[File:Occa.png|32px]] [[Berries/Occa]] |
+| [[File:Kebia.png|32px]] [[Berries/Kebia]] | [[File:Occa.png|32px]] [[Berries/Occa]] | [[File:Kebia.png|32px]] [[Berries/Kebia]] | [[File:Occa.png|32px]] [[Berries/Occa]] | [[File:Kebia.png|32px]] [[Berries/Kebia]] |
+| [[File:Occa.png|32px]] [[Berries/Occa]] | [[File:Kebia.png|32px]] [[Berries/Kebia]] | [[File:Occa.png|32px]] [[Berries/Occa]] | [[File:Kebia.png|32px]] [[Berries/Kebia]] | [[File:Occa.png|32px]] [[Berries/Occa]] |
+| [[File:Kebia.png|32px]] [[Berries/Kebia]] | [[File:Occa.png|32px]] [[Berries/Occa]] | [[File:Kebia.png|32px]] [[Berries/Kebia]] | [[File:Occa.png|32px]] [[Berries/Occa]] | [[File:Kebia.png|32px]] [[Berries/Kebia]] |
+| [[File:Occa.png|32px]] [[Berries/Occa]] | [[File:Kebia.png|32px]] [[Berries/Kebia]] | [[File:Occa.png|32px]] [[Berries/Occa]] | [[File:Kebia.png|32px]] [[Berries/Kebia]] | [[File:Occa.png|32px]] [[Berries/Occa]] |
 
 ### Sitrus/Kebia Planting Formation
 If you only have Kebia berries and neither of the other two, you can use Kebia and Sitrus at the same time in the following formation.
@@ -210,11 +215,11 @@ If you only have Kebia berries and neither of the other two, you can use Kebia a
 **Farm**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Sitrus.png\32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\32px]] [[Berries/Sitrus]] |
-| [[File:Sitrus.png\32px]] [[Berries/Sitrus]] | [[File:Kebia.png\32px]] [[Berries/Kebia]] | [[File:Sitrus.png\32px]] [[Berries/Sitrus]] | [[File:Kebia.png\32px]] [[Berries/Kebia]] | [[File:Sitrus.png\32px]] [[Berries/Sitrus]] |
-| [[File:Sitrus.png\32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\32px]] [[Berries/Sitrus]] |
-| [[File:Sitrus.png\32px]] [[Berries/Sitrus]] | [[File:Kebia.png\32px]] [[Berries/Kebia]] | [[File:Sitrus.png\32px]] [[Berries/Sitrus]] | [[File:Kebia.png\32px]] [[Berries/Kebia]] | [[File:Sitrus.png\32px]] [[Berries/Sitrus]] |
-| [[File:Sitrus.png\32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\32px]] [[Berries/Sitrus]] |
+| [[File:Sitrus.png|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png|32px]] [[Berries/Sitrus]] |
+| [[File:Sitrus.png|32px]] [[Berries/Sitrus]] | [[File:Kebia.png|32px]] [[Berries/Kebia]] | [[File:Sitrus.png|32px]] [[Berries/Sitrus]] | [[File:Kebia.png|32px]] [[Berries/Kebia]] | [[File:Sitrus.png|32px]] [[Berries/Sitrus]] |
+| [[File:Sitrus.png|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png|32px]] [[Berries/Sitrus]] |
+| [[File:Sitrus.png|32px]] [[Berries/Sitrus]] | [[File:Kebia.png|32px]] [[Berries/Kebia]] | [[File:Sitrus.png|32px]] [[Berries/Sitrus]] | [[File:Kebia.png|32px]] [[Berries/Kebia]] | [[File:Sitrus.png|32px]] [[Berries/Sitrus]] |
+| [[File:Sitrus.png|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png|32px]] [[Berries/Sitrus]] |
 
 ### Persim Planting Formation
 Another common strategy involves mutating [[Berries/Persim]] berries if you haven't unlocked Occa, Kebia, or Colbur yet.
@@ -228,8 +233,8 @@ The most efficient way to gain experience for the [[Sprinklotad]] is to equip th
 **Farm**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Cheri.png\32px]] [[Berries/Cheri]] | [[File:Cheri.png\32px]] [[Berries/Cheri]] | [[File:Cheri.png\32px]] [[Berries/Cheri]] | [[File:Cheri.png\32px]] [[Berries/Cheri]] | [[File:Cheri.png\32px]] [[Berries/Cheri]] |
-| [[File:Cheri.png\32px]] [[Berries/Cheri]] | [[File:Kasib.png\32px]] [[Berries/Kasib]] | [[File:Cheri.png\32px]] [[Berries/Cheri]] | [[File:Kasib.png\32px]] [[Berries/Kasib]] | [[File:Cheri.png\32px]] [[Berries/Cheri]] |
-| [[File:Cheri.png\32px]] [[Berries/Cheri]] | [[File:Cheri.png\32px]] [[Berries/Cheri]] | [[File:Cheri.png\32px]] [[Berries/Cheri]] | [[File:Cheri.png\32px]] [[Berries/Cheri]] | [[File:Cheri.png\32px]] [[Berries/Cheri]] |
-| [[File:Cheri.png\32px]] [[Berries/Cheri]] | [[File:Kasib.png\32px]] [[Berries/Kasib]] | [[File:Cheri.png\32px]] [[Berries/Cheri]] | [[File:Kasib.png\32px]] [[Berries/Kasib]] | [[File:Cheri.png\32px]] [[Berries/Cheri]] |
-| [[File:Cheri.png\32px]] [[Berries/Cheri]] | [[File:Cheri.png\32px]] [[Berries/Cheri]] | [[File:Cheri.png\32px]] [[Berries/Cheri]] | [[File:Cheri.png\32px]] [[Berries/Cheri]] | [[File:Cheri.png\32px]] [[Berries/Cheri]] |
+| [[File:Cheri.png|32px]] [[Berries/Cheri]] | [[File:Cheri.png|32px]] [[Berries/Cheri]] | [[File:Cheri.png|32px]] [[Berries/Cheri]] | [[File:Cheri.png|32px]] [[Berries/Cheri]] | [[File:Cheri.png|32px]] [[Berries/Cheri]] |
+| [[File:Cheri.png|32px]] [[Berries/Cheri]] | [[File:Kasib.png|32px]] [[Berries/Kasib]] | [[File:Cheri.png|32px]] [[Berries/Cheri]] | [[File:Kasib.png|32px]] [[Berries/Kasib]] | [[File:Cheri.png|32px]] [[Berries/Cheri]] |
+| [[File:Cheri.png|32px]] [[Berries/Cheri]] | [[File:Cheri.png|32px]] [[Berries/Cheri]] | [[File:Cheri.png|32px]] [[Berries/Cheri]] | [[File:Cheri.png|32px]] [[Berries/Cheri]] | [[File:Cheri.png|32px]] [[Berries/Cheri]] |
+| [[File:Cheri.png|32px]] [[Berries/Cheri]] | [[File:Kasib.png|32px]] [[Berries/Kasib]] | [[File:Cheri.png|32px]] [[Berries/Cheri]] | [[File:Kasib.png|32px]] [[Berries/Kasib]] | [[File:Cheri.png|32px]] [[Berries/Cheri]] |
+| [[File:Cheri.png|32px]] [[Berries/Cheri]] | [[File:Cheri.png|32px]] [[Berries/Cheri]] | [[File:Cheri.png|32px]] [[Berries/Cheri]] | [[File:Cheri.png|32px]] [[Berries/Cheri]] | [[File:Cheri.png|32px]] [[Berries/Cheri]] |
