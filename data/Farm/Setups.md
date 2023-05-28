@@ -175,9 +175,9 @@ Here is the setup you need to mutate a Petaya berry if you shovel your only one 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} |
-| [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Enigma.png|32px]] [[Berries/Enigma]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Enigma.png|32px]] [[Berries/Enigma]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} |
+| [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Enigma.png|32px]] [[Berries/Enigma]] | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Enigma.png|32px]] [[Berries/Enigma]] | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} |
 | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} |
-| [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Enigma.png|32px]] [[Berries/Enigma]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Enigma.png|32px]] [[Berries/Enigma]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} |
+| [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Enigma.png|32px]] [[Berries/Enigma]] | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Enigma.png|32px]] [[Berries/Enigma]] | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} |
 | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png|32px]] [[Berries/Payapa]] {.mutation} |
 
 ## Roaming Pokémon Setup
