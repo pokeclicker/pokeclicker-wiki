@@ -61,7 +61,7 @@ _**Growth Aura Received: 9.46x**_
 
 ## Harvest Aura Setups
 These setups are the most efficient setups for harvesting the greatest amount of berries.
-_Green Squares indicate which squares to apply [[Items/Rich Mulch]] to._
+_Remember to apply [[Items/Rich Mulch]] before harvesting!_
 
 ### Passho
 This is the setup for harvesting the maximum amount of berries from any berry with a harvest amount of 1 or greater.
