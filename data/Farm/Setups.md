@@ -4,7 +4,7 @@ Here are some useful berry setups to know.
 _Note: Aura Received is multiplicative from all the auras affecting a berry. If a Berry receives the aura from 4 aura berries each at 1.3x aura output, that Berry receives 1.3^4 = 2.8561, or ~2.86x as an aura multiplier. If a Berry receives auras from 3 berries, two at 1.3x and one at 1.2x, the berry receives 1.3^2 * 1.2x = 2.028, or ~2.03x aura output_
 
 ## Growth Aura Setups
-Blue squares show Boost Mulch being recommended. If you are ready to harvest the boosted berry use Rich Mulch for maximum harvesting gain.
+You can use Boost Mulch to speed up berry growth. If you are ready to harvest the boosted berry use Rich Mulch for maximum harvesting gain.
 
 - _Tip: Once a berry has grown enough using [[Berries/Wacan]]'s Boost Aura, swap the Wacans for [[Berries/Passho]] berries to gain maximum Berry Harvests._
 
@@ -61,7 +61,7 @@ _**Growth Aura Received: 9.46x**_
 
 ## Harvest Aura Setups
 These setups are the most efficient setups for harvesting the greatest amount of berries.
-_Green Squares indicate which squares to apply [[Rich Mulch]] to._
+_Green Squares indicate which squares to apply [[Items/Rich Mulch]] to._
 
 ### Passho
 This is the setup for harvesting the maximum amount of berries from any berry with a harvest amount of 1 or greater.
@@ -107,9 +107,9 @@ Due to the very low harvest amount, completely surrounding each Berry with 8 Pas
 
 For maximum efficiency you should swap from the Wacan formation to the Passho formation before the Gen 5 berries are ripe.
 It takes a little bit of math to perform this swap correctly due to the Wacan Growth aura variably affecting the Gen 5 berries depending on what stage the Wacan berries are in, but if you multiply the shown 'Time until Ripe' by the 'Aura Received' you get how much longer the Gen 5 berry has until it would be ripe without the Wacan berries' effect.
-Since it takes some time for the Passho berries to grow, first calculate the actual time until ripe (without modifiers), and then harvest every Wacan berry when the Gen 5 berry has less time until it's ripe than it will take the Passho to ripen (including any growth multipliers ([[Sprayduck]],  [[Boost Mulch]]) you're using on the Passho berries).
+Since it takes some time for the Passho berries to grow, first calculate the actual time until ripe (without modifiers), and then harvest every Wacan berry when the Gen 5 berry has less time until it's ripe than it will take the Passho to ripen (including any growth multipliers ([[Oak Items/Sprayduck]],  [[Items/Boost Mulch]]) you're using on the Passho berries).
 
-Make sure to apply [[Rich Mulch]] before harvesting the Gen 5 berries!
+Make sure to apply [[Items/Rich Mulch]] before harvesting the Gen 5 berries!
 Using this strategy will yield 32 (28 cumulative) Gen 5 berries harvested per cycle.
 
 _**Growth Bonus: 8.14x**_
@@ -181,7 +181,7 @@ Encounter Chance per 1.5s: 1.28%**_
 ## Regaining Lost Gen 5 Berries
 Shoveled your only copy of a Gen 5 berry by accident? You can use [[Berries/Enigma]] berries to mutate another rather than having to go through the original mutation process.
 Here is the setup you need to mutate a Petaya berry if you shovel your only one by accident.
-- _Note: Don't forget to equip the [[Squirtbottle]], and use [[Surprise Mulch]] as this is a mutation. Purple squares indicate where mutations can occur._
+- _Note: Don't forget to equip the [[Oak Items/Squirtbottle]], and use [[Items/Surprise Mulch]] as this is a mutation. Purple squares indicate where mutations can occur._
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -206,7 +206,7 @@ _**Roaming Pokémon Chance: 2.54x**_
 :::
 
 ## Squirtbottle Leveling Strategies
-Here are a few highly efficient strategies on how to level up the Squirtbottle based on which berries you have unlocked.
+Here are a few highly efficient strategies on how to level up the [[Oak Items/Squirtbottle]] based on which berries you have unlocked.
 
 ### Occa/Kebia Planting Formation
 If you want to be able to gain experience more passively, then the best strategy is with Occa and Kebia berries. Colbur works for this as well, but takes longer enough to grow that it isn't as useful. This strategy will likely let you level up your Squirtbottle from 0 to 5 without having to set it up again unless you get unlucky with a full takeover.
@@ -243,7 +243,7 @@ This is a very active strategy, but this setup should provide a little over 3.58
 This strategy is also the fastest, but needs at least about 4 and a half hours of active growth and mutation time to complete.
 
 ## Sprinklotad Leveling Strategy
-The most efficient way to gain experience for the [[Sprinklotad]] is to equip the fully-leveled Sprayduck and surround 4 Kasib berries with Cheri berries in the following way. Keep replanting Cheris as they wither while either shoveling or harvesting extra Kasibs that may sprout.
+The most efficient way to gain experience for the [[Oak Items/Sprinklotad]] is to equip the fully-leveled Sprayduck and surround 4 Kasib berries with Cheri berries in the following way. Keep replanting Cheri as they wither while either shoveling or harvesting extra Kasib that may sprout.
 
 **Farm**
 ::: table-mutations
