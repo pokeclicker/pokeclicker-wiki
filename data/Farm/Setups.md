@@ -67,7 +67,7 @@ _Remember to apply [[Items/Rich Mulch]] before harvesting!_
 This is the setup for harvesting the maximum amount of berries from any berry with a harvest amount of 1 or greater.
 The setup gives you 6 plots at 4.83x harvest rate, and 4 plots at 2.86x harvest rate.
 
-- Example: Using this setup, growing and harvesting 10 [[Berries/Aguav]] berries while all the Passho berries are ripe will yield 684 Aguav berries (1,372 with Rich Mulch) per harvesting cycle. In comparison, growing and harvesting 25 Aguav berries without any Passho berries would yield 425 Aguav berries (850 with Rich mulch) per harvesting cycle. Using Farmhand Jessie with the [[Sprayduck]] equipped to repeatedly harvest Aguav berries every 4 minutes would yield 40,356 berries (80,948 with Rich Mulch) for the duration of the Passho berries' ripe phase.
+- Example: Using this setup, growing and harvesting 10 [[Berries/Aguav]] berries while all the Passho berries are ripe will yield 684 Aguav berries (1,372 with Rich Mulch) per harvesting cycle. In comparison, growing and harvesting 25 Aguav berries without any Passho berries would yield 425 Aguav berries (850 with Rich mulch) per harvesting cycle. Using Farmhand Jessie with the [[Oak Items/Sprayduck]] equipped to repeatedly harvest Aguav berries every 4 minutes would yield 40,356 berries (80,948 with Rich Mulch) for the duration of the Passho berries' ripe phase.
 
 _**Harvest Aura Bonuses:
 6 Plots: 4.83x - 4 Plots: 2.86x**_
@@ -85,7 +85,7 @@ This setup will yield slightly fewer berries per harvesting cycle, in exchange f
 
 - Example: Despite the Petaya berry taking a slot away from a Passho berry, growing 10 Aguav berries would still yield 654 Aguav berries per harvesting cycle (1,311 with Rich Mulch). However, the Petaya berry will keep all Passho berries ripe for at least 64 hours. Farmhand Jessie could harvest 618,240 Aguav berries (harvesting in 4 minute cycles) over this time.
 
-You can also simply replace a Passho in one of the corners with a 2nd Petaya. When the first Petaya's wither time is getting close to the growth time of a Petaya minus the wither time of a Passho (10 hours with just Sprayduck equipped, ~6 hours 40 minutes if you use [[Boost Mulch]] on the 2nd Petaya as well as having the Sprayduck equipped).
+You can also simply replace a Passho in one of the corners with a 2nd Petaya. When the first Petaya's wither time is getting close to the growth time of a Petaya minus the wither time of a Passho (10 hours with just Sprayduck equipped, ~6 hours 40 minutes if you use [[Items/Boost Mulch]] on the 2nd Petaya as well as having the Sprayduck equipped).
 When timed correctly, you can harvest the near-death Petaya and replace it with another Passho Berry to keep this formation up indefinitely.
 _**Harvest Aura Bonuses:
 5 Plots: 4.83x - 3 Plots: 2.86x
