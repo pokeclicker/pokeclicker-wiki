@@ -14253,6 +14253,12 @@ const searchOptions = [
     type: 'Wandering Pokémon',
     page: '',
   },
+  // Shiny Chance
+  {
+    display: 'Shiny Chance',
+    type: 'Shiny Chance',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
