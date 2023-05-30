@@ -43,3 +43,7 @@ Berries that mutate by growing near required berries must have the required berr
 Berries that mutate by evolving will replace an existing ripe berry with the mutated berry or by reaching a specific flavor profile
 
 _Note: Depending on the Flavor profile required for the Berry to evolve, an evolution mutation may occur while the berries are still in the Taller or Bloom growth stages, rather than only when Ripe._
+
+## Setups
+
+The different auras of the berries can stack and be used for give important bonus in the main game. To check them go to [[Farm/Setups]]
