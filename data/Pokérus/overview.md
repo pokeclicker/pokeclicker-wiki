@@ -1,6 +1,6 @@
 ## Spreading Pokérus
 
-Spreading Pokérus can only occur in the [[Pokémon Day Care]]. Currently, only a Pokémon that fulfill the below conditions are capable of spreading the virus:
+Spreading Pokérus can only occur in the [Pokémon Day Care](#!Hatchery). Currently, only a Pokémon that fulfill the below conditions are capable of spreading the virus:
 
 **Spreader requeriments**
 1. Infected with Pokérus, state is **Contagious** or **Resistant**
