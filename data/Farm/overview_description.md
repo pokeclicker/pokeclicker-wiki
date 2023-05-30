@@ -46,4 +46,4 @@ _Note: Depending on the Flavor profile required for the Berry to evolve, an evol
 
 ## Setups
 
-The different auras of the berries can stack and be used for give important bonus in the main game. To check them go to [[Farm/Setups]]
+The different berry auras can stack and be used to get bonuses in the main game. To check them, go to the [[Farm/Setups]] page.
