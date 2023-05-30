@@ -104,12 +104,6 @@ const searchOptions = [
     type: 'Battle Cafe',
     page: '',
   },
-  // Battle Cafe
-  {
-    display: 'Battle Frontier',
-    type: 'Battle Frontier',
-    page: '',
-  },
   // Vitamins
   {
     display: 'Vitamins',
