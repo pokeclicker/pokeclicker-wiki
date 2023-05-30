@@ -18,9 +18,9 @@
         <!-- ko if: typeof $data.optionalParameters?.dungeonRegionalDifficulty === 'number' -->
         <div>
             <h3>Regional Difficulty:</h3>
-            <p>This dungeons difficulty is not based on it's region, but instead:</p>
-            <p data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.optionalParameters.dungeonRegionalDifficulty])"></p>
-            <p>This is relavant for stuff like loot debuff, HP and experience.
+            <p>This dungeon's difficulty is not based on its region, but instead it's based on:
+            <b><span data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.optionalParameters.dungeonRegionalDifficulty])"></span></b>.
+            This is relevant for things like loot debuff, HP, experience, and dungeon size.</p>
         </div>
         <!-- /ko -->
         <div>
@@ -41,7 +41,7 @@
                                 <!-- ko if: $data.baseHealth -->
                                     <th scope="row"><a class="text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a></th>
                                     <td><img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data.name).id + '.png'}"/></td>
-                                    <td data-bind="text: $data.baseHealth"></td>
+                                    <td data-bind="text: $data.baseHealth.toLocaleString()"></td>
                                 <!-- /ko -->
                                 <!-- ko ifnot: $data.baseHealth -->
                                     <th scope="row" data-bind="text: $data.name"></th>
@@ -58,7 +58,7 @@
                                                     <tr>
                                                         <td><a class="text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a></td>
                                                         <td><img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data.name).id + '.png'}"/></td>
-                                                        <td data-bind="text: $data.maxHealth"></td>
+                                                        <td data-bind="text: $data.maxHealth.toLocaleString()"></td>
                                                     </tr>
                                                 <!-- /ko -->
                                             </tbody>
