@@ -12,7 +12,8 @@ Safari Zone Encounter  | 1 / 2048 | 1 / 1024 | 1 / 706
 Purchased Shop Pokémon | 1 / 1024 | 1 / 512 | 1 / 353
 
 ## Farm Strategies
-[Breeding](#!Hatchery) is the most effective way to obtain Shiny Pokémon. The [[Farm]] can be used to increase both the Egg Steps gained by defeating a Pokémon (thus hatching eggs faster) and the Shiny Rate in general. Below is a table of optimal Shiny strategies along with planting strategies to achieve these strategies. Furthermore, a [Shiny Breeding Rate Calculator](https://docs.google.com/spreadsheets/d/1PqL4TNH61Bo1t0hG5TBbvOMavPU6D3EzbKnUNXxjqUk/edit?usp=sharing) has been created for more specific calculations of Shiny Rates.
+[Breeding](#!Hatchery) is the most effective way to obtain Shiny Pokémon. The [[Farm]] can be used to increase both the Egg Steps gained by defeating a Pokémon (thus hatching eggs faster) and the Shiny Rate in general. Below is a table of optimal Shiny strategies along with planting formation to achieve these strategies.
+Furthermore, a [Shiny Breeding Rate Calculator](https://docs.google.com/spreadsheets/d/1PqL4TNH61Bo1t0hG5TBbvOMavPU6D3EzbKnUNXxjqUk/edit?usp=sharing) has been created for more specific calculations of Shiny Rates.
 
 ### Optimal Strategy Rank Table
 Berry Strategy | Efficiency Ranking | Berry Strategy | Efficiency Ranking
