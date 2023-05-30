@@ -18,15 +18,15 @@ Furthermore, a [Shiny Breeding Rate Calculator](https://docs.google.com/spreadsh
 ### Optimal Strategy Rank Table
 Berry Strategy | Efficiency Ranking | Berry Strategy | Efficiency Ranking
 :--- | :--- | :--- | :---
-[[Starf]] + [[Lum]] + [[Chople]] + [[Petaya]] | 1 | [[Chople]] + [[Petaya]] | 10
-[[Chople]] + [[Babiri]] + [[Petaya]] + [[Lum]] | 2 | [[Chople]] + [[Babiri]] | 11
-[[Starf]] + [[Lum]] + [[Petaya]] | 3 | [[Chople]] + [[Babiri]] + [[Petaya]] | 12
-[[Chople]] + [[Lum]] + [[Petaya]] | 4 | [[Starf]] | 13
-[[Chople]] + [[Babiri]] + [[Lum]] | 5 | [[Chople]] | 14
-[[Chople]] + [[Lum]] | 6 | [[Chople]] + [[Yache]] | 14
-[[Starf]] + [[Chople]] + [[Petaya]] | 7 | [[Chople]] + [[Haban]] | 14
-[[Starf]] + [[Lum]] + [[Chople]] | 8 | [[Starf]] + [[Chople]] | 15
-[[Starf]] + [[Lum]] | 9 | -- | --
+[[Berries/Starf]] + [[Berries/Lum]] + [[Berries/Chople]] + [[Berries/Petaya]] | 1 | [[Berries/Chople]] + [[Berries/Petaya]] | 10
+[[Berries/Chople]] + [[Berries/Babiri]] + [[Berries/Petaya]] + [[Berries/Lum]] | 2 | [[Berries/Chople]] + [[Berries/Babiri]] | 11
+[[Berries/Starf]] + [[Berries/Lum]] + [[Berries/Petaya]] | 3 | [[Berries/Chople]] + [[Berries/Babiri]] + [[Berries/Petaya]] | 12
+[[Berries/Chople]] + [[Berries/Lum]] + [[Berries/Petaya]] | 4 | [[Berries/Starf]] | 13
+[[Berries/Chople]] + [[Berries/Babiri]] + [[Berries/Lum]] | 5 | [[Berries/Chople]] | 14
+[[Berries/Chople]] + [[Berries/Lum]] | 6 | [[Berries/Chople]] + [[Berries/Yache]] | 14
+[[Berries/Starf]] + [[Berries/Chople]] + [[Berries/Petaya]] | 7 | [[Berries/Chople]] + [[Berries/Haban]] | 14
+[[Berries/Starf]] + [[Berries/Lum]] + [[Berries/Chople]] | 8 | [[Berries/Starf]] + [[Berries/Chople]] | 15
+[[Berries/Starf]] + [[Berries/Lum]] | 9 | -- | --
 
 ### Expanded Rate Table Calculations
 *_All calculations for Rank Table done  [here](https://docs.google.com/spreadsheets/d/1kyQIpahGezv8tYYeQDoZMHjw6cVyGr7FD4MlXgbPr68/edit?usp=sharing)_*
