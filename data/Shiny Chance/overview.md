@@ -6,14 +6,15 @@ Location/Method | Chance (no Shiny Charm) | Chance (Lv 5 Shiny Charm) | Chance (
 Route Encounter | 1 / 8192 | 1 / 4096 | 1 / 2823
 [Dungeon](#!Dungeons) Encounter | 1 / 4096 | 1 / 2048 | 1 / 1412
 Evolution Item/Level Up Evolutions | 1 / 2048 | 1 / 1024 | 1 / 706
-Safari Zone Encounter  | 1 / 2048 | 1 / 1024 | 1 / 706
+Safari Zone Encounter  | 1 / 1024 | 1 / 512 | 1 / 353
 [Hatching an Egg](#!Hatchery) | 1 / 1024 | 1 / 512 | 1 / 353
-[Farm Wanderer](#!Wandering_Pokémon) | 1 / 1024 | 1 / 512 | 1 / 353
+Reward | 1 / 1024 | 1 / 512 | 1 / 353
+[Battle Frontier Milestone](#!Battle_Frontier) | 1 / 1024 | 1 / 512 | 1 / 353
 Purchased Shop Pokémon | 1 / 1024 | 1 / 512 | 1 / 353
+[Farm Wanderer](#!Wandering_Pokémon) | 1 / 1024 | 1 / 512 | 1 / 353
 
 ## Farm Strategies
 [Breeding](#!Hatchery) is the most effective way to obtain Shiny Pokémon. The [[Farm]] can be used to increase both the Egg Steps gained by defeating a Pokémon (thus hatching eggs faster) and the Shiny Rate in general. Below is a table of optimal Shiny strategies along with planting formation to achieve these strategies.
-Furthermore, a [Shiny Breeding Rate Calculator](https://docs.google.com/spreadsheets/d/1PqL4TNH61Bo1t0hG5TBbvOMavPU6D3EzbKnUNXxjqUk/edit?usp=sharing) has been created for more specific calculations of Shiny Rates.
 
 ### Optimal Strategy Rank Table
 Berry Strategy | Efficiency Ranking | Berry Strategy | Efficiency Ranking
@@ -29,7 +30,7 @@ Berry Strategy | Efficiency Ranking | Berry Strategy | Efficiency Ranking
 [[Berries/Starf]] + [[Berries/Lum]] | 9 | -- | --
 
 ### Expanded Rate Table Calculations
-*_All calculations for Rank Table done  [here](https://docs.google.com/spreadsheets/d/1kyQIpahGezv8tYYeQDoZMHjw6cVyGr7FD4MlXgbPr68/edit?usp=sharing)_*
+*_All calculations for the Rank Table were done [here](https://docs.google.com/spreadsheets/d/1kyQIpahGezv8tYYeQDoZMHjw6cVyGr7FD4MlXgbPr68/edit?usp=sharing)_*
 
 Legend:
 - MESBM - Max Egg Steps Boost Multiplier
@@ -41,7 +42,7 @@ Legend:
 - MSBM w/ U% - Max Shiny Boost Multiplier w/ Uptime% factored in
 - ER - Efficiency Rank where 1 = Best
 
-Note: The table assumes perfect planting, where berries are planted not at the same time, but are planted so all plants are in the berry stage at the same time.
+**Note:** The table assumes perfect planting, where berries are planted not at the same time, but are planted so all plants are in the berry stage at the same time.
 
 Full Strategy | MESBM | MSBM | BD (hours) | MRT (hours) | U% | MESBM w/ U% | MSBM w/ U% | ER
 :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---
@@ -191,6 +192,3 @@ Starf | - | - | -
 Petaya | - | - | -
 Chople | 19 hours 59 mins 59 secs until ripe | 13 hours 19 mins 59 secs until ripe | 8 hours 53 mins 19 secs until ripe
 Lum | 11 hours 59 mins 59 secs until ripe | 7 hours 59 mins 59 secs until ripe | 5 hours 19 mins 59 secs until ripe
-
-## Trivia
-Shinies as of version 0.3.0 increase click damage at a 150% rate compared to normal Pokémon.
