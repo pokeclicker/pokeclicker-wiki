@@ -33,6 +33,32 @@ Row | lorem | ipsum
 
 ---
 
+### Collapse: {#tables}
+
+:::collapse This is a colapsable block
+
+Title | center aligned | right aligned
+:--- | :---: | ---:
+Row | lorem | ipsum
+1 | 2 | 3
+4 | 500 | 600
+
+:::
+
+```
+:::collapse This is a colapsable block
+
+Title | center aligned | right aligned
+:--- | :---: | ---:
+Row | lorem | ipsum
+1 | 2 | 3
+4 | 500 | 600
+
+:::
+```
+
+---
+
 ### Linking to other wiki pages: {#linking}
 
 [[Pokemon]] or [[Pokemon/Charmander]] or @[[Wiki Guide]]
@@ -70,3 +96,4 @@ If you want to add a comment that won't be seen in the render version you can us
 ```
 <!-- comment here -->
 ```
+

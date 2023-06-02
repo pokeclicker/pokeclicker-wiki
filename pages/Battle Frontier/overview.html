@@ -28,16 +28,16 @@
 <br>
 <div>
     <h3>Battle Frontier Statistics</h3>
-    <table class="table table-hover table-striped table-bordered" data-bind="with: { stage: ko.observable(100), enemyPokemon: ko.observable(BattleFrontierBattle.enemyPokemon.peek()) }">
+    <table class="table table-hover table-striped table-bordered" data-bind="with: { stage: ko.observable(BattleFrontierRunner.stage.peek()), enemyPokemon: ko.observable(BattleFrontierBattle.enemyPokemon.peek()) }">
         <thead class="thead-dark">
             <tr>
                 <th>Level</th>
-                <th><input type="number" min="1" step="1" value="100" data-bind="event: { input: (data, e) => {
+                <th><input type="number" min="1" step="1" data-bind="event: { input: (data, e) => {
                     BattleFrontierRunner.stage = ko.observable(+e.target.value);
                     BattleFrontierBattle.generateNewEnemy();
                     $data.stage(+e.target.value);
                     $data.enemyPokemon(BattleFrontierBattle.enemyPokemon());
-                } }"/></th>
+                } }, value: $data.stage"/></th>
             </tr>
         </thead>
         <tbody>

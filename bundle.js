@@ -12701,6 +12701,35 @@ const md = new markdownit({
   .use(require('markdown-it-container'), 'table-auto')
   .use(require('markdown-it-container'), 'table-tight')
   .use(require('markdown-it-container'), 'table-mutations')
+  .use(require('markdown-it-container'), 'collapse', {
+
+    validate: function(params) {
+      return params.trim().match(/^collapse\s+(.*)$/);
+    },
+  
+    render: function (tokens, idx) {
+      const m = tokens[idx].info.trim().match(/^collapse\s+(.*)$/);
+  
+      if (tokens[idx].nesting === 1) {
+        const randID = Rand.string(5);
+        // opening tag
+        return `
+        <div class="accordion accordion-flush">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${randID}" aria-expanded="true">
+              ${md.utils.escapeHtml(m[1])}
+              </button>
+            </h2>
+            <div id="collapse-${randID}" class="accordion-collapse collapse show">
+              <div class="accordion-body">\n`;
+  
+      } else {
+        // closing tag
+        return `</div></div></div>\n`;
+      }
+    }
+  })
   .use(require('./markdown-plugins/hidden-comments.js'))
   .use(require('./markdown-plugins/image-size.js'))
   .use(require('./markdown-plugins/wiki-links-badge.js'))
@@ -14103,12 +14132,6 @@ const searchOptions = [
   {
     display: 'Battle Café',
     type: 'Battle Cafe',
-    page: '',
-  },
-  // Battle Cafe
-  {
-    display: 'Battle Frontier',
-    type: 'Battle Frontier',
     page: '',
   },
   // Vitamins

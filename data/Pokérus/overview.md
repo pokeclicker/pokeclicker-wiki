@@ -1,18 +1,18 @@
 ## Spreading Pokérus
 
-Spreading Pokérus can only occur in the [[Pokémon Day Care]]. Currently, only a Pokémon that fulfill the below conditions are capable of spreading the virus:
+Spreading Pokérus can only occur in the [Pokémon Day Care](#!Hatchery). Currently, only a Pokémon that fulfill the below conditions are capable of spreading the virus:
 
-**Spreader requeriments**
+**Spreader requirements**
 1. Infected with Pokérus, state is **Contagious** or **Resistant**
 2. Not ready to hatch
-3. Being bred manually *(ie: a hatchery helper is not assisting with its egg)*
+3. Being bred manually *(i.e., a hatchery helper is not assisting with its egg)*
 
 Only Pokémon that fulfill the below conditions are capable of contracting the virus:
 
-**Contraction requeriments**
+**Contraction requirements**
 1. Not ready to hatch
 2. Share at least one type with a Pokémon that fulfills the "Spreader Requisites"
-3. Being bred manually *(ie: a hatchery helper is not assisting with its egg)*
+3. Being bred manually *(i.e., a hatchery helper is not assisting with its egg)*
 
 ## Pokérus Status
 
@@ -75,7 +75,7 @@ Example 3: Catching a **Shiny Roaming Pokémon** with a **Repeatball** yields:
 
 EVs increase the amount of damage that a Pokémon does. EVs multiply the damage done by a Pokémon. If your Pokémon has fewer than 50 EVs, a Pokémon's EV Damage Multiplier increases by 0.01 per EV, and consequently a Pokémon gains 1% extra damage per EV for the first 50 EVs.
 
-Pokemon that have: contracted Pokérus, have left the hatchery after contracting Pokérus *(ie: not Infected)*, and have gained less than 50 EVs are considered Contagious. However, Pokémon that fulfill all the above conditions but have gained 50 or more EVs are considered Resistant. See Pokérus States for more information on Pokérus States
+Pokemon that have: contracted Pokérus, have left the hatchery after contracting Pokérus *(i.e., not Infected)*, and have gained less than 50 EVs are considered Contagious. However, Pokémon that fulfill all the above conditions but have gained 50 or more EVs are considered Resistant. See Pokérus States for more information on Pokérus States
 
 Beyond 50 EVs, Pokémon will still gain EVs at the same rate, but will see diminishing returns with respect to the EV Damage Multiplier bonus gained per EV gained. There is no limit to this multiplier.
 
