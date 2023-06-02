@@ -39,7 +39,15 @@
                         <!-- ko foreach: $data.bossList -->
                             <tr>
                                 <!-- ko if: $data.baseHealth -->
-                                    <th scope="row"><a class="text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a></th>
+                                    <th scope="row"><a class="text-bg-secondary" href="#!" data-bind="text: 
+                                        $data.name + `${$data.options ? ($data.options.requirement ? ' 🔒' : '') : ''}`, 
+                                        attr: { href: `#!Pokemon/${$data.name}` }, 
+                                        tooltip: {
+                                            title: PokemonHelper.getPokemonLocations($data.name)[PokemonLocationType.DungeonBoss][0].requirements ?? '', 
+                                            html: false, 
+                                            placement: 'bottom', 
+                                            trigger: 'hover' 
+                                        }"></a></th>
                                     <td><img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data.name).id + '.png'}"/></td>
                                     <td data-bind="text: $data.baseHealth.toLocaleString()"></td>
                                 <!-- /ko -->
