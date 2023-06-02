@@ -1,0 +1,1 @@
+NOTE: Must hatch Sliggoo during rainy or foggy weather to obtain this pokemon.
