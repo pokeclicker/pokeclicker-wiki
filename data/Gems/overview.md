@@ -107,7 +107,7 @@ Kanto routes and gyms marked with a \* are only accessible after Hoenn; if possi
 | Unova | Route 9 | 37.5% |Roxie (Virbank City)|15|100%|
 | Kalos | Route 11 | 33.3% |-|-|-|
 | Alola | Route 9| 20% |-|-|-|
-| Galar | Old Cemetery | 28.6% |Kalra (Master Dojo Battle Court) | 25|100%|
+| Galar | Old Cemetery | 28.6% |Klara (Master Dojo Battle Court) | 25|100%|
 
 
 ### Ground Gems
