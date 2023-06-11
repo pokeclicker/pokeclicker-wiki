@@ -14053,7 +14053,7 @@ const searchOptions = [
     page: '',
   },
   ...Object.values(pokemonList).map(p => ({
-    display: p.name,
+    display: `#${Math.floor(p.id).toString().padStart(3, '0')} - ${p.name}`,
     type: 'Pokémon',
     page: p.name,
   })),
