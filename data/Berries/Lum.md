@@ -50,8 +50,8 @@ Lum Berries can be obtained from the following dungeons.
 
 #### Dropped by
 | :---|
-|[[File:Mew.png\|32px]] [[Pokemon/Mew]] |
-|[[File:Celebi.png\|32px]] [[Pokemon/Celebi]] |
-|[[File:Flowering Celebi.png\|32px]] [[Pokemon/Flowering Celebi]] |
-|[[File:Grinch Celebi.png\|32px]] [[Pokemon/Grinch Celebi]] |
-|[[File:Shaymin (Land).png\|32px]] [[Pokemon/Shaymin (Land)]] |
+| [[Pokemon/Mew]] |
+| [[Pokemon/Celebi]] |
+| [[Pokemon/Flowering Celebi]] |
+| [[Pokemon/Grinch Celebi]] |
+| [[Pokemon/Shaymin (Land)]] |
