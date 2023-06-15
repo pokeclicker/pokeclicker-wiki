@@ -444,7 +444,7 @@
         <br/>
         <div>
             <h3>Egg Pattern:</h3>
-            <svg class="egg" width="100px" viewBox="0 0 126.7 126.7" xmlns="http://www.w3.org/2000/svg" data-bind="attr: {'data-type1': PokemonType[$data.type[0] || 0], 'data-type2': PokemonType[$data.type[1] || $data.type[0] || 0]}">
+            <svg class="egg" width="100px" viewBox="0 0 126.7 126.7" xmlns="http://www.w3.org/2000/svg" data-bind="attr: {'data-type1': PokemonType[$data.type[0] || 0], 'data-type2': PokemonType[$data.type[1] ?? $data.type[0] ?? 0]}">
                 <defs>
                   <filter id="b" width="1.193" height="1.123" x="-.096" y="-.061" color-interpolation-filters="sRGB">
                     <feGaussianBlur stdDeviation=".402"></feGaussianBlur>
