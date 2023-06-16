@@ -149,7 +149,7 @@ _**EV Gain Bonus: 2.54x**_
 [[Wandering Pokémon]] are attracted to ripe berries. For the maximum chance of attracting a desired wandering Pokémon, use one of the setups below.
 
 ### Roseli + Lum + Attracting Berry
-Using a single Sum berry surrounded by 7 Roseli berries, and then filling the remainder of open farm spots with an attracting berry (a berry that attracts a particular species of wandering Pokémon) is the most effective way of attracting wandering Pokémon to the farm.
+Using a single Lum berry surrounded by 7 Roseli berries, and then filling the remainder of open farm spots with an attracting berry (a berry that attracts a particular species of wandering Pokémon) is the most effective way of attracting wandering Pokémon to the farm.
 - _Note: Do not use this setup with [[Berries/Occa]], [[Berries/Colbur]], or [[Berries/Kebia]] berries. Due to their nature of overtaking other berries, it is most efficient to simply plant 25 of those berries._
 
 _**Attract Aura: 1.51x,
