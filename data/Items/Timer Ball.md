@@ -9,7 +9,7 @@
 **Dungeon Catch Rate**
 |Time Remaining (Seconds)|Catch Chance (+%)|
 |---|---|
-|0 seconds|15
-|5.4 seconds|10 (Equal to Ultra Ball)
-|10 seconds|5 (Equal to Great Ball)
 |60 seconds|0 (Equal to Poké Ball)
+|10 seconds|5 (Equal to Great Ball)
+|5.4 seconds|10 (Equal to Ultra Ball)
+|0 seconds|15
