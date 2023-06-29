@@ -1,1 +1,1 @@
-**Note:** For the Wild Electrike Horde and the Wild Houndour Horde to appear, the player needs to have captured 500 Electrike and 500 Houndour respectively.
+**Note:** For the Wild Electrike Horde and the Wild Houndour Horde to appear, the player needs to have captured 500 [[Pokémon/Electrike]] and 500 [[Pokémon/Houndour]] respectively.
