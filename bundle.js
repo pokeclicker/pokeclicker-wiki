@@ -12176,7 +12176,7 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":1,"call-bind/callBound":2,"for-each":5,"gopd":9,"has-tostringtag/shams":12,"is-typed-array":18}],101:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
-  "version": "0.10.11",
+  "version": "0.10.12",
   "description": "PokéClicker repository",
   "main": "index.js",
   "scripts": {
@@ -14053,7 +14053,7 @@ const searchOptions = [
     page: '',
   },
   ...Object.values(pokemonList).map(p => ({
-    display: p.name,
+    display: `#${Math.floor(p.id).toString().padStart(3, '0')} - ${p.name}`,
     type: 'Pokémon',
     page: p.name,
   })),

@@ -44,6 +44,14 @@ Lum Berries can be obtained from the following dungeons.
 | [[Dungeons/Pattern Bush]]	        | Mythic  	| 150 Clears    |
 | [[Dungeons/Radio Tower]]	        | Mythic  	| 250 Clears    |
 | [[Dungeons/Cave of Origin]]       | Mythic  	| 150 Clears    |
-| [[Dungeons/Moor of Icarus]]       | Mythic  	| 200 Clears    |
+| [[Dungeons/Moor of Icirrus]]       | Mythic  	| 200 Clears    |
 | [[Dungeons/Pinwheel Forest]]      | Mythic  	| 200 Clears    |
 | [[Dungeons/Thrifty Megamart]]     | Mythic  	| 100 Clears    |
+
+#### Dropped by
+| :---|
+| [[Pokemon/Mew]] |
+| [[Pokemon/Celebi]] |
+| [[Pokemon/Flowering Celebi]] |
+| [[Pokemon/Grinch Celebi]] |
+| [[Pokemon/Shaymin (Land)]] |

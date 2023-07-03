@@ -11,7 +11,7 @@ The following is a list of Pokémon obtainable in Johto which cannot be found on
 |[[Items/Metal Coat]]|2|[[Pokémon/Steelix]], [[Pokémon/Scizor]]|
 |[[Items/Kings Rock]]|2|[[Pokémon/Politoed]], [[Pokémon/Slowking]]|
 |[[Items/Upgrade]]|1|[[Pokémon/Porygon2]]|
-|[[Items/Sun Stone]]|5|[[Pokémon/Crobat]], [[Pokémon/Blissey]], [[Pokémon/Espeon]], [[Pokémon/Umbreon]], [[Pokémon/Togetic]]|
+|[[Items/Soothe Bell]]|5|[[Pokémon/Crobat]], [[Pokémon/Blissey]], [[Pokémon/Espeon]], [[Pokémon/Umbreon]], [[Pokémon/Togetic]]|
 Note: Espeon and Umbreon are time-dependent; daytime (6am - 6pm / 6:00 - 18:00) and nighttime (6pm - 6am / 18:00 - 06:00), respectively.
 
 ### Shopmons

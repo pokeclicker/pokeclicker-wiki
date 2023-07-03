@@ -1,0 +1,1 @@
+**Note:** This location can only be accessed if the player is using the [Client](https://github.com/RedSparr0w/Pokeclicker-desktop/releases/latest)!

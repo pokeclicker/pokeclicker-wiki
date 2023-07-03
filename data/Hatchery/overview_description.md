@@ -50,7 +50,7 @@ Additional Breeding Queue slots can be obtained by progressing to the next regio
 
 # Farm Strategies
 
-The farm can be utilized to increase the egg steps yielded by Pokémon through the use of [[Chople]] berries. However, as Chople berries surrounded by at least three other Chople berries can mutate into [[Chilan]] berries, specfic strategies must be employed to best plant Chople berries in order to increase egg steps. Below are several strategies that can be used depending on which berries are readily accessible, accompanied by a short description of each strategy's pros and cons as well as a corresponding planting diagram.
+The farm can be utilized to increase the egg steps yielded by Pokémon through the use of [[Berries/Chople]] berries. However, as Chople berries surrounded by at least three other Chople berries can mutate into [[Berries/Chilan]] berries, specfic strategies must be employed to best plant Chople berries in order to increase egg steps. Below are several strategies that can be used depending on which berries are readily accessible, accompanied by a short description of each strategy's pros and cons as well as a corresponding planting diagram.
 
 Note: Any Strategy that used Petaya will have a slightly different timing table. Once Petaya ripens it resets the timers of all other berries and sets them to infinity. Thus, other berries can be planted so that they ripen before Petaya, and should be timed so that Petaya ripens just before they wither.
 
@@ -83,16 +83,16 @@ Legend:
 
 | Full Strategy | MESBM | BD (hours) | MRT (hours) | U% | MESBM w/ U%| ER|
 |---|---|---|---|---|---|---|
-| [[Chople ]]| 1.56x | 10 hours | 10 hours | 50% | 1.28x | 8 |
-| [[Chople]] + [[Yache]]| 1.56x | 14.29 hours | 14.29 hours | 50% | 1.28x | 8|
-| [[Chople]] + [[Haban]]| 1.56x | 20 hours | 20 hours | 50% | 1.28x | 8|
-| [[Chople]] + [[Petaya]]| 1.56x | 4 days 10 hours | 24 hours | 81.54% | 1.46x | 5|
-| [[Chople]] + [[Lum]]| 2.43x | 10 hours | 10 hours | 50% | 1.72x | 4|
-| [[Chople]] + [[Lum]] + [[Petaya]]| 2.43x | 4 days 10 hours | 24 hours | 81.54% | 2.17x | 2|
-| [[Chople]] + [[Babiri]] + [[Petaya]]| 1.81x | 4 days 10 hours | 24 hours | 81.54% | 1.66x | 7|
-| [[Chople]] + [[Babiri]]| 1.86x | 10 hours | 18 hours |35.71% | 1.31x | 6|
-| [[Chople]] + [[Babiri]] + [[Lum]]| 2.90x | 10 hours | 18 hours | 35.71% | 1.68 | 3|
-| [[Chople]] + [[Babiri]] + [[Petaya]] + [[Lum]]| 2.73x | 4 days 10 hours | 24 hours | 81.54% | 2.41x | 1|
+| [[Berries/Chople ]]| 1.56x | 10 hours | 10 hours | 50% | 1.28x | 8 |
+| [[Berries/Chople]] + [[Berries/Yache]]| 1.56x | 14.29 hours | 14.29 hours | 50% | 1.28x | 8|
+| [[Berries/Chople]] + [[Berries/Haban]]| 1.56x | 20 hours | 20 hours | 50% | 1.28x | 8|
+| [[Berries/Chople]] + [[Berries/Petaya]]| 1.56x | 4 days 10 hours | 24 hours | 81.54% | 1.46x | 5|
+| [[Berries/Chople]] + [[Berries/Lum]]| 2.43x | 10 hours | 10 hours | 50% | 1.72x | 4|
+| [[Berries/Chople]] + [[Berries/Lum]] + [[Berries/Petaya]]| 2.43x | 4 days 10 hours | 24 hours | 81.54% | 2.17x | 2|
+| [[Berries/Chople]] + [[Berries/Babiri]] + [[Berries/Petaya]]| 1.81x | 4 days 10 hours | 24 hours | 81.54% | 1.66x | 7|
+| [[Berries/Chople]] + [[Berries/Babiri]]| 1.86x | 10 hours | 18 hours |35.71% | 1.31x | 6|
+| [[Berries/Chople]] + [[Berries/Babiri]] + [[Berries/Lum]]| 2.90x | 10 hours | 18 hours | 35.71% | 1.68 | 3|
+| [[Berries/Chople]] + [[Berries/Babiri]] + [[Berries/Petaya]] + [[Berries/Lum]]| 2.73x | 4 days 10 hours | 24 hours | 81.54% | 2.41x | 1|
 
 ## Chople + Empty Rows
 
@@ -108,9 +108,9 @@ The easiest strategy for planting Chople berries is to leave empty rows separati
 | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
 :::
 
-## Chople + [[Yache]]/[[Haban]]
+## Chople + [[Berries/Yache]]/[[Berries/Haban]]
 
-A slightly more complex strategy for planting Chople berries is to plant berries that decrease growth rates ([[Yache]] or [[Haban]]) between each of the rows of Chople berries. While this takes Chople berries longer to grow, it also results in longer wither times for Chople berries. While this doesn't appear to be incredibly challenging to accomplish, and uses only 4th generation berries, the berries on the ends of each row receive a diminished growth aura effect relative to more central berries on the farm. This can make timing simultaneous ripeness of all berries on the farm challenging.
+A slightly more complex strategy for planting Chople berries is to plant berries that decrease growth rates ([[Berries/Yache]] or [[Berries/Haban]]) between each of the rows of Chople berries. While this takes Chople berries longer to grow, it also results in longer wither times for Chople berries. While this doesn't appear to be incredibly challenging to accomplish, and uses only 4th generation berries, the berries on the ends of each row receive a diminished growth aura effect relative to more central berries on the farm. This can make timing simultaneous ripeness of all berries on the farm challenging.
 
 **Egg Step Bonus: 1.56x**
 ::: table-mutations
@@ -133,9 +133,9 @@ A slightly more complex strategy for planting Chople berries is to plant berries
 :::
 
 
-## Chople + [[Petaya]]
+## Chople + [[Berries/Petaya]]
 
-A strategy that is easier in many respects than Chople + Yache/Haban is Chople + [[Petaya]]. Petaya is one of the final berries to unlock, and it is one of the most challenging to do so, so it might not be the most accessible option. However, the aura effect of Petaya berries "freeze" the timers of ripe berries on the farm, locking them at infinity so long as the Petaya plant is ripe. This is an incredibly powerful effect as Petaya berries remain ripe for 5 days (no modifiers). Thus, this strategy provides a very stable setup for three rows of Chople berries for much longer than using two empty rows.
+A strategy that is easier in many respects than Chople + Yache/Haban is Chople + [[Berries/Petaya]]. Petaya is one of the final berries to unlock, and it is one of the most challenging to do so, so it might not be the most accessible option. However, the aura effect of Petaya berries "freeze" the timers of ripe berries on the farm, locking them at infinity so long as the Petaya plant is ripe. This is an incredibly powerful effect as Petaya berries remain ripe for 5 days (no modifiers). Thus, this strategy provides a very stable setup for three rows of Chople berries for much longer than using two empty rows.
 
 **Egg Step Bonus: 1.56x**
 ::: table-mutations
@@ -147,9 +147,9 @@ A strategy that is easier in many respects than Chople + Yache/Haban is Chople +
 | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
 :::
 
-### Chople + [[Babiri]]
+### Chople + [[Berries/Babiri]]
 
-Another somewhat easy strategy is Chople + [[Babiri]]. Ripe Babiri berries prevent mutations in the berries they are near. Thus, once they are unlocked four strategically placed Babiri berries can allow for a more full farm of Chople berries.
+Another somewhat easy strategy is Chople + [[Berries/Babiri]]. Ripe Babiri berries prevent mutations in the berries they are near. Thus, once they are unlocked four strategically placed Babiri berries can allow for a more full farm of Chople berries.
 
 **Egg Step Bonus: 1.86x**
 ::: table-mutations
@@ -161,9 +161,9 @@ Another somewhat easy strategy is Chople + [[Babiri]]. Ripe Babiri berries preve
 | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
 :::
 
-### Chople + [[Lum]]
+### Chople + [[Berries/Lum]]
 
-Another somewhat easy strategy is Chople + [[Lum]]. Ripe Lum berries boost the auras of the berries they are near (max of one boost for each nearby berry). Thus, once they are unlocked four strategically placed Lum berries can allow for a farm of Chople berries with increased boosts.
+Another somewhat easy strategy is Chople + [[Berries/Lum]]. Ripe Lum berries boost the auras of the berries they are near (max of one boost for each nearby berry). Thus, once they are unlocked four strategically placed Lum berries can allow for a farm of Chople berries with increased boosts.
 
 **Egg Step Bonus: 2.43x**
 ::: table-mutations
@@ -193,9 +193,9 @@ Combines Chople + Lum with a Petaya for a longer duration boost.
 All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times.
 | Berry | Planting Time with No Modifier | Planting Time with Mulch/Sprayduck | Planting Time with Mulch+Sprayduck |
 |---|---|---|---|
-| [[Petaya]] | - | - | -|
-| [[Chople]] | 19 hours 59 minutes 59 seconds until ripe | 13 hours 19 mins 59 secs until ripe | 8 hours 53 mins 19 secs until ripe|
-| [[Lum]] | 11 hours 59 minutes 59 seconds until ripe | 7 hours 59 mins 59 secs until ripe | 5 hours 19 mins 59 secs until ripe|
+| [[Berries/Petaya]] | - | - | -|
+| [[Berries/Chople]] | 19 hours 59 minutes 59 seconds until ripe | 13 hours 19 mins 59 secs until ripe | 8 hours 53 mins 19 secs until ripe|
+| [[Berries/Lum]] | 11 hours 59 minutes 59 seconds until ripe | 7 hours 59 mins 59 secs until ripe | 5 hours 19 mins 59 secs until ripe|
 
 ### Chople + Babiri + Petaya
 
@@ -215,9 +215,9 @@ This strategy combines Chople + Babiri and Chople + Petaya, utilizing the effect
 All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times.
 | Berry | Planting Time with No Modifier | Planting Time with Mulch/Sprayduck |Planting Time with Mulch+Sprayduck|
 |---|---|---|---|
-| [[Petaya]] | - | - | -|
-| [[Babiri]] | - | - | -|
-| [[Chople]] | 19 hours 59 minutes 59 seconds until ripe | 13 hours 19 mins 59 secs until ripe | 8 hours 53 mins 19 secs until ripe|
+| [[Berries/Petaya]] | - | - | -|
+| [[Berries/Babiri]] | - | - | -|
+| [[Berries/Chople]] | 19 hours 59 minutes 59 seconds until ripe | 13 hours 19 mins 59 secs until ripe | 8 hours 53 mins 19 secs until ripe|
 
 ### Chople + Babiri + Lum
 
@@ -237,9 +237,9 @@ This strategy combines Chople + Babiri and Chople + Lum, utilizing the effects o
 All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times.
 | Berry | Planting Time with No Modifier | Planting Time with Mulch/Sprayduck | Planting Time with  Mulch+Sprayduck |
 |---|---|---|---|
-| [[Babiri]] | - | - | -|
-| [[Chople]] | 10 hours until ripe | 6 hours 40 mins until ripe | 4 hours 26 mins 40 secs until ripe|
-| [[Lum]] | 1 hour until ripe | 40 mins until ripe | 26 mins 40 secs until ripe|
+| [[Berries/Babiri]] | - | - | -|
+| [[Berries/Chople]] | 10 hours until ripe | 6 hours 40 mins until ripe | 4 hours 26 mins 40 secs until ripe|
+| [[Berries/Lum]] | 1 hour until ripe | 40 mins until ripe | 26 mins 40 secs until ripe|
 
 ### Chople + Babiri + Petaya + Lum
 
@@ -257,12 +257,12 @@ This strategy adds a Petaya berry to Chople + Babiri + Lum for a farm with one f
 
 #### Timing Table
 
-Note that [[Chople]] can mutate into [[Chilan]] at taller and later stages, so you may plant [[Chople]] according to the earlier time to give more increased egg step time, but risk having to replant a few plants or you can opt for the later time and have no risk of mutation at all.
+Note that [[Berries/Chople]] can mutate into [[Berries/Chilan]] at taller and later stages, so you may plant [[Berries/Chople]] according to the earlier time to give more increased egg step time, but risk having to replant a few plants or you can opt for the later time and have no risk of mutation at all.
 
 All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times.
 | Berry | Planting Time with No Modifier | Planting Time with Mulch/Sprayduck | Planting Time with  Mulch+Sprayduck|
 |---|---|---|---|
-| [[Petaya]] | - | - | -|
-| [[Babiri]] | - | - | -|
-| [[Chople]] | 19 hours 59 minutes 59 seconds until ripe OR 9 hours until ripe (no [[Chilan]] chance) | 13 hours 19 mins 59 secs until ripe OR 6 hours until ripe (no [[Chilan]] chance) | 8 hours 53 mins 19 secs until ripe OR 4 hours until ripe (no [[Chilan]] chance)|
-| [[Lum]] | 11 hours 59 minutes 59 seconds until ripe | 7 hours 59 mins 59 secs until ripe | 5 hours 19 mins 59 secs until ripe|
+| [[Berries/Petaya]] | - | - | -|
+| [[Berries/Babiri]] | - | - | -|
+| [[Berries/Chople]] | 19 hours 59 minutes 59 seconds until ripe OR 9 hours until ripe (no [[Chilan]] chance) | 13 hours 19 mins 59 secs until ripe OR 6 hours until ripe (no [[Berries/Chilan]] chance) | 8 hours 53 mins 19 secs until ripe OR 4 hours until ripe (no [[Chilan]] chance)|
+| [[Berries/Lum]] | 11 hours 59 minutes 59 seconds until ripe | 7 hours 59 mins 59 secs until ripe | 5 hours 19 mins 59 secs until ripe|
