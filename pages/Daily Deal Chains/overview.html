@@ -56,7 +56,7 @@
         </thead>
         <tbody data-bind="foreach: $data.deals.reverse()">
             <tr>
-                <td data-bind="text: $data.date.toISOString().split('T')[0]"></td>
+                <td data-bind="text: new Date($data.date.getTime() - $data.date.getTimezoneOffset() * 60 * 1000).toISOString().split('T')[0]"></td>
                 <td class="align-middle">
                     <img data-bind="attr: { src: `./images/${item1.name}.png` }" width="28px" class="me-2">
                     <ko data-bind="text: `${amount1} × ${item1.name}`"></ko>
