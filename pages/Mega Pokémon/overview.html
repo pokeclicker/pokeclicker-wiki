@@ -26,11 +26,35 @@
 const megaInfo = {
     'Mega Beedrill': {
         megaStone: 'Beedrillite',
-        method: `Battle Giovanni in [[Towns/Sea Mauville]] after progressing in [[Quest Lines/The Delta Episode]].`,
+        method: `Battle [[Temporary Battles/Delta Giovanni]] in [[Towns/Sea Mauville]] after progressing in [[Quest Lines/The Delta Episode]].`,
     },
     'Mega Pidgeot': {
         megaStone: 'Pidgeotite',
-        method: `Battle Mr. Stone in [[Towns/Rustboro City]] after progressing in [[Quest Lines/The Delta Episode]].`,
+        method: `Battle [[Temporary Battles/Mr. Stone]] in [[Towns/Rustboro City]] after progressing in [[Quest Lines/The Delta Episode]].`,
+    },
+    'Mega Blastoise': {
+        megaStone: 'Blastoisinite',
+        method: `Purchasable with 250,000 Water Gems from the Stone Emporium in [[Towns/Lumiose City]] after battling [[Temporary Battles/Kalos Stone Salesman]]. Free if [[Pokémon/Squirtle]] was picked as the Kanto starter.`,
+    },
+    'Mega Charizard X': {
+        megaStone: 'Charizardite X',
+        method: `Purchasable with 125,000 Fire and Dragon Gems from the Stone Emporium in [[Towns/Lumiose City]] after battling [[Temporary Battles/Kalos Stone Salesman]].`,
+    },
+    'Mega Charizard Y': {
+        megaStone: 'Charizardite Y',
+        method: `Purchasable with 125,000 Fire and Flying Gems from the Stone Emporium in [[Towns/Lumiose City]] after battling [[Temporary Battles/Kalos Stone Salesman]]. Free if [[Pokémon/Charmander]] was picked as the Kanto starter.`,
+    },
+    'Mega Venusaur': {
+        megaStone: 'Venusaurite',
+        method: `Purchasable with 125,000 Grass and Poison Gems from the Stone Emporium in [[Towns/Lumiose City]] after battling [[Temporary Battles/Kalos Stone Salesman]]. Free if [[Pokémon/Bulbasaur]] was picked as the Kanto starter.`,
+    },
+    'Mega Pinsir': {
+        megaStone: 'Pinsirite',
+        method: `Item drop in the [[Towns/Safari Zone]] after reaching Safari Level 10.`,
+    },
+    'Mega Scizor': {
+        megaStone: 'Scizorite',
+        method: `Item drop in the [[Towns/Friend Safari]] after reaching Safari Level 15.`,
     },
     'Mega Alakazam': {
         megaStone: 'Alakazite',
@@ -38,23 +62,23 @@ const megaInfo = {
     },
     'Mega Blaziken': {
         megaStone: 'Blazikenite',
-        method: `Purchasable with 125,000 Fire and Fighting Gems from the Gem Master in [[Towns/Fallarbor Town]] after battling Hoenn Stone Salesman. Free if [[Pokémon/Torchic]] was picked as the Hoenn starter.`,
+        method: `Purchasable with 125,000 Fire and Fighting Gems from the Gem Master in [[Towns/Fallarbor Town]] after battling [[Temporary Battles/Hoenn Stone Salesman]]. Free if [[Pokémon/Torchic]] was picked as the Hoenn starter.`,
     },
     'Mega Swampert': {
         megaStone: 'Swampertite',
-        method: `Purchasable with 125,000 Water and Ground Gems from the Gem Master in [[Towns/Fallarbor Town]] after battling Hoenn Stone Salesman. Free if [[Pokémon/Mudkip]] was picked as the Hoenn starter.`,
+        method: `Purchasable with 125,000 Water and Ground Gems from the Gem Master in [[Towns/Fallarbor Town]] after battling [[Temporary Battles/Hoenn Stone Salesman]]. Free if [[Pokémon/Mudkip]] was picked as the Hoenn starter.`,
     },
     'Mega Sceptile': {
         megaStone: 'Sceptilite',
-        method: `Purchasable with 250,000 Water Gems from the Gem Master in [[Towns/Fallarbor Town]] after battling Hoenn Stone Salesman. Free if [[Pokémon/Treecko]] was picked as the Hoenn starter.`,
+        method: `Purchasable with 250,000 Water Gems from the Gem Master in [[Towns/Fallarbor Town]] after battling [[Temporary Battles/Hoenn Stone Salesman]]. Free if [[Pokémon/Treecko]] was picked as the Hoenn starter.`,
     },
     'Mega Slowbro': {
         megaStone: 'Slowbronite',
-        method: `Battle Shoal Fisherman in [[Dungeons/Shoal Cave]] after progressing in [[Quest Lines/The Delta Episode]].`,
+        method: `Battle [[Temporary Battles/Shoal Fisherman]] in [[Dungeons/Shoal Cave]] after progressing in [[Quest Lines/The Delta Episode]].`,
     },
     'Mega Gyarados': {
         megaStone: 'Gyaradosite',
-        method: `Battle Team Flare Boss Lysandre in [[Towns/Couriway Town]] at Dusk after completing [[Quest Lines/A Beautiful World]].`,
+        method: `Battle [[Temporary Battles/Team Flare Boss Lysandre 2]] in [[Towns/Couriway Town]] at Dusk after completing [[Quest Lines/A Beautiful World]].`,
     },
     'Mega Gengar': {
         megaStone: 'Gengarite',
@@ -74,23 +98,23 @@ const megaInfo = {
     },
     'Mega Steelix': {
         megaStone: 'Steelixite',
-        method: `Battle Brock in [[Dungeons/Granite Cave]] after progressing in [[Quest Lines/The Delta Episode]].`,
+        method: `Battle [[Temporary Battles/Delta Brock]] in [[Dungeons/Granite Cave]] after progressing in [[Quest Lines/The Delta Episode]].`,
     },
     'Mega Heracross': {
         megaStone: 'Heracronite',
-        method: `Rare chest drop in [[Dungeons/Santalune Forest]].`,
+        method: `Legendary chest drop in [[Dungeons/Santalune Forest]].`,
     },
     'Mega Houndoom': {
         megaStone: 'Houndoominite',
-        method: `Battle Wild Houndour Horde near [[Routes/Kalos Route 16]], in Sunny [[Weather]].`,
+        method: `Battle [[Temporary Battles/Wild Houndour Horde]] near [[Routes/Kalos Route 16]], in Sunny [[Weather]]. Must have captured at least 500 [[Pokémon/Houndour]] for the encounter to appear.`,
     },
     'Mega Tyranitar': {
         megaStone: 'Tyranitarite',
-        method: `Clear Grant's Gym 2000 or more times then battle Grant in [[Towns/Cyllage City]].`,
+        method: `Clear [[Gyms/Cyllage City]]'s Gym 2000 or more times then battle [[Temporary Battles/Marquis Grant]] in [[Towns/Cyllage City]].`,
     },
     'Mega Gardevoir': {
         megaStone: 'Gardevoirite',
-        method: `Battle Diantha in [[Towns/Lumiose City]].`,
+        method: `Battle [[Temporary Battles/Grand Duchess Diantha]] in [[Towns/Lumiose City]].`,
     },
     'Mega Sableye': {
         megaStone: 'Sablenite',
@@ -102,43 +126,43 @@ const megaInfo = {
     },
     'Mega Aggron': {
         megaStone: 'Aggronite',
-        method: `Clear Grant's Gym 2,000 or more times then battle Grant in [[Towns/Cyllage City]].`,
+        method: `Clear [[Gyms/Cyllage City]]'s Gym 2,000 or more times then battle [[Temporary Battles/Marquis Grant]] in [[Towns/Cyllage City]].`,
     },
     'Mega Manectric': {
         megaStone: 'Manectite',
-        method: `Battle Wild Electrike Horde near [[Routes/Kalos Route 16]], in Thunderstorm [[Weather]].`,
+        method: `Battle [[Temporary Battles/Wild Electrike Horde]] near [[Routes/Kalos Route 16]], in Thunderstorm [[Weather]]. Must have captured at least 500 [[Pokémon/Electrike]] for the encounter to appear.`,
     },
     'Mega Sharpedo': {
         megaStone: 'Sharpedonite',
-        method: `Battle Aqua Admin Shelly in [[Dungeons/Aqua Hideout]] after progressing in [[Quest Lines/The Delta Episode]].`,
+        method: `Battle [[Temporary Battles/Delta Shelly]] in [[Dungeons/Aqua Hideout]] after progressing in [[Quest Lines/The Delta Episode]].`,
     },
     'Mega Camerupt': {
         megaStone: 'Cameruptite',
-        method: `Battle Magma Admin Tabitha in [[Dungeons/Magma Hideout]] after progressing in [[Quest Lines/The Delta Episode]].`,
+        method: `Battle [[Temporary Battles/Delta Tabitha]] in [[Dungeons/Magma Hideout]] after progressing in [[Quest Lines/The Delta Episode]].`,
     },
     'Mega Absol': {
         megaStone: 'Absolite',
-        method: `Battle Calem in [[Towns/Kiloude City]].`,
+        method: `Battle [[Temporary Battles/Calem 6]] in [[Towns/Kiloude City]].`,
     },
     'Mega Glalie': {
         megaStone: 'Glalitite',
-        method: `Battle Icy Boulder in [[Dungeons/Shoal Cave]] after progressing in [[Quest Lines/The Delta Episode]].`,
+        method: `Battle [[Temporary Battles/Icy Boulder]] in [[Dungeons/Shoal Cave]] after progressing in [[Quest Lines/The Delta Episode]].`,
     },
     'Mega Salamence': {
         megaStone: 'Salamencite',
-        method: `Battle Draconid Elder in [[Dungeons/Meteor Falls]] after progressing in [[Quest Lines/The Delta Episode]].`,
+        method: `Battle [[Temporary Battles/Mega Draconid Elder]] in [[Dungeons/Meteor Falls]] after progressing in [[Quest Lines/The Delta Episode]].`,
     },
     'Mega Metagross': {
         megaStone: 'Metagrossite',
-        method: `Battle Steven in [[Towns/Pokémon League Hoenn]] after progressing in [[Quest Lines/The Delta Episode]].`,
+        method: `Battle [[Temporary Battles/Delta Steven]] in [[Towns/Pokémon League Hoenn]] after progressing in [[Quest Lines/The Delta Episode]].`,
     },
     'Mega Latias': {
         megaStone: 'Latiasite',
-        method: `Battle Aqua Admin Matt in [[Towns/Southern Island]] after progressing in [[Quest Lines/The Delta Episode]].`,
+        method: `Battle [[Temporary Battles/Matt 3]] in [[Towns/Southern Island]] after progressing in [[Quest Lines/The Delta Episode]].`,
     },
     'Mega Latios': {
         megaStone: 'Latiosite',
-        method: `Battle Magma Admin Courtney in [[Towns/Southern Island]] after progressing in [[Quest Lines/The Delta Episode]].`,
+        method: `Battle [[Temporary Battles/Courtney 3]] in [[Towns/Southern Island]] after progressing in [[Quest Lines/The Delta Episode]].`,
     },
     'Mega Rayquaza': {
         megaStone: 'Meteorite',
@@ -162,7 +186,7 @@ const megaInfo = {
     },
     'Mega Lucario': {
         megaStone: 'Lucarionite',
-        method: `Defeat Korrina in [[Towns/Shalour City]].`,
+        method: `Defeat [[Temporary Battles/Korrina]] in [[Towns/Shalour City]].`,
     },
     'Mega Abomasnow': {
         megaStone: 'Abomasite',
@@ -170,15 +194,15 @@ const megaInfo = {
     },
     'Mega Gallade': {
         megaStone: 'Galladite',
-        method: `Battle Dr. Cozmo in [[Towns/Mossdeep Space Center]] after progressing in [[Quest Lines/The Delta Episode]].`,
+        method: `Battle [[Temporary Battles/Dr Cozmo]] in [[Towns/Mossdeep Space Center]] after progressing in [[Quest Lines/The Delta Episode]].`,
     },
     'Mega Audino': {
         megaStone: 'Audinite',
-        method: `Obtain the Therian forms of Tornadus, Thundurus, and Landorus from [[Dream Orbs]] then battle the Dream Researcher in [[Towns/Black and White Park]].`,
+        method: `Obtain [[Pokémon/Tornadus (Therian)]], [[Pokémon/Thundurus (Therian)]], and [[Pokémon/Landorus (Therian)]] from [[Dream Orbs]] then battle the Dream Researcher in [[Towns/Black and White Park]].`,
     },
     'Mega Diancie': {
         megaStone: 'Diancite',
-        method: `Battle Rampaging Yveltal near [[Towns/Shalour City]], during [[Quest Lines/Princess Diancie]].`,
+        method: `Battle [[Temporary Battles/Rampaging Yveltal]] near [[Towns/Shalour City]], during [[Quest Lines/Princess Diancie]].`,
     },
 };
 </script>
