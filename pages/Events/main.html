@@ -1,0 +1,15 @@
+<div>
+    <!-- ko ifnot: SpecialEvents.events.find(e => e.title == Wiki.pageName()) -->
+        <h3>Event not found...</h3>
+    <!-- /ko -->
+    <!-- ko if: SpecialEvents.events.find(e => e.title == Wiki.pageName()) -->
+    <div data-bind="with: SpecialEvents.events.find(e => e.title == Wiki.pageName())">
+        <h3>Description</h3>
+        <p data-bind="text: $data.description"></p>
+        <h3>Start Time</h3>
+        <p data-bind="text: $data.startTime"></p>
+        <h3>End Time</h3>
+        <p data-bind="text: $data.endTime"></p>
+    </div>
+    <!-- /ko -->
+</div>

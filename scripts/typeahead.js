@@ -127,6 +127,17 @@ const searchOptions = [
     type: 'Hatchery Helpers',
     page: h.name,
   })),
+  // Events
+  {
+    display: 'Events',
+    type: 'Events',
+    page: '',
+  },
+  ...SpecialEvents.events.map(e => ({
+    display: e.title,
+    type: 'Events',
+    page: e.title,
+  })),
   // Regions
   {
     display: 'Regions',
