@@ -9,8 +9,8 @@
             <th>Requirements</th>
         </tr>
     </thead>
-    <tbody data-bind="foreach: Object.values(TemporaryBattleList)">
-        <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Temporary Battles', $data.name); return false; }">
+    <tbody data-bind="foreach: Object.keys(TemporaryBattleList)">
+        <tr class="clickable" data-bind="using: TemporaryBattleList[$data], click: () => { Wiki.gotoPage('Temporary Battles', $data); return false; }">
             <td class="align-middle" data-bind="text: $data.name"></td>
             <!-- ko ifnot: $data.optionalArgs?.returnTown -->
             <td class="align-middle" data-bind="text: $data.getTown().name"></td>
