@@ -208,7 +208,7 @@ _**Roaming Pokémon Chance: 2.54x**_
 ## Squirtbottle Leveling Strategies
 Here are a few highly efficient strategies on how to level up the [[Oak Items/Squirtbottle]] based on which berries you have unlocked.
 
-### Occa/Kebia Planting Formation
+### Occa/Kebia Planting Formation (a.k.a. Berry Wars)
 If you want to be able to gain experience more passively, then the best strategy is with Occa and Kebia berries. Colbur works for this as well, but takes longer enough to grow that it isn't as useful. This strategy will likely let you level up your Squirtbottle from 0 to 5 without having to set it up again unless you get unlucky with a full takeover.
 - _Note: When using this strategy, make sure to plant the berries so that they ripen at the same time to lower the chance of full takeover._
 
@@ -253,4 +253,37 @@ The most efficient way to gain experience for the [[Oak Items/Sprinklotad]] is t
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Kasib.png\|32px]] [[Berries/Kasib]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Kasib.png\|32px]] [[Berries/Kasib]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
+:::
+
+## Other Setups
+
+### Colbur + Cheri (a.k.a. Colbur Nonsense)
+This setup's objective is to earn the maximum number of Farm Points per second. It requires active gameplay so it's not recommended unless the player wants to be watching the Farm constantly. The way this setup works is: [[Berries/Colbur]], being a Parasite Berry, overtakes [[Berries/Cheri]], the player harvests the Colbur, and then plants another Cheri on the spot. Colbur has a considerably higher Farm Point gain compared to Cheri (2,300 vs 5) but takes considerably longer to grow. By doing this, however, Colbur can be harvested rather quickly as Cheri takes 30 seconds to grow (or less if [[Oak Items/Sprayduck]] is equipped). [[Berries/Babiri]] is there to protect [[Berries/Petaya]] from being overtaken. There are 2 plots where the player can plant whatever they want. In this example, [[Berries/Payapa]] was used since it has Mutation Chance up aura. Other recommended berry is [[Berries/Haban]] to make Petaya live longer.
+
+Purple spots are where the player is meant to harvest the berry and replace with more Cheri. Note that if a Colbur overtakes a Cheri at a stage different from Berry (ripe), it's highly recommended to shovel it and plant another Cheri there. Also, it's recommended to equip [[Oak Items/Squirtbottle]] as it increases mutation chance.
+
+**Farm**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | |
+| [[File:Payapa.png\|32px]] [[Berries/Payapa]] | [[File:Payapa.png\|32px]] [[Berries/Payapa]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Colbur.png\|32px]] [[Berries/Colbur]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | |
+| [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | |
+| [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Colbur.png\|32px]] [[Berries/Colbur]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Colbur.png\|32px]] [[Berries/Colbur]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | |
+| [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | |
+:::
+
+### Infinity Farm
+This setup is another way to have a Farm that boosts egg steps gain. The combination of [[Berries/Haban]] and [[Berries/Lum]] in this formation make [[Berries/Petaya]] live for around 3.5 years once the setup fully ripens. While not as efficient as other setups in the [[Hatchery]] page, it works for those who want to forget about the Farm.
+
+Note that replacing the Chople with a different berry like [[Berries/Rowap]] or [[Berries/Starf]] will make the bonus only be 1.70x.
+
+**Egg Step Bonus: 2.03x**
+**Farm**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
 :::
