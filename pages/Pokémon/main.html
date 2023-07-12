@@ -299,7 +299,7 @@
                         <div class="accordion-body" data-bind="foreach: Object.entries($data[PokemonLocationType.Safari])">
                             <h5 data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0]])"></h5>
                             <p data-bind="foreach: Object.entries($data[1])">
-                                <span class="badge text-bg-secondary" data-bind="text: `Zone ${$data[0]} | ${$data[1]}%`"></span>
+                                <span class="badge text-bg-secondary" data-bind="text: `Chance ${$data[1]}%`"></span>
                             </p>
                         </div>
                     </div>
