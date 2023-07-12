@@ -33,7 +33,7 @@
                     <td>Money</td>
                     <td>
                         <img data-bind="attr: { src: `./images/money.svg` }" width="18px" />
-                        <span data-bind="text: $data.moneyReward"></span>
+                        <span data-bind="text: $data.moneyReward.toLocaleString()"></span>
                     </td>
                 </tr>
                 <!-- ko if: $data.requirements.length -->
