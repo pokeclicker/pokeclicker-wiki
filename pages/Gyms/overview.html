@@ -11,7 +11,7 @@
             <th>Requirements</th>
         </tr>
     </thead>
-    <tbody data-bind="foreach: Object.entries(GymList)">
+    <tbody data-bind="foreach: Object.entries(GymList).filter((g) => !g[0].includes('Trial'))">
         <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Gyms', $data[0]); return false; }">
             <td class="align-middle" data-bind="text: $data[1].badgeReward"></td>
             <td class="align-middle" data-bind="text: $data[1].leaderName.replace(/\d/g, '')"></td>

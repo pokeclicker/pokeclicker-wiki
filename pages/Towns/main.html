@@ -32,7 +32,8 @@
         <h3>Content:</h3>
         <div data-bind="foreach: $data.content">
             <!-- ko if: $data.__proto__.constructor.name == "Gym" -->
-                <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.__proto__.constructor.name + ': ' + $data.buttonText, attr: { href: `#!Gyms/${Wiki.pageName()}` }"></a>
+                <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.__proto__.constructor.name + ': ' + $data.buttonText, 
+                attr: { href: `#!Gyms/${!$data.buttonText.includes('Elite') && !$data.buttonText.includes('Supreme') && !$data.buttonText.includes('Champion')? Wiki.pageName() : $data.buttonText}` }"></a>
             <!-- /ko -->
             <!-- ko ifnot: $data.__proto__.constructor.name == "Gym" -->
                 <span class="badge text-bg-secondary" data-bind="text: GameConstants.camelCaseToString($data.__proto__.constructor.name.replace(/(MoveTo|TownContent|Temporary)/, ''))"></span>

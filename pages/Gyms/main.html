@@ -27,13 +27,13 @@
                 </tr>
                 <tr data-bind="with: $data.parent ?? $data.town">
                     <td>Town</td>
-                    <td><a class="text-decoration-none" href="#!" href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${Wiki.pageName()}` }"></a></td>
+                    <td><a class="text-decoration-none" href="#!" href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${$data.name}` }"></a></td>
                 </tr>
                 <tr>
                     <td>Money</td>
                     <td>
                         <img data-bind="attr: { src: `./images/money.svg` }" width="18px" />
-                        <span data-bind="text: $data.moneyReward"></span>
+                        <span data-bind="text: $data.moneyReward.toLocaleString()"></span>
                     </td>
                 </tr>
                 <!-- ko if: $data.requirements.length -->
