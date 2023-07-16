@@ -47,8 +47,8 @@ App.game = new Game(
 App.game.farming.initialize();
 App.game.breeding.initialize();
 App.game.oakItems.initialize();
-SafariPokemonList.generateSafariLists();
 QuestLineHelper.loadQuestLines();
+SafariPokemonList.generateSafariLists();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 

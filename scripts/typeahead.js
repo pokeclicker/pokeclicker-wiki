@@ -23,7 +23,7 @@ const searchOptions = [
     page: '',
   },
   ...Object.values(pokemonList).map(p => ({
-    display: p.name,
+    display: `#${Math.floor(p.id).toString().padStart(3, '0')} - ${p.name}`,
     type: 'Pokémon',
     page: p.name,
   })),
@@ -126,6 +126,17 @@ const searchOptions = [
     display: h.name,
     type: 'Hatchery Helpers',
     page: h.name,
+  })),
+  // Events
+  {
+    display: 'Events',
+    type: 'Events',
+    page: '',
+  },
+  ...SpecialEvents.events.map(e => ({
+    display: e.title,
+    type: 'Events',
+    page: e.title,
   })),
   // Regions
   {

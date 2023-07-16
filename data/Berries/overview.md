@@ -22,4 +22,4 @@ Aura | Effect | Notes | Berries
 **Attract Aura** | Increases chance of Pokémon wandering onto the farm | Effect is multiplicative over the whole field | @[[Berries/Roseli]]
 **Roamer Chance** | Increases chance of finding Roaming Pokémon on routes | Effect is multiplicative over the whole field | @[[Berries/Jaboca]]
 **EV Gain** | Increases amount of EVs gained in all applicable situations. | Effect is multiplicative over the whole field | @[[Berries/Rowap]]
-**Repel** | Reduce the chances of wandering pokemons | This aura is additive and effect over the whole field | @[[Berries/Micle]]
+**Repel** | Reduces chance of Pokémon wandering onto the farm | Effect is additive over the whole field | @[[Berries/Micle]]

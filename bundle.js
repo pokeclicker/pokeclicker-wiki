@@ -12176,7 +12176,7 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":1,"call-bind/callBound":2,"for-each":5,"gopd":9,"has-tostringtag/shams":12,"is-typed-array":18}],101:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
-  "version": "0.10.11",
+  "version": "0.10.13",
   "description": "PokéClicker repository",
   "main": "index.js",
   "scripts": {
@@ -12428,8 +12428,8 @@ App.game = new Game(
 App.game.farming.initialize();
 App.game.breeding.initialize();
 App.game.oakItems.initialize();
-SafariPokemonList.generateSafariLists();
 QuestLineHelper.loadQuestLines();
+SafariPokemonList.generateSafariLists();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 
@@ -14053,7 +14053,7 @@ const searchOptions = [
     page: '',
   },
   ...Object.values(pokemonList).map(p => ({
-    display: p.name,
+    display: `#${Math.floor(p.id).toString().padStart(3, '0')} - ${p.name}`,
     type: 'Pokémon',
     page: p.name,
   })),
@@ -14156,6 +14156,17 @@ const searchOptions = [
     display: h.name,
     type: 'Hatchery Helpers',
     page: h.name,
+  })),
+  // Events
+  {
+    display: 'Events',
+    type: 'Events',
+    page: '',
+  },
+  ...SpecialEvents.events.map(e => ({
+    display: e.title,
+    type: 'Events',
+    page: e.title,
   })),
   // Regions
   {
