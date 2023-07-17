@@ -210,7 +210,7 @@ Kanto routes and gyms marked with a \* are only accessible after Hoenn; if possi
 | Johto | Route 28 | 13.3% |Karen (League)|15|60%|
 | Hoenn | Route 101 | 33.3% |Sidney (League)|25|100%|
 | Sinnoh | Route 217 | 25% |-|-|-|
-| Unova | Route 4 | 33.3% |Grimsley (League)|30|100%|
+| Unova | Route 4 | 33.3% |Grimsley (League)|25|100%|
 | Kalos | Route 9 | 33.3% |-|-|-|
 | Alola | Routes 16| 40% |Nanu (Malie City)|15|100%|
 | Galar | Potbottom Desert | 42.9% |Piers (Spikemuth)|20|100%|
