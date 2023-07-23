@@ -48,7 +48,7 @@ App.game.farming.initialize();
 App.game.breeding.initialize();
 App.game.oakItems.initialize();
 QuestLineHelper.loadQuestLines();
-SafariPokemonList.generateSafariLists();
+SafariPokemonList.generateKantoSafariList();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 
