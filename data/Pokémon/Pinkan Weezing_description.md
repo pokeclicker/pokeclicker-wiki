@@ -1,0 +1,1 @@
+Can be purchased in Officer Jenny's Pinkan Trade Shop in [[Towns/Pinkan Pokémon Reserve]]. The price ranges between 80 - 100 [[Berries/Pinkan]] berries.
