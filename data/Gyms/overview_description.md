@@ -1,0 +1,1 @@
+**Note:** Some Gyms show the minimum attack needed to beat them. This is calculated without taking into consideration click attack or the Pokémon's type(s). You can see how much damage you do against a certain Pokémon by clicking on or scrolling over the "Pokémon attack" number below the battle screen.
