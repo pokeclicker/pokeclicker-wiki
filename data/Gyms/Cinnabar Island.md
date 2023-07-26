@@ -1,0 +1,1 @@
+**Minimum attack required:** 6,239.
