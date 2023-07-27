@@ -1,0 +1,1 @@
+**Note:** During this event, [[Temporary Battles/Youngster Joey]]'s Temporary Battle becomes available in [[Towns/Cherrygrove City]].
