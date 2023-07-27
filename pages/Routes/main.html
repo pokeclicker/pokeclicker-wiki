@@ -15,6 +15,16 @@
       <p data-bind="text: Math.round(PokemonFactory.routeHealth($data.number, $data.region)).toLocaleString()"></p>
   </div>
   <div>
+    <h3>Roamer Chance:</h3>
+    <p data-bind="text: (() => {
+      const region = $data.region;
+      const routes = Routes.getRoutesByRegion($data.region).map(r => MapHelper.normalizeRoute(r.number, region));
+      const routeNum = MapHelper.normalizeRoute($data?.number, region);
+      const roamingChance = ((max, min, maxRoute, minRoute) => Math.floor(max + ( (min - max) * (maxRoute - routeNum) / (maxRoute - minRoute))))(GameConstants.ROAMING_MAX_CHANCE, GameConstants.ROAMING_MIN_CHANCE, Math.max(...routes), Math.min(...routes));
+      return '1/' + roamingChance.toLocaleString();
+    })()"></p>
+</div>
+  <div>
     <h3>Encounters</h3>
     <!-- ko foreach: Object.entries($data.pokemon) -->
       <!-- ko if: $data[1].length -->

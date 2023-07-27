@@ -8,6 +8,7 @@
                 <th>Route Name</th>
                 <th>Encounters</th>
                 <th>Base HP</th>
+                <th>Roamer Chance</th>
             </tr>
         </thead>
         <tbody data-bind="foreach: Routes.regionRoutes">
@@ -17,6 +18,13 @@
                 <td data-bind="text: $data.routeName, attr: { 'data-order': $index() }"></td>
                 <td data-bind="text: new Set(Object.values($data.pokemon).flat().map(p => typeof p != 'string' ? p.pokemon.flat() : p).flat()).size"></td>
                 <td data-bind="text: `❤️ ${Math.round(PokemonFactory.routeHealth($data.number, $data.region)).toLocaleString()}`, attr: { 'data-order': PokemonFactory.routeHealth($data.number, $data.region) }"></td>
+                <td data-bind="text: (() => {
+                    const region = $data.region;
+                    const routes = Routes.getRoutesByRegion($data.region).map(r => MapHelper.normalizeRoute(r.number, region));
+                    const routeNum = MapHelper.normalizeRoute($data?.number, region);
+                    const roamingChance = ((max, min, maxRoute, minRoute) => Math.floor(max + ( (min - max) * (maxRoute - routeNum) / (maxRoute - minRoute))))(GameConstants.ROAMING_MAX_CHANCE, GameConstants.ROAMING_MIN_CHANCE, Math.max(...routes), Math.min(...routes));
+                    return '1/' + roamingChance.toLocaleString();
+                })()"></td>
             </tr>
         </tbody>
     </table>
