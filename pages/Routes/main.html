@@ -18,7 +18,7 @@
     <h3>Encounters</h3>
     <!-- ko foreach: Object.entries($data.pokemon) -->
       <!-- ko if: $data[1].length -->
-      <h4 data-bind="text: $data[0]"></h4>
+      <h4 data-bind="text: GameConstants.camelCaseToString($data[0])"></h4>
       <div data-bind="foreach: $data[1]">
         <!-- ko if: typeof $data == 'string' -->
           <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data).id + '.png'}"/>
