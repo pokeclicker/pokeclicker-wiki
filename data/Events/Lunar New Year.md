@@ -2,8 +2,8 @@
 
 Pokémon | Location | Encounter Type
 :--- | :---: | :---
-[[Pokémon/Vivillon (Meadow)]] | Kalos, Galar (South), Galar (Isle of Armor), and Galar (Crown Tundra)  | Roamer
-[[Pokémon/Vivillon (Fancy)]] | Kalos and Alola | Roamer
+[[Pokémon/Vivillon (Fancy)]] | Kalos, Galar (South), Galar (Isle of Armor), and Galar (Crown Tundra)  | Roamer
+[[Pokémon/Vivillon (Meadow)]] | Kalos and Alola | Roamer
 [[Pokémon/Vivillon (High Plains)]] | [[Dungeons/Mt. Moon]] | Dungeon Boss
 [[Pokémon/Vivillon (Modern)]] | [[Dungeons/Cerulean Cave]] | Dungeon Boss
 [[Pokémon/Vivillon (Archipelago)]] | [[Dungeons/Sprout Tower]] | Dungeon Boss
