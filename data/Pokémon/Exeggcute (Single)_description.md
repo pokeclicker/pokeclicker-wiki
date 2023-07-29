@@ -1,0 +1,1 @@
+Can be obtained in the [[Towns/Safari Zone]] and [[Towns/Friend Safari]] after reaching Safari Level 5+. Item loot.
