@@ -13,7 +13,7 @@ Tier | Activation Chance
 |Legendary |25%
 |Mythic |12.5%
 
-## Increase in Yield of Items Gained
+### Increase in Yield of Items Gained
 The number of items one obtains if the Dowsing Machine activates depends on both the Tier of said loot-able item and the Region of the Dungeon the player is in. The Common Tier yields more items, while the Mythic Tier yields fewer. On the other hand, the higher the Region, the more items will be obtained. The formula is:
 
 **Item Yield** = 1 + Max(1, Round(Max(Tier, 2) / 8 * (Region + 1)))
