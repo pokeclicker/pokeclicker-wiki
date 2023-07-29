@@ -31,10 +31,10 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 | [[File:Watmel.png\|32px]] [[Berries/Watmel]]  | `N/A`         | `N/A`                                 | `N/A`                                 |
 | [[File:Magost.png\|32px]] [[Berries/Magost]]  | 04:00:00      | 02:40:00                              | 01:46:40                              |
 | [[File:Qualot.png\|32px]] [[Berries/Qualot]]  | 01:20:00      | 00:53:20                              | 00:35:33                              |
-| [[File:Mago.png\|32px]] [[Berries/Mago]]      | 00:06:10      | 00:04:07                              | `N/A`                                 |
-| [[File:Nanab.png\|32px]] [[Berries/Nanab]]    | 00:04:10      | 00:02:47                              | `N/A`                                 |
-| [[File:Persim.png\|32px]] [[Berries/Persim]]  | 00:01:30      | 00:01:00                              | `N/A`                                 |
-| [[File:Pecha.png\|32px]] [[Berries/Pecha]]    | 00:01:00      | 00:00:40                              | `N/A`                                 |
+| [[File:Mago.png\|32px]] [[Berries/Mago]]      | 00:06:10      | 00:04:07                              | 00:02:44                               |
+| [[File:Nanab.png\|32px]] [[Berries/Nanab]]    | 00:04:10      | 00:02:47                              | 00:01:51                            |
+| [[File:Persim.png\|32px]] [[Berries/Persim]]  | 00:01:30      | 00:01:00                              | 00:00:40                             |
+| [[File:Pecha.png\|32px]] [[Berries/Pecha]]    | 00:01:00      | 00:00:40                              | 00:00:27                                 |
 
 #### Mutations
 Pinkan Berries can mutate into the following Berries.
