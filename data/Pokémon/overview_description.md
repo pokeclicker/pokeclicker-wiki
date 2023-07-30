@@ -51,8 +51,10 @@ There are exceptions to this rule:
 * [[Pokémon/Cherrim (Sunshine)]] has 1.5x the egg cycle value of [[Pokémon/Cherrim (Overcast)]].
 * All Mega Evolved Pokémon have 1.5x the egg cycle value of their base form.
 
-## Mega Evolution
-To Mega Evolve a Pokémon, the player needs to fulfill certain conditions first. Please check [[Mega Pokémon]] page for more details.
+### Other Pokémon Lists
+- [[Mega Pokémon]] page has details about which Pokémon can Mega Evolve and the requirements necessary to do so.
+- [[Wandering Pokémon]] page has all available wanderer Pokémon, as in, the Pokémon that can show up in the farm.
+- [[Roaming Pokémon]] page contains information about roaming Pokémon, as in, rare Pokémon that can appear in any route of any given Region.
 
 ## Pokémon List
 **WARNING**
