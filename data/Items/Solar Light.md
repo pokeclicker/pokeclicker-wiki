@@ -1,0 +1,1 @@
+Base chance of dropping: 1 in 12.5 (Dungeon Boss)
