@@ -1,6 +1,6 @@
 Rare Hold items are Items that Pokémon can drop when **defeated**. The chance of getting them depends on the place (route or dungeon) and the specific item.
 
-The base chance drop a held item is **1/512** (this doesn't apply to all).
+The base chance to drop a held item is **1/512** (this doesn't apply to all).
 
 Circumstances | Multiplier
 :---|---:
