@@ -91,7 +91,7 @@ Kanto routes and gyms marked with a \* are only accessible after Hoenn; if possi
 | Johto | Route 42, 46 | 20% |Chuck (Cianwood City) |10|100%|
 |Hoenn|-|-|Brawly (Dewford Town) |15|100%|
 | Sinnoh | Route 211 | 30% |Maylene (Veilstone City)|15|100%|
-| Unova | Routes 1, 4, 8 | 16.7% |Marshal (League) |30|100%|
+| Unova | Routes 1, 4, 8 | 16.7% |Marshal (League) |25|100%|
 | Kalos | Route 11 | 33.3% |Korina (Shalour City) | 15|100%|
 | Alola | Route3, Poni Grove| 28.6% |Hala (Iki Town)|15|100%|
 | Galar | Motostoke Outskirt | 30.8% |Bea (Stow-on-Side)|20|100%|
@@ -145,7 +145,7 @@ Kanto routes and gyms marked with a \* are only accessible after Hoenn; if possi
 | Johto | Routes 34, 35 | 18.8% |Will (League)|25|100%|
 | Hoenn | Route 116 | 16.7% |Tate & Liza (Mossdeep City)|20|100%|
 | Sinnoh | Route 215 | 33.3% | Lucian (League)|25|100%|
-| Unova | Route 5, 16 | 40% |Caitlin (League)|30|100%|
+| Unova | Route 5, 16 | 40% |Caitlin (League)|25|100%|
 | Kalos | Azure Bay | 30% |Olympia (Anistar City)|15|100%|
 | Alola | Route 13, Route 1 Hau'oli Outskirts| 33.3% |-|-|-|
 | Galar | Three-Point Pass | 50% | Avery (Master Dojo Battle Court) | 25|100%|
@@ -186,7 +186,7 @@ Kanto routes and gyms marked with a \* are only accessible after Hoenn; if possi
 | Johto | - | - |Morty (Ecruteak City)|20|100%|
 | Hoenn | Route 121 | 9.1% |Phoebe (League)|25|100%|
 | Sinnoh | Route 209 | 7.7% |Fantina (Hearthome City)|15|100%|
-| Unova | Route 17 | 50% |Shauntal (League)|30|100%|
+| Unova | Route 17 | 50% |Shauntal (League)|25|100%|
 | Kalos | Route 16 | 33.3% |-|-|-|
 | Alola | Haina Desert| 16.7% |Acerola (League)|25|100%|
 | Galar | Hammerlocke Hills | 57.1% |Allister (Stow-on-Side)|20|100%|
