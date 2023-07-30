@@ -263,6 +263,12 @@ const searchOptions = [
     type: 'Shiny Chance',
     page: '',
   },
+  // Roaming Pokémon
+  {
+    display: 'Roaming Pokémon',
+    type: 'Roaming Pokémon',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {

@@ -10,7 +10,7 @@
         </tr>
     </thead>
     <tbody data-bind="foreach: Object.keys(TemporaryBattleList)">
-        <tr class="clickable" data-bind="using: TemporaryBattleList[$data], click: () => { Wiki.gotoPage('Temporary Battles', $data); return false; }">
+        <tr class="clickable" data-bind="using: TemporaryBattleList[$data], click: () => { Wiki.gotoPage('Temporary Battles', $data); return true; }">
             <td class="align-middle" data-bind="text: $data.name"></td>
             <!-- ko ifnot: $data.optionalArgs?.returnTown -->
             <td class="align-middle" data-bind="text: $data.getTown().name"></td>
@@ -20,7 +20,7 @@
             <td class="align-middle" data-bind="text: `Near ${$data.optionalArgs.returnTown}`"></td>
             <td class="align-middle">Map</td>
             <!-- /ko -->
-            <td data-bind="html: Wiki.tempBattles.getRequirements($data).join('<br />')"></td>
+            <td data-bind="html: Wiki.md.renderInline(Wiki.gameHelper.requirementHints($data.requirements).join('\n'))"></td>
         </tr>
     </tbody>
 </table>
