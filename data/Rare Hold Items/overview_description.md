@@ -14,6 +14,6 @@ Item | Chance
 Underground Items | 1/2048
 Griseous Orb | 1/50
 Black and White DNA | 1/45
-Pure, Solar and Lunar light | 1/75
+Pure, Solar and Lunar Light | 1/75
 Rust Shield and Sword | 1/90
 White and Black Mane | 1/10
