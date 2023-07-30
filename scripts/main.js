@@ -9,6 +9,7 @@ window.Wiki = {
   ...require('./typeahead'),
   ...require('./markdown-renderer'),
   ...require('./discord'),
+  gameHelper: require('./gameHelper'),
   pokemon: require('./pages/pokemon'),
   farm: require('./pages/farm'),
   items: require('./pages/items'),
@@ -17,6 +18,5 @@ window.Wiki = {
   dungeons: require('./pages/dungeons'),
   oakItems: require('./pages/oakItems'),
   getDealChains: require('./pages/dealChains').getDealChains,
-  tempBattles: require('./pages/tempBattles'),
   ...require('./navigation'),
 }

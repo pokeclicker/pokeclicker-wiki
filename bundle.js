@@ -12484,6 +12484,62 @@ Settings.getSetting('theme').observableValue.subscribe(theme => {
 });
 
 },{}],105:[function(require,module,exports){
+const requirementHints = (requirement, includeMarkdown = true) => {
+    if (!requirement) {
+        return [];
+    }
+
+    if (!Array.isArray(requirement)) {
+        requirement = [requirement];
+    }
+
+    const hints = [];
+    requirement.forEach(req => {
+        if (req instanceof MultiRequirement) {
+            hints.push(...requirementHints(req.requirements));
+        } else {
+            let hint = req.hint();
+            switch (req.constructor) {
+                case RouteKillRequirement:
+                    const routeName = Routes.getName(req.route, req.region, true);
+                    hint = `Defeat ${req.requiredValue} or more Pokémon on ${includeMarkdown ? `[[Routes/${routeName}]]` : routeName}.`;
+                    break;
+                case ClearDungeonRequirement:
+                    const dungeonName = GameConstants.RegionDungeons.flat()[req.dungeonIndex];
+                    hint = `Clear the ${includeMarkdown ? `[[Dungeons/${dungeonName}]]` : dungeonName} dungeon ${req.requiredValue} or more time(s).`;
+                    break;
+                case QuestLineStepCompletedRequirement:
+                    hint = req.option == GameConstants.AchievementOption.equal
+                        ? `Complete step ${req.questIndex + 1} in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
+                        : `Have not completed step ${req.questIndex + 1} in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
+                    break;
+                case QuestLineCompletedRequirement:
+                    hint = `Complete the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
+                    break;
+                case GymBadgeRequirement:
+                    hint = req.option == GameConstants.AchievementOption.more
+                        ? `Obtained the ${GameConstants.camelCaseToString(BadgeEnums[req.badge])} badge.`
+                        : `Have not obtained the ${GameConstants.camelCaseToString(BadgeEnums[req.badge])} badge.`;
+                    break;
+                case TemporaryBattleRequirement:
+                    hint = `Defeated ${includeMarkdown ? `[[Temporary_Battles/${req.battleName}]]` : req.battleName}.`;
+                    break;
+                case DevelopmentRequirement:
+                    hint = 'Not currently available.'
+                    break;
+            }
+            hints.push(hint);
+        }
+    });
+
+    return hints;
+};
+
+module.exports = {
+    requirementHints,
+}
+
+},{}],106:[function(require,module,exports){
 // import our version etc
 const package = require('../pokeclicker/package.json');
 
@@ -12495,6 +12551,7 @@ window.Wiki = {
   ...require('./typeahead'),
   ...require('./markdown-renderer'),
   ...require('./discord'),
+  gameHelper: require('./gameHelper'),
   pokemon: require('./pages/pokemon'),
   farm: require('./pages/farm'),
   items: require('./pages/items'),
@@ -12503,11 +12560,10 @@ window.Wiki = {
   dungeons: require('./pages/dungeons'),
   oakItems: require('./pages/oakItems'),
   getDealChains: require('./pages/dealChains').getDealChains,
-  tempBattles: require('./pages/tempBattles'),
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./markdown-renderer":111,"./navigation":112,"./notifications":113,"./pages/dealChains":114,"./pages/dreamOrbs":115,"./pages/dungeons":116,"./pages/farm":117,"./pages/farmSimulator":118,"./pages/items":119,"./pages/oakItems":120,"./pages/pokemon":121,"./pages/tempBattles":122,"./typeahead":124}],106:[function(require,module,exports){
+},{"../pokeclicker/package.json":101,"./datatables":102,"./discord":103,"./game":104,"./gameHelper":105,"./markdown-renderer":112,"./navigation":113,"./notifications":114,"./pages/dealChains":115,"./pages/dreamOrbs":116,"./pages/dungeons":117,"./pages/farm":118,"./pages/farmSimulator":119,"./pages/items":120,"./pages/oakItems":121,"./pages/pokemon":122,"./typeahead":124}],107:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const saveChanges = (editor, filename, btn) => {
@@ -12614,7 +12670,7 @@ module.exports = {
   createMarkDownEditor,
 }
 
-},{"./markdown-renderer":111}],107:[function(require,module,exports){
+},{"./markdown-renderer":112}],108:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -12630,7 +12686,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":30,"markdown-it-regexp":27}],108:[function(require,module,exports){
+},{"markdown-it":30,"markdown-it-regexp":27}],109:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -12648,7 +12704,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":30,"markdown-it-regexp":27}],109:[function(require,module,exports){
+},{"markdown-it":30,"markdown-it-regexp":27}],110:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -12664,7 +12720,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":30,"markdown-it-regexp":27}],110:[function(require,module,exports){
+},{"markdown-it":30,"markdown-it-regexp":27}],111:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -12680,7 +12736,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":30,"markdown-it-regexp":27}],111:[function(require,module,exports){
+},{"markdown-it":30,"markdown-it-regexp":27}],112:[function(require,module,exports){
 const markdownit      = require('markdown-it');
 
 // Setup our markdown editor
@@ -12748,7 +12804,7 @@ module.exports = {
   md,
 }
 
-},{"./markdown-plugins/hidden-comments.js":107,"./markdown-plugins/image-size.js":108,"./markdown-plugins/wiki-links-badge.js":109,"./markdown-plugins/wiki-links.js":110,"markdown-it":30,"markdown-it-attrs":21,"markdown-it-container":24,"markdown-it-multimd-table":25}],112:[function(require,module,exports){
+},{"./markdown-plugins/hidden-comments.js":108,"./markdown-plugins/image-size.js":109,"./markdown-plugins/wiki-links-badge.js":110,"./markdown-plugins/wiki-links.js":111,"markdown-it":30,"markdown-it-attrs":21,"markdown-it-container":24,"markdown-it-multimd-table":25}],113:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 const { applyDatatables } = require('./datatables');
 const { createMarkDownEditor } = require('./markdown-editor');
@@ -12927,7 +12983,7 @@ module.exports = {
     gotoPage,
 };
 
-},{"./datatables":102,"./markdown-editor":106,"./markdown-renderer":111,"./redirections":123}],113:[function(require,module,exports){
+},{"./datatables":102,"./markdown-editor":107,"./markdown-renderer":112,"./redirections":123}],114:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -12950,7 +13006,7 @@ module.exports = {
   alert,
 };
 
-},{}],114:[function(require,module,exports){
+},{}],115:[function(require,module,exports){
 
 class DealProfit {
     constructor(type, amount) {
@@ -13114,7 +13170,7 @@ function getDealChains(
 module.exports = {
     getDealChains,
 }
-},{}],115:[function(require,module,exports){
+},{}],116:[function(require,module,exports){
 const getOrbLoot = (orb) => {
   const weightSum = orb.items.reduce((acc, item) => acc + item.weight, 0);
   return orb.items.map(item => {
@@ -13131,7 +13187,7 @@ module.exports = {
   getOrbLoot
 };
 
-},{}],116:[function(require,module,exports){
+},{}],117:[function(require,module,exports){
 const getTableClearCounts = (dungeon) => {
     if (getTableClearCounts.cache.has(dungeon)) {
         return getTableClearCounts.cache.get(dungeon);
@@ -13392,7 +13448,7 @@ module.exports = {
     itemTypeCategories
 };
 
-},{}],117:[function(require,module,exports){
+},{}],118:[function(require,module,exports){
 /**
  * Returns the primary mutation for a berry.
  * Filters out enigma mutations, as they cannot be used to obtain a berry for the first time.
@@ -13412,7 +13468,7 @@ module.exports = {
     getPrimaryMutation,
 };
 
-},{}],118:[function(require,module,exports){
+},{}],119:[function(require,module,exports){
 const selectedPlot = ko.observable(undefined);
 const selectedPlotIndex = ko.observable(undefined);
 const plotLabelsEnabled = ko.observable(false);
@@ -13732,7 +13788,7 @@ module.exports = {
     showPlotContextMenu,
 }
 
-},{}],119:[function(require,module,exports){
+},{}],120:[function(require,module,exports){
 const getItemName =  (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
@@ -13805,7 +13861,7 @@ module.exports = {
     getItemCategoryAndPage,
 };
 
-},{}],120:[function(require,module,exports){
+},{}],121:[function(require,module,exports){
 const getOakItemBonus = (oakItem, level) => {
     const bonus = oakItem.bonusList[level];
     switch (oakItem.name) {
@@ -13879,7 +13935,7 @@ module.exports = {
     getOakItemBonus,
     getOakItemUpgradeReq,
 };
-},{}],121:[function(require,module,exports){
+},{}],122:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -13937,42 +13993,6 @@ module.exports = {
     calcEggSteps,
     getEfficiency,
     getBestVitamins,
-}
-
-},{}],122:[function(require,module,exports){
-const getRequirements = (tempBattle) => {
-    const requirements = [];
-    tempBattle.requirements?.forEach((req) => {
-        let hint = req.hint();
-        switch (req.constructor) {
-            case RouteKillRequirement:
-                hint = `Defeat ${req.requiredValue} or more Pokémon on ${Routes.getName(req.route, req.region, true)}.`;
-                break;
-            case ClearDungeonRequirement:
-                hint = `Clear the ${GameConstants.RegionDungeons.flat()[req.dungeonIndex]} dungeon ${req.requiredValue} or more time(s).`;
-                break;
-            case QuestLineStepCompletedRequirement:
-                hint = req.option == GameConstants.AchievementOption.equal
-                    ? `Complete step ${req.questIndex + 1} in the ${req.questLineName} quest line.`
-                    : `Have not completed step ${req.questIndex + 1} in the ${req.questLineName} quest line.`;
-                break;
-            case GymBadgeRequirement:
-                hint = req.option == GameConstants.AchievementOption.more
-                    ? `Obtained the ${GameConstants.camelCaseToString(BadgeEnums[req.badge])} badge.`
-                    : `Have not obtained the ${GameConstants.camelCaseToString(BadgeEnums[req.badge])} badge.`;
-                break;
-            case TemporaryBattleRequirement:
-                hint = `Defeated ${req.battleName}.`;
-                break;
-        }
-        requirements.push(hint);
-    });
-
-    return requirements;
-};
-
-module.exports = {
-    getRequirements,
 }
 
 },{}],123:[function(require,module,exports){
@@ -14354,4 +14374,4 @@ module.exports = {
   searchOptions,
 };
 
-},{"./navigation":112}]},{},[105]);
+},{"./navigation":113}]},{},[106]);
