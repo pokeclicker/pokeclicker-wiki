@@ -1,0 +1,1 @@
+Although this item appears as a rare Hold item it can't drop as Porygon2 isn't wild.
