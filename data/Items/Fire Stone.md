@@ -1,7 +1,7 @@
 ## Use
 Base Pokémon |Evolves into
-: --- | --- :
-Vulpix | Ninetales
-Growlithe | Arcanine
-Eevee | Flareon
-Pansear | Simisear
+:--- | ---:
+[[Pokemon/Vulpix]]  | [[Pokemon/Ninetales]]
+[[Pokemon/Growlithe]]  | [[Pokemon/Arcanine]]
+[[Pokemon/Eevee]]  | [[Pokemon/Flareon]]
+[[Pokemon/Pansear]]  | [[Pokemon/Simisear]]
