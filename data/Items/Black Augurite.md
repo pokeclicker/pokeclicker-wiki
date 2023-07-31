@@ -1,4 +1,4 @@
 ## Use
-Base Pokémon |Evolves into |Aviable in
+Base Pokémon |Evolves into |Available in
 :---|:---|:---
 [[Pokemon/Scyther]]  |[[Pokemon/Kleavor]] | Hisui
