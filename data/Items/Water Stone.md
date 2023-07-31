@@ -1,9 +1,9 @@
 ## Use
 Base Pokémon |Evolves into
-: --- | --- :
-Poliwhirl | Poliwarth
-Shellder | Cloyster
-Staryu | Starmie
-Eevee | Vaporeon
-Lombre | Ludicolo
-Pampour | Simipour
+:--- | ---:
+[[Pokemon/Poliwhirl]]  | [[Pokemon/Poliwarth]]
+[[Pokemon/Shellder]]  | [[Pokemon/Cloyster]]
+[[Pokemon/Staryu]]  | [[Pokemon/Starmie]]
+[[Pokemon/Eevee]]  | [[Pokemon/Vaporeon]]
+[[Pokemon/Lombre]]  | [[Pokemon/Ludicolo]]
+[[Pokemon/Pampour]]  | [[Pokemon/Simipour]]
