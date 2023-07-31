@@ -1,6 +1,6 @@
 ## Use
 Base Pokémon |Evolves into
-: --- | --- :
+:---|---:
 [[Pokemon/Gloom]]  | [[Pokemon/Vileplume]]
 [[Pokemon/Weepinbell]]  | [[Pokemon/Victreebel]]
 [[Pokemon/Exeggcute]]  | [[Pokemon/Exeggutor]]
