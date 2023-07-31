@@ -1,5 +1,5 @@
 ## Use
-Base Pokémon |Evolves into |Aviable in
+Base Pokémon |Evolves into |Available in
 :---|:---|:---
 [[Pokemon/Poliwhirl]]  | [[Pokemon/Poliwarth]] |All regions
 [[Pokemon/Shellder]]  | [[Pokemon/Cloyster]] |All regions
