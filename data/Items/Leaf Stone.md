@@ -8,3 +8,4 @@ Base Pokémon |Evolves into |Available in
 [[Pokemon/Eevee]]  | [[Pokemon/Lefareon]] | Galar onward
 [[Pokemon/Nuzleaf]]  | [[Pokemon/Shiftry]] | Hoenn onward
 [[Pokemon/Pansage]]  | [[Pokemon/Simisage]] |Unova onward
+[[Pokemon/Hisuian Voltorb]] | [[Pokemon/Hisuian Electrode]] |Hisui onward
