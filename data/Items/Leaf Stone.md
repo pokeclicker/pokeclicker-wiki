@@ -1,5 +1,5 @@
 ## Use
-Base Pokémon |Evolves into |Aviable in
+Base Pokémon |Evolves into |Available in
 :---|:---|:---
 [[Pokemon/Gloom]]  | [[Pokemon/Vileplume]] |All regions
 [[Pokemon/Weepinbell]]  | [[Pokemon/Victreebel]] |All regions
