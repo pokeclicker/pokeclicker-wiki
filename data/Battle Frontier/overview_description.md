@@ -12,7 +12,7 @@ Frontier stages that have already been cleared in previous attempts will be clea
 
 As described above, Pokémon Attack speed is doubled on cleared stages in the Battle Frontier. Additionally, the amount of egg steps gained by a single Pokémon in the Battle Frontier is as follows:
 
-Egg Steps = (Stage Number) ^1 \2^
+Egg Steps = `Stage Number ^ 0.5`
 
 The combination of these two features in particular can lead to extremely efficient breeding in the Battle Frontier that rivals (and often surpasses) many other high efficiency breeding locations currently in the game.
 
@@ -20,7 +20,7 @@ The combination of these two features in particular can lead to extremely effici
 
 Defeating Pokémon in the Battle Frontier also awards [[Gems]] depending on the types of said Pokémon. The number of gems gained follow this formula:
 
-Gems = Stage N°/80
+Gems = `Stage Number / 80`
 
 *The result is rounded up as partial gems cannot be obtained.*
 
@@ -31,7 +31,7 @@ Gems = Stage N°/80
 
 Currency Reward | Formula
 :--- | ---:
-Pokémon Dollars | Stage Beaten^2^
-Battle Points\* | Stage Beaten^2^/100
+Pokémon Dollars | `Stage Beaten ^ 2`
+Battle Points\* | `(Stage Beaten ^ 2) / 100`
 
 \* *Battle Points are rounded to the nearest whole number*
