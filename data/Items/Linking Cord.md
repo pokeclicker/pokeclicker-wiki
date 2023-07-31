@@ -9,6 +9,8 @@ Base Pokémon |Evolves into |Aviable in
 [[Pokemon/Boldore]] |[[Pokemon/Gigalith]] |Unova onward
 [[Pokemon/Gurdurr]] |[[Pokemon/Conkeldurr]] |Unova onward
 [[Pokemon/Karrablast]] |[[Pokemon/Escavalier]] |Unova onward
-[[Pokemon/Helmet]] |[[Pokemon/Accelgor]] Unova onward
-[[Pokemon/Phantump]] |[[Pokemon/Trevenant]]
-[Pumkaboo all sizes](https://wiki.pokeclicker.com/#!Pok%C3%A9mon/Pumpkaboo_(Average)) |[Gourgeist](https://wiki.pokeclicker.com/#!Pok%C3%A9mon/Gourgeist_(Average)) | Kalos onward
+[[Pokemon/Helmet]] |[[Pokemon/Accelgor]] |Unova onward
+[[Pokemon/Phantump]] |[[Pokemon/Trevenant]] |Kalos onward
+[All of Pumkaboo sizes](https://wiki.pokeclicker.com/#!Pok%C3%A9mon/Pumpkaboo_(Average)) |[Gourgeist](https://wiki.pokeclicker.com/#!Pok%C3%A9mon/Gourgeist_(Average)) | Kalos onward
+
+
