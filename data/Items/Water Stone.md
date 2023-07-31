@@ -1,9 +1,9 @@
 ## Use
-Base Pokémon |Evolves into
-:--- | ---:
-[[Pokemon/Poliwhirl]]  | [[Pokemon/Poliwarth]]
-[[Pokemon/Shellder]]  | [[Pokemon/Cloyster]]
-[[Pokemon/Staryu]]  | [[Pokemon/Starmie]]
-[[Pokemon/Eevee]]  | [[Pokemon/Vaporeon]]
-[[Pokemon/Lombre]]  | [[Pokemon/Ludicolo]]
-[[Pokemon/Pampour]]  | [[Pokemon/Simipour]]
+Base Pokémon |Evolves into |Aviable in
+:---|:---|:---
+[[Pokemon/Poliwhirl]]  | [[Pokemon/Poliwarth]] |All regions
+[[Pokemon/Shellder]]  | [[Pokemon/Cloyster]] |All regions
+[[Pokemon/Staryu]]  | [[Pokemon/Starmie]] |All regions
+[[Pokemon/Eevee]]  | [[Pokemon/Vaporeon]] |All regions
+[[Pokemon/Lombre]]  | [[Pokemon/Ludicolo]] |Hoenn onward
+[[Pokemon/Pampour]]  | [[Pokemon/Simipour]] |Unova onward
