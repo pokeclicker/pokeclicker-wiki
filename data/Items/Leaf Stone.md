@@ -1,10 +1,10 @@
 ## Use
 Base Pokémon |Evolves into
 : --- | --- :
-Gloom | Vileplume
-Weepinbell | Victreebel
-Exeggcute | Exeggutor
-Exeggcute | Alolan Exeggutor (only in Alola)
-Eevee | Lefareon (Galar onward)
-Nuzleaf | Shiftry
-Pansage | Simisage
+[[Pokemon/Gloom]]  | [[Pokemon/Vileplume]]
+[[Pokemon/Weepinbell]]  | [[Pokemon/Victreebel]]
+[[Pokemon/Exeggcute]]  | [[Pokemon/Exeggutor]]
+[[Pokemon/Exeggcute]]  | [[Pokemon/Alolan Exeggutor]]  (only in Alola)
+[[Pokemon/Eevee]]  | [[Pokemon/Lefareon]]  (Galar onward)
+[[Pokemon/Nuzleaf]]  | [[Pokemon/Shiftry]]
+[[Pokemon/Pansage]]  | [[Pokemon/Simisage]]
