@@ -13441,6 +13441,7 @@ const getDungeonLootChancesForItem = (itemName) => {
     const item = UndergroundItems.getByName(itemName) ?? ItemList[itemName];
     const lootName = item.displayName;
 
+    // Collate and flatten all item-specific data from each dungeon's loot tables
     const itemData = [];
     for (let dungeon of dungeonsWithLootTables) {
         for (let tier of dungeon.lootTable) {
@@ -13455,6 +13456,16 @@ const getDungeonLootChancesForItem = (itemName) => {
                     itemData.push(itemDungeonData);
                 }
             }
+        }
+    }
+
+    // If some of the dungeons had hasItemsThatIgnoreDebuff, fill all itemChances to have 8 items
+    if (itemData.some((item) => item.chances.length > 5)) {
+        for (let data of itemData) {
+            const chances = data.chances;
+            const length = chances.length
+            const lastIndex = length - 1;
+            data.chances = Array(8).fill(chances[lastIndex]).toSpliced(0, length, ...chances);
         }
     }
 
