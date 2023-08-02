@@ -13375,6 +13375,10 @@ const getLootTierWeights = (dungeon, clears, debuffed, requirement = () => true)
 };
 
 const getDungeonLoot = (dungeon) => {
+    if (getDungeonLoot.cache.has(dungeon)) {
+        return getDungeonLoot.cache.get(dungeon);
+    }
+
     const tableClearCounts = getTableClearCounts(dungeon)
     const tierWeights = tableClearCounts.map(clearSetup => getLootTierWeights(dungeon, clearSetup.clears, clearSetup.debuff, checkLootRequirements(dungeon, clearSetup)));
     const itemChanceMaps = tableClearCounts.map(clearSetup => getDungeonLootChances(dungeon, clearSetup.clears, clearSetup.debuff, checkLootRequirements(dungeon, clearSetup)));
@@ -13420,8 +13424,42 @@ const getDungeonLoot = (dungeon) => {
         }
         lootTiers.push(tierData);
     }
+    getDungeonLoot.cache.set(dungeon, lootTiers);
+
     return lootTiers;
 };
+getDungeonLoot.cache = new WeakMap();
+
+const getDungeonLootChancesForItem = (itemName) => {
+    const dungeonsDroppingItem = Object.values(dungeonList).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == itemName)));
+    const dungeonsWithLootTables = dungeonsDroppingItem.map(dungeon => (
+        {
+            dungeonName: dungeon.name,
+            lootTable: getDungeonLoot(dungeon)
+        }
+    ));
+    const item = UndergroundItems.getByName(itemName) ?? ItemList[itemName];
+    const lootName = item.displayName;
+
+    const itemData = [];
+    for (let dungeon of dungeonsWithLootTables) {
+        for (let tier of dungeon.lootTable) {
+            for (let loot of tier.items) {
+                if (loot.item == lootName) {
+                    const itemDungeonData = {
+                        dungeonName: dungeon.dungeonName,
+                        region: GameConstants.camelCaseToString(GameConstants.Region[GameConstants.getDungeonRegion(dungeon.dungeonName)]),
+                        tier: tier.tier,
+                        ...loot
+                    }
+                    itemData.push(itemDungeonData);
+                }
+            }
+        }
+    }
+
+    return itemData;
+}
 
 const hasLootWithRequirements = (dungeon) => {
     if (hasLootWithRequirements.cache.has(dungeon)) {
@@ -13443,6 +13481,7 @@ hasLootWithRequirements.cache = new WeakMap();
 module.exports = {
     getDungeonLoot,
     getDungeonLootChances,
+    getDungeonLootChancesForItem,
     hasLootWithRequirements,
     getTableClearCounts,
     itemTypeCategories

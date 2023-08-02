@@ -90,9 +90,44 @@
     </div>
     <div class="mt-3" data-bind="if: Object.values(dungeonList).some((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name)))">
         <h3>Can be found in the following dungeons:</h3>
-        <!-- ko foreach : Object.values(dungeonList).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name))) -->
-        <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Dungeons/${$data.name}` }"></a>
-        <!-- /ko -->
+        <p>Chance shown is for any given chest in the dungeon to contain the item.</p>
+        <div class="table-responsive">
+            <table class="table table-hover table-striped table-bordered" data-bind="with: Wiki.dungeons.getDungeonLootChancesForItem($data.name), as: 'itemChances'">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Dungeon</th>
+                        <th>Region</th>
+                        <th class="text-center">Chest</th>
+                        <th>0 Clears</th>
+                        <th>100 Clears</th>
+                        <th>250 Clears</th>
+                        <th>500 Clears</th>
+                        <th>Debuffed</th>
+                        <!-- ko if: itemChances.some((item) => item.requirement) -->
+                        <th>Requirement</th>
+                        <!-- /ko -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- ko foreach: itemChances -->
+                    <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Dungeons', $data.dungeonName); return false; }">
+                        <td data-bind="text: $data.dungeonName"></td>
+                        <td data-bind="text: $data.region"></td>
+                        <!-- <td data-bind="text: $data.tier"></td> -->
+                        <td class="text-center">
+                            <img width="40px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/dungeons/chest-${$data.tier}.png` }"/>
+                        </td>
+                        <!-- ko foreach: $data.chances.slice(0, 5) -->
+                        <td data-bind="text: typeof $data.chance === 'number' ? ($data.chance >= 0.0001 ? $data.chance.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }) : ('<' + 0.0001.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }))) : ($data.chance ?? '-')"></td>
+                        <!-- /ko -->
+                        <!-- ko if: itemChances.some((item) => item.requirement) -->
+                        <td data-bind="text: $data.requirement ?? '-'"></td>
+                        <!-- /ko -->
+                    </tr>
+                    <!-- /ko -->
+                </tbody>
+            </table>
+        </div>
     </div>
     <div class="mt-3" data-bind="if: pokemonList.some((p) => ([ItemType.item, ItemType.underground]).includes(p.heldItem?.type) && p.heldItem?.id == $data.name)">
         <h3>Can be dropped by the following Pokémon:</h3>
