@@ -94,7 +94,7 @@
         <div class="table-responsive">
             <table class="table table-hover table-striped table-bordered" data-bind="with: Wiki.dungeons.getDungeonLootChancesForItem($data.name), as: 'itemChances'">
                 <thead class="thead-dark">
-                    <tr data-bind="using: itemChances.some((item) => item.chances.length > 5), as: 'hasItemsThatIgnoreDebuff'">
+                    <tr data-bind="using: itemChances.some((item) => item.chances.length > 5), as: 'hasFullDebuffColumns'">
                         <th>Dungeon</th>
                         <th>Region</th>
                         <th class="text-center">Chest</th>
@@ -102,13 +102,13 @@
                         <th>100 Clears</th>
                         <th>250 Clears</th>
                         <th>500 Clears</th>
-                        <!-- ko if: hasItemsThatIgnoreDebuff -->
+                        <!-- ko if: hasFullDebuffColumns -->
                         <th>Debuffed (0&nbsp;Clears)</th>
                         <th>Debuffed (100&nbsp;Clears)</th>
                         <th>Debuffed (250&nbsp;Clears)</th>
                         <th>Debuffed (500&nbsp;Clears)</th>
                         <!-- /ko -->
-                        <!-- ko ifnot: hasItemsThatIgnoreDebuff -->
+                        <!-- ko ifnot: hasFullDebuffColumns -->
                         <th>Debuffed</th>
                         <!-- /ko -->
                         <!-- ko if: itemChances.some((item) => item.requirement) -->

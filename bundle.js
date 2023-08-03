@@ -13194,6 +13194,7 @@ const getTableClearCounts = (dungeon) => {
     }
 
     const hasItemsThatIgnoreDebuff = Object.values(dungeon.lootTable).flat().some(item => item.ignoreDebuff);
+    const hasItemsWithClearRequirements = Object.values(dungeon.lootTable).flat().some(item => item.requirement instanceof ClearDungeonRequirement);
 
     const tableClearCounts = [
         {
@@ -13218,7 +13219,7 @@ const getTableClearCounts = (dungeon) => {
         }
     ];
 
-    if (hasItemsThatIgnoreDebuff) {
+    if (hasItemsThatIgnoreDebuff || hasItemsWithClearRequirements) {
         tableClearCounts.push(...tableClearCounts.map(clearSetup => ({...clearSetup, debuff: true, header: `Debuffed (${clearSetup.header})`})))
     } else {
         tableClearCounts.push({
@@ -13457,6 +13458,20 @@ const getDungeonLootChancesForItem = (itemName) => {
                 }
             }
         }
+    }
+
+    var hasMeaningfullyDifferentDebuffChances = itemData.some((item) => {
+        const debuffChances = item.chances.filter((chance) => chance.debuff).map((chance) => chance.chance ?? 0);
+        const max = Math.max(...debuffChances);
+        const min = Math.min(...debuffChances);
+        const goesFromZeroToNonZero = (min == 0 && max != 0);
+        const visibleDifferenceBetweenOdds = (max - min > 0.00005);
+        return goesFromZeroToNonZero || visibleDifferenceBetweenOdds;
+    });
+
+    if (!hasMeaningfullyDifferentDebuffChances) {
+        itemData.map((item) => item.chances = item.chances.slice(0, 5));
+        return itemData;
     }
 
     // If some of the dungeons had hasItemsThatIgnoreDebuff, fill all itemChances to have 8 items
