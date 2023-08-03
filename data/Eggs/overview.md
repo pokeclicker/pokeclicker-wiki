@@ -1,4 +1,4 @@
-## Egg Pool Odds
+## Egg Pool Odds {#EggPoolOdds}
 
 As you enter subsequent [[Regions]], the odds of obtaining Pokémon from Eggs from prior Regions decreases to 50% of its prior rate.
 The Kanto and Johto pools are given equal odds in every region (excluding Kanto).
