@@ -275,6 +275,17 @@ const searchOptions = [
     type: 'Baby Pokémon',
     page: '',
   },
+  // Key Items
+  {
+    display: 'Key Items',
+    type: 'Key Items',
+    page: '',
+  },
+  ...App.game.keyItems.itemList.map(k => ({
+    display: k.displayName,
+    type: 'Key Items',
+    page: '',
+  })),
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {

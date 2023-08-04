@@ -12428,6 +12428,7 @@ App.game = new Game(
 App.game.farming.initialize();
 App.game.breeding.initialize();
 App.game.oakItems.initialize();
+App.game.keyItems.initialize();
 QuestLineHelper.loadQuestLines();
 SafariPokemonList.generateKantoSafariList();
 BattleFrontierRunner.stage(100);
@@ -14390,6 +14391,17 @@ const searchOptions = [
     type: 'Baby Pokémon',
     page: '',
   },
+  // Key Items
+  {
+    display: 'Key Items',
+    type: 'Key Items',
+    page: '',
+  },
+  ...App.game.keyItems.itemList.map(k => ({
+    display: k.displayName,
+    type: 'Key Items',
+    page: '',
+  })),
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
