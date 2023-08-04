@@ -269,6 +269,12 @@ const searchOptions = [
     type: 'Roaming Pokémon',
     page: '',
   },
+  // Baby Pokémon
+  {
+    display: 'Baby Pokémon',
+    type: 'Baby Pokémon',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
