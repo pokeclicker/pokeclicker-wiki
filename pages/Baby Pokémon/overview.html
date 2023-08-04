@@ -1,0 +1,38 @@
+<div>
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Baby</th>
+                <th>Parent(s)</th>
+                <th class="text-center">Unlock Location</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: pokemonList.filter(p => p.baby)">
+            <tr>
+                <td class="align-middle">
+                    <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
+                    <knockout data-bind="text: $data.name,
+                        css: { 'fw-bold': Object.keys(PokemonHelper.getPokemonLocations($data.name, PokemonHelper.calcNativeRegion($data.name))).length == 1 }">
+                    </knockout>
+                </td>
+                <td class="align-middle">
+                    <div data-bind="foreach: ((pokemonName) => {
+                        const parents = [];
+                        Object.entries(pokemonBabyPrevolutionMap).forEach(([parent, baby]) => {
+                            if (baby == pokemonName || parents.includes(baby)) {
+                                parents.push(parent);
+                            }
+                        });
+                        return parents;
+                    })($data.name)">
+                        <div class="d-inline-block me-3">
+                            <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data].id + '.png'}"/>
+                            <knockout data-bind="text: $data"></knockout>
+                        </div>
+                    </div>
+                </td>
+                <td class="align-middle text-center" data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[PokemonHelper.calcNativeRegion($data.name)])"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
