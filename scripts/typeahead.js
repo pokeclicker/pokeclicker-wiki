@@ -269,6 +269,12 @@ const searchOptions = [
     type: 'Roaming Pokémon',
     page: '',
   },
+  // Baby Pokémon
+  {
+    display: 'Baby Pokémon',
+    type: 'Baby Pokémon',
+    page: '',
+  },
   // Key Items
   {
     display: 'Key Items',

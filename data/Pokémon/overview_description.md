@@ -53,6 +53,7 @@ There are exceptions to this rule:
 
 ### Other Pokémon Lists
 - [[Mega Pokémon]] page has details about which Pokémon can Mega Evolve and the requirements necessary to do so.
+- [[Baby Pokémon]] page has a list of all Baby Pokémon available in the game and the Region needed to acquire them.
 - [[Wandering Pokémon]] page has all available wanderer Pokémon, as in, the Pokémon that can show up in the farm.
 - [[Roaming Pokémon]] page contains information about roaming Pokémon, as in, rare Pokémon that can appear in any route of any given Region.
 

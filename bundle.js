@@ -13195,6 +13195,7 @@ const getTableClearCounts = (dungeon) => {
     }
 
     const hasItemsThatIgnoreDebuff = Object.values(dungeon.lootTable).flat().some(item => item.ignoreDebuff);
+    const hasItemsWithClearRequirements = Object.values(dungeon.lootTable).flat().some(item => item.requirement instanceof ClearDungeonRequirement);
 
     const tableClearCounts = [
         {
@@ -13219,7 +13220,7 @@ const getTableClearCounts = (dungeon) => {
         }
     ];
 
-    if (hasItemsThatIgnoreDebuff) {
+    if (hasItemsThatIgnoreDebuff || hasItemsWithClearRequirements) {
         tableClearCounts.push(...tableClearCounts.map(clearSetup => ({...clearSetup, debuff: true, header: `Debuffed (${clearSetup.header})`})))
     } else {
         tableClearCounts.push({
@@ -13376,6 +13377,10 @@ const getLootTierWeights = (dungeon, clears, debuffed, requirement = () => true)
 };
 
 const getDungeonLoot = (dungeon) => {
+    if (getDungeonLoot.cache.has(dungeon)) {
+        return getDungeonLoot.cache.get(dungeon);
+    }
+
     const tableClearCounts = getTableClearCounts(dungeon)
     const tierWeights = tableClearCounts.map(clearSetup => getLootTierWeights(dungeon, clearSetup.clears, clearSetup.debuff, checkLootRequirements(dungeon, clearSetup)));
     const itemChanceMaps = tableClearCounts.map(clearSetup => getDungeonLootChances(dungeon, clearSetup.clears, clearSetup.debuff, checkLootRequirements(dungeon, clearSetup)));
@@ -13421,8 +13426,67 @@ const getDungeonLoot = (dungeon) => {
         }
         lootTiers.push(tierData);
     }
+    getDungeonLoot.cache.set(dungeon, lootTiers);
+
     return lootTiers;
 };
+getDungeonLoot.cache = new WeakMap();
+
+const getDungeonLootChancesForItem = (itemName) => {
+    const dungeonsDroppingItem = Object.values(dungeonList).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == itemName)));
+    const dungeonsWithLootTables = dungeonsDroppingItem.map(dungeon => (
+        {
+            dungeonName: dungeon.name,
+            lootTable: getDungeonLoot(dungeon)
+        }
+    ));
+    const item = UndergroundItems.getByName(itemName) ?? ItemList[itemName];
+    const lootName = item.displayName;
+
+    // Collate and flatten all item-specific data from each dungeon's loot tables
+    const itemData = [];
+    for (let dungeon of dungeonsWithLootTables) {
+        for (let tier of dungeon.lootTable) {
+            for (let loot of tier.items) {
+                if (loot.item == lootName) {
+                    const itemDungeonData = {
+                        dungeonName: dungeon.dungeonName,
+                        region: GameConstants.camelCaseToString(GameConstants.Region[GameConstants.getDungeonRegion(dungeon.dungeonName)]),
+                        tier: tier.tier,
+                        ...loot
+                    }
+                    itemData.push(itemDungeonData);
+                }
+            }
+        }
+    }
+
+    var hasMeaningfullyDifferentDebuffChances = itemData.some((item) => {
+        const debuffChances = item.chances.filter((chance) => chance.debuff).map((chance) => chance.chance ?? 0);
+        const max = Math.max(...debuffChances);
+        const min = Math.min(...debuffChances);
+        const goesFromZeroToNonZero = (min == 0 && max != 0);
+        const visibleDifferenceBetweenOdds = (max - min > 0.00005);
+        return goesFromZeroToNonZero || visibleDifferenceBetweenOdds;
+    });
+
+    if (!hasMeaningfullyDifferentDebuffChances) {
+        itemData.map((item) => item.chances = item.chances.slice(0, 5));
+        return itemData;
+    }
+
+    // If some of the dungeons had hasItemsThatIgnoreDebuff, fill all itemChances to have 8 items
+    if (itemData.some((item) => item.chances.length > 5)) {
+        for (let data of itemData) {
+            const chances = data.chances;
+            const length = chances.length
+            const lastIndex = length - 1;
+            data.chances = Array(8).fill(chances[lastIndex]).toSpliced(0, length, ...chances);
+        }
+    }
+
+    return itemData;
+}
 
 const hasLootWithRequirements = (dungeon) => {
     if (hasLootWithRequirements.cache.has(dungeon)) {
@@ -13444,6 +13508,7 @@ hasLootWithRequirements.cache = new WeakMap();
 module.exports = {
     getDungeonLoot,
     getDungeonLootChances,
+    getDungeonLootChancesForItem,
     hasLootWithRequirements,
     getTableClearCounts,
     itemTypeCategories
@@ -14318,6 +14383,12 @@ const searchOptions = [
   {
     display: 'Roaming Pokémon',
     type: 'Roaming Pokémon',
+    page: '',
+  },
+  // Baby Pokémon
+  {
+    display: 'Baby Pokémon',
+    type: 'Baby Pokémon',
     page: '',
   },
   // Key Items
