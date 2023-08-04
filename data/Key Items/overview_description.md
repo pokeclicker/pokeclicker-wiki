@@ -13,7 +13,7 @@ Key Items are active automatically upon acquisition. To see acquired Key Items g
 | [[File:Pokeball_bag.png\|20px]] Pokéball Bag | Given by Professor Oak at the start of the game. | N/A |
 | [[File:Town_map.png\|20px]] Town Map | Defeat 10 Pokémon on Kanto Route 1. | Unlocks the Town Map panel. |
 | [[File:Dungeon_ticket.png\|20px]] Dungeon Ticket | Purchasable at [[Towns/Viridian City]] in Kanto for 100 Quest Points [[File:questPoint.svg\|20px]]. | Allows entry to [[Dungeons]] at the cost of Dungeon Tokens [[File:dungeonToken.svg\|20px]]. |
-| [[File:Super_rod.png\|20px]] Super Rod | Defeat 10 Pokémon on Kanto Route 12. | Allows water Pokémon to be encountered and caughgt in the wild. |
+| [[File:Super_rod.png\|20px]] Super Rod | Defeat 10 Pokémon on Kanto Route 12. | Allows water Pokémon to be encountered and caught in the wild. |
 | [[File:Holo_caster.png\|20px]] Holo Caster | Catch 110 unique Pokémon. | View and track Achievements. |
 | [[File:Mystery_egg.png\|20px]] Mystery Egg | Defeat 10 Pokémon on Kanto Route 5. | Grants access to the [[Hatchery]]. |
 | [[File:Safari_ticket.png\|20px]] Safari Ticket | Clear the [[Gyms/Fuchsia City]] Gym in Kanto. | Allows entry to the Kanto Safari Zone. |
