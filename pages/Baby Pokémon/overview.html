@@ -11,9 +11,8 @@
             <tr>
                 <td class="align-middle">
                     <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
-                    <knockout data-bind="text: $data.name,
-                        css: { 'fw-bold': Object.keys(PokemonHelper.getPokemonLocations($data.name, PokemonHelper.calcNativeRegion($data.name))).length == 1 }">
-                    </knockout>
+                    <a href="#!" data-bind="text: $data.name, attr: {href: `#!Pokemon/${$data.name}` },
+                        css: { 'fw-bold': Object.keys(PokemonHelper.getPokemonLocations($data.name, PokemonHelper.calcNativeRegion($data.name))).length == 1 }"></a>
                 </td>
                 <td class="align-middle">
                     <div data-bind="foreach: ((pokemonName) => {
@@ -27,7 +26,7 @@
                     })($data.name)">
                         <div class="d-inline-block me-3">
                             <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data].id + '.png'}"/>
-                            <knockout data-bind="text: $data"></knockout>
+                            <a href="#!" data-bind="text: $data, attr: {href: `#!Pokemon/${$data}` }"></a>
                         </div>
                     </div>
                 </td>
