@@ -122,7 +122,7 @@
                         <td data-bind="text: $data.dungeonName"></td>
                         <td data-bind="text: $data.region"></td>
                         <td class="text-center">
-                            <img width="40px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/dungeons/chest-${$data.tier}.png` }"/>
+                            <img width="40px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/dungeons/chest-${$data.tier.toLowerCase()}.png`, title: `${$data.tier}` }"/>
                         </td>
                         <!-- ko foreach: $data.chances -->
                         <td data-bind="text: typeof $data.chance === 'number' ? ($data.chance >= 0.0001 ? $data.chance.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }) : ('<' + 0.0001.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }))) : ($data.chance ?? '-')"></td>
