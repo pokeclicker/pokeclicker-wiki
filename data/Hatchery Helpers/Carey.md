@@ -1,1 +1,1 @@
-*Purchased in @[[Olivine City]] for 10,000 Quest Points*
+*Purchased in @[[Towns/Olivine City]] for 10,000 Quest Points*
