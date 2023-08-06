@@ -9,7 +9,7 @@ Step | Hint | Dungeon(s) | Vivillon Form
 6 | It has been spotted in a swamp | [[Dungeons/Moor of Icirrus]] | [[Pokemon/Vivillon (Jungle)]]
 8 | It's hiding at a dark place | [[Dungeons/Dark Cave]] | [[Pokemon/Vivillon (Monsoon)]]
 10 | It flew into a factory | [[Dungeons/Poké Ball Factory]] | [[Pokemon/Vivillon (Tundra)]]
-12 | It seems to like hot places | [[Dungeons/Mt. Chimney Crater]] | [[Pokemon/Vivillon (Solar)]]
+12 | It seems to like hot places | [[Dungeons/Mt. Chimney Crater]] | [[Pokemon/Vivillon (Sun)]]
 14 | It's sitting on a swaying pillar | [[Dungeons/Sprout Tower]] | [[Pokemon/Vivillon (Archipelago)]]
 16 | It's visiting an abandoned and spooky place | [[Dungeons/Lost Hotel]] | [[Pokemon/Vivillon (Elegant)]]
 18 | It's flying around an overgrown place full of dreams | [[Dungeons/Dreamyard]] | [[Pokemon/Vivillon (Ocean)]]
