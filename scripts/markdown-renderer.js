@@ -60,6 +60,10 @@ md.renderer.rules.table_open = (tokens, idx, options, env, self) => {
 md.renderer.rules.table_close = (tokens, idx, options, env, self) => {
   return '</table></div>';
 };
+md.renderer.rules.td_open = (tokens, idx, options, env, self) => {
+  tokens[idx].attrPush(['class', 'align-middle']);
+  return proxy(tokens, idx, options, env, self);
+};
 
 module.exports = {
   md,
