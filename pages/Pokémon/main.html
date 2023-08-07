@@ -199,7 +199,7 @@
                             <a class="badge text-bg-secondary" data-bind="text: $data.basePokemon + `${$data.restrictions ? ' 🔒' : ''}`,
                             attr: { href: `#!Pokemon/${$data.basePokemon}` },
                             tooltip: {
-                                title: ($data.restrictions.filter(r => !(r instanceof MegaEvolveRequirement)).map(r => r.hint()).join('<br/>') ?? '') + ($data.stone > -1 ? '<br/> Requires ' + ItemList[GameConstants.StoneType[$data.stone]]._displayName : ''),
+                                title: Wiki.gameHelper.getEvolutionHints($data).join('<br/>') ?? '',
                                 html: true,
                                 placement: 'bottom',
                                 trigger: 'hover'
