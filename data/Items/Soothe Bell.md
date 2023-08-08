@@ -19,5 +19,5 @@ Base Pokémon |Evolves into |Available in
 [[Pokemon/Woobat]] |[[Pokemon/Swoobat]] |Unova onward
 [[Pokemon/Swadloon]] |[[Pokemon/Leavanny]] |Unova onward
 [[Pokemon/Alolan Meowth]] |[[Pokemon/Alolan Persian]] |Alola onward
-[[Pokemon/Type:Null]] |[[Pokemon/Silvally (Normal)]] |Alola onward
+[[Pokemon/Type: Null]] |[[Pokemon/Silvally (Normal)]] |Alola onward
 [[Pokemon/Snom]] |[[Pokemon/Frosmoth]] |Galar onward during the night
