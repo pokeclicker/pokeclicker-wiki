@@ -12434,6 +12434,9 @@ SafariPokemonList.generateKantoSafariList();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 
+// Set all badges to obtained for (daily deal) requirements
+App.game.badgeCase.badgeList.forEach(b => b(true));
+
 const now = new Date();
 DailyDeal.generateDeals(5, now);
 BerryDeal.generateDeals(now);
