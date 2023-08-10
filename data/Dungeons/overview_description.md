@@ -10,7 +10,7 @@ Clearing Dungeons requires active play. To enter a dungeon, select it on the Tow
 5. **A chest**- Many Items can be collected from chests by either clicking on them or by pressing the Spacebar.
 6. **A trainer**- Trainers are found on tiles and have teams of Pokémon that must all be defeated to progress. Wild Pokémon are almost always ~4 times more likely to appear on an enemy tile than a trainer, but in some dungeons this weighting is different. Defeating trainers yields the following rewards:
 	- Dungeon Trainers reward 4% of the dungeon cost as Dungeon Tokens [[File:dungeonToken.svg|18px]] and 50% of the dungeon cost as Poké Dollars whenever they are defeated.
-  - Dungeon Trainer Bosses reward 10% of the dungeon cost as Dungeon Tokens [[File:dungeonToken.svg|18px]]  and 100% of the dungeon cost as Poké Dollars whenever they are defeated.
+	- Dungeon Trainer Bosses reward 10% of the dungeon cost as Dungeon Tokens [[File:dungeonToken.svg|18px]]  and 100% of the dungeon cost as Poké Dollars whenever they are defeated.
 
 Note: Amulet coin and other items that grant increased amounts of pokédollars **do not** affect the amount of money that you receive from Dungeon Trainers or Dungeon Trainer Bosses
 
