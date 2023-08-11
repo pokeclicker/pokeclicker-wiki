@@ -155,7 +155,7 @@ const searchOptions = [
     type: 'Towns',
     page: '',
   },
-  ...Object.values(TownList).map(t => ({
+  ...Object.values(TownList).filter(t => !(t instanceof DungeonTown)).map(t => ({
     display: t.name,
     type: 'Towns',
     page: t.name,

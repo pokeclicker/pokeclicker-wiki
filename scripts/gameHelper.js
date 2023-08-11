@@ -10,7 +10,7 @@ const requirementHints = (requirement, includeMarkdown = true) => {
     const hints = [];
     requirement.forEach(req => {
         if (req instanceof MultiRequirement) {
-            hints.push(...requirementHints(req.requirements));
+            hints.push(...requirementHints(req.requirements, includeMarkdown));
         } else {
             let hint = req.hint();
             switch (req.constructor) {
@@ -37,6 +37,9 @@ const requirementHints = (requirement, includeMarkdown = true) => {
                     break;
                 case TemporaryBattleRequirement:
                     hint = `Defeated ${includeMarkdown ? `[[Temporary_Battles/${req.battleName}]]` : req.battleName}.`;
+                    break;
+                case SpecialEventRequirement:
+                    hint = `The ${includeMarkdown ? `[[Events/${req.specialEventName}]]` : req.specialEventName} event must be active.`;
                     break;
                 case DevelopmentRequirement:
                     hint = 'Not currently available.'
