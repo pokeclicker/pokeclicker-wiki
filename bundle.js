@@ -14459,6 +14459,12 @@ const searchOptions = [
     type: 'Farm',
     page: 'Setups',
   },
+  // Farm Hands
+  {
+    display: 'Farm Hands',
+    type: 'Farm Hands',
+    page: '',
+  },
   // Pokérus
   {
     display: 'Pokérus',

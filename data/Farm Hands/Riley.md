@@ -1,0 +1,1 @@
+*Purchased at the Sinnoh Berry Master in @[[Towns/Hearthome City]] for 200,000 Farm Points.*

@@ -1,0 +1,25 @@
+<div>
+    <!-- ko ifnot: FarmHands.list.find(h => h.name == Wiki.pageName()) -->
+        <h3>Farm Hand not found...</h3>
+    <!-- /ko -->
+    <!-- ko if: FarmHands.list.find(h => h.name == Wiki.pageName()) -->
+    <div data-bind="with: FarmHands.list.find(h => h.name == Wiki.pageName())">
+        <p>
+            <img data-bind="attr: { src: `./pokeclicker/docs/assets/images/profile/trainer-${$data.trainerSprite}.png` }"/>
+        </p>
+        <h2>Hourly Wage</h2>
+        <p>
+            <img width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/currency/${GameConstants.Currency[$data.cost.currency]}.svg` }"/>
+            <ko data-bind="text: $data.cost.amount.toLocaleString()"></ko>
+        </p>
+        <h2>Work Speed</h2>
+        <p data-bind="text: GameConstants.formatTimeFullLetters($data.workTick / 1000)"></p>
+        <h2>Efficiency</h2>
+        <p data-bind="text: $data.efficiency"></p>
+        <h2>Max Energy</h2>
+        <p data-bind="text: $data.maxEnergy"></p>
+        <h2>Unlock Requirement</h2>
+        <p data-bind="text: $data.unlockRequirement.hint()"></p>
+    </div>
+    <!-- /ko -->
+</div>
