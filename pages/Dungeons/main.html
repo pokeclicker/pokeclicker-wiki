@@ -95,7 +95,7 @@
                                     }"></a>
                             </td>
                             <td class="align-middle text-center" data-bind="text: $data.baseHealth.toLocaleString()"></td>
-                            <td class="align-middle text-center tight" data-bind="text: $data.options?.weight ?? 1"></td>
+                            <td class="align-middle text-center" data-bind="text: $data.options?.weight ?? 1"></td>
                             <!-- /ko -->
 
                             <!-- ko ifnot: $data.baseHealth -->
@@ -109,19 +109,19 @@
                                 <knockout data-bind="text: $data.name"></knockout>
                             </td>
                             <td class="p-0 h-100">
-                                <table class="table table-bordered table-sm m-0 p-0 h-100">
-                                    <tbody data-bind="foreach: $data.team">
-                                        <tr class="">
-                                            <td class="align-middle text-center">
-                                                <img width="42px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data.name).id + '.png'}"/>
-                                                <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a>
-                                            </td>
-                                            <td class="align-middle text-center" data-bind="text: $data.maxHealth.toLocaleString()"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="container text-center" data-bind="foreach: $data.team">
+                                    <div class="row border-secondary flex-nowrap" data-bind="css: { 'border-top': $index() > 0 }">
+                                        <div class="col border-end border-secondary">
+                                            <img width="42px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data.name).id + '.png'}"/>
+                                            <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a>
+                                        </div>
+                                        <div class="col d-flex align-items-center justify-content-center">
+                                            <div data-bind="text: $data.maxHealth.toLocaleString()"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </td>
-                            <td class="align-middle text-center tight" data-bind="text: $data.options.weight ?? 1"></td>
+                            <td class="align-middle text-center" data-bind="text: $data.options.weight ?? 1"></td>
                             <!-- /ko -->
                         </tr>
                         <!-- /ko -->
