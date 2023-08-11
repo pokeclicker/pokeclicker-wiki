@@ -110,8 +110,8 @@
                             </td>
                             <td class="p-0 h-100">
                                 <div class="container text-center" data-bind="foreach: $data.team">
-                                    <div class="row border-secondary flex-nowrap" data-bind="css: { 'border-top': $index() > 0 }">
-                                        <div class="col border-end border-secondary">
+                                    <div class="row flex-nowrap" style="border-color: var(--bs-table-border-color) !important;" data-bind="css: { 'border-top': $index() > 0 }">
+                                        <div class="col border-end" style="border-color: var(--bs-table-border-color) !important;">
                                             <img width="42px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data.name).id + '.png'}"/>
                                             <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a>
                                         </div>
