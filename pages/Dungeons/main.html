@@ -106,7 +106,12 @@
                                 <!-- ko if: $data.subTrainerClass -->
                                 <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/npcs/' + $data.trainerClass + ' ' + $data.subTrainerClass + '.png'}"/>
                                 <!-- /ko -->
-                                <knockout data-bind="text: $data.name"></knockout>
+                                <knockout data-bind="text: $data.name + `${$data.options ? ($data.options.requirement ? ' 🔒' : '') : ''}`, 
+                                    tooltip: {
+                                        title: $data.options?.requirement ? Wiki.gameHelper.requirementHints($data.options.requirement, false).join('<br/>') : '',
+                                        html: true,
+                                        trigger: 'hover'
+                                    }"></knockout>
                             </td>
                             <td class="p-0 h-100">
                                 <table class="table table-sm m-0 p-0 h-100">
