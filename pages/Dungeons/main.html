@@ -109,17 +109,17 @@
                                 <knockout data-bind="text: $data.name"></knockout>
                             </td>
                             <td class="p-0 h-100">
-                                <div class="container text-center" data-bind="foreach: $data.team">
-                                    <div class="row flex-nowrap" style="border-color: var(--bs-table-border-color) !important;" data-bind="css: { 'border-top': $index() > 0 }">
-                                        <div class="col border-end" style="border-color: var(--bs-table-border-color) !important;">
-                                            <img width="42px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data.name).id + '.png'}"/>
-                                            <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a>
-                                        </div>
-                                        <div class="col d-flex align-items-center justify-content-center">
-                                            <div data-bind="text: $data.maxHealth.toLocaleString()"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <table class="table table-sm m-0 p-0 h-100">
+                                    <tbody data-bind="foreach: $data.team">
+                                        <tr data-bind="css: { 'border-top': $index() > 0 }" style="border-color: var(--bs-table-border-color) !important;">
+                                            <td class="align-middle text-center border-end border-bottom-0 w-50" style="border-color: var(--bs-table-border-color) !important;">
+                                                <img width="42px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data.name).id + '.png'}"/>
+                                                <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a>
+                                            </td>
+                                            <td class="align-middle text-center border-bottom-0 w-50" data-bind="text: $data.maxHealth.toLocaleString()"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </td>
                             <td class="align-middle text-center" data-bind="text: $data.options.weight ?? 1"></td>
                             <!-- /ko -->
