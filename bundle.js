@@ -14341,7 +14341,7 @@ const searchOptions = [
     type: 'Items',
     page: '',
   },
-  ...Object.values(ItemList).map(i => ({
+  ...Object.values(ItemList).filter(i => !(i instanceof PokemonItem)).map(i => ({
     display: i.displayName,
     type: 'Items',
     page: i.displayName,
