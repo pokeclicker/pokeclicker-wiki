@@ -13,7 +13,7 @@ const md = new markdownit({
     rightDelimiter: '}',
     allowedAttributes: ['id', 'class'],
   })
-  .use(require('markdown-it-katex'))
+  .use(require('@ryanxcharles/markdown-it-katex'))
   .use(require('markdown-it-container'), 'text-center')
   .use(require('markdown-it-container'), 'text-end')
   .use(require('markdown-it-container'), 'table-auto')

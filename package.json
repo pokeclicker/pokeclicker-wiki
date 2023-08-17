@@ -21,10 +21,10 @@
   },
   "homepage": "https://github.com/pokeclicker/pokeclicker-wiki#readme",
   "dependencies": {
+    "@ryanxcharles/markdown-it-katex": "^4.0.2",
     "markdown-it": "^13.0.1",
     "markdown-it-attrs": "^4.1.6",
     "markdown-it-container": "^3.0.0",
-    "markdown-it-katex": "^2.0.3",
     "markdown-it-multimd-table": "^4.2.0",
     "markdown-it-regexp": "^0.4.0"
   },
