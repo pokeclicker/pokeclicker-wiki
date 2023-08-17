@@ -15227,7 +15227,7 @@ module.exports = function multimd_table_plugin(md, options) {
         head = state.bMarks[line] + state.blkIndent,
         end = state.skipSpacesBack(state.eMarks[line], head),
         bounds = [], pos, posjump,
-        escape = false, code = false;
+        escape = false, code = false, serial = 0;
 
     /* Scan for valid pipe character position */
     for (pos = start; pos < end; pos++) {
@@ -15239,8 +15239,12 @@ module.exports = function multimd_table_plugin(md, options) {
           /* make \` closes the code sequence, but not open it;
              the reason is that `\` is correct code block */
           /* eslint-disable-next-line brace-style */
-          if (posjump > pos) { pos = posjump; }
-          else if (code || !escape) { code = !code; }
+          if (posjump > pos) {
+            if (!code) {
+              if (serial === 0) { serial = posjump - pos; } else if (serial === posjump - pos) { serial = 0; }
+            }
+            pos = posjump;
+          } else if (code || (!escape && !serial)) { code = !code; }
           escape = false; break;
         case 0x7c /* | */:
           if (!code && !escape) { bounds.push(pos); }
@@ -15468,10 +15472,20 @@ module.exports = function multimd_table_plugin(md, options) {
       token          = state.push('caption_open', 'caption', 1);
       token.map      = tableToken.meta.cap.map;
 
+      var attrs      = [];
+      var capSide    = tableToken.meta.cap.first ? 'top' : 'bottom';
+
       /* Null is possible when disabled the option autolabel */
       if (tableToken.meta.cap.label !== null) {
-        token.attrs    = [ [ 'id', tableToken.meta.cap.label ] ];
+        attrs.push([ 'id', tableToken.meta.cap.label ]);
       }
+
+      /* Add caption-side inline-CSS to <caption> tag, if caption is below the markdown table. */
+      if (capSide !== 'top') {
+        attrs.push([ 'style', 'caption-side: ' + capSide ]);
+      }
+
+      token.attrs    = attrs;
 
       token          = state.push('inline', '', 0);
       token.content  = tableToken.meta.cap.text;
