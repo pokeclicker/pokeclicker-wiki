@@ -15202,7 +15202,7 @@ function plugin(md, options) {
 plugin.default = plugin;
 module.exports = plugin;
 
-},{"juice/client":87,"mathjax-full/js/a11y/assistive-mml.js":160,"mathjax-full/js/adaptors/liteAdaptor.js":162,"mathjax-full/js/handlers/html.js":222,"mathjax-full/js/input/tex.js":228,"mathjax-full/js/input/tex/AllPackages.js":229,"mathjax-full/js/mathjax.js":317,"mathjax-full/js/output/svg.js":375}],101:[function(require,module,exports){
+},{"juice/client":87,"mathjax-full/js/a11y/assistive-mml.js":160,"mathjax-full/js/adaptors/liteAdaptor.js":168,"mathjax-full/js/handlers/html.js":222,"mathjax-full/js/input/tex.js":228,"mathjax-full/js/input/tex/AllPackages.js":229,"mathjax-full/js/mathjax.js":317,"mathjax-full/js/output/svg.js":375}],101:[function(require,module,exports){
 'use strict';
 var DFA = require('./lib/dfa.js');
 
