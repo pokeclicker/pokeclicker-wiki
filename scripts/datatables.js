@@ -42,6 +42,7 @@ const applyDatatables = () => {
 
             // Setup a custom handler to reset sort order after descending instead of going back to ascending
             // Accomplished by finding and intercepting the mutation of the sorting th's class from desc to asc
+            const tableId = element.id;
             const callback = (mutationList) => {
                 for (const mutation of mutationList) {
                     if (mutation.type === "attributes" &&
@@ -49,11 +50,11 @@ const applyDatatables = () => {
                         mutation.oldValue.includes("sorting_desc") &&
                         mutation.target.classList.contains("sorting_asc")
                     ) {
-                        $(`#${element.id}`).DataTable().order.neutral().draw();
+                        $(`#${tableId}`).DataTable().order.neutral().draw();
                     }
                 }
             };
-            document.querySelectorAll('th.sorting').forEach((el) => {
+            document.querySelectorAll(`#${tableId} th.sorting`).forEach((el) => {
                 new MutationObserver(callback).observe(el, { attributes: true, attributeFilter: ['class'], attributeOldValue: true });
             });
         } catch(e){}
