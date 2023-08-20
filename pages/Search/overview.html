@@ -1,0 +1,10 @@
+<div>
+    <input id="subsearch" type="text" class="form-control" placeholder="Search">
+</div>
+<script> 
+document.getElementById('subsearch').addEventListener('keyup', ({key, target}) => {
+  if (key === 'Enter') {
+    Wiki.gotoPage('Search', target.value);
+  }
+});
+</script>
