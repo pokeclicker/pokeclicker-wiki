@@ -245,7 +245,7 @@ All planting times use the time-to-ripe remaining of the first planted berry for
 
 This strategy adds a Petaya berry to Chople + Babiri + Lum for a farm with one fewer Chople, but far more longevity.
 
-**Egg Step Bonus: 2.90x**
+**Egg Step Bonus: 2.73x**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | |
