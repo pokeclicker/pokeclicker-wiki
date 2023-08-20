@@ -21,7 +21,7 @@ To run it locally, you might need to run the command "git submodule update --rem
 ### Editing Javascript
 You will very rarely need to edit the Javascript files. It's only used for general stuff, which should work by now.
 Try to write page specific Javascript in the Knockout, if possible.
-After you have edited a Javascript file, you need to run "npm start".
+After you have edited a Javascript file, you need to run `npm start`.
 
 ### Page structure
 Each page needs to have one or two HTML-pages in the "pages"-folder. The "overview.html" file should always be included. This is used to either display an overview for pages with more than one page (like Pokémon), or the full page for pages with no sub-pages (like Farm).
