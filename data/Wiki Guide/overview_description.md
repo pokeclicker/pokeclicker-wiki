@@ -16,12 +16,13 @@ You can see some tips for markdown below, like how to make links for other wiki 
 ### Editing HTML pages
 To test your changes for HTML pages, you need to run the site locally. This can be done using a tool like VS Codes "Live Server".
 All game data is available for use in the HTML pages, using the framework Knockout (just like what the game is using).
-To run it locally, you might need to run the command "git submodule update --remote".
+To run it locally, you might need to run the command "`git submodule update --remote`".
 
 ### Editing Javascript
 You will very rarely need to edit the Javascript files. It's only used for general stuff, which should work by now.
 Try to write page specific Javascript in the Knockout, if possible.
-After you have edited a Javascript file, you need to run `npm start`.
+You can run "`npm start`" to see your changes and test they've worked, this will also keep the `bundle.js` file updated with your changes.
+Otherwise after you have edited a Javascript file, you need to run "`npm run build`" so the `bundle.js` file has your changes applied.
 
 ### Page structure
 Each page needs to have one or two HTML-pages in the "pages"-folder. The "overview.html" file should always be included. This is used to either display an overview for pages with more than one page (like Pokémon), or the full page for pages with no sub-pages (like Farm).
