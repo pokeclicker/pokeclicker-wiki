@@ -77161,7 +77161,21 @@ const applyDatatables = () => {
             const doNotProcess = element.querySelectorAll('[colspan],[rowspan]').length;
 
             // Don't process anything with less than 40 rows
-            if (rows < 40 || doNotProcess) return;
+            if (doNotProcess) return;
+
+            // Bootstrap style tables, with responsive table
+            let dom = `<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>><'row table-responsive'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 text-center'p>>`;
+                // How many items per page
+            let pageLength = 25;
+            // How to order our pages
+            let order = [[0, 'asc']];
+
+            // If we have less than 40 rows, we don't need pagination, but table will still be sortable
+            if (rows < 40) {
+                pageLength = 40;
+                dom = `<'row'<'col-sm-12 col-md-6'><'col-sm-12 col-md-6'>><'row table-responsive'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'><'col-sm-12 col-md-7 text-center'>>`
+                order = [];
+            }
 
             $(element).DataTable({
                 // Remember page/search/order
@@ -77178,12 +77192,11 @@ const applyDatatables = () => {
                 stateLoadCallback: function(settings) {
                     return JSON.parse(sessionStorage.getItem(`DataTables_${Wiki.pageType()}_${Wiki.pageName()}_${i}`) || '{}');
                 },
-                // Bootstrap style tables, with responsive table
-                dom: `<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>><'row table-responsive'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 text-center'p>>`,
-                // Our custom page implementation 
+                dom,
+                pageLength,
+                order,
+                // Our custom page implementation
                 pagingType: 'simple_numbers_no_ellipses',
-                // How many items per page
-                pageLength: 25,
                 // Adjust text
                 language: {
                   paginate: {
@@ -77955,6 +77968,7 @@ onhashchange = (event) => {
       pageElementCustom.html('');
     }
   }).always(() => {
+    applyDatatables();
     if (other == 'edit') {
       // Initialise markdown editor
       createMarkDownEditor('custom-edit', customContentFileName);
@@ -77977,6 +77991,7 @@ onhashchange = (event) => {
       pageElementCustomDescription.html('');
     }
   }).always(() => {
+    applyDatatables();
     if (other == 'edit') {
       // Initialise markdown editor
       createMarkDownEditor('custom-edit-desc', customContentDescFileName);
@@ -77998,6 +78013,7 @@ $(document).ready(() => {
   ko.applyBindings({}, document.getElementById('breadcrumbs'));
   ko.applyBindings({}, document.getElementById('settings-modal'));
   ko.applyBindings({}, document.getElementById('footer'));
+
   applyBindings.subscribe((v) => {
     // Unbind and re-bind knockout
     if (v) {
