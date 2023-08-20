@@ -111,6 +111,7 @@ onhashchange = (event) => {
       pageElementCustom.html('');
     }
   }).always(() => {
+    applyDatatables();
     if (other == 'edit') {
       // Initialise markdown editor
       createMarkDownEditor('custom-edit', customContentFileName);
@@ -133,6 +134,7 @@ onhashchange = (event) => {
       pageElementCustomDescription.html('');
     }
   }).always(() => {
+    applyDatatables();
     if (other == 'edit') {
       // Initialise markdown editor
       createMarkDownEditor('custom-edit-desc', customContentDescFileName);
@@ -154,6 +156,7 @@ $(document).ready(() => {
   ko.applyBindings({}, document.getElementById('breadcrumbs'));
   ko.applyBindings({}, document.getElementById('settings-modal'));
   ko.applyBindings({}, document.getElementById('footer'));
+
   applyBindings.subscribe((v) => {
     // Unbind and re-bind knockout
     if (v) {
