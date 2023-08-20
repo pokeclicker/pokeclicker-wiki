@@ -1,9 +1,9 @@
 <div>
-    <!-- ko ifnot: SpecialEvents.events.find(e => e.title == Wiki.pageName()) -->
+    <!-- ko ifnot: App.game.specialEvents.events.find(e => e.title == Wiki.pageName()) -->
         <h3>Event not found...</h3>
     <!-- /ko -->
-    <!-- ko if: SpecialEvents.events.find(e => e.title == Wiki.pageName()) -->
-    <div data-bind="with: SpecialEvents.events.find(e => e.title == Wiki.pageName())">
+    <!-- ko if: App.game.specialEvents.events.find(e => e.title == Wiki.pageName()) -->
+    <div data-bind="with: App.game.specialEvents.events.find(e => e.title == Wiki.pageName())">
         <h3>Description</h3>
         <p data-bind="text: $data.description"></p>
         <h3>Start Time</h3>

@@ -133,7 +133,7 @@ const searchOptions = [
     type: 'Events',
     page: '',
   },
-  ...SpecialEvents.events.map(e => ({
+  ...App.game.specialEvents.events.map(e => ({
     display: e.title,
     type: 'Events',
     page: e.title,
