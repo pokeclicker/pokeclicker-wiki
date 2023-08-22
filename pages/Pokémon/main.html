@@ -286,6 +286,26 @@
                 <!-- /ko -->
 
                 <!--
+                    TRADES
+                -->
+                <!-- ko if: $data[PokemonLocationType.Trade] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-trade" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            Trades
+                        </button>
+                    </h4>
+                    <div id="obtain-method-trade" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Trade])">
+                            <a href="#!" class="badge text-bg-secondary" data-bind="
+                            attr: { href: `#!Towns/${$data}` },
+                            text: $data"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+
+                <!--
                     SAFARI ZONE
                 -->
                 <!-- ko if: $data[PokemonLocationType.Safari] -->
@@ -434,6 +454,31 @@
                     <div id="obtain-method-dungeon" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.DungeonReward])">
                             <a target="_BLANK" href="#" class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Dungeons/${$data}` }"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+
+                <!--
+                    GIFT NPC
+                -->
+                <!-- ko if: $data[PokemonLocationType.GiftNPC] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-giftnpc" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            NPC
+                        </button>
+                    </h4>
+                    <div id="obtain-method-giftnpc" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.GiftNPC])">
+                            <a target="_blank" href="#" class="badge text-bg-secondary" data-bind="text: `${$data.town} - ${$data.npc}${$data.requirements ? ' 🔒' : ''}`,
+                                attr: { href: `#!Towns/${$data.town}` },
+                                tooltip: {
+                                    title: $data.requirements ?? '',
+                                    html: false,
+                                    placement: 'bottom',
+                                    trigger: 'hover'
+                                }"></a>
                         </div>
                     </div>
                 </div>
