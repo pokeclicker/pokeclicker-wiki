@@ -167,15 +167,15 @@ Encounter Chance per 1.5s: 1.29%**_
 For a significantly longer uptime than the above setup to attract a wandering Pokémon - perhaps if you're looking for a specific Pokémon or group of Pokémon to turn shiny for example - replace a Roseli berry with a Petaya berry.
 This doesn't decrease the encounter chance per second significantly, but it does make this setup viable for several days instead of several hours.
 
-_**Attract Aura: 1.42x<,
-Encounter Chance per 1.5s: 1.28%**_
+_**Attract Aura: 1.43x<,
+Encounter Chance per 1.5s: 1.21%**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]]| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | |
 :::
 
 ## Regaining Lost Gen 5 Berries
