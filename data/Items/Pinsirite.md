@@ -1,1 +1,0 @@
-This Mega Stone can be obtained from the [[Towns/Safari Zone]] in [[Regions/Kanto]] after reaching Safari level 10. After hitting the required level, it has a chance of spawning as an item. It will then be possible to mega evolve [[Pokemon/Pinsir]], as long as the other requirements are met.
