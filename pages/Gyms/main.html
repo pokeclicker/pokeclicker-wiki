@@ -38,10 +38,7 @@
                 </tr>
                 <tr>
                     <td>Egg Steps</td>
-                    <td data-bind="text: (() => {
-                        const norm = MapHelper.normalizeRoute($data.badgeReward * 3 + 1, GameConstants.Region.none);
-                        return +Math.sqrt(norm).toFixed(2);
-                    })()"></td>
+                    <td data-bind="text: +Math.sqrt(MapHelper.normalizeRoute($data.badgeReward * 3 + 1, GameConstants.Region.none)).toFixed(2)"></td>
                 </tr>
                 <!-- ko if: $data.requirements.length -->
                 <tr>
