@@ -21,7 +21,7 @@ Once inside the Safari, the player has the option to either catch, throw a rock,
 **Note:** All three types of bait give the Pokémon "eating" status and remove "angry" status. While eating, a Pokémon's catch chance is halved, and its escape chance is quartered. All 3 types of bait award **5 Safari experience**.
 
 ## Safari Level
-All actions performed in the Safari (except walking and fleeing encounters) awards Safari experience. Safari Level increases the effectiveness of Rocks and Baits, the catch chance, the Egg Steps gained from walking, and the odds that an item will spawn when a Pokémon is caught. Some items are not available until a certain Safari Level is reached. The Safari Level acts as a multiplier following this formula:
+All actions performed in the Safari (except walking and fleeing encounters) awards Safari experience. This level is shared in all Safari locations. Safari Level increases the effectiveness of Rocks and Baits, the catch chance, the Egg Steps gained from walking, and the odds that an item will spawn when a Pokémon is caught. Some items are not available until a certain Safari Level is reached. The Safari Level acts as a multiplier following this formula:
 
 $Multiplier=\frac{(Safari Level - 1)}{50}$
 
