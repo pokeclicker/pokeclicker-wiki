@@ -1,0 +1,1 @@
+This Mega Stone can be obtained from the Safari Zone in Kanto after reaching Safari level 10. After hitting the required level, it has a chance of spawning as an item. It will then be possible to mega evolve Pinsir, as long as the other requirements are met.
