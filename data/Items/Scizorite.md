@@ -1,1 +1,0 @@
-This Mega Stone can be obtained from the [[TOWNS/Friend Safari]] in [[Regions/Kalos]] after reaching Safari level 15. After hitting the required level, it has a chance of spawning as an item. It will then be possible to mega evolve [[Pokemon/Scizor]], as long as the other requirements are met.
