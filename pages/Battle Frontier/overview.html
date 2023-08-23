@@ -63,7 +63,7 @@
             </tr>
             <tr>
                 <td>Egg Steps per Pokémon</td>
-                <td data-bind="text: Math.round($data.stage() ** (1/2)).toLocaleString()"></td>  
+                <td data-bind="text: +Math.sqrt($data.stage()).toFixed(2)"></td>  
             </tr>
             <tr>
                 <td>Gems per Pokémon</td>

@@ -36,6 +36,13 @@
                         <span data-bind="text: $data.moneyReward.toLocaleString()"></span>
                     </td>
                 </tr>
+                <tr>
+                    <td>Egg Steps</td>
+                    <td data-bind="text: (() => {
+                        const norm = MapHelper.normalizeRoute($data.badgeReward * 3 + 1, GameConstants.Region.none);
+                        return +Math.sqrt(norm).toFixed(2);
+                    })()"></td>
+                </tr>
                 <!-- ko if: $data.requirements.length -->
                 <tr>
                     <td class="text-center" colspan="2">Requirements</td>
