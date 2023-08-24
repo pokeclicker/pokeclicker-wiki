@@ -37,7 +37,7 @@ Certain perks are granted to the player after clearing a Dungeon some number of 
 
 *Note: The entrance tile counts as an empty tile*
 
-Dungeon Size | Chests | Non-Boss Encounter Tiles | Empty Tiles
+Dungeon Size | Chests | Non-Boss Encounter Tiles | Empty Tiles {.no-data-tables}
 :--- | :---: | :---: | ---:
 **5x5** | 5 | 13 | 6
 **6x6** | 6 | 15 | 14
@@ -52,7 +52,7 @@ The Flash ability permanently reveals the contents (Chest, Encounter, Empty) of 
 There are 3 different levels of flash that unlocks in function of the times the dungeon have been cleared:
 
 
-Number of Clears | Flash layout
+Number of Clears | Flash layout {.no-data-tables}
 :--- | ---:
 **100** | 1 tile top, 1 bottom, 1 left and 1 right
 **250** | 1 tile in each direction
@@ -69,7 +69,7 @@ When a number of chests equal to a third of the dungeon's size rounded down are 
 When the furthest region reached is greater than 2 regions beyond a dungeon's region, all loot of a tier rarity greater than **Rare** (e.g: *Epic, Legendary, Mythic*) has a dramatically diminished drop rate. The below chart displays the relationship between the Highest Region Reached by the player and the Debuff Region. All Dungeons found in the Debuff Region, or in regions accessed prior to the Debuff Region, will have the debuff applied to the loot drop rate of all loot that belongs to one of the specified Tiers.
 
 #### Regional Loot Debuff Chart
-Highest Region Reached	| Debuff Region
+Highest Region Reached	| Debuff Region {.no-data-tables}
 :--- | ---:
 Kanto | N/A
 Johto | N/A
@@ -94,7 +94,7 @@ Additionally, loot items can have weights inside of their tier. Items with a hig
 *Note: Dungeons that lack any items in a particular loot tier have the remaining odds from the non-present tier(s) distributed proportionally among the present tiers*
 
 #### Tier info
-Tier | Base Loot Chance (sum of all items of the tier)
+Tier | Base Loot Chance (sum of all items of the tier) {.no-data-tables}
 :--- | ---:
 [[File:chest-common.png\|40px]] Common | 75%
 [[File:chest-rare.png\|40px]] Rare | 20%
