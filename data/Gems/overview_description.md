@@ -8,7 +8,7 @@ These typed Gems can be invested into the Gems tab to increase type effectivity,
 
 The gems allows you to increase the damage efectivity of all your types from the base multiple to +1x as indicated in the table bellow:
 
-Efectivity | Base Multiplier | Maxed multiplier
+Efectivity | Base Multiplier | Maxed multiplier {.no-data-tables}
 :--- | :---: | ---:
 Immune | 0.0x | 1.0x
 Not very | 0.5x | 1.5x
@@ -18,7 +18,7 @@ Very | 2.0x | 3.0x
 
 This +1x is divided in 10 upgrade levels of +0.1x with increasing price:
 
-Level | Gems Price
+Level | Gems Price {.no-data-tables}
 :--- | ---:
 1 | 500
 2 | 1,000
