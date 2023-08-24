@@ -5,7 +5,7 @@ const applyDatatables = () => {
         try {
             const rows = element.getElementsByTagName('tr').length;
             // Don't process these as datatables cannot handle them
-            const doNotProcess = element.querySelectorAll('[colspan],[rowspan],tbody[data-bind*=foreach]').length;
+            const doNotProcess = element.querySelectorAll('[colspan],[rowspan],.no-data-tables').length || element.classList.contains('no-data-tables');
 
             // Don't process anything with less than 40 rows
             if (doNotProcess) return;

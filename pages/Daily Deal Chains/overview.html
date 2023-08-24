@@ -45,7 +45,7 @@
 
 <div class="table-responsive" data-bind="foreach: $data.dealChains">
     <h4 class="pt-4"><ko data-bind="text: `${new Date($data.deals[0].date.getTime() - $data.deals[0].date.getTimezoneOffset() * 60 * 1000).toISOString().split('T')[0]} → ${new Date($data.deals[$data.deals.length - 1].date.getTime() - $data.deals[$data.deals.length - 1].date.getTimezoneOffset() * 60 * 1000).toISOString().split('T')[0]}`"></ko> | <img src="./images/diamond.svg" height="26px"/> <ko data-bind="text: `× ${$data.profit.toLocaleString()}`"></ko></h4>
-    <table class="table table-striped mb-4">
+    <table class="table table-striped mb-4 no-data-tables">
         <thead>
             <tr>
                 <th>Date</th>
