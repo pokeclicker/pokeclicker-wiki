@@ -292,6 +292,12 @@ const searchOptions = [
     type: 'Key Items',
     page: '',
   })),
+  // Shadow Pokemon
+  {
+    display: 'Shadow Pokémon',
+    type: 'Shadow Pokémon',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {

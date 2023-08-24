@@ -78558,13 +78558,54 @@ const hasLootWithRequirements = (dungeon) => {
 };
 hasLootWithRequirements.cache = new WeakMap();
 
+const getDungeonShadowPokemon = (dungeon) => {
+    // This will need to be updated to skip checking requirements once Orre XD is released
+    const shadows = [];
+    dungeon.enemyList.forEach(enemy => {
+        if (enemy instanceof DungeonTrainer) {
+            if (enemy.options?.requirement?.isCompleted() === false) {
+                return;
+            }
+            enemy.getTeam().forEach(pokemon => {
+                if (pokemon.shadow == GameConstants.ShadowStatus.Shadow) {
+                    shadows.push({
+                        pokemon: pokemon.name,
+                        dungeon: dungeon.name,
+                        trainer: enemy,
+                    });
+                }
+            });
+        }
+    });
+    dungeon.bossList.forEach(boss => {
+        if (boss instanceof DungeonTrainer) {
+            if (boss.options?.requirement?.isCompleted() === false) {
+                return;
+            }
+            boss.getTeam().forEach(pokemon => {
+                if (pokemon.shadow == GameConstants.ShadowStatus.Shadow) {
+                    shadows.push({
+                        pokemon: pokemon.name,
+                        dungeon: dungeon.name,
+                        trainer: boss,
+                        boss: true,
+                    });
+                }
+            });
+        }
+    });
+
+    return shadows;
+};
+
 module.exports = {
     getDungeonLoot,
     getDungeonLootChances,
     getDungeonLootChancesForItem,
     hasLootWithRequirements,
     getTableClearCounts,
-    itemTypeCategories
+    itemTypeCategories,
+    getDungeonShadowPokemon,
 };
 
 },{}],519:[function(require,module,exports){
@@ -79107,11 +79148,18 @@ const getBestVitamins = (baseAttack, eggCycles, region) => {
     return res;
 }
 
+const getAllAvailableShadowPokemon = () => {
+    return Object.values(dungeonList)
+        .filter(d => !TownList[d.name].requirements.some(req => req instanceof DevelopmentRequirement))
+        .map(d => Wiki.dungeons.getDungeonShadowPokemon(d)).flat();
+};
+
 module.exports = {
     getBreedingAttackBonus,
     calcEggSteps,
     getEfficiency,
     getBestVitamins,
+    getAllAvailableShadowPokemon,
 }
 
 },{}],524:[function(require,module,exports){
@@ -79461,6 +79509,12 @@ const searchOptions = [
     type: 'Key Items',
     page: '',
   })),
+  // Shadow Pokemon
+  {
+    display: 'Shadow Pokémon',
+    type: 'Shadow Pokémon',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {

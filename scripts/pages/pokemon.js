@@ -50,9 +50,16 @@ const getBestVitamins = (baseAttack, eggCycles, region) => {
     return res;
 }
 
+const getAllAvailableShadowPokemon = () => {
+    return Object.values(dungeonList)
+        .filter(d => !TownList[d.name].requirements.some(req => req instanceof DevelopmentRequirement))
+        .map(d => Wiki.dungeons.getDungeonShadowPokemon(d)).flat();
+};
+
 module.exports = {
     getBreedingAttackBonus,
     calcEggSteps,
     getEfficiency,
     getBestVitamins,
+    getAllAvailableShadowPokemon,
 }
