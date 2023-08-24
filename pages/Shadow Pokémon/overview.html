@@ -1,0 +1,31 @@
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Pokémon</th>
+            <th>Dungeon</th>
+            <th>Trainer</th>
+            <th>Type </th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: Wiki.pokemon.getAllAvailableShadowPokemon()">
+        <tr>
+            <td class="align-middle">
+                <img width="48px" class="me-1" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.pokemon].id + '.png'}"/>
+                <a href="#!" class="text-decoration-none" data-bind="text: $data.pokemon, attr: {href: `#!Pokemon/${$data.pokemon}` }"></a>
+            </td>
+            <td class="align-middle">
+                <a href="#!" class="text-decoration-none" data-bind="text: $data.dungeon, attr: { href: `#!Dungeons/${$data.dungeon}` }"></a>
+            </td>
+            <td class="align-middle">
+                <!-- ko ifnot: $data.trainer.subTrainerClass -->
+                <img width="42px" class="me-1" data-bind="attr: {src: './pokeclicker/docs/assets/images/npcs/' + $data.trainer.trainerClass + '.png'}"/>
+                <!-- /ko -->
+                <!-- ko if: $data.trainer.subTrainerClass -->
+                <img width="42px" class="me-1" data-bind="attr: {src: './pokeclicker/docs/assets/images/npcs/' + $data.trainer.trainerClass + ' ' + $data.trainer.subTrainerClass + '.png'}"/>
+                <!-- /ko -->
+                <knockout data-bind="text: $data.trainer.name"></knockout>
+            </td>
+            <td class="align-middle" data-bind="text: $data.boss ? 'Boss' : 'Trainer'"></td>
+        </tr>
+    </tbody>
+</table>
