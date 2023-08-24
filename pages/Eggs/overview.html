@@ -10,7 +10,7 @@
 <div data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter(r => r > -1 && r <= GameConstants.MAX_AVAILABLE_REGION)">
     <h3><a data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data]), attr: { href: `#!Regions/${GameConstants.camelCaseToString(GameConstants.Region[$data])}` }">Region</a></h3>
     <div class="table-responsive">
-        <table class="table table-hover table-striped table-bordered text-center">
+        <table class="table table-hover table-striped table-bordered text-center no-data-tables">
             <thead>
                 <tr data-bind="foreach: Object.keys(App.game.breeding.hatchList)">
                     <th class="col" data-bind="text: EggType[$data]"></th>
