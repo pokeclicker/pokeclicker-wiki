@@ -333,7 +333,14 @@
                         <div class="accordion-body" data-bind="foreach: Object.entries($data[PokemonLocationType.Safari])">
                             <h5 data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0]])"></h5>
                             <p data-bind="foreach: Object.entries($data[1])">
-                                <span class="badge text-bg-secondary" data-bind="text: `Chance ${$data[1]}%`"></span>
+                                <span class="badge text-bg-secondary" data-bind="with: { chance: $data[1], requireCaught: SafariPokemonList.list[$parent[0]]().find(p => p.name == Wiki.pageName())?.requireCaught }">
+                                    <knockout data-bind="text: `Chance ${$data.chance}%${$data.requireCaught ? ' 🔒' : ''}`, tooltip: {
+                                        title: $data.requireCaught ? `${Wiki.pageName()} will become available in the Safari Zone after being obtained elsewhere.` : '',
+                                        html: true,
+                                        placement: 'bottom',
+                                        trigger: 'hover'
+                                    }"></knockout>
+                                </span>
                             </p>
                         </div>
                     </div>
