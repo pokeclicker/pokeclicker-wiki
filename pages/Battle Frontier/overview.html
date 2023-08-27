@@ -28,7 +28,7 @@
 <br>
 <div>
     <h3>Battle Frontier Statistics</h3>
-    <table class="table table-hover table-striped table-bordered" data-bind="with: { stage: ko.observable(BattleFrontierRunner.stage.peek()), enemyPokemon: ko.observable(BattleFrontierBattle.enemyPokemon.peek()) }">
+    <table class="table table-hover table-striped table-bordered no-data-tables" data-bind="with: { stage: ko.observable(BattleFrontierRunner.stage.peek()), enemyPokemon: ko.observable(BattleFrontierBattle.enemyPokemon.peek()) }">
         <thead class="thead-dark">
             <tr>
                 <th>Level</th>
@@ -63,7 +63,7 @@
             </tr>
             <tr>
                 <td>Egg Steps per Pokémon</td>
-                <td data-bind="text: Math.round($data.stage() ** (1/2)).toLocaleString()"></td>  
+                <td data-bind="text: +Math.sqrt($data.stage()).toFixed(2)"></td>  
             </tr>
             <tr>
                 <td>Gems per Pokémon</td>

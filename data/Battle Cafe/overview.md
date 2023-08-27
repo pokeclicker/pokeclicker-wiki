@@ -5,7 +5,7 @@ While using the Battle Café, there are a number of factors that contribute to t
 - **Spin Direction** — Determined by the player. Clockwise or counterclockwise.
 - **Time of Day** — The local time of the device running the game. Depending on the time, this could be **Day**, **Dusk**, or **Night**. This can be corroborated with the time of day indicator on the town map. See the table below for the associated windows of time.
 
-**Time of Day**   | **Device Time (12-Hour)** | **Device Time (24-Hour)**
+**Time of Day**   | **Device Time (12-Hour)** | **Device Time (24-Hour)** {.no-data-tables}
 :---:             | :---:                     | :---:
 Day               | 6:00 AM - 5:59 PM         | 06:00 - 17:59
 Dusk              | 5:00 PM - 5:59 PM         | 17:00 - 17:59
