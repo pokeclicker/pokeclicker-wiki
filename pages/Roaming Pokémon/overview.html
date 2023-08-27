@@ -1,35 +1,71 @@
 <div>
-    <div data-bind="with: {
-        roamerData: RoamingPokemonList.roamerGroups.flatMap((rg, i) => rg.map((sg, j) => ({
-            name: sg.name,
-            pokemon: RoamingPokemonList.list[i][j] || [],
-            npcTown: Object.values(TownList).find(t => t.npcs?.find(n => n instanceof RoamerNPC && n.region == i && n.subRegionRoamerGroup == j))
-        })))
-    }">
-        <!-- ko foreach: $data.roamerData.filter(r => r.pokemon.length) -->
+    <div data-bind="with: RoamingPokemonList.roamerGroups.flatMap((rg, i) => rg.map((sg, j) => ({
+        region: i,
+        name: sg.name,
+        pokemon: RoamingPokemonList.list[i][j] || [],
+        npcTown: Object.values(TownList).find(t => t.npcs?.find(n => n instanceof RoamerNPC && n.region == i && n.subRegionRoamerGroup == j))
+    }))).filter(r => r.region <= GameConstants.MAX_AVAILABLE_REGION && r.pokemon.length)">
         <table class="table table-bordered table-hover table-striped">
             <thead>
-                <tr>
-                    <th class="bg-primary" colspan="2">
-                        <knockout data-bind="text: $data.name"></knockout>
-                        <knockout class="float-end small" data-bind="text: $data.npcTown ? `NPC - ${npcTown?.name}` : ''"></knockout>
-                    </th>
-                </tr>
-                <tr>
-                    <th>Pokémon</th>
-                    <th>Unlock Condition</th>
+                <tr class="table-primary">
+                    <th class="">Pokémon</th>
+                    <th class="">Unlock Condition</th>
                 </tr>
             </thead>
-            <tbody data-bind="foreach: $data.pokemon.filter(p => !(p.unlockRequirement instanceof SpecialEventRequirement))">
+            <!-- ko foreach: $data -->
+            <tbody>
+                <tr class="table-dark">
+                    <th colspan="2">
+                        <knockout data-bind="text: $data.name"></knockout>
+                        <knockout class="float-end" data-bind="text: $data.npcTown ? `NPC - ${npcTown?.name}` : ''"></knockout>
+                    </th>
+                </tr>
+                <!-- ko foreach: $data.pokemon.filter(p => !(p.unlockRequirement instanceof SpecialEventRequirement) && !p.unlockRequirement?.requirements?.some(r => r instanceof SpecialEventRequirement)) -->
                 <tr>
                     <td class="align-middle w-50">
-                        <img width="48px" class="me-1" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.pokemonName].id + '.png'}"/>
-                        <knockout data-bind="text: $data.pokemonName"></knockout>
+                        <div class="d-flex align-items-center">
+                            <img width="48px" class="me-1" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.pokemonName].id + '.png'}"/>
+                            <knockout data-bind="text: $data.pokemonName"></knockout>
+                        </div> 
                     </td>
                     <td class="align-middle w-50" data-bind="html: Wiki.md.renderInline(Wiki.gameHelper.requirementHints($data.unlockRequirement).join('\n')) || 'N/A'"></td>
                 </tr>
+                <!-- /ko -->
             </tbody>
+            <!-- /ko -->
         </table>
-        <!-- /ko -->
     </div>
+    <br/>
+    <h3>Event Roamers</h3>
+    <p>Some roaming Pokémon only appear during Special Events.</p>
+    <table class="table table-bordered table-hover table-striped no-data-tables">
+        <thead>
+            <tr class="table-primary">
+                <th>Event</th>
+                <th>Pokémon</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: Object.entries(Object.values(RoamingPokemonList.list).flat().flat().reduce((list, p) => {
+            const event = p.unlockRequirement?.specialEventName || p.unlockRequirement?.requirements?.find(r => r instanceof SpecialEventRequirement)?.specialEventName;
+            if (event && !list[event]?.includes(p.pokemonName)) {
+                list[event] = list[event] || [];
+                list[event].push(p.pokemonName);
+            }
+            return list;
+        }, {}))">
+            <tr>
+                <td class="align-middle w-50">
+                    <a href="#!" class="text-decoration-none" data-bind="text: $data[0], attr: { href: `#!Events/${$data[0]}` }"></a>
+                </td>
+                <td class="align-middle w-50">
+                    <div class="d-flex flex-wrap" data-bind="foreach: $data[1]">
+                        <div class="d-flex align-items-center me-1">
+                            <img width="48px" class="me-1" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data].id + '.png'}"/>
+                            <knockout data-bind="text: $data"></knockout>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
