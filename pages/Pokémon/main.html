@@ -18,51 +18,7 @@
                 <!-- /ko -->
             </div>
             <!-- /ko -->
-            <table class="table table-hover table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <th class="text-center" colspan="2" data-bind="text: Wiki.pageName()"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="text-center" colspan="2">
-                            <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>ID</td>
-                        <td data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`"></td>
-                    </tr>
-                    <tr>
-                        <td>Type(s)</td>
-                        <td>
-                            <!-- ko foreach: $data.type -->
-                                <span class="badge" data-bind="text: PokemonType[$data], style:{ background: TypeColor[$data] }"></span>
-                            <!-- /ko -->
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Base Attack</td>
-                        <td data-bind="text: $data.attack.toLocaleString()"></td>
-                    </tr>
-                    <tr>
-                        <td>Egg Steps</td>
-                        <td data-bind="text: App.game.breeding.getSteps($data.eggCycles).toLocaleString()"></td>
-                    </tr>
-                    <tr>
-                        <td>Catch Rate</td>
-                        <td data-bind="text: PokemonFactory.catchRateHelper($data.catchRate, true) + '%'"></td>
-                    </tr>
-                    <tr data-bind="if: $data.heldItem">
-                        <td>Rare Hold Item</td>
-                        <td>
-                            <img style="height: 1.5em" data-bind="attr: { src: `./pokeclicker/docs/${Wiki.items.getItemImage($data.heldItem.type, $data.heldItem.id)}` }" class="item" />
-                            <a data-bind="text: Wiki.items.getItemName($data.heldItem.type, $data.heldItem.id), attr: { href: `#!${Wiki.items.getItemPage($data.heldItem.type, $data.heldItem.id)}` }"></a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <pokemon-summary params="pokemonData: $data"></pokemon-summary>
         </div>
         <div data-bind="visible: $data.evolutions?.filter(e => e.trigger !== EvoTrigger.NONE).length" class="mb-3">
             <h3>Evolves into:</h3>

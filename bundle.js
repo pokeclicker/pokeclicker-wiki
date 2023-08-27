@@ -77151,6 +77151,25 @@ module.exports={
 }
 
 },{}],503:[function(require,module,exports){
+var templateFromUrlLoader = {
+  loadTemplate: function(name, templateConfig, callback) {
+    $.get(`/templates/${templateConfig.fromUrl}`, function(markupString) {
+      ko.components.defaultLoader.loadTemplate(name, markupString, callback);
+    });
+  }
+};
+ko.components.loaders.unshift(templateFromUrlLoader);
+
+function PokemonSummary(params) {
+  this.pokemon = params.pokemonData;
+}
+
+ko.components.register('pokemon-summary', {
+  viewModel: PokemonSummary,
+  template: { fromUrl: 'pokemon-summary' },
+});
+
+},{}],504:[function(require,module,exports){
 // Applying datatables to all tables on the page (with some exceptions)
 const applyDatatables = () => {
     // Any table with headers
@@ -77254,7 +77273,7 @@ module.exports = {
     applyDatatables,
 }
 
-},{}],504:[function(require,module,exports){
+},{}],505:[function(require,module,exports){
 const discordLoginJSON = 'https://discord.pokeclicker.com/json';
 
 const discord = {
@@ -77278,7 +77297,7 @@ fetch(discordLoginJSON, {
 module.exports = {
   discord,
 }
-},{}],505:[function(require,module,exports){
+},{}],506:[function(require,module,exports){
 /*
 Initializing anything we need from the game files
 */
@@ -77385,7 +77404,7 @@ Settings.getSetting('theme').observableValue.subscribe(theme => {
   document.body.className = `no-select ${theme}`;
 });
 
-},{}],506:[function(require,module,exports){
+},{}],507:[function(require,module,exports){
 const requirementHints = (requirement, includeMarkdown = true) => {
     if (!requirement) {
         return [];
@@ -77585,7 +77604,7 @@ module.exports = {
     getRegionName,
 }
 
-},{}],507:[function(require,module,exports){
+},{}],508:[function(require,module,exports){
 // import our version etc
 const package = require('../pokeclicker/package.json');
 
@@ -77597,6 +77616,7 @@ window.Wiki = {
   ...require('./typeahead'),
   ...require('./markdown-renderer'),
   ...require('./discord'),
+  ...require('./components'),
   gameHelper: require('./gameHelper'),
   pokemon: require('./pages/pokemon'),
   farm: require('./pages/farm'),
@@ -77609,7 +77629,7 @@ window.Wiki = {
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":502,"./datatables":503,"./discord":504,"./game":505,"./gameHelper":506,"./markdown-renderer":513,"./navigation":514,"./notifications":515,"./pages/dealChains":516,"./pages/dreamOrbs":517,"./pages/dungeons":518,"./pages/farm":519,"./pages/farmSimulator":520,"./pages/items":521,"./pages/oakItems":522,"./pages/pokemon":523,"./typeahead":525}],508:[function(require,module,exports){
+},{"../pokeclicker/package.json":502,"./components":503,"./datatables":504,"./discord":505,"./game":506,"./gameHelper":507,"./markdown-renderer":514,"./navigation":515,"./notifications":516,"./pages/dealChains":517,"./pages/dreamOrbs":518,"./pages/dungeons":519,"./pages/farm":520,"./pages/farmSimulator":521,"./pages/items":522,"./pages/oakItems":523,"./pages/pokemon":524,"./typeahead":526}],509:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const saveChanges = (editor, filename, btn) => {
@@ -77716,7 +77736,7 @@ module.exports = {
   createMarkDownEditor,
 }
 
-},{"./markdown-renderer":513}],509:[function(require,module,exports){
+},{"./markdown-renderer":514}],510:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -77732,7 +77752,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],510:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],511:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -77750,7 +77770,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],511:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],512:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -77766,7 +77786,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],512:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],513:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -77782,7 +77802,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],513:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],514:[function(require,module,exports){
 const markdownit      = require('markdown-it');
 
 // Setup our markdown editor
@@ -77855,7 +77875,7 @@ module.exports = {
   md,
 }
 
-},{"./markdown-plugins/hidden-comments.js":509,"./markdown-plugins/image-size.js":510,"./markdown-plugins/wiki-links-badge.js":511,"./markdown-plugins/wiki-links.js":512,"markdown-it":106,"markdown-it-attrs":96,"markdown-it-container":99,"markdown-it-mathjax3":100,"markdown-it-multimd-table":101}],514:[function(require,module,exports){
+},{"./markdown-plugins/hidden-comments.js":510,"./markdown-plugins/image-size.js":511,"./markdown-plugins/wiki-links-badge.js":512,"./markdown-plugins/wiki-links.js":513,"markdown-it":106,"markdown-it-attrs":96,"markdown-it-container":99,"markdown-it-mathjax3":100,"markdown-it-multimd-table":101}],515:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 const { applyDatatables } = require('./datatables');
 const { createMarkDownEditor } = require('./markdown-editor');
@@ -78037,7 +78057,7 @@ module.exports = {
     gotoPage,
 };
 
-},{"./datatables":503,"./markdown-editor":508,"./markdown-renderer":513,"./redirections":524}],515:[function(require,module,exports){
+},{"./datatables":504,"./markdown-editor":509,"./markdown-renderer":514,"./redirections":525}],516:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -78060,7 +78080,7 @@ module.exports = {
   alert,
 };
 
-},{}],516:[function(require,module,exports){
+},{}],517:[function(require,module,exports){
 
 class DealProfit {
     constructor(type, amount) {
@@ -78224,7 +78244,7 @@ function getDealChains(
 module.exports = {
     getDealChains,
 }
-},{}],517:[function(require,module,exports){
+},{}],518:[function(require,module,exports){
 const getOrbLoot = (orb) => {
   const weightSum = orb.items.reduce((acc, item) => acc + item.weight, 0);
   return orb.items.map(item => {
@@ -78241,7 +78261,7 @@ module.exports = {
   getOrbLoot
 };
 
-},{}],518:[function(require,module,exports){
+},{}],519:[function(require,module,exports){
 const getTableClearCounts = (dungeon) => {
     if (getTableClearCounts.cache.has(dungeon)) {
         return getTableClearCounts.cache.get(dungeon);
@@ -78608,7 +78628,7 @@ module.exports = {
     getDungeonShadowPokemon,
 };
 
-},{}],519:[function(require,module,exports){
+},{}],520:[function(require,module,exports){
 /**
  * Returns the primary mutation for a berry.
  * Filters out enigma mutations, as they cannot be used to obtain a berry for the first time.
@@ -78628,7 +78648,7 @@ module.exports = {
     getPrimaryMutation,
 };
 
-},{}],520:[function(require,module,exports){
+},{}],521:[function(require,module,exports){
 const selectedPlot = ko.observable(undefined);
 const selectedPlotIndex = ko.observable(undefined);
 const plotLabelsEnabled = ko.observable(false);
@@ -78948,7 +78968,7 @@ module.exports = {
     showPlotContextMenu,
 }
 
-},{}],521:[function(require,module,exports){
+},{}],522:[function(require,module,exports){
 const getItemName =  (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
@@ -79021,7 +79041,7 @@ module.exports = {
     getItemCategoryAndPage,
 };
 
-},{}],522:[function(require,module,exports){
+},{}],523:[function(require,module,exports){
 const getOakItemBonus = (oakItem, level) => {
     const bonus = oakItem.bonusList[level];
     switch (oakItem.name) {
@@ -79095,7 +79115,7 @@ module.exports = {
     getOakItemBonus,
     getOakItemUpgradeReq,
 };
-},{}],523:[function(require,module,exports){
+},{}],524:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -79162,7 +79182,7 @@ module.exports = {
     getAllAvailableShadowPokemon,
 }
 
-},{}],524:[function(require,module,exports){
+},{}],525:[function(require,module,exports){
 const redirections = [
     ({type, name}) => {
         if (type === 'Pokemon') {
@@ -79214,7 +79234,7 @@ module.exports = {
     redirections
 };
 
-},{}],525:[function(require,module,exports){
+},{}],526:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [
@@ -79576,4 +79596,4 @@ module.exports = {
   searchOptions,
 };
 
-},{"./navigation":514}]},{},[507]);
+},{"./navigation":515}]},{},[508]);
