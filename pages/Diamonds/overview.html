@@ -1,0 +1,128 @@
+<!-- ko with: UndergroundItems.list.filter((c) => c.valueType == 0) -->
+<div class="mt-3" data-bind="if: $data.length">
+    <h3>Selling Underground Items</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <th>Item</th>
+                <th>Value</th>
+            </thead>
+            <tbody data-bind="foreach: $data">
+                <tr>
+                    <td class="align-middle">
+                        <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.image }" />
+                        <a href="#!" class="text-decoration-none" data-bind="text: $data.name,
+                            attr: { href: `#!${$data instanceof PokemonItem ? 'Pokemon' : 'Items'}/${$data.displayName}` }"></a>
+                    </td>
+                    <td class="align-middle">
+                        <img width="18" class="me-1" data-bind="attr: { src: `./images/diamond.svg` }" />
+                        <ko data-bind="text: $data.value.toLocaleString()"></ko>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- /ko -->
+
+<!-- ko with: UndergroundItems.list.filter((c) => c.valueType == 0) -->
+<h3>Item Drops</h3>
+<p>Some wild Pokémon can be holding an underground item when captured. Due to this, it is possible to acquire underground items for selling from routes.</p>
+<div data-bind="foreach: $data">
+    <div class="mt-3" data-bind="if: pokemonList.some((p) => ([ItemType.item, ItemType.underground]).includes(p.heldItem?.type) && p.heldItem?.id == $data.name)">
+        <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.image }" />
+        <a href="#!" class="text-decoration-none" data-bind="text: $data.displayName,
+            attr: { href: `#!${$data instanceof PokemonItem ? 'Pokemon' : 'Items'}/${$data.displayName}` }"></a>
+        <!-- ko foreach : pokemonList.filter((p) => ([ItemType.item, ItemType.underground]).includes(p.heldItem?.type) && p.heldItem?.id == $data.name) -->
+        <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokémon/${$data.name}` }"></a>
+        <!-- /ko -->
+    </div>
+
+</div>
+<!-- /ko -->
+<hr>
+<h2>Uses</h2>
+<h3>Mining Upgrades</h3>
+<!-- ko with: GameHelper.enumNumbers(UndergroundUpgrade.Upgrades) -->
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <th>Item</th>
+            <th>Effect/lvl</th>
+            <th>Max Lvl</th>
+            <th>Cost</th>
+            <th>Total Cost</th>
+            <th>Max Effect</th>
+        </thead>
+        <tbody data-bind="foreach: $data">
+            <tr>
+                <td data-bind="text: App.game.underground.getUpgrade($data).displayName"></td>
+                <td>
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Max Energy') -->
+                    +<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Energy
+                    <!-- /ko -->
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('tems') -->
+                    +<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Item
+                    <!-- /ko -->
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('estored') -->
+                    +<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Energy
+                    <!-- /ko -->
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('regen') -->
+                    -<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Second
+                    <!-- /ko -->
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Daily') -->
+                    +<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Deal
+                    <!-- /ko -->
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Bomb') -->
+                    +<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Tiles Cleared
+                    <!-- /ko -->
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Survey Cost') -->
+                    -<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Energy Cost
+                    <!-- /ko -->
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Survey Efficiency') -->
+                    +<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Tile Cleared
+                    <!-- /ko -->
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Larger') -->
+                    +<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Underground Size and Items
+                    <!-- /ko -->
+                </td>
+                <td data-bind="text: App.game.underground.getUpgrade($data).maxLevel"></td>
+                <td data-bind="text: App.game.underground.getUpgrade($data).costList[0].amount"></td>
+                <td>
+                    <img width="18" class="me-1" data-bind="attr: { src: `./images/${GameConstants.Currency[App.game.underground.getUpgrade($data).costList[0].currency]}.svg` }" />
+                    <ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).costList).flatMap((c) => c.amount).reduce((a, b) => a + b)"></ko>
+                </td>
+                <td>
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Max Energy') -->
+                    +<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Energy
+                    <!-- /ko -->
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('tems') -->
+                    +<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Items
+                    <!-- /ko -->
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('estored') -->
+                    +<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Energy
+                    <!-- /ko -->
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('regen') -->
+                    -<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Seconds
+                    <!-- /ko -->
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Daily') -->
+                    +<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Deals
+                    <!-- /ko -->
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Bomb') -->
+                    +<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Tiles Cleared
+                    <!-- /ko -->
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Survey Cost') -->
+                    -<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Energy Cost
+                    <!-- /ko -->
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Survey Efficiency') -->
+                    +<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Tiles Cleared
+                    <!-- /ko -->
+                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Larger') -->
+                    +<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Underground Size and Items
+                    <!-- /ko -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- /ko -->

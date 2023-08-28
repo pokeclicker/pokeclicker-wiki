@@ -77298,6 +77298,7 @@ App.game.farming.initialize();
 App.game.breeding.initialize();
 App.game.oakItems.initialize();
 App.game.keyItems.initialize();
+App.game.underground.initialize();
 QuestLineHelper.loadQuestLines();
 SafariPokemonList.generateKantoSafariList();
 BattleFrontierRunner.stage(100);

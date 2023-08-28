@@ -1,0 +1,328 @@
+<style>
+    body {font-family: Arial;}
+
+    /* Style the tab */
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 12px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+</style>
+
+<script>
+window.wikiWeather = 0;
+
+$(document).ready(function() {
+    document.getElementsByClassName("tablinks")[0].click();
+});
+
+function highestRoute(region, weather) {
+    region = region;
+    weather = weather;
+
+    var routeArr = [];
+    var highestArr = [];
+
+    Routes.getRoutesByRegion(region).map(route => {
+        const routes = Routes.getRoutesByRegion(region).map(r => MapHelper.normalizeRoute(r.number, region, false));
+        var pkmon1 = [];
+        pkmon1.push(Object.values(route.pokemon).flat());
+        route.pokemon.special.forEach((element) => {
+            if(element?.req instanceof ObtainedPokemonRequirement){
+                pkmon1.push(Object.values(element.pokemon).flat());
+            }
+            if(element?.req instanceof WeatherRequirement){
+                if(element.req.weather.includes(weather)){
+                    pkmon1.push(Object.values(element.pokemon).flat());
+                }
+            }
+            if(element?.req instanceof MultiRequirement){
+                element.req.requirements.forEach(x => {
+                    if(x instanceof WeatherRequirement){
+                        if(x.weather.includes(weather)){
+                            pkmon1.push(Object.values(element.pokemon).flat());
+                        }
+                    }
+                });
+            }
+
+        });
+        pkmon1 = Object.values(pkmon1).flat();
+        pkmon1 = pkmon1.filter(e => e.constructor.name !== 'SpecialRoutePokemon');
+        const pokemon = pkmon1.map(p=> pokemonMap[p]);
+        const catchChanceAV = (Math.floor(pokemon.map(p => PokemonFactory.catchRateHelper(p.catchRate, true)).reduce((a,b) => a + b, 0) / pokemon.length))/100;
+        const DT = Math.floor(PokemonFactory.routeDungeonTokens(route.number, region));
+        const PB = (DT* catchChanceAV)/(2.25);
+        const PBMB = (DT* (catchChanceAV+.1))/(2.25);
+        const GB = (DT* (catchChanceAV+.05))/(2);
+        const GBMB = (DT* (catchChanceAV+.15))/(2);
+        const UB = (DT* (catchChanceAV+.1))/(1.75)
+        const UBMB = (DT* (catchChanceAV+.2))/(1.75);
+        routeArr.push( [Routes.getRoute(region,route.number).routeName, DT.toLocaleString(), +(PB). toFixed(2), +(PBMB). toFixed(2), +(GB). toFixed(2), +(GBMB). toFixed(2), +(UB). toFixed(2), +(UBMB). toFixed(2)] );
+    })
+
+    var highestPB = routeArr.reduce((max, dt) => {
+        return dt[2] > max[2] ? dt : max;
+    });
+    var highestPBMB = routeArr.reduce((max, dt) => {
+        return dt[3] > max[3] ? dt : max;
+    });
+    var highestGB = routeArr.reduce((max, dt) => {
+        return dt[4] > max[4] ? dt : max;
+    });
+    var highestGBMB = routeArr.reduce((max, dt) => {
+        return dt[5] > max[5] ? dt : max;
+    });
+    var highestUB = routeArr.reduce((max, dt) => {
+        return dt[6] > max[6] ? dt : max;
+    });
+    var highestUBMB = routeArr.reduce((max, dt) => {
+        return dt[7] > max[7] ? dt : max;
+    });
+
+    return( [[highestPB[0], highestPBMB[0], highestGB[0], highestGBMB[0], highestUB[0], highestUBMB[0]],routeArr] );
+}
+
+function setWeather(evt, region, weather) {
+    window.wikiWeather = weather;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById('galar'+weather).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+<div>
+    <br/>
+    <h4>By Region</h4>
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Region</th>
+                    <th>PB</th>
+                    <th>PB + MB</th>
+                    <th>MB</th>
+                    <th>MB + MB</th>
+                    <th>UB</th>
+                    <th>UB + MB</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r != GameConstants.Region.final && r != GameConstants.Region.none)">
+                <tr>
+                    <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data])"></td>
+                    <td data-bind="html: highestRoute($data, 0)[0][0]"></td>
+                    <td data-bind="html: highestRoute($data, 0)[0][1]"></td>
+                    <td data-bind="html: highestRoute($data, 0)[0][2]"></td>
+                    <td data-bind="html: highestRoute($data, 0)[0][3]"></td>
+                    <td data-bind="html: highestRoute($data, 0)[0][4]"></td>
+                    <td data-bind="html: highestRoute($data, 0)[0][5]"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><b>*Note:</b> Optimal routes in the above table assume Clear weather. Due to weather affecting encounters in Galar, the optimal routes change accordingly. Check next section for more details.</p>
+
+    <br/>
+    <h4>Galar's Optimal Routes by Weather</h4>
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Weather</th>
+                    <th>PB</th>
+                    <th>PB + MB</th>
+                    <th>MB</th>
+                    <th>MB + MB</th>
+                    <th>UB</th>
+                    <th>UB + MB</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: GameHelper.enumNumbers(WeatherType)">
+                <tr>
+                    <td>
+                        <img width="18" class="me-1" data-bind="attr: { src: `./images/weather/${GameConstants.camelCaseToString(WeatherType[$data])}.png` }" />
+                        <ko data-bind="text: GameConstants.camelCaseToString(WeatherType[$data])"></ko>
+                    </td>
+                    <td data-bind="html: highestRoute(7, $data)[0][0]"></td>
+                    <td data-bind="html: highestRoute(7, $data)[0][1]"></td>
+                    <td data-bind="html: highestRoute(7, $data)[0][2]"></td>
+                    <td data-bind="html: highestRoute(7, $data)[0][3]"></td>
+                    <td data-bind="html: highestRoute(7, $data)[0][4]"></td>
+                    <td data-bind="html: highestRoute(7, $data)[0][5]"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<hr>
+<div>
+    <h2>Regional Rate Tables</h2>
+    <p>The following tables provide detailed information for every route, separated by region. DT represents the DT you gain per capture on each route, and the values underneath each Pokéball/Magic Ball combination represent the average Dungeon Tokens you will gain per second.</p>
+    <div data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r != GameConstants.Region.final && r != GameConstants.Region.none)">
+        <h4><a data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data]), attr: { href: `#!Regions/${GameConstants.camelCaseToString(GameConstants.Region[$data])}` }">Region</a></h4>
+        <!-- ko if: $data != 7 -->
+        <div class="table-responsive">
+            <table class="table table-hover table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Route</th>
+                        <th>PB</th>
+                        <th>PB + MB</th>
+                        <th>MB</th>
+                        <th>MB + MB</th>
+                        <th>UB</th>
+                        <th>UB + MB</th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: highestRoute($data, 0)[1]">
+                    <tr>
+                        <td data-bind="text: $data[0]"></td>
+                        <td data-bind="text: $data[1]"></td>
+                        <td data-bind="text: $data[2]"></td>
+                        <td data-bind="text: $data[3]"></td>
+                        <td data-bind="text: $data[4]"></td>
+                        <td data-bind="text: $data[5]"></td>
+                        <td data-bind="text: $data[6]"></td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- /ko -->
+        <!-- ko if: $data == 7 -->
+        <div class="tab" data-bind="foreach: GameHelper.enumNumbers(WeatherType)">
+            <button class="tablinks" data-bind="click: function() {setWeather(event, $parent, $data)}">
+                <img width="18" class="me-1" data-bind="attr: { src: `./images/weather/${GameConstants.camelCaseToString(WeatherType[$data])}.png` }" /> 
+                <ko data-bind="text: GameConstants.camelCaseToString(WeatherType[$data])"></ko>
+            </button>
+        </div>
+        <div class="table-responsive" data-bind="foreach: GameHelper.enumNumbers(WeatherType)">
+            <div class="tabcontent" data-bind="attr: {id: 'galar'+$index()}">
+                <table class="table table-hover table-striped table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Route</th>
+                            <th>PB</th>
+                            <th>PB + MB</th>
+                            <th>MB</th>
+                            <th>MB + MB</th>
+                            <th>UB</th>
+                            <th>UB + MB</th>
+                        </tr>
+                    </thead>
+                    <tbody id="weatherTable" data-bind="foreach: highestRoute($parent, $data)[1]">
+                        <tr>
+                            <td data-bind="text: $data[0]"></td>
+                            <td data-bind="text: $data[1]"></td>
+                            <td data-bind="text: $data[2]"></td>
+                            <td data-bind="text: $data[3]"></td>
+                            <td data-bind="text: $data[4]"></td>
+                            <td data-bind="text: $data[5]"></td>
+                            <td data-bind="text: $data[6]"></td>
+                            </tr>
+                    </tbody>
+                </table>    
+            </div>
+        </div>
+        <br>
+        <!-- /ko -->
+    </div>
+</div>
+<hr>
+<h2>Uses</h2>
+<h4>Dungeon Entry Cost</h4>
+<div data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r != GameConstants.Region.final && r != GameConstants.Region.none)">
+    <h4><a data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data]), attr: { href: `#!Regions/${GameConstants.camelCaseToString(GameConstants.Region[$data])}` }">Region</a></h4>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Entry Price</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: Object.keys(dungeonList).filter((r) => GameConstants.getDungeonRegion(dungeonList[r].name) == $data)">
+                <tr>
+                    <td data-bind="text: $data"></td>
+                    <td>
+                        <img width="18" class="me-1" data-bind="attr: { src: `./images/dungeonToken.svg` }" />
+                        <ko data-bind="text: dungeonList[$data].tokenCost.toLocaleString()"></ko>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- ko with: TownList["Lumiose City"].content.filter((c) => c instanceof Shop && c.items.length > 0).filter(i => i.name == 'Friseur Furfrou') -->
+<div class="mt-3" data-bind="if: $data.length">
+    <h4>Shopmon</h4>
+    <div data-bind="foreach: $data">
+        <!-- ko if: $data.name -->
+        <h5 class="mt-3" data-bind="text: $data.name"></h5>
+        <!-- /ko -->
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <th>Item</th>
+                    <th>Base Price</th>
+                </thead>
+                <tbody data-bind="foreach: $data.items">
+                    <!-- ko if: $data.currency == 2 -->
+                    <tr>
+                        <td class="align-middle">
+                            <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.image }" />
+                            <a href="#!" class="text-decoration-none" data-bind="text: $data.displayName,
+                                attr: { href: `#!${$data instanceof PokemonItem ? 'Pokemon' : 'Items'}/${$data.displayName}` }"></a>
+                        </td>
+                        <td class="align-middle">
+                            <img width="18" class="me-1" data-bind="attr: { src: `./images/${GameConstants.Currency[$data.currency]}.svg` }" />
+                            <ko data-bind="text: $data.basePrice.toLocaleString()"></ko>
+                        </td>
+                    </tr>
+                    <!-- /ko -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- /ko -->

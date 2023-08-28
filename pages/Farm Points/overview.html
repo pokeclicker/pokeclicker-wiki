@@ -1,0 +1,32 @@
+<!-- ko with: GameHelper.enumNumbers(BerryType).filter((c) => c != -1) -->
+<div class="mt-3" data-bind="if: $data.length">
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <th>Berry</th>
+                <th>Farm Points per Second</th>
+                <th>Total berries per harvest</th>
+                <th>Total Farm Point per harvest</th>
+                <th>Total time till ripe (hh:mm:ss)</th>
+            </thead>
+            <tbody data-bind="foreach: $data">
+                <!-- ko with: App.game.farming.berryData[$data] -->
+                <tr>
+                    <td data-bind="text: BerryType[$parent]"></td>
+                    <td>
+                        <img src="./images/farmPoint.svg" width="18px"/>
+                        <ko data-bind="text: ($data.farmValue / $data.growthTime[PlotStage.Bloom]).toFixed(3)"></ko>
+                    </td>
+                    <td data-bind="text: `${$data.harvestAmount.toLocaleString()} berr${$data.harvestAmount === 1 ? 'y' : 'ies'}`"></td>
+                    <td>
+                        <img src="./images/farmPoint.svg" width="18px"/>
+                        <ko data-bind="text: $data.farmValue.toLocaleString()"></ko>
+                    </td>
+                    <td data-bind="text: GameConstants.formatTime($data.growthTime[PlotStage.Bloom])"></td>
+                </tr>
+                <!-- /ko -->
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- /ko -->

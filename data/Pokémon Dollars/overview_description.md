@@ -1,6 +1,4 @@
-Pokemon Dollars are the basic golden currency of PokéClicker, also known as simply Money or Poké. 
-
-[[File:money.svg|35px]]
+Pokemon Dollars [[File:money.svg|25px]] are the basic golden currency of PokéClicker, also known as simply Money or Poké. 
 
 They are obtained by defeating enemies and are primarily spent on various Items. Poké Dollars can be collected while offline for up to 24 hours.
 
