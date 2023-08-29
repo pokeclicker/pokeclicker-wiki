@@ -16,7 +16,7 @@
                     <img data-bind="attr: { src: `./pokeclicker/docs/assets/images/profile/trainer-${$data.trainerSprite}.png` }"/>
                     <ko data-bind="text: $data.name"></ko>
                 </td>
-                <td class="text-nowrap">
+                <td class="text-nowrap" data-bind="attr: { 'data-order': $data.cost.amount }">
                     <img width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/currency/${GameConstants.Currency[$data.cost.currency]}.svg` }"/>
                     <ko data-bind="text: $data.cost.amount.toLocaleString()"></ko>
                 </td>                
@@ -55,7 +55,7 @@
                         <img data-bind="attr: { src: `./pokeclicker/docs/assets/images/profile/trainer-${$data.trainerSprite}.png` }"/>
                         <ko data-bind="text: $data.name"></ko>
                     </td>
-                    <td class="text-nowrap">
+                    <td class="text-nowrap" data-bind="attr: { 'data-order': $data.cost.amount }">
                         <img width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/currency/${GameConstants.Currency[$data.cost.currency]}.svg` }"/>
                         <ko data-bind="text: ($data.cost.amount * $parent.value ** 2 * 50).toLocaleString()"></ko>
                     </td>
