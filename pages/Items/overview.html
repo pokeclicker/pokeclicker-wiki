@@ -9,6 +9,7 @@
         </thead>
         <tbody>
             <!-- ko foreach: Object.values(ItemList) -->
+            <!-- TODO: fix? (links still work, but PokemonItem pages are intentionally excluded from search - this should be changed too for consistency) -->
             <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Items', $data.displayName); return false; }">
                 <td data-bind="text: $data.displayName"></td>
                 <td data-bind="html: GameConstants.camelCaseToString($data.constructor.name)"></td>
