@@ -1,3 +1,5 @@
+**Bolded** Pokémon can only be obtained in their respective region from hatching shop eggs or as [[Wandering Pokémon]]. ***Bolded and italicized*** Pokémon can only be obtained in their respective region from hatching shop eggs.
+
 ### Hatches Into
 Region | Pokemon
 :--- | :---
