@@ -28,12 +28,12 @@ const getItemImage = (itemType, itemId) => {
     }
 };
 
-const getItemPage = (itemType, itemId) => {
-    const categoryAndPage = getItemCategoryAndPage(itemType, itemId);
+const getItemPageFromTypeAndId = (itemType, itemId) => {
+    const categoryAndPage = getItemCategoryAndPageFromTypeAndId(itemType, itemId);
     return `${categoryAndPage.category}/${categoryAndPage.page}`;
 };
 
-const getItemCategoryAndPage = (itemType, itemId) => {
+const getItemCategoryAndPageFromTypeAndId = (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
             return {
@@ -61,11 +61,32 @@ const getItemCategoryAndPage = (itemType, itemId) => {
                 page: '',
             };
     }
-}
+};
+
+const getItemPageFromObject = (item) => {
+    const categoryAndPage = getItemCategoryAndPageFromObject(item);
+    return `${categoryAndPage.category}/${categoryAndPage.page}`;
+};
+
+const getItemCategoryAndPageFromObject = (item) => {
+    if (item instanceof PokemonItem) {
+        return {
+            category: 'Pokémon',
+            page: item.type
+        };
+    } else {
+        return {
+            category: 'Items',
+            page: item.displayName
+        };
+    }
+};
 
 module.exports = {
     getItemName,
     getItemImage,
-    getItemPage,
-    getItemCategoryAndPage,
+    getItemPageFromTypeAndId,
+    getItemCategoryAndPageFromTypeAndId,
+    getItemPageFromObject,
+    getItemCategoryAndPageFromObject,
 };

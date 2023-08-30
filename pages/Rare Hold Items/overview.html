@@ -9,7 +9,7 @@
         <tbody data-bind="foreach: pokemonList.filter(p => p.heldItem)">
             <tr>
                 <td class="clickable" data-bind="text: $data.name, click: () => { Wiki.gotoPage('Pokemon', $data.name); return false; }"></td>
-                <td class="clickable" data-bind="click: () => {const page = Wiki.items.getItemCategoryAndPage($data.heldItem.type, $data.heldItem.id); Wiki.gotoPage(page.category, page.page); return false; } ">
+                <td class="clickable" data-bind="click: () => {const page = Wiki.items.getItemCategoryAndPageFromTypeAndId($data.heldItem.type, $data.heldItem.id); Wiki.gotoPage(page.category, page.page); return false; } ">
                     <img style="height: 1.5em" data-bind="attr: { src: `./pokeclicker/docs/${Wiki.items.getItemImage($data.heldItem.type, $data.heldItem.id)}` }" class="item" />
                     <span data-bind="text: Wiki.items.getItemName($data.heldItem.type, $data.heldItem.id)"></span>
                 </td>

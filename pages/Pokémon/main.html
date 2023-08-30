@@ -58,7 +58,7 @@
                         <td>Rare Hold Item</td>
                         <td>
                             <img style="height: 1.5em" data-bind="attr: { src: `./pokeclicker/docs/${Wiki.items.getItemImage($data.heldItem.type, $data.heldItem.id)}` }" class="item" />
-                            <a data-bind="text: Wiki.items.getItemName($data.heldItem.type, $data.heldItem.id), attr: { href: `#!${Wiki.items.getItemPage($data.heldItem.type, $data.heldItem.id)}` }"></a>
+                            <a data-bind="text: Wiki.items.getItemName($data.heldItem.type, $data.heldItem.id), attr: { href: `#!${Wiki.items.getItemPageFromTypeAndId($data.heldItem.type, $data.heldItem.id)}` }"></a>
                         </td>
                     </tr>
                 </tbody>
