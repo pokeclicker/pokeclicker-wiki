@@ -1,1 +1,1 @@
-Mt. Moon is a dungeon in [[Regions/Kanto]], located between routes [[Routes/Kanto Route 3]] and [[Routes/Kanto Route 4]].
+Located between routes [[Routes/Kanto Route 3]] and [[Routes/Kanto Route 4]].
