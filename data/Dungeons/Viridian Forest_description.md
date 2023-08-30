@@ -1,0 +1,1 @@
+Viridian Forest is a dungeon in [[Regions/Kanto]], located north of [[Towns/Viridian City]] on [[Routes/Kanto Route 2]].
