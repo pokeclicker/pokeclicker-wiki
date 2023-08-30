@@ -133,7 +133,7 @@ const searchOptions = [
     type: 'Events',
     page: '',
   },
-  ...SpecialEvents.events.map(e => ({
+  ...App.game.specialEvents.events.map(e => ({
     display: e.title,
     type: 'Events',
     page: e.title,
@@ -292,6 +292,12 @@ const searchOptions = [
     type: 'Key Items',
     page: '',
   })),
+  // Shadow Pokemon
+  {
+    display: 'Shadow Pokémon',
+    type: 'Shadow Pokémon',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {

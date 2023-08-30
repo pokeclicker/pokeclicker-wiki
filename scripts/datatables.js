@@ -5,10 +5,24 @@ const applyDatatables = () => {
         try {
             const rows = element.getElementsByTagName('tr').length;
             // Don't process these as datatables cannot handle them
-            const doNotProcess = element.querySelectorAll('[colspan],[rowspan]').length;
+            const doNotProcess = element.querySelectorAll('[colspan],[rowspan],.no-data-tables').length || element.classList.contains('no-data-tables');
 
             // Don't process anything with less than 40 rows
-            if (rows < 40 || doNotProcess) return;
+            if (doNotProcess) return;
+
+            // Bootstrap style tables, with responsive table
+            let dom = `<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>><'row table-responsive'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 text-center'p>>`;
+                // How many items per page
+            let pageLength = 25;
+            // How to order our pages
+            let order = [[0, 'asc']];
+
+            // If we have less than 40 rows, we don't need pagination, but table will still be sortable
+            if (rows < 40) {
+                pageLength = 40;
+                dom = `<'row'<'col-sm-12 col-md-6'><'col-sm-12 col-md-6'>><'row table-responsive'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'><'col-sm-12 col-md-7 text-center'>>`
+                order = [];
+            }
 
             $(element).DataTable({
                 // Remember page/search/order
@@ -25,12 +39,11 @@ const applyDatatables = () => {
                 stateLoadCallback: function(settings) {
                     return JSON.parse(sessionStorage.getItem(`DataTables_${Wiki.pageType()}_${Wiki.pageName()}_${i}`) || '{}');
                 },
-                // Bootstrap style tables, with responsive table
-                dom: `<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>><'row table-responsive'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 text-center'p>>`,
-                // Our custom page implementation 
+                dom,
+                pageLength,
+                order,
+                // Our custom page implementation
                 pagingType: 'simple_numbers_no_ellipses',
-                // How many items per page
-                pageLength: 25,
                 // Adjust text
                 language: {
                   paginate: {
@@ -38,6 +51,24 @@ const applyDatatables = () => {
                     next: '→',
                   }
                 }
+            });
+
+            // Setup a custom handler to reset sort order after descending instead of going back to ascending
+            // Accomplished by finding and intercepting the mutation of the sorting th's class from desc to asc
+            const tableId = element.id;
+            const callback = (mutationList) => {
+                for (const mutation of mutationList) {
+                    if (mutation.type === "attributes" &&
+                        mutation.attributeName == "class" &&
+                        mutation.oldValue.includes("sorting_desc") &&
+                        mutation.target.classList.contains("sorting_asc")
+                    ) {
+                        $(`#${tableId}`).DataTable().order.neutral().draw();
+                    }
+                }
+            };
+            document.querySelectorAll(`#${tableId} th.sorting`).forEach((el) => {
+                new MutationObserver(callback).observe(el, { attributes: true, attributeFilter: ['class'], attributeOldValue: true });
             });
         } catch(e){}
     });

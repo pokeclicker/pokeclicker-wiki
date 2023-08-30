@@ -9,7 +9,7 @@
                     <th>Description</th>
                 </tr>
             </thead>
-            <tbody data-bind="foreach: SpecialEvents.events">
+            <tbody data-bind="foreach: App.game.specialEvents.events">
                 <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Events', $data.title); return false; }">
                     <td data-bind="text: $data.title"></td>
                     <td data-bind="text: $data.description"></td>

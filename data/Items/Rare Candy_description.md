@@ -1,0 +1,1 @@
+This item increases a Pokémon's attack by +25% base attack.

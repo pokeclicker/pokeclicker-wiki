@@ -156,26 +156,26 @@ _**Attract Aura: 1.51x,
 Encounter Chance per 1.5s: 1.29%**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
-| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
-| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
+| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
 :::
 
 ### Roseli + Lum + Petaya + Attracting Berry
 For a significantly longer uptime than the above setup to attract a wandering Pokémon - perhaps if you're looking for a specific Pokémon or group of Pokémon to turn shiny for example - replace a Roseli berry with a Petaya berry.
 This doesn't decrease the encounter chance per second significantly, but it does make this setup viable for several days instead of several hours.
 
-_**Attract Aura: 1.42x<,
-Encounter Chance per 1.5s: 1.28%**_
+_**Attract Aura: 1.43x<,
+Encounter Chance per 1.5s: 1.21%**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
-| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
+| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | |
 :::
 
 ## Regaining Lost Gen 5 Berries
@@ -275,7 +275,7 @@ Purple spots are where the player is meant to harvest the berry and replace with
 ### Infinity Farm
 This setup is another way to have a Farm that boosts egg steps gain. The combination of [[Berries/Haban]] and [[Berries/Lum]] in this formation make [[Berries/Petaya]] live for around 3.5 years once the setup fully ripens. While not as efficient as other setups in the [[Hatchery]] page, it works for those who want to forget about the Farm.
 
-Note that replacing the Chople with a different berry like [[Berries/Rowap]] or [[Berries/Starf]] will make the bonus only be 1.70x.
+Note that replacing the [[Berries/Chople]] with a different berry like [[Berries/Rowap]] or [[Berries/Starf]] will make the bonus only be 1.70x.
 
 **Egg Step Bonus: 2.03x**
 **Farm**

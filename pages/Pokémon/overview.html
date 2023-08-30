@@ -12,7 +12,7 @@
         </thead>
         <tbody data-bind="foreach: pokemonList.filter(p => p.id >= 0)">
             <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Pokemon', $data.name); return false; }">
-                <td data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`"></td>
+                <td data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`, attr: { 'data-sort': $data.id }"></td>
                 <td data-bind="text: $data.name"></td>
                 <td data-bind="foreach: $data.type">
                     <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
@@ -20,7 +20,7 @@
                     }"></span>
                 </td>
                 <td data-bind="text: $data.attack"></td>
-                <td data-bind="text: App.game.breeding.getSteps($data.eggCycles).toLocaleString()"></td>
+                <td data-bind="text: App.game.breeding.getSteps($data.eggCycles).toLocaleString(), attr: { 'data-order': $data.eggCycles }"></td>
                 <td data-bind="text: PokemonFactory.catchRateHelper($data.catchRate, true) + '%'"></td>
             </tr>
         </tbody>
