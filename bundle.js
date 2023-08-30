@@ -78231,7 +78231,8 @@ const getOrbLoot = (orb) => {
     return {
       name: item.item.id,
       image: item.item.type === ItemType.underground ? UndergroundItems.getByName(item.item.id)?.image : ItemList[item.item.id]?.image,
-      itemType: ItemType[item.item.type],
+      itemType: item.item.type,
+      itemTypeAsString: ItemType[item.item.type],
       chance: item.weight / weightSum,
     }
   });
@@ -78987,10 +78988,8 @@ const getItemPageFromTypeAndId = (itemType, itemId) => {
 const getItemCategoryAndPageFromTypeAndId = (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
-            return {
-                category: 'Items',
-                page: ItemList[itemId].displayName,
-            };
+            const item = ItemList[itemId];
+            return getItemCategoryAndPageFromObject(item);
         case ItemType.underground:
             return {
                 category: 'Items',

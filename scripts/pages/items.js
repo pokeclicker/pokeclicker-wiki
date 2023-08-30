@@ -36,10 +36,8 @@ const getItemPageFromTypeAndId = (itemType, itemId) => {
 const getItemCategoryAndPageFromTypeAndId = (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
-            return {
-                category: 'Items',
-                page: ItemList[itemId].displayName,
-            };
+            const item = ItemList[itemId];
+            return getItemCategoryAndPageFromObject(item);
         case ItemType.underground:
             return {
                 category: 'Items',
