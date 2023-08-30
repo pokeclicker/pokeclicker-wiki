@@ -28,14 +28,12 @@ const getItemImage = (itemType, itemId) => {
     }
 };
 
-// TODO: rename
-const getItemPage = (itemType, itemId) => {
-    const categoryAndPage = getItemCategoryAndPage(itemType, itemId);
+const getItemPageFromTypeAndId = (itemType, itemId) => {
+    const categoryAndPage = getItemCategoryAndPageFromTypeAndId(itemType, itemId);
     return `${categoryAndPage.category}/${categoryAndPage.page}`;
 };
 
-// TODO: rename
-const getItemCategoryAndPage = (itemType, itemId) => {
+const getItemCategoryAndPageFromTypeAndId = (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
             return {
@@ -87,8 +85,8 @@ const getItemCategoryAndPageFromObject = (item) => {
 module.exports = {
     getItemName,
     getItemImage,
-    getItemPage,
-    getItemCategoryAndPage,
+    getItemPageFromTypeAndId,
+    getItemCategoryAndPageFromTypeAndId,
     getItemPageFromObject,
     getItemCategoryAndPageFromObject,
 };
