@@ -1,0 +1,1 @@
+Located in [[Towns/Saffron City]].
