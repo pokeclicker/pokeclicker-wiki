@@ -1,0 +1,1 @@
+Located East of [[Routes/Kanto Route 10]].
