@@ -77605,12 +77605,16 @@ window.Wiki = {
   dreamOrbs: require('./pages/dreamOrbs'),
   farmSimulator: require('./pages/farmSimulator'),
   dungeons: require('./pages/dungeons'),
+  pokemonDollars: require('./pages/shopMon'),
+  dungeonTokens: require('./pages/dungeonTokens'),
+  battlePoints: require('./pages/shopMon'),
+  diamonds: require('./pages/shopMon'),
   oakItems: require('./pages/oakItems'),
   getDealChains: require('./pages/dealChains').getDealChains,
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":502,"./datatables":503,"./discord":504,"./game":505,"./gameHelper":506,"./markdown-renderer":513,"./navigation":514,"./notifications":515,"./pages/dealChains":516,"./pages/dreamOrbs":517,"./pages/dungeons":518,"./pages/farm":519,"./pages/farmSimulator":520,"./pages/items":521,"./pages/oakItems":522,"./pages/pokemon":523,"./typeahead":525}],508:[function(require,module,exports){
+},{"../pokeclicker/package.json":502,"./datatables":503,"./discord":504,"./game":505,"./gameHelper":506,"./markdown-renderer":513,"./navigation":514,"./notifications":515,"./pages/dealChains":516,"./pages/dreamOrbs":517,"./pages/dungeonTokens":518,"./pages/dungeons":519,"./pages/farm":520,"./pages/farmSimulator":521,"./pages/items":522,"./pages/oakItems":523,"./pages/pokemon":524,"./pages/shopMon":525,"./typeahead":527}],508:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const saveChanges = (editor, filename, btn) => {
@@ -78038,7 +78042,7 @@ module.exports = {
     gotoPage,
 };
 
-},{"./datatables":503,"./markdown-editor":508,"./markdown-renderer":513,"./redirections":524}],515:[function(require,module,exports){
+},{"./datatables":503,"./markdown-editor":508,"./markdown-renderer":513,"./redirections":526}],515:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -78243,6 +78247,124 @@ module.exports = {
 };
 
 },{}],518:[function(require,module,exports){
+const checkExist = setInterval(function() {
+    if ($('.tablinks').length) {
+        $('.tablinks')[0].click();
+        clearInterval(checkExist);
+    }
+ }, 100);
+
+const highestRoute = (region, weather) => {
+    region = region;
+    weather = weather;
+
+    var routeArr = [];
+
+    Routes.getRoutesByRegion(region).map(route => {
+        const routes = Routes.getRoutesByRegion(region).map(r => MapHelper.normalizeRoute(r.number, region, false));
+        var pkmon1 = [];
+        pkmon1.push(Object.values(route.pokemon).flat());
+        route.pokemon.special.forEach((element) => {
+            if(element?.req instanceof ObtainedPokemonRequirement){
+                pkmon1.push(Object.values(element.pokemon).flat());
+            }
+            if(element?.req instanceof WeatherRequirement){
+                if(element.req.weather.includes(weather)){
+                    pkmon1.push(Object.values(element.pokemon).flat());
+                }
+            }
+            if(element?.req instanceof MultiRequirement){
+                element.req.requirements.forEach(x => {
+                    if(x instanceof WeatherRequirement){
+                        if(x.weather.includes(weather)){
+                            pkmon1.push(Object.values(element.pokemon).flat());
+                        }
+                    }
+                });
+            }
+
+        });
+        pkmon1 = Object.values(pkmon1).flat();
+        pkmon1 = pkmon1.filter(e => e.constructor.name !== 'SpecialRoutePokemon');
+        const pokemon = pkmon1.map(p=> pokemonMap[p]);
+        const catchChanceAV = (Math.floor(pokemon.map(p => PokemonFactory.catchRateHelper(p.catchRate, true)).reduce((a,b) => a + b, 0) / pokemon.length))/100;
+        const DT = Math.floor(PokemonFactory.routeDungeonTokens(route.number, region));
+        const PB = (DT* catchChanceAV)/(2.25);
+        const PBMB = (DT* (catchChanceAV+.1))/(2.25);
+        const GB = (DT* (catchChanceAV+.05))/(2);
+        const GBMB = (DT* (catchChanceAV+.15))/(2);
+        const UB = (DT* (catchChanceAV+.1))/(1.75)
+        const UBMB = (DT* (catchChanceAV+.2))/(1.75);
+        routeArr.push( [Routes.getRoute(region,route.number).routeName, DT.toLocaleString(), +(PB). toFixed(2), +(PBMB). toFixed(2), +(GB). toFixed(2), +(GBMB). toFixed(2), +(UB). toFixed(2), +(UBMB). toFixed(2)] );
+    })
+
+    var highestPB = routeArr.reduce((max, dt) => {
+        return dt[2] > max[2] ? dt : max;
+    });
+    var highestPBMB = routeArr.reduce((max, dt) => {
+        return dt[3] > max[3] ? dt : max;
+    });
+    var highestGB = routeArr.reduce((max, dt) => {
+        return dt[4] > max[4] ? dt : max;
+    });
+    var highestGBMB = routeArr.reduce((max, dt) => {
+        return dt[5] > max[5] ? dt : max;
+    });
+    var highestUB = routeArr.reduce((max, dt) => {
+        return dt[6] > max[6] ? dt : max;
+    });
+    var highestUBMB = routeArr.reduce((max, dt) => {
+        return dt[7] > max[7] ? dt : max;
+    });
+
+    return( [[highestPB[0], highestPBMB[0], highestGB[0], highestGBMB[0], highestUB[0], highestUBMB[0]],routeArr] );
+}
+
+const setWeather = (evt, weather) => {
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById('galar'+weather).style.display = "block";
+    evt.currentTarget.className += " active";
+    return;
+}
+
+const getShopMons = (currency) => {
+    var towns = Object.values(TownList).filter(t => t.region < GameConstants.Region.final);
+    var filteredTowns = [];
+    var filteredShops = [];
+    
+    for (var j = 0; j < towns.length; j++){
+        var test = towns[j].content.filter((c) => c instanceof Shop && c.items.length > 0);
+        if (test.length > 0) {
+            test.forEach(function(i) {
+                filteredTowns = [...filteredTowns, i];
+            });
+        }
+    }
+    
+    for (var k = 0; k < filteredTowns.length; k++){
+        var test1 = filteredTowns[k].items.filter((c) => c.currency == currency && c instanceof PokemonItem)
+        if (test1.length > 0) {
+            test1.forEach(function(s) {
+                filteredShops = [...filteredShops, [filteredTowns[k], s]];
+            });
+        }
+    }
+    return filteredShops;
+}
+
+module.exports = {
+    highestRoute,
+    setWeather,
+    getShopMons
+};
+},{}],519:[function(require,module,exports){
 const getTableClearCounts = (dungeon) => {
     if (getTableClearCounts.cache.has(dungeon)) {
         return getTableClearCounts.cache.get(dungeon);
@@ -78609,7 +78731,7 @@ module.exports = {
     getDungeonShadowPokemon,
 };
 
-},{}],519:[function(require,module,exports){
+},{}],520:[function(require,module,exports){
 /**
  * Returns the primary mutation for a berry.
  * Filters out enigma mutations, as they cannot be used to obtain a berry for the first time.
@@ -78629,7 +78751,7 @@ module.exports = {
     getPrimaryMutation,
 };
 
-},{}],520:[function(require,module,exports){
+},{}],521:[function(require,module,exports){
 const selectedPlot = ko.observable(undefined);
 const selectedPlotIndex = ko.observable(undefined);
 const plotLabelsEnabled = ko.observable(false);
@@ -78949,7 +79071,7 @@ module.exports = {
     showPlotContextMenu,
 }
 
-},{}],521:[function(require,module,exports){
+},{}],522:[function(require,module,exports){
 const getItemName =  (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
@@ -79022,7 +79144,7 @@ module.exports = {
     getItemCategoryAndPage,
 };
 
-},{}],522:[function(require,module,exports){
+},{}],523:[function(require,module,exports){
 const getOakItemBonus = (oakItem, level) => {
     const bonus = oakItem.bonusList[level];
     switch (oakItem.name) {
@@ -79096,7 +79218,7 @@ module.exports = {
     getOakItemBonus,
     getOakItemUpgradeReq,
 };
-},{}],523:[function(require,module,exports){
+},{}],524:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -79163,7 +79285,36 @@ module.exports = {
     getAllAvailableShadowPokemon,
 }
 
-},{}],524:[function(require,module,exports){
+},{}],525:[function(require,module,exports){
+function getShopMons(currency) {
+    var towns = Object.values(TownList).filter(t => t.region < GameConstants.Region.final);
+    var filteredTowns = [];
+    var filteredShops = [];
+    
+    for (var j = 0; j < towns.length; j++){
+        var test = towns[j].content.filter((c) => c instanceof Shop && c.items.length > 0);
+        if (test.length > 0) {
+            test.forEach(function(i) {
+                filteredTowns = [...filteredTowns, i];
+            });
+        }
+    }
+    
+    for (var k = 0; k < filteredTowns.length; k++){
+        var test1 = filteredTowns[k].items.filter((c) => c.currency == currency && c instanceof PokemonItem)
+        if (test1.length > 0) {
+            test1.forEach(function(s) {
+                filteredShops = [...filteredShops, [filteredTowns[k], s]];
+            });
+        }
+    }
+    return filteredShops;
+}
+
+module.exports = {
+    getShopMons
+};
+},{}],526:[function(require,module,exports){
 const redirections = [
     ({type, name}) => {
         if (type === 'Pokemon') {
@@ -79215,7 +79366,7 @@ module.exports = {
     redirections
 };
 
-},{}],525:[function(require,module,exports){
+},{}],527:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [
