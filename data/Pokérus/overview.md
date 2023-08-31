@@ -50,6 +50,7 @@ EVs gained | Slow EVs | Catching Method
 EV modifier | Method
 :--- | ---:
 0x | Base wanderer
+2x | Obtained Pokémon is a Shadow Pokémon
 3x | Pokémon is encountered and captured as a Dungeon Pokémon
 5x | Obtained Pokémon is Shiny.
 5x | Pokémon is obtained using a Repeatball
