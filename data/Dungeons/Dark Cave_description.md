@@ -1,0 +1,1 @@
+Located both on [[Routes/Johto Route 31]] and between [[Routes/Johto Route 45]] and [[Routes/Johto Route 46]].
