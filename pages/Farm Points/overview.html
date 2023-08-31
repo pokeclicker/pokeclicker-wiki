@@ -17,10 +17,10 @@
                         <img src="./images/farmPoint.svg" width="18px"/>
                         <ko data-bind="text: ($data.farmValue / $data.growthTime[PlotStage.Bloom]).toFixed(3)"></ko>
                     </td>
-                    <td data-bind="text: `${$data.harvestAmount.toLocaleString()} berr${$data.harvestAmount === 1 ? 'y' : 'ies'}`"></td>
+                    <td data-bind="text: `${$data.harvestAmount.toLocaleString()} berr${$data.harvestAmount === 1 ? 'y' : 'ies'}`, attr: { 'data-sort': $data.harvestAmount }"></td>
                     <td>
                         <img src="./images/farmPoint.svg" width="18px"/>
-                        <ko data-bind="text: $data.farmValue.toLocaleString()"></ko>
+                        <ko data-bind="text: $data.farmValue.toLocaleString(), attr: { 'data-sort': $data.farmValue }"></ko>
                     </td>
                     <td data-bind="text: GameConstants.formatTime($data.growthTime[PlotStage.Bloom])"></td>
                 </tr>

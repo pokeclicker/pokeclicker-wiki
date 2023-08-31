@@ -153,7 +153,7 @@
                     <td data-bind="text: $data"></td>
                     <td>
                         <img width="18" class="me-1" data-bind="attr: { src: `./images/dungeonToken.svg` }" />
-                        <ko data-bind="text: dungeonList[$data].tokenCost.toLocaleString()"></ko>
+                        <ko data-bind="text: dungeonList[$data].tokenCost.toLocaleString(), attr: { 'data-sort': dungeonList[$data].tokenCost }"></ko>
                     </td>
                 </tr>
             </tbody>
@@ -179,7 +179,7 @@
                     </td>
                     <td class="align-middle">
                         <img width="18" class="me-1" data-bind="attr: { src: `./images/${GameConstants.Currency[$data[1].currency]}.svg` }" />
-                        <ko data-bind="text: $data[1].basePrice.toLocaleString()"></ko>
+                        <ko data-bind="text: $data[1].basePrice.toLocaleString(), attr: { 'data-sort':  $data[1].basePrice }"></ko>
                     </td>
                     <td data-bind="text: $data[0].name + ' (' + $data[0].parent.name + ')'"></td>
                     <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0].parent.region])"></td>
