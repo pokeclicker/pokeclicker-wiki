@@ -340,3 +340,12 @@ td.tight {
 .Freeze_Mulch {
   filter: brightness(200%) hue-rotate(210deg);
 }
+
+.mouseover-reveal {
+  position: absolute;
+  opacity: 0;
+}
+
+.mouseover-reveal:hover {
+  opacity: 1;
+}
