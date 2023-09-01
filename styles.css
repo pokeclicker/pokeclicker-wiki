@@ -374,3 +374,12 @@ td.tight {
   border: 1px solid #ccc;
   border-top: none;
 }
+
+.mouseover-reveal {
+  position: absolute;
+  opacity: 0;
+}
+
+.mouseover-reveal:hover {
+  opacity: 1;
+}

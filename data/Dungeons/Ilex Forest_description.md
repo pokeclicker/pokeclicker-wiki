@@ -1,0 +1,1 @@
+Located West of [[Towns/Azalea Town]].

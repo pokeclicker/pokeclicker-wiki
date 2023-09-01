@@ -1,0 +1,1 @@
+Located in the southern part of Kanto while [[Events/Mewtwo strikes back!]] is active.

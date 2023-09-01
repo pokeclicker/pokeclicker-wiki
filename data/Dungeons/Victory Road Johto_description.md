@@ -1,0 +1,1 @@
+Located between [[Routes/Johto Route 26]] and [[Towns/Indigo Plateau Johto]].
