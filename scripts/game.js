@@ -48,7 +48,8 @@ App.game.farming.initialize();
 App.game.breeding.initialize();
 App.game.oakItems.initialize();
 App.game.keyItems.initialize();
-App.game.specialEvents.initialize()
+App.game.underground.initialize();
+App.game.specialEvents.initialize();
 QuestLineHelper.loadQuestLines();
 SafariPokemonList.generateKantoSafariList();
 BattleFrontierRunner.stage(100);

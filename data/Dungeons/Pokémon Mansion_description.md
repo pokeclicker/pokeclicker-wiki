@@ -1,0 +1,1 @@
+Located on [[Towns/Cinnabar Island]].

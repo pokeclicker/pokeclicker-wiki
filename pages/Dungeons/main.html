@@ -56,7 +56,7 @@
         <!-- /ko -->
         <br/>
         <div>
-            <h3>Encounters:</h3>
+            <h3>Encounters</h3>
             <!-- ko foreach: $data.enemyList -->
                 <!-- ko ifnot: $data.name -->
                     <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == ($data.pokemon || $data)).id + '.png'}"/>
@@ -68,10 +68,20 @@
             <!-- /ko -->
         </div>
         <br/>
+        <!-- ko if: Wiki.dungeons.getDungeonShadowPokemon($data).length -->
         <div>
-            <h3>Bosses:</h3>
+            <h4>Shadow Pokémon</h4>
+            <!-- ko foreach: [...new Set(Wiki.dungeons.getDungeonShadowPokemon($data).map(p => p.pokemon))] -->
+            <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data).id + '.png'}"/>
+            <a class="badge text-bg-secondary" href="#!" data-bind="text: $data, attr: { href: `#!Pokemon/${$data}` }"></a>
+            <!-- /ko -->
+        </div>
+        <br/>
+        <!-- /ko -->
+        <div>
+            <h3>Bosses</h3>
             <div class="table-responsive">
-                <table class="table table-bordered table-sm">
+                <table class="table table-bordered table-sm no-data-tables">
                     <thead>
                         <tr class="text-center">
                             <th>Pokémon / Trainer</th>
@@ -120,6 +130,9 @@
                                             <td class="align-middle text-center border-end border-bottom-0 w-50" style="border-color: var(--bs-table-border-color) !important;">
                                                 <img width="42px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data.name).id + '.png'}"/>
                                                 <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a>
+                                                <!-- ko if: $data.shadow >= GameConstants.ShadowStatus.Shadow -->
+                                                <img width="18px" class="ms-1" src="./pokeclicker/docs/assets/images/status/shadow.svg" title="Shadow"/>
+                                                <!-- /ko -->
                                             </td>
                                             <td class="align-middle text-center border-bottom-0 w-50" data-bind="text: $data.maxHealth.toLocaleString()"></td>
                                         </tr>
@@ -136,7 +149,7 @@
         </div>
         <br/>
         <div>
-            <h3>Possible Loot:</h3>
+            <h3>Possible Loot</h3>
             <!-- ko if: Wiki.dungeons.hasLootWithRequirements($data) -->
             <p>
                 This table assumes that all requirements are met, which isn't always possible.

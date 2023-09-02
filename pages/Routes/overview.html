@@ -8,6 +8,7 @@
                 <th>Route Name</th>
                 <th>Encounters</th>
                 <th>Base HP</th>
+                <th>Egg Steps</th>
                 <th>Roamer Chance</th>
             </tr>
         </thead>
@@ -18,6 +19,7 @@
                 <td data-bind="text: $data.routeName, attr: { 'data-order': $index() }"></td>
                 <td data-bind="text: new Set(Object.values($data.pokemon).flat().map(p => typeof p != 'string' ? p.pokemon.flat() : p).flat()).size"></td>
                 <td data-bind="text: `❤️ ${Math.round(PokemonFactory.routeHealth($data.number, $data.region)).toLocaleString()}`, attr: { 'data-order': PokemonFactory.routeHealth($data.number, $data.region) }"></td>
+                <td data-bind="text: +Math.sqrt(MapHelper.normalizeRoute($data?.number, $data.region)).toFixed(2)"></td>
                 <td data-bind="text: (() => {
                     const region = $data.region;
                     const routes = Routes.getRoutesByRegion($data.region).map(r => MapHelper.normalizeRoute(r.number, region));

@@ -16,11 +16,11 @@
                         <a href="#" data-bind="text: $data, attr: { href: `#!Items/${$data}`}"></a>
                     </td>
                     <td data-bind="html: ItemList[$data].description"></td>
-                    <td>
+                    <td data-bind="attr: { 'data-order': ItemList[$data].basePrice }">
                         <img data-bind="attr: { src: `./images/${GameConstants.Currency[ItemList[$data].currency]}.svg` }" width="18px"/>
                         <ko data-bind="text: ItemList[$data].basePrice.toLocaleString()"></ko>
                     </td>
-                    <td>
+                    <td data-bind="attr: { 'data-order': ItemList[$data].basePrice }">
                         <img data-bind="attr: { src: `./images/${GameConstants.Currency[ItemList[$data].currency]}.svg` }" width="18px"/>
                         <ko data-bind="text: (ItemList[$data].basePrice * 100).toLocaleString()"></ko>
                     </td>
