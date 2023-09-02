@@ -1,7 +1,7 @@
 <div>
     <!-- ko ifnot: TownList[Wiki.pageName()]
     -->
-        <h3>Town not found...</h3>
+        <h3 class="alert alert-warning">Town not found...</h3>
     <!-- /ko -->
     <!-- ko with: TownList[Wiki.pageName()] -->
     <div class="float-lg-end col-lg-3 m-2">
@@ -28,6 +28,9 @@
             </tbody>
         </table>
     </div>
+    <!-- ko ifnot: ExternalHelper.isInLiveVersion(TownList[Wiki.pageName()]) -->
+    <h3 class="alert alert-warning">This town is currently under development and not in the game</h3>
+    <!-- /ko -->
     <div class="mt-3" data-bind="if: $data.content">
         <h3>Content:</h3>
         <div data-bind="foreach: $data.content">
