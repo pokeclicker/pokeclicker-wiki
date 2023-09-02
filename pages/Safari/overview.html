@@ -4,7 +4,7 @@
         <thead class="thead-dark">
             <tr>
                 <th>Item</th>
-                <th>Weight</th>
+                <th>Chance</th>
                 <th>Requirement</th>
             </tr>
         </thead>
@@ -14,7 +14,7 @@
                     <img width="32px" class="me-1" data-bind="attr: { src: `pokeclicker/docs/${BagHandler.image($data.item)}` }"/>
                     <knockout data-bind="text: BagHandler.displayName($data.item)"></knockout>
                 </td>
-                <td class="align-middle" data-bind="text: $data.weight"></td>
+                <td class="align-middle" data-bind="text: `${$data.weight*100/SafariItemController.list[$parent].reduce((acc, cur) => { return acc + cur.weight }, 0)}%`"></td>
                 <td class="align-middle" data-bind="html: $data.requirement ? Wiki.gameHelper.requirementHints($data.requirement.requirements).join('<br />') : 'N/A'"></td>
             </tr>
         </tbody>
