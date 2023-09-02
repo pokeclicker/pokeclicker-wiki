@@ -51,6 +51,9 @@
             </tbody>
         </table>
     </div>
+    <!-- ko ifnot: ExternalHelper.isInLiveVersion($data) -->
+    <h3 class="alert alert-warning">This Gym is currently under development and is not in the game</h3>
+    <!-- /ko -->
     <h3>Pokémon Team</h3>
     <!-- ko ifnot: $data.pokemons.some(p => p.requirements?.length) -->
     <div class="table-responsive">

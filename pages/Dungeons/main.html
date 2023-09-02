@@ -45,6 +45,9 @@
                 </tbody>
             </table>
         </div>
+        <!-- ko ifnot: ExternalHelper.isInLiveVersion($data) -->
+        <h3 class="alert alert-warning">This Dungeon is currently under development and is not in the game</h3>
+        <!-- /ko -->
         <p>Town: <a class="badge text-bg-secondary" href="#!" data-bind="text: `${$data.name} (Town)`, attr: { href: `#!Towns/${$data.name}` }"></a></p>
         <!-- ko if: typeof $data.optionalParameters?.dungeonRegionalDifficulty === 'number' -->
         <div>
