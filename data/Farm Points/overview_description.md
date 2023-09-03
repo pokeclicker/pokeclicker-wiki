@@ -1,4 +1,4 @@
-Farm Points [[File:farmPoint.svg|25px]] are the brown currency gained by harvesting [[Berries]] on the [[Farm]]. 
+Farm Points [[File:farmPoint.svg|25px]] are the brown currency gained by harvesting [[Berries]] on the [[Farm]].
 
 Berries that wither do not grant farm points, and different types of berries give differing amounts Farm Points as detailed in the Farm Points Earned Table below.
 
@@ -41,8 +41,8 @@ The one-time purchase and upgrades of the Squirtbottle and Sprinklotad.
 
 Name | Cost | Purchase Location | Level 1 Upgrade | Level 2 Upgrade | Level 3 Upgrade | Level 4 Upgrade | Level 5 Upgrade
 :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
-[[Oak_Items/Squirtbottle]] [[File:Squirtbottle.png\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | [[Towns/Goldenrod_City]] | 2,000 [[File:farmPoint.svg\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | 20,000 [[File:farmPoint.svg\|25px]] | 50,000 [[File:farmPoint.svg\|25px]] &nbsp;
-[[Oak_Items/Sprinklotad]] [[File:Sprinklotad.png\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | [[Towns/Mauville_City]] | 2,000 [[File:farmPoint.svg\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | 20,000 [[File:farmPoint.svg\|25px]] | 50,000 [[File:farmPoint.svg\|25px]] &nbsp;
+[[Oak_Items/Squirtbottle]] [[File:Squirtbottle.png\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | [[Towns/Goldenrod_City]] | 2,000 [[File:farmPoint.svg\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | 20,000 [[File:farmPoint.svg\|25px]] | 50,000 [[File:farmPoint.svg\|25px]]
+[[Oak_Items/Sprinklotad]] [[File:Sprinklotad.png\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | [[Towns/Mauville_City]] | 2,000 [[File:farmPoint.svg\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | 20,000 [[File:farmPoint.svg\|25px]] | 50,000 [[File:farmPoint.svg\|25px]]
 
 #### Farm Hands
 [[Farm Hands]] are unlockable and purchasable "Items" that allow the player to automate their farm. Below are the Farm Hands purchasable via Farm Points.
@@ -57,20 +57,20 @@ Once hired, farm hands will work until they are fired for an hourly wage. Below 
 
 Name | Wage
 :---: | :---:
-[[Farm_Hands/Alex]] [[File:trainer-87.png\|25px]] | 140 [[File:farmPoint.svg\|25px]] &nbsp;
-[[Farm_Hands/Logan]] [[File:trainer-28.png\|25px]] | 440 [[File:farmPoint.svg\|25px]] &nbsp;
-[[Farm_Hands/Joey]] [[File:trainer-70.png\|25px]] | 630 [[File:farmPoint.svg\|25px]] &nbsp;
-[[Farm_Hands/Charlie]] [[File:trainer-109.png\|25px]] | 910 [[File:farmPoint.svg\|25px]] &nbsp;
-[[Farm_Hands/Bailey]] [[File:trainer-68.png\|25px]] | 1,300 [[File:farmPoint.svg\|25px]] &nbsp;
-[[Farm_Hands/Kerry]] [[File:trainer-32.png\|25px]] | 1,900 [[File:farmPoint.svg\|25px]] &nbsp;
-[[Farm_Hands/Riley]] [[File:trainer-92.png\|25px]] | 4,000 [[File:farmPoint.svg\|25px]] &nbsp;
-[[Farm_Hands/Jamie]] [[File:trainer-23.png\|25px]] | 4,000 [[File:farmPoint.svg\|25px]] &nbsp;
-[[Farm_Hands/Jessie]] [[File:trainer-74.png\|25px]] | 8,300 [[File:farmPoint.svg\|25px]] &nbsp;
+[[Farm_Hands/Alex]] [[File:trainer-87.png\|25px]] | 140 [[File:farmPoint.svg\|25px]]
+[[Farm_Hands/Logan]] [[File:trainer-28.png\|25px]] | 440 [[File:farmPoint.svg\|25px]]
+[[Farm_Hands/Joey]] [[File:trainer-70.png\|25px]] | 630 [[File:farmPoint.svg\|25px]]
+[[Farm_Hands/Charlie]] [[File:trainer-109.png\|25px]] | 910 [[File:farmPoint.svg\|25px]]
+[[Farm_Hands/Bailey]] [[File:trainer-68.png\|25px]] | 1,300 [[File:farmPoint.svg\|25px]]
+[[Farm_Hands/Kerry]] [[File:trainer-32.png\|25px]] | 1,900 [[File:farmPoint.svg\|25px]]
+[[Farm_Hands/Riley]] [[File:trainer-92.png\|25px]] | 4,000 [[File:farmPoint.svg\|25px]]
+[[Farm_Hands/Jamie]] [[File:trainer-23.png\|25px]] | 4,000 [[File:farmPoint.svg\|25px]]
+[[Farm_Hands/Jessie]] [[File:trainer-74.png\|25px]] | 8,300 [[File:farmPoint.svg\|25px]]
 
 #### Shopmon
-Shop | Token | Pokémon	Cost
+Shop | Token | Pokémon | Cost
 :---: | :---: | :---:
-Friseur Furfrou (Kalos)	| [[File:Furfrou (Matron).png\|25px]] | [[File:pokemon/676.05.png\|35px]] [[Furfrou (Matron)]] | 1,500,000 [[File:farmPoint.svg\|25px]] &nbsp;
+Friseur Furfrou (Kalos)	| [[File:Furfrou (Matron).png\|25px]] | [[File:pokemon/676.05.png\|35px]] [[Furfrou (Matron)]] | 1,500,000 [[File:farmPoint.svg\|25px]]
 
 ---
 
@@ -78,9 +78,9 @@ Friseur Furfrou (Kalos)	| [[File:Furfrou (Matron).png\|25px]] | [[File:pokemon/6
 
 The three most efficient Berries to gather Farm Points quickly are, in order:
 
-1. [[Berries/Maranga]] [[File:Maranga.png\|25px]] &nbsp;
-2. [[Berries/Hondew]] [[File:Hondew.png\|25px]] &nbsp;
-3. [[Berries/Pinkan]] [[File:Pinkan.png\|25px]] &nbsp;
+1. [[Berries/Maranga]] [[File:Maranga.png\|25px]]
+2. [[Berries/Hondew]] [[File:Hondew.png\|25px]]
+3. [[Berries/Pinkan]] [[File:Pinkan.png\|25px]]
 
 #### Earning Farm Points with Farm Hands
 While there is no efficient way to earn Farm Points (FP) with Farm Hands when using the [[Berries/Cheri]] berrry, you can use farmhands to earn FP efficiently when farming either [[Berries/Lum]] or [[Berries/Hondew]] Berries. For farming Lum without the [[Oak_Items/Sprayduck]], the most efficient Farm Hand to use is [[Farm_Hands/Bailey]]. With the sprayduck, [[Farm_Hands/Kerry]] is most efficient. For Hondew, regardless of using the sprayduck or not, [[Farm_Hands/Charlie]] is the most efficient Farm Hand. The method of farming with farmhands is pretty simple, though there are two different methods to do so.
