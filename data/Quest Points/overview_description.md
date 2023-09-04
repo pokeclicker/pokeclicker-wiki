@@ -3,7 +3,7 @@ Quest Points [[File:questPoint.svg|25px]] are the green currency earned by compl
 ---
 
 ## Uses
-Farm Points can be used to purchase the following:
+Quest Points can be used to purchase the following:
 
 #### Key Items
 Key | Item Cost
@@ -28,7 +28,8 @@ Note: All Evolution Items cost 2,500 [[File:questPoint.svg\|25px]]
 #### Held Items
 Held items | Cost
 :---: | :---:
-|[[File:Macho_Brace.png\|25px]] [[Items/Macho_Brace]] | 2,000 [[File:questPoint.svg\|25px]]
+|[[File:Macho_Brace.png\|25px]] [[Items/Macho_Brace]] | 1,500 [[File:questPoint.svg\|25px]]
+|[[File:Power Bracer.png\|25px]] [[Items/Power Bracer]] | 2,000 [[File:questPoint.svg\|25px]]
 
 #### Eggs
 Key Item | Cost
@@ -90,7 +91,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 :---: | :---: | :---: | :---:
 |[[File:Fire_egg.png\|25px]] Fire Egg | 1 | [[File:pokemon/4.png\|25px]] Charmander | 1,000 [[File:questPoint.svg\|25px]]
 |[[File:Grass_egg.png\|25px]] Grass Egg | 1 | [[File:pokemon/1.png\|25px]] Bulbasaur | 1,000 [[File:questPoint.svg\|25px]]
-|[[File:Water_egg.png\|25px]] Water Egg | 2 | [[File:pokemon/2.png\|25px]] Squirtle [[File:pokemon/131.png\|25px]] Lapras | 2,000 [[File:questPoint.svg\|25px]]
+|[[File:Water_egg.png\|25px]] Water Egg | 2 | [[File:pokemon/7.png\|25px]] Squirtle [[File:pokemon/131.png\|25px]] Lapras | 2,000 [[File:questPoint.svg\|25px]]
 |[[File:Fighting_egg.png\|25px]] Fighting Egg | 2 | [[File:pokemon/107.png\|25px]] Hitmonchan [[File:pokemon/106.png\|25px]] Hitmonlee | 2,000 [[File:questPoint.svg\|25px]]
 |[[File:Dragon_egg.png\|25px]] Dragon Egg | 1 | [[File:pokemon/147.png\|25px]] Dratini | 1,000 [[File:questPoint.svg\|25px]]
 
@@ -217,11 +218,10 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Thunder_stone.png\|25px]] Thunder Stone | 1 | [[File:pokemon/604.png\|25px]] Eelektross | 2,500 [[File:questPoint.svg\|25px]]
 |[[File:Moon_stone.png\|25px]] Moon Stone | 1 | [[File:pokemon/518.png\|25px]] Musharna | 2,500 [[File:questPoint.svg\|25px]]
 |[[File:Sun_stone.png\|25px]] Sun Stone | 2 | [[File:pokemon/547.png\|25px]] Whimsicott [[File:pokemon/549.png\|25px]] Lilligant | 5,000 [[File:questPoint.svg\|25px]]
-|[[File:Linking_cord.png\|25px]] Linking Cord | 4 | [[File:pokemon/526.png\|25px]] Gigalith [[File:pokemon/534.png\|25px]] Conkeldurr [[File:pokemon/589.png\|25px]] Escavalier* [[File:pokemon/617.png\|25px]] Accelgor | 10,000 [[File:questPoint.svg\|25px]]
+|[[File:Linking_cord.png\|25px]] Linking Cord | 4 | [[File:pokemon/526.png\|25px]] Gigalith [[File:pokemon/534.png\|25px]] Conkeldurr [[File:pokemon/589.png\|25px]] Escavalier [[File:pokemon/617.png\|25px]] Accelgor | 10,000 [[File:questPoint.svg\|25px]]
 |[[File:Soothe_bell.png\|25px]] Soothe Bell | 2 | [[File:pokemon/528.png\|25px]] Swoobat [[File:pokemon/542.png\|25px]] Leavanny | 5,000 [[File:questPoint.svg\|25px]]
 |[[File:Dusk_stone.png\|25px]] Dusk Stone | 1 | [[File:pokemon/609.png\|25px]] Chandelure | 2,500 [[File:questPoint.svg\|25px]]
 |[[File:Shiny_stone.png\|25px]] Shiny Stone | 1 | [[File:pokemon/573.png\|25px]] Cinccino | 2,500 [[File:questPoint.svg\|25px]]
-**\*Note**: Escavalier can also be commonly obtained at [[Dungeons/P2_Laboratory]].
 
 ##### Eggs
 Item Name | Number Required | Necessary to Obtain | Cost
