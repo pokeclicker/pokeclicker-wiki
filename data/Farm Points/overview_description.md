@@ -41,8 +41,8 @@ The one-time purchase and upgrades of the Squirtbottle and Sprinklotad.
 
 Name | Cost | Purchase Location | Level 1 Upgrade | Level 2 Upgrade | Level 3 Upgrade | Level 4 Upgrade | Level 5 Upgrade
 :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
-[[Oak_Items/Squirtbottle]] [[File:Squirtbottle.png\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | [[Towns/Goldenrod_City]] | 2,000 [[File:farmPoint.svg\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | 20,000 [[File:farmPoint.svg\|25px]] | 50,000 [[File:farmPoint.svg\|25px]]
-[[Oak_Items/Sprinklotad]] [[File:Sprinklotad.png\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | [[Towns/Mauville_City]] | 2,000 [[File:farmPoint.svg\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | 20,000 [[File:farmPoint.svg\|25px]] | 50,000 [[File:farmPoint.svg\|25px]]
+|[[Oak_Items/Squirtbottle]] [[File:Squirtbottle.png\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | [[Towns/Goldenrod_City]] | 2,000 [[File:farmPoint.svg\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | 20,000 [[File:farmPoint.svg\|25px]] | 50,000 [[File:farmPoint.svg\|25px]]
+|[[Oak_Items/Sprinklotad]] [[File:Sprinklotad.png\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | [[Towns/Mauville_City]] | 2,000 [[File:farmPoint.svg\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | 20,000 [[File:farmPoint.svg\|25px]] | 50,000 [[File:farmPoint.svg\|25px]]
 
 #### Farm Hands
 [[Farm Hands]] are unlockable and purchasable "Items" that allow the player to automate their farm. Below are the Farm Hands purchasable via Farm Points.
@@ -57,15 +57,15 @@ Once hired, farm hands will work until they are fired for an hourly wage. Below 
 
 Name | Wage
 :---: | :---:
-[[Farm_Hands/Alex]] [[File:trainer-87.png\|25px]] | 140 [[File:farmPoint.svg\|25px]]
-[[Farm_Hands/Logan]] [[File:trainer-28.png\|25px]] | 440 [[File:farmPoint.svg\|25px]]
-[[Farm_Hands/Joey]] [[File:trainer-70.png\|25px]] | 630 [[File:farmPoint.svg\|25px]]
-[[Farm_Hands/Charlie]] [[File:trainer-109.png\|25px]] | 910 [[File:farmPoint.svg\|25px]]
-[[Farm_Hands/Bailey]] [[File:trainer-68.png\|25px]] | 1,300 [[File:farmPoint.svg\|25px]]
-[[Farm_Hands/Kerry]] [[File:trainer-32.png\|25px]] | 1,900 [[File:farmPoint.svg\|25px]]
-[[Farm_Hands/Riley]] [[File:trainer-92.png\|25px]] | 4,000 [[File:farmPoint.svg\|25px]]
-[[Farm_Hands/Jamie]] [[File:trainer-23.png\|25px]] | 4,000 [[File:farmPoint.svg\|25px]]
-[[Farm_Hands/Jessie]] [[File:trainer-74.png\|25px]] | 8,300 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Alex]] [[File:trainer-87.png\|25px]] | 140 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Logan]] [[File:trainer-28.png\|25px]] | 440 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Joey]] [[File:trainer-70.png\|25px]] | 630 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Charlie]] [[File:trainer-109.png\|25px]] | 910 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Bailey]] [[File:trainer-68.png\|25px]] | 1,300 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Kerry]] [[File:trainer-32.png\|25px]] | 1,900 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Riley]] [[File:trainer-92.png\|25px]] | 4,000 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Jamie]] [[File:trainer-23.png\|25px]] | 4,000 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Jessie]] [[File:trainer-74.png\|25px]] | 8,300 [[File:farmPoint.svg\|25px]]
 
 #### Shopmon
 Shop | Token | Pokémon | Cost
