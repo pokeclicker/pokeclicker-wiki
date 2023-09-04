@@ -3,7 +3,7 @@ Quest Points [[File:questPoint.svg|25px]] are the green currency earned by compl
 ---
 
 ## Uses
-Farm Points can be used to purchase the following:
+Quest Points can be used to purchase the following:
 
 #### Key Items
 Key | Item Cost
