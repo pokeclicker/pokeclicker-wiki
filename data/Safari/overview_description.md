@@ -1,11 +1,13 @@
-Safari is an area available in Kanto ([[Towns/Safari Zone]]) and Kalos ([[Towns/Friend Safari]]) where the player may spend Quest Points to try and catch unique Pokémon. To unlock this area the player must first have the Safari Ticket. 
+Safari is an area available in Kanto ([[Towns/Safari Zone]]) and Kalos ([[Towns/Friend Safari]]) where the player may spend Quest Points to try and catch unique Pokémon. To unlock this area the player must first have the Safari Ticket.
 
-The Pokémon can randomly spawn both on water and grass tiles, and also as sprites that can show up in both these environments. In Kanto, some Pokémon, like in the original games, only appear here. 
+The Pokémon can randomly spawn both on water and grass tiles, and also as sprites that can show up in both these environments. In Kanto, some Pokémon, like in the original games, only appear here.
 
 In Kalos' Friend Safari, the Pokémon that show up change daily according to the player's trainer ID. Each day, 5 Pokémon will get randomly chosen which can be checked with the Safari Ranger NPC. Only those Pokémon that **cannot gain EVs in any other place** may show up in the Friend Safari and only if the player has captured them previously. If the player hasn't, then the Pokémon will show up as a silhouette and cannot be encountered. Even if all daily Pokémon are currently unavailable to the player, Friend Safari has a list of Pokémon that always show up, no matter what. These Pokémon have a lower encounter rate in comparison to the 5 daily ones.
 
+To check the encounter list, please check the appropriate page: [[Towns/Safari Zone]] for Kanto and [[Towns/Friend Safari]] for Kalos.
+
 ## Actions
-Upon entering the Safari, the player receives 30 Safari Balls. The player may exit and reenter the Safari without paying the Quest Point fee again provided they still have Safari balls. As long as the game isn't closed, they only need to pay the fee if they run out of Safari balls and need to reenter to get more. 
+Upon entering the Safari, the player receives 30 Safari Balls. The player may exit and reenter the Safari without paying the Quest Point fee again provided they still have Safari balls. As long as the game isn't closed, they only need to pay the fee if they run out of Safari balls and need to reenter to get more.
 
 Once inside the Safari, the player has the option to either catch, throw a rock, bait the Pokémon, or flee. These actions award Safari XP and increase your Safari Level. Capturing a Pokémon has a chance of spawning an item. The actions that can be taken are as follows:
 
