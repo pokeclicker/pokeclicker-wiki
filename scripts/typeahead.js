@@ -304,6 +304,37 @@ const searchOptions = [
     type: 'Shadow Pokémon',
     page: '',
   },
+  //Currency Pages
+  {
+    display: 'Pokémon Dollars',
+    type: 'Pokémon Dollars',
+    page: '',
+  },
+  {
+    display: 'Dungeon Tokens',
+    type: 'Dungeon Tokens',
+    page: '',
+  },
+  {
+    display: 'Quest Points',
+    type: 'Quest Points',
+    page: '',
+  },
+  {
+    display: 'Farm Points',
+    type: 'Farm Points',
+    page: '',
+  },
+  {
+    display: 'Diamonds',
+    type: 'Diamonds',
+    page: '',
+  },
+  {
+    display: 'Battle Points',
+    type: 'Battle Points',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
