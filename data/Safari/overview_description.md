@@ -9,7 +9,7 @@ Upon entering the Safari, the player receives 30 Safari Balls. The player may ex
 
 Once inside the Safari, the player has the option to either catch, throw a rock, bait the Pokémon, or flee. These actions award Safari XP and increase your Safari Level. Capturing a Pokémon has a chance of spawning an item. The actions that can be taken are as follows:
 
-|**Action** | **Effect**
+|**Action** | **Effect** {.no-data-tables}
 |---|---|
 |Ball | Attempt to catch the Pokémon with a Safari Ball. Based on catch chance, this action may fail, after which the Pokémon might flee (based on escape chance), watch carefully / be angry (i.e. do nothing), or resume eating bait. Upon running out of Safari Balls, the player will be forced out of the Safari, requiring them to pay the entrance fee again to re-enter. Throwing a ball awards **10 Safari experience** and succesfully capturing a Pokémon awards **50 Safari experience**. This value is multiplied by **5x** if the Pokémon is a shiny.
 |Rock | Toss a rock at the Pokémon, removing "eating" status and making it angry for 2 - 7 turns. When angry, a Pokémon's catch chance and escape chance are both doubled.  Awards **10 Safari experience**.
@@ -69,7 +69,7 @@ This value can then be further modified by Egg Steps multipliers, for example, u
 ### Animation Speed Up Tiers
 Every 10 Safari Levels, the animation will speed up by the following values:
 
-|**Level** | **Value**
+|**Level** | **Value** {.no-data-tables}
 |---|---|
 |Level 10 | 11% faster
 |Level 20 | 33% faster
