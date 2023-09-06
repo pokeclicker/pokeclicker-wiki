@@ -65,14 +65,14 @@ Galar is the eighth region and currently has 108 new Pokémon to catch, breed an
 Breeding Queue in the hatchery: 128
 Maximum Protein per Pokémon: 40**
 
-#### [[Regions/Hisui]]
+#### [[Regions/Hisui]] (In Development)
 Hisui is the ninth region and currently has 26 new Pokémon to catch, breed and hatch. Hisui gyms and dungeons are quite tough and its postgame is tougher, but they offer great rewards as well.
 
 **Non-native Pokémon retain 90% damage
 Breeding Queue in the hatchery: 160
 Maximum Protein per Pokémon: 45**
 
-#### [[Regions/Paldea]]
+#### [[Regions/Paldea]] (In Development)
 Paldea is the tenth region and currently has 106 new Pokémon to catch, breed and hatch. Paldea gyms and dungeons are quite tough and its postgame is tougher, but they offer great rewards as well.
 
 **Non-native Pokémon retain 100% damage
