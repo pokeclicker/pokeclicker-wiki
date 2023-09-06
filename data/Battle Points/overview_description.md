@@ -2,8 +2,6 @@ Battle Points are the red currency earned from the [[Battle_Frontier]] that are 
 
 [[File:battlePoint.svg|35px]]
 
-They are obtained by defeating enemies and are primarily spent on various Items. Poké Dollars can be collected while offline for up to 24 hours.
-
 ---
 
 ## Formulas
