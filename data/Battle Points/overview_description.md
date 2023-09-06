@@ -1,6 +1,4 @@
-Battle Points are the red currency earned from the [[Battle_Frontier]] that are currently used to buy items from the [[Towns/Battle_Frontier]] Shop and a Furfrou from [[Towns/Parfum_Palace]] in Kalos.
-
-[[File:battlePoint.svg|35px]]
+Battle Points [[File:battlePoint.svg|25px]] are the red currency earned from the [[Battle_Frontier]] that are currently used to buy items from the [[Towns/Battle_Frontier]] Shop and a Furfrou from [[Towns/Parfum_Palace]] in Kalos.
 
 ---
 
