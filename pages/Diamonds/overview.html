@@ -88,9 +88,9 @@
                 </td>
                 <td data-bind="text: App.game.underground.getUpgrade($data).maxLevel"></td>
                 <td data-bind="text: App.game.underground.getUpgrade($data).costList[0].amount.toLocaleString(), attr: { 'data-sort': App.game.underground.getUpgrade($data).costList[0].amount }"></td>
-                <td>
+                <td data-bind="attr: { 'data-sort': Object.values(App.game.underground.getUpgrade($data).costList).flatMap((c) => c.amount).reduce((a, b) => a + b) }">
                     <img width="18" class="me-1" data-bind="attr: { src: `./images/${GameConstants.Currency[App.game.underground.getUpgrade($data).costList[0].currency]}.svg` }" />
-                    <ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).costList).flatMap((c) => c.amount).reduce((a, b) => a + b).toLocaleString(), attr: { 'data-sort': Object.values(App.game.underground.getUpgrade($data).costList).flatMap((c) => c.amount).reduce((a, b) => a + b) }"></ko>
+                    <ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).costList).flatMap((c) => c.amount).reduce((a, b) => a + b).toLocaleString()"></ko>
                 </td>
                 <td>
                     <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Max Energy') -->
