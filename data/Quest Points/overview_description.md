@@ -69,7 +69,7 @@ Galar | [[File:Arctozolt.png\|25px]] | [[File:pokemon/881.png\|30px]] Arctozolt 
 Galar| [[File:Arctovish.png\|25px]] | [[File:pokemon/883.png\|30px]] Arctovish | 25,000 [[File:questPoint.svg\|25px]] 1x Fossilized Fish [[File:Fossilized Fish.png\|25px]] 1x Fossilized Dino [[File:Fossilized Dino.png\|25px]]
 Galar | [[File:Zarude (Dada).png\|25px]] | [[File:pokemon/893.png\|30px]] Zarude (Dada) | 500,000 [[File:questPoint.svg\|25px]]
 
-**\*Note**: Pinkan Dodrio is also found on the Sevii Islands 4567
+**\*Note**: Pinkan Dodrio is found on the Sevii Islands 4567.
 
 ---
 

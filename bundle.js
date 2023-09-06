@@ -79544,11 +79544,17 @@ const searchOptions = [
     type: 'Towns',
     page: '',
   },
-  ...Object.values(TownList).filter(t => !(t instanceof DungeonTown)).map(t => ({
+  ...Object.values(TownList).filter(t => !(t instanceof DungeonTown) && !['Safari Zone', 'Friend Safari'].includes(t.name)).map(t => ({
     display: t.name,
     type: 'Towns',
     page: t.name,
   })),
+  // Safari
+  {
+    display: 'Safari',
+    type: 'Safari',
+    page: '',
+  },
   // Gyms
   {
     display: 'Gyms',
