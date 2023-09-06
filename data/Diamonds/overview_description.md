@@ -1,7 +1,5 @@
 Diamonds [[File:diamond.svg|25px]] are currency that can be obtained in the [[Underground]] by selling certain items. They have uses both in and out of the [[Underground]].
 
-They are obtained by defeating enemies and are primarily spent on various Items. Poké Dollars can be collected while offline for up to 24 hours.
-
 ---
 
 ## Acquisition
