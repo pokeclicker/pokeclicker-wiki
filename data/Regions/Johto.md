@@ -12,13 +12,15 @@ The following is a list of Pokémon obtainable in Johto which cannot be found on
 |[[Items/Kings Rock]]|2|[[Pokémon/Politoed]], [[Pokémon/Slowking]]|
 |[[Items/Upgrade]]|1|[[Pokémon/Porygon2]]|
 |[[Items/Soothe Bell]]|5|[[Pokémon/Crobat]], [[Pokémon/Blissey]], [[Pokémon/Espeon]], [[Pokémon/Umbreon]], [[Pokémon/Togetic]]|
-Note: Espeon and Umbreon are time-dependent; daytime (6am - 6pm / 6:00 - 18:00) and nighttime (6pm - 6am / 18:00 - 06:00), respectively.
+**Note:** Espeon and Umbreon are time-dependent; daytime (6am - 6pm / 6:00 - 18:00) and nighttime (6pm - 6am / 18:00 - 06:00), respectively.
 
 ### Shopmons
 
 |Location|Pokemon|Cost|
 |---|---|---|
 |[[Towns/Violet City]]|[[Pokémon/Togepi]]|[[File:questPoint.svg\|20px]] 15,000|
+
+Can also be obtained as a Wanderer using [[Berries/Roseli]] berries.
 
 ### Eggs
 
