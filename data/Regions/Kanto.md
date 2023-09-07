@@ -1,6 +1,6 @@
 ## Exclusive Pokémon
 
-The following is a list of Pokémon obtainable in Kanto which cannot be found on Routes, in Dungeons, or through level-based evolutions of Pokémon caught in the region.
+The following is a list of Pokémon obtainable in Kanto and Sevii Islands (both 123 and 4567) which cannot be found on Routes, in Dungeons, or through level-based evolutions of Pokémon caught in the region.
 
 ### Fossils
 |Fossil|Pokemon|
@@ -27,6 +27,7 @@ The following is a list of Pokémon obtainable in Kanto which cannot be found on
 |[[Towns/Celadon City]]|[[Pokémon/Porygon]]|[[File:questPoint.svg\|20px]] 2,000|
 |[[Towns/Celadon City]]|[[Pokémon/Mr. Mime]]|[[File:questPoint.svg\|20px]] 1,000|
 |[[Towns/Celadon City]]|[[Pokémon/Lickitung]]|[[File:questPoint.svg\|20px]] 1,000|
+|[[Towns/Tanoby Ruins]]|[[Pokémon/Pinkan Dodrio]]|[[File:questPoint.svg\|20px]] 50,000|
 
 ### Eggs
 All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries/Passho]], and [[Berries/Rindo]] berries.
@@ -35,14 +36,18 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 |---|---|
 |[[Items/Fire Egg]]|[[Pokémon/Charmander]]|
 |[[Items/Grass Egg]]|[[Pokémon/Bulbasaur]]|
-|[[Items/Water Egg]]|[[Pokémon/Squirtle]], [[Pokémon/Lapras]]|
+|[[Items/Water Egg]]|[[Pokémon/Squirtle]], [[Pokémon/Lapras]]|*
 |[[Items/Fighting Egg]]|[[Pokémon/Hitmonchan]], [[Pokémon/Hitmonlee]]|
 |[[Items/Dragon Egg]]|[[Pokémon/Dratini]]|
+
+*[[Pokémon/Lapras]] can also be obtained as a Gift Pokémon after beating [[Temporary Battles/Blue 5]] and talking to the Silph Co. Employee NPC at [[Towns/Silph Co.]].
 
 ### Roamers
 |Pokemon|Requirement|Subregion|
 |---|---|---|
 |[[Pokémon/Mew]]|None|Kanto|
+|[[Pokémon/Pink Butterfree]]|Orange League Champion|Sevii Islands 4567|
+|[[Pokémon/Ash's Butterfree]]|Orange League Champion|Sevii Islands 4567|
 
 ### Safari Zone
 
@@ -53,5 +58,6 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 * [[Pokémon/Tauros]]
 * [[Pokémon/Scyther]]
 
-[[Pokémon/Scyther]] is also often obtained as a Wandering Pokemon in the [[Farm]].
-[[Pokémon/Chansey]] can also be obtained as a client-exclusive Pokemon at [[Towns/Client_Island]] in the Sevii Islands.
+[[Pokémon/Scyther]] is also often obtained as a [[Wandering Pokémon]] in the [[Farm]].
+[[Pokémon/Pinsir]] can also be obtained as a Wanderer using [[Berries/Tanga]] berries.
+[[Pokémon/Chansey]] can also be obtained as a client-exclusive Pokemon at [[Towns/Client_Island]] in the Sevii Islands 123.
