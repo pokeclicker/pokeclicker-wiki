@@ -36,11 +36,11 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 |---|---|
 |[[Items/Fire Egg]]|[[Pokémon/Charmander]]|
 |[[Items/Grass Egg]]|[[Pokémon/Bulbasaur]]|
-|[[Items/Water Egg]]|[[Pokémon/Squirtle]], [[Pokémon/Lapras]]|*
+|[[Items/Water Egg]]|[[Pokémon/Squirtle]], [[Pokémon/Lapras]]|
 |[[Items/Fighting Egg]]|[[Pokémon/Hitmonchan]], [[Pokémon/Hitmonlee]]|
 |[[Items/Dragon Egg]]|[[Pokémon/Dratini]]|
 
-*[[Pokémon/Lapras]] can also be obtained as a Gift Pokémon after beating [[Temporary Battles/Blue 5]] and talking to the Silph Co. Employee NPC at [[Towns/Silph Co.]].
+**Note:** [[Pokémon/Lapras]] can also be obtained as a Gift Pokémon after beating [[Temporary Battles/Blue 5]] and talking to the Silph Co. Employee NPC at [[Towns/Silph Co.]].
 
 ### Roamers
 |Pokemon|Requirement|Subregion|
