@@ -24,6 +24,12 @@ The following is a list of Pokémon obtainable in Sinnoh which cannot be found o
 
 **Note:** Lucario requires daytime (6am - 6pm / 6:00 - 18:00). Weavile and Gliscor require nighttime (6pm - 6am / 18:00 - 06:00).
 
+### Held Item Evolutions
+For the evolution to happen, you must equip the Held Item to the corresponding Pokémon and, if it's already at level 100, breed and retrain it.
+|Item|Used on|Necessary to Obtain|
+|---|---|---|
+|[[Items/Griseous Orb]] | [[Pokémon/Giratina (Altered)]] | [[Pokémon/Giratina (Origin)]] |
+
 ### Shopmons
 |Location|Pokémon|Cost|
 |---|---|---|
