@@ -1,0 +1,1 @@
+This item can be used to activate any event at a cost of 500 Quest Points per every day between the activation time and next time the event happens. Note that it looks to the event happening in the future and not the past so activating an event that just ended will be very expensive.
