@@ -3,14 +3,14 @@
 The following is a list of Pokémon obtainable in Kanto and Sevii Islands (both 123 and 4567) which cannot be found on Routes, in Dungeons, or through level-based evolutions of Pokémon caught in the region.
 
 ### Fossils
-|Fossil|Pokemon|
+|Fossil|Pokémon|
 |---|---|
 |[[Items/Dome Fossil]] | [[File:pokemon/140.png\|25px]] [[Pokémon/Kabuto]] & [[File:pokemon/141.png\|25px]] [[Pokémon/Kabutops]]|
 |[[Items/Helix Fossil]] | [[File:pokemon/138.png\|25px]] [[Pokémon/Omanyte]] & [[File:pokemon/139.png\|25px]] [[Pokémon/Omastar]]|
 |[[Items/Old Amber]] | [[File:pokemon/142.png\|25px]] [[Pokémon/Aerodactyl]]|
 
 ### Item Evolutions
-|Item|Number Needed|Pokemon|
+|Item|Number Needed|Pokémon|
 |---|---|---|
 |[[Items/Fire Stone]]|3| [[File:pokemon/38.png\|25px]] [[Pokémon/Ninetales]], [[File:pokemon/59.png\|25px]] [[Pokémon/Arcanine]], [[File:pokemon/136.png\|25px]] [[Pokémon/Flareon]]|
 |[[Items/Water Stone]]|4| [[File:pokemon/62.png\|25px]] [[Pokémon/Poliwrath]], [[File:pokemon/91.png\|25px]] [[Pokémon/Cloyster]], [[File:pokemon/121.png\|25px]] [[Pokémon/Starmie]], [[File:pokemon/134.png\|25px]] [[Pokémon/Vaporeon]]|
@@ -20,19 +20,19 @@ The following is a list of Pokémon obtainable in Kanto and Sevii Islands (both 
 |[[Items/Linking Cord]]|4| [[File:pokemon/65.png\|25px]] [[Pokémon/Alakazam]], [[File:pokemon/68.png\|25px]] [[Pokémon/Machamp]], [[File:pokemon/76.png\|25px]] [[Pokémon/Golem]], [[File:pokemon/94.png\|25px]] [[Pokémon/Gengar]]|
 
 ### Shopmons
-|Location|Pokemon|Cost|
+|Location|Pokémon|Cost|
 |---|---|---|
 |[[Towns/Celadon City]]| [[File:pokemon/133.png\|25px]] [[Pokémon/Eevee]]| [[File:questPoint.svg\|20px]] 4,000|
 |[[Towns/Celadon City]]| [[File:pokemon/124.png\|25px]] [[Pokémon/Jynx]]|[[File:questPoint.svg\|20px]] 2,000|
-|[[Towns/Celadon City]] [[File:pokemon/137.png\|25px]] |[[Pokémon/Porygon]]|[[File:questPoint.svg\|20px]] 2,000|
-|[[Towns/Celadon City]] [[File:pokemon/122.png\|25px]] |[[Pokémon/Mr. Mime]]|[[File:questPoint.svg\|20px]] 1,000|
+|[[Towns/Celadon City]]| [[File:pokemon/137.png\|25px]] [[Pokémon/Porygon]]|[[File:questPoint.svg\|20px]] 2,000|
+|[[Towns/Celadon City]]| [[File:pokemon/122.png\|25px]] [[Pokémon/Mr. Mime]]|[[File:questPoint.svg\|20px]] 1,000|
 |[[Towns/Celadon City]]| [[File:pokemon/108.png\|25px]] [[Pokémon/Lickitung]]|[[File:questPoint.svg\|20px]] 1,000|
 |[[Towns/Tanoby Ruins]]| [[File:pokemon/85.01.png\|25px]] [[Pokémon/Pinkan Dodrio]]|[[File:questPoint.svg\|20px]] 50,000|
 
 ### Eggs
 All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries/Passho]], and [[Berries/Rindo]] berries.
 *This is not recommended in early game, but is listed here for completeness.*
-|Egg|Pokemon|
+|Egg|Pokémon|
 |---|---|
 |[[Items/Fire Egg]]| [[File:pokemon/4.png\|25px]] [[Pokémon/Charmander]]|
 |[[Items/Grass Egg]]| [[File:pokemon/1.png\|25px]] [[Pokémon/Bulbasaur]]|
@@ -43,7 +43,7 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 **Note:** [[Pokémon/Lapras]] can also be obtained as a Gift Pokémon after beating [[Temporary Battles/Blue 5]] and talking to the Silph Co. Employee NPC at [[Towns/Silph Co.]].
 
 ### Roamers
-|Pokemon|Requirement|Subregion|
+|Pokémon|Requirement|Subregion|
 |---|---|---|
 | [[File:pokemon/151.png\|25px]] [[Pokémon/Mew]]|None|Kanto|
 | [[File:pokemon/12.03.png\|25px]] [[Pokémon/Pink Butterfree]]|Orange League Champion|Sevii Islands 4567|
