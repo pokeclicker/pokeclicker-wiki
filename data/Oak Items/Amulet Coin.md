@@ -1,1 +1,1 @@
-The effect stacks Multiplicatively with [[Lucky Incense]].
+The effect stacks Multiplicatively with [[Items/Lucky_Incense]].
