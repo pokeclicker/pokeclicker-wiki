@@ -44,6 +44,7 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 
 ### Weather-dependent Pokémon
 |Pokémon | Required Weather | Location |
+|---|---|---|
 |[[Pokémon/Castform (Sunny) | Sunny | [[Dungeons/Weather Institute]] |
 |[[Pokémon/Castform (Rainy) | Rainy or Thunderstorm | [[Dungeons/Weather Institute]] |
 |[[Pokémon/Castform (Snowy) | Snow, Blizzard, or Hail | [[Dungeons/Weather Institute]] |
