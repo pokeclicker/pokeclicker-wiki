@@ -1,9 +1,9 @@
-## Exclusive Pokemon
+## Exclusive Pokémon
 
 The following is a list of Pokémon obtainable in Hoenn which cannot be found on Routes, in Dungeons, or through level-based evolutions of Pokémon caught in the region.
 
 ### Fossils
-|Fossil|Pokemon|
+|Fossil|Pokémon|
 |---|---|
 |[[Items/Root Fossil]]|[[Pokémon/Lileep]] & [[Pokémon/Cradily]]|
 |[[Items/Claw Fossil]]|[[Pokémon/Anorith]] & [[Pokémon/Armaldo]]|
@@ -19,7 +19,7 @@ The following is a list of Pokémon obtainable in Hoenn which cannot be found on
 |[[Items/Prism Scale]]|1|[[Pokémon/Milotic]]
 
 ### Shopmons
-|Location|Pokemon|Cost|
+|Location|Pokémon|Cost|
 |---|---|---|
 |[[Towns/Mossdeep City]]|[[Pokémon/Beldum]]|[[File:questPoint.svg\|20px]] 22,500|
 
@@ -28,7 +28,7 @@ Can also be obtained as a Wanderer using [[Berries/Babiri]] berries.
 ### Eggs
 All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries/Passho]], and [[Berries/Rindo]] berries.
 
-|Egg|Pokemon|
+|Egg|Pokémon|
 |---|---|
 |[[Items/Fire Egg]] | [[Pokémon/Torchic]] |
 |[[Items/Grass Egg]] | [[Pokémon/Treecko]], [[Pokémon/Roselia]] |
@@ -36,7 +36,7 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 |[[Items/Electric Egg]] | [[Pokémon/Electrike]] |
 |[[Items/Dragon Egg]] | [[Pokémon/Bagon]] |
 
-### Baby Pokemon
+### Baby Pokémon
 
 |Baby|Adult|
 |---|---|
@@ -45,13 +45,12 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 ### Weather-dependent Pokémon
 |Pokémon | Required Weather | Location |
 |---|---|---|
-|[[Pokémon/Castform (Sunny) | Sunny | [[Dungeons/Weather Institute]] |
-|[[Pokémon/Castform (Rainy) | Rainy or Thunderstorm | [[Dungeons/Weather Institute]] |
-|[[Pokémon/Castform (Snowy) | Snow, Blizzard, or Hail | [[Dungeons/Weather Institute]] |
+|[[Pokémon/Castform (Sunny)]] | Sunny | [[Dungeons/Weather Institute]] |
+|[[Pokémon/Castform (Rainy)]] | Rainy or Thunderstorm | [[Dungeons/Weather Institute]] |
+|[[Pokémon/Castform (Snowy)]] | Snow, Blizzard, or Hail | [[Dungeons/Weather Institute]] |
 
 ### Roamers
-
-|Pokemon|Requirment|
+|Pokémon|Requirement|
 |---|---|
 |[[Pokémon/Latios]]|Unlocks during [[Quest_Lines/The_Eon_Duo]]|
 |[[Pokémon/Latias]]|Unlocks during [[Quest_Lines/The_Eon_Duo]]|
