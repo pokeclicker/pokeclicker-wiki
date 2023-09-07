@@ -1,9 +1,9 @@
-## Exclusive Pokemon
+## Exclusive Pokémon
 
 The following is a list of Pokémon obtainable in Sinnoh which cannot be found on Routes, in Dungeons, or through level-based evolutions of Pokémon caught in the region.
 
 ### Fossils
-|Fossil|Pokemon|
+|Fossil|Pokémon|
 |---|---|
 |[[Items/Skull Fossil]]|[[Pokémon/Cranidos]] & [[Pokémon/Rampardos]]|
 |[[Items/Armor Fossil]]|[[Pokémon/Shieldon]] & [[Pokémon/Bastiodon]]|
@@ -25,7 +25,7 @@ The following is a list of Pokémon obtainable in Sinnoh which cannot be found o
 **Note:** Lucario requires daytime (6am - 6pm / 6:00 - 18:00). Weavile and Gliscor require nighttime (6pm - 6am / 18:00 - 06:00).
 
 ### Shopmons
-|Location|Pokemon|Cost|
+|Location|Pokémon|Cost|
 |---|---|---|
 |[[Towns/Pastoria City]]|[[Pokémon/Skorupi]]|[[File:questPoint.svg\|20px]] 6,750|
 |[[Towns/Solaceon Town]]|[[Pokémon/Spiritomb]]|[[File:questPoint.svg\|20px]] 6,750|
@@ -37,8 +37,7 @@ Skorupi can be obtained as a Wanderer using [[Berries/Kebia]] berries. Combee, B
 
 ### Eggs
 All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries/Passho]], and [[Berries/Rindo]] berries.
-
-|Egg|Pokemon|
+|Egg|Pokémon|
 |---|---|
 |[[Items/Fire Egg]] | [[Pokémon/Chimchar]] |
 |[[Items/Grass Egg]] | [[Pokémon/Turtwig]], [[Pokémon/Carnivine]] |
@@ -47,8 +46,7 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 |[[Items/Fighting Egg]] | [[Pokémon/Riolu]] |
 |[[Items/Dragon Egg]] | [[Pokémon/Gible]] |
 
-### Baby Pokemon
-
+### Baby Pokémon
 |Baby|Adult|
 |---|---|
 |[[Pokémon/Bonsly]] | [[Pokémon/Sudowoodo]] |
@@ -91,7 +89,7 @@ Munchlax can also be obtained as a Wanderer by using [[Berries/Chilan]] berries.
 |[[Pokémon/Burmy (Plant)]] | [[Pokémon/Burmy (Trash)]] | Power Plant, Mansion, or Graveyard |
 
 ### Roamers
-|Pokemon|Requirement|
+|Pokémon|Requirement|
 |---|---|
 |[[Pokémon/Manaphy]]|Unlocks during [[Quest_Lines/Recover the Precious Egg]]|
 |[[Pokémon/Mesprit]]|Unlocks after clearing [[Dungeons/Distortion World]]|
