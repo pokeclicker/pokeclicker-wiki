@@ -1,5 +1,5 @@
 ## Usage
-While using the Battle Café, there are a number of factors that contribute to the [[Pokemon/Alcremie]] *(or [[Pokemon/Milcery]])*. Those factors are as follows:
+While using the Battle Café, there are a number of factors that contribute to the [Alcremie](#!Pokémon/Alcremie_(Strawberry_Vanilla)) *(or [[Pokemon/Milcery]])*. Those factors are as follows:
 - **Sweet Type** — Determined by the player. One of seven possible options, which are outlined below.
 - **Spin Duration** — Determined by the player. A number that is greater than zero. *(`3` by default.)*
 - **Spin Direction** — Determined by the player. Clockwise or counterclockwise.
@@ -39,7 +39,7 @@ Ribbon          | 3,000 [[Berries/Bluk]] [[File:Bluk.png\|20px]]
 ^^              | 100 [[Berries/Payapa]] [[File:Payapa.png\|20px]]
 
 ## Possible Forms
-Outlined below are all of the possible combinations of Battle Café settings and the [[Pokemon/Alcremie]] or [[Pokemon/Milcery]] form that is obtained as a result.
+Outlined below are all of the possible combinations of Battle Café settings and the [Alcremie](#!Pokémon/Alcremie_(Strawberry_Vanilla)) or [[Pokemon/Milcery]] form that is obtained as a result.
 
 **Sweet Type**  | **Time**  | **Spin Duration** | **Direction**     | **Pokémon**
 :---:           | :---:     | :---:     | :---:             | :---:
