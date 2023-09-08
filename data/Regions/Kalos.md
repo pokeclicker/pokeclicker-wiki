@@ -5,20 +5,20 @@ The following is a list of Pokémon obtainable in Kalos which cannot be found on
 ### Fossils
 |Fossil|Pokémon|
 |---|---|
-|[[Items/Jaw Fossil]]|[[Pokémon/Tyrunt]] & [[Pokémon/Tyrantrum]]|
-|[[Items/Sail Fossil]]|[[Pokémon/Amaura]] & [[Pokémon/Aurorus]]|
+|[[Items/Jaw Fossil]] | [[File:pokemon/696.png\|25px]] [[Pokémon/Tyrunt]] & [[File:pokemon/697.png\|25px]] [[Pokémon/Tyrantrum]]|
+|[[Items/Sail Fossil]] | [[File:pokemon/698.png\|25px]] [[Pokémon/Amaura]] & [[File:pokemon/699.png\|25px]] [[Pokémon/Aurorus]]|
 
 **Note:** Tyrantrum requires daytime (6am - 6pm / 6:00 - 18:00). Aurorus requires nighttime (6pm - 6am / 18:00 - 06:00).
 
 ### Item Evolutions
 |Item|Number Needed|Pokémon|
 |---|---|---|
-|[[Items/Sachet]]|1|[[Pokémon/Aromatisse]] |
-|[[Items/Whipped Dream]]|1|[[Pokémon/Slurpuff]] |
-|[[Items/Sun Stone]]|1|[[Pokémon/Heliolisk]] |
-|[[Items/Dusk Stone]]|1|[[Pokémon/Aegislash]] |
-|[[Items/Linking Cord]]|4|[[Pokémon/Gourgeist (Small)]], [[Pokémon/Gourgeist (Large)]], [[Pokémon/Gourgeist (Average)]], [[Pokémon/Gourgeist (Super Size)]] |
-|[[Items/Shiny Stone]]|5|[[Pokémon/Florges (Red)]], [[Pokémon/Florges (Yellow)]], [[Pokémon/Florges (Blue)]], [[Pokémon/Florges (Orange)]], [[Pokémon/Florges (White)]] |
+|[[Items/Sachet]]|1 | [[File:pokemon/683.png\|25px]] [[Pokémon/Aromatisse]] |
+|[[Items/Whipped Dream]]|1 | [[File:pokemon/685.png\|25px]] [[Pokémon/Slurpuff]] |
+|[[Items/Sun Stone]]|1 | [[File:pokemon/695.png\|25px]] [[Pokémon/Heliolisk]] |
+|[[Items/Dusk Stone]]|1 | [[File:pokemon/681.png\|25px]] [[Pokémon/Aegislash (Shield)]] |
+|[[Items/Linking Cord]]|4 | [[File:pokemon/711.01.png\|25px]] [[Pokémon/Gourgeist (Small)]], [[File:pokemon/711.02.png\|25px]] [[Pokémon/Gourgeist (Large)]], [[File:pokemon/711.png\|25px]] [[Pokémon/Gourgeist (Average)]], [[File:pokemon/711.03.png\|25px]] [[Pokémon/Gourgeist (Super Size)]] |
+|[[Items/Shiny Stone]]|5 | [[File:pokemon/671.png\|25px]] [[Pokémon/Florges (Red)]], [[File:pokemon/671.01.png\|25px]] [[Pokémon/Florges (Yellow)]], [[File:pokemon/671.03.png\|25px]] [[Pokémon/Florges (Blue)]], [[File:pokemon/671.02.png\|25px]] [[Pokémon/Florges (Orange)]], [[File:pokemon/671.04.png\|25px]] [[Pokémon/Florges (White)]] |
 
 ### Shopmons
 While Kalos has no mandatory Shopmons, there are some optional Pokémon available for purchase at [[Towns/Parfum Palace]] and [[Towns/Lumiose City]].
@@ -27,24 +27,26 @@ While Kalos has no mandatory Shopmons, there are some optional Pokémon availabl
 All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries/Passho]], and [[Berries/Rindo]] berries.
 |Egg|Pokémon|
 |---|---|
-|[[Items/Fire Egg]] | [[Pokémon/Fennekin]] |
-|[[Items/Grass Egg]] | [[Pokémon/Chespin]] |
-|[[Items/Water Egg]] | [[Pokémon/Froakie]] |
+|[[Items/Fire Egg]] | [[File:pokemon/653.png\|25px]] [[Pokémon/Fennekin]] |
+|[[Items/Grass Egg]] | [[File:pokemon/650.png\|25px]] [[Pokémon/Chespin]] |
+|[[Items/Water Egg]] | [[File:pokemon/656.png\|25px]] [[Pokémon/Froakie]] |
 
 ### Weather-dependent Pokémon
 |Pokémon | Evolution | Required Weather | Required Level |
 |---|---|---|---|
-|[[Pokémon/Sliggoo]] | [[Pokémon/Goodra]] | Rain, Thunderstorm, or Fog | 50 |
+| [[File:pokemon/705.png\|25px]] [[Pokémon/Sliggoo]] | [[File:pokemon/706.png\|25px]] [[Pokémon/Goodra]] | Rain, Thunderstorm, or Fog | 50 |
+
+Can also be obtained by hatching a [[Items/Dragon Egg]].
 
 ### Level-dependent Pokémon
 **Note:** Level-dependant Pokémon evolve at or above the level specified excluding level 100. Pokémon at level 100 must be bred and retrained to the correct level.
 |Pokémon | Evolution | Required Level | Required Location |
 |---|---|---|---|
-|[[Pokémon/Eevee]] | [[Pokémon/Sylveon]] | 29 | Any |
+| [[File:pokemon/133.png\|25px]] [[Pokémon/Eevee]] | [[File:pokemon/700.png\|25px]] [[Pokémon/Sylveon]] | 29 | Any |
 
 ### Roamers
 |Pokémon|Requirement|
 |---|---|
-|[[Pokémon/Hoopa]]|Unlocks after becoming Kalos Champion |
+| [[File:pokemon/720.png\|25px]] [[Pokémon/Hoopa]]|Unlocks after becoming Kalos Champion |
 
 Can also be obtained as a Wanderer by using [[Berries/Micle]] berries. Note that you will need to use [[Items/Freeze Mulch]] to nullify Micle's Repel aura to be able to get Wanderers.
