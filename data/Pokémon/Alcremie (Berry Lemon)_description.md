@@ -1,0 +1,1 @@
+This Pokémon can be obtained via the [[Battle Cafe]].
