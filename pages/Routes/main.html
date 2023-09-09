@@ -2,6 +2,9 @@
 <h2>Route not found...</h2>
 <!-- /ko -->
 <div data-bind="with: Routes.regionRoutes.find(r => r.routeName == Wiki.pageName())">
+  <!-- ko ifnot: ExternalHelper.isInLiveVersion($data) -->
+  <h3 class="alert alert-warning">This Route is currently under development and is not in the game</h3>
+  <!-- /ko -->
   <div>
     <h3>Region</h3>
     <p data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region])"></p>
