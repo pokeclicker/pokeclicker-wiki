@@ -4,7 +4,7 @@
         <h3>Town not found...</h3>
     <!-- /ko -->
     <!-- ko with: TownList[Wiki.pageName()] -->
-    <div class="float-lg-end col-lg-3 m-2">
+    <div class="float-lg-end col-lg-4 m-2">
         <table class="table table-hover table-striped table-bordered">
             <thead>
                 <tr>
@@ -15,6 +15,16 @@
                 <tr>
                     <td class="text-center" colspan="2">
                         <img class="w-100" data-bind="attr: {src: `images/${Wiki.pageName()}.png`}"/>
+                    </td>
+                </tr>
+                <tr data-bind="if: Wiki.gameHelper.getRegionMap($data.region, $data.subRegion)">
+                    <td colspan="2">
+                        <div id="map-container">
+                            <div id="map-overlay" data-bind="if: Wiki.gameHelper.getLocationOverlaySVG(Wiki.pageName())"></div>
+                            <img class="w-100" width="1600" data-bind="attr: {
+                                src:`images/${Wiki.gameHelper.getRegionMap($data.region, $data.subRegion)}.png?v=0.10.16`
+                            }" />
+                        </div>
                     </td>
                 </tr>
                 <tr>

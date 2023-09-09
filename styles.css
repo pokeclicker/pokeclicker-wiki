@@ -384,7 +384,6 @@ td.tight {
   opacity: 1;
 }
 
-
 .custom-tooltip {
   display: inline-block;
   position: relative;
@@ -401,4 +400,17 @@ td.tight {
 
 .custom-tooltip:hover .custom-tooltip-content {
   visibility: visible;
+}
+
+#map-container {
+  position: relative;
+}
+
+#map {
+  position: absolute;
+}
+
+#map rect {
+  fill: #ff00cc;
+  opacity: 0.6;
 }
