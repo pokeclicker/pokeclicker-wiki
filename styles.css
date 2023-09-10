@@ -383,3 +383,7 @@ td.tight {
 .mouseover-reveal:hover {
   opacity: 1;
 }
+
+table a {
+  text-decoration: none;
+}
