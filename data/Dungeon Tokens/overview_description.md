@@ -10,7 +10,7 @@ $$ \text{Dungeon Tokens} = \max\Bigg( 1, 6 \times \frac{\text{route} \times 2}{\
 
 A rate of Average Dungeon Tokens Gained per Second has been calculated for each route in order to calculate the most efficient routes for Dungeon Token Farming in each region. The formula used to calculate the rates detailed on this page is as follows:
 
-$$ \frac{\text{Dungeon Tokens} \times \text{Average Catch \%}}{\text{Deafeat Time} + \text{Catch Time}} $$
+$$ \frac{\text{Dungeon Tokens} \times \text{Average Catch \%}}{\text{Defeat Time} + \text{Catch Time}} $$
 
 **Dungeon Tokens** and **Average Catch%** are route specific constants.
 **Defeat Time** represents the time taken to defeat a Pokémon and is a constant (defeat time = 1 second).
