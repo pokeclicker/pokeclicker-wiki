@@ -383,3 +383,22 @@ td.tight {
 .mouseover-reveal:hover {
   opacity: 1;
 }
+
+
+.custom-tooltip {
+  display: inline-block;
+  position: relative;
+}
+
+.custom-tooltip .custom-tooltip-content {
+  visibility: hidden;
+  position: absolute;
+  bottom: 30%;
+  left: 0%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.custom-tooltip:hover .custom-tooltip-content {
+  visibility: visible;
+}
