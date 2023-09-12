@@ -75,6 +75,39 @@
                 </table>
             </div>
         </div>
+        <!-- ko with: BerryDeal.list[GameConstants.BerryTraderLocations[$parent.name]]?.() -->
+        <div class="mt-3">
+            <h5>Berry Trades</h5>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Give</th>
+                            <th></th>
+                            <th>Receive</th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: $data">
+                        <!-- ko foreach: $data.berries -->
+                        <tr>
+                            <td class="align-middle">
+                                <img data-bind="attr: { src: `./images/${BerryType[$data.berryType]}.png` }" width="28px" class="me-2">
+                                <ko data-bind="text: `${$data.amount} × ${BerryType[$data.berryType]}`"></ko>
+                            </td>
+                            <!-- ko if: $index() === 0 -->
+                            <td class="align-middle ps-4" data-bind="attr: { rowspan: $parent.berries.length }">→</td>
+                            <td class="align-middle" data-bind="attr: { rowspan: $parent.berries.length }">
+                                <img data-bind="attr: { src: `./images/${$parent.item.itemType.name}.png` }" width="28px" class="me-2">
+                                <ko data-bind="text: `${$parent.item.amount} × ${$parent.item.itemType._displayName ?? $parent.item.itemType.name}`"></ko>
+                            </td>
+                            <!-- /ko -->
+                        </tr>
+                        <!-- /ko -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- /ko -->
     </div>
     <!-- /ko -->
     <!-- ko foreach: $data.content.filter(c => c instanceof ShardTraderShop)  -->
