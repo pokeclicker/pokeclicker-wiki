@@ -77666,10 +77666,13 @@ const setMapLocation = (selector) => {
         const parent = firstTownNode.parentNode;
         parent.replaceChildren(...outputElements);
         map.replaceChildren(parent);
-        // Scrub all the knockout bindings so they don't affect the rendering
         const allElements = map.querySelectorAll("*");
         allElements.forEach(element => {
+            // Scrub all the knockout bindings so they don't affect the rendering
             element.removeAttribute('data-bind');
+            // And all image hrefs
+            element.removeAttribute('href');
+            element.removeAttribute('xlink:href');
         });
         overlaySVG(map.outerHTML);
     }
