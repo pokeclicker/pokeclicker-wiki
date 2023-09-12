@@ -38,7 +38,7 @@
           <div class="custom-tooltip">
             <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data).id + '.png'}"/>
             <a class="badge text-bg-secondary" href="#!" data-bind="text: $data, attr: { href: `#!Pokemon/${$data}` }"></a>
-            <span class="custom-tooltip-content text-nowrap">
+            <span class="custom-tooltip-content text-nowrap mb-1">
               <pokemon-summary params="pokemonData: pokemonList.find((p) => p.name == $data)"></pokemon-summary>
             </span>
           </div>
