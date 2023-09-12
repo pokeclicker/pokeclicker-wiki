@@ -50,6 +50,7 @@ EVs gained | Slow EVs | Catching Method
 EV modifier | Method
 :--- | ---:
 0x | Base wanderer
+2x | Obtained Pokémon is a Shadow Pokémon
 3x | Pokémon is encountered and captured as a Dungeon Pokémon
 5x | Obtained Pokémon is Shiny.
 5x | Pokémon is obtained using a Repeatball
@@ -57,8 +58,10 @@ EV modifier | Method
 10x | Pokémon is encountered and captured as a Mimic
 50x | Pokémon is encountered and captured as a Roaming Pokemon
 Variable | Rowap Berry Aura
+Variable | [[Items/Blue Flute]]
 1.5x | [[File:Macho_Brace.png\|40px]]  [[Items/Macho_Brace]] Held Item
 2x | [[File:Power_Bracer.png\|40px]]  [[Items/Power_Bracer]] Held Item
+5x | [[File:Repeatball.png\|40px]] [[Items/Repeat Ball]]
 
 #### Examples
 

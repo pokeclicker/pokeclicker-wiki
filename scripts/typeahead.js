@@ -155,11 +155,17 @@ const searchOptions = [
     type: 'Towns',
     page: '',
   },
-  ...Object.values(TownList).filter(t => !(t instanceof DungeonTown)).map(t => ({
+  ...Object.values(TownList).filter(t => !(t instanceof DungeonTown) && !['Safari Zone', 'Friend Safari'].includes(t.name)).map(t => ({
     display: t.name,
     type: 'Towns',
     page: t.name,
   })),
+  // Safari
+  {
+    display: 'Safari',
+    type: 'Safari',
+    page: '',
+  },
   // Gyms
   {
     display: 'Gyms',
@@ -296,6 +302,37 @@ const searchOptions = [
   {
     display: 'Shadow Pokémon',
     type: 'Shadow Pokémon',
+    page: '',
+  },
+  //Currency Pages
+  {
+    display: 'Pokémon Dollars',
+    type: 'Pokémon Dollars',
+    page: '',
+  },
+  {
+    display: 'Dungeon Tokens',
+    type: 'Dungeon Tokens',
+    page: '',
+  },
+  {
+    display: 'Quest Points',
+    type: 'Quest Points',
+    page: '',
+  },
+  {
+    display: 'Farm Points',
+    type: 'Farm Points',
+    page: '',
+  },
+  {
+    display: 'Diamonds',
+    type: 'Diamonds',
+    page: '',
+  },
+  {
+    display: 'Battle Points',
+    type: 'Battle Points',
     page: '',
   },
 ];

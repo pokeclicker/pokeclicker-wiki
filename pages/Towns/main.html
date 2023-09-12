@@ -64,7 +64,7 @@
                             <td class="align-middle">
                                 <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.image }" />
                                 <a href="#!" class="text-decoration-none" data-bind="text: $data.displayName,
-                                    attr: { href: `#!${$data instanceof PokemonItem ? 'Pokemon' : 'Items'}/${$data.displayName}` }"></a>
+                                    attr: { href: `#!${Wiki.items.getItemPageFromObject($data)}` }"></a>
                             </td>
                             <td class="align-middle">
                                 <img width="18" class="me-1" data-bind="attr: { src: `./images/${GameConstants.Currency[$data.currency]}.svg` }" />
@@ -75,6 +75,39 @@
                 </table>
             </div>
         </div>
+        <!-- ko with: BerryDeal.list[GameConstants.BerryTraderLocations[$parent.name]]?.() -->
+        <div class="mt-3">
+            <h5>Berry Trades</h5>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Give</th>
+                            <th></th>
+                            <th>Receive</th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: $data">
+                        <!-- ko foreach: $data.berries -->
+                        <tr>
+                            <td class="align-middle">
+                                <img data-bind="attr: { src: `./images/${BerryType[$data.berryType]}.png` }" width="28px" class="me-2">
+                                <ko data-bind="text: `${$data.amount} × ${BerryType[$data.berryType]}`"></ko>
+                            </td>
+                            <!-- ko if: $index() === 0 -->
+                            <td class="align-middle ps-4" data-bind="attr: { rowspan: $parent.berries.length }">→</td>
+                            <td class="align-middle" data-bind="attr: { rowspan: $parent.berries.length }">
+                                <img data-bind="attr: { src: `./images/${$parent.item.itemType.name}.png` }" width="28px" class="me-2">
+                                <ko data-bind="text: `${$parent.item.amount} × ${$parent.item.itemType._displayName ?? $parent.item.itemType.name}`"></ko>
+                            </td>
+                            <!-- /ko -->
+                        </tr>
+                        <!-- /ko -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- /ko -->
     </div>
     <!-- /ko -->
     <!-- ko foreach: $data.content.filter(c => c instanceof ShardTraderShop)  -->
@@ -91,7 +124,7 @@
                         <td class="align-middle">
                             <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.item.itemType.image }" />
                             <a href="#!" class="text-decoration-none" data-bind="text: $data.item.itemType.displayName,
-                                attr: { href: `#!${$data.item.itemType instanceof PokemonItem ? 'Pokemon' : 'Items'}/${$data.item.itemType.displayName}` }"></a>
+                                attr: { href: `#!${Wiki.items.getItemPageFromObject($data.item.itemType)}` }"></a>
                         </td>
                         <td>
                             <!-- ko foreach: $data.shards -->
@@ -125,7 +158,7 @@
                         <td class="align-middle">
                             <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.item.itemType.image }" />
                             <a href="#!" class="text-decoration-none" data-bind="text: $data.item.itemType.displayName,
-                                attr: { href: `#!${$data.item.itemType instanceof PokemonItem ? 'Pokemon' : 'Items'}/${$data.item.itemType.displayName}` }"></a>
+                                attr: { href: `#!${Wiki.items.getItemPageFromObject($data.item.itemType)}` }"></a>
                         </td>
                         <td data-bind="foreach: $data.gems">
                             <div>

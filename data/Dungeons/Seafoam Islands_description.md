@@ -1,0 +1,1 @@
+Located between [[Routes/Kanto Route 19]] and [[Routes/Kanto Route 20]].

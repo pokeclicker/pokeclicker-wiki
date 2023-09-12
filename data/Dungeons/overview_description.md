@@ -7,7 +7,7 @@ Clearing Dungeons requires active play. To enter a dungeon, select it on the Tow
 2. **A Wild Pokémon**- Just like routes, these are Pokémon you can defeat and catch. Some Pokémon can only be found in specific dungeons.
 3. **Dungeon boss** - This Pokémon must be defeated to clear the dungeon. It has more HP than normal encounters in any dungeon. You can either click "Start Bossfight" or press the Spacebar to start the fight.
 4. **Ladder** - Allows the player to progress to the next floor and also adds 10 seconds to the timer. You can either click "Go to next floor" or press Spacebar. This tile can only be encountered from Alola onwards.
-5. **A chest**- Many Items can be collected from chests by either clicking on them or by pressing the Spacebar.
+5. **A chest**- Many Items can be collected from chests by either clicking on them or by pressing the Spacebar. They may also contain Pokémon which are known as **Mimics**. Some of them are even exclusive Pokémon that can only be encountered in this way.
 6. **A trainer**- Trainers are found on tiles and have teams of Pokémon that must all be defeated to progress. Wild Pokémon are almost always ~4 times more likely to appear on an enemy tile than a trainer, but in some dungeons this weighting is different. Defeating trainers yields the following rewards:
 	- Dungeon Trainers reward 4% of the dungeon cost as Dungeon Tokens [[File:dungeonToken.svg|18px]] and 50% of the dungeon cost as Poké Dollars whenever they are defeated.
 	- Dungeon Trainer Bosses reward 10% of the dungeon cost as Dungeon Tokens [[File:dungeonToken.svg|18px]]  and 100% of the dungeon cost as Poké Dollars whenever they are defeated.

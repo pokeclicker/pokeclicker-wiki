@@ -15202,7 +15202,7 @@ function plugin(md, options) {
 plugin.default = plugin;
 module.exports = plugin;
 
-},{"juice/client":87,"mathjax-full/js/a11y/assistive-mml.js":160,"mathjax-full/js/adaptors/liteAdaptor.js":162,"mathjax-full/js/handlers/html.js":222,"mathjax-full/js/input/tex.js":228,"mathjax-full/js/input/tex/AllPackages.js":229,"mathjax-full/js/mathjax.js":317,"mathjax-full/js/output/svg.js":375}],101:[function(require,module,exports){
+},{"juice/client":87,"mathjax-full/js/a11y/assistive-mml.js":160,"mathjax-full/js/adaptors/liteAdaptor.js":168,"mathjax-full/js/handlers/html.js":222,"mathjax-full/js/input/tex.js":228,"mathjax-full/js/input/tex/AllPackages.js":229,"mathjax-full/js/mathjax.js":317,"mathjax-full/js/output/svg.js":375}],101:[function(require,module,exports){
 'use strict';
 var DFA = require('./lib/dfa.js');
 
@@ -22557,6 +22557,558 @@ exports.NodeMixin = NodeMixin;
 
 },{"../util/Options.js":441}],162:[function(require,module,exports){
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiteDocument = void 0;
+var Element_js_1 = require("./Element.js");
+var LiteDocument = (function () {
+    function LiteDocument() {
+        this.root = new Element_js_1.LiteElement('html', {}, [
+            this.head = new Element_js_1.LiteElement('head'),
+            this.body = new Element_js_1.LiteElement('body')
+        ]);
+        this.type = '';
+    }
+    Object.defineProperty(LiteDocument.prototype, "kind", {
+        get: function () {
+            return '#document';
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return LiteDocument;
+}());
+exports.LiteDocument = LiteDocument;
+
+},{"./Element.js":163}],163:[function(require,module,exports){
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiteElement = void 0;
+var LiteElement = (function () {
+    function LiteElement(kind, attributes, children) {
+        var e_1, _a;
+        if (attributes === void 0) { attributes = {}; }
+        if (children === void 0) { children = []; }
+        this.kind = kind;
+        this.attributes = __assign({}, attributes);
+        this.children = __spreadArray([], __read(children), false);
+        try {
+            for (var _b = __values(this.children), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var child = _c.value;
+                child.parent = this;
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        this.styles = null;
+    }
+    return LiteElement;
+}());
+exports.LiteElement = LiteElement;
+
+},{}],164:[function(require,module,exports){
+"use strict";
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiteList = void 0;
+var LiteList = (function () {
+    function LiteList(children) {
+        this.nodes = [];
+        this.nodes = __spreadArray([], __read(children), false);
+    }
+    LiteList.prototype.append = function (node) {
+        this.nodes.push(node);
+    };
+    LiteList.prototype[Symbol.iterator] = function () {
+        var i = 0;
+        return {
+            next: function () {
+                return (i === this.nodes.length ?
+                    { value: null, done: true } :
+                    { value: this.nodes[i++], done: false });
+            }
+        };
+    };
+    return LiteList;
+}());
+exports.LiteList = LiteList;
+
+},{}],165:[function(require,module,exports){
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiteParser = exports.PATTERNS = void 0;
+var Entities = __importStar(require("../../util/Entities.js"));
+var Element_js_1 = require("./Element.js");
+var Text_js_1 = require("./Text.js");
+var PATTERNS;
+(function (PATTERNS) {
+    PATTERNS.TAGNAME = '[a-z][^\\s\\n>]*';
+    PATTERNS.ATTNAME = '[a-z][^\\s\\n>=]*';
+    PATTERNS.VALUE = "(?:'[^']*'|\"[^\"]*\"|[^\\s\\n]+)";
+    PATTERNS.VALUESPLIT = "(?:'([^']*)'|\"([^\"]*)\"|([^\\s\\n]+))";
+    PATTERNS.SPACE = '(?:\\s|\\n)+';
+    PATTERNS.OPTIONALSPACE = '(?:\\s|\\n)*';
+    PATTERNS.ATTRIBUTE = PATTERNS.ATTNAME + '(?:' + PATTERNS.OPTIONALSPACE + '=' + PATTERNS.OPTIONALSPACE + PATTERNS.VALUE + ')?';
+    PATTERNS.ATTRIBUTESPLIT = '(' + PATTERNS.ATTNAME + ')(?:' + PATTERNS.OPTIONALSPACE + '=' + PATTERNS.OPTIONALSPACE + PATTERNS.VALUESPLIT + ')?';
+    PATTERNS.TAG = '(<(?:' + PATTERNS.TAGNAME + '(?:' + PATTERNS.SPACE + PATTERNS.ATTRIBUTE + ')*'
+        + PATTERNS.OPTIONALSPACE + '/?|/' + PATTERNS.TAGNAME + '|!--[^]*?--|![^]*?)(?:>|$))';
+    PATTERNS.tag = new RegExp(PATTERNS.TAG, 'i');
+    PATTERNS.attr = new RegExp(PATTERNS.ATTRIBUTE, 'i');
+    PATTERNS.attrsplit = new RegExp(PATTERNS.ATTRIBUTESPLIT, 'i');
+})(PATTERNS = exports.PATTERNS || (exports.PATTERNS = {}));
+var LiteParser = (function () {
+    function LiteParser() {
+    }
+    LiteParser.prototype.parseFromString = function (text, _format, adaptor) {
+        if (_format === void 0) { _format = 'text/html'; }
+        if (adaptor === void 0) { adaptor = null; }
+        var root = adaptor.createDocument();
+        var node = adaptor.body(root);
+        var parts = text.replace(/<\?.*?\?>/g, '').split(PATTERNS.tag);
+        while (parts.length) {
+            var text_1 = parts.shift();
+            var tag = parts.shift();
+            if (text_1) {
+                this.addText(adaptor, node, text_1);
+            }
+            if (tag && tag.charAt(tag.length - 1) === '>') {
+                if (tag.charAt(1) === '!') {
+                    this.addComment(adaptor, node, tag);
+                }
+                else if (tag.charAt(1) === '/') {
+                    node = this.closeTag(adaptor, node, tag);
+                }
+                else {
+                    node = this.openTag(adaptor, node, tag, parts);
+                }
+            }
+        }
+        this.checkDocument(adaptor, root);
+        return root;
+    };
+    LiteParser.prototype.addText = function (adaptor, node, text) {
+        text = Entities.translate(text);
+        return adaptor.append(node, adaptor.text(text));
+    };
+    LiteParser.prototype.addComment = function (adaptor, node, comment) {
+        return adaptor.append(node, new Text_js_1.LiteComment(comment));
+    };
+    LiteParser.prototype.closeTag = function (adaptor, node, tag) {
+        var kind = tag.slice(2, tag.length - 1).toLowerCase();
+        while (adaptor.parent(node) && adaptor.kind(node) !== kind) {
+            node = adaptor.parent(node);
+        }
+        return adaptor.parent(node);
+    };
+    LiteParser.prototype.openTag = function (adaptor, node, tag, parts) {
+        var PCDATA = this.constructor.PCDATA;
+        var SELF_CLOSING = this.constructor.SELF_CLOSING;
+        var kind = tag.match(/<(.*?)[\s\n>\/]/)[1].toLowerCase();
+        var child = adaptor.node(kind);
+        var attributes = tag.replace(/^<.*?[\s\n>]/, '').split(PATTERNS.attrsplit);
+        if (attributes.pop().match(/>$/) || attributes.length < 5) {
+            this.addAttributes(adaptor, child, attributes);
+            adaptor.append(node, child);
+            if (!SELF_CLOSING[kind] && !tag.match(/\/>$/)) {
+                if (PCDATA[kind]) {
+                    this.handlePCDATA(adaptor, child, kind, parts);
+                }
+                else {
+                    node = child;
+                }
+            }
+        }
+        return node;
+    };
+    LiteParser.prototype.addAttributes = function (adaptor, node, attributes) {
+        var CDATA_ATTR = this.constructor.CDATA_ATTR;
+        while (attributes.length) {
+            var _a = __read(attributes.splice(0, 5), 5), name_1 = _a[1], v1 = _a[2], v2 = _a[3], v3 = _a[4];
+            var value = v1 || v2 || v3 || '';
+            if (!CDATA_ATTR[name_1]) {
+                value = Entities.translate(value);
+            }
+            adaptor.setAttribute(node, name_1, value);
+        }
+    };
+    LiteParser.prototype.handlePCDATA = function (adaptor, node, kind, parts) {
+        var pcdata = [];
+        var etag = '</' + kind + '>';
+        var ptag = '';
+        while (parts.length && ptag !== etag) {
+            pcdata.push(ptag);
+            pcdata.push(parts.shift());
+            ptag = parts.shift();
+        }
+        adaptor.append(node, adaptor.text(pcdata.join('')));
+    };
+    LiteParser.prototype.checkDocument = function (adaptor, root) {
+        var e_1, _a, e_2, _b;
+        var node = this.getOnlyChild(adaptor, adaptor.body(root));
+        if (!node)
+            return;
+        try {
+            for (var _c = __values(adaptor.childNodes(adaptor.body(root))), _d = _c.next(); !_d.done; _d = _c.next()) {
+                var child = _d.value;
+                if (child === node) {
+                    break;
+                }
+                if (child instanceof Text_js_1.LiteComment && child.value.match(/^<!DOCTYPE/)) {
+                    root.type = child.value;
+                }
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (_d && !_d.done && (_a = _c.return)) _a.call(_c);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        switch (adaptor.kind(node)) {
+            case 'html':
+                try {
+                    for (var _e = __values(node.children), _f = _e.next(); !_f.done; _f = _e.next()) {
+                        var child = _f.value;
+                        switch (adaptor.kind(child)) {
+                            case 'head':
+                                root.head = child;
+                                break;
+                            case 'body':
+                                root.body = child;
+                                break;
+                        }
+                    }
+                }
+                catch (e_2_1) { e_2 = { error: e_2_1 }; }
+                finally {
+                    try {
+                        if (_f && !_f.done && (_b = _e.return)) _b.call(_e);
+                    }
+                    finally { if (e_2) throw e_2.error; }
+                }
+                root.root = node;
+                adaptor.remove(node);
+                if (adaptor.parent(root.body) !== node) {
+                    adaptor.append(node, root.body);
+                }
+                if (adaptor.parent(root.head) !== node) {
+                    adaptor.insert(root.head, root.body);
+                }
+                break;
+            case 'head':
+                root.head = adaptor.replace(node, root.head);
+                break;
+            case 'body':
+                root.body = adaptor.replace(node, root.body);
+                break;
+        }
+    };
+    LiteParser.prototype.getOnlyChild = function (adaptor, body) {
+        var e_3, _a;
+        var node = null;
+        try {
+            for (var _b = __values(adaptor.childNodes(body)), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var child = _c.value;
+                if (child instanceof Element_js_1.LiteElement) {
+                    if (node)
+                        return null;
+                    node = child;
+                }
+            }
+        }
+        catch (e_3_1) { e_3 = { error: e_3_1 }; }
+        finally {
+            try {
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_3) throw e_3.error; }
+        }
+        return node;
+    };
+    LiteParser.prototype.serialize = function (adaptor, node, xml) {
+        var _this = this;
+        if (xml === void 0) { xml = false; }
+        var SELF_CLOSING = this.constructor.SELF_CLOSING;
+        var CDATA = this.constructor.CDATA_ATTR;
+        var tag = adaptor.kind(node);
+        var attributes = adaptor.allAttributes(node).map(function (x) { return x.name + '="' + (CDATA[x.name] ? x.value : _this.protectAttribute(x.value)) + '"'; }).join(' ');
+        var content = this.serializeInner(adaptor, node, xml);
+        var html = '<' + tag + (attributes ? ' ' + attributes : '')
+            + ((!xml || content) && !SELF_CLOSING[tag] ? ">".concat(content, "</").concat(tag, ">") : xml ? '/>' : '>');
+        return html;
+    };
+    LiteParser.prototype.serializeInner = function (adaptor, node, xml) {
+        var _this = this;
+        if (xml === void 0) { xml = false; }
+        var PCDATA = this.constructor.PCDATA;
+        if (PCDATA.hasOwnProperty(node.kind)) {
+            return adaptor.childNodes(node).map(function (x) { return adaptor.value(x); }).join('');
+        }
+        return adaptor.childNodes(node).map(function (x) {
+            var kind = adaptor.kind(x);
+            return (kind === '#text' ? _this.protectHTML(adaptor.value(x)) :
+                kind === '#comment' ? x.value :
+                    _this.serialize(adaptor, x, xml));
+        }).join('');
+    };
+    LiteParser.prototype.protectAttribute = function (text) {
+        if (typeof text !== 'string') {
+            text = String(text);
+        }
+        return text.replace(/"/g, '&quot;');
+    };
+    LiteParser.prototype.protectHTML = function (text) {
+        return text.replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    };
+    LiteParser.SELF_CLOSING = {
+        area: true,
+        base: true,
+        br: true,
+        col: true,
+        command: true,
+        embed: true,
+        hr: true,
+        img: true,
+        input: true,
+        keygen: true,
+        link: true,
+        menuitem: true,
+        meta: true,
+        param: true,
+        source: true,
+        track: true,
+        wbr: true
+    };
+    LiteParser.PCDATA = {
+        option: true,
+        textarea: true,
+        fieldset: true,
+        title: true,
+        style: true,
+        script: true
+    };
+    LiteParser.CDATA_ATTR = {
+        style: true,
+        datafld: true,
+        datasrc: true,
+        href: true,
+        src: true,
+        longdesc: true,
+        usemap: true,
+        cite: true,
+        datetime: true,
+        action: true,
+        axis: true,
+        profile: true,
+        content: true,
+        scheme: true
+    };
+    return LiteParser;
+}());
+exports.LiteParser = LiteParser;
+
+},{"../../util/Entities.js":438,"./Element.js":163,"./Text.js":166}],166:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiteComment = exports.LiteText = void 0;
+var LiteText = (function () {
+    function LiteText(text) {
+        if (text === void 0) { text = ''; }
+        this.value = text;
+    }
+    Object.defineProperty(LiteText.prototype, "kind", {
+        get: function () {
+            return '#text';
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return LiteText;
+}());
+exports.LiteText = LiteText;
+var LiteComment = (function (_super) {
+    __extends(LiteComment, _super);
+    function LiteComment() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(LiteComment.prototype, "kind", {
+        get: function () {
+            return '#comment';
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return LiteComment;
+}(LiteText));
+exports.LiteComment = LiteComment;
+
+},{}],167:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiteWindow = void 0;
+var Element_js_1 = require("./Element.js");
+var Document_js_1 = require("./Document.js");
+var List_js_1 = require("./List.js");
+var Parser_js_1 = require("./Parser.js");
+var LiteWindow = (function () {
+    function LiteWindow() {
+        this.DOMParser = Parser_js_1.LiteParser;
+        this.NodeList = List_js_1.LiteList;
+        this.HTMLCollection = List_js_1.LiteList;
+        this.HTMLElement = Element_js_1.LiteElement;
+        this.DocumentFragment = List_js_1.LiteList;
+        this.Document = Document_js_1.LiteDocument;
+        this.document = new Document_js_1.LiteDocument();
+    }
+    return LiteWindow;
+}());
+exports.LiteWindow = LiteWindow;
+
+},{"./Document.js":162,"./Element.js":163,"./List.js":164,"./Parser.js":165}],168:[function(require,module,exports){
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -23001,559 +23553,7 @@ function liteAdaptor(options) {
 }
 exports.liteAdaptor = liteAdaptor;
 
-},{"../core/DOMAdaptor.js":170,"../util/Styles.js":445,"./NodeMixin.js":161,"./lite/Document.js":163,"./lite/Element.js":164,"./lite/Parser.js":166,"./lite/Text.js":167,"./lite/Window.js":168}],163:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LiteDocument = void 0;
-var Element_js_1 = require("./Element.js");
-var LiteDocument = (function () {
-    function LiteDocument() {
-        this.root = new Element_js_1.LiteElement('html', {}, [
-            this.head = new Element_js_1.LiteElement('head'),
-            this.body = new Element_js_1.LiteElement('body')
-        ]);
-        this.type = '';
-    }
-    Object.defineProperty(LiteDocument.prototype, "kind", {
-        get: function () {
-            return '#document';
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return LiteDocument;
-}());
-exports.LiteDocument = LiteDocument;
-
-},{"./Element.js":164}],164:[function(require,module,exports){
-"use strict";
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-var __read = (this && this.__read) || function (o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-};
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LiteElement = void 0;
-var LiteElement = (function () {
-    function LiteElement(kind, attributes, children) {
-        var e_1, _a;
-        if (attributes === void 0) { attributes = {}; }
-        if (children === void 0) { children = []; }
-        this.kind = kind;
-        this.attributes = __assign({}, attributes);
-        this.children = __spreadArray([], __read(children), false);
-        try {
-            for (var _b = __values(this.children), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var child = _c.value;
-                child.parent = this;
-            }
-        }
-        catch (e_1_1) { e_1 = { error: e_1_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_1) throw e_1.error; }
-        }
-        this.styles = null;
-    }
-    return LiteElement;
-}());
-exports.LiteElement = LiteElement;
-
-},{}],165:[function(require,module,exports){
-"use strict";
-var __read = (this && this.__read) || function (o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-};
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LiteList = void 0;
-var LiteList = (function () {
-    function LiteList(children) {
-        this.nodes = [];
-        this.nodes = __spreadArray([], __read(children), false);
-    }
-    LiteList.prototype.append = function (node) {
-        this.nodes.push(node);
-    };
-    LiteList.prototype[Symbol.iterator] = function () {
-        var i = 0;
-        return {
-            next: function () {
-                return (i === this.nodes.length ?
-                    { value: null, done: true } :
-                    { value: this.nodes[i++], done: false });
-            }
-        };
-    };
-    return LiteList;
-}());
-exports.LiteList = LiteList;
-
-},{}],166:[function(require,module,exports){
-"use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __read = (this && this.__read) || function (o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-};
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LiteParser = exports.PATTERNS = void 0;
-var Entities = __importStar(require("../../util/Entities.js"));
-var Element_js_1 = require("./Element.js");
-var Text_js_1 = require("./Text.js");
-var PATTERNS;
-(function (PATTERNS) {
-    PATTERNS.TAGNAME = '[a-z][^\\s\\n>]*';
-    PATTERNS.ATTNAME = '[a-z][^\\s\\n>=]*';
-    PATTERNS.VALUE = "(?:'[^']*'|\"[^\"]*\"|[^\\s\\n]+)";
-    PATTERNS.VALUESPLIT = "(?:'([^']*)'|\"([^\"]*)\"|([^\\s\\n]+))";
-    PATTERNS.SPACE = '(?:\\s|\\n)+';
-    PATTERNS.OPTIONALSPACE = '(?:\\s|\\n)*';
-    PATTERNS.ATTRIBUTE = PATTERNS.ATTNAME + '(?:' + PATTERNS.OPTIONALSPACE + '=' + PATTERNS.OPTIONALSPACE + PATTERNS.VALUE + ')?';
-    PATTERNS.ATTRIBUTESPLIT = '(' + PATTERNS.ATTNAME + ')(?:' + PATTERNS.OPTIONALSPACE + '=' + PATTERNS.OPTIONALSPACE + PATTERNS.VALUESPLIT + ')?';
-    PATTERNS.TAG = '(<(?:' + PATTERNS.TAGNAME + '(?:' + PATTERNS.SPACE + PATTERNS.ATTRIBUTE + ')*'
-        + PATTERNS.OPTIONALSPACE + '/?|/' + PATTERNS.TAGNAME + '|!--[^]*?--|![^]*?)(?:>|$))';
-    PATTERNS.tag = new RegExp(PATTERNS.TAG, 'i');
-    PATTERNS.attr = new RegExp(PATTERNS.ATTRIBUTE, 'i');
-    PATTERNS.attrsplit = new RegExp(PATTERNS.ATTRIBUTESPLIT, 'i');
-})(PATTERNS = exports.PATTERNS || (exports.PATTERNS = {}));
-var LiteParser = (function () {
-    function LiteParser() {
-    }
-    LiteParser.prototype.parseFromString = function (text, _format, adaptor) {
-        if (_format === void 0) { _format = 'text/html'; }
-        if (adaptor === void 0) { adaptor = null; }
-        var root = adaptor.createDocument();
-        var node = adaptor.body(root);
-        var parts = text.replace(/<\?.*?\?>/g, '').split(PATTERNS.tag);
-        while (parts.length) {
-            var text_1 = parts.shift();
-            var tag = parts.shift();
-            if (text_1) {
-                this.addText(adaptor, node, text_1);
-            }
-            if (tag && tag.charAt(tag.length - 1) === '>') {
-                if (tag.charAt(1) === '!') {
-                    this.addComment(adaptor, node, tag);
-                }
-                else if (tag.charAt(1) === '/') {
-                    node = this.closeTag(adaptor, node, tag);
-                }
-                else {
-                    node = this.openTag(adaptor, node, tag, parts);
-                }
-            }
-        }
-        this.checkDocument(adaptor, root);
-        return root;
-    };
-    LiteParser.prototype.addText = function (adaptor, node, text) {
-        text = Entities.translate(text);
-        return adaptor.append(node, adaptor.text(text));
-    };
-    LiteParser.prototype.addComment = function (adaptor, node, comment) {
-        return adaptor.append(node, new Text_js_1.LiteComment(comment));
-    };
-    LiteParser.prototype.closeTag = function (adaptor, node, tag) {
-        var kind = tag.slice(2, tag.length - 1).toLowerCase();
-        while (adaptor.parent(node) && adaptor.kind(node) !== kind) {
-            node = adaptor.parent(node);
-        }
-        return adaptor.parent(node);
-    };
-    LiteParser.prototype.openTag = function (adaptor, node, tag, parts) {
-        var PCDATA = this.constructor.PCDATA;
-        var SELF_CLOSING = this.constructor.SELF_CLOSING;
-        var kind = tag.match(/<(.*?)[\s\n>\/]/)[1].toLowerCase();
-        var child = adaptor.node(kind);
-        var attributes = tag.replace(/^<.*?[\s\n>]/, '').split(PATTERNS.attrsplit);
-        if (attributes.pop().match(/>$/) || attributes.length < 5) {
-            this.addAttributes(adaptor, child, attributes);
-            adaptor.append(node, child);
-            if (!SELF_CLOSING[kind] && !tag.match(/\/>$/)) {
-                if (PCDATA[kind]) {
-                    this.handlePCDATA(adaptor, child, kind, parts);
-                }
-                else {
-                    node = child;
-                }
-            }
-        }
-        return node;
-    };
-    LiteParser.prototype.addAttributes = function (adaptor, node, attributes) {
-        var CDATA_ATTR = this.constructor.CDATA_ATTR;
-        while (attributes.length) {
-            var _a = __read(attributes.splice(0, 5), 5), name_1 = _a[1], v1 = _a[2], v2 = _a[3], v3 = _a[4];
-            var value = v1 || v2 || v3 || '';
-            if (!CDATA_ATTR[name_1]) {
-                value = Entities.translate(value);
-            }
-            adaptor.setAttribute(node, name_1, value);
-        }
-    };
-    LiteParser.prototype.handlePCDATA = function (adaptor, node, kind, parts) {
-        var pcdata = [];
-        var etag = '</' + kind + '>';
-        var ptag = '';
-        while (parts.length && ptag !== etag) {
-            pcdata.push(ptag);
-            pcdata.push(parts.shift());
-            ptag = parts.shift();
-        }
-        adaptor.append(node, adaptor.text(pcdata.join('')));
-    };
-    LiteParser.prototype.checkDocument = function (adaptor, root) {
-        var e_1, _a, e_2, _b;
-        var node = this.getOnlyChild(adaptor, adaptor.body(root));
-        if (!node)
-            return;
-        try {
-            for (var _c = __values(adaptor.childNodes(adaptor.body(root))), _d = _c.next(); !_d.done; _d = _c.next()) {
-                var child = _d.value;
-                if (child === node) {
-                    break;
-                }
-                if (child instanceof Text_js_1.LiteComment && child.value.match(/^<!DOCTYPE/)) {
-                    root.type = child.value;
-                }
-            }
-        }
-        catch (e_1_1) { e_1 = { error: e_1_1 }; }
-        finally {
-            try {
-                if (_d && !_d.done && (_a = _c.return)) _a.call(_c);
-            }
-            finally { if (e_1) throw e_1.error; }
-        }
-        switch (adaptor.kind(node)) {
-            case 'html':
-                try {
-                    for (var _e = __values(node.children), _f = _e.next(); !_f.done; _f = _e.next()) {
-                        var child = _f.value;
-                        switch (adaptor.kind(child)) {
-                            case 'head':
-                                root.head = child;
-                                break;
-                            case 'body':
-                                root.body = child;
-                                break;
-                        }
-                    }
-                }
-                catch (e_2_1) { e_2 = { error: e_2_1 }; }
-                finally {
-                    try {
-                        if (_f && !_f.done && (_b = _e.return)) _b.call(_e);
-                    }
-                    finally { if (e_2) throw e_2.error; }
-                }
-                root.root = node;
-                adaptor.remove(node);
-                if (adaptor.parent(root.body) !== node) {
-                    adaptor.append(node, root.body);
-                }
-                if (adaptor.parent(root.head) !== node) {
-                    adaptor.insert(root.head, root.body);
-                }
-                break;
-            case 'head':
-                root.head = adaptor.replace(node, root.head);
-                break;
-            case 'body':
-                root.body = adaptor.replace(node, root.body);
-                break;
-        }
-    };
-    LiteParser.prototype.getOnlyChild = function (adaptor, body) {
-        var e_3, _a;
-        var node = null;
-        try {
-            for (var _b = __values(adaptor.childNodes(body)), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var child = _c.value;
-                if (child instanceof Element_js_1.LiteElement) {
-                    if (node)
-                        return null;
-                    node = child;
-                }
-            }
-        }
-        catch (e_3_1) { e_3 = { error: e_3_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_3) throw e_3.error; }
-        }
-        return node;
-    };
-    LiteParser.prototype.serialize = function (adaptor, node, xml) {
-        var _this = this;
-        if (xml === void 0) { xml = false; }
-        var SELF_CLOSING = this.constructor.SELF_CLOSING;
-        var CDATA = this.constructor.CDATA_ATTR;
-        var tag = adaptor.kind(node);
-        var attributes = adaptor.allAttributes(node).map(function (x) { return x.name + '="' + (CDATA[x.name] ? x.value : _this.protectAttribute(x.value)) + '"'; }).join(' ');
-        var content = this.serializeInner(adaptor, node, xml);
-        var html = '<' + tag + (attributes ? ' ' + attributes : '')
-            + ((!xml || content) && !SELF_CLOSING[tag] ? ">".concat(content, "</").concat(tag, ">") : xml ? '/>' : '>');
-        return html;
-    };
-    LiteParser.prototype.serializeInner = function (adaptor, node, xml) {
-        var _this = this;
-        if (xml === void 0) { xml = false; }
-        var PCDATA = this.constructor.PCDATA;
-        if (PCDATA.hasOwnProperty(node.kind)) {
-            return adaptor.childNodes(node).map(function (x) { return adaptor.value(x); }).join('');
-        }
-        return adaptor.childNodes(node).map(function (x) {
-            var kind = adaptor.kind(x);
-            return (kind === '#text' ? _this.protectHTML(adaptor.value(x)) :
-                kind === '#comment' ? x.value :
-                    _this.serialize(adaptor, x, xml));
-        }).join('');
-    };
-    LiteParser.prototype.protectAttribute = function (text) {
-        if (typeof text !== 'string') {
-            text = String(text);
-        }
-        return text.replace(/"/g, '&quot;');
-    };
-    LiteParser.prototype.protectHTML = function (text) {
-        return text.replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;');
-    };
-    LiteParser.SELF_CLOSING = {
-        area: true,
-        base: true,
-        br: true,
-        col: true,
-        command: true,
-        embed: true,
-        hr: true,
-        img: true,
-        input: true,
-        keygen: true,
-        link: true,
-        menuitem: true,
-        meta: true,
-        param: true,
-        source: true,
-        track: true,
-        wbr: true
-    };
-    LiteParser.PCDATA = {
-        option: true,
-        textarea: true,
-        fieldset: true,
-        title: true,
-        style: true,
-        script: true
-    };
-    LiteParser.CDATA_ATTR = {
-        style: true,
-        datafld: true,
-        datasrc: true,
-        href: true,
-        src: true,
-        longdesc: true,
-        usemap: true,
-        cite: true,
-        datetime: true,
-        action: true,
-        axis: true,
-        profile: true,
-        content: true,
-        scheme: true
-    };
-    return LiteParser;
-}());
-exports.LiteParser = LiteParser;
-
-},{"../../util/Entities.js":438,"./Element.js":164,"./Text.js":167}],167:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LiteComment = exports.LiteText = void 0;
-var LiteText = (function () {
-    function LiteText(text) {
-        if (text === void 0) { text = ''; }
-        this.value = text;
-    }
-    Object.defineProperty(LiteText.prototype, "kind", {
-        get: function () {
-            return '#text';
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return LiteText;
-}());
-exports.LiteText = LiteText;
-var LiteComment = (function (_super) {
-    __extends(LiteComment, _super);
-    function LiteComment() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Object.defineProperty(LiteComment.prototype, "kind", {
-        get: function () {
-            return '#comment';
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return LiteComment;
-}(LiteText));
-exports.LiteComment = LiteComment;
-
-},{}],168:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LiteWindow = void 0;
-var Element_js_1 = require("./Element.js");
-var Document_js_1 = require("./Document.js");
-var List_js_1 = require("./List.js");
-var Parser_js_1 = require("./Parser.js");
-var LiteWindow = (function () {
-    function LiteWindow() {
-        this.DOMParser = Parser_js_1.LiteParser;
-        this.NodeList = List_js_1.LiteList;
-        this.HTMLCollection = List_js_1.LiteList;
-        this.HTMLElement = Element_js_1.LiteElement;
-        this.DocumentFragment = List_js_1.LiteList;
-        this.Document = Document_js_1.LiteDocument;
-        this.document = new Document_js_1.LiteDocument();
-    }
-    return LiteWindow;
-}());
-exports.LiteWindow = LiteWindow;
-
-},{"./Document.js":163,"./Element.js":164,"./List.js":165,"./Parser.js":166}],169:[function(require,module,exports){
+},{"../core/DOMAdaptor.js":170,"../util/Styles.js":445,"./NodeMixin.js":161,"./lite/Document.js":162,"./lite/Element.js":163,"./lite/Parser.js":165,"./lite/Text.js":166,"./lite/Window.js":167}],169:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.VERSION = void 0;
@@ -77045,7 +77045,7 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":1,"call-bind":6,"call-bind/callBound":5,"for-each":62,"gopd":66,"has-tostringtag/shams":70}],502:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
-  "version": "0.10.14",
+  "version": "0.10.15",
   "description": "PokéClicker repository",
   "main": "index.js",
   "scripts": {
@@ -77151,25 +77151,6 @@ module.exports={
 }
 
 },{}],503:[function(require,module,exports){
-var templateFromUrlLoader = {
-  loadTemplate: function(name, templateConfig, callback) {
-    $.get(`/templates/${templateConfig.fromUrl}`, function(markupString) {
-      ko.components.defaultLoader.loadTemplate(name, markupString, callback);
-    });
-  }
-};
-ko.components.loaders.unshift(templateFromUrlLoader);
-
-function PokemonSummary(params) {
-  this.pokemon = params.pokemonData;
-}
-
-ko.components.register('pokemon-summary', {
-  viewModel: PokemonSummary,
-  template: { fromUrl: 'pokemon-summary' },
-});
-
-},{}],504:[function(require,module,exports){
 // Applying datatables to all tables on the page (with some exceptions)
 const applyDatatables = () => {
     // Any table with headers
@@ -77273,7 +77254,7 @@ module.exports = {
     applyDatatables,
 }
 
-},{}],505:[function(require,module,exports){
+},{}],504:[function(require,module,exports){
 const discordLoginJSON = 'https://discord.pokeclicker.com/json';
 
 const discord = {
@@ -77297,7 +77278,7 @@ fetch(discordLoginJSON, {
 module.exports = {
   discord,
 }
-},{}],506:[function(require,module,exports){
+},{}],505:[function(require,module,exports){
 /*
 Initializing anything we need from the game files
 */
@@ -77348,7 +77329,8 @@ App.game.farming.initialize();
 App.game.breeding.initialize();
 App.game.oakItems.initialize();
 App.game.keyItems.initialize();
-App.game.specialEvents.initialize()
+App.game.underground.initialize();
+App.game.specialEvents.initialize();
 QuestLineHelper.loadQuestLines();
 SafariPokemonList.generateKantoSafariList();
 BattleFrontierRunner.stage(100);
@@ -77404,7 +77386,7 @@ Settings.getSetting('theme').observableValue.subscribe(theme => {
   document.body.className = `no-select ${theme}`;
 });
 
-},{}],507:[function(require,module,exports){
+},{}],506:[function(require,module,exports){
 const requirementHints = (requirement, includeMarkdown = true) => {
     if (!requirement) {
         return [];
@@ -77604,7 +77586,7 @@ module.exports = {
     getRegionName,
 }
 
-},{}],508:[function(require,module,exports){
+},{}],507:[function(require,module,exports){
 // import our version etc
 const package = require('../pokeclicker/package.json');
 
@@ -77616,7 +77598,6 @@ window.Wiki = {
   ...require('./typeahead'),
   ...require('./markdown-renderer'),
   ...require('./discord'),
-  ...require('./components'),
   gameHelper: require('./gameHelper'),
   pokemon: require('./pages/pokemon'),
   farm: require('./pages/farm'),
@@ -77624,12 +77605,16 @@ window.Wiki = {
   dreamOrbs: require('./pages/dreamOrbs'),
   farmSimulator: require('./pages/farmSimulator'),
   dungeons: require('./pages/dungeons'),
+  pokemonDollars: require('./pages/shopMon'),
+  dungeonTokens: require('./pages/dungeonTokens'),
+  battlePoints: require('./pages/shopMon'),
+  diamonds: require('./pages/shopMon'),
   oakItems: require('./pages/oakItems'),
   getDealChains: require('./pages/dealChains').getDealChains,
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":502,"./components":503,"./datatables":504,"./discord":505,"./game":506,"./gameHelper":507,"./markdown-renderer":514,"./navigation":515,"./notifications":516,"./pages/dealChains":517,"./pages/dreamOrbs":518,"./pages/dungeons":519,"./pages/farm":520,"./pages/farmSimulator":521,"./pages/items":522,"./pages/oakItems":523,"./pages/pokemon":524,"./typeahead":526}],509:[function(require,module,exports){
+},{"../pokeclicker/package.json":502,"./datatables":503,"./discord":504,"./game":505,"./gameHelper":506,"./markdown-renderer":513,"./navigation":514,"./notifications":515,"./pages/dealChains":516,"./pages/dreamOrbs":517,"./pages/dungeonTokens":518,"./pages/dungeons":519,"./pages/farm":520,"./pages/farmSimulator":521,"./pages/items":522,"./pages/oakItems":523,"./pages/pokemon":524,"./pages/shopMon":525,"./typeahead":527}],508:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const saveChanges = (editor, filename, btn) => {
@@ -77736,7 +77721,7 @@ module.exports = {
   createMarkDownEditor,
 }
 
-},{"./markdown-renderer":514}],510:[function(require,module,exports){
+},{"./markdown-renderer":513}],509:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -77752,7 +77737,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],511:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],510:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -77770,7 +77755,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],512:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],511:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -77786,7 +77771,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],513:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],512:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -77802,7 +77787,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],514:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],513:[function(require,module,exports){
 const markdownit      = require('markdown-it');
 
 // Setup our markdown editor
@@ -77875,7 +77860,7 @@ module.exports = {
   md,
 }
 
-},{"./markdown-plugins/hidden-comments.js":510,"./markdown-plugins/image-size.js":511,"./markdown-plugins/wiki-links-badge.js":512,"./markdown-plugins/wiki-links.js":513,"markdown-it":106,"markdown-it-attrs":96,"markdown-it-container":99,"markdown-it-mathjax3":100,"markdown-it-multimd-table":101}],515:[function(require,module,exports){
+},{"./markdown-plugins/hidden-comments.js":509,"./markdown-plugins/image-size.js":510,"./markdown-plugins/wiki-links-badge.js":511,"./markdown-plugins/wiki-links.js":512,"markdown-it":106,"markdown-it-attrs":96,"markdown-it-container":99,"markdown-it-mathjax3":100,"markdown-it-multimd-table":101}],514:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 const { applyDatatables } = require('./datatables');
 const { createMarkDownEditor } = require('./markdown-editor');
@@ -78057,7 +78042,7 @@ module.exports = {
     gotoPage,
 };
 
-},{"./datatables":504,"./markdown-editor":509,"./markdown-renderer":514,"./redirections":525}],516:[function(require,module,exports){
+},{"./datatables":503,"./markdown-editor":508,"./markdown-renderer":513,"./redirections":526}],515:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -78080,7 +78065,7 @@ module.exports = {
   alert,
 };
 
-},{}],517:[function(require,module,exports){
+},{}],516:[function(require,module,exports){
 
 class DealProfit {
     constructor(type, amount) {
@@ -78244,14 +78229,15 @@ function getDealChains(
 module.exports = {
     getDealChains,
 }
-},{}],518:[function(require,module,exports){
+},{}],517:[function(require,module,exports){
 const getOrbLoot = (orb) => {
   const weightSum = orb.items.reduce((acc, item) => acc + item.weight, 0);
   return orb.items.map(item => {
     return {
       name: item.item.id,
       image: item.item.type === ItemType.underground ? UndergroundItems.getByName(item.item.id)?.image : ItemList[item.item.id]?.image,
-      itemType: ItemType[item.item.type],
+      itemType: item.item.type,
+      itemTypeAsString: ItemType[item.item.type],
       chance: item.weight / weightSum,
     }
   });
@@ -78261,6 +78247,124 @@ module.exports = {
   getOrbLoot
 };
 
+},{}],518:[function(require,module,exports){
+const checkExist = setInterval(function() {
+    if ($('.tablinks').length) {
+        $('.tablinks')[0].click();
+        clearInterval(checkExist);
+    }
+ }, 100);
+
+const highestRoute = (region, weather) => {
+    region = region;
+    weather = weather;
+
+    var routeArr = [];
+
+    Routes.getRoutesByRegion(region).map(route => {
+        const routes = Routes.getRoutesByRegion(region).map(r => MapHelper.normalizeRoute(r.number, region, false));
+        var pkmon1 = [];
+        pkmon1.push(Object.values(route.pokemon).flat());
+        route.pokemon.special.forEach((element) => {
+            if(element?.req instanceof ObtainedPokemonRequirement){
+                pkmon1.push(Object.values(element.pokemon).flat());
+            }
+            if(element?.req instanceof WeatherRequirement){
+                if(element.req.weather.includes(weather)){
+                    pkmon1.push(Object.values(element.pokemon).flat());
+                }
+            }
+            if(element?.req instanceof MultiRequirement){
+                element.req.requirements.forEach(x => {
+                    if(x instanceof WeatherRequirement){
+                        if(x.weather.includes(weather)){
+                            pkmon1.push(Object.values(element.pokemon).flat());
+                        }
+                    }
+                });
+            }
+
+        });
+        pkmon1 = Object.values(pkmon1).flat();
+        pkmon1 = pkmon1.filter(e => e.constructor.name !== 'SpecialRoutePokemon');
+        const pokemon = pkmon1.map(p=> pokemonMap[p]);
+        const catchChanceAV = (Math.floor(pokemon.map(p => PokemonFactory.catchRateHelper(p.catchRate, true)).reduce((a,b) => a + b, 0) / pokemon.length))/100;
+        const DT = Math.floor(PokemonFactory.routeDungeonTokens(route.number, region));
+        const PB = (DT* catchChanceAV)/(2.25);
+        const PBMB = (DT* (catchChanceAV+.1))/(2.25);
+        const GB = (DT* (catchChanceAV+.05))/(2);
+        const GBMB = (DT* (catchChanceAV+.15))/(2);
+        const UB = (DT* (catchChanceAV+.1))/(1.75)
+        const UBMB = (DT* (catchChanceAV+.2))/(1.75);
+        routeArr.push( [Routes.getRoute(region,route.number).routeName, DT.toLocaleString(), +(PB). toFixed(2), +(PBMB). toFixed(2), +(GB). toFixed(2), +(GBMB). toFixed(2), +(UB). toFixed(2), +(UBMB). toFixed(2)] );
+    })
+
+    var highestPB = routeArr.reduce((max, dt) => {
+        return dt[2] > max[2] ? dt : max;
+    });
+    var highestPBMB = routeArr.reduce((max, dt) => {
+        return dt[3] > max[3] ? dt : max;
+    });
+    var highestGB = routeArr.reduce((max, dt) => {
+        return dt[4] > max[4] ? dt : max;
+    });
+    var highestGBMB = routeArr.reduce((max, dt) => {
+        return dt[5] > max[5] ? dt : max;
+    });
+    var highestUB = routeArr.reduce((max, dt) => {
+        return dt[6] > max[6] ? dt : max;
+    });
+    var highestUBMB = routeArr.reduce((max, dt) => {
+        return dt[7] > max[7] ? dt : max;
+    });
+
+    return( [[highestPB[0], highestPBMB[0], highestGB[0], highestGBMB[0], highestUB[0], highestUBMB[0]],routeArr] );
+}
+
+const setWeather = (evt, weather) => {
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById('galar'+weather).style.display = "block";
+    evt.currentTarget.className += " active";
+    return;
+}
+
+const getShopMons = (currency) => {
+    var towns = Object.values(TownList).filter(t => t.region < GameConstants.Region.final);
+    var filteredTowns = [];
+    var filteredShops = [];
+    
+    for (var j = 0; j < towns.length; j++){
+        var test = towns[j].content.filter((c) => c instanceof Shop && c.items.length > 0);
+        if (test.length > 0) {
+            test.forEach(function(i) {
+                filteredTowns = [...filteredTowns, i];
+            });
+        }
+    }
+    
+    for (var k = 0; k < filteredTowns.length; k++){
+        var test1 = filteredTowns[k].items.filter((c) => c.currency == currency && c instanceof PokemonItem)
+        if (test1.length > 0) {
+            test1.forEach(function(s) {
+                filteredShops = [...filteredShops, [filteredTowns[k], s]];
+            });
+        }
+    }
+    return filteredShops;
+}
+
+module.exports = {
+    highestRoute,
+    setWeather,
+    getShopMons
+};
 },{}],519:[function(require,module,exports){
 const getTableClearCounts = (dungeon) => {
     if (getTableClearCounts.cache.has(dungeon)) {
@@ -78999,18 +79103,16 @@ const getItemImage = (itemType, itemId) => {
     }
 };
 
-const getItemPage = (itemType, itemId) => {
-    const categoryAndPage = getItemCategoryAndPage(itemType, itemId);
+const getItemPageFromTypeAndId = (itemType, itemId) => {
+    const categoryAndPage = getItemCategoryAndPageFromTypeAndId(itemType, itemId);
     return `${categoryAndPage.category}/${categoryAndPage.page}`;
 };
 
-const getItemCategoryAndPage = (itemType, itemId) => {
+const getItemCategoryAndPageFromTypeAndId = (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
-            return {
-                category: 'Items',
-                page: ItemList[itemId].displayName,
-            };
+            const item = ItemList[itemId];
+            return getItemCategoryAndPageFromObject(item);
         case ItemType.underground:
             return {
                 category: 'Items',
@@ -79032,13 +79134,34 @@ const getItemCategoryAndPage = (itemType, itemId) => {
                 page: '',
             };
     }
-}
+};
+
+const getItemPageFromObject = (item) => {
+    const categoryAndPage = getItemCategoryAndPageFromObject(item);
+    return `${categoryAndPage.category}/${categoryAndPage.page}`;
+};
+
+const getItemCategoryAndPageFromObject = (item) => {
+    if (item instanceof PokemonItem) {
+        return {
+            category: 'Pokémon',
+            page: item.type
+        };
+    } else {
+        return {
+            category: 'Items',
+            page: item.displayName
+        };
+    }
+};
 
 module.exports = {
     getItemName,
     getItemImage,
-    getItemPage,
-    getItemCategoryAndPage,
+    getItemPageFromTypeAndId,
+    getItemCategoryAndPageFromTypeAndId,
+    getItemPageFromObject,
+    getItemCategoryAndPageFromObject,
 };
 
 },{}],523:[function(require,module,exports){
@@ -79183,6 +79306,35 @@ module.exports = {
 }
 
 },{}],525:[function(require,module,exports){
+function getShopMons(currency) {
+    var towns = Object.values(TownList).filter(t => t.region < GameConstants.Region.final);
+    var filteredTowns = [];
+    var filteredShops = [];
+    
+    for (var j = 0; j < towns.length; j++){
+        var test = towns[j].content.filter((c) => c instanceof Shop && c.items.length > 0);
+        if (test.length > 0) {
+            test.forEach(function(i) {
+                filteredTowns = [...filteredTowns, i];
+            });
+        }
+    }
+    
+    for (var k = 0; k < filteredTowns.length; k++){
+        var test1 = filteredTowns[k].items.filter((c) => c.currency == currency && c instanceof PokemonItem)
+        if (test1.length > 0) {
+            test1.forEach(function(s) {
+                filteredShops = [...filteredShops, [filteredTowns[k], s]];
+            });
+        }
+    }
+    return filteredShops;
+}
+
+module.exports = {
+    getShopMons
+};
+},{}],526:[function(require,module,exports){
 const redirections = [
     ({type, name}) => {
         if (type === 'Pokemon') {
@@ -79234,7 +79386,7 @@ module.exports = {
     redirections
 };
 
-},{}],526:[function(require,module,exports){
+},{}],527:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [
@@ -79392,11 +79544,17 @@ const searchOptions = [
     type: 'Towns',
     page: '',
   },
-  ...Object.values(TownList).filter(t => !(t instanceof DungeonTown)).map(t => ({
+  ...Object.values(TownList).filter(t => !(t instanceof DungeonTown) && !['Safari Zone', 'Friend Safari'].includes(t.name)).map(t => ({
     display: t.name,
     type: 'Towns',
     page: t.name,
   })),
+  // Safari
+  {
+    display: 'Safari',
+    type: 'Safari',
+    page: '',
+  },
   // Gyms
   {
     display: 'Gyms',
@@ -79535,6 +79693,37 @@ const searchOptions = [
     type: 'Shadow Pokémon',
     page: '',
   },
+  //Currency Pages
+  {
+    display: 'Pokémon Dollars',
+    type: 'Pokémon Dollars',
+    page: '',
+  },
+  {
+    display: 'Dungeon Tokens',
+    type: 'Dungeon Tokens',
+    page: '',
+  },
+  {
+    display: 'Quest Points',
+    type: 'Quest Points',
+    page: '',
+  },
+  {
+    display: 'Farm Points',
+    type: 'Farm Points',
+    page: '',
+  },
+  {
+    display: 'Diamonds',
+    type: 'Diamonds',
+    page: '',
+  },
+  {
+    display: 'Battle Points',
+    type: 'Battle Points',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
@@ -79596,4 +79785,4 @@ module.exports = {
   searchOptions,
 };
 
-},{"./navigation":515}]},{},[508]);
+},{"./navigation":514}]},{},[507]);

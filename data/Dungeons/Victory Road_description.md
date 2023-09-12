@@ -1,0 +1,1 @@
+Located south of [[Towns/Indigo Plateau Kanto]].

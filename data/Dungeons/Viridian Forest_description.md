@@ -1,0 +1,1 @@
+Located north of [[Towns/Viridian City]] on [[Routes/Kanto Route 2]].

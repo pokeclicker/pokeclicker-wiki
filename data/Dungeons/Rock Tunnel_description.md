@@ -1,0 +1,1 @@
+Located between [[Routes/Kanto Route 9]] and [[Routes/Kanto Route 10]].
