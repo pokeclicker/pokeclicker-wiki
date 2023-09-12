@@ -209,8 +209,10 @@ const getRegionMap = (region, subregion) => {
 }
 
 let cachedPokeclickerHTML;
+let overlaySVG = ko.observable("");
 
 const fetchPokeclickerHTML = (mapLocationSelector) => {
+    overlaySVG("");
     if (!cachedPokeclickerHTML) {
         $.get('/pokeclicker/docs/index.html',
             function(data) {
@@ -223,14 +225,16 @@ const fetchPokeclickerHTML = (mapLocationSelector) => {
     }
 }
 
-const getLocationOverlaySVG = (town) => {
+const getLocationOverlaySVG = (town, region, subregion) => {
+    // Replace single quotes with their escaped versions
+    town = town.replaceAll(String.raw`'`, String.raw`\\'`)
     fetchPokeclickerHTML(`'${town}'`);
-    return true;
+    return getRegionMap(region, subregion);
 }
 
-const getRouteOverlaySVG = (route, region) => {
+const getRouteOverlaySVG = (route, region, subregion) => {
     fetchPokeclickerHTML(`moveToRoute(${route}, ${region})`);
-    return true;
+    return getRegionMap(region, subregion);
 }
 
 const setMapLocation = (selector) => {
@@ -254,14 +258,12 @@ const setMapLocation = (selector) => {
         const parent = firstTownNode.parentNode;
         parent.replaceChildren(...outputElements);
         map.replaceChildren(parent);
-        // Weird hack because sometimes manually created SVG elements don't render until they are messed with
-        map.innerHTML = map.innerHTML + "";
         // Scrub all the knockout bindings so they don't affect the rendering
         const allElements = map.querySelectorAll("*");
         allElements.forEach(element => {
             element.removeAttribute('data-bind');
         });
-        $('#map-overlay').html(map);
+        overlaySVG(map.outerHTML);
     }
 }
 
@@ -269,7 +271,7 @@ module.exports = {
     requirementHints,
     getEvolutionHints,
     getRegionName,
-    getRegionMap,
     getLocationOverlaySVG,
     getRouteOverlaySVG,
+    overlaySVG,
 }

@@ -17,16 +17,18 @@
                         <img class="w-100" data-bind="attr: {src: `images/${Wiki.pageName()}.png`}"/>
                     </td>
                 </tr>
-                <tr data-bind="if: Wiki.gameHelper.getRegionMap($data.region, $data.subRegion)">
+                <!-- ko with: Wiki.gameHelper.getLocationOverlaySVG(Wiki.pageName(), $data.region, $data.subRegion), as: 'filePath' -->
+                <tr data-bind="with: Wiki.gameHelper.overlaySVG(), as: 'overlaySVG'">
                     <td colspan="2">
                         <div id="map-container">
-                            <div id="map-overlay" data-bind="if: Wiki.gameHelper.getLocationOverlaySVG(Wiki.pageName())"></div>
+                            <div id="map-overlay" data-bind="html: overlaySVG"></div>
                             <img class="w-100" width="1600" data-bind="attr: {
-                                src:`images/${Wiki.gameHelper.getRegionMap($data.region, $data.subRegion)}.png?v=0.10.16`
+                                src:`images/${filePath}.png?`
                             }" />
                         </div>
                     </td>
                 </tr>
+                <!-- /ko -->
                 <tr>
                     <td>Region</td>
                     <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region])"></td>
