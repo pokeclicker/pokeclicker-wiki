@@ -6,12 +6,12 @@ The following is a list of Pokémon obtainable in Johto which cannot be found on
 
 |Item|Number Needed|Pokémon|
 |---|---|---|
-|[[Items/Sun Stone]]|2| [[File:pokemon/182.png\|25px]] [[Pokémon/Bellossom]], [[File:pokemon/192.png\|25px]] [[Pokémon/Sunflora]]|
-|[[Items/Dragon Scale]]|1| [[File:pokemon/230.png\|25px]] [[Pokémon/Kingdra]]|
-|[[Items/Metal Coat]]|2| [[File:pokemon/208.png\|25px]] [[Pokémon/Steelix]], [[File:pokemon/212.png\|25px]] [[Pokémon/Scizor]]|
-|[[Items/King's Rock]]|2| [[File:pokemon/186.png\|25px]] [[Pokémon/Politoed]], [[File:pokemon/199.png\|25px]] [[Pokémon/Slowking]]|
-|[[Items/Upgrade]]|1| [[File:pokemon/233.png\|25px]] [[Pokémon/Porygon2]]|
-|[[Items/Soothe Bell]]|5| [[File:pokemon/169.png\|25px]] [[Pokémon/Crobat]], [[File:pokemon/242.png\|25px]] [[Pokémon/Blissey]], [[File:pokemon/196.png\|25px]] [[Pokémon/Espeon]], [[File:pokemon/197.png\|25px]] [[Pokémon/Umbreon]], [[File:pokemon/176.png\|25px]] [[Pokémon/Togetic]]|
+|[[File:Sun_stone.png\|25px]] [[Items/Sun Stone]]|2| [[File:pokemon/182.png\|25px]] [[Pokémon/Bellossom]], [[File:pokemon/192.png\|25px]] [[Pokémon/Sunflora]]|
+|[[File:Dragon_scale.png\|25px]] [[Items/Dragon Scale]]|1| [[File:pokemon/230.png\|25px]] [[Pokémon/Kingdra]]|
+|[[File:Metal_coat.png\|25px]] [[Items/Metal Coat]]|2| [[File:pokemon/208.png\|25px]] [[Pokémon/Steelix]], [[File:pokemon/212.png\|25px]] [[Pokémon/Scizor]]|
+|[[File:Kings_rock.png\|25px]] [[Items/King's Rock]]|2| [[File:pokemon/186.png\|25px]] [[Pokémon/Politoed]], [[File:pokemon/199.png\|25px]] [[Pokémon/Slowking]]|
+|[[File:Upgrade.png\|25px]] [[Items/Upgrade]]|1| [[File:pokemon/233.png\|25px]] [[Pokémon/Porygon2]]|
+|[[File:Soothe_bell.png\|25px]] [[Items/Soothe Bell]]|5| [[File:pokemon/169.png\|25px]] [[Pokémon/Crobat]], [[File:pokemon/242.png\|25px]] [[Pokémon/Blissey]], [[File:pokemon/196.png\|25px]] [[Pokémon/Espeon]], [[File:pokemon/197.png\|25px]] [[Pokémon/Umbreon]], [[File:pokemon/176.png\|25px]] [[Pokémon/Togetic]]|
 **Note:** Espeon and Umbreon are time-dependent; daytime (6am - 6pm / 6:00 - 18:00) and nighttime (6pm - 6am / 18:00 - 06:00), respectively.
 
 ### Shopmons
@@ -29,9 +29,9 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 
 |Egg|Pokémon|
 |---|---|
-|[[Items/Fire Egg]] | [[File:pokemon/155.png\|25px]] [[Pokémon/Cyndaquil]], [[File:pokemon/218.png\|25px]] [[Pokémon/Slugma]], [[File:pokemon/228.png\|25px]] [[Pokémon/Houndour]]|
-|[[Items/Grass Egg]] | [[File:pokemon/152.png\|25px]] [[Pokémon/Chikorita]], [[File:pokemon/191.png\|25px]] [[Pokémon/Sunkern]]|
-|[[Items/Water Egg]] | [[File:pokemon/158.png\|25px]] [[Pokémon/Totodile]]|
+|[[File:Fire_egg.png\|25px]] [[Items/Fire Egg]] | [[File:pokemon/155.png\|25px]] [[Pokémon/Cyndaquil]], [[File:pokemon/218.png\|25px]] [[Pokémon/Slugma]], [[File:pokemon/228.png\|25px]] [[Pokémon/Houndour]]|
+|[[File:Grass_egg.png\|25px]] [[Items/Grass Egg]] | [[File:pokemon/152.png\|25px]] [[Pokémon/Chikorita]], [[File:pokemon/191.png\|25px]] [[Pokémon/Sunkern]]|
+|[[File:Water_egg.png\|25px]] [[Items/Water Egg]] | [[File:pokemon/158.png\|25px]] [[Pokémon/Totodile]]|
 
 ### Baby Pokémon
 
