@@ -5,22 +5,22 @@ The following is a list of Pokémon obtainable in Sinnoh which cannot be found o
 ### Fossils
 |Fossil|Pokémon|
 |---|---|
-|[[Items/Skull Fossil]] | [[File:pokemon/408.png\|25px]] [[Pokémon/Cranidos]] & [[File:pokemon/409.png\|25px]] [[Pokémon/Rampardos]]|
-|[[Items/Armor Fossil]] | [[File:pokemon/410.png\|25px]] [[Pokémon/Shieldon]] & [[File:pokemon/411.png\|25px]] [[Pokémon/Bastiodon]]|
+|[[File:Skull Fossil.png\|25px]] [[Items/Skull Fossil]] | [[File:pokemon/408.png\|25px]] [[Pokémon/Cranidos]] & [[File:pokemon/409.png\|25px]] [[Pokémon/Rampardos]]|
+|[[File:Armor Fossil.png\|25px]] [[Items/Armor Fossil]] | [[File:pokemon/410.png\|25px]] [[Pokémon/Shieldon]] & [[File:pokemon/411.png\|25px]] [[Pokémon/Bastiodon]]|
 
 ### Item Evolutions
 |Item|Number Needed|Pokémon|
 |---|---|---|
-|[[Items/Soothe Bell]]|2 | [[File:pokemon/428.png\|25px]] [[Pokémon/Lopunny]], [[File:pokemon/448.png\|25px]] [[Pokémon/Lucario]]
-|[[Items/Electirizer]]|1 | [[File:pokemon/466.png\|25px]] [[Pokémon/Electivire]]|
-|[[Items/Magmarizer]]|1 | [[File:pokemon/467.png\|25px]] [[Pokémon/Magmortar]]
-|[[Items/Razor Claw]]|1 | [[File:pokemon/461.png\|25px]] [[Pokémon/Weavile]]
-|[[Items/Razor Fang]]|1 | [[File:pokemon/472.png\|25px]] [[Pokémon/Gliscor]]|
-|[[Items/Dawn Stone]]|2 | [[File:pokemon/475.png\|25px]] [[Pokémon/Gallade]], [[File:pokemon/478.png\|25px]] [[Pokémon/Froslass]]
-|[[Items/Shiny Stone]]|2 | [[File:pokemon/468.png\|25px]] [[Pokémon/Togekiss]], [[File:pokemon/407.png\|25px]] [[Pokémon/Roserade]]
-|[[Items/Dubious Disc]]|1 | [[File:pokemon/474.png\|25px]] [[Pokémon/Porygon-Z]]
-|[[Items/Protector]]|1 | [[File:pokemon/464.png\|25px]] [[Pokémon/Rhyperior]]
-|[[Items/Reaper Cloth]]|1 | [[File:pokemon/477.png\|25px]] [[Pokémon/Dusknoir]]
+|[[File:Soothe_bell.png\|25px]] [[Items/Soothe Bell]]|2 | [[File:pokemon/428.png\|25px]] [[Pokémon/Lopunny]], [[File:pokemon/448.png\|25px]] [[Pokémon/Lucario]]
+|[[File:Electirizer.png\|25px]] [[Items/Electirizer]]|1 | [[File:pokemon/466.png\|25px]] [[Pokémon/Electivire]]|
+|[[File:Magmarizer.png\|25px]] [[Items/Magmarizer]]|1 | [[File:pokemon/467.png\|25px]] [[Pokémon/Magmortar]]
+|[[File:Razor_claw.png\|25px]] [[Items/Razor Claw]]|1 | [[File:pokemon/461.png\|25px]] [[Pokémon/Weavile]]
+|[[File:Razor_fang.png\|25px]] [[Items/Razor Fang]]|1 | [[File:pokemon/472.png\|25px]] [[Pokémon/Gliscor]]|
+|[[File:Dawn_stone.png\|25px]] [[Items/Dawn Stone]]|2 | [[File:pokemon/475.png\|25px]] [[Pokémon/Gallade]], [[File:pokemon/478.png\|25px]] [[Pokémon/Froslass]]
+|[[File:Shiny_stone.png\|25px]] [[Items/Shiny Stone]]|2 | [[File:pokemon/468.png\|25px]] [[Pokémon/Togekiss]], [[File:pokemon/407.png\|25px]] [[Pokémon/Roserade]]
+|[[File:Dubious_disc.png\|25px]] [[Items/Dubious Disc]]|1 | [[File:pokemon/474.png\|25px]] [[Pokémon/Porygon-Z]]
+|[[File:Protector.png\|25px]][[Items/Protector]]|1 | [[File:pokemon/464.png\|25px]] [[Pokémon/Rhyperior]]
+|[[File:Reaper_cloth.png\|25px]] [[Items/Reaper Cloth]]|1 | [[File:pokemon/477.png\|25px]] [[Pokémon/Dusknoir]]
 
 **Note:** Lucario requires daytime (6am - 6pm / 6:00 - 18:00). Weavile and Gliscor require nighttime (6pm - 6am / 18:00 - 06:00).
 
@@ -28,7 +28,7 @@ The following is a list of Pokémon obtainable in Sinnoh which cannot be found o
 For the evolution to happen, you must equip the Held Item to the corresponding Pokémon and, if it's already at level 100, breed and retrain it.
 |Item|Used on|Necessary to Obtain|
 |---|---|---|
-|[[Items/Griseous Orb]] | [[File:pokemon/487.png\|25px]] [[Pokémon/Giratina (Altered)]] | [[File:pokemon/487.01.png\|25px]] [[Pokémon/Giratina (Origin)]] |
+|[[File:Griseous_Orb.png\|25px]] [[Items/Griseous Orb]] | [[File:pokemon/487.png\|25px]] [[Pokémon/Giratina (Altered)]] | [[File:pokemon/487.01.png\|25px]] [[Pokémon/Giratina (Origin)]] |
 
 ### Shopmons
 |Location|Pokémon|Cost|
@@ -40,17 +40,18 @@ For the evolution to happen, you must equip the Held Item to the corresponding P
 |[[Towns/Pal Park]] | [[File:pokemon/420.png\|25px]] [[Pokémon/Cherubi]]|[[File:questPoint.svg\|20px]] 6,750|
 
 Skorupi can be obtained as a Wanderer using [[Berries/Kebia]] berries. Combee, Burmy (Plant), and Cherubi can also all commonly be obtained as [[Wandering Pokémon]] in the Farm.
+Also, there may or may not be a Secret Berry Shop somewhere to be found.
 
 ### Eggs
 All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries/Passho]], and [[Berries/Rindo]] berries.
 |Egg|Pokémon|
 |---|---|
-|[[Items/Fire Egg]] | [[File:pokemon/390.png\|25px]] [[Pokémon/Chimchar]] |
-|[[Items/Grass Egg]] | [[File:pokemon/387.png\|25px]] [[Pokémon/Turtwig]], [[File:pokemon/455.png\|25px]] [[Pokémon/Carnivine]] |
-|[[Items/Water Egg]] | [[File:pokemon/393.png\|25px]] [[Pokémon/Piplup]] |
-|[[Items/Electric Egg]] | [[File:pokemon/417.png\|25px]] [[Pokémon/Pachirisu]] |
-|[[Items/Fighting Egg]] | [[File:pokemon/447.png\|25px]] [[Pokémon/Riolu]] |
-|[[Items/Dragon Egg]] | [[File:pokemon/443.png\|25px]] [[Pokémon/Gible]] |
+|[[File:Fire_egg.png\|25px]] [[Items/Fire Egg]] | [[File:pokemon/390.png\|25px]] [[Pokémon/Chimchar]] |
+|[[File:Grass_egg.png\|25px]] [[Items/Grass Egg]] | [[File:pokemon/387.png\|25px]] [[Pokémon/Turtwig]], [[File:pokemon/455.png\|25px]] [[Pokémon/Carnivine]] |
+|[[File:Water_egg.png\|25px]] [[Items/Water Egg]] | [[File:pokemon/393.png\|25px]] [[Pokémon/Piplup]] |
+|[[File:Electric_egg.png\|25px]] [[Items/Electric Egg]] | [[File:pokemon/417.png\|25px]] [[Pokémon/Pachirisu]] |
+|[[File:Fighting_egg.png\|25px]] [[Items/Fighting Egg]] | [[File:pokemon/447.png\|25px]] [[Pokémon/Riolu]] |
+|[[File:Dragon_egg.png\|25px]] [[Items/Dragon Egg]] | [[File:pokemon/443.png\|25px]] [[Pokémon/Gible]] |
 
 ### Baby Pokémon
 |Baby|Adult|
