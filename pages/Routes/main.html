@@ -2,13 +2,36 @@
 <h2>Route not found...</h2>
 <!-- /ko -->
 <div data-bind="with: Routes.regionRoutes.find(r => r.routeName == Wiki.pageName())">
-  <div>
-    <h3>Region</h3>
-    <p data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region])"></p>
-  </div>
-  <div>
-    <h3>Sub Region</h3>
-    <p data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name"></p>
+  <div class="float-lg-end col-lg-4 m-2">
+    <table class="table table-hover table-striped table-bordered">
+      <thead>
+        <tr>
+          <th class="text-center" colspan="2" data-bind="text: Wiki.pageName()"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ko with: Wiki.gameHelper.getRouteOverlaySVG($data.number, $data.region, $data.subRegion ?? 0), as: 'filePath' -->
+        <tr data-bind="with: Wiki.gameHelper.overlaySVG(), as: 'overlaySVG'">
+          <td colspan="2">
+            <div id="map-container">
+              <div id="map-overlay" data-bind="html: overlaySVG"></div>
+              <img class="w-100" width="1600" data-bind="attr: {
+                src:`images/${filePath}.png`
+              }" />
+            </div>
+          </td>
+        </tr>
+        <!-- /ko -->
+        <tr>
+          <td>Region</td>
+          <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region])"></td>
+        </tr>
+        <tr>
+          <td>Sub Region</td>
+          <td data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name"></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   <div>
       <h3>Base HP:</h3>

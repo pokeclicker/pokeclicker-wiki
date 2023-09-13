@@ -1,6 +1,6 @@
 <div>
     <!-- ko with: dungeonList[Wiki.pageName()] -->
-        <div class="float-lg-end col-lg-3 m-2">
+        <div class="float-lg-end col-lg-4 m-2">
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
@@ -14,6 +14,18 @@
                         </td>
                     </tr>
                     <!-- ko with: Object.values(TownList).find(town => town.dungeon === $data) -->
+                        <!-- ko with: Wiki.gameHelper.getLocationOverlaySVG(Wiki.pageName(), $data.region, $data.subRegion), as: 'filePath' -->
+                        <tr data-bind="with: Wiki.gameHelper.overlaySVG(), as: 'overlaySVG'">
+                            <td colspan="2">
+                                <div id="map-container">
+                                    <div id="map-overlay" data-bind="html: overlaySVG"></div>
+                                    <img class="w-100" width="1600" data-bind="attr: {
+                                        src:`images/${filePath}.png`
+                                    }" />
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- /ko -->
                     <tr>
                         <td>Region</td>
                         <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region])"></td>

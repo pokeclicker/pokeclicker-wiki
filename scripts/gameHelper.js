@@ -191,8 +191,90 @@ const getRegionName = (region) => {
     return GameConstants.camelCaseToString(GameConstants.Region[region]);
 };
 
+const getRegionMap = (region, subregion) => {
+    // There might be a way to grab these out of the HTML
+    const regionPNGs = [
+        ['kanto-kanto', 'kanto-sevii123', 'kanto-sevii4567' ],
+        ['johto'],
+        ['hoenn', 'orre'],
+        ['sinnoh'],
+        ['unova'],
+        ['kalos'],
+        ['alola-melemele', 'alola-akala', 'alola-ulaula', 'alola-poni', 'alola-magikarp-jump'],
+        ['galar-south', 'galar-north', 'galar-isle-of-armor', 'galar-crown-tundra'],
+        [], // hisui
+        [], // paldea
+    ];
+    return regionPNGs[region][subregion];
+}
+
+let cachedPokeclickerHTML;
+let overlaySVG = ko.observable("");
+
+const fetchPokeclickerHTML = (mapLocationSelector) => {
+    overlaySVG("");
+    if (!cachedPokeclickerHTML) {
+        $.get('/pokeclicker/docs/index.html',
+            function(data) {
+                cachedPokeclickerHTML = data;
+                setMapLocation(mapLocationSelector);
+            }
+        );
+    } else {
+        setMapLocation(mapLocationSelector);
+    }
+}
+
+const getLocationOverlaySVG = (town, region, subregion) => {
+    // Replace single quotes with their escaped versions
+    town = town.replaceAll(String.raw`'`, String.raw`\\'`)
+    fetchPokeclickerHTML(`'${town}'`);
+    return getRegionMap(region, subregion);
+}
+
+const getRouteOverlaySVG = (route, region, subregion) => {
+    fetchPokeclickerHTML(`moveToRoute(${route}, ${region})`);
+    return getRegionMap(region, subregion);
+}
+
+const setMapLocation = (selector) => {
+    const dom = new DOMParser().parseFromString(cachedPokeclickerHTML, 'text/html');
+    const map = dom.querySelector('#map');
+
+    const locationElements = map.querySelectorAll(`[data-bind*="${selector}"]`);
+    if (locationElements.length > 0) {
+        const outputElements = [];
+        const firstTownNode = locationElements[0];
+
+        if (locationElements.length == 1 && firstTownNode.nodeName === "image") {
+            // If there is only one element and it's an image (due to being a dungeon-in-a-town), replace image with rect that we can fill
+            const newNode = document.createElement("rect");
+            [...firstTownNode.attributes].forEach(attr => newNode.setAttribute(attr.nodeName, attr.nodeValue));
+            outputElements.push(newNode);
+        } else {
+            outputElements.push(...locationElements);
+        }
+        // Create our own map mini-DOM with only the necessary elements
+        const parent = firstTownNode.parentNode;
+        parent.replaceChildren(...outputElements);
+        map.replaceChildren(parent);
+        const allElements = map.querySelectorAll("*");
+        allElements.forEach(element => {
+            // Scrub all the knockout bindings so they don't affect the rendering
+            element.removeAttribute('data-bind');
+            // And all image hrefs
+            element.removeAttribute('href');
+            element.removeAttribute('xlink:href');
+        });
+        overlaySVG(map.outerHTML);
+    }
+}
+
 module.exports = {
     requirementHints,
     getEvolutionHints,
     getRegionName,
+    getLocationOverlaySVG,
+    getRouteOverlaySVG,
+    overlaySVG,
 }
