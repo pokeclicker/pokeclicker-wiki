@@ -5,21 +5,21 @@ The following is a list of Pokémon obtainable in Unova which cannot be found on
 ### Fossils
 |Fossil|Pokémon|
 |---|---|
-|[[Items/Plume Fossil]] | [[File:pokemon/566.png\|25px]] [[Pokémon/Archen]] & [[File:pokemon/567.png\|25px]] [[Pokémon/Archeops]]|
-|[[Items/Cover Fossil]] | [[File:pokemon/564.png\|25px]] [[Pokémon/Tirtouga]] & [[File:pokemon/565.png\|25px]] [[Pokémon/Carracosta]]|
+|[[File:Plume Fossil.png\|25px]] [[Items/Plume Fossil]] | [[File:pokemon/566.png\|25px]] [[Pokémon/Archen]] & [[File:pokemon/567.png\|25px]] [[Pokémon/Archeops]]|
+|[[File:Cover Fossil.png\|25px]] [[Items/Cover Fossil]] | [[File:pokemon/564.png\|25px]] [[Pokémon/Tirtouga]] & [[File:pokemon/565.png\|25px]] [[Pokémon/Carracosta]]|
 
 ### Item Evolutions
 |Item|Number Needed|Pokémon|
 |---|---|---|
-|[[Items/Fire Stone]]|1 | [[File:pokemon/514.png\|25px]] [[Pokémon/Simisear]]
-|[[Items/Water Stone]]|1 | [[File:pokemon/516.png\|25px]] [[Pokémon/Simipour]]|
-|[[Items/Leaf Stone]]|1 | [[File:pokemon/512.png\|25px]] [[Pokémon/Simisage]]|
-|[[Items/Thunder Stone]]|1 | [[File:pokemon/604.png\|25px]] [[Pokémon/Eelektross]] |
-|[[Items/Linking Cord]]|4 | [[File:pokemon/617.png\|25px]] [[Pokémon/Accelgor]], [[File:pokemon/534.png\|25px]] [[Pokémon/Conkeldurr]], [[File:pokemon/526.png\|25px]] [[Pokémon/Gigalith]], [[File:pokemon/589.png\|25px]] [[Pokémon/Escavalier]] |
-|[[Items/Sun Stone]]|2 | [[File:pokemon/547.png\|25px]] [[Pokémon/Whimsicott]], [[File:pokemon/549.png\|25px]] [[Pokémon/Lilligant]] |
-|[[Items/Soothe Bell]]|2 | [[File:pokemon/528.png\|25px]] [[Pokémon/Swoobat]], [[File:pokemon/542.png\|25px]] [[Pokémon/Leavanny]] |
-|[[Items/Dusk Stone]]|1 | [[File:pokemon/609.png\|25px]] [[Pokémon/Chandelure]] |
-|[[Items/Shiny Stone]]|1 | [[File:pokemon/573.png\|25px]] [[Pokémon/Cinccino]] |
+|[[File:Fire_stone.png\|25px]] [[Items/Fire Stone]]|1 | [[File:pokemon/514.png\|25px]] [[Pokémon/Simisear]]
+|[[File:Water_stone.png\|25px]] [[Items/Water Stone]]|1 | [[File:pokemon/516.png\|25px]] [[Pokémon/Simipour]]|
+|[[File:Leaf_stone.png\|25px]] [[Items/Leaf Stone]]|1 | [[File:pokemon/512.png\|25px]] [[Pokémon/Simisage]]|
+|[[File:Thunder_stone.png\|25px]] [[Items/Thunder Stone]]|1 | [[File:pokemon/604.png\|25px]] [[Pokémon/Eelektross]] |
+|[[File:Linking_cord.png\|25px]] [[Items/Linking Cord]]|4 | [[File:pokemon/617.png\|25px]] [[Pokémon/Accelgor]], [[File:pokemon/534.png\|25px]] [[Pokémon/Conkeldurr]], [[File:pokemon/526.png\|25px]] [[Pokémon/Gigalith]], [[File:pokemon/589.png\|25px]] [[Pokémon/Escavalier]] |
+|[[File:Sun_stone.png\|25px]] [[Items/Sun Stone]]|2 | [[File:pokemon/547.png\|25px]] [[Pokémon/Whimsicott]], [[File:pokemon/549.png\|25px]] [[Pokémon/Lilligant]] |
+|[[File:Soothe_bell.png\|25px]] [[Items/Soothe Bell]]|2 | [[File:pokemon/528.png\|25px]] [[Pokémon/Swoobat]], [[File:pokemon/542.png\|25px]] [[Pokémon/Leavanny]] |
+|[[File:Dusk_stone.png\|25px]] [[Items/Dusk Stone]]|1 | [[File:pokemon/609.png\|25px]] [[Pokémon/Chandelure]] |
+|[[File:Shiny_stone.png\|25px]] [[Items/Shiny Stone]]|1 | [[File:pokemon/573.png\|25px]] [[Pokémon/Cinccino]] |
 
 ### Shopmons
 |Location|Pokémon|Cost|
@@ -34,12 +34,12 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 
 |Egg|Pokémon|
 |---|---|
-|[[Items/Fire Egg]] | [[File:pokemon/498.png\|25px]] [[Pokémon/Tepig]], [[File:pokemon/513.png\|25px]] [[Pokémon/Pansear]] |
-|[[Items/Grass Egg]] | [[File:pokemon/495.png\|25px]] [[Pokémon/Snivy]], [[File:pokemon/511.png\|25px]] [[Pokémon/Pansage]] |
-|[[Items/Water Egg]] | [[File:pokemon/501.png\|25px]] [[Pokémon/Oshawott]], [[File:pokemon/515.png\|25px]] [[Pokémon/Panpour]] |
-|[[Items/Electric Egg]] | [[File:pokemon/522.png\|25px]] [[Pokémon/Blitzle]] |
-|[[Items/Fighting Egg]] | [[File:pokemon/538.png\|25px]] [[Pokémon/Throh]], [[File:pokemon/539.png\|25px]] [[Pokémon/Sawk]] |
-|[[Items/Dragon Egg]] | [[File:pokemon/633.png\|25px]] [[Pokémon/Deino]] |
+|[[File:Fire_egg.png\|25px]] [[Items/Fire Egg]] | [[File:pokemon/498.png\|25px]] [[Pokémon/Tepig]], [[File:pokemon/513.png\|25px]] [[Pokémon/Pansear]] |
+|[[File:Grass_egg.png\|25px]] [[Items/Grass Egg]] | [[File:pokemon/495.png\|25px]] [[Pokémon/Snivy]], [[File:pokemon/511.png\|25px]] [[Pokémon/Pansage]] |
+|[[File:Water_egg.png\|25px]] [[Items/Water Egg]] | [[File:pokemon/501.png\|25px]] [[Pokémon/Oshawott]], [[File:pokemon/515.png\|25px]] [[Pokémon/Panpour]] |
+|[[File:Electric_egg.png\|25px]] [[Items/Electric Egg]] | [[File:pokemon/522.png\|25px]] [[Pokémon/Blitzle]] |
+|[[File:Fighting_egg.png\|25px]] [[Items/Fighting Egg]] | [[File:pokemon/538.png\|25px]] [[Pokémon/Throh]], [[File:pokemon/539.png\|25px]] [[Pokémon/Sawk]] |
+|[[File:Dragon_egg.png\|25px]] [[Items/Dragon Egg]] | [[File:pokemon/633.png\|25px]] [[Pokémon/Deino]] |
 
 ### Baby Pokémon
 |Baby|Adult|
