@@ -1,5 +1,5 @@
 ## Use
-Base Pokémon |Evolves into |Aviable in
+Base Pokémon |Evolves into |Avalible in
 :---|:---|:--
 [[Pokemon/Kadabra]] |[[Pokemon/Alakazam]] | All regions
 [[Pokemon/Machoke]] |[[Pokemon/Machamp]] |All regions
