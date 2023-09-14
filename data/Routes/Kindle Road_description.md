@@ -1,0 +1,1 @@
+Found on Sevii Island 1, connecting One Island and Mt.Ember.
