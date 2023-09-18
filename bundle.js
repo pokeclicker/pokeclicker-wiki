@@ -78760,7 +78760,8 @@ const getDungeonLootChancesForItem = (itemName) => {
             const chances = data.chances;
             const length = chances.length
             const lastIndex = length - 1;
-            data.chances = Array(8).fill(chances[lastIndex]).toSpliced(0, length, ...chances);
+            data.chances = Array(8).fill(chances[lastIndex]);
+            data.chances.splice(0, length, ...chances);
         }
     }
 
