@@ -1,3 +1,5 @@
+Base chance of dropping: 1 in 2,048.
+
 In addition to being dropped by the above Pokemon, this item can be found as an item in the Safari Zone and Friend Safari.
 
 It can also be obtained from the [[Battle Frontier]] at the following stages, for a total of 75 Rare Candies:
