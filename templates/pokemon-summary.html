@@ -9,6 +9,10 @@
             <td class="text-center" colspan="2">
                 <img class="mouseover-reveal" data-bind="attr: {src: './pokeclicker/docs/assets/images/shinypokemon/' + $data.id + '.png'}"/>
                 <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>
+                <!-- ko if: $data.gender.visualDifference -->
+                <img class="mouseover-reveal" data-bind="attr: {src: './pokeclicker/docs/assets/images/shinypokemon/' + $data.id + '-f.png'}"/>
+                <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '-f.png'}"/>
+                <!-- /ko -->
             </td>
         </tr>
         <tr>
