@@ -1,15 +1,17 @@
 ## Mutation Strategy {#mutation}
 
-**Base Formation**
-::: table-mutations
-| :----: | :----: |
-| [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | |
-:::
-
 ### Possible Planting Formations {#planting}
 
 You can fill your farm in the following way to obtain Chilan Berries. Purple squares indicate where mutations can occur.
 
+**Base Formation**
+::: table-mutations
+| :----: | :----: |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | |
+:::
+
+**Optimized Formation**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | |
