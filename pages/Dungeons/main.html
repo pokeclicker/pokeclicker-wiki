@@ -73,19 +73,28 @@
                 <!-- ko ifnot: $data.name -->
                     <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == ($data.pokemon || $data)).id + '.png'}"/>
                     <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.pokemon || $data, attr: { href: `#!Pokemon/${$data.pokemon || $data}` }"></a>
-                <!-- /ko -->
-                <!-- ko if: $data.name -->
-                    <span class="badge text-bg-secondary">
-                        <span  data-bind="text: $data.name"></span>
-                        (
-                        <!-- ko foreach: $data.team -->
-                        <span data-bind="text: $data.name"></span>
-                        <!-- ko if: $index() < $parent.team.length - 1 --><!-- ko text: ', ' --><!-- /ko --><!-- /ko -->
-                        <!-- /ko -->
-                        )
-                    </span>
-                <!-- /ko -->
+                <!-- /ko -->              
             <!-- /ko -->
+            <div class="accordion" data-bind="visible: $data.enemyList.filter((t) => t.team).length">
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#sectionCollapse" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            Trainers
+                        </button>
+                    </h4>
+                    <div id="sectionCollapse" class="accordion-body collapse" data-bind="foreach: $data.enemyList.filter((t) => t.team)">
+                            <span class="badge text-bg-secondary">
+                            <span data-bind="text: $data.name"></span>
+                            (
+                            <!-- ko foreach: $data.team -->
+                                <span data-bind="text: $data.name"></span>
+                                <!-- ko if: $index() < $parent.team.length - 1 --><!-- ko text: ', ' --><!-- /ko --><!-- /ko -->
+                            <!-- /ko -->
+                            )
+                            </span>
+                    </div>
+                </div>
+            </div>
         </div>
         <br/>
         <!-- ko if: Wiki.dungeons.getDungeonShadowPokemon($data).length -->
