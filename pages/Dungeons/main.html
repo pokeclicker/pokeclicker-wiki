@@ -84,7 +84,12 @@
                     </h4>
                     <div id="sectionCollapse" class="accordion-body collapse" data-bind="foreach: $data.enemyList.filter((t) => t.team)">
                             <span class="badge text-bg-secondary">
-                            <span data-bind="text: $data.name"></span>
+                            <span data-bind="text: $data.name + `${$data.options ? ($data.options.requirement ? ' 🔒' : '') : ''}`,
+                            tooltip: {
+                                title: $data.options?.requirement ? Wiki.gameHelper.requirementHints($data.options.requirement, false).join('<br/>') : '',
+                                html: false,
+                                trigger: 'hover'
+                            }"></span>
                             (
                             <!-- ko foreach: $data.team -->
                                 <span data-bind="text: $data.name"></span>
