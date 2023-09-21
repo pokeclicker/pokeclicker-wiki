@@ -9,7 +9,7 @@
                 <th>Base HP</th>
             </tr>
         </thead>
-        <tbody data-bind="foreach: Object.values(dungeonList)">
+        <tbody data-bind="foreach: Object.values(dungeonList).filter(d => GameConstants.getDungeonRegion(d.name) <= GameConstants.MAX_AVAILABLE_REGION)">
             <tr class="text-nowrap clickable" data-bind="click: () => { Wiki.gotoPage('Dungeons', $data.name); return false; }">
                 <td data-bind="text: $data.name"></td>
                 <!-- ko with: Object.values(TownList).find(town => town.dungeon === $data) -->
@@ -39,7 +39,7 @@
                 <th>500 Times</th>
             </tr>
         </thead>
-        <tbody data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r != GameConstants.Region.final && r != GameConstants.Region.none)">
+        <tbody data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r <= GameConstants.MAX_AVAILABLE_REGION && r != GameConstants.Region.none)">
             <tr data-bind="with: { region: GameConstants.camelCaseToString(GameConstants.Region[$data]), total: GameConstants.RegionDungeons[$data].map(d => dungeonList[d]).reduce((sum, d) => sum + d.tokenCost, 0) }">
                 <td data-bind="text: $data.region"></td>
                 <td data-bind="attr: { 'data-order': $data.total }"><img src="./images/dungeonToken.svg" width="18px"/> 

@@ -14,7 +14,7 @@
                     <th>UB + MB</th>
                 </tr>
             </thead>
-            <tbody data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r != GameConstants.Region.final && r != GameConstants.Region.none)">
+            <tbody data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r <= GameConstants.MAX_AVAILABLE_REGION && r != GameConstants.Region.none)">
                 <tr>
                     <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data])"></td>
                     <td data-bind="html: Wiki.dungeonTokens.highestRoute($data, 0)[0][0]"></td>
@@ -65,7 +65,7 @@
 <div>
     <h2>Regional Rate Tables</h2>
     <p>The following tables provide detailed information for every route, separated by region. DT represents the DT you gain per capture on each route, and the values underneath each Pokéball/Magic Ball combination represent the average Dungeon Tokens you will gain per second.</p>
-    <div data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r != GameConstants.Region.final && r != GameConstants.Region.none)">
+    <div data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r <= GameConstants.MAX_AVAILABLE_REGION && r != GameConstants.Region.none)">
         <h4><a data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data]), attr: { href: `#!Regions/${GameConstants.camelCaseToString(GameConstants.Region[$data])}` }">Region</a></h4>
         <!-- ko if: $data != 7 -->
         <div class="table-responsive">
@@ -141,7 +141,7 @@
 <hr>
 <h2>Uses</h2>
 <h4>Dungeon Entry Cost</h4>
-<div data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r != GameConstants.Region.final && r != GameConstants.Region.none)">
+<div data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r <= GameConstants.MAX_AVAILABLE_REGION && r != GameConstants.Region.none)">
     <h4><a data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data]), attr: { href: `#!Regions/${GameConstants.camelCaseToString(GameConstants.Region[$data])}` }">Region</a></h4>
 
     <div class="table-responsive">
