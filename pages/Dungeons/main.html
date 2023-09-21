@@ -69,13 +69,11 @@
         <br/>
         <div>
             <h3>Encounters</h3>
-            <!-- ko foreach: $data.enemyList -->
-                <!-- ko ifnot: $data.name -->
-                    <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == ($data.pokemon || $data)).id + '.png'}"/>
-                    <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.pokemon || $data, attr: { href: `#!Pokemon/${$data.pokemon || $data}` }"></a>
-                <!-- /ko -->              
+            <!-- ko foreach: $data.enemyList.filter(e => !e.name) -->
+            <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == ($data.pokemon || $data)).id + '.png'}"/>
+            <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.pokemon || $data, attr: { href: `#!Pokemon/${$data.pokemon || $data}` }"></a>            
             <!-- /ko -->
-            <div class="accordion" data-bind="visible: $data.enemyList.some(e => e.name)">
+            <div class="accordion mt-1" data-bind="visible: $data.enemyList.some(e => e.name)">
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#sectionCollapse" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
@@ -91,15 +89,9 @@
                                     html: false,
                                     trigger: 'hover'
                                 }"></span>
-                                (
-                                <!-- ko foreach: $data.team -->
-                                    <span data-bind="text: $data.name"></span>
-                                    <!-- ko if: $data.shadow >= GameConstants.ShadowStatus.Shadow -->
-                                        <img width="15px" class="ms-1" src="./pokeclicker/docs/assets/images/status/shadow.svg" title="Shadow"/>
-                                    <!-- /ko -->
-                                    <!-- ko if: $index() < $parent.team.length - 1 --><!-- ko text: ', ' --><!-- /ko --><!-- /ko -->
+                                <!-- ko with: $data.team.map((p) => `${p.name}${p.shadow ? '<img width="15px" class="ms-1" src="./pokeclicker/docs/assets/images/status/shadow.svg" title="Shadow"/>' : ''}`).join(', ') -->
+                                <span data-bind="html: `( ${$data} )`"></span>
                                 <!-- /ko -->
-                                )
                             </span>
                         </div>
                     </div>
