@@ -75,7 +75,15 @@
                     <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.pokemon || $data, attr: { href: `#!Pokemon/${$data.pokemon || $data}` }"></a>
                 <!-- /ko -->
                 <!-- ko if: $data.name -->
-                    <span class="badge text-bg-secondary" data-bind="text: $data.name"></span>
+                    <span class="badge text-bg-secondary">
+                        <span  data-bind="text: $data.name"></span>
+                        (
+                        <!-- ko foreach: $data.team -->
+                        <span data-bind="text: $data.name"></span>
+                        <!-- ko if: $index() < $parent.team.length - 1 --><!-- ko text: ', ' --><!-- /ko --><!-- /ko -->
+                        <!-- /ko -->
+                        )
+                    </span>
                 <!-- /ko -->
             <!-- /ko -->
         </div>
