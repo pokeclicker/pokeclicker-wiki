@@ -82,24 +82,26 @@
                             Trainers
                         </button>
                     </h4>
-                    <div id="sectionCollapse" class="accordion-body collapse" data-bind="foreach: $data.enemyList.filter((t) => t.team)">
+                    <div id="sectionCollapse" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: $data.enemyList.filter((t) => t.team)">
                             <span class="badge text-bg-secondary">
-                            <span data-bind="text: $data.name + `${$data.options ? ($data.options.requirement ? ' 🔒' : '') : ''}`,
-                            tooltip: {
-                                title: $data.options?.requirement ? Wiki.gameHelper.requirementHints($data.options.requirement, false).join('<br/>') : '',
-                                html: false,
-                                trigger: 'hover'
-                            }"></span>
-                            (
-                            <!-- ko foreach: $data.team -->
-                                <span data-bind="text: $data.name"></span>
-                                <!-- ko if: $data.shadow >= GameConstants.ShadowStatus.Shadow -->
-                                    <img width="15px" class="ms-1" src="./pokeclicker/docs/assets/images/status/shadow.svg" title="Shadow"/>
+                                <span data-bind="text: $data.name + `${$data.options ? ($data.options.requirement ? ' 🔒' : '') : ''}`,
+                                tooltip: {
+                                    title: $data.options?.requirement ? Wiki.gameHelper.requirementHints($data.options.requirement, false).join('<br/>') : '',
+                                    html: false,
+                                    trigger: 'hover'
+                                }"></span>
+                                (
+                                <!-- ko foreach: $data.team -->
+                                    <span data-bind="text: $data.name"></span>
+                                    <!-- ko if: $data.shadow >= GameConstants.ShadowStatus.Shadow -->
+                                        <img width="15px" class="ms-1" src="./pokeclicker/docs/assets/images/status/shadow.svg" title="Shadow"/>
+                                    <!-- /ko -->
+                                    <!-- ko if: $index() < $parent.team.length - 1 --><!-- ko text: ', ' --><!-- /ko --><!-- /ko -->
                                 <!-- /ko -->
-                                <!-- ko if: $index() < $parent.team.length - 1 --><!-- ko text: ', ' --><!-- /ko --><!-- /ko -->
-                            <!-- /ko -->
-                            )
+                                )
                             </span>
+                        </div>
                     </div>
                 </div>
             </div>
