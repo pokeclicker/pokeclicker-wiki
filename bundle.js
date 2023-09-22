@@ -79827,6 +79827,12 @@ const searchOptions = [
     type: 'Battle Points',
     page: '',
   },
+  //Challenge Modes
+  {
+    display: 'Challenge Modes',
+    type: 'Challenge Modes',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
