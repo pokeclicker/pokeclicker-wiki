@@ -1,0 +1,1 @@
+**Note:** [[Pokémon/Sawk]] and [[Pokémon/Throh]] can be encountered in this dungeon **only** after capturing them somewhere else.
