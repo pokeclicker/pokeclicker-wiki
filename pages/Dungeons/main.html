@@ -69,15 +69,34 @@
         <br/>
         <div>
             <h3>Encounters</h3>
-            <!-- ko foreach: $data.enemyList -->
-                <!-- ko ifnot: $data.name -->
-                    <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == ($data.pokemon || $data)).id + '.png'}"/>
-                    <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.pokemon || $data, attr: { href: `#!Pokemon/${$data.pokemon || $data}` }"></a>
-                <!-- /ko -->
-                <!-- ko if: $data.name -->
-                    <span class="badge text-bg-secondary" data-bind="text: $data.name"></span>
-                <!-- /ko -->
+            <!-- ko foreach: $data.enemyList.filter(e => !e.name) -->
+            <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == ($data.pokemon || $data)).id + '.png'}"/>
+            <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.pokemon || $data, attr: { href: `#!Pokemon/${$data.pokemon || $data}` }"></a>            
             <!-- /ko -->
+            <div class="accordion mt-1" data-bind="visible: $data.enemyList.some(e => e.name)">
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#sectionCollapse" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            Trainers
+                        </button>
+                    </h4>
+                    <div id="sectionCollapse" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: $data.enemyList.filter((t) => t.team)">
+                            <span class="badge text-bg-secondary">
+                                <span data-bind="text: $data.name + `${$data.options ? ($data.options.requirement ? ' 🔒' : '') : ''}`,
+                                tooltip: {
+                                    title: $data.options?.requirement ? Wiki.gameHelper.requirementHints($data.options.requirement, false).join('<br/>') : '',
+                                    html: false,
+                                    trigger: 'hover'
+                                }"></span>
+                                <!-- ko with: $data.team.map((p) => `${p.name}${p.shadow ? '<img width="15px" class="ms-1" src="./pokeclicker/docs/assets/images/status/shadow.svg" title="Shadow"/>' : ''}`).join(', ') -->
+                                <span data-bind="html: `( ${$data} )`"></span>
+                                <!-- /ko -->
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <br/>
         <!-- ko if: Wiki.dungeons.getDungeonShadowPokemon($data).length -->
