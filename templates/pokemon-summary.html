@@ -8,24 +8,24 @@
         <tr>
             <td class="text-center" colspan="2">
                 <table style="width: 100%;">
-                    <tr>
-                        <td data-bind="attr: { colspan: $data.gender.visualDifference ? 1 : 2 }">
+                    <div class="row">
+                        <div class="col">
                             <img class="mouseover-reveal" data-bind="attr: {src: './pokeclicker/docs/assets/images/shinypokemon/' + $data.id + '.png'}"/>
                             <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>
-                        </td>
+                        </div>
                         <!-- ko if: $data.gender.visualDifference -->
-                        <td>
+                        <div class="col">
                             <img class="mouseover-reveal" data-bind="attr: {src: './pokeclicker/docs/assets/images/shinypokemon/' + $data.id + '-f.png'}"/>
                             <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '-f.png'}"/>
-                        </td>
+                        </div>
                         <!-- /ko -->
-                    </tr>
+                    </div>
                     <tr>
                         <!-- ko if: $data.gender.femaleRatio != 1 && $data.gender.type == GameConstants.Genders.MaleFemale -->
-                        <td data-bind="style:{width: PokedexHelper.getGenderRatioData($data).male + '%'}">♂</td>
+                        <td data-bind="style: { width: PokedexHelper.getGenderRatioData($data).male + '%' }">♂</td>
                         <!-- /ko -->                
                         <!-- ko if: $data.gender.femaleRatio != 0 && $data.gender.type == GameConstants.Genders.MaleFemale -->
-                        <td data-bind="style:{width: PokedexHelper.getGenderRatioData($data).female + '%'}">♀</td>
+                        <td data-bind="style: { width: PokedexHelper.getGenderRatioData($data).female + '%' }">♀</td>
                         <!-- /ko -->
                         <!-- ko if: $data.gender.type === GameConstants.Genders.Genderless -->
                         <td>Genderless</td>
