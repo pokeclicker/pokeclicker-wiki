@@ -7,12 +7,64 @@
     <tbody>
         <tr>
             <td class="text-center" colspan="2">
-                <img class="mouseover-reveal" data-bind="attr: {src: './pokeclicker/docs/assets/images/shinypokemon/' + $data.id + '.png'}"/>
-                <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>
-                <!-- ko if: $data.gender.visualDifference -->
-                <img class="mouseover-reveal" data-bind="attr: {src: './pokeclicker/docs/assets/images/shinypokemon/' + $data.id + '-f.png'}"/>
-                <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '-f.png'}"/>
-                <!-- /ko -->
+                <table style="width: 100%;">
+                    <tr>
+                        <td data-bind="attr: { colspan: $data.gender.visualDifference ? 1 : 2 }">
+                            <img class="mouseover-reveal" data-bind="attr: {src: './pokeclicker/docs/assets/images/shinypokemon/' + $data.id + '.png'}"/>
+                            <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>
+                        </td>
+                        <!-- ko if: $data.gender.visualDifference -->
+                        <td>
+                            <img class="mouseover-reveal" data-bind="attr: {src: './pokeclicker/docs/assets/images/shinypokemon/' + $data.id + '-f.png'}"/>
+                            <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '-f.png'}"/>
+                        </td>
+                        <!-- /ko -->
+                    </tr>
+                    <tr>
+                        <!-- ko if: $data.gender.femaleRatio != 1 && $data.gender.type == GameConstants.Genders.MaleFemale -->
+                        <td data-bind="style:{width: PokedexHelper.getGenderRatioData($data).male + '%'}">♂</td>
+                        <!-- /ko -->                
+                        <!-- ko if: $data.gender.femaleRatio != 0 && $data.gender.type == GameConstants.Genders.MaleFemale -->
+                        <td data-bind="style:{width: PokedexHelper.getGenderRatioData($data).female + '%'}">♀</td>
+                        <!-- /ko -->
+                        <!-- ko if: $data.gender.type === GameConstants.Genders.Genderless -->
+                        <td>Genderless</td>
+                        <!-- /ko -->
+                    </tr>
+                    <!-- ko if: $data.gender.type != GameConstants.Genders.Genderless -->
+                    <tr>
+                        <td colspan="2">
+                            <div class="progress">
+                                <div class="progress-bar male" role="progressbar" aria-valuemax="100"
+                                data-bind="style: { width: PokedexHelper.getGenderRatioData($data).male + '%' },
+                                tooltip: {
+                                    title:PokedexHelper.getGenderRatioData($data).male + '%',
+                                    placement: 'bottom'
+                                }"></div>
+                                <div class="progress-bar female" role="progressbar" aria-valuemax="100"
+                                data-bind="style: { width: PokedexHelper.getGenderRatioData($data).female + '%' },
+                                tooltip: {
+                                    title:PokedexHelper.getGenderRatioData($data).female + '%',
+                                    placement: 'bottom'
+                                }"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- /ko -->
+                    <!-- ko if: $data.gender.type === GameConstants.Genders.Genderless -->
+                    <tr>
+                        <td colspan="2">
+                            <div class="progress">
+                                <div class="progress-bar genderless" role="progressbar" style="width: 100%;" aria-valuemax="100" 
+                                data-bind="tooltip: {
+                                    title: 'N/A',
+                                    placement: 'bottom'
+                                }"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- /ko -->
+                </table>
             </td>
         </tr>
         <tr>
