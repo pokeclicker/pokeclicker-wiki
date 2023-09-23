@@ -414,3 +414,7 @@ td.tight {
   fill: #ff00cc;
   opacity: 0.6;
 }
+
+.custom-tooltip table {
+  background-color: var(--bs-body-bg);
+}
