@@ -293,7 +293,13 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Poipole.png\|25px]] | 1 |  [[File:pokemon/803.png\|30px]] Poipole | 90,000 [[File:questPoint.svg\|25px]]
 
 #### Galar
-Without using the Underground to mine stones and using typed eggs, 604,000 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, and Rare Hold Items 595,300 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 614,000 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, and Rare Hold Items 605,300 [[File:questPoint.svg\|25px]] are needed.
+
+##### Evolution Items
+Item Name | Number Required | Necessary to Obtain | Cost
+:---: | :---: | :---: | :---:
+|[[File:Tart_Apple.png\|25px]] Tart Apple | 1 | [[File:pokemon/840.png\|25px]] Applin | 5,000 [[File:questPoint.svg\|25px]]
+|[[File:Tart_Appel.png\|25px]] Tart Apple | 1 | [[File:pokemon/840.png\|25px]] Applin | 5,000 [[File:questPoint.svg\|25px]]
 
 ##### Eggs
 Item Name | Number Required | Necessary to Obtain | Cost
