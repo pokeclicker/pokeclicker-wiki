@@ -80,7 +80,7 @@ Galar | [[File:Zarude (Dada).png\|25px]] | [[File:pokemon/893.png\|30px]] Zarude
 
 ## Regional Walkthroughs
 #### Kanto
-Without using the Underground to mine stones and using typed eggs, 71,200 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare hold items, Minimum Safari Zone clears, and Berries 23,300 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 71,200 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare hold items, Minimum Safari Zone clears, and Berries 24,000 [[File:questPoint.svg\|25px]] are needed.
 
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -118,7 +118,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 ##### Safari Zone
 Item Name | Number Required | Necessary to Obtain | Cost
 :---: | :---: | :---: | :---:
-[[File:Safari_ticket.png\|25px]] Safari Ticket | 1 |  [[File:pokemon/111.png\|30px]] Rhyhorn [[File:pokemon/113.png\|30px]] Chansey [[File:pokemon/115.png\|30px]] Kangaskhan [[File:pokemon/127.png\|30px]] Pinsir [[File:pokemon/128.png\|30px]] Tauros [[File:pokemon/123.png\|30px]] Scyther* | | [[File:pokemon/147.png\|25px]] Dratini  | 100 [[File:questPoint.svg\|25px]] (Entrance Fee)
+[[File:Safari_ticket.png\|25px]] Safari Ticket | 1 |  [[File:pokemon/111.png\|30px]] Rhyhorn [[File:pokemon/113.png\|30px]] Chansey [[File:pokemon/115.png\|30px]] Kangaskhan [[File:pokemon/127.png\|30px]] Pinsir [[File:pokemon/128.png\|30px]] Tauros [[File:pokemon/123.png\|30px]] Scyther* |  100 [[File:questPoint.svg\|25px]] (Entrance Fee)
 
 **\*Note**: Scyther can also be commonly obtained as [[Wandering Pokémon]] in the [[Farm]] and is thus not technically exclusive to the Safari Zone.
 **\*Note**: Eevee can be obtained by the Bills Grandpa Tressure Hunt Questline.
