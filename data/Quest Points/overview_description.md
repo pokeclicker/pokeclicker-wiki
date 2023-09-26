@@ -28,7 +28,7 @@ These Evolution Items cost 2,500 [[File:questPoint.svg\|25px]]
 These Evolution Items cost 5,000 [[File:questPoint.svg\|25px]]
 
 :---: | :---: |
-|[[File:Tart_apple.png\|25px]] [[Items/Tart Apple]] | |[[File:Sweet_apple.png\|25px]] [[Items/Sweet Apple]]
+|[[File:Tart_apple.png\|25px]] [[Items/Tart Apple]] | [[File:Sweet_apple.png\|25px]] [[Items/Sweet Apple]] |
 
 #### Held Items
 Held items | Cost
