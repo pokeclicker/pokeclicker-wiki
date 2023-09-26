@@ -118,9 +118,9 @@ Item Name | Number Required | Necessary to Obtain | Cost
 ##### Safari Zone
 Item Name | Number Required | Necessary to Obtain | Cost
 :---: | :---: | :---: | :---:
-[[File:Safari_ticket.png\|25px]] Safari Ticket | 1 |  [[File:pokemon/111.png\|30px]] Rhyhorn [[File:pokemon/113.png\|30px]] Chansey [[File:pokemon/115.png\|30px]] Kangaskhan [[File:pokemon/127.png\|30px]] Pinsir [[File:pokemon/128.png\|30px]] Tauros [[File:pokemon/123.png\|30px]] Scyther* |  100 [[File:questPoint.svg\|25px]] (Entrance Fee)
+[[File:Safari_ticket.png\|25px]] Safari Ticket | 1 |  [[File:pokemon/111.png\|30px]] Rhyhorn* [[File:pokemon/113.png\|30px]] Chansey [[File:pokemon/115.png\|30px]] Kangaskhan [[File:pokemon/127.png\|30px]] Pinsir* [[File:pokemon/128.png\|30px]] Tauros [[File:pokemon/123.png\|30px]] Scyther* |  100 [[File:questPoint.svg\|25px]] (Entrance Fee)
 
-**\*Note**: Scyther can also be commonly obtained as [[Wandering Pokémon]] in the [[Farm]] and is thus not technically exclusive to the Safari Zone.
+**\*Note**: Rhyhorn, Pinsir and Scyther can also be obtained as [[Wandering Pokémon]] in the [[Farm]] and are because of that not technically exclusive to the Safari Zone.
 **\*Note**: Eevee can be obtained by the Bills Grandpa Tressure Hunt Questline.
 
 #### Johto
