@@ -80,7 +80,7 @@ Galar | [[File:Zarude (Dada).png\|25px]] | [[File:pokemon/893.png\|30px]] Zarude
 
 ## Regional Walkthroughs
 #### Kanto
-Without using the Underground to mine stones and using typed eggs, 71,200 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare hold items, Minimum Safari Zone clears and Berries 24,000 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 71,200 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare hold items, Minimum Safari Zone clears, and Berries 24,000 [[File:questPoint.svg\|25px]] are needed.
 
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -176,7 +176,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Beldum.png\|25px]] | 1 | [[File:pokemon/374.png\|30px]] Beldum | 22,500 [[File:questPoint.svg\|25px]]
 
 #### Sinnoh
-Without using the Underground to mine stones and using typed eggs, 78,250 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items and Berries 19,950 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 78,250 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 19,950 [[File:questPoint.svg\|25px]] are needed.
 
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -213,7 +213,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Spiritomb.png\|25px]] | 1 | [[File:pokemon/442.png\|30px]] Spiritomb | 6,750 [[File:questPoint.svg\|25px]]
 
 #### Unova
-Without using the Underground to mine stones and using typed eggs, 98,125 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items and Berries 19,900 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 98,125 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 19,900 [[File:questPoint.svg\|25px]] are needed.
 
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -246,7 +246,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Meloetta (Pirouette).png\|25px]] | 1 **(Optional)** | [[File:pokemon/648.01.png\|30px]] Meloetta (Pirouette) | 200,000 [[File:questPoint.svg\|25px]]
 
 #### Kalos
-Without using the Underground to mine stones and using typed eggs, 20,500 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items and Berries 10,000 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 20,500 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 10,000 [[File:questPoint.svg\|25px]] are needed.
 
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -272,7 +272,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Furfrou (Dandy).png\|25px]] | 1 **(Optional)** | [[File:pokemon/676.06.png\|30px]] Furfrou (Dandy) | 250,000  [[File:questPoint.svg\|25px]]
 
 #### Alola
-Without using the Underground to mine stones and using typed eggs, 230,500 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items and Berries 214,300 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 230,500 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 214,300 [[File:questPoint.svg\|25px]] are needed.
 
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -299,7 +299,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Poipole.png\|25px]] | 1 |  [[File:pokemon/803.png\|30px]] Poipole | 90,000 [[File:questPoint.svg\|25px]]
 
 #### Galar
-Without using the Underground to mine stones and using typed eggs, 114,000 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, and Rare Hold Items and Berries 110,000 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 114,000 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 110,000 [[File:questPoint.svg\|25px]] are needed.
 
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
