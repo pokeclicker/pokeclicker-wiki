@@ -438,3 +438,7 @@ td.tight {
 .genderless:hover {
   background-color: gray !important;
 }
+
+.custom-tooltip table {
+  background-color: var(--bs-body-bg);
+}
