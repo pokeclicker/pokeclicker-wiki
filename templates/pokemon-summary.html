@@ -7,8 +7,58 @@
     <tbody>
         <tr>
             <td class="text-center" colspan="2">
-                <img class="mouseover-reveal" data-bind="attr: {src: './pokeclicker/docs/assets/images/shinypokemon/' + $data.id + '.png'}"/>
-                <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <img class="mouseover-reveal" data-bind="attr: {src: './pokeclicker/docs/assets/images/shinypokemon/' + $data.id + '.png'}"/>
+                            <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '.png'}"/>
+                        </div>
+                        <!-- ko if: $data.gender.visualDifference -->
+                        <div class="col">
+                            <img class="mouseover-reveal" data-bind="attr: {src: './pokeclicker/docs/assets/images/shinypokemon/' + $data.id + '-f.png'}"/>
+                            <img data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + $data.id + '-f.png'}"/>
+                        </div>
+                        <!-- /ko -->
+                    </div>
+                    <div class="row g-0">
+                        <!-- ko if: $data.gender.femaleRatio != 1 && $data.gender.type == GameConstants.Genders.MaleFemale -->
+                        <div data-bind="style: { width: PokedexHelper.getGenderRatioData($data).male + '%' }">♂</div>
+                        <!-- /ko -->
+                        <!-- ko if: $data.gender.femaleRatio != 0 && $data.gender.type == GameConstants.Genders.MaleFemale -->
+                        <div data-bind="style: { width: PokedexHelper.getGenderRatioData($data).female + '%' }">♀</div>
+                        <!-- /ko -->
+                        <!-- ko if: $data.gender.type === GameConstants.Genders.Genderless -->
+                        <div class="col">Genderless</div>
+                        <!-- /ko -->
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="progress">
+                                <!-- ko if: $data.gender.type != GameConstants.Genders.Genderless -->
+                                <div class="progress-bar male" role="progressbar" aria-valuemax="100"
+                                    data-bind="style: { width: PokedexHelper.getGenderRatioData($data).male + '%' },
+                                    tooltip: {
+                                        title:PokedexHelper.getGenderRatioData($data).male + '%',
+                                        placement: 'bottom'
+                                    }"></div>
+                                <div class="progress-bar female" role="progressbar" aria-valuemax="100"
+                                    data-bind="style: { width: PokedexHelper.getGenderRatioData($data).female + '%' },
+                                    tooltip: {
+                                        title:PokedexHelper.getGenderRatioData($data).female + '%',
+                                        placement: 'bottom'
+                                    }"></div>
+                                <!-- /ko -->
+                                <!-- ko if: $data.gender.type == GameConstants.Genders.Genderless -->
+                                <div class="progress-bar genderless" role="progressbar" style="width: 100%;" aria-valuemax="100" 
+                                    data-bind="tooltip: {
+                                        title: 'N/A',
+                                        placement: 'bottom'
+                                    }"></div>
+                                <!-- /ko -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </td>
         </tr>
         <tr>
