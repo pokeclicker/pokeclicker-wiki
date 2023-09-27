@@ -52,4 +52,4 @@ Crabrawler and Drampa can also be obtained as Wanderers by using [[Berries/Chopl
 | [[File:pokemon/807.png\|25px]] [[Pokémon/Zeraora]]| Any (Except Magikarp Jump) |Unlocks after becoming Alola Champion |
 | [[File:pokemon/129.16.png\|25px]] [[Pokémon/Magikarp Purple Diamonds]] | Magikarp Jump |Unlocks after beating [[Gyms/Luxury League]]'s Gym |
 | [[File:pokemon/129.2.png\|25px]] [[Pokémon/Magikarp Apricot Stripes]] | Magikarp Jump |Unlocks after beating [[Gyms/Heal League]]'s Gym |
-| [[File:pokemon/129.30.png\|25px]] [[Pokémon/Magikarp Violet Raindrops]]| Magikarp Jump |Unlocks after beating [[Gyms/Master League]]'s Gym |
+| [[File:pokemon/129.3.png\|25px]] [[Pokémon/Magikarp Violet Raindrops]]| Magikarp Jump |Unlocks after beating [[Gyms/Master League]]'s Gym |

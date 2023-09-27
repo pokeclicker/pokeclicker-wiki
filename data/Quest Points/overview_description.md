@@ -14,7 +14,7 @@ Key | Item Cost
 |[[File:Treasure_Scanner.png\|25px]] [[Items/Treasure_Scanner]] | 10,000 [[File:questPoint.svg\|25px]]
 
 #### Evolution Items
-Note: All Evolution Items cost 2,500 [[File:questPoint.svg\|25px]]
+These Evolution Items cost 2,500 [[File:questPoint.svg\|25px]]
 
 :---: | :---: | :---: | :---:
 |[[File:Fire_stone.png\|25px]] [[Items/Fire_Stone]] | [[File:Water_stone.png\|25px]] [[Items/Water_Stone]] | [[File:Thunder_stone.png\|25px]] [[Items/Thunder_Stone]] | [[File:Leaf_stone.png\|25px]] [[Items/Leaf_Stone]]
@@ -25,11 +25,16 @@ Note: All Evolution Items cost 2,500 [[File:questPoint.svg\|25px]]
 |[[File:Protector.png\|25px]] [[Items/Protector]] | [[File:Reaper_cloth.png\|25px]] [[Items/Reaper_Cloth]] | [[File:Razor_claw.png\|25px]] [[Items/Razor_Claw]] | [[File:Razor_fang.png\|25px]] [[Items/Razor_Fang]]
 |[[File:Prism_scale.png\|25px]] [[Items/Prism_Scale]] | [[File:Sachet.png\|25px]] [[Items/Sachet]] | [[File:Whipped_dream.png\|25px]] [[Items/Whipped_Dream]] | [[File:Ice_stone.png\|25px]] [[Items/Ice_Stone]]
 
+These Evolution Items cost 5,000 [[File:questPoint.svg\|25px]]
+
+:---: | :---: |
+|[[File:Tart_apple.png\|25px]] [[Items/Tart Apple]] | [[File:Sweet_apple.png\|25px]] [[Items/Sweet Apple]] |
+
 #### Held Items
 Held items | Cost
 :---: | :---:
 |[[File:Macho_Brace.png\|25px]] [[Items/Macho_Brace]] | 1,500 [[File:questPoint.svg\|25px]]
-|[[File:Power Bracer.png\|25px]] [[Items/Power Bracer]] | 2,000 [[File:questPoint.svg\|25px]]
+|[[File:Power_Bracer.png\|25px]] [[Items/Power Bracer]] | 2,000 [[File:questPoint.svg\|25px]]
 
 #### Eggs
 Key Item | Cost
@@ -75,7 +80,7 @@ Galar | [[File:Zarude (Dada).png\|25px]] | [[File:pokemon/893.png\|30px]] Zarude
 
 ## Regional Walkthroughs
 #### Kanto
-Without using the Underground to mine stones and using typed eggs, 72,200 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare hold items, Minimum Safari Zone clears, and Berries 28,000 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 71,200 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare hold items, Minimum Safari Zone clears, and Berries 24,000 [[File:questPoint.svg\|25px]] are needed.
 
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -98,7 +103,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 ##### Shopmon
 Item Name | Number Required | Necessary to Obtain | Cost
 :---: | :---: | :---: | :---:
-|[[File:Eevee.png\|25px]] | 1 | [[File:pokemon/133.png\|30px]] Eevee | 4,000 [[File:questPoint.svg\|25px]]
+|[[File:Eevee.png\|25px]] | 1 | [[File:pokemon/133.png\|30px]] Eevee* | 4,000 [[File:questPoint.svg\|25px]]
 |[[File:Jynx.png\|25px]] | 1 | [[File:pokemon/124.png\|30px]] Jynx | 2,000 [[File:questPoint.svg\|25px]]
 |[[File:Porygon.png\|25px]] | 1 | [[File:pokemon/137.png\|30px]] Porygon | 2,000 [[File:questPoint.svg\|25px]]
 |[[File:Mr. Mime.png\|25px]] | 1 | [[File:pokemon/122.png\|30px]] Mr. Mime | 1,000 [[File:questPoint.svg\|25px]]
@@ -113,9 +118,10 @@ Item Name | Number Required | Necessary to Obtain | Cost
 ##### Safari Zone
 Item Name | Number Required | Necessary to Obtain | Cost
 :---: | :---: | :---: | :---:
-[[File:Safari_ticket.png\|25px]] Safari Ticket | 1 |  [[File:pokemon/111.png\|30px]] Rhyhorn [[File:pokemon/113.png\|30px]] Chansey [[File:pokemon/115.png\|30px]] Kangaskhan [[File:pokemon/127.png\|30px]] Pinsir [[File:pokemon/128.png\|30px]] Tauros [[File:pokemon/123.png\|30px]] Scyther* | 100 [[File:questPoint.svg\|25px]] (Entrance Fee)
+[[File:Safari_ticket.png\|25px]] Safari Ticket | 1 |  [[File:pokemon/111.png\|30px]] Rhyhorn* [[File:pokemon/113.png\|30px]] Chansey [[File:pokemon/115.png\|30px]] Kangaskhan [[File:pokemon/127.png\|30px]] Pinsir* [[File:pokemon/128.png\|30px]] Tauros [[File:pokemon/123.png\|30px]] Scyther* |  100 [[File:questPoint.svg\|25px]] (Entrance Fee)
 
-**\*Note**: Scyther can also be commonly obtained as [[Wandering Pokémon]] in the [[Farm]] and is thus not technically exclusive to the Safari Zone.
+**\*Note**: Rhyhorn, Pinsir and Scyther can also be obtained as [[Wandering Pokémon]] in the [[Farm]] and thus not technically exclusive to the Safari Zone.
+**\*Note**: Eevee can be obtained by completing [[Quest Lines/Bill's Grandpa Treasure Hunt]] Quest Line.
 
 #### Johto
 Without using the Underground to mine stones and using typed eggs, 53,500 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 32,100 [[File:questPoint.svg\|25px]] are needed.
@@ -143,7 +149,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Togepi.png\|25px]] | 1 | [[File:pokemon/175.png\|30px]] Togepi | 15,000 [[File:questPoint.svg\|25px]]
 
 #### Hoenn
-Without using the Underground to mine stones and using typed eggs, 44,500 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 25,300 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 44,500 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 24,600 [[File:questPoint.svg\|25px]] are needed.
 
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -170,7 +176,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Beldum.png\|25px]] | 1 | [[File:pokemon/374.png\|30px]] Beldum | 22,500 [[File:questPoint.svg\|25px]]
 
 #### Sinnoh
-Without using the Underground to mine stones and using typed eggs, 78,250 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, and Rare Hold Items 69,050 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 78,250 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 19,950 [[File:questPoint.svg\|25px]] are needed.
 
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -207,7 +213,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Spiritomb.png\|25px]] | 1 | [[File:pokemon/442.png\|30px]] Spiritomb | 6,750 [[File:questPoint.svg\|25px]]
 
 #### Unova
-Without using the Underground to mine stones and using typed eggs, 98,125 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, and Rare Hold Items 73,025 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 98,125 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 19,900 [[File:questPoint.svg\|25px]] are needed.
 
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -240,7 +246,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Meloetta (Pirouette).png\|25px]] | 1 **(Optional)** | [[File:pokemon/648.01.png\|30px]] Meloetta (Pirouette) | 200,000 [[File:questPoint.svg\|25px]]
 
 #### Kalos
-Without using the Underground to mine stones and using typed eggs, 20,500 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, and Rare Hold Items 15,000 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 20,500 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 10,000 [[File:questPoint.svg\|25px]] are needed.
 
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -256,9 +262,9 @@ Item Name | Number Required | Necessary to Obtain | Cost
 ##### Eggs
 Item Name | Number Required | Necessary to Obtain | Cost
 :---: | :---: | :---: | :---:
-|[[File:Fire_egg.png\|25px]] Fire Egg | 1 | [[File:pokemon/653.png\|25px]] Fennekin | 2,000 [[File:questPoint.svg\|25px]]
-|[[File:Grass_egg.png\|25px]] Grass Egg | 1 | [[File:pokemon/650.png\|25px]] Chespin | 2,000 [[File:questPoint.svg\|25px]]
-|[[File:Water_egg.png\|25px]] Water Egg | 1 | [[File:pokemon/656.png\|25px]] Froakie | 2,000 [[File:questPoint.svg\|25px]]
+|[[File:Fire_egg.png\|25px]] Fire Egg | 1 | [[File:pokemon/653.png\|25px]] Fennekin | 1,000 [[File:questPoint.svg\|25px]]
+|[[File:Grass_egg.png\|25px]] Grass Egg | 1 | [[File:pokemon/650.png\|25px]] Chespin | 1,000 [[File:questPoint.svg\|25px]]
+|[[File:Water_egg.png\|25px]] Water Egg | 1 | [[File:pokemon/656.png\|25px]] Froakie | 1,000 [[File:questPoint.svg\|25px]]
 
 ##### Shopmon
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -266,7 +272,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Furfrou (Dandy).png\|25px]] | 1 **(Optional)** | [[File:pokemon/676.06.png\|30px]] Furfrou (Dandy) | 250,000  [[File:questPoint.svg\|25px]]
 
 #### Alola
-Without using the Underground to mine stones and using typed eggs, 229,500 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, and Rare Hold Items 221,800 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 230,500 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 214,300 [[File:questPoint.svg\|25px]] are needed.
 
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -293,7 +299,13 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Poipole.png\|25px]] | 1 |  [[File:pokemon/803.png\|30px]] Poipole | 90,000 [[File:questPoint.svg\|25px]]
 
 #### Galar
-Without using the Underground to mine stones and using typed eggs, 604,000 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, and Rare Hold Items 595,300 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 114,000 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 110,000 [[File:questPoint.svg\|25px]] are needed.
+
+##### Evolution Items
+Item Name | Number Required | Necessary to Obtain | Cost
+:---: | :---: | :---: | :---:
+|[[File:Tart_apple.png\|25px]] Tart Apple | 1 | [[File:pokemon/841.png\|25px]] Flapple | 5,000 [[File:questPoint.svg\|25px]]
+|[[File:Sweet_apple.png\|25px]] Sweet Apple | 1 | [[File:pokemon/842.png\|25px]] Appletun | 5,000 [[File:questPoint.svg\|25px]]
 
 ##### Eggs
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -310,4 +322,4 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Dracovish.png\|25px]] | 1 |  [[File:pokemon/882.png\|30px]] Dracovish | 25,000 [[File:questPoint.svg\|25px]]
 |[[File:Arctozolt.png\|25px]] | 1 |  [[File:pokemon/881.png\|30px]] Arctozolt | 25,000 [[File:questPoint.svg\|25px]]
 |[[File:Arctovish.png\|25px]] | 1 |  [[File:pokemon/883.png\|30px]] Arctovish | 25,000 [[File:questPoint.svg\|25px]]
-|[[File:Zarude (Dada).png\|25px]] | 1 |  [[File:pokemon/893.01.png\|30px]] Zarude (Dada) | 500,000 [[File:questPoint.svg\|25px]]
+|[[File:Zarude (Dada).png\|25px]] | 1 **(Optional)** |  [[File:pokemon/893.01.png\|30px]] Zarude (Dada) | 500,000 [[File:questPoint.svg\|25px]]
