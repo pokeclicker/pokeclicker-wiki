@@ -1,29 +1,48 @@
-## Purchase
+## Other Uses
+Gems can also be used for the following:
 
-# Flutes
+### Flutes
+Flutes are a series of special items each with their own beneficial effect. Flutes are gained by purchasing them from the Hoenn and Unova Gem Master shops. Flutes cannot be used until after defeating Hoenn's [[Gyms/Lavaridge Town]] Gym.
 
-| Flutes | Gems | Location |
-| -------- | -------- | -------- |
-|   [[File:Time_Flute.png\|25px]] Time Flute | 5000 [[File:Ground Gem.png\|25px]] 5000 [[File:Poison Gem.png\|25px]] 5000 [[File:Steel Gem.png\|25px]]     | [[Fallabor_Town]]|
-|   [[File:Black_Flute.png\|25px]] Black Flute | 5000 [[File:Dark Gem.png\|25px]] 5000 [[File:Psychic Gem.png\|25px]] 5000 [[File:Fighting Gem.png\|25px]]     | [[Fallabor_Town]]|
-|   [[File:Yellow_Flute.png\|25px]] Yellow Flute | 5000 [[File:Grass Gem.png\|25px]] 5000 [[File:Flying Gem.png\|25px]] 5000 [[File:Electro Gem.png\|25px]]     | [[Fallabor_Town]]|
-|   [[File:Red_Flute.png\|25px]] Red Flute | 10,000 [[File:Fire Gem.png\|25px]] 10,000 [[File:Rock Gem.png\|25px]] 10,000 [[File:Dragon Gem.png\|25px]]     | [[Undella_Town]]|
-|   [[File:Blue_Flute.png\|25px]] Blue Flute | 10,000 [[File:Water Gem.png\|25px]] 10,000 [[File:Bug Gem.png\|25px]] 10,000 [[File:Ghost Gem.png\|25px]]     | [[Undella_Town]]|
-|   [[File:White_Flute.png\|25px]] White Flute | 10,000 [[File:Normal Gem.png\|25px]] 10,000 [[File:Fairy Gem.png\|25px]] 10,000 [[File:Ice Gem.png\|25px]]     | [[Undella_Town]]|
+| Flute | Cost | Location | Region |
+| --- | --- | --- | --- |
+| [[File:Time_Flute.png\|25px]] [[Items/Time Flute]] | [[File:Ground Gem.png\|25px]] 5,000 x Ground [[File:Poison Gem.png\|25px]] 5,000 x Poison [[File:Steel Gem.png\|25px]] 5,000 x Steel | [[Towns/Fallarbor Town]] | Hoenn |
+| [[File:Black_Flute.png\|25px]] [[Items/Black Flute]] | [[File:Dark Gem.png\|25px]] 5,000 x Dark [[File:Psychic Gem.png\|25px]] 5,000 x Psychic [[File:Fighting Gem.png\|25px]] 5,000 x Fighting | [[Towns/Fallarbor Town]] | Hoenn |
+| [[File:Yellow_Flute.png\|25px]] [[Items/Yellow Flute]] | [[File:Grass Gem.png\|25px]] 5,000 x Grass [[File:Flying Gem.png\|25px]] 5,000 x Flying [[File:Electric Gem.png\|25px]] 5,000 x Electric | [[Towns/Fallarbor Town]] | Hoenn |
+| [[File:Red_Flute.png\|25px]] [[Items/Red Flute]] | [[File:Fire Gem.png\|25px]] 10,000 x Fire [[File:Rock Gem.png\|25px]] 10,000 Rock [[File:Dragon Gem.png\|25px]] 10,000 x Dragon | [[Towns/Undella Town]] | Unova |
+| [[File:Blue_Flute.png\|25px]] [[Items/Blue Flute]] | [[File:Water Gem.png\|25px]] 10,000 x Water [[File:Bug Gem.png\|25px]] 10,000 Bug [[File:Ghost Gem.png\|25px]] 10,000 x Ghost | [[Towns/Undella Town]] | Unova |
+| [[File:White_Flute.png\|25px]] [[Items/White Flute]] | [[File:Normal Gem.png\|25px]] 10,000 x Normal [[File:Fairy Gem.png\|25px]] 10,000 Fairy [[File:Ice Gem.png\|25px]] 10,000 x Ice | [[Towns/Undella Town]] | Unova |
 
-Then we have [[Furfrou_La_Reine]] in [[Parfume_Palace]] for 1,000,000 Normal and Water, 500,000 Grass, Fighting, Poison, Ground, Flying, Bug and Rock, 250,000 Fire, Electric, Ice, Ghost, Steel and Psychic and 100,000 Dragon, Dark and Fairy Gems.
+Activating a Flute happens when the Player clicks on the flute to activate it. Flutes can be enabled / disabled whenever the player wants. Each Flute buffs different properties in game, and requires 3 types of Gems to power their effects.
 
-We need 1000 Gems of each Type for every Form of [[Silvally]].
+Activating multiple Flutes simultaneously increases the cost in gems of keeping all Flutes active. Each active Flute costs one Gem per second, per active Flute, from the Flutes three gem categories. Keeping all 6 Flutes active costs 6 gems per second from every type of Gem.
 
-We can buy [[Magicarp_Brown_Stripes]] in [[Hoppy_Town]] for 1,500,000 Water Gems.
+Each active flute also provides a static +0.5% attack boost to the required gem types. If all 6 Flutes are active, then all types are given a +0.5% attack boost.
 
-The Megastones from [[Mega_Blastoise]], [[Mega_Charizard_X]], [[Mega_Charizard_Y]] and [[Mega_Venausur]] want 250,000 Water, 125,000 Fire and Dragon, 125,000 Fire and Dragon and 125,000 Grass and Poison Gems in [[Lumiose_City]].
-The Megastones from [[Mega_Blaziken]], [[Mega_Sceptile]] and [[Mega Swampert]] want 125,000 Fire and Fighting, 125,000 Grass and Dragon and 125,000 Water and Ground Gems.
+#### Active Cost per Flute
+|Flutes Active | Gem Cost / s (per Gem Type)|
+|---|---|
+|1 | 1 |
+|2 | 2 |
+|3 | 3 |
+|4 | 4 |
+|5 | 5 |
+|6 | 6 |
 
-## Helpful Tips*
+### Shopmons
+- [[File:pokemon/676.07.png\|25px]] [[Pokémon/Furfrou (La Reine)]] can be purchased in [[Towns/Parfum Palace]].
+- Silvally Forms are available at [[Towns/Aether Foundation]] after progressing in [[Quest Lines/Typing some Memories]] Quest Line.
+- [[File:pokemon/129.23.png\|25px]] [[Pokémon/Magikarp Brown Stripes]] can be purchased in [[Towns/Hoppy Town]] after progressing enough in the Magikarp Jump subregion.
 
-The Gems you get from defeating a Pokémon depend on the type(s) that Pokémon has. Wild Pokémon on routes give 1 Gem per type, dungeon encounters (both wild Pokémon and trainers) give 3, gym Pokémon give 5, and dungeon bosses (only Pokémon, not trainer bosses) give 20. Battle Frontier Pokémon give gems which number increases as the player progresses further (every 80 stages the number goes up by 1).
+### Mega Stones
+|Mega Stone | Cost | Location | Region|
+|---|---|---|---|
+|[[File:Blastoisinite.png\|25px]] [[Items/Blastoisinite]] | [[File:Water Gem.png\|25px]] 250,000 x Water | [[Towns/Lumiose City]] | Kalos |
+|[[File:Charizardite_X.png\|25px]] [[Items/Charizardite X]] | [[File:Fire Gem.png\|25px]] 125,000 x Fire [[File:Dragon Gem.png\|25px]] 125,000 x Dragon | [[Towns/Lumiose City]] | Kalos |
+|[[File:Charizardite_Y.png\|25px]] [[Items/Charizardite Y]] | [[File:Fire Gem.png\|25px]] 125,000 x Fire [[File:Flying Gem.png\|25px]] 125,000 x Flying | [[Towns/Lumiose City]] | Kalos |
+|[[File:Venusaurite.png\|25px]] [[Items/Venusaurite]] | [[File:Grass Gem.png\|25px]] 125,000 x Grass [[File:Poison Gem.png\|25px]] 125,000 x Poison | [[Towns/Lumiose City]] | Kalos |
+|[[File:Blazikenite.png\|25px]] [[Items/Blazikenite]] | [[File:Fire Gem.png\|25px]] 125,000 x Fire [[File:Fighting Gem.png\|25px]] 125,000 x Fighting | [[Towns/Fallarbor Town]] | Hoenn |
+|[[File:Sceptilite.png\|25px]] [[Items/Sceptilite]] | [[File:Grass Gem.png\|25px]] 125,000 x Grass [[File:Dragon Gem.png\|25px]] 125,000 x Dragon | [[Towns/Fallarbor Town]] | Hoenn |
+|[[File:Swampertite.png\|25px]] [[Items/Swampertite]] | [[File:Water Gem.png\|25px]] 125,000 x Water [[File:Ground Gem.png\|25px]] 125,000 x Ground | [[Towns/Fallarbor Town]] | Hoenn |
 
-Note: Gyms yield 5 Gems per Pokémon, but not every pokemon in a gym will be the appropriate type. The most efficient gyms yield the most Gems per gym clear.
-
-*(e.g. Violet City Gym is less efficient than the Petalburg City Gym because it takes twice as many clears of the Violet City Gym to obtain the same number of Gems).*
+**Note:** The player will get a free Mega Stone according to the respective Kanto / Hoenn starter they selected. For Charizard it will always be Charizardite Y though.
