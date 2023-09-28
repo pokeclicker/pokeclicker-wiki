@@ -2,17 +2,14 @@
 
 # Flutes
 
-| Flutes | Gems |
-| -------- | -------- |
-| [[File:Time_Flute.png\|25px]]   | 5000 [[File:Ground_Gem.png\|25px]] 5000 [[File:Poison_Gem.png\|25px]] 5000 [[File:Steel_Gem.png\|25px]]
-| [[File:Black_Flute.png\|25px]]   | 5000 [[File:Dark_Gem.png\|25px]] 5000 [[File:Psychic_Gem.png\|25px]] 5000 [[File:Fighting_Gem.png\|25px]]
-
-
-
-We can buy the [[Time_Flute]] for 5,000 Ground, Poison and Steel Gems each, the [[Black_Flute]] for 5,000 Dark, Psychic and Fighting Gems each
-and the [[Yellow_Flute]] for 5000 Grass, Flying and Electro Gems each in [[Fallabor_Town]].
-The [[Red_Flute]] for 10,000 Fire, Rock and Dragon Gems each, the [[Blue_Flute]] for 10,000 Water, Bug and Ghost Gems each
-and the [[White_Flute]] for 10,000 Normal, Fairy and Ice Gems each in [[Undella_Town]].
+| Flutes | Gems | Location |
+| -------- | -------- | -------- |
+|   [[File:Time_Flute.png\|25px]] Time Flute | 5000 [[File:Ground Gem.png\|25px]] 5000 [[File:Poison Gem.png\|25px]] 5000 [[File:Steel Gem.png\|25px]]     | [[Fallabor_Town]]|
+|   [[File:Black_Flute.png\|25px]] Black Flute | 5000 [[File:Dark Gem.png\|25px]] 5000 [[File:Psychic Gem.png\|25px]] 5000 [[File:Fighting Gem.png\|25px]]     | [[Fallabor_Town]]|
+|   [[File:Yellow_Flute.png\|25px]] Yellow Flute | 5000 [[File:Grass Gem.png\|25px]] 5000 [[File:Flying Gem.png\|25px]] 5000 [[File:Electro Gem.png\|25px]]     | [[Fallabor_Town]]|
+|   [[File:Red_Flute.png\|25px]] Red Flute | 10,000 [[File:Fire Gem.png\|25px]] 10,000 [[File:Rock Gem.png\|25px]] 10,000 [[File:Dragon Gem.png\|25px]]     | [[Undella_Town]]|
+|   [[File:Blue_Flute.png\|25px]] Blue Flute | 10,000 [[File:Water Gem.png\|25px]] 10,000 [[File:Bug Gem.png\|25px]] 10,000 [[File:Ghost Gem.png\|25px]]     | [[Undella_Town]]|
+|   [[File:White_Flute.png\|25px]] White Flute | 10,000 [[File:Normal Gem.png\|25px]] 10,000 [[File:Fairy Gem.png\|25px]] 10,000 [[File:Ice Gem.png\|25px]]     | [[Undella_Town]]|
 
 Then we have [[Furfrou_La_Reine]] in [[Parfume_Palace]] for 1,000,000 Normal and Water, 500,000 Grass, Fighting, Poison, Ground, Flying, Bug and Rock, 250,000 Fire, Electric, Ice, Ghost, Steel and Psychic and 100,000 Dragon, Dark and Fairy Gems.
 
