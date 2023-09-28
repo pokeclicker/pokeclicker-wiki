@@ -1,5 +1,14 @@
 ## Purchase
 
+# Flutes
+
+| Flutes | Gems |
+| -------- | -------- |
+| [[File:Time_Flute.png\|25px]]   | 5000 [[File:Ground_Gem.png\|25px]] 5000 [[File:Poison_Gem.png\|25px]] 5000 [[File:Steel_Gem.png\|25px]]
+| [[File:Black_Flute.png\|25px]]   | 5000 [[File:Dark_Gem.png\|25px]] 5000 [[File:Psychic_Gem.png\|25px]] 5000 [[File:Fighting_Gem.png\|25px]]
+
+
+
 We can buy the [[Time_Flute]] for 5,000 Ground, Poison and Steel Gems each, the [[Black_Flute]] for 5,000 Dark, Psychic and Fighting Gems each
 and the [[Yellow_Flute]] for 5000 Grass, Flying and Electro Gems each in [[Fallabor_Town]].
 The [[Red_Flute]] for 10,000 Fire, Rock and Dragon Gems each, the [[Blue_Flute]] for 10,000 Water, Bug and Ghost Gems each
