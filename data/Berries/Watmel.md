@@ -2,6 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
+**WARNING:** Upon successfully mutating a Watmel, make sure to have [[Oak Items/Sprinklotad]] unequipped since it may cause it to mutate into a [[Berries/Shuca]].
 You can fill your farm in the following way to obtain Watmel Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
