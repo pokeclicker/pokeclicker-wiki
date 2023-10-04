@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Cornn Berries. Purple squares indicate where mutations can occur.
+**WARNING:** Upon successfully mutating a Cornn, make sure to have [[Oak Items/Cell Battery]] unequipped since it may cause it to mutate into a [[Berries/Charti]]. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations
