@@ -497,7 +497,7 @@
                             <th>Efficiency</th>
                         </tr>
                     </thead>
-                    <tbody data-bind="foreach: Object.entries(GameConstants.Region).filter(([region, regionName]) => region <= GameConstants.MAX_AVAILABLE_REGION && region >= 0).map(([region, regionName]) => regionName)">
+                    <tbody data-bind="foreach: Object.entries(GameConstants.Region).filter(([region, regionName]) => region <= GameConstants.MAX_AVAILABLE_REGION).sort((a, b) => a[0] - b[0]).map(([region, regionName]) => regionName)">
                         <tr>
                             <td data-bind="text: GameConstants.camelCaseToString($data)"></td>
                             <td data-bind="text: (GameConstants.Region[$data] + 1) * 5"></td>
@@ -505,7 +505,7 @@
                                 <td data-bind="text: $data.protein || '-'"></td>
                                 <td data-bind="text: $data.calcium || '-'"></td>
                                 <td data-bind="text: $data.carbos || '-'"></td>
-                                <td data-bind="text: $data.eff.toLocaleString('en-US', { maximumSignificantDigits: 3 })"></td>
+                                <td data-bind="text: $data.eff.toLocaleString('en-US', { maximumSignificantDigits: 2 })"></td>
                             <!-- /ko -->
                         </tr>
                     </tbody>
