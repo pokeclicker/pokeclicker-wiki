@@ -384,6 +384,64 @@ td.tight {
   opacity: 1;
 }
 
+.custom-tooltip {
+  display: inline-block;
+  position: relative;
+}
+
+.custom-tooltip .custom-tooltip-content {
+  visibility: hidden;
+  position: absolute;
+  bottom: 30%;
+  left: 0%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.custom-tooltip:hover .custom-tooltip-content {
+  visibility: visible;
+}
+
+#map-container {
+  position: relative;
+}
+
+#map {
+  position: absolute;
+}
+
+#map rect {
+  fill: #ff00cc;
+  opacity: 0.6;
+}
+
+.male{
+  background-color: rgb(100,100,255) !important;
+}
+
+.male:hover {
+    background-color: #2a63ec !important;
+}
+
+.female {
+  background-color: rgba(255,100,100) !important;
+}
+
+.female:hover {
+  background-color: #d83635 !important;
+}
+
+.genderless {
+  background-color: lightgray !important;
+}
+
+.genderless:hover {
+  background-color: gray !important;
+}
+
+.custom-tooltip table {
+  background-color: var(--bs-body-bg);
+}
 table a {
   text-decoration: none;
 }

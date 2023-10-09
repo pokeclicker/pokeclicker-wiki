@@ -90,6 +90,7 @@ Galar | Unova
 Dungeon chest loot is classified as belonging to a specific Tier of loot in a Dungeon. The Tier of a loot-able item indicates the Rarity of obtaining that item from a Chest.
 Loot is classified into 5 tier types: Common, Rare, Epic, Legendary and Mythic from least rare to most rare.
 Additionally, loot items can have weights inside of their tier. Items with a higher weight in a tier have greater odds of dropping than lower weight items in a tier. Loot items have a base weight of 1.
+The chances to encounter loot from **Rare tier** and rarer **increases with every clear**, while the chance to encounter **Common tier** items **decreases**. The following table only represents the base loot chance, as in, the chances of getting an item with a dungeon at 0 clears. Note that while individual dungeon pages show certain thresholds (0 / 100 / 250 / 500), it doesn't mean that the chance will **only** increase at these specific number of clears!
 
 *Note: Dungeons that lack any items in a particular loot tier have the remaining odds from the non-present tier(s) distributed proportionally among the present tiers*
 

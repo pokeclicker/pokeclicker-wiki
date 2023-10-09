@@ -5,7 +5,7 @@ The following is a list of Pokémon obtainable in Kanto and Sevii Islands (both 
 ### Fossils
 |Fossil|Pokémon|
 |---|---|
-|[[File:Dome Fossil.png\|25px]] |[[Items/Dome Fossil]] | [[File:pokemon/140.png\|25px]] [[Pokémon/Kabuto]] & [[File:pokemon/141.png\|25px]] [[Pokémon/Kabutops]]|
+|[[File:Dome Fossil.png\|25px]] [[Items/Dome Fossil]] | [[File:pokemon/140.png\|25px]] [[Pokémon/Kabuto]] & [[File:pokemon/141.png\|25px]] [[Pokémon/Kabutops]]|
 |[[File:Helix Fossil.png\|25px]] [[Items/Helix Fossil]] | [[File:pokemon/138.png\|25px]] [[Pokémon/Omanyte]] & [[File:pokemon/139.png\|25px]] [[Pokémon/Omastar]]|
 |[[File:Old Amber.png\|25px]] [[Items/Old Amber]] | [[File:pokemon/142.png\|25px]] [[Pokémon/Aerodactyl]]|
 
