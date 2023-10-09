@@ -21,7 +21,7 @@
             <td class="align-middle" data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[($data[1].parent ?? TownList[$data[1].town])?.region] ?? '') || '-'"></td>
             <td class="align-middle" data-bind="text: $data[1].parent?.name ?? $data[1].town"></td>
             <td class="align-middle" data-bind="text: GameConstants.humanifyString(BadgeEnums[$data[1].badgeReward])"></td>
-            <td class="align-middle" data-bind="html: $data[1].requirements.map(r => r.hint()).join('</br>')"></td>
+            <td class="align-middle" data-bind="html: Wiki.md.renderInline(Wiki.gameHelper.requirementHints($data[1].requirements).join('\n'))"></td>
         </tr>
     </tbody>
 </table>
