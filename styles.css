@@ -442,7 +442,3 @@ td.tight {
 .custom-tooltip table {
   background-color: var(--bs-body-bg);
 }
-
-table a {
-  text-decoration: none;
-}
