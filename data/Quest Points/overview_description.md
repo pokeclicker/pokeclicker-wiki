@@ -30,8 +30,8 @@ These Evolution Items cost 5,000 [[File:questPoint.svg\|25px]]
 :---: | :---: |
 |[[File:Tart_apple.png\|25px]] [[Items/Tart Apple]] | [[File:Sweet_apple.png\|25px]] [[Items/Sweet Apple]] |
 [[File:Cracked_pot.png\|25px]] [[Items/Cracked Pot]] |
-[[File:Galarica_cuff.png\|25px]] [[Items/Galarica Cuff]] |
-[[File:Galarica_wreath.png\|25px]] [[Items/Galarica Wreath]] |
+[[File:Galarica_cuff.png\|25px]] [[Items/Galarica Cuff]]
+[[File:Galarica_wreath.png\|25px]] [[Items/Galarica Wreath]]
 
 #### Held Items
 Held items | Cost
@@ -99,7 +99,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 :---: | :---: | :---: | :---:
 |[[File:Fire_egg.png\|25px]] Fire Egg | 1 | [[File:pokemon/4.png\|25px]] Charmander | 1,000 [[File:questPoint.svg\|25px]]
 |[[File:Grass_egg.png\|25px]] Grass Egg | 1 | [[File:pokemon/1.png\|25px]] Bulbasaur | 1,000 [[File:questPoint.svg\|25px]]
-|[[File:Water_egg.png\|25px]] Water Egg | 2 | [[File:pokemon/7.png\|25px]] Squirtle [[File:pokemon/131.png\|25px]] Lapras | 2,000 [[File:questPoint.svg\|25px]]
+|[[File:Water_egg.png\|25px]] Water Egg | 2 | [[File:pokemon/7.png\|25px]] Squirtle | 1,000 [[File:questPoint.svg\|25px]]
 |[[File:Fighting_egg.png\|25px]] Fighting Egg | 2 | [[File:pokemon/107.png\|25px]] Hitmonchan [[File:pokemon/106.png\|25px]] Hitmonlee | 2,000 [[File:questPoint.svg\|25px]]
 |[[File:Dragon_egg.png\|25px]] Dragon Egg | 1 | [[File:pokemon/147.png\|25px]] Dratini | 1,000 [[File:questPoint.svg\|25px]]
 
@@ -255,7 +255,7 @@ Without using the Underground to mine stones and using typed eggs, 20,500 [[File
 Item Name | Number Required | Necessary to Obtain | Cost
 :---: | :---: | :---: | :---:
 |[[File:Sun_stone.png\|25px]] Sun Stone | 1 | [[File:pokemon/695.png\|25px]] Heliolisk | 2,500 [[File:questPoint.svg\|25px]]
-|[[File:Linking_cord.png\|25px]] Linking Cord | 2 | [[File:pokemon/709.png\|25px]] Trevenant [[File:pokemon/711.png\|25px]] Gourgeist | 5,000 [[File:questPoint.svg\|25px]]
+|[[File:Linking_cord.png\|25px]] Linking Cord | 2 | [[File:pokemon/711.png\|25px]] Gourgeist | 2,500 [[File:questPoint.svg\|25px]]
 |[[File:Dusk_stone.png\|25px]] Dusk Stone | 1 | [[File:pokemon/681.png\|25px]] Aegislash | 2,500 [[File:questPoint.svg\|25px]]
 |[[File:Shiny_stone.png\|25px]] Shiny Stone | 1 **(+4 Optional)** | [[File:pokemon/671.png\|25px]] Florges (Red) [[File:pokemon/671.01.png\|25px]] Florges (Yellow)* [[File:pokemon/671.03.png\|25px]] Florges (Blue)* [[File:pokemon/671.02.png\|25px]] Florges (Orange)* [[File:pokemon/671.04.png\|25px]] Florges (White)* | 2,500 **(+10,000 Optional)** [[File:questPoint.svg\|25px]]
 |[[File:Sachet.png\|25px]] Sachet | 1 | [[File:pokemon/683.png\|25px]] Aromatisse | 2,500 [[File:questPoint.svg\|25px]]
@@ -293,7 +293,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Grass_egg.png\|25px]] Grass Egg | 2 | [[File:pokemon/722.png\|25px]] Rowlet [[File:pokemon/755.png\|25px]] Morelull | 2,000 [[File:questPoint.svg\|25px]]
 |[[File:Water_egg.png\|25px]] Water Egg | 2 | [[File:pokemon/728.png\|25px]] Popplio [[File:pokemon/767.png\|25px]] Wimpod | 2,000 [[File:questPoint.svg\|25px]]
 |[[File:Fighting_egg.png\|25px]] Fighting Egg | 1 | [[File:pokemon/739.png\|25px]] Crabrawler | 1,000 [[File:questPoint.svg\|25px]]
-|[[File:Dragon_egg.png\|25px]] Dragon Egg | 3 | [[File:pokemon/776.png\|25px]] Turtonator [[File:pokemon/780.png\|25px]] Drampa [[File:pokemon/782.png\|25px]] Jangmo-o | 3,000 [[File:questPoint.svg\|25px]]
+|[[File:Dragon_egg.png\|25px]] Dragon Egg | 3 | [[File:pokemon/776.png\|25px]] Turtonator [[File:pokemon/780.png\|25px]] Drampa  | 2,000 [[File:questPoint.svg\|25px]]
 
 ##### Shopmon
 Item Name | Number Required | Necessary to Obtain | Cost
