@@ -22,7 +22,7 @@ const searchOptions = [
     type: 'Pokémon',
     page: '',
   },
-  ...Object.values(pokemonList).map(p => ({
+  ...Object.values(pokemonList).filter(p => Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION]).map(p => ({
     display: `#${Math.floor(p.id).toString().padStart(3, '0')} - ${p.name}`,
     type: 'Pokémon',
     page: p.name,
@@ -38,7 +38,7 @@ const searchOptions = [
     type: 'Dungeons',
     page: '',
   },
-  ...Object.values(dungeonList).map(d => ({
+  ...Object.values(dungeonList).filter(d => GameConstants.getDungeonRegion(d.name) <= GameConstants.MAX_AVAILABLE_REGION).map(d => ({
     display: d.name,
     type: 'Dungeons',
     page: d.name,
@@ -144,7 +144,7 @@ const searchOptions = [
     type: 'Regions',
     page: '',
   },
-  ...GameHelper.enumStrings(GameConstants.Region).filter(r => !['none', 'final'].includes(r)).map(r => ({
+  ...Object.entries(GameConstants.Region).filter(([region, regionName]) => region <= GameConstants.MAX_AVAILABLE_REGION && region >= 0).map(([region, regionName]) => regionName).map(r => ({
     display: GameConstants.camelCaseToString(r),
     type: 'Regions',
     page: GameConstants.camelCaseToString(r),
@@ -155,18 +155,24 @@ const searchOptions = [
     type: 'Towns',
     page: '',
   },
-  ...Object.values(TownList).filter(t => !(t instanceof DungeonTown)).map(t => ({
+  ...Object.values(TownList).filter(t => !(t instanceof DungeonTown) && !['Safari Zone', 'Friend Safari'].includes(t.name) && t.region <= GameConstants.MAX_AVAILABLE_REGION).map(t => ({
     display: t.name,
     type: 'Towns',
     page: t.name,
   })),
+  // Safari
+  {
+    display: 'Safari',
+    type: 'Safari',
+    page: '',
+  },
   // Gyms
   {
     display: 'Gyms',
     type: 'Gyms',
     page: '',
   },
-  ...Object.entries(GymList).map(([key, gym]) => ({
+  ...Object.entries(GymList).filter(([key, gym]) => GameConstants.getGymRegion(gym) <= GameConstants.MAX_AVAILABLE_REGION).map(([key, gym]) => ({
     display: gym.leaderName,
     type: 'Gyms',
     page: key,
@@ -177,7 +183,7 @@ const searchOptions = [
     type: 'Routes',
     page: '',
   },
-  ...Routes.regionRoutes.map(r => ({
+  ...Routes.regionRoutes.filter(r => r.region <= GameConstants.MAX_AVAILABLE_REGION).map(r => ({
     display: r.routeName,
     type: 'Routes',
     page: r.routeName,
@@ -296,6 +302,43 @@ const searchOptions = [
   {
     display: 'Shadow Pokémon',
     type: 'Shadow Pokémon',
+    page: '',
+  },
+  //Currency Pages
+  {
+    display: 'Pokémon Dollars',
+    type: 'Pokémon Dollars',
+    page: '',
+  },
+  {
+    display: 'Dungeon Tokens',
+    type: 'Dungeon Tokens',
+    page: '',
+  },
+  {
+    display: 'Quest Points',
+    type: 'Quest Points',
+    page: '',
+  },
+  {
+    display: 'Farm Points',
+    type: 'Farm Points',
+    page: '',
+  },
+  {
+    display: 'Diamonds',
+    type: 'Diamonds',
+    page: '',
+  },
+  {
+    display: 'Battle Points',
+    type: 'Battle Points',
+    page: '',
+  },
+  //Challenge Modes
+  {
+    display: 'Challenge Modes',
+    type: 'Challenge Modes',
     page: '',
   },
 ];

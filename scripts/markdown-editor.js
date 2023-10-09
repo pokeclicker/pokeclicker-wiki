@@ -1,8 +1,11 @@
 const { md } = require('./markdown-renderer');
 
+const getContent = (editor) => editor.value().split('\n').map(l => l.trimEnd()).join('\n');
+const getOriginalContent = (editor) => editor._rendered.value.split('\n').map(l => l.trimEnd()).join('\n');
+
 const saveChanges = (editor, filename, btn) => {
-  const content = editor.value().split('\n').map(l => l.trimEnd()).join('\n');
-  const originalContent = editor._rendered.value.split('\n').map(l => l.trimEnd()).join('\n');
+  const content = getContent(editor);
+  const originalContent = getOriginalContent(editor);
 
   // If nothing has changed, just return
   if (content == originalContent) {
@@ -79,6 +82,24 @@ const createMarkDownEditor =  (elementID, filename) => {
         defaultValue: (el) => {
           el.innerHTML = `Filename: <a class="text-decoration-none" target="_BLANK" href="https://github.com/pokeclicker/pokeclicker-wiki/tree/main/${filename}"><code>"${filename}"</code></a>`;
         },
+      },
+      {
+        className: 'cancel',
+        defaultValue: (el) => {
+          const btn = document.createElement('div');
+          btn.classList.add('btn', 'btn-danger', 'btn-sm');
+          btn.innerText = 'Cancel';
+          btn.onclick = () => {
+            let cancel = true;
+            if (getContent(mde) != getOriginalContent(mde)) {
+              cancel = confirm("There are unsaved changes which will be lost");
+            }
+            if (cancel) {
+              window.location.hash = window.location.hash.replace(/\/+edit$/, '');
+            }
+          }
+          el.append(btn);
+        }
       },
       {
         className: 'github',

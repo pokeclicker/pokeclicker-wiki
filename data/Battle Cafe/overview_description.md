@@ -1,2 +1,2 @@
 ## Description
-The Battle Café is a mechanic that allows the player to evolve Milcery into the different forms of [[Pokemon/Alcremie]]. It is unlocked when the player reaches Motostoke in Galar. There are 63 different [[Pokemon/Alcremie]] forms and one [[Pokemon/Milcery]] form that can be obtained using the Battle Café mechanic.
+The Battle Café is a mechanic that allows the player to evolve Milcery into the different forms of [Alcremie](#!Pokémon/Alcremie_(Strawberry_Vanilla)). It is unlocked when the player reaches Motostoke in Galar. There are 63 different [Alcremie](#!Pokémon/Alcremie_(Strawberry_Vanilla)) forms and one [[Pokemon/Milcery]] form that can be obtained using the Battle Café mechanic.

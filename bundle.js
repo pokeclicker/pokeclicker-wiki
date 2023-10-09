@@ -77045,7 +77045,7 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":1,"call-bind":6,"call-bind/callBound":5,"for-each":62,"gopd":66,"has-tostringtag/shams":70}],502:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
-  "version": "0.10.15",
+  "version": "0.10.14",
   "description": "PokéClicker repository",
   "main": "index.js",
   "scripts": {
@@ -77151,6 +77151,25 @@ module.exports={
 }
 
 },{}],503:[function(require,module,exports){
+var templateFromUrlLoader = {
+  loadTemplate: function(name, templateConfig, callback) {
+    $.get(`/templates/${templateConfig.fromUrl}`, function(markupString) {
+      ko.components.defaultLoader.loadTemplate(name, markupString, callback);
+    });
+  }
+};
+ko.components.loaders.unshift(templateFromUrlLoader);
+
+function PokemonSummary(params) {
+  this.pokemon = params.pokemonData;
+}
+
+ko.components.register('pokemon-summary', {
+  viewModel: PokemonSummary,
+  template: { fromUrl: 'pokemon-summary' },
+});
+
+},{}],504:[function(require,module,exports){
 // Applying datatables to all tables on the page (with some exceptions)
 const applyDatatables = () => {
     // Any table with headers
@@ -77254,7 +77273,7 @@ module.exports = {
     applyDatatables,
 }
 
-},{}],504:[function(require,module,exports){
+},{}],505:[function(require,module,exports){
 const discordLoginJSON = 'https://discord.pokeclicker.com/json';
 
 const discord = {
@@ -77278,7 +77297,7 @@ fetch(discordLoginJSON, {
 module.exports = {
   discord,
 }
-},{}],505:[function(require,module,exports){
+},{}],506:[function(require,module,exports){
 /*
 Initializing anything we need from the game files
 */
@@ -77329,7 +77348,8 @@ App.game.farming.initialize();
 App.game.breeding.initialize();
 App.game.oakItems.initialize();
 App.game.keyItems.initialize();
-App.game.specialEvents.initialize()
+App.game.underground.initialize();
+App.game.specialEvents.initialize();
 QuestLineHelper.loadQuestLines();
 SafariPokemonList.generateKantoSafariList();
 BattleFrontierRunner.stage(100);
@@ -77385,7 +77405,7 @@ Settings.getSetting('theme').observableValue.subscribe(theme => {
   document.body.className = `no-select ${theme}`;
 });
 
-},{}],506:[function(require,module,exports){
+},{}],507:[function(require,module,exports){
 const requirementHints = (requirement, includeMarkdown = true) => {
     if (!requirement) {
         return [];
@@ -77579,13 +77599,95 @@ const getRegionName = (region) => {
     return GameConstants.camelCaseToString(GameConstants.Region[region]);
 };
 
+const getRegionMap = (region, subregion) => {
+    // There might be a way to grab these out of the HTML
+    const regionPNGs = [
+        ['kanto-kanto', 'kanto-sevii123', 'kanto-sevii4567' ],
+        ['johto'],
+        ['hoenn', 'orre'],
+        ['sinnoh'],
+        ['unova'],
+        ['kalos'],
+        ['alola-melemele', 'alola-akala', 'alola-ulaula', 'alola-poni', 'alola-magikarp-jump'],
+        ['galar-south', 'galar-north', 'galar-isle-of-armor', 'galar-crown-tundra'],
+        [], // hisui
+        [], // paldea
+    ];
+    return regionPNGs[region][subregion];
+}
+
+let cachedPokeclickerHTML;
+let overlaySVG = ko.observable("");
+
+const fetchPokeclickerHTML = (mapLocationSelector) => {
+    overlaySVG("");
+    if (!cachedPokeclickerHTML) {
+        $.get('/pokeclicker/docs/index.html',
+            function(data) {
+                cachedPokeclickerHTML = data;
+                setMapLocation(mapLocationSelector);
+            }
+        );
+    } else {
+        setMapLocation(mapLocationSelector);
+    }
+}
+
+const getLocationOverlaySVG = (town, region, subregion) => {
+    // Replace single quotes with their escaped versions
+    town = town.replaceAll(String.raw`'`, String.raw`\\'`)
+    fetchPokeclickerHTML(`'${town}'`);
+    return getRegionMap(region, subregion);
+}
+
+const getRouteOverlaySVG = (route, region, subregion) => {
+    fetchPokeclickerHTML(`moveToRoute(${route}, ${region})`);
+    return getRegionMap(region, subregion);
+}
+
+const setMapLocation = (selector) => {
+    const dom = new DOMParser().parseFromString(cachedPokeclickerHTML, 'text/html');
+    const map = dom.querySelector('#map');
+
+    const locationElements = map.querySelectorAll(`[data-bind*="${selector}"]`);
+    if (locationElements.length > 0) {
+        const outputElements = [];
+        const firstTownNode = locationElements[0];
+
+        if (locationElements.length == 1 && firstTownNode.nodeName === "image") {
+            // If there is only one element and it's an image (due to being a dungeon-in-a-town), replace image with rect that we can fill
+            const newNode = document.createElement("rect");
+            [...firstTownNode.attributes].forEach(attr => newNode.setAttribute(attr.nodeName, attr.nodeValue));
+            outputElements.push(newNode);
+        } else {
+            outputElements.push(...locationElements);
+        }
+        // Create our own map mini-DOM with only the necessary elements
+        const parent = firstTownNode.parentNode;
+        parent.replaceChildren(...outputElements);
+        map.replaceChildren(parent);
+        const allElements = map.querySelectorAll("*");
+        allElements.forEach(element => {
+            // Scrub all the knockout bindings so they don't affect the rendering
+            element.removeAttribute('data-bind');
+            // And all image hrefs
+            element.removeAttribute('href');
+            element.removeAttribute('xlink:href');
+        });
+        overlaySVG(map.outerHTML);
+    }
+}
+
 module.exports = {
     requirementHints,
     getEvolutionHints,
     getRegionName,
+    getLocationOverlaySVG,
+    getRouteOverlaySVG,
+    overlaySVG,
 }
 
-},{}],507:[function(require,module,exports){
+},{}],508:[function(require,module,exports){
 // import our version etc
 const package = require('../pokeclicker/package.json');
 
@@ -77597,6 +77699,7 @@ window.Wiki = {
   ...require('./typeahead'),
   ...require('./markdown-renderer'),
   ...require('./discord'),
+  ...require('./components'),
   gameHelper: require('./gameHelper'),
   pokemon: require('./pages/pokemon'),
   farm: require('./pages/farm'),
@@ -77604,17 +77707,24 @@ window.Wiki = {
   dreamOrbs: require('./pages/dreamOrbs'),
   farmSimulator: require('./pages/farmSimulator'),
   dungeons: require('./pages/dungeons'),
+  pokemonDollars: require('./pages/shopMon'),
+  dungeonTokens: require('./pages/dungeonTokens'),
+  battlePoints: require('./pages/shopMon'),
+  diamonds: require('./pages/shopMon'),
   oakItems: require('./pages/oakItems'),
   getDealChains: require('./pages/dealChains').getDealChains,
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":502,"./datatables":503,"./discord":504,"./game":505,"./gameHelper":506,"./markdown-renderer":513,"./navigation":514,"./notifications":515,"./pages/dealChains":516,"./pages/dreamOrbs":517,"./pages/dungeons":518,"./pages/farm":519,"./pages/farmSimulator":520,"./pages/items":521,"./pages/oakItems":522,"./pages/pokemon":523,"./typeahead":525}],508:[function(require,module,exports){
+},{"../pokeclicker/package.json":502,"./components":503,"./datatables":504,"./discord":505,"./game":506,"./gameHelper":507,"./markdown-renderer":514,"./navigation":515,"./notifications":516,"./pages/dealChains":517,"./pages/dreamOrbs":518,"./pages/dungeonTokens":519,"./pages/dungeons":520,"./pages/farm":521,"./pages/farmSimulator":522,"./pages/items":523,"./pages/oakItems":524,"./pages/pokemon":525,"./pages/shopMon":526,"./typeahead":528}],509:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
+const getContent = (editor) => editor.value().split('\n').map(l => l.trimEnd()).join('\n');
+const getOriginalContent = (editor) => editor._rendered.value.split('\n').map(l => l.trimEnd()).join('\n');
+
 const saveChanges = (editor, filename, btn) => {
-  const content = editor.value().split('\n').map(l => l.trimEnd()).join('\n');
-  const originalContent = editor._rendered.value.split('\n').map(l => l.trimEnd()).join('\n');
+  const content = getContent(editor);
+  const originalContent = getOriginalContent(editor);
 
   // If nothing has changed, just return
   if (content == originalContent) {
@@ -77693,6 +77803,24 @@ const createMarkDownEditor =  (elementID, filename) => {
         },
       },
       {
+        className: 'cancel',
+        defaultValue: (el) => {
+          const btn = document.createElement('div');
+          btn.classList.add('btn', 'btn-danger', 'btn-sm');
+          btn.innerText = 'Cancel';
+          btn.onclick = () => {
+            let cancel = true;
+            if (getContent(mde) != getOriginalContent(mde)) {
+              cancel = confirm("There are unsaved changes which will be lost");
+            }
+            if (cancel) {
+              window.location.hash = window.location.hash.replace(/\/+edit$/, '');
+            }
+          }
+          el.append(btn);
+        }
+      },
+      {
         className: 'github',
         defaultValue: (el) => {
           const btn = document.createElement('div');
@@ -77716,7 +77844,7 @@ module.exports = {
   createMarkDownEditor,
 }
 
-},{"./markdown-renderer":513}],509:[function(require,module,exports){
+},{"./markdown-renderer":514}],510:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -77732,7 +77860,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],510:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],511:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -77750,7 +77878,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],511:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],512:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -77766,7 +77894,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],512:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],513:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -77782,7 +77910,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],513:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],514:[function(require,module,exports){
 const markdownit      = require('markdown-it');
 
 // Setup our markdown editor
@@ -77855,7 +77983,7 @@ module.exports = {
   md,
 }
 
-},{"./markdown-plugins/hidden-comments.js":509,"./markdown-plugins/image-size.js":510,"./markdown-plugins/wiki-links-badge.js":511,"./markdown-plugins/wiki-links.js":512,"markdown-it":106,"markdown-it-attrs":96,"markdown-it-container":99,"markdown-it-mathjax3":100,"markdown-it-multimd-table":101}],514:[function(require,module,exports){
+},{"./markdown-plugins/hidden-comments.js":510,"./markdown-plugins/image-size.js":511,"./markdown-plugins/wiki-links-badge.js":512,"./markdown-plugins/wiki-links.js":513,"markdown-it":106,"markdown-it-attrs":96,"markdown-it-container":99,"markdown-it-mathjax3":100,"markdown-it-multimd-table":101}],515:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 const { applyDatatables } = require('./datatables');
 const { createMarkDownEditor } = require('./markdown-editor');
@@ -78037,7 +78165,7 @@ module.exports = {
     gotoPage,
 };
 
-},{"./datatables":503,"./markdown-editor":508,"./markdown-renderer":513,"./redirections":524}],515:[function(require,module,exports){
+},{"./datatables":504,"./markdown-editor":509,"./markdown-renderer":514,"./redirections":527}],516:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -78060,7 +78188,7 @@ module.exports = {
   alert,
 };
 
-},{}],516:[function(require,module,exports){
+},{}],517:[function(require,module,exports){
 
 class DealProfit {
     constructor(type, amount) {
@@ -78224,7 +78352,7 @@ function getDealChains(
 module.exports = {
     getDealChains,
 }
-},{}],517:[function(require,module,exports){
+},{}],518:[function(require,module,exports){
 const getOrbLoot = (orb) => {
   const weightSum = orb.items.reduce((acc, item) => acc + item.weight, 0);
   return orb.items.map(item => {
@@ -78242,7 +78370,125 @@ module.exports = {
   getOrbLoot
 };
 
-},{}],518:[function(require,module,exports){
+},{}],519:[function(require,module,exports){
+const checkExist = setInterval(function() {
+    if ($('.tablinks').length) {
+        $('.tablinks')[0].click();
+        clearInterval(checkExist);
+    }
+ }, 100);
+
+const highestRoute = (region, weather) => {
+    region = region;
+    weather = weather;
+
+    var routeArr = [];
+
+    Routes.getRoutesByRegion(region).map(route => {
+        const routes = Routes.getRoutesByRegion(region).map(r => MapHelper.normalizeRoute(r.number, region, false));
+        var pkmon1 = [];
+        pkmon1.push(Object.values(route.pokemon).flat());
+        route.pokemon.special.forEach((element) => {
+            if(element?.req instanceof ObtainedPokemonRequirement){
+                pkmon1.push(Object.values(element.pokemon).flat());
+            }
+            if(element?.req instanceof WeatherRequirement){
+                if(element.req.weather.includes(weather)){
+                    pkmon1.push(Object.values(element.pokemon).flat());
+                }
+            }
+            if(element?.req instanceof MultiRequirement){
+                element.req.requirements.forEach(x => {
+                    if(x instanceof WeatherRequirement){
+                        if(x.weather.includes(weather)){
+                            pkmon1.push(Object.values(element.pokemon).flat());
+                        }
+                    }
+                });
+            }
+
+        });
+        pkmon1 = Object.values(pkmon1).flat();
+        pkmon1 = pkmon1.filter(e => e.constructor.name !== 'SpecialRoutePokemon');
+        const pokemon = pkmon1.map(p=> pokemonMap[p]);
+        const catchChanceAV = (Math.floor(pokemon.map(p => PokemonFactory.catchRateHelper(p.catchRate, true)).reduce((a,b) => a + b, 0) / pokemon.length))/100;
+        const DT = Math.floor(PokemonFactory.routeDungeonTokens(route.number, region));
+        const PB = (DT* catchChanceAV)/(2.25);
+        const PBMB = (DT* (catchChanceAV+.1))/(2.25);
+        const GB = (DT* (catchChanceAV+.05))/(2);
+        const GBMB = (DT* (catchChanceAV+.15))/(2);
+        const UB = (DT* (catchChanceAV+.1))/(1.75)
+        const UBMB = (DT* (catchChanceAV+.2))/(1.75);
+        routeArr.push( [Routes.getRoute(region,route.number).routeName, DT.toLocaleString(), +(PB). toFixed(2), +(PBMB). toFixed(2), +(GB). toFixed(2), +(GBMB). toFixed(2), +(UB). toFixed(2), +(UBMB). toFixed(2)] );
+    })
+
+    var highestPB = routeArr.reduce((max, dt) => {
+        return dt[2] > max[2] ? dt : max;
+    });
+    var highestPBMB = routeArr.reduce((max, dt) => {
+        return dt[3] > max[3] ? dt : max;
+    });
+    var highestGB = routeArr.reduce((max, dt) => {
+        return dt[4] > max[4] ? dt : max;
+    });
+    var highestGBMB = routeArr.reduce((max, dt) => {
+        return dt[5] > max[5] ? dt : max;
+    });
+    var highestUB = routeArr.reduce((max, dt) => {
+        return dt[6] > max[6] ? dt : max;
+    });
+    var highestUBMB = routeArr.reduce((max, dt) => {
+        return dt[7] > max[7] ? dt : max;
+    });
+
+    return( [[highestPB[0], highestPBMB[0], highestGB[0], highestGBMB[0], highestUB[0], highestUBMB[0]],routeArr] );
+}
+
+const setWeather = (evt, weather) => {
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById('galar'+weather).style.display = "block";
+    evt.currentTarget.className += " active";
+    return;
+}
+
+const getShopMons = (currency) => {
+    var towns = Object.values(TownList).filter(t => t.region < GameConstants.Region.final);
+    var filteredTowns = [];
+    var filteredShops = [];
+    
+    for (var j = 0; j < towns.length; j++){
+        var test = towns[j].content.filter((c) => c instanceof Shop && c.items.length > 0);
+        if (test.length > 0) {
+            test.forEach(function(i) {
+                filteredTowns = [...filteredTowns, i];
+            });
+        }
+    }
+    
+    for (var k = 0; k < filteredTowns.length; k++){
+        var test1 = filteredTowns[k].items.filter((c) => c.currency == currency && c instanceof PokemonItem)
+        if (test1.length > 0) {
+            test1.forEach(function(s) {
+                filteredShops = [...filteredShops, [filteredTowns[k], s]];
+            });
+        }
+    }
+    return filteredShops;
+}
+
+module.exports = {
+    highestRoute,
+    setWeather,
+    getShopMons
+};
+},{}],520:[function(require,module,exports){
 const getTableClearCounts = (dungeon) => {
     if (getTableClearCounts.cache.has(dungeon)) {
         return getTableClearCounts.cache.get(dungeon);
@@ -78535,7 +78781,8 @@ const getDungeonLootChancesForItem = (itemName) => {
             const chances = data.chances;
             const length = chances.length
             const lastIndex = length - 1;
-            data.chances = Array(8).fill(chances[lastIndex]).toSpliced(0, length, ...chances);
+            data.chances = Array(8).fill(chances[lastIndex]);
+            data.chances.splice(0, length, ...chances);
         }
     }
 
@@ -78609,7 +78856,7 @@ module.exports = {
     getDungeonShadowPokemon,
 };
 
-},{}],519:[function(require,module,exports){
+},{}],521:[function(require,module,exports){
 /**
  * Returns the primary mutation for a berry.
  * Filters out enigma mutations, as they cannot be used to obtain a berry for the first time.
@@ -78629,7 +78876,7 @@ module.exports = {
     getPrimaryMutation,
 };
 
-},{}],520:[function(require,module,exports){
+},{}],522:[function(require,module,exports){
 const selectedPlot = ko.observable(undefined);
 const selectedPlotIndex = ko.observable(undefined);
 const plotLabelsEnabled = ko.observable(false);
@@ -78949,7 +79196,7 @@ module.exports = {
     showPlotContextMenu,
 }
 
-},{}],521:[function(require,module,exports){
+},{}],523:[function(require,module,exports){
 const getItemName =  (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
@@ -79041,7 +79288,7 @@ module.exports = {
     getItemCategoryAndPageFromObject,
 };
 
-},{}],522:[function(require,module,exports){
+},{}],524:[function(require,module,exports){
 const getOakItemBonus = (oakItem, level) => {
     const bonus = oakItem.bonusList[level];
     switch (oakItem.name) {
@@ -79115,7 +79362,7 @@ module.exports = {
     getOakItemBonus,
     getOakItemUpgradeReq,
 };
-},{}],523:[function(require,module,exports){
+},{}],525:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -79182,7 +79429,36 @@ module.exports = {
     getAllAvailableShadowPokemon,
 }
 
-},{}],524:[function(require,module,exports){
+},{}],526:[function(require,module,exports){
+function getShopMons(currency) {
+    var towns = Object.values(TownList).filter(t => t.region < GameConstants.Region.final);
+    var filteredTowns = [];
+    var filteredShops = [];
+    
+    for (var j = 0; j < towns.length; j++){
+        var test = towns[j].content.filter((c) => c instanceof Shop && c.items.length > 0);
+        if (test.length > 0) {
+            test.forEach(function(i) {
+                filteredTowns = [...filteredTowns, i];
+            });
+        }
+    }
+    
+    for (var k = 0; k < filteredTowns.length; k++){
+        var test1 = filteredTowns[k].items.filter((c) => c.currency == currency && c instanceof PokemonItem)
+        if (test1.length > 0) {
+            test1.forEach(function(s) {
+                filteredShops = [...filteredShops, [filteredTowns[k], s]];
+            });
+        }
+    }
+    return filteredShops;
+}
+
+module.exports = {
+    getShopMons
+};
+},{}],527:[function(require,module,exports){
 const redirections = [
     ({type, name}) => {
         if (type === 'Pokemon') {
@@ -79234,7 +79510,7 @@ module.exports = {
     redirections
 };
 
-},{}],525:[function(require,module,exports){
+},{}],528:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 
 const searchOptions = [
@@ -79259,7 +79535,7 @@ const searchOptions = [
     type: 'Pokémon',
     page: '',
   },
-  ...Object.values(pokemonList).map(p => ({
+  ...Object.values(pokemonList).filter(p => Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION]).map(p => ({
     display: `#${Math.floor(p.id).toString().padStart(3, '0')} - ${p.name}`,
     type: 'Pokémon',
     page: p.name,
@@ -79275,7 +79551,7 @@ const searchOptions = [
     type: 'Dungeons',
     page: '',
   },
-  ...Object.values(dungeonList).map(d => ({
+  ...Object.values(dungeonList).filter(d => GameConstants.getDungeonRegion(d.name) <= GameConstants.MAX_AVAILABLE_REGION).map(d => ({
     display: d.name,
     type: 'Dungeons',
     page: d.name,
@@ -79381,7 +79657,7 @@ const searchOptions = [
     type: 'Regions',
     page: '',
   },
-  ...GameHelper.enumStrings(GameConstants.Region).filter(r => !['none', 'final'].includes(r)).map(r => ({
+  ...Object.entries(GameConstants.Region).filter(([region, regionName]) => region <= GameConstants.MAX_AVAILABLE_REGION && region >= 0).map(([region, regionName]) => regionName).map(r => ({
     display: GameConstants.camelCaseToString(r),
     type: 'Regions',
     page: GameConstants.camelCaseToString(r),
@@ -79392,18 +79668,24 @@ const searchOptions = [
     type: 'Towns',
     page: '',
   },
-  ...Object.values(TownList).filter(t => !(t instanceof DungeonTown)).map(t => ({
+  ...Object.values(TownList).filter(t => !(t instanceof DungeonTown) && !['Safari Zone', 'Friend Safari'].includes(t.name) && t.region <= GameConstants.MAX_AVAILABLE_REGION).map(t => ({
     display: t.name,
     type: 'Towns',
     page: t.name,
   })),
+  // Safari
+  {
+    display: 'Safari',
+    type: 'Safari',
+    page: '',
+  },
   // Gyms
   {
     display: 'Gyms',
     type: 'Gyms',
     page: '',
   },
-  ...Object.entries(GymList).map(([key, gym]) => ({
+  ...Object.entries(GymList).filter(([key, gym]) => GameConstants.getGymRegion(gym) <= GameConstants.MAX_AVAILABLE_REGION).map(([key, gym]) => ({
     display: gym.leaderName,
     type: 'Gyms',
     page: key,
@@ -79414,7 +79696,7 @@ const searchOptions = [
     type: 'Routes',
     page: '',
   },
-  ...Routes.regionRoutes.map(r => ({
+  ...Routes.regionRoutes.filter(r => r.region <= GameConstants.MAX_AVAILABLE_REGION).map(r => ({
     display: r.routeName,
     type: 'Routes',
     page: r.routeName,
@@ -79535,6 +79817,43 @@ const searchOptions = [
     type: 'Shadow Pokémon',
     page: '',
   },
+  //Currency Pages
+  {
+    display: 'Pokémon Dollars',
+    type: 'Pokémon Dollars',
+    page: '',
+  },
+  {
+    display: 'Dungeon Tokens',
+    type: 'Dungeon Tokens',
+    page: '',
+  },
+  {
+    display: 'Quest Points',
+    type: 'Quest Points',
+    page: '',
+  },
+  {
+    display: 'Farm Points',
+    type: 'Farm Points',
+    page: '',
+  },
+  {
+    display: 'Diamonds',
+    type: 'Diamonds',
+    page: '',
+  },
+  {
+    display: 'Battle Points',
+    type: 'Battle Points',
+    page: '',
+  },
+  //Challenge Modes
+  {
+    display: 'Challenge Modes',
+    type: 'Challenge Modes',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
@@ -79596,4 +79915,4 @@ module.exports = {
   searchOptions,
 };
 
-},{"./navigation":514}]},{},[507]);
+},{"./navigation":515}]},{},[508]);

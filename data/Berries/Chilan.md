@@ -1,9 +1,16 @@
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
+Chilan Berries have a chance of mutating when a Chople Berry is surrounded by at least 3 or more Chople Berries. You can fill your farm in the following way to obtain Chilan Berries. Purple squares indicate where mutations can occur.
 
-You can fill your farm in the following way to obtain Chilan Berries. Purple squares indicate where mutations can occur.
+**Base Formation**
+::: table-mutations
+| :----: | :----: |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | |
+:::
 
+**Optimized Formation**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | |

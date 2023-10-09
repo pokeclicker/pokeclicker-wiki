@@ -1,0 +1,1 @@
+Located on [[Route/Johto Route 27]].
