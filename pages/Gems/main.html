@@ -7,6 +7,7 @@
         <img data-bind="attr: {src: './pokeclicker/docs/' + Gems.image(PokemonType[$data])}"/>
 
         <h3>Best locations</h3>
+        <p>Pokémon that appear during certain weather or other special conditions are not included in the route calculation.</p>
         <div class="table-responsive">
             <table class="table table-hover table-striped table-bordered">
                 <thead class="thead-dark">
@@ -42,11 +43,10 @@
                             var regionRoutes = Routes.regionRoutes.filter((r) => r.region == $data);
                             var amountPerRoute = regionRoutes
                                 .map((r) => {
-                                    var totalMons = r.pokemon.land.length+r.pokemon.water.length+r.pokemon.headbutt.length+r.pokemon.special.length;
+                                    var totalMons = r.pokemon.land.length+r.pokemon.water.length+r.pokemon.headbutt.length;
                                     var totalOfType = r.pokemon.land.filter((p) => PokemonHelper.getPokemonByName(p).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p).type2 == PokemonType[$parent]).length +
                                                     r.pokemon.water.filter((p) => PokemonHelper.getPokemonByName(p).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p).type2 == PokemonType[$parent]).length +
-                                                    r.pokemon.headbutt.filter((p) => PokemonHelper.getPokemonByName(p).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p).type2 == PokemonType[$parent]).length +
-                                                    r.pokemon.special.filter((p) => PokemonHelper.getPokemonByName(p).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p).type2 == PokemonType[$parent]).length;
+                                                    r.pokemon.headbutt.filter((p) => PokemonHelper.getPokemonByName(p).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p).type2 == PokemonType[$parent]).length;
                                     return Math.round(totalOfType / totalMons * 100);
                                 });
                             var max = Math.max(...amountPerRoute);
