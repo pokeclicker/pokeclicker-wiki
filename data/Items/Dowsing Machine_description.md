@@ -1,1 +1,1 @@
-The **Dowsing Machine** is a type of battle item. It temporarily increases the player's chance of gaining extra items for 30 seconds and gives a +50% chance of getting an item from Pokémon that drop Rare Hold Items.
+The **Dowsing Machine** is a type of battle item. It temporarily increases the player's chance of gaining extra items for 30 seconds and gives a +50% better chance of getting an item from Pokémon that drop Rare Hold Items.
