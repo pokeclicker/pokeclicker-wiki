@@ -1,1 +1,1 @@
-*Purchased in @[[Mahogany Town]] for 100,000 Dungeon Tokens*
+*Purchased in @[[Towns/Mahogany Town]] for 100,000 Dungeon Tokens*
