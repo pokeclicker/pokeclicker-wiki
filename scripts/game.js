@@ -10,6 +10,9 @@ themes.options.push(new SettingOption('Vapor', 'vapor'));
 themes.options.push(new SettingOption('Zephyr', 'zephyr'));
 themes.options.sort((a, b) => (a.text).localeCompare(b.text));
 
+// Suppress game notifications
+Notifier.notify = () => {};
+
 // Custom binds as these aren't loaded
 player = new Player();
 player.highestRegion(1);
