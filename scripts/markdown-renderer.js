@@ -36,7 +36,7 @@ const md = new markdownit({
         <div class="accordion accordion-flush">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${randID}" aria-expanded="true">
+              <button class="accordion-button ${startCollapsed ? 'collapsed' : ''}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${randID}" aria-expanded="true">
               ${md.utils.escapeHtml(m[1])}
               </button>
             </h2>
