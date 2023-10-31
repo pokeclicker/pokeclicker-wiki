@@ -26,6 +26,50 @@ Once inside the Safari, the player has the option to either catch, throw a rock,
 All actions performed in the Safari (except walking and fleeing encounters) awards Safari experience. Max level is 40 and this level is shared in all Safari locations. Safari Level increases the effectiveness of Rocks and Baits, the catch chance, the Egg Steps gained from walking, and the odds that an item will spawn when a Pokémon is caught. Some items are not available until a certain Safari Level is reached. The player starts at Safari Level 1 and the experience needed to reach a new Safari Level is calculated as such:
 
 $ExperienceToNextLevel=⌈2000 * (1.2 ^ {(Safari Level - 1)} - 1)⌉$
+:::collapsed XP Table
+|**Level** | **XP** | **Cumulative XP** {.no-data-tables}
+| --- | --- | --- |
+| 1 | 0 | 0 |
+| 2 | 400 | 400 |
+| 3 | 480 | 880 |
+| 4 | 576 | 1456 |
+| 5 | 692 | 2148 |
+| 6 | 829 | 2977 |
+| 7 | 995 | 3972 |
+| 8 | 1195 | 5167 |
+| 9 | 1433 | 6600 |
+| 10 | 1720 | 8320 |
+| 11 | 2064 | 10384 |
+| 12 | 2477 | 12861 |
+| 13 | 2972 | 15833 |
+| 14 | 3566 | 19399 |
+| 15 | 4280 | 23679 |
+| 16 | 5136 | 28815 |
+| 17 | 6162 | 34977 |
+| 18 | 7396 | 42373 |
+| 19 | 8874 | 51247 |
+| 20 | 10649 | 61896 |
+| 21 | 12780 | 74676 |
+| 22 | 15335 | 90011 |
+| 23 | 18402 | 108413 |
+| 24 | 22082 | 130495 |
+| 25 | 26499 | 156994 |
+| 26 | 31799 | 188793 |
+| 27 | 38158 | 226951 |
+| 28 | 45791 | 272742 |
+| 29 | 54948 | 327690 |
+| 30 | 65938 | 393628 |
+| 31 | 79125 | 472753 |
+| 32 | 94951 | 567704 |
+| 33 | 113940 | 681644 |
+| 34 | 136729 | 818373 |
+| 35 | 164075 | 982448 |
+| 36 | 196889 | 1179337 |
+| 37 | 236267 | 1415604 |
+| 38 | 283521 | 1699125 |
+| 39 | 340225 | 2039350 |
+| 40 | 408270 | 2447620 |
+:::
 
 Safari Level acts as a multiplier following this formula:
 
