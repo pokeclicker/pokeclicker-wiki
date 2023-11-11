@@ -160,7 +160,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Leaf_stone.png\|25px]] Leaf Stone | 1 | [[File:pokemon/275.png\|25px]] Shiftry | 2,500 [[File:questPoint.svg\|25px]]
 |[[File:Deepsea_scale.png\|25px]] Deep Sea Scale | 1 | [[File:pokemon/368.png\|25px]] Gorebyss | 2,500 [[File:questPoint.svg\|25px]]
 |[[File:Deepsea_tooth.png\|25px]] Deep Sea Tooth | 1 | [[File:pokemon/367.png\|25px]] Huntail | 2,500 [[File:questPoint.svg\|25px]]
-|[[File:Prism_Scale.png\|25px]] Prism Scale | 1 | [[File:pokemon/350.png\|25px]] Milotic | 2,500 [[File:questPoint.svg\|25px]]
+|[[File:Prism_scale.png\|25px]] Prism Scale | 1 | [[File:pokemon/350.png\|25px]] Milotic | 2,500 [[File:questPoint.svg\|25px]]
 
 ##### Eggs
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -308,8 +308,8 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Tart_apple.png\|25px]] Tart Apple | 1 | [[File:pokemon/841.png\|25px]] Flapple | 5,000 [[File:questPoint.svg\|25px]]
 |[[File:Sweet_apple.png\|25px]] Sweet Apple | 1 | [[File:pokemon/842.png\|25px]] Appletun | 5,000 [[File:questPoint.svg\|25px]]
 |[[File:Cracked_pot.png\|25px]] Cracked Pot | 1 | [[File:pokemon/855.png\|25px]] Polteageist | 5,000 [[File:questPoint.svg\|25px]]
-|[[File:Sweet_apple.png\|25px]] Galarica Cuff | 1 | [[File:pokemon/80.02.png\|25px]] Galarian Slowbro | 5,000 [[File:questPoint.svg\|25px]]
-|[[File:Sweet_apple.png\|25px]] Galarica Wreath | 1 | [[File:pokemon/199.01.png\|25px]] Galarian Slowking | 5,000 [[File:questPoint.svg\|25px]]
+|[[File:Galarica_cuff.png\|25px]] Galarica Cuff | 1 | [[File:pokemon/80.02.png\|25px]] Galarian Slowbro | 5,000 [[File:questPoint.svg\|25px]]
+|[[File:Galarica_wreath.png\|25px]] Galarica Wreath | 1 | [[File:pokemon/199.01.png\|25px]] Galarian Slowking | 5,000 [[File:questPoint.svg\|25px]]
 
 ##### Eggs
 Item Name | Number Required | Necessary to Obtain | Cost
