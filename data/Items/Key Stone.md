@@ -2,8 +2,8 @@
 Base Pokémon |Evolves into |Available in
 :---|:---|:---
 [[File:pokemon/3.png\|25px]] [[Pokemon/Venusaur]]  | [[File:pokemon/3.01.png\|25px]] [[Pokemon/Mega Venusar]] |Kalos onward
-[[File:pokemon/6.png\|25px]] [[Pokemon/Charizard]]  | [[File:pokemon/6.01.png\|25px]] [[Pokemon/Mega Charizard X]] |Kalos onward
-[[File:pokemon/6.png\|25px]] [[Pokemon/Charizard]]  | [[File:pokemon/6.02.png\|25px]] [[Pokemon/Mega Charizard Y]] |Kalos onward
+[[File:pokemon/6.png\|25px]] [[Pokemon/Charizard]]  | [[File:pokemon/6.01.png\|25px]] [[Pokemon/Mega Charizard X]] |Kalos onward during the day
+[[File:pokemon/6.png\|25px]] [[Pokemon/Charizard]]  | [[File:pokemon/6.02.png\|25px]] [[Pokemon/Mega Charizard Y]] |Kalos onward during the night
 [[File:pokemon/9.png\|25px]] [[Pokemon/Blastoise]]  | [[File:pokemon/9.01.png\|25px]] [[Pokemon/Mega Blastoise]] |Kalos onward
 [[File:pokemon/15.png\|25px]] [[Pokemon/Beedrill]]  | [[File:pokemon/15.01.png\|25px]] [[Pokemon/Mega Beedrill]] |Kalos onward
 [[File:pokemon/18.png\|25px]] [[Pokemon/Pidgeot]]  | [[File:pokemon/18.01.png\|25px]] [[Pokemon/Mega Pidgeot]] |Kalos onward
