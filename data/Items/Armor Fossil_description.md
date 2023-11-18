@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain Shieldon
+Can be put in the hatchery to obtain [[Pokémon/Shieldon]]
