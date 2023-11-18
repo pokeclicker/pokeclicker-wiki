@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain Cranidos
+Can be put in the hatchery to obtain [[Pokémon/Cranidos]]
