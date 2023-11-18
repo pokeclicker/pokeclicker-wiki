@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain Archen
+Can be put in the hatchery to obtain [[Pokémon/Archen]]
