@@ -88,11 +88,11 @@ $Catch Chance = \frac{Catch Chance}{2} - Multiplier$
 
 If **Angry** status:
 
-$Catch Chance = Catch Chance * 2 + Multiplier$
+$Catch Chance = Catch Chance * (2 + Multiplier)$
 
 Also, if [[Berries/Nanab]] berry is used, it further modifies Catch Chance with the following formula:
 
-$Catch Chance = Catch Chance * 1.5 + Multiplier$
+$Catch Chance = Catch Chance * (1.5 + Multiplier)$
 
 Note that **CatchChance** can never go above 100%.
 
