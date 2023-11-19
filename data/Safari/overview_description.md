@@ -84,7 +84,7 @@ Where **CatchRate** is the Pokémon's base catch rate. Check [[Pokémon]] page f
 
 This is further modified by the effect of rocks (Angry status) and berries (Eating status). If **Eating** status:
 
-$Catch Chance = \frac{Catch Chance}{2} - Multiplier$
+$Catch Chance = \frac{Catch Chance}{2 - Multiplier}$
 
 If **Angry** status:
 
@@ -99,15 +99,15 @@ Note that **CatchChance** can never go above 100%.
 ### Escape Chance
 Pokémon's escape chance begins at 30%. This value is modified by Safari Level according to the statuses previously mentioned. If **Eating** status:
 
-$EscapeChance = \frac{EscapeChance}{4} + Multiplier$
+$EscapeChance = \frac{EscapeChance}{4 + Multiplier}$
 
 If **Angry** status:
 
-$EscapeChance = EscapeChance * 2 - Multiplier$
+$EscapeChance = EscapeChance * (2 - Multiplier)$
 
 Also, if [[Berries/Razz]] berry is used, it further modifies Escape Chance with the following formula:
 
-$EscapeChance = \frac{EscapeChance}{1.5} + Multiplier$
+$EscapeChance = \frac{EscapeChance}{1.5 + Multiplier}$
 
 ### Egg Steps
 Walking on the Safari gives egg steps, starting with 1 Egg Step at level 1 and increasing as the Safari Level progresses. The formula is as follows:
