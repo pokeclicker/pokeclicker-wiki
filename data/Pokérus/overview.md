@@ -58,8 +58,8 @@ EV modifier | Method
 10x | Pokémon is encountered and captured as a Dungeon Boss Pokémon
 10x | Pokémon is encountered and captured as a Mimic
 50x | Pokémon is encountered and captured as a Roaming Pokemon
-Variable | Rowap Berry Aura
-Variable | [[Items/Blue Flute]]
+Variable | [[File:Rowap.png\|40px]] [[Berries/Rowap]] Berry Aura
+Variable | [[File:Blue_Flute.png\|40px]] [[Items/Blue Flute]]
 1.5x | [[File:Macho_Brace.png\|40px]]  [[Items/Macho_Brace]] Held Item
 2x | [[File:Power_Bracer.png\|40px]]  [[Items/Power_Bracer]] Held Item
 5x | [[File:Repeatball.png\|40px]] [[Items/Repeat Ball]]
