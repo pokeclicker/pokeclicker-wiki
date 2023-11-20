@@ -79545,6 +79545,11 @@ const searchOptions = [
     page: p.name,
   })),
   {
+    display: 'Alternate Pokémon Forms',
+    type: 'Alternate Pokémon Forms',
+    page: '',
+  },
+  {
     display: 'Mega Pokémon',
     type: 'Mega Pokémon',
     page: '',
