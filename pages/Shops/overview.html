@@ -1,0 +1,94 @@
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Shop Name</th>
+            <th>Location</th>
+            <th>Region</th>
+            <th>SubRegion</th>
+            <th>Type</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: (() => {
+        const townList = Object.values(TownList).filter(t => t.region <= GameConstants.MAX_AVAILABLE_REGION);
+        return townList.flatMap(t => t.content.filter((c) => c instanceof Shop))
+            .sort((a, b) => townList.findIndex(t => t == a.parent) > townList.findIndex(t => t == b.parent));
+    })()">
+        <tr>
+            <td class="align-middle text-center" data-bind="text: $index() + 1"></td>
+            <td class="align-middle" data-bind="text: $data.text()"></td>
+            <td class="align-middle">
+                <a class="text-decoration-none" href="#!" target="_blank" data-bind="text: $data.parent.name, attr: {href: `#!Towns/${$data.parent.name}` }"></a>
+            </td>
+            <td class="align-middle" data-bind="text: Wiki.gameHelper.getRegionName($data.parent.region)"></td>
+            <td class="align-middle" data-bind="text: !$data.parent.subRegion ? '-' : SubRegions.getSubRegionById($data.parent.region, $data.parent.subRegion).name"></td>
+            <td class="align-middle" data-bind="text: $data.constructor.name == 'Shop' ? 'Shop' : GameConstants.camelCaseToString($data.constructor.name.replace('Shop', ''))"></td>
+            <td class="p-1 small">
+                <!-- ko if: $data.items.length > 0 -->
+                <!-- ko foreach: $data.items-->
+                <div class="d-flex align-items-center p-1" data-bind="css: { 'border-top': $index() > 0 }" style="border-color: var(--bs-table-border-color) !important;">
+                    <div class="w-50">
+                        <div class="d-flex align-items-center">
+                            <img width="18" class="me-1" data-bind="attr: { src: `./pokeclicker/docs/${$data.image}` }"/>
+                            <a href="#!" target="_blank" class="text-decoration-none" data-bind="text: $data.displayName,
+                                attr: { href: `#!${Wiki.items.getItemPageFromObject($data)}` }"></a>
+                        </div> 
+                    </div>
+                    <div class="w-50">
+                        <img width="18" class="me-1" data-bind="attr: { src: `./images/${GameConstants.Currency[$data.currency]}.svg` }" />
+                        <ko data-bind="text: $data.basePrice.toLocaleString()"></ko>
+                    </div>
+                </div>
+                <!-- /ko -->
+                <!-- /ko -->
+
+                <!-- ko if: $data instanceof ShardTraderShop -->
+                <!-- ko foreach: ShardDeal.list[GameConstants.ShardTraderLocations[$data.parent.name]]() -->
+                <div class="d-flex align-items-center p-1" data-bind="css: { 'border-top': $index() > 0 }" style="border-color: var(--bs-table-border-color) !important;">
+                    <div class="w-50">
+                        <div class="d-flex align-items-center">
+                            <img width="18" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.item.itemType.image }" />
+                            <a href="#!" target="_blank" class="text-decoration-none" data-bind="text: $data.item.itemType.displayName,
+                                attr: { href: `#!${Wiki.items.getItemPageFromObject($data.item.itemType)}` }"></a>
+                        </div> 
+                    </div>
+                    <div class="w-50">
+                        <!-- ko foreach: $data.shards -->
+                        <div>
+                            <img width="18" class="me-1" data-bind="attr: { src: `./images/${$data.shardType.name}.png` }" />
+                            <knockout data-bind="text: `${$data.amount.toLocaleString()} x ${$data.shardType.name}`"></knockout>
+                        </div>
+                        <!-- /ko -->
+                        <div data-bind="if: $data.questPointCost > 0">
+                            <img class="me-1" width="18" data-bind="attr: { src: './images/questPoint.svg' }" width="18px"/>
+                            <ko data-bind="text: $data.questPointCost.toLocaleString()"></ko>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+                <!-- /ko -->
+
+                <!-- ko if: $data instanceof GemMasterShop -->
+                <!-- ko foreach: GemDeal.list[$data.shop]() -->
+                <div class="d-flex align-items-center p-1" data-bind="css: { 'border-top': $index() > 0 }" style="border-color: var(--bs-table-border-color) !important;">
+                    <div class="w-50">
+                        <div class="d-flex align-items-center">
+                            <img width="18" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.item.itemType.image }" />
+                            <a href="#!" target="_blank" class="text-decoration-none" data-bind="text: $data.item.itemType.displayName,
+                                attr: { href: `#!${Wiki.items.getItemPageFromObject($data.item.itemType)}` }"></a>
+                        </div> 
+                    </div>
+                    <div class="w-50" data-bind="foreach: $data.gems">
+                        <div>
+                            <img width="18" data-bind="attr: { src: `./images/${PokemonType[$data.gemType]} Gem.png` }" />
+                            <knockout data-bind="text: `${$data.amount.toLocaleString()} x ${PokemonType[$data.gemType]}`"></knockout>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+                <!-- /ko -->
+            </td>
+        </tr>
+    </tbody>
+</table>
