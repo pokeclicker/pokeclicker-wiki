@@ -7,8 +7,7 @@
         </tr>
     </thead>
     <tbody data-bind="foreach: pokemonList.filter((p) => p.id > 0 && p.id > Math.floor(p.id)
-        && Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION]
-        && p.nativeRegion == pokemonMap[Math.floor(p.id)].nativeRegion)">
+        && Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION])">
         <tr>
             <td class="text-center align-middle" data-bind="text: id"></td>
             <td class="align-middle">
