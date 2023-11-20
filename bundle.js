@@ -79858,6 +79858,12 @@ const searchOptions = [
     type: 'Challenge Modes',
     page: '',
   },
+  // Shops
+  {
+    display: 'Shops',
+    type: 'Shops',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
