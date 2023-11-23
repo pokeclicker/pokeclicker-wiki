@@ -79906,6 +79906,9 @@ $('#search').typeahead({
   display: 'display',
   templates: {
     notFound: '<a class="dropdown-item disabled">No results found...</a>',
+    suggestion: (suggestion) => {
+      return `<a href="#!${suggestion.type}/${suggestion.page}">${suggestion.display}</a>`;
+    },
   },
 });
 $('#search').bind('typeahead:select', (ev, suggestion) => {
