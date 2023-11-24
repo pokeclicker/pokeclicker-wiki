@@ -1,4 +1,4 @@
-#### Mutations 
+#### Mutations
 Chesto Berries can mutate into the following Berries.
 
 | Used In                                       | Other Requirements |
@@ -10,7 +10,7 @@ Chesto Berries can mutate into the following Berries.
 | [[File:Passho.png\|32px]] [[Berries/Passho]]  | [[File:Oran.png\|32px]] [[Berries/Oran]] [[File:Kelpsy.png\|32px]] [[Berries/Kelpsy]] [[File:Coba.png\|32px]] [[Berries/Coba]] |
 
 ### Acquisition
-Chesto Berries can be obtained from the following dungeons.
+Chesto Berries can drop from any route and can also be obtained from the following dungeons.
 
 | Location	                                | Tier	    | Requirement   |
 | :---:                                     | :---:     | :---:         |
