@@ -1,4 +1,4 @@
-#### Mutations 
+#### Mutations
 Cheri Berries can mutate into the following Berries.
 
 | Used In                                       | Other Requirements |
@@ -10,7 +10,7 @@ Cheri Berries can mutate into the following Berries.
 | [[File:Rindo.png\|32px]] [[Berries/Rindo]]    | [[File:Aguav.png\|32px]] [[Berries/Aguav]] |
 
 ### Acquisition
-Cheri Berries can be obtained from the following dungeons.
+Cheri Berries can drop from any route and can also be obtained from the following dungeons.
 
 | Location	                        | Tier	    | Requirement   |
 | :---:                             | :---:     | :---:         |
