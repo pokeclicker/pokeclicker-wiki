@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Rindo Berries. Purple squares indicate where mutations can occur.
+Rindo has a chance of mutating by surrounding an empty plot with at least 10, but no more than 15 points of Spicy flavor, at least 15, but no more than 20 points of Bitter flavor, and 0 points of all other flavors.  You can fill your farm in the following way to obtain Rindo Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 *(**Note**: This formation may also yield [[File:Grepa.png\|32px]] [[Berries/Grepa]] Berries.)*
