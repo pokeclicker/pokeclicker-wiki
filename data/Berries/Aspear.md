@@ -1,4 +1,4 @@
-#### Mutations 
+#### Mutations
 Aspear Berries can mutate into the following Berries.
 
 | Used In                                       | Other Requirements |
@@ -11,7 +11,7 @@ Aspear Berries can mutate into the following Berries.
 | [[File:Rabuta.png\|32px]] [[Berries/Rabuta]]  | [[File:Aguav.png\|32px]] [[Berries/Aguav]] |
 
 ### Acquisition
-Aspear Berries can be obtained from the following dungeons.
+Aspear Berries can drop from any route and can also be obtained from the following dungeons.
 
 | Location	                        | Tier	    | Requirement   |
 | :---:                             | :---:     | :---:         |
