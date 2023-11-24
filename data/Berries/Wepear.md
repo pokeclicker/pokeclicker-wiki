@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Wepear Berries. Purple squares indicate where mutations can occur.
+Wepear has a chance of mutating when [[Berries/Rawst]] and [[Berries/Oran]] are touching an empty plot. You can fill your farm in the following way to obtain Wepear Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations
