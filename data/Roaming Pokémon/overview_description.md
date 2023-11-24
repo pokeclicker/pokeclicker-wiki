@@ -7,4 +7,4 @@ The chance to encounter a roaming Pokémon is 1/8192 for the first route of a re
 
 The way that a Roaming Pokémon is encountered works like so: First, the game calculates if a Roaming Pokémon is encountered (using the above odds description with the current route). Next, the game calculates which Roaming Pokémon is encountered from the Roaming Pokémon pool for that region. Uncaught Roaming Pokémon have twice the chance of being encountered.
 
-An NPC in each region can inform the player of a specific route in that region where the odds of encountering Roaming Pokémon are tripled. The boosted route changes every 8 hours. **If every route in the region can be one-shot, the Boosted Route is always the best route for encountering Roaming Pokémon.**
+An NPC in each region can inform the player of a specific route in that region where the odds of encountering Roaming Pokémon are tripled. The boosted route changes every 8 hours, at 0:00, 8:00, and 16:00 local time. **If every route in the region can be one-shot, the Boosted Route is always the best route for encountering Roaming Pokémon.**
