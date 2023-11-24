@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Pinap Berries. Purple squares indicate where mutations can occur.
+Pinap has a chance of mutating when [[Berries/Sitrus]] and [[Berries/Aspear]] are touching an empty plot. You can fill your farm in the following way to obtain Pinap Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations
