@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Grepa Berries. Purple squares indicate where mutations can occur.
+Grepa has a chance of mutating when [[Berries/Figy]] and [[Berries/Aguav]] are touching an empty plot. You can fill your farm in the following way to obtain Grepa Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 *(**Note**: This formation may also yield [[File:Rindo.png\|32px]] [[Berries/Rindo]] Berries.)*

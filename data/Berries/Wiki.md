@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Wiki Berries. Purple squares indicate where mutations can occur.
+Wiki has a chance of mutating by surrounding an empty plot with at least 25, but no more than 80 points of Dry flavor, and less than 5 points of all other flavors. You can fill your farm in the following way to obtain Wiki Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations

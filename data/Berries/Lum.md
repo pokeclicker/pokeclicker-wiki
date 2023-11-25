@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Lum Berries. Purple squares indicate where mutations can occur.
+Lum has a chance of mutating when all Generation 1 Berries (#1 Cheri to #8 Sitrus) are touching an empty plot. You can fill your farm in the following way to obtain Lum Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations

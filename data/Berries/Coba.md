@@ -1,6 +1,6 @@
 ## Acquisition
 
-Coba is obtained by surrounding an empty plot with between 10 and 15 points of dry, between 15 and 20 points of bitter, and 0 points of all other flavors.
+Coba is obtained by surrounding an empty plot with between 10 and 15 points of Dry flavor, between 15 and 20 points of Bitter flavor, and 0 points of all other flavors.
 
 Two possible farming setups are listed below.
 

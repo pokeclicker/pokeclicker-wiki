@@ -2,8 +2,8 @@
 
 ### Possible Planting Formations {#planting}
 
-**Warning:** When a Passho berry is not surrounded by at least one other berry, there is a chance it may mutate to a [[Berries/Yache]]. On obtaining your first Passho berry, plant a berry ([[Berries/Kasib]] is a good choice) around it to avoid it unintentionally mutating and then needing to reobtain it.
-You can fill your farm in the following way to obtain Passho Berries. Purple squares indicate where mutations can occur.
+Passho has a chance of mutating when [[Berries/Chesto]], [[Berries/Oran]], [[Berries/Kelpsy]], and [[Berries/Coba]] are touching an empty plot. You can fill your farm in the following way to obtain Passho Berries. Purple squares indicate where mutations can occur.
+**WARNING:** When a Passho berry is not surrounded by at least one other berry, there is a chance it may mutate into a [[Berries/Yache]]. On obtaining your first Passho berry, plant a berry ([[Berries/Kasib]] is a good choice) around it to avoid it unintentionally mutating and then needing to reobtain it.
 
 **Base Formation**
 ::: table-mutations

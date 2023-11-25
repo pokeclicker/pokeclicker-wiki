@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Persim Berries. Purple squares indicate where mutations can occur.
+Persim has a chance of mutating when [[Berries/Oran]] and [[Berries/Pecha]] are touching an empty plot. You can fill your farm in the following way to obtain Persim Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations

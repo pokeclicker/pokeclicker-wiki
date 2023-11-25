@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Tamato Berries. Purple squares indicate where mutations can occur.
+Tamato has a chance of mutating when a Taller or later stage [[Berries/Razz]] berry is near a Berry stage [[Berries/Pomeg]] berry. The mutation will cause Razz to change into a Tamato and thus doesn't use an empty plot to trigger the mutation. You can fill your farm in the following way to obtain Tamato Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations

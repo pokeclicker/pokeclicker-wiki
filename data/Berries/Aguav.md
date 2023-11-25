@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Aguav Berries. Purple squares indicate where mutations can occur.
+Aguav has a chance of mutating by surrounding an empty plot with at least 25, but no more than 80 points of Bitter flavor, and less than 5 points of all other flavors. You can fill your farm in the following way to obtain Aguav Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations

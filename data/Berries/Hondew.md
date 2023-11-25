@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Hondew Berries. Purple squares indicate where mutations can occur.
+Hondew has a chance of mutating by surrounding an empty plot with exactly 15 points of Spicy, Dry, and Bitter flavors, and 0 points of all other flavors. You can fill your farm in the following way to obtain Hondew Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations

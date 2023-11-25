@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Wacan Berries. Purple squares indicate where mutations can occur.
+Wacan has a chance of mutating when [[Berries/Pinap]], [[Berries/Iapapa]], [[Berries/Qualot]], and [[Berries/Grepa]] are touching an empty plot. You can fill your farm in the following way to obtain Wacan Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations
