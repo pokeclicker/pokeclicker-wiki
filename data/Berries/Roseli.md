@@ -2,7 +2,8 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Roseli Berries. Purple squares indicate where mutations can occur.
+Roseli has a chance of mutating when [[Berries/Mago]], [[Berries/Magost]], [[Berries/Nanab]], and [[Berries/Watmel]] are touching an empty plot. You can fill your farm in the following way to obtain Roseli Berries. Purple squares indicate where mutations can occur.
+**WARNING:** Trying to mutate Roseli while having the [[Oak Items/Sprinklotad]] equipped may result in your Watmel mutating into Shuca.
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |

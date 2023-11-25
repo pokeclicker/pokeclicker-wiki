@@ -1,4 +1,4 @@
-#### Mutations 
+#### Mutations
 Rawst Berries can mutate into the following Berries.
 
 | Used In                                       | Other Requirements |
@@ -8,7 +8,7 @@ Rawst Berries can mutate into the following Berries.
 | [[File:Lum.png\|32px]] [[Berries/Lum]]        | [[File:Cheri.png\|32px]] [[Berries/Cheri]] [[File:Chesto.png\|32px]] [[Berries/Chesto]] [[File:Pecha.png\|32px]] [[Berries/Pecha]] [[File:Aspear.png\|32px]] [[Berries/Aspear]] [[File:Leppa.png\|32px]] [[Berries/Leppa]] [[File:Oran.png\|32px]] [[Berries/Oran]] [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] |
 
 ### Acquisition
-Rawst Berries can be obtained from the following dungeons.
+Rawst Berries can drop from any route and can also be obtained from the following dungeons.
 
 | Location	                        | Tier	    | Requirement   |
 | :---:                             | :---:     | :---:         |

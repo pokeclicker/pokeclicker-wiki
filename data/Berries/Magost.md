@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Magost Berries. Purple squares indicate where mutations can occur.
+Magost has a chance of mutating when [[Berries/Pecha]], [[Berries/Nanab]], and [[Berries/Mago]] are touching an empty plot. You can fill your farm in the following way to obtain Magost Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations

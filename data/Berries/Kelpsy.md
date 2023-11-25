@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Kelpsy Berries. Purple squares indicate where mutations can occur.
+Kelpsy has a chance of mutating when [[Berries/Chesto]] and [[Berries/Persim]] are touching an empty plot. You can fill your farm in the following way to obtain Kelpsy Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations

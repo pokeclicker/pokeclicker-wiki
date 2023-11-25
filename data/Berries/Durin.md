@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Durin Berries. Purple squares indicate where mutations can occur.
+Durin has a chance of mutating when a Taller or later stage [[Berries/Rabuta]] is surrounded with at least 130, but no more than 160 points of Bitter flavor, and no more than 80 points of all other flavors. This will cause the Rabuta to change into a Durin and thus doesn't use an empty plot to trigger the mutation. You can fill your farm in the following way to obtain Durin Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations
