@@ -20,8 +20,8 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
 | [[File:Watmel.png\|32px]] [[Berries/Watmel]]  | `N/A`         | `N/A`                                 | `N/A`                                 |
 | [[File:Magost.png\|32px]] [[Berries/Magost]]  | 04:00:00      | 02:40:00                              | 01:46:40                              |
-| [[File:Mago.png\|32px]] [[Berries/Mago]]      | 00:06:10      | 00:04:07                              |2:44                                   |
-| [[File:Nanab.png\|32px]] [[Berries/Nanab]]    | 00:04:10      | 00:02:47                              | 1:51                                   |
+| [[File:Mago.png\|32px]] [[Berries/Mago]]      | 00:06:10      | 00:04:07                              |00:02:44                                |
+| [[File:Nanab.png\|32px]] [[Berries/Nanab]]    | 00:04:10      | 00:02:47                              | 00:01:51                                |
 
 #### Mutations
 Roseli Berries can be used to mutate the following Berries.
