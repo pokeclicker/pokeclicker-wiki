@@ -4,6 +4,7 @@ Dream Orbs are items obtained when the game is closed that can be opened for ran
 
 Dream Orbs are obtainable once the Force of Nature Pokémon are captured (@[[Pokemon/Thundurus]], @[[Pokemon/Tornadus]] and @[[Pokemon/Landorus]]). From that point on the player will get 1 Dream Orb for each full consecutive hour with the game closed, up to a maximum of 24 hours.
 There are 3 colors of orbs: Pink, Green and Orange. Initially the player will only receive Pink Orbs, the other orbs can be unlocked by getting the exclusive Pokémon from the previous orbs (@[[Pokemon/Thundurus (Therian)]] and  @[[Pokemon/Tornadus (Therian)]]).
+Note that, currently, Blue Orbs **cannot be obtained** yet.
 
 ## Opening Orbs
 
