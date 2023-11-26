@@ -4,15 +4,33 @@
     <div class="table-responsive">
         <table class="table table-hover table-striped table-bordered">
             <thead class="thead-dark">
-                <tr>
+                <tr class="text-nowrap">
                     <th>Event</th>
                     <th>Description</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Cost to Activate</th>
                 </tr>
             </thead>
-            <tbody data-bind="foreach: App.game.specialEvents.events">
+            <tbody data-bind="foreach: App.game.specialEvents.events.sort((a, b) => a.startTime - b.startTime);">
                 <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Events', $data.title); return false; }">
                     <td data-bind="text: $data.title"></td>
                     <td data-bind="text: $data.description"></td>
+                    <td data-bind="text: $data.startTime.toLocaleString(), attr: { 'data-sort': $data.timeTillStart() }"></td>
+                    <td data-bind="text: $data.endTime.toLocaleString(), attr: { 'data-sort': $data.timeTillEnd() }"></td>
+                    <!-- ko if: $data.timeTillStart() > 0 -->
+                        <!-- ko with: Math.floor($data.timeTillStart() / 1000 / 60 / 60 / 24) * 500, as: 'cost' -->
+                        <td data-bind="attr: { 'data-sort': cost }">
+                            <ko data-bind="text: cost"></ko>
+                            <img data-bind="attr: { src: './images/questPoint.svg' }" width="18px"/>
+                        </td>
+                        <!-- /ko -->
+                    <!-- /ko -->
+                    <!-- ko ifnot: $data.timeTillStart() > 0 -->
+                        <td data-sort="0">
+                            Currently Active
+                        </td>
+                    <!-- /ko -->
                 </tr>
             </tbody>
         </table>
