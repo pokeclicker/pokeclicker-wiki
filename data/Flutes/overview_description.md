@@ -9,7 +9,7 @@ Each active flute also provides a static +0.5% attack boost to the required gem 
 
 ### Effect
 
-The effect of each Flute is determined by your achievement bonus:
+The effect of each Flute is determined by achievement bonus:
 `(2% x (1 + Achievement Bonus))`
 
 ### List of Flutes
