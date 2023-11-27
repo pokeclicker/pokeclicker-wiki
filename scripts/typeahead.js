@@ -347,6 +347,12 @@ const searchOptions = [
     type: 'Shops',
     page: '',
   },
+  // Flutes
+  {
+    display: 'Flutes',
+    type: 'Flutes',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
