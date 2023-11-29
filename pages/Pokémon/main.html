@@ -342,6 +342,36 @@
                 <!-- /ko -->
 
                 <!--
+                    FRIEND SAFARI
+                -->
+                <!-- ko if: Wiki.pokemon.getFriendSafariDefaultEncounters().flat().includes(Wiki.pageName()) ||
+                    PokemonHelper.isObtainableAndNotEvable(Wiki.pageName()) && (PokemonHelper.calcNativeRegion(Wiki.pageName()) <= GameConstants.MAX_AVAILABLE_REGION) -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-friend-safari" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            Friend Safari
+                        </button>
+                    </h4>
+                    <div id="obtain-method-friend-safari" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <h5>Kalos</h5>
+                            <p>
+                                <span class="badge text-bg-secondary" data-bind="using: !Wiki.pokemon.getFriendSafariDefaultEncounters().flat().includes(Wiki.pageName()), as: 'requireCaught'">
+                                    <knockout data-bind="text: `In ${Wiki.pokemon.getFriendSafariEncounterLocations(Wiki.pageName())}${requireCaught ? ' 🔒' : ''}`, tooltip: {
+                                        title: requireCaught ? `${Wiki.pageName()} will become available in the Friend Safari after being obtained elsewhere.` : '',
+                                        html: true,
+                                        placement: 'bottom',
+                                        trigger: 'hover'
+                                    }"></knockout>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+
+                <!--
                     BATTLE FRONTIER
                 -->
                 <!-- ko if: $data[PokemonLocationType.BattleFrontier] -->
