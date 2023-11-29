@@ -2,6 +2,7 @@ Quest Points [[File:questPoint.svg|25px]] are the green currency earned by compl
 Quest Points can be obtained by completing like the name suggests Quests.
 The Player gets 1 Questslot after completing the Tutorial, after that at level 5,10 and 15, the 2nd, 3rd and 4th Questslot will open.
 The Formula to level your Questlevel is: 100 + (Questpoints/10)
+
 ---
 
 ## Uses
