@@ -1,2 +1,2 @@
-## Description
-Used to mega evolve Houndoom
+## Acquisition
+Battle [[Temporary Battles/Wild Houndour Horde]] near [[Routes/Kalos Route 16]], in Sunny [[Weather]]. Must have captured at least 500 [[Pokémon/Houndour]] and become Kalos Champion for the encounter to appear.
