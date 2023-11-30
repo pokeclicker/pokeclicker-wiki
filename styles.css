@@ -442,3 +442,7 @@ td.tight {
 .custom-tooltip table {
   background-color: var(--bs-body-bg);
 }
+
+.obtain-methods .accordion-button img {
+  padding-right: 10px;
+}
