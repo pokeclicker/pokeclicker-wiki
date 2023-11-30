@@ -19,14 +19,14 @@
         <tr>
             <td data-bind="text: GameConstants.camelCaseToString(name)"></td>
             <td data-bind="text: `${achievementBonus}%`"></td>
-            <td data-bind="text: AchievementHandler.achievementList.filter(a => a.category == $data).length.toLocaleString()"></td>
+            <td data-bind="text: AchievementHandler.achievementList.filter(a => a.category == $data && a.achievable()).length.toLocaleString()"></td>
         </tr>
     </tbody>
     <tfoot>
         <tr class="fw-bold">
             <td class="text-end">Total</td>
             <td data-bind="text: `${$data.reduce((sum, c) => sum += c.achievementBonus, 0).toLocaleString()}%`"></td>
-            <td data-bind="text: AchievementHandler.achievementList.length.toLocaleString()"></td>
+            <td data-bind="text: AchievementHandler.achievementList.filter(a => a.achievable()).length.toLocaleString()"></td>
         </tr>
     </tfoot>
     <!-- /ko -->
