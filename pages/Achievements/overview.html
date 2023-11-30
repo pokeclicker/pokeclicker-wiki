@@ -1,0 +1,57 @@
+<h3>Categories</h3>
+<table class="table table-bordered table-striped table-hover no-data-tables">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Max Bonus</th>
+            <th>Number of Achievements</th>
+        </tr>
+    </thead>
+    <!--
+        ko with: (() => {
+            const categories = AchievementHandler.getAchievementCategories().filter(c => (GameConstants.Region[c.name] || 0) <= GameConstants.MAX_AVAILABLE_REGION);
+            const globalIndex = categories.findIndex(c => c.name == 'global');
+            categories.unshift(categories.splice(globalIndex, 1)[0]);
+            return categories;
+        })()
+    -->
+    <tbody data-bind="foreach: $data">
+        <tr>
+            <td data-bind="text: GameConstants.camelCaseToString(name)"></td>
+            <td data-bind="text: `${achievementBonus}%`"></td>
+            <td data-bind="text: AchievementHandler.achievementList.filter(a => a.category == $data).length.toLocaleString()"></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr class="fw-bold">
+            <td class="text-end">Total</td>
+            <td data-bind="text: `${$data.reduce((sum, c) => sum += c.achievementBonus, 0).toLocaleString()}%`"></td>
+            <td data-bind="text: AchievementHandler.achievementList.length.toLocaleString()"></td>
+        </tr>
+    </tfoot>
+    <!-- /ko -->
+</table>
+
+<h3 class="mt-4">Achievement List</h3>
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Category</th>
+            <th>Bonus</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: AchievementHandler.achievementList.filter(a => a.achievable())">
+        <tr class="align-middle">
+            <td data-bind="text: $index() + 1"></td>
+            <td data-bind="text: name"></td>
+            <td data-bind="text: description"></td>
+            <td data-bind="text: GameConstants.AchievementType[property.achievementType]"></td>
+            <td data-bind="text: GameConstants.camelCaseToString(category.name)"></td>
+            <td data-bind="text: `+ ${getBonus()}%`"></td>
+        </tr>
+    </tbody>
+</table>
