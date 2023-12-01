@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="-1 0 20 20">
-  <g transform="translate(-3 -2)">
-    <path fill="whitesmoke" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.46 13.26A5 5 0 0 0 4 18v1s2 2 8 2 8-2 8-2v-1a5 5 0 0 0-3.51-4.75"/>
-    <circle cx="6" cy="6" r="6" fill="whitesmoke" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" data-name="primary" transform="translate(6 3)"/>
-  </g>
-</svg>
