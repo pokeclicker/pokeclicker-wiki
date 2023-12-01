@@ -101,7 +101,14 @@
                     </h4>
                     <div id="obtain-method-dungeon" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Dungeon])">
-                            <a class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Dungeons/${$data}` }"></a>
+                            <a class="badge text-bg-secondary" data-bind="text: $data.dungeon + `${$data.requirements ? ' 🔒' : ''}`,
+                            attr: { href: `#!Dungeons/${$data.dungeon}` },
+                            tooltip: {
+                                title: $data.requirements ?? '',
+                                html: false,
+                                placement: 'bottom',
+                                trigger: 'hover'
+                            }"></a>
                         </div>
                     </div>
                 </div>
