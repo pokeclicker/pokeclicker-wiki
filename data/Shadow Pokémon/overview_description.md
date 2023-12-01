@@ -1,4 +1,4 @@
-Shadow Pokémon are Pokémon with a shadowy aura that can be encountered in Orre, a subregion from [[Regions/Hoenn]]. They can only be encountered as part of a trainer battle and never as a wild encounter.
+Shadow Pokémon are Pokémon with a shadowy aura that can be encountered in Orre, a subregion from [[Regions/Hoenn]]. They can only be encountered as part of a trainer battle and never as a wild encounter. There are a total of **131** Pokémon that can be obtained as shadows.
 
 These Pokémon have a **0.8x** multiplier to its attack. However, they can be purified which will change the multiplier to **1.2x** instead, making Purified Pokémon stronger than a regular one.
 
