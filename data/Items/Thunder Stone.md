@@ -6,4 +6,4 @@ Base Pokémon |Evolves into |Available in
 [[Pokemon/Magneton]] |[[Pokemon/Magnezone]] |Galar only
 [[Pokemon/Eevee]] |[[Pokemon/Jolteon]] |All regions
 [[Pokemon/Eelektrik]] |[[Pokemon/Eelektross]] |Unova onward
-[[Pokemon/Charjabug]] |[[Pokemon/Vikabolt]] |Galar only
+[[Pokemon/Charjabug]] |[[Pokemon/Vikavolt]] |Galar only
