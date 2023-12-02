@@ -26,6 +26,10 @@
                         <td data-bind="html: GameConstants.formatSecondsToTime($data.growthTime[PlotStage.Bloom])"></td>
                     </tr>
                     <tr>
+                        <td>Wither Time</td>
+                        <td data-bind="html: GameConstants.formatSecondsToTime($data.growthTime[PlotStage.Berry] - $data.growthTime[PlotStage.Bloom])"></td>
+                    </tr>
+                    <tr>
                         <td>Exp</td>
                         <td data-bind="text: $data.exp"></td>
                     </tr>
