@@ -1,4 +1,4 @@
-Safari is an area available in Kanto ([[Towns/Safari Zone]]) and Kalos ([[Friend Safari]]) where the player may spend Quest Points to try and catch unique Pokémon. To unlock this area the player must first have the Safari Ticket.
+Safari is an area available in Kanto ([[Towns/Safari Zone]]) and Kalos ([[Towns/Friend Safari]]) where the player may spend Quest Points to try and catch unique Pokémon. To unlock this area the player must first have the Safari Ticket.
 
 The Pokémon can randomly spawn both on water and grass tiles, and also as sprites that can show up in both these environments. In Kanto, some Pokémon, like in the original games, only appear here.
 
