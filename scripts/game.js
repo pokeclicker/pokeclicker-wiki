@@ -54,7 +54,7 @@ App.game.keyItems.initialize();
 App.game.underground.initialize();
 App.game.specialEvents.initialize();
 QuestLineHelper.loadQuestLines();
-SafariPokemonList.generateKantoSafariList();
+SafariPokemonList.generateSafariLists();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 

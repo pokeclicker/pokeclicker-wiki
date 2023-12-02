@@ -351,7 +351,7 @@
                 <!--
                     FRIEND SAFARI
                 -->
-                <!-- ko if: Wiki.pokemon.getFriendSafariDefaultEncounters().flat().includes(Wiki.pageName()) ||
+                <!-- ko if: SafariPokemonList.list[GameConstants.Region.kalos]().find(p => p.name == Wiki.pageName()) ||
                     PokemonHelper.isObtainableAndNotEvable(Wiki.pageName()) && (PokemonHelper.calcNativeRegion(Wiki.pageName()) <= GameConstants.MAX_AVAILABLE_REGION) -->
                 <div class="accordion-item">
                     <h4 class="accordion-header">
@@ -364,8 +364,8 @@
                         <div class="accordion-body">
                             <h5>Kalos</h5>
                             <p>
-                                <span class="badge text-bg-secondary" data-bind="using: !Wiki.pokemon.getFriendSafariDefaultEncounters().flat().includes(Wiki.pageName()), as: 'requireCaught'">
-                                    <knockout data-bind="text: `In ${Wiki.pokemon.getFriendSafariEncounterLocations(Wiki.pageName())}${requireCaught ? ' 🔒' : ''}`, tooltip: {
+                                <span class="badge text-bg-secondary" data-bind="using: !(SafariPokemonList.list[GameConstants.Region.kalos]().find(p => p.name == Wiki.pageName())?.requireCaught == false), as: 'requireCaught'">
+                                    <knockout data-bind="text: `In ${SafariPokemonList.getEnvironmentByPokemonType(Wiki.pageName()).map(env => SafariEnvironments[env]).join(', ')}${requireCaught ? ' 🔒' : ''}`, tooltip: {
                                         title: requireCaught ? `${Wiki.pageName()} will become available in the Friend Safari after being obtained elsewhere.` : '',
                                         html: true,
                                         placement: 'bottom',
