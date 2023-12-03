@@ -1,4 +1,4 @@
-Base chance of dropping: 1 in 2,048.
+Base chance of dropping: 1 in 1,024.
 
 In addition to being dropped by the above Pokemon, this item can be found as an item in the [[Safari]].
 
