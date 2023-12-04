@@ -1,0 +1,1 @@
+**Note:** Contest Shop is unavailable and still in development.
