@@ -195,7 +195,7 @@
                 <!--
                     ITEM EVOLUTIONS
                 -->
-                <!-- ko if: $data[PokemonLocationType.Evolution]?.filter(e => e.stone && e.stone != GameConstants.StoneType.None).length -->
+                <!-- ko if: $data[PokemonLocationType.Evolution]?.filter(e => e.stone > GameConstants.StoneType.None).length -->
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-item-evolution" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
@@ -204,7 +204,7 @@
                         </button>
                     </h4>
                     <div id="obtain-method-item-evolution" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Evolution]?.filter(e => e.stone && e.stone != GameConstants.StoneType.None))">
+                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Evolution]?.filter(e => e.stone > GameConstants.StoneType.None))">
                             <a class="badge text-bg-secondary" data-bind="text: $data.basePokemon + `${$data.restrictions ? ' 🔒' : ''}`,
                             attr: { href: `#!Pokemon/${$data.basePokemon}` },
                             tooltip: {
