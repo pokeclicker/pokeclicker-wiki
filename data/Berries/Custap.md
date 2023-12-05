@@ -22,8 +22,8 @@ _Note: Adding 4 additional Pinkan berries allows for Custap mutations when all P
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | |
+| [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | {.mutation} | {.mutation} | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | |
 | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | {.mutation} | {.mutation} | {.mutation} | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | |
-| {.mutation} | {.mutation} | {.mutation} | {.mutation} | {.mutation} | |
-| [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | {.mutation} | {.mutation} | {.mutation} | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | |
-| [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | {.mutation} | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | |
+| [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | {.mutation} | {.mutation} | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | |
+| [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | |
 :::
