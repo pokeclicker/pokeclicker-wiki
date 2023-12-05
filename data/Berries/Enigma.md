@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-Enigma can be obtained by getting 4 different hints from the Kanto Berry Master and surrounding an empty plot with berries according to those hints. These hints depend on the Trainer ID, so each profile will have a different Enigma configuration.
+Enigma can be obtained by getting 4 different hints from the Kanto Berry Master and surrounding an empty plot with berries according to those hints. Enigma hints contain a cardinal direction and a berry. If the hint does not have a cardinal direction, then it's **not** an Enigma hint and it's instead a hint from a berry the player hasn't unlocked yet. These hints depend on the Trainer ID, so each profile will have a different Enigma configuration.
 
 You can fill your farm in the following way to obtain Enigma Berries. Purple squares indicate where mutations can occur.
 
