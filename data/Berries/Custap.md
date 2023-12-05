@@ -17,8 +17,6 @@ Custap can be obtained by having at least one empty plot and at least 600 points
 :::
 
 #### Pinkan Mutation Strategy
-_Note: Adding 4 additional Pinkan berries allows for Custap mutations when all Pinkan berries are only in the Bloom stage._
-
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | |
