@@ -203,12 +203,13 @@
                         <img width="48px" class="me-1" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
                         <a href="#!" class="text-decoration-none" data-bind="text: $data.name, attr: {href: `#!Pokemon/${$data.name}` }"></a>
                     </td>
-                    <td class="align-middle" style="display: flex; justify-content: space-around;">
+                    <td class="align-middle">
                         <div data-bind="style: {
                             backgroundImage: `url(./pokeclicker/docs/assets/images/dynamic-background/pokemon/${Math.floor(pokemonList.find(p => p.name == $data.name).id).toString().padStart(3, '0')}.png)`,
                             backgroundSize: '192px',
                             height: '48px',
                             width: '48px',
+                            margin: 'auto',
                         }"></div>
                     </td>
                     <td class="align-middle" data-bind="text: $data.weight">
@@ -239,12 +240,13 @@
                             <img width="48px" class="me-1" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
                             <a href="#!" class="text-decoration-none" data-bind="text: $data.name, attr: {href: `#!Pokemon/${$data.name}` }"></a>
                         </td>
-                        <td class="align-middle" style="display: flex; justify-content: space-around;">
+                        <td class="align-middle">
                             <div data-bind="style: {
                                 backgroundImage: `url(./pokeclicker/docs/assets/images/dynamic-background/pokemon/${Math.floor(pokemonList.find(p => p.name == $data.name).id).toString().padStart(3, '0')}.png)`,
                                 backgroundSize: '192px',
                                 height: '48px',
                                 width: '48px',
+                                margin: 'auto',
                             }"></div>
                         </td>
                         <td class="align-middle">
