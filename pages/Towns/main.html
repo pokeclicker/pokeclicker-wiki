@@ -194,6 +194,7 @@
                     <th class="text-center">Sprite</th>
                     <th class="text-center">Weight</th>
                     <th class="text-center">Environment</th>
+                    <th class="text-center">Requirement</th>
                 </tr>
             </thead>
             <tbody data-bind="foreach: SafariPokemonList.list[$data.region]().filter(p => !p.requireCaught || !p.showUncaught)">
@@ -215,6 +216,7 @@
                     <td class="align-middle">
                         <knockout data-bind="text: $data.environments.map(env => SafariEnvironments[env]).join(', ')"></knockout>
                     </td>
+                    <td class="align-middle" data-bind="text: $data.requireCaught ? 'Must be caught elsewhere first.' : 'N/A'"></td>
                 </tr>
             </tbody>
         </table>
