@@ -77313,6 +77313,9 @@ themes.options.sort((a, b) => (a.text).localeCompare(b.text));
 // Suppress game notifications
 Notifier.notify = () => {};
 
+// Ensure weather never satisfies requirements so they are always shown
+Weather.currentWeather = () => -1;
+
 // Custom binds as these aren't loaded
 player = new Player();
 player.highestRegion(1);
