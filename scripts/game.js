@@ -54,7 +54,6 @@ App.game.keyItems.initialize();
 App.game.underground.initialize();
 App.game.specialEvents.initialize();
 QuestLineHelper.loadQuestLines();
-SafariPokemonList.generateKantoSafariList();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 
@@ -63,6 +62,7 @@ DailyDeal.generateDeals(5, now);
 BerryDeal.generateDeals(now);
 GemDeal.generateDeals();
 ShardDeal.generateDeals();
+SafariPokemonList.generateSafariLists(); // This needs to be after anything that generates shopmon due to Friend Safari calcs
 
 // Farm Simulator
 App.game.farming.plotList.forEach((p) => p.isUnlocked = true); // All plots unlocked

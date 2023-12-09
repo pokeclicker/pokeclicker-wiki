@@ -56,45 +56,10 @@ const getAllAvailableShadowPokemon = () => {
         .map(d => Wiki.dungeons.getDungeonShadowPokemon(d)).flat();
 };
 
-const getFriendSafariDefaultEncounters = () => {
-    // These are not surfaced by the game code, consolidating to a single location here
-    return [
-        // Grass
-        [
-            'Shuckle',
-            'Stunfisk',
-            'Magmar',
-            'Maractus',
-            'Klefki',
-            'Breloom',
-            'Woobat',
-            'Golurk',
-            'Marowak',
-        ],
-        // Water
-        [
-            'Lapras',
-        ]
-    ];
-}
-
-const getFriendSafariEncounterLocations = (pokemonName) => {
-    const defaultEncounters = getFriendSafariDefaultEncounters();
-    for (let env of GameHelper.enumNumbers(SafariEnvironments)) {
-        if (defaultEncounters[env].includes(pokemonName)) {
-            return SafariEnvironments[env];
-        }
-    }
-
-    return `${SafariPokemonList.getEnvironmentByPokemonType(pokemonName).map(env => SafariEnvironments[env]).join(", ")}`;
-}
-
 module.exports = {
     getBreedingAttackBonus,
     calcEggSteps,
     getEfficiency,
     getBestVitamins,
     getAllAvailableShadowPokemon,
-    getFriendSafariDefaultEncounters,
-    getFriendSafariEncounterLocations,
 }

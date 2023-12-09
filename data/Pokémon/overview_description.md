@@ -36,9 +36,9 @@ The **Attack bonus** can be increased using 2 different [[Vitamins]]: [[Items/Pr
 #### Breeding Efficiency (BE)
 A Pokémon with a high base attack and a low number of egg steps will have a high Breeding Efficiency stat, which is calculated with the following formula:
 
-$BE = \frac{Attack Bonus}{Egg Cycles} * EV Bonus$
+$BE = \frac{Attack Bonus}{Egg Cycles} * EV Bonus * Shadow Status * Held Item Bonus$
 
-*Attack Bonus refers to the same value from the previous section. An Egg Cycle equals to 40 Egg Steps.*
+*Attack Bonus refers to the same value from the previous section. An Egg Cycle equals to 40 Egg Steps. Also, Held Item Bonus only applies if the Pokémon is holding an item that explicitly raises the attack.*
 
 Since [[Vitamins]] modify the Attack Bonus value, they also affect Breeding Efficiency. Individual Pokémon pages have the best Vitamin distribution to increase this statistic.
 
