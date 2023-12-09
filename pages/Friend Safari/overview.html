@@ -7,17 +7,16 @@
                 <th class="text-center">Environment</th>
             </tr>
         </thead>
-        <tbody data-bind="foreach: Wiki.pokemon.getFriendSafariDefaultEncounters().flat()">
+        <tbody data-bind="foreach: SafariPokemonList.list[GameConstants.Region.kalos]().filter(p => !p.requireCaught)">
             <tr>
                 <td class="align-middle">
-                    <img width="48px" class="me-1" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data].id + '.png'}"/>
-                    <a href="#!" class="text-decoration-none" data-bind="text: $data, attr: {href: `#!Pokemon/${$data}` }"></a>
+                    <img width="48px" class="me-1" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
+                    <a href="#!" class="text-decoration-none" data-bind="text: $data.name, attr: {href: `#!Pokemon/${$data.name}` }"></a>
+                </td>
+                <td class="align-middle" data-bind="text: $data.weight">
                 </td>
                 <td class="align-middle">
-                    2
-                </td>
-                <td class="align-middle">
-                    <knockout data-bind="text: Wiki.pokemon.getFriendSafariEncounterLocations($data)"></knockout>
+                    <knockout data-bind="text: $data.environments.map(env => SafariEnvironments[env]).join(', ')"></knockout>
                 </td>
             </tr>
         </tbody>

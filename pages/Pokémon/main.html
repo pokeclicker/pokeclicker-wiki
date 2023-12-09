@@ -334,14 +334,17 @@
                         <div class="accordion-body" data-bind="foreach: Object.entries($data[PokemonLocationType.Safari])">
                             <h5 data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0]])"></h5>
                             <p data-bind="foreach: Object.entries($data[1])">
-                                <span class="badge text-bg-secondary" data-bind="with: { chance: $data[1], requireCaught: SafariPokemonList.list[$parent[0]]().find(p => p.name == Wiki.pageName())?.requireCaught }">
-                                    <knockout data-bind="text: `Chance ${$data.chance}%${$data.requireCaught ? ' 🔒' : ''}`, tooltip: {
-                                        title: $data.requireCaught ? `${Wiki.pageName()} will become available in the Safari Zone after being obtained elsewhere.` : '',
-                                        html: true,
-                                        placement: 'bottom',
-                                        trigger: 'hover'
-                                    }"></knockout>
-                                </span>
+                                <knockout data-bind="with: { chance: $data[1], requireCaught: SafariPokemonList.list[$parent[0]]().find(p => p.name == Wiki.pageName())?.requireCaught }">
+                                    <a class="badge text-bg-secondary" data-bind="text: `Chance ${$data.chance}%${$data.requireCaught ? ' 🔒' : ''}`,
+                                        attr: { href: `#!Towns/${Object.values(TownList).find(t => t.region == $parents[1][0] && t.content.filter(c => c instanceof SafariTownContent).length).name}` },
+                                        tooltip: {
+                                            title: $data.requireCaught ? `${Wiki.pageName()} will become available in the Safari Zone after being obtained elsewhere.` : '',
+                                            html: true,
+                                            placement: 'bottom',
+                                            trigger: 'hover'
+                                        }">
+                                    </a>
+                                </knockout>
                             </p>
                         </div>
                     </div>
@@ -351,7 +354,7 @@
                 <!--
                     FRIEND SAFARI
                 -->
-                <!-- ko if: Wiki.pokemon.getFriendSafariDefaultEncounters().flat().includes(Wiki.pageName()) ||
+                <!-- ko if: SafariPokemonList.list[GameConstants.Region.kalos]().find(p => p.name == Wiki.pageName()) ||
                     PokemonHelper.isObtainableAndNotEvable(Wiki.pageName()) && (PokemonHelper.calcNativeRegion(Wiki.pageName()) <= GameConstants.MAX_AVAILABLE_REGION) -->
                 <div class="accordion-item">
                     <h4 class="accordion-header">
@@ -362,17 +365,18 @@
                     </h4>
                     <div id="obtain-method-friend-safari" class="accordion-collapse collapse">
                         <div class="accordion-body">
-                            <h5>Kalos</h5>
-                            <p>
-                                <span class="badge text-bg-secondary" data-bind="using: !Wiki.pokemon.getFriendSafariDefaultEncounters().flat().includes(Wiki.pageName()), as: 'requireCaught'">
-                                    <knockout data-bind="text: `In ${Wiki.pokemon.getFriendSafariEncounterLocations(Wiki.pageName())}${requireCaught ? ' 🔒' : ''}`, tooltip: {
-                                        title: requireCaught ? `${Wiki.pageName()} will become available in the Friend Safari after being obtained elsewhere.` : '',
-                                        html: true,
-                                        placement: 'bottom',
-                                        trigger: 'hover'
-                                    }"></knockout>
-                                </span>
-                            </p>
+                            <h5 data-bind="">Kalos</h5>
+                                <knockout data-bind="using: !(SafariPokemonList.list[GameConstants.Region.kalos]().find(p => p.name == Wiki.pageName())?.requireCaught == false), as: 'requireCaught'">
+                                    <a class="badge text-bg-secondary"  data-bind="text: `In ${SafariPokemonList.getEnvironmentByPokemonType(Wiki.pageName()).map(env => SafariEnvironments[env]).join(', ')}${requireCaught ? ' 🔒' : ''}`,
+                                        attr: { href: `#!Towns/Friend Safari` },
+                                        tooltip: {
+                                            title: requireCaught ? `${Wiki.pageName()} will become available in the Friend Safari after being obtained elsewhere.` : '',
+                                            html: true,
+                                            placement: 'bottom',
+                                            trigger: 'hover'
+                                        }">
+                                    </a>
+                                </knockout>
                         </div>
                     </div>
                 </div>
