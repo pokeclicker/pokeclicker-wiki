@@ -46,7 +46,7 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 |Egg|Pokémon|
 |---|---|
 |[[File:Fire_egg.png\|25px]] [[Items/Fire Egg]] | [[File:pokemon/390.png\|25px]] [[Pokémon/Chimchar]] |
-|[[File:Grass_egg.png\|25px]] [[Items/Grass Egg]] | [[File:pokemon/387.png\|25px]] [[Pokémon/Turtwig]], [[File:pokemon/455.png\|25px]] [[Pokémon/Carnivine]] |
+|[[File:Grass_egg.png\|25px]] [[Items/Grass Egg]] | [[File:pokemon/387.png\|25px]] [[Pokémon/Turtwig]] |
 |[[File:Water_egg.png\|25px]] [[Items/Water Egg]] | [[File:pokemon/393.png\|25px]] [[Pokémon/Piplup]] |
 |[[File:Electric_egg.png\|25px]] [[Items/Electric Egg]] | [[File:pokemon/417.png\|25px]] [[Pokémon/Pachirisu]] |
 |[[File:Fighting_egg.png\|25px]] [[Items/Fighting Egg]] | [[File:pokemon/447.png\|25px]] [[Pokémon/Riolu]] |
@@ -106,5 +106,6 @@ Munchlax can also be obtained as a Wanderer by using [[Berries/Chilan]] berries.
 ### Safari ([[Towns/Great Marsh]])
 
 * [[File:pokemon/451.png\|25px]] [[Pokémon/Skorupi]]
+* [[File:pokemon/455.png\|25px]] [[Pokémon/Carnivine]]
 
 Skorupi can be obtained as a Wanderer using [[Berries/Kebia]] berries.
