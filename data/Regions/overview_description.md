@@ -1,37 +1,37 @@
 Regions are areas in the world of Pokémon. Each new region introduces a new set of [[Routes]], [[Towns]], [[Gyms]] and [[Pokémon]]. Pokémon that are not native to a region get a damage debuff, but with each new region entered, this debuff decreases by 10%. Furthermore, some region offer unique gameplay elements.
 
 #### [[Regions/Kanto]]
-Kanto is the first region and introduces the players to the core gameplay features. There are 151 unique Pokémon to catch and breed. Step by step the players gets introduced to the mechanics of breeding and hatching Pokémon, digging up items in the Underground, growing [[Berries]] on the [[Farm]], finishing Quests, the usage of [[Oak_Items]], [[Gems]], and Achievements.
+Kanto is the first region and introduces the player to the core gameplay features. There are 151 unique Pokémon to catch and breed. Step by step the player gets introduced to the mechanics of breeding and hatching Pokémon, digging up items in the Underground, growing [[Berries]] on the [[Farm]], finishing Quests, the usage of [[Oak_Items]], [[Gems]], and Achievements.
 
 By giving [[Items/Protein]] to obtained Pokémon the amount of added damage per breeding cycle is increased. Protein becomes available towards the end of Kanto at the [[Towns/Indigo_Plateau_Kanto]].
 
-A unique feature in Kanto is the [[Towns/Safari_Zone]], where the players can freely move and catch Pokémon with the support of throwing rocks increase the capture chance and feeding bait to decrease the fleeing chance of encountered Pokémon.
+A unique feature in Kanto is the [[Towns/Safari_Zone]], where the player can freely move and catch Pokémon with the support of throwing rocks increase the capture chance and feeding bait to decrease the fleeing chance of encountered Pokémon.
 
 **Non-native Pokémon retain 20% damage
 Maximum Vitamins per Pokémon: 5**
 
 #### [[Regions/Johto]]
-Johto is the second region where the players can catch another 100 unique Pokémon. The newly introduced feature in this region is the breeding queue.
+Johto is the second region where the player can catch another 100 unique Pokémon. The newly introduced feature in this region is the breeding queue.
 This is the first region where the damage debuff becomes noticeable. Any non-native Pokémon receives a damage debuff based on the number of discovered regions. Each discovered and visited region including Kanto decreases the debuff by 10%. E.g. if the overall damage of the Pokémon was 10,000 in Kanto, it will decrease to 2,000 in Johto. Pokémon that are native to Johto deal 100% of their damage in Johto. Upon moving to Kanto via the Dock, it is vice versa. Johto-native Pokémon deal only 20% of their damage in Kanto, while the Kanto-native Pokémon deal 100% in their native region.
 
-The breeding queue allows the players to queue up 4 Pokémon besides the 4 currently breeding eggs. As soon as the Pokémon are queued up, their damage is no longer added to the overall damage of the team until they are either bred and hatched or otherwise removed from the queue.
-In Johto the players has the opportunity to get another Oak item to boost the farm.
+The breeding queue allows the player to queue up 4 Pokémon besides the 4 currently breeding eggs. As soon as the Pokémon are queued up, their damage is no longer added to the overall damage of the team until they are either bred and hatched or otherwise removed from the queue.
+In Johto the player has the opportunity to get another Oak item to boost the farm.
 
 **Non-native Pokémon retain 20% damage
 Breeding Queue in the hatchery: 4
 Maximum Vitamins per Pokémon: 10**
 
 #### [[Regions/Hoenn]]
-Hoenn is the third region and the players can catch another 135 unique Pokémon here. The players will find the last missing Oak item here and can take the challenge of the Battle Frontier. There is also a Pokémon that appears based on the current weather here. [[Items/Calcium]] becomes available for purchase.
+Hoenn is the third region and the player can catch another 135 unique Pokémon here. The player will find the last missing Oak item here and can take the challenge of the Battle Frontier. There is also a Pokémon that appears based on the current weather here. [[Items/Calcium]] becomes available for purchase.
 
-In the Battle Frontier the players can take a challenge and win great prizes, including 4 unique Pokémon. It is not necessary for the progression to Sinnoh to capture these Pokémon from the [[Battle_Frontier]]. To reach the last prize at stage 386 the players should have a minimum of 1,000,000 attack damage including all gems at maximum. Manual clicks are not possible in the Battle Frontier.
+In the Battle Frontier the player can take a challenge and win great prizes, including 4 unique Pokémon. It is not necessary for the progression to Sinnoh to capture these Pokémon from the [[Battle_Frontier]]. To reach the last prize at stage 386 the player should have a minimum of 1,000,000 attack damage including all gems at maximum. Manual clicks are not possible in the Battle Frontier.
 
 **Non-native Pokémon retain 30% damage
 Breeding Queue in the hatchery: 8
 Maximum Vitamins per Pokémon: 15**
 
 #### [[Regions/Sinnoh]]
-Sinnoh is the fourth region and 107 unique Pokémon are waiting to be caught. The players will encounter some Pokémon that only evolve when they are in a certain area. One should pay attention to the hints from the local people. At this stage it is suggested to give maximum protein at least to the Pokémon that are actively being bred.
+Sinnoh is the fourth region and 107 unique Pokémon are waiting to be caught. The player will encounter some Pokémon that only evolve when they are in a certain area. One should pay attention to the hints from the local people. At this stage it is suggested to give maximum protein at least to the Pokémon that are actively being bred.
 
 **Non-native Pokémon retain 40% damage
 Breeding Queue in the hatchery: 16
@@ -45,7 +45,7 @@ Breeding Queue in the hatchery: 32
 Maximum Vitamins per Pokémon: 25**
 
 #### [[Regions/Kalos]]
-Kalos is the sixth region and has 72 unique Pokémon to catch, breed and hatch. Some currently unobtainable forms will be added in the future. Kalos' gyms and dungeons are quite tough but offer great rewards as well. At this stage it should be easily possible for the players to give every Pokémon the maximum amount of protein.
+Kalos is the sixth region and has 72 unique Pokémon to catch, breed and hatch. Some currently unobtainable forms will be added in the future. Kalos' gyms and dungeons are quite tough but offer great rewards as well. At this stage it should be easily possible for the player to give every Pokémon the maximum amount of protein.
 
 **Non-native Pokémon retain 60% damage
 Breeding Queue in the hatchery: 64
