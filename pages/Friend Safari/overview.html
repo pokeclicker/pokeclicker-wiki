@@ -1,0 +1,24 @@
+<div class="col-sm-12 col-md-6 m-auto">
+    <table class="table table-bordered table-striped table-hover text-center">
+        <thead>
+            <tr>
+                <th class="text-center">Pokémon</th>
+                <th class="text-center">Weight</th>
+                <th class="text-center">Environment</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: SafariPokemonList.list[GameConstants.Region.kalos]().filter(p => !p.requireCaught)">
+            <tr>
+                <td class="align-middle">
+                    <img width="48px" class="me-1" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
+                    <a href="#!" class="text-decoration-none" data-bind="text: $data.name, attr: {href: `#!Pokemon/${$data.name}` }"></a>
+                </td>
+                <td class="align-middle" data-bind="text: $data.weight">
+                </td>
+                <td class="align-middle">
+                    <knockout data-bind="text: $data.environments.map(env => SafariEnvironments[env]).join(', ')"></knockout>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,2 +1,2 @@
-## Description
-Used to mega evolve (believe it or not) Rayquaza
+## Acquisition
+Progress in [[Quest Lines/The Delta Episode]] Quest Line.

@@ -160,7 +160,7 @@ const searchOptions = [
     type: 'Towns',
     page: '',
   },
-  ...Object.values(TownList).filter(t => !(t instanceof DungeonTown) && !['Safari Zone', 'Friend Safari'].includes(t.name) && t.region <= GameConstants.MAX_AVAILABLE_REGION).map(t => ({
+  ...Object.values(TownList).filter(t => !(t instanceof DungeonTown) && t.region <= GameConstants.MAX_AVAILABLE_REGION).map(t => ({
     display: t.name,
     type: 'Towns',
     page: t.name,
@@ -350,6 +350,12 @@ const searchOptions = [
   {
     display: 'Shops',
     type: 'Shops',
+    page: '',
+  },
+  // Flutes
+  {
+    display: 'Flutes',
+    type: 'Flutes',
     page: '',
   },
 ];

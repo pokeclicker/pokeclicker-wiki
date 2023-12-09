@@ -77045,7 +77045,7 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":1,"call-bind":6,"call-bind/callBound":5,"for-each":62,"gopd":66,"has-tostringtag/shams":70}],502:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
-  "version": "0.10.14",
+  "version": "0.10.17",
   "description": "PokéClicker repository",
   "main": "index.js",
   "scripts": {
@@ -77354,7 +77354,6 @@ App.game.keyItems.initialize();
 App.game.underground.initialize();
 App.game.specialEvents.initialize();
 QuestLineHelper.loadQuestLines();
-SafariPokemonList.generateKantoSafariList();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 
@@ -77363,6 +77362,7 @@ DailyDeal.generateDeals(5, now);
 BerryDeal.generateDeals(now);
 GemDeal.generateDeals();
 ShardDeal.generateDeals();
+SafariPokemonList.generateSafariLists(); // This needs to be after anything that generates shopmon due to Friend Safari calcs
 
 // Farm Simulator
 App.game.farming.plotList.forEach((p) => p.isUnlocked = true); // All plots unlocked
@@ -78188,6 +78188,19 @@ const alert = (message, type = 'primary', timeout = 5e3) => {
   }, timeout);
 }
 
+window.addEventListener("error", (event) => {
+  // Handle KO binding errors, usually occur when knockout is trying to use functions that
+  // don't exist in the cached javascript, but could also be a genuine error that slipped through
+  if (event?.error?.message?.startsWith("Unable to process binding")) {
+    alert(
+      `There was an error loading the page. Hard Refresh (Ctrl+F5 or Cmd+Shift+R) to clear the cache.
+      If this persists please post in #wiki-general on discord.`,
+      'danger',
+      3600e3
+    );
+  }
+});
+
 module.exports = {
   alert,
 };
@@ -78811,13 +78824,9 @@ const hasLootWithRequirements = (dungeon) => {
 hasLootWithRequirements.cache = new WeakMap();
 
 const getDungeonShadowPokemon = (dungeon) => {
-    // This will need to be updated to skip checking requirements once Orre XD is released
-    const shadows = [];
+    let shadows = [];
     dungeon.enemyList.forEach(enemy => {
         if (enemy instanceof DungeonTrainer) {
-            if (enemy.options?.requirement?.isCompleted() === false) {
-                return;
-            }
             enemy.getTeam().forEach(pokemon => {
                 if (pokemon.shadow == GameConstants.ShadowStatus.Shadow) {
                     shadows.push({
@@ -78831,9 +78840,6 @@ const getDungeonShadowPokemon = (dungeon) => {
     });
     dungeon.bossList.forEach(boss => {
         if (boss instanceof DungeonTrainer) {
-            if (boss.options?.requirement?.isCompleted() === false) {
-                return;
-            }
             boss.getTeam().forEach(pokemon => {
                 if (pokemon.shadow == GameConstants.ShadowStatus.Shadow) {
                     shadows.push({
@@ -78846,6 +78852,15 @@ const getDungeonShadowPokemon = (dungeon) => {
             });
         }
     });
+
+    // Some dungeons have duplicate trainers with the same shadow form, filter these out
+    shadows = shadows.reduce((unique, s) => {
+        if (!unique.some(obj => obj.pokemon === s.pokemon && obj.dungeon === s.dungeon
+            && obj.trainer.name === s.trainer.name && obj.boss === s.boss)) {
+            unique.push(s);
+        }
+        return unique;
+    }, []);
 
     return shadows;
 };
@@ -79677,7 +79692,7 @@ const searchOptions = [
     type: 'Towns',
     page: '',
   },
-  ...Object.values(TownList).filter(t => !(t instanceof DungeonTown) && !['Safari Zone', 'Friend Safari'].includes(t.name) && t.region <= GameConstants.MAX_AVAILABLE_REGION).map(t => ({
+  ...Object.values(TownList).filter(t => !(t instanceof DungeonTown) && t.region <= GameConstants.MAX_AVAILABLE_REGION).map(t => ({
     display: t.name,
     type: 'Towns',
     page: t.name,
@@ -79867,6 +79882,12 @@ const searchOptions = [
   {
     display: 'Shops',
     type: 'Shops',
+    page: '',
+  },
+  // Flutes
+  {
+    display: 'Flutes',
+    type: 'Flutes',
     page: '',
   },
 ];
