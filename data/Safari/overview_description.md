@@ -1,12 +1,10 @@
-Safari are areas available in a few regions where the player may spend Quest Points to try and catch unique Pokémon. To unlock this area the player must first have the Safari Ticket unlocked after beating [[Gyms/Fuchsia City]]'s Gym. The Pokémon can randomly spawn both on water and grass tiles, and also as sprites that can show up in both these environments.
+Safari is an area available in Kanto ([[Towns/Safari Zone]]), Johto ([[Towns/National Park]]), Sinnoh ([[Towns/Great_Marsh]]) and Kalos ([[Towns/Friend Safari]]) where the player may spend Quest Points to try and catch unique Pokémon. To unlock this area the player must first have the Safari Ticket.
 
-Currently there are 4 Safari Zones:
-- [[Towns/Safari Zone]] in Kanto.
-- [[Towns/National Park]] in Johto.
-- [[Towns/Great Marsh]] in Sinnoh.
-- [[Towns/Friend Safari]] in Kalos.
+The Pokémon can randomly spawn both on water and grass tiles, and also as sprites that can show up in both these environments. In Kanto, some Pokémon, like in the original games, only appear here.
 
-Also, National Park in Johto is unique in the sense that each successful capture in this location will award the player with **Contest Tokens**.
+In Kalos' Friend Safari, the Pokémon that show up change daily according to the player's trainer ID. Each day, 5 Pokémon will get randomly chosen which can be checked with the Safari Ranger NPC. Only those Pokémon that **cannot gain EVs in any other place** may show up in the Friend Safari and only if the player has captured them previously. If the player hasn't, then the Pokémon will show up as a silhouette and cannot be encountered. Even if all daily Pokémon are currently unavailable to the player, Friend Safari has a list of Pokémon that always show up, no matter what. These Pokémon have a lower encounter rate in comparison to the 5 daily ones.
+
+To check the encounter list, please check the appropriate page: [[Towns/Safari Zone]] for Kanto and [[Towns/Friend Safari]] for Kalos.
 
 ## Actions
 Upon entering the Safari, the player receives 30 Safari Balls. The player may exit and reenter the Safari without paying the Quest Point fee again provided they still have Safari balls. As long as the game isn't closed, they only need to pay the fee if they run out of Safari balls and need to reenter to get more.
@@ -82,7 +80,7 @@ Safari Level affects this value using the following formula:
 
 $Catch Chance = (\frac{CatchRate}{6}) + Magic Ball + (Multiplier * 10)$
 
-Where **CatchRate** is the Pokémon's base catch rate.
+Where **CatchRate** is the Pokémon's base catch rate. Check [[Pokémon]] page for this value.
 
 This is further modified by the effect of rocks (Angry status) and berries (Eating status). If **Eating** status:
 
@@ -134,4 +132,4 @@ After successfully capturing a Pokémon, there is a chance for an item to spawn.
 
 $ItemChance = 39\% + (1\% * Safari Level)$
 
-The items that can be obtained are different between the Safari locations. Check each individual Safari page for more information.
+The items that can be obtained are different between the Safari locations.
