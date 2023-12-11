@@ -97,7 +97,7 @@ The chances to encounter loot from **Rare tier** and rarer **increases with ever
 #### Tier info
 The loots of one tier share the chances.
 Tier | 0 clears | 100 clears | 250 clears | 500 clears | Debuffed {.no-data-tables}
-:--- | ---:
+:--- | ---: | ---: | ---: | ---: | ---:
 [[File:chest-common.png\|40px]] Common | 75% | 72% | 67.5% | 60% | 75%
 [[File:chest-rare.png\|40px]] Rare | 20% | 20.99% | 22.475% | 24.95% | 24%
 [[File:chest-epic.png\|40px]] Epic | 4% | 5.2% | 7% | 10% | 0.9%
