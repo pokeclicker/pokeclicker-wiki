@@ -95,7 +95,7 @@ The chances to encounter loot from **Rare tier** and rarer **increases with ever
 *Note: Dungeons that lack any items in a particular loot tier have the remaining odds from the non-present tier(s) distributed proportionally among the present tiers*
 
 #### Tier info
-The loots of one tier share the chances.
+The chances for each tier are the sum of the chances of all items within said tier.
 Tier | 0 clears | 100 clears | 250 clears | 500 clears | Debuffed {.no-data-tables}
 :--- | ---: | ---: | ---: | ---: | ---:
 [[File:chest-common.png\|40px]] Common | 75% | 72% | 67.5% | 60% | 75%
