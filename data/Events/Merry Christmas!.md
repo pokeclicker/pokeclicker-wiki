@@ -3,7 +3,7 @@
 | Pokémon | Location | Encounter Type |
 | :--- | :---: | :--- |
 | [[File:pokemon/143.02.png\|25px]] [[Pokémon/Santa Snorlax]] | All Regions | Roamer |
-| [[File:pokemon/143.03.png\|25px]] [[Pokémon/Snorlax (Snowman)]] | [[Dungeons/Seafoam Islands]] | Mimic |
+| [[File:pokemon/143.03.png\|25px]] [[Pokémon/Snorlax (Snowman)]] | [[Dungeons/Seafoam Islands]] | Mimic (Dungeon Chest) |
 | [[File:pokemon/124.01.png\|25px]] [[Pokémon/Santa Jynx]]\* | Kanto | Routes |
 | [[File:pokemon/234.01.png\|25px]] [[Pokémon/Reindeer Stantler]] | Johto | Roamer |
 | [[File:pokemon/251.02.png\|25px]] [[Pokémon/Grinch Celebi]] | [[Dungeons/Ilex Forest]] | Dungeon Boss |
