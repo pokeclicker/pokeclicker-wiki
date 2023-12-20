@@ -17,7 +17,7 @@
             <td data-bind="text: description"></td>
             <td class="text-center" data-bind="text: `${catchTime / 1000}s`"></td>
             <td class="text-center" data-bind="text: (() => {
-                const match = catchBonus.toString().match(/^\(\)\s+=>\s+(\d+)$/);
+                const match = catchBonus.toString().match(/^\(\)\s*=>\s*(\d+)$/);
                 return match ? `${match[1]}%` : 'Variable';
             })()"></td>
             <td data-bind="html: Wiki.md.renderInline(Wiki.gameHelper.requirementHints(unlockRequirement).join('<br/>')) || '-'"></td>
