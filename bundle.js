@@ -80035,6 +80035,12 @@ const searchOptions = [
     type: 'Flutes',
     page: '',
   },
+  // Pokéballs
+  {
+    display: 'Pokéballs',
+    type: 'Pokéballs',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
