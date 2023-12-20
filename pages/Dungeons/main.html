@@ -86,7 +86,7 @@
                                 <span data-bind="text: $data.name + `${$data.options ? ($data.options.requirement ? ' 🔒' : '') : ''}`,
                                 tooltip: {
                                     title: $data.options?.requirement ? Wiki.gameHelper.requirementHints($data.options.requirement, false).join('<br/>') : '',
-                                    html: false,
+                                    html: true,
                                     trigger: 'hover'
                                 }"></span>
                                 <!-- ko with: $data.team.map((p) => `${p.name}${p.shadow ? '<img width="15px" class="ms-1" src="./pokeclicker/docs/assets/images/status/shadow.svg" title="Shadow"/>' : ''}`).join(', ') -->
