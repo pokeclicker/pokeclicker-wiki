@@ -20,12 +20,20 @@ const requirementHints = (requirement, includeMarkdown = true) => {
                     break;
                 case ClearDungeonRequirement:
                     const dungeonName = GameConstants.RegionDungeons.flat()[req.dungeonIndex];
-                    hint = `Clear the ${includeMarkdown ? `[[Dungeons/${dungeonName}]]` : dungeonName} dungeon ${req.requiredValue} or more time(s).`;
+                    hint = req.option == GameConstants.AchievementOption.more
+                        ? `Clear the ${includeMarkdown ? `[[Dungeons/${dungeonName}]]` : dungeonName} dungeon ${req.requiredValue} or more time(s).`
+                        : `No longer appears after clearing the ${includeMarkdown ? `[[Dungeons/${dungeonName}]]` : dungeonName} dungeon ${req.requiredValue} time(s).`;
                     break;
                 case QuestLineStepCompletedRequirement:
-                    hint = req.option == GameConstants.AchievementOption.equal
-                        ? `Complete step ${req.questIndex + 1} in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
-                        : `Have not completed step ${req.questIndex + 1} in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
+                    if (typeof req.questIndex === 'function') {
+                        hint = req.option == GameConstants.AchievementOption.equal
+                            ? `Progress in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
+                            : `Have not progessed to a certain step in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
+                    } else {
+                        hint = req.option == GameConstants.AchievementOption.equal
+                            ? `Complete step ${req.questIndex + 1} in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
+                            : `Have not completed step ${req.questIndex + 1} in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
+                    }
                     break;
                 case QuestLineCompletedRequirement:
                     hint = `Complete the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
