@@ -77498,6 +77498,7 @@ App.game.specialEvents.initialize();
 QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
+AchievementHandler.initialize(multiplier, new Challenges());
 
 const now = new Date();
 DailyDeal.generateDeals(5, now);
@@ -80033,6 +80034,12 @@ const searchOptions = [
   {
     display: 'Flutes',
     type: 'Flutes',
+    page: '',
+  },
+  // Achievements
+  {
+    display: 'Achievements',
+    type: 'Achievements',
     page: '',
   },
 ];

@@ -59,6 +59,7 @@ App.game.specialEvents.initialize();
 QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
+AchievementHandler.initialize(multiplier, new Challenges());
 
 const now = new Date();
 DailyDeal.generateDeals(5, now);

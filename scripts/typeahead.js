@@ -353,6 +353,12 @@ const searchOptions = [
     type: 'Flutes',
     page: '',
   },
+  // Achievements
+  {
+    display: 'Achievements',
+    type: 'Achievements',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
