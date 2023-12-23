@@ -13,6 +13,9 @@ themes.options.sort((a, b) => (a.text).localeCompare(b.text));
 // Suppress game notifications
 Notifier.notify = () => {};
 
+// Ensure weather never satisfies requirements so they are always shown
+Weather.currentWeather = () => -1;
+
 // Custom binds as these aren't loaded
 player = new Player();
 player.highestRegion(1);
@@ -54,7 +57,6 @@ App.game.keyItems.initialize();
 App.game.underground.initialize();
 App.game.specialEvents.initialize();
 QuestLineHelper.loadQuestLines();
-SafariPokemonList.generateKantoSafariList();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 AchievementHandler.initialize(multiplier, new Challenges());
@@ -64,6 +66,7 @@ DailyDeal.generateDeals(5, now);
 BerryDeal.generateDeals(now);
 GemDeal.generateDeals();
 ShardDeal.generateDeals();
+SafariPokemonList.generateSafariLists(); // This needs to be after anything that generates shopmon due to Friend Safari calcs
 
 // Farm Simulator
 App.game.farming.plotList.forEach((p) => p.isUnlocked = true); // All plots unlocked

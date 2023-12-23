@@ -33,13 +33,12 @@ For the evolution to happen, you must equip the Held Item to the corresponding P
 ### Shopmons
 |Location|Pokémon|Cost|
 |---|---|---|
-|[[Towns/Pastoria City]] | [[File:pokemon/451.png\|25px]] [[Pokémon/Skorupi]]|[[File:questPoint.svg\|20px]] 6,750|
 |[[Towns/Solaceon Town]] | [[File:pokemon/442.png\|25px]] [[Pokémon/Spiritomb]]|[[File:questPoint.svg\|20px]] 6,750|
 |[[Towns/Pal Park]] | [[File:pokemon/415.png\|25px]] [[Pokémon/Combee]]|[[File:questPoint.svg\|20px]] 6,750|
 |[[Towns/Pal Park]] | [[File:pokemon/412.png\|25px]] [[Pokémon/Burmy (Plant)]]|[[File:questPoint.svg\|20px]] 6,750|
 |[[Towns/Pal Park]] | [[File:pokemon/420.png\|25px]] [[Pokémon/Cherubi]]|[[File:questPoint.svg\|20px]] 6,750|
 
-Skorupi can be obtained as a Wanderer using [[Berries/Kebia]] berries. Combee, Burmy (Plant), and Cherubi can also all commonly be obtained as [[Wandering Pokémon]] in the Farm.
+Combee, Burmy (Plant), and Cherubi can all commonly be obtained as [[Wandering Pokémon]] in the Farm.
 Also, there may or may not be a Secret Berry Shop somewhere to be found.
 
 ### Eggs
@@ -47,7 +46,7 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 |Egg|Pokémon|
 |---|---|
 |[[File:Fire_egg.png\|25px]] [[Items/Fire Egg]] | [[File:pokemon/390.png\|25px]] [[Pokémon/Chimchar]] |
-|[[File:Grass_egg.png\|25px]] [[Items/Grass Egg]] | [[File:pokemon/387.png\|25px]] [[Pokémon/Turtwig]], [[File:pokemon/455.png\|25px]] [[Pokémon/Carnivine]] |
+|[[File:Grass_egg.png\|25px]] [[Items/Grass Egg]] | [[File:pokemon/387.png\|25px]] [[Pokémon/Turtwig]] |
 |[[File:Water_egg.png\|25px]] [[Items/Water Egg]] | [[File:pokemon/393.png\|25px]] [[Pokémon/Piplup]] |
 |[[File:Electric_egg.png\|25px]] [[Items/Electric Egg]] | [[File:pokemon/417.png\|25px]] [[Pokémon/Pachirisu]] |
 |[[File:Fighting_egg.png\|25px]] [[Items/Fighting Egg]] | [[File:pokemon/447.png\|25px]] [[Pokémon/Riolu]] |
@@ -103,3 +102,10 @@ Munchlax can also be obtained as a Wanderer by using [[Berries/Chilan]] berries.
 | [[File:pokemon/488.png\|25px]] [[Pokémon/Cresselia]]|Unlocks after clearing [[Dungeons/Fullmoon Island]]|
 
 **Note:** Manaphy will be awarded to the player after completing [[Quest Lines/Recover the Previous Egg]] Quest Line. It can also be obtained as a Wanderer by using [[Berries/Liechi]] berries.
+
+### Safari ([[Towns/Great Marsh]])
+
+* [[File:pokemon/451.png\|25px]] [[Pokémon/Skorupi]]
+* [[File:pokemon/455.png\|25px]] [[Pokémon/Carnivine]]
+
+Skorupi can be obtained as a Wanderer using [[Berries/Kebia]] berries.

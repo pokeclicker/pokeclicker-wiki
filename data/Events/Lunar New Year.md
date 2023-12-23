@@ -22,3 +22,5 @@ Pokémon | Location | Encounter Type
 [[Pokémon/Vivillon (Elegant)]] | [[Dungeons/Lost Hotel]] | Dungeon Boss
 [[Pokémon/Vivillon (Icy Snow)]] | [[Dungeons/Frost Cavern]] | Dungeon Boss
 [[Pokémon/Vivillon (Poké Ball)]] | [[Dungeons/Thrifty Megamart]] | Dungeon Boss
+
+**Note:** Except Fancy and Meadow, the Vivillon will only appear in their respective locations if the player has captured them already as part of [[Quest Lines/The Great Vivillon Hunt!]] Quest Line.
