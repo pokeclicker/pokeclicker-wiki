@@ -3,7 +3,7 @@ Base Pokémon |Evolves into |Available in
 :---|:---|:--
 [[File:pokemon/42.png\|25px]] [[Pokemon/Golbat]] | [[File:pokemon/169.png\|25px]] [[Pokemon/Crobat]] | Johto onward
 [[File:pokemon/113.png\|25px]] [[Pokemon/Chansey]] | [[File:pokemon/242.png\|25px]] [[Pokemon/Blissey]] | Johto onward
-[[File:pokemon/113.1.png\|25px]] [[Pokemon/Charity Chansey]] | [[File:pokemon/242.1.png\|25px]] [[Pokemon/Blessing Blissey]] | Johto onward
+[[File:pokemon/113.01.png\|25px]] [[Pokemon/Charity Chansey]] | [[File:pokemon/242.01.png\|25px]] [[Pokemon/Blessing Blissey]] | Johto onward
 [[File:pokemon/133.png\|25px]] [[Pokemon/Eevee]] | [[File:pokemon/197.png\|25px]] [[Pokemon/Umbreon]] | Johto onward during the night
 [[File:pokemon/133.png\|25px]] [[Pokemon/Eevee]] | [[File:pokemon/196.png\|25px]] [[Pokemon/Espeon]] | Johto onward during the day
 [[File:pokemon/172.png\|25px]] [[Pokemon/Pichu]] | [[File:pokemon/25.png\|25px]] [[Pokemon/Pikachu]] | Johto onward
