@@ -1,5 +1,5 @@
 ## Use
-Base Pokémon |Evolves into |Avalible in
+Base Pokémon |Evolves into |Available in
 :---|:---|:--
 [[File:pokemon/64.png\|25px]] [[Pokemon/Kadabra]] | [[File:pokemon/65.png\|25px]] [[Pokemon/Alakazam]] | All regions
 [[File:pokemon/67.png\|25px]] [[Pokemon/Machoke]] | [[File:pokemon/68.png\|25px]] [[Pokemon/Machamp]] |All regions
