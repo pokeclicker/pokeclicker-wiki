@@ -17,3 +17,4 @@ Black and White DNA | 1/45
 Pure, Solar and Lunar Light | 1/75
 Rust Shield and Sword | 1/90
 White and Black Mane | 1/10
+Christmas Present | 1/10
