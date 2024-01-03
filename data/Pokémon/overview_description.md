@@ -61,6 +61,7 @@ There are exceptions to this rule:
 * All Mega Evolved Pokémon have 1.5x the egg cycle value of their base form.
 
 ### Other Pokémon Lists
+- [[Alternate Pokémon Forms]] page lists all alternate forms available in the game, including Regional forms, and the corresponding base Pokémon.
 - [[Mega Pokémon]] page has details about which Pokémon can Mega Evolve and the requirements necessary to do so.
 - [[Baby Pokémon]] page has a list of all Baby Pokémon available in the game and the Region needed to acquire them.
 - [[Wandering Pokémon]] page has all available wanderer Pokémon, as in, the Pokémon that can show up in the farm.
