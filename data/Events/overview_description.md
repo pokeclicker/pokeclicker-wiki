@@ -1,1 +1,3 @@
 Events are limited-time periods in which players are given the chance to capture unique Pokémon. Events usually occur in conjunction with real-world holidays (e.g. Halloween, Christmas), or coincide with the anniversary of important events in the Pokémon franchise (e.g. release of the first movie, release of Pokémon GO). In most cases, the special Pokémon are added to region Roamer pools. These Events may also be started at any point by using the [[Items/Event Calendar]] purchasable in [[Towns/Hammerlocke]].
+
+**Note:** "Cost to Activate" shows the Quest Points needed to activate the Event "today", as in, from the player's current local time.
