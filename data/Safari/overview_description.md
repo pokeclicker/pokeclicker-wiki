@@ -1,12 +1,4 @@
-Safari are areas available in a few regions where the player may spend Quest Points to try and catch unique Pokémon. To unlock this area the player must first have the Safari Ticket unlocked after beating [[Gyms/Fuchsia City]]'s Gym. The Pokémon can randomly spawn both on water and grass tiles, and also as sprites that can show up in both these environments.
-
-Currently there are 4 Safari Zones:
-- [[Towns/Safari Zone]] in Kanto.
-- [[Towns/National Park]] in Johto.
-- [[Towns/Great Marsh]] in Sinnoh.
-- [[Towns/Friend Safari]] in Kalos.
-
-Also, National Park in Johto is unique in the sense that each successful capture in this location will award the player with **Contest Tokens**.
+Safari is an area available in Kanto ([[Towns/Safari Zone]]), Johto ([[Towns/National Park]]), Sinnoh ([[Towns/Great_Marsh]]) and Kalos ([[Towns/Friend Safari]]); where the player may spend Quest Points to try and catch unique Pokémon. To unlock this area the player must first have the Safari Ticket which is acquired after beating [[Gyms/Fuchsia City]]'s Gym. The Pokémon can randomly spawn both on water and grass tiles, and also as sprites that can show up in both these environments.
 
 ## Actions
 Upon entering the Safari, the player receives 30 Safari Balls. The player may exit and reenter the Safari without paying the Quest Point fee again provided they still have Safari balls. As long as the game isn't closed, they only need to pay the fee if they run out of Safari balls and need to reenter to get more.
@@ -134,4 +126,4 @@ After successfully capturing a Pokémon, there is a chance for an item to spawn.
 
 $ItemChance = 39\% + (1\% * Safari Level)$
 
-The items that can be obtained are different between the Safari locations. Check each individual Safari page for more information.
+The items that can be obtained are different between the Safari locations.

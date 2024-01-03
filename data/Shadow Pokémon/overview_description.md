@@ -4,7 +4,7 @@ These Pokémon have a **0.8x** multiplier to its attack. However, they can be pu
 
 To purify a Shadow Pokémon, the player needs to gain Flow. **1 Flow** is gained every **1,000 experience points** the Shadow and Purified Pokémon gain. Once enough Flow is acquired, purification can be done in [[Towns/Relic Stone]] in Orre. The Flow that is needed to purify a Shadow Pokémon increases with each purification and it follows this formula:
 
-$Flow = [10 * Purified^2 + 10 * Purified + 1000 * e^{(0.1 * Purified)}]$
+$Flow = [15 * Purified^2 + 15 * Purified + 1500 * e^{(0.1 * Purified)}]$
 
 Shadow Pokémon can also equip special Held Items that boost experience gain called Scents. Currently, there are three Scents in the game: [[Items/Joy Scent]], [[Items/Vivid Scent]], and [[Items/Excite Scent]].
 
