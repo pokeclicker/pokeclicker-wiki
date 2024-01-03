@@ -28,6 +28,11 @@ const searchOptions = [
     page: p.name,
   })),
   {
+    display: 'Alternate Pokémon Forms',
+    type: 'Alternate Pokémon Forms',
+    page: '',
+  },
+  {
     display: 'Mega Pokémon',
     type: 'Mega Pokémon',
     page: '',
@@ -351,6 +356,12 @@ const searchOptions = [
   {
     display: 'Flutes',
     type: 'Flutes',
+    page: '',
+  },
+  // Achievements
+  {
+    display: 'Achievements',
+    type: 'Achievements',
     page: '',
   },
   // Pokéballs
