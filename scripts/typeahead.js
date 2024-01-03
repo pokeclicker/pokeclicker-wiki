@@ -364,10 +364,15 @@ const searchOptions = [
     type: 'Achievements',
     page: '',
   },
-  // Pokéballs
+  // Poké Balls
+  {
+    display: 'Poké Balls',
+    type: 'Poké Balls',
+    page: '',
+  },
   {
     display: 'Pokéballs',
-    type: 'Pokéballs',
+    type: 'Poké Balls',
     page: '',
   },
 ];
