@@ -1,2 +1,2 @@
-## Description
-Used to mega evolve Sableye
+## Acquisition
+Found by digging in the Underground.

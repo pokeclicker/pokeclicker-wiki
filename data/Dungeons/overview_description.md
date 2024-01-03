@@ -95,13 +95,14 @@ The chances to encounter loot from **Rare tier** and rarer **increases with ever
 *Note: Dungeons that lack any items in a particular loot tier have the remaining odds from the non-present tier(s) distributed proportionally among the present tiers*
 
 #### Tier info
-Tier | Base Loot Chance (sum of all items of the tier) {.no-data-tables}
-:--- | ---:
-[[File:chest-common.png\|40px]] Common | 75%
-[[File:chest-rare.png\|40px]] Rare | 20%
-[[File:chest-epic.png\|40px]] Epic | 4%
-[[File:chest-legendary.png\|40px]] Legendary | 0.99%
-[[File:chest-mythic.png\|40px]] Mythic | 0.01%
+The chances for each tier are the sum of the chances of all items within said tier.
+Tier | 0 clears | 100 clears | 250 clears | 500 clears | Debuffed {.no-data-tables}
+:--- | ---: | ---: | ---: | ---: | ---:
+[[File:chest-common.png\|40px]] Common | 75% | 72% | 67.5% | 60% | 75%
+[[File:chest-rare.png\|40px]] Rare | 20% | 20.99% | 22.475% | 24.95% | 24%
+[[File:chest-epic.png\|40px]] Epic | 4% | 5.2% | 7% | 10% | 0.9%
+[[File:chest-legendary.png\|40px]] Legendary | 0.99% | 1.59% | 2.49% | 3.99% | 0.099%
+[[File:chest-mythic.png\|40px]] Mythic | 0.01% | 0.22% | 0.535% | 1.06% | 0.001%
 
 **Example 1:** Mt. Moon has XClick and Greatball as 2 of its 5 lootable items from Dungeon chests. The XClick is in the **Common** Tier while the Greatball has the **Mythic** Tier. This means that the XClick is much more likely to drop from a chest than a Greatball.
 

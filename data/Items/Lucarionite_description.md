@@ -1,2 +1,2 @@
-## Description
-Used to mega evolve Lucario
+## Acquisition
+Defeat [[Temporary Battles/Korrina]] in [[Towns/Shalour City]].

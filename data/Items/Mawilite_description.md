@@ -1,2 +1,2 @@
-## Description
-Used to mega evolve Mawile
+## Acquisition
+Found by digging in the Underground.

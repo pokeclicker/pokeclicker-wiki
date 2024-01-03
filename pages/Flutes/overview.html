@@ -1,0 +1,35 @@
+<table class="table table-bordered table-striped table-hover no-data-tables">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Effect</th>
+            <th>Consumed Gems</th>
+            <th>Purchase Location</th>
+            <th>Purchase Cost</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: { data: Object.values(ItemList).filter(i => i instanceof FluteItem), as: 'flute' }">
+        <tr class="align-middle" data-bind="let: {
+            gemMasterShop: Object.keys(GemDeal.list).find(key => GemDeal.list[key]().find(d => d.item.itemType == flute))
+        }">
+            <td>
+                <img width="24px" class="me-1" data-bind="attr: { src: `./pokeclicker/docs/${flute.image}` }">
+                <ko data-bind="text: flute.displayName"></ko>
+            </td>
+            <td data-bind="text: `Bonus to ${flute.description}`"></td>
+            <td data-bind="foreach: flute.gemTypes">
+                <img width="24px" data-bind="attr: { src: `./pokeclicker/docs/${Gems.image(PokemonType[$data])}` }">
+                <ko class="me-1" data-bind="text: $data"></ko>
+            </td>
+            <td data-bind="with: Object.values(TownList).find(t => t.content.find(c => c instanceof GemMasterShop && c.shop == gemMasterShop))">
+                <a href="#!" class="text-decoration-none" data-bind="text: $data.name, attr: { href: `#!Towns/${$data.name}` }"></a>
+            </td>
+            <td data-bind="foreach: GemDeal.list[gemMasterShop]().find(d => d.item.itemType == flute).gems">
+                <div>
+                    <img width="24" data-bind="attr: { src: `./images/${PokemonType[$data.gemType]} Gem.png` }" />
+                    <ko data-bind="text: `${$data.amount.toLocaleString()} x ${PokemonType[$data.gemType]}`"></ko>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
