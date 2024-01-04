@@ -1,7 +1,7 @@
 # Special Effect
 This ball has the same catch rate as a [[Poké Ball]].
 
-When capturing a Pokémon with this ball you will get a random currency instead of dungeon tokens.
+When capturing a Pokémon with this ball you will get a random currency.
 
 The currency rewarded for a catch is calculated as such:
 $CurrencyReward=⌈BaseDungeonTokens * CurrencyMultiplier⌉$
