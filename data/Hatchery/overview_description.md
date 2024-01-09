@@ -25,7 +25,7 @@ When an Egg/Fossil in the Hatchery has obtained the required number of Egg Steps
 
 Baby Pokémon are Pokémon obtained exclusively through Breeding the evolved stage of that Pokémon. The first time a Baby Pokémon is hatched the player will obtain both the original evolved stage, and the baby stage of that Pokémon.
 
-The 25% increase to a Pokémon's Base Attack through breeding can be increased through the use of [[Protein]]. Proteins increase the Attack bonus from Breeding by 1 for each Protein used on an individual Pokémon. Consult [[Protein]] for further information on Breeding Efficiency using Proteins.
+The 25% increase to a Pokémon's Base Attack through breeding can be increased through the use of [[Items/Protein]]. Proteins increase the Attack bonus from Breeding by 1 for each Protein used on an individual Pokémon. Consult [[Items/Protein]] for further information on Breeding Efficiency using Proteins.
 
 Breeding Pokémon also offers the highest shiny odds in the game (alongside [[Wandering Pokémon]] and [[Shop Pokémon]]) at 1/1024. Consult [[Shiny Chance]] for further information on Shiny Odds using the Hatchery.
 
