@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain Kabuto
+Can be put in the hatchery to obtain [[Pokémon/Kabuto]]

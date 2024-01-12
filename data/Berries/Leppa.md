@@ -1,4 +1,4 @@
-#### Mutations 
+#### Mutations
 Leppa Berries can mutate into the following Berries.
 
 | Used In                                       | Other Requirements |
@@ -9,7 +9,7 @@ Leppa Berries can mutate into the following Berries.
 | [[File:Cornn.png\|32px]] [[Berries/Cornn]]    | [[File:Bluk.png\|32px]] [[Berries/Bluk]] [[File:Wiki.png\|32px]] [[Berries/Wiki]] |
 
 ### Acquisition
-Leppa Berries can be obtained from the following dungeons.
+Leppa Berries can drop from any route and can also be obtained from the following dungeons.
 
 | Location	                    | Tier	    | Requirement   |
 | :---:                         | :---:     | :---:         |

@@ -1,5 +1,5 @@
 ## Usage
-While using the Battle Café, there are a number of factors that contribute to the [[Pokemon/Alcremie]] *(or [[Pokemon/Milcery]])*. Those factors are as follows:
+While using the Battle Café, there are a number of factors that contribute to the [Alcremie](#!Pokémon/Alcremie_(Strawberry_Vanilla)) *(or [[Pokemon/Milcery]])*. Those factors are as follows:
 - **Sweet Type** — Determined by the player. One of seven possible options, which are outlined below.
 - **Spin Duration** — Determined by the player. A number that is greater than zero. *(`3` by default.)*
 - **Spin Direction** — Determined by the player. Clockwise or counterclockwise.
@@ -10,6 +10,8 @@ While using the Battle Café, there are a number of factors that contribute to t
 Day               | 6:00 AM - 5:59 PM         | 06:00 - 17:59
 Dusk              | 5:00 PM - 5:59 PM         | 17:00 - 17:59
 Night             | 6:00 PM - 5:59 AM         | 18:00 - 05:59
+
+The player starts with **3 daily spins**. Every full set of one sweet type, full shiny set, and full resistant set, will give the player 1 extra spin per day up to a maximum of **24 daily spins**.
 
 ### Berry Costs
 Each sweet type requires a fixed quantity of three different types of berries. The player will need to possess the requisite number of each kind of berry to be able to spin on that sweet type and those berries will be lost. *(This means that caution should be taken so the last berry of a certain kind isn't lost while performing a spin.)* The seven sweet types and their associated berry costs are outlined below.
@@ -39,7 +41,7 @@ Ribbon          | 3,000 [[Berries/Bluk]] [[File:Bluk.png\|20px]]
 ^^              | 100 [[Berries/Payapa]] [[File:Payapa.png\|20px]]
 
 ## Possible Forms
-Outlined below are all of the possible combinations of Battle Café settings and the [[Pokemon/Alcremie]] or [[Pokemon/Milcery]] form that is obtained as a result.
+Outlined below are all of the possible combinations of Battle Café settings and the [Alcremie](#!Pokémon/Alcremie_(Strawberry_Vanilla)) or [[Pokemon/Milcery]] form that is obtained as a result.
 
 **Sweet Type**  | **Time**  | **Spin Duration** | **Direction**     | **Pokémon**
 :---:           | :---:     | :---:     | :---:             | :---:

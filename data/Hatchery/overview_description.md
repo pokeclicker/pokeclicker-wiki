@@ -8,7 +8,16 @@ As soon as [[Routes/Kanto Route 3]] is cleared, the Pokémon Day Care can be acc
 
 There are three different types of hatch-able resources in Pokéclicker: obtained Pokémon Eggs, Fossils, and already obtained level 100 Pokémon. Pokémon Eggs are typically purchased in Shops and Fossils are typically mined from the [[Underground]]. The Egg/Fossil/Obtained Pokémon that can be bred each have their own distinct tab in the Pokémon Day Care modal.
 
-Clicking on the desired Egg/Fossil/Level 100 Pokémon will result in it being added to the Hatchery. The Hatchery only has 4 slots, but Breeding Queue slots can be unlocked in each new Region (See Upgrades Below). The Breeding Queue automatically adds queued Pokémon to the Hatchery if there is space. If there is a Pokémon in the queue, Eggs/Fossils that are ready to hatch will do so and be replaced by the queued Pokémon.
+Clicking on the desired Egg/Fossil/Level 100 Pokémon will result in it being added to the Hatchery. The Hatchery only has 4 slots, one available from the start and 3 need that need to be unlocked:
+
+| Slot | Cost |
+|---|---|
+| 1 | 0 [[File:questPoint.svg\|25px]] |
+| 2 | 1,000 [[File:questPoint.svg\|25px]] |
+| 3 | 1,500 [[File:questPoint.svg\|25px]] |
+| 4 | 2,000 [[File:questPoint.svg\|25px]] |
+
+Later, the player can acquire Breeding Queue slots which are unlocked in each new Region (See Upgrades Below). The Breeding Queue automatically adds queued Pokémon to the Hatchery if there is space. If there is a Pokémon in the queue, Eggs/Fossils that are ready to hatch will do so and be replaced by the queued Pokémon.
 
 Each Pokémon has a certain number of Egg Steps required before it can hatch from an Egg. Consult [[Pokémon]] for egg steps for all Pokémon. Egg Steps are gained through defeating Pokémon. [[Routes]], [[Gyms]], and [[Dungeons]] all yield different numbers of Egg Steps per Pokémon defeated, although the Egg Steps yielded generally scales with the difficulty of the Route, Gym, or Dungeon.
 
@@ -16,7 +25,7 @@ When an Egg/Fossil in the Hatchery has obtained the required number of Egg Steps
 
 Baby Pokémon are Pokémon obtained exclusively through Breeding the evolved stage of that Pokémon. The first time a Baby Pokémon is hatched the player will obtain both the original evolved stage, and the baby stage of that Pokémon.
 
-The 25% increase to a Pokémon's Base Attack through breeding can be increased through the use of [[Protein]]. Proteins increase the Attack bonus from Breeding by 1 for each Protein used on an individual Pokémon. Consult [[Protein]] for further information on Breeding Efficiency using Proteins.
+The 25% increase to a Pokémon's Base Attack through breeding can be increased through the use of [[Items/Protein]]. Proteins increase the Attack bonus from Breeding by 1 for each Protein used on an individual Pokémon. Consult [[Items/Protein]] for further information on Breeding Efficiency using Proteins.
 
 Breeding Pokémon also offers the highest shiny odds in the game (alongside [[Wandering Pokémon]] and [[Shop Pokémon]]) at 1/1024. Consult [[Shiny Chance]] for further information on Shiny Odds using the Hatchery.
 

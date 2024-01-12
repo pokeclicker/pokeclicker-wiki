@@ -26,6 +26,10 @@
                         <td data-bind="html: GameConstants.formatSecondsToTime($data.growthTime[PlotStage.Bloom])"></td>
                     </tr>
                     <tr>
+                        <td>Wither Time</td>
+                        <td data-bind="html: GameConstants.formatSecondsToTime($data.growthTime[PlotStage.Berry] - $data.growthTime[PlotStage.Bloom])"></td>
+                    </tr>
+                    <tr>
                         <td>Exp</td>
                         <td data-bind="text: $data.exp"></td>
                     </tr>
@@ -134,22 +138,24 @@
         </div>
         <h3>Wanderers</h3>
         <div class="table-responsive">
+            <!-- ko with: $data.wander.filter(p => Math.floor(pokemonMap[p].id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION]), as: 'wanderers' -->
             <table class="table table-hover table-striped table-bordered">
-                <tbody data-bind="foreach: new Array(Math.ceil($data.wander.length / 2))">
+                <tbody data-bind="foreach: new Array(Math.ceil(wanderers.length / 2))">
                     <tr>
                         <td>
-                            <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$parent.wander[$index() * 2]].id + '.png'}"/>
-                            <a data-bind="text: $parent.wander[$index() * 2], attr: { href: `#!Pokemon/${$parent.wander[$index() * 2]}` }"></a>
+                            <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[wanderers[$index() * 2]].id + '.png'}"/>
+                            <a data-bind="text: wanderers[$index() * 2], attr: { href: `#!Pokemon/${wanderers[$index() * 2]}` }"></a>
                         </td>
-                        <!-- ko if: $parent.wander[$index() * 2 + 1] -->
+                        <!-- ko if: wanderers[$index() * 2 + 1] -->
                         <td>
-                            <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$parent.wander[$index() * 2 + 1]].id + '.png'}"/>
-                            <a data-bind="text: $parent.wander[$index() * 2 + 1], attr: { href: `#!Pokemon/${$parent.wander[$index() * 2 + 1]}` }"></a>
+                            <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[wanderers[$index() * 2 + 1]].id + '.png'}"/>
+                            <a data-bind="text: wanderers[$index() * 2 + 1], attr: { href: `#!Pokemon/${wanderers[$index() * 2 + 1]}` }"></a>
                         </td>
                         <!-- /ko -->
                     </tr>
                 </tbody>
             </table>
+            <!-- /ko -->
         </div>
     </div>
     <!-- /ko -->

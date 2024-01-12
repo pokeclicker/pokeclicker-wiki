@@ -22,24 +22,25 @@ const md = new markdownit({
   .use(require('markdown-it-container'), 'collapse', {
 
     validate: function(params) {
-      return params.trim().match(/^collapse\s+(.*)$/);
+      return params.trim().match(/^collapsed?\s+(.*)$/);
     },
   
     render: function (tokens, idx) {
-      const m = tokens[idx].info.trim().match(/^collapse\s+(.*)$/);
-  
+      const m = tokens[idx].info.trim().match(/^collapsed?\s+(.*)$/);
+
       if (tokens[idx].nesting === 1) {
         const randID = Rand.string(5);
+        const startCollapsed = m[0].startsWith('collapsed');
         // opening tag
         return `
         <div class="accordion accordion-flush">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${randID}" aria-expanded="true">
+              <button class="accordion-button ${startCollapsed ? 'collapsed' : ''}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${randID}" aria-expanded="true">
               ${md.utils.escapeHtml(m[1])}
               </button>
             </h2>
-            <div id="collapse-${randID}" class="accordion-collapse collapse show">
+            <div id="collapse-${randID}" class="accordion-collapse collapse ${!startCollapsed ? 'show' : ''}">
               <div class="accordion-body">\n`;
   
       } else {

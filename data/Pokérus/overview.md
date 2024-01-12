@@ -25,13 +25,15 @@ None | None | Base State. Pokémon can contract Pokérus. Pokémon cannot gain E
 [[File:Contagious.png]] | Contagious | Pokémon has contracted Pokérus, and is capable of spreading the virus. Pokémon can gain EVs.
 [[File:Resistant.png]] | Resistant | Pokémon has contracted Pokérus, and is capable of spreading the virus. Pokémon can gain EVs, and has also accumulated 50 or more EVs.
 
+There is a known bug that Pokémon infected via typed eggs will remain Infected upon hatching, rather than becoming Contagious. Breeding the Pokémon the usual way will cause the Pokémon to correctly become Contagious.
+
 ## Effort Values (EVs)
 
-EVs are a damage multiplying stat for each individual Pokémon that can be seen in the Pokédex page for that Pokémon and by using the Display Value setting in the Hatchery. EVs for a Pokémon can currently only be increased by obtaining that Pokémon again after it has caught the Pokérus. You can gain EVs for a Pokémon by: catching it on a Route or a Dungeon, obtaining it as a Wandering Pokemon, or by evolving it using Evolution Items. Breeding a Pokémon does not count towards gaining EVs. EV gain is further affected by the Rowap Berry Aura.
+EVs are a damage multiplying stat for each individual Pokémon that can be seen in the Pokédex page for that Pokémon and by using the Display Value setting in the Hatchery. EVs for a Pokémon can currently only be increased by obtaining that Pokémon again after it has caught the Pokérus. You can gain EVs for a Pokémon by: catching it on a Route, Dungeon, or Safari, obtaining it as a Wandering Pokemon, or by evolving it using Evolution Items. Breeding a Pokémon does not count towards gaining EVs. EV gain is further affected by the Rowap Berry Aura, Blue Flute, and other factors listed below.
 
 ### Gaining EVs (Methods)
 
-Different methods of catching a Pokémon will yield different amounts of EVs. If the Slow EVs Challenge Mode is activated, you will gain EVs at a 10x slower rate (You gain the same amount of EVs, but require 10x as many EVs to yield the same bonus. In some instances, the yield of EVs is further modified by an external factor (see below tables for specific information).
+Different methods of catching a Pokémon will yield different amounts of EVs. If the Slow EVs Challenge Mode is activated, you will gain  the same amount of EVs, but require 10x as many EVs to yield the same bonus. In some instances, the yield of EVs is further modified by an external factor (see below tables for specific information).
 
 #### EV yield
 
@@ -50,15 +52,17 @@ EVs gained | Slow EVs | Catching Method
 EV modifier | Method
 :--- | ---:
 0x | Base wanderer
+2x | Obtained Pokémon is a Shadow Pokémon
 3x | Pokémon is encountered and captured as a Dungeon Pokémon
 5x | Obtained Pokémon is Shiny.
-5x | Pokémon is obtained using a Repeatball
 10x | Pokémon is encountered and captured as a Dungeon Boss Pokémon
 10x | Pokémon is encountered and captured as a Mimic
 50x | Pokémon is encountered and captured as a Roaming Pokemon
-Variable | Rowap Berry Aura
+Variable | [[File:Rowap.png\|40px]] [[Berries/Rowap]] Berry Aura
+Variable | [[File:Blue_Flute.png\|40px]] [[Items/Blue Flute]]
 1.5x | [[File:Macho_Brace.png\|40px]]  [[Items/Macho_Brace]] Held Item
 2x | [[File:Power_Bracer.png\|40px]]  [[Items/Power_Bracer]] Held Item
+5x | [[File:Repeatball.png\|40px]] [[Items/Repeat Ball]]
 
 #### Examples
 

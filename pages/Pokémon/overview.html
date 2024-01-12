@@ -7,10 +7,11 @@
                 <th>Type</th>
                 <th>Base Attack</th>
                 <th>Egg Steps</th>
+                <th>Base BE</th>
                 <th>Catch Rate</th>
             </tr>
         </thead>
-        <tbody data-bind="foreach: pokemonList.filter(p => p.id >= 0)">
+        <tbody data-bind="foreach: pokemonList.filter(p => p.id >= 0 && Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION])">
             <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Pokemon', $data.name); return false; }">
                 <td data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`, attr: { 'data-sort': $data.id }"></td>
                 <td data-bind="text: $data.name"></td>
@@ -20,7 +21,8 @@
                     }"></span>
                 </td>
                 <td data-bind="text: $data.attack"></td>
-                <td data-bind="text: App.game.breeding.getSteps($data.eggCycles).toLocaleString()"></td>
+                <td data-bind="text: App.game.breeding.getSteps($data.eggCycles).toLocaleString(), attr: { 'data-order': $data.eggCycles }"></td>
+                <td data-bind="text: Wiki.pokemon.getEfficiency([0,0,0], $data.attack, $data.eggCycles).toLocaleString('en-US', { maximumSignificantDigits: 2 })"></td>
                 <td data-bind="text: PokemonFactory.catchRateHelper($data.catchRate, true) + '%'"></td>
             </tr>
         </tbody>

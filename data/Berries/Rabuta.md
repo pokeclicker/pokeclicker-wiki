@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Rabuta Berries. Purple squares indicate where mutations can occur.
+Rabuta has a chance of mutating when a Taller or later stage [[Berries/Aspear]] berry is near a Berry stage [[Berries/Aguav]] berry. The mutation will cause Aspear to change into a Rabuta and thus doesn't use an empty plot to trigger the mutation. You can fill your farm in the following way to obtain Rabuta Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations

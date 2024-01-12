@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain Lileep
+Can be put in the hatchery to obtain [[Pokémon/Lileep]]

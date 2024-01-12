@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain Omanyte
+Can be put in the hatchery to obtain [[Pokémon/Omanyte]]

@@ -2,7 +2,8 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Roseli Berries. Purple squares indicate where mutations can occur.
+Roseli has a chance of mutating when [[Berries/Mago]], [[Berries/Magost]], [[Berries/Nanab]], and [[Berries/Watmel]] are touching an empty plot. You can fill your farm in the following way to obtain Roseli Berries. Purple squares indicate where mutations can occur.
+**WARNING:** Trying to mutate Roseli while having the [[Oak Items/Sprinklotad]] equipped may result in your Watmel mutating into Shuca.
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -19,8 +20,8 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
 | [[File:Watmel.png\|32px]] [[Berries/Watmel]]  | `N/A`         | `N/A`                                 | `N/A`                                 |
 | [[File:Magost.png\|32px]] [[Berries/Magost]]  | 04:00:00      | 02:40:00                              | 01:46:40                              |
-| [[File:Mago.png\|32px]] [[Berries/Mago]]      | 00:06:10      | 00:04:07                              | `N/A`                                 |
-| [[File:Nanab.png\|32px]] [[Berries/Nanab]]    | 00:04:10      | 00:02:47                              | `N/A`                                 |
+| [[File:Mago.png\|32px]] [[Berries/Mago]]      | 00:06:10      | 00:04:07                              |00:02:44                                |
+| [[File:Nanab.png\|32px]] [[Berries/Nanab]]    | 00:04:10      | 00:02:47                              | 00:01:51                                |
 
 #### Mutations
 Roseli Berries can be used to mutate the following Berries.

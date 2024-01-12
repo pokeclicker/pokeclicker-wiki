@@ -2,8 +2,8 @@
 
 ### Possible Planting Formations {#planting}
 
-**WARNING:** Trying to mutate Occa while having the [[Oak Items/Blaze Cassette]] equipped will result in your Spelon turning into Chople.
-You can fill your farm in the following way to obtain Occa Berries. Purple squares indicate where mutations can occur.
+Occa has a chance of mutating when [[Berries/Razz]], [[Berries/Figy]], [[Berries/Tamato]], and [[Berries/Spelon]] are touching an empty plot. You can fill your farm in the following way to obtain Occa Berries. Purple squares indicate where mutations can occur.
+**WARNING:** Trying to mutate Occa while having the [[Oak Items/Magma Stone]] equipped will result in your Spelon turning into Chople.
 
 **Base Formation**
 ::: table-mutations

@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Lum Berries. Purple squares indicate where mutations can occur.
+Lum has a chance of mutating when all Generation 1 Berries (#1 Cheri to #8 Sitrus) are touching an empty plot. You can fill your farm in the following way to obtain Lum Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations
@@ -26,7 +26,7 @@ You can fill your farm in the following way to obtain Lum Berries. Purple square
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Sitrus.png\|32px]] [[Berries/Sitrus]]  | `N/A`         | `N/A`                                 | `N/A`                                 |
+| [[File:Sitrus.png\|32px]] [[Berries/Sitrus]]  | `N/A`          | `N/A`                                 | `N/A`                                 |
 | [[File:Oran.png\|32px]] [[Berries/Oran]]      | 00:05:00      | 00:03:20                              | `N/A`                                 |
 | [[File:Leppa.png\|32px]] [[Berries/Leppa]]    | 00:04:00      | 00:02:40                              | `N/A`                                 |
 | [[File:Aspear.png\|32px]] [[Berries/Aspear]]  | 00:02:00      | 00:01:20                              | `N/A`                                 |
@@ -44,6 +44,8 @@ Lum Berries can be obtained from the following dungeons.
 | [[Dungeons/Pattern Bush]]	        | Mythic  	| 150 Clears    |
 | [[Dungeons/Radio Tower]]	        | Mythic  	| 250 Clears    |
 | [[Dungeons/Cave of Origin]]       | Mythic  	| 150 Clears    |
+| [[Dungeons/Relic Cave]] | Mythic | N/A |
+| [[Dungeons/Under Colosseum]] | Legendary | 50 Clears |
 | [[Dungeons/Moor of Icirrus]]       | Mythic  	| 200 Clears    |
 | [[Dungeons/Pinwheel Forest]]      | Mythic  	| 200 Clears    |
 | [[Dungeons/Thrifty Megamart]]     | Mythic  	| 100 Clears    |

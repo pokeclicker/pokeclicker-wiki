@@ -9,7 +9,7 @@
         </thead>
         <tbody>
             <!-- ko foreach: Object.values(ItemList) -->
-            <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Items', $data.displayName); return false; }">
+            <tr class="clickable" data-bind="click: () => { const page = Wiki.items.getItemCategoryAndPageFromObject($data); Wiki.gotoPage(page.category, page.page); return false; }">
                 <td data-bind="text: $data.displayName"></td>
                 <td data-bind="html: GameConstants.camelCaseToString($data.constructor.name)"></td>
                 <td data-bind="html: $data.description"></td>          

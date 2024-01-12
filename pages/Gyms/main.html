@@ -29,6 +29,15 @@
                     <td>Town</td>
                     <td><a class="text-decoration-none" href="#!" href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${$data.name}` }"></a></td>
                 </tr>
+                <!-- ko if: !BadgeEnums[$data.badgeReward].startsWith('Elite') -->
+                <tr>
+                    <td>Badge</td>
+                    <td>
+                        <img width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/badges/${BadgeEnums[$data.badgeReward]}.svg` }" />
+                        <span data-bind="text: BadgeEnums[$data.badgeReward]"></span>
+                    </td>
+                </tr>
+                <!-- /ko -->
                 <tr>
                     <td>Money</td>
                     <td>
@@ -42,10 +51,10 @@
                 </tr>
                 <!-- ko if: $data.requirements.length -->
                 <tr>
-                    <td class="text-center" colspan="2">Requirements</td>
+                    <th class="text-center" colspan="2">Requirements</th>
                 </tr>
                 <tr>
-                    <td colspan="2" data-bind="html: $data.requirements.map(r => r.hint()).join('</br>')"></td>
+                    <td colspan="2" data-bind="html: Wiki.md.renderInline(Wiki.gameHelper.requirementHints($data.requirements).join('\n'))"></td>
                 </tr>
                 <!-- /ko -->
             </tbody>
@@ -54,20 +63,26 @@
     <h3>Pokémon Team</h3>
     <!-- ko ifnot: $data.pokemons.some(p => p.requirements?.length) -->
     <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-bordered no-data-tables">
             <thead>
                 <tr>
                     <th>Pokémon</th>
                     <th>HP</th>
+                    <th>Type</th>
                 </tr>
             </thead>
             <tbody data-bind="foreach: $data.pokemons">
                 <tr>
                     <td class="align-middle">
                         <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
-                        <a class="text-secondary" href="#!" data-bind="text: $data.name, attr: {href: `#!Pokemon/${$data.name}` }"></a>
+                        <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: {href: `#!Pokemon/${$data.name}` }"></a>
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
+                    <td class="align-middle" data-bind="foreach: pokemonMap[$data.name].type">
+                        <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
+                            backgroundColor: TypeColor[$data]
+                        }"></span>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -76,12 +91,13 @@
 
     <!-- ko if: $data.pokemons.some(p => p.requirements?.length) -->
     <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-bordered no-data-tables">
             <thead>
                 <tr>
                     <th>Starter</th>
                     <th>Pokémon</th>
                     <th>HP</th>
+                    <th>Type</th>
                 </tr>
             </thead>
             <tbody>
@@ -95,10 +111,15 @@
                         <knockout data-bind="text: $data.name"></knockout>
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
+                    <td class="align-middle" data-bind="foreach: pokemonMap[$data.name].type">
+                        <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
+                            backgroundColor: TypeColor[$data]
+                        }"></span>
+                    </td>
                 </tr>
-                <!-- /ko -->
+            <!-- /ko -->
                 <tr>
-                   <td class="bg-primary text-center small" colspan="3">Party will differ based on which regional starter the player selected.</td> 
+                   <td class="bg-primary text-center small" colspan="4">Party will differ based on which regional starter the player selected.</td> 
                 </tr>
             </tbody>
             <tbody data-bind="foreach: Object.entries($data.pokemons.filter((p) => p.requirements?.some((r) => r instanceof StarterRequirement))
@@ -117,6 +138,11 @@
                         <knockout data-bind="text: $data.name"></knockout>
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
+                    <td class="align-middle" data-bind="foreach: pokemonMap[$data.name].type">
+                        <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
+                            backgroundColor: TypeColor[$data]
+                        }"></span>
+                    </td>
                 </tr>
                 <!-- /ko -->
             </tbody>

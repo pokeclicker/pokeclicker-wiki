@@ -1,5 +1,5 @@
 ## Acquisition
-Letting any berry wither after unlocking any Gen 4 or 5 berry (so, [[Berries/Occa]] or higher) has a 5% chance of spawning a Kasib berry in its place, as long as there are no [[Berries/Colbur]] berries in the [[Farm]]. A good strategy is to plant a field of [[Berries/Cheri]] and wait for them to wither:
+Letting any berry wither after unlocking any Gen 4 or 5 berry (so, any ID above [[Berries/Occa]] and including Occa itself) has a 5% chance of spawning a Kasib berry in its place, as long as there are no [[Berries/Colbur]] berries in the [[Farm]]. A good strategy is to plant a field of [[Berries/Cheri]] and wait for them to wither:
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |

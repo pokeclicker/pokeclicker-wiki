@@ -2,7 +2,8 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Watmel Berries. Purple squares indicate where mutations can occur.
+Watmel has a chance of mutating when a Taller or later stage [[Berries/Magost]] is surrounded with at least 130, but no more than 160 points of Sweet flavor, and no more than 80 points of all other flavors. This will cause the Magost to change into a Watmel and thus doesn't use an empty plot to trigger the mutation. You can fill your farm in the following way to obtain Watmel Berries. Purple squares indicate where mutations can occur.
+**WARNING:** Upon successfully mutating a Watmel, make sure to have [[Oak Items/Sprinklotad]] unequipped since it may cause it to mutate into a [[Berries/Shuca]].
 
 **Base Formation**
 ::: table-mutations

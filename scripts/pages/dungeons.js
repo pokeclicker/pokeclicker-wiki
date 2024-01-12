@@ -290,7 +290,8 @@ const getDungeonLootChancesForItem = (itemName) => {
             const chances = data.chances;
             const length = chances.length
             const lastIndex = length - 1;
-            data.chances = Array(8).fill(chances[lastIndex]).toSpliced(0, length, ...chances);
+            data.chances = Array(8).fill(chances[lastIndex]);
+            data.chances.splice(0, length, ...chances);
         }
     }
 
@@ -315,13 +316,9 @@ const hasLootWithRequirements = (dungeon) => {
 hasLootWithRequirements.cache = new WeakMap();
 
 const getDungeonShadowPokemon = (dungeon) => {
-    // This will need to be updated to skip checking requirements once Orre XD is released
-    const shadows = [];
+    let shadows = [];
     dungeon.enemyList.forEach(enemy => {
         if (enemy instanceof DungeonTrainer) {
-            if (enemy.options?.requirement?.isCompleted() === false) {
-                return;
-            }
             enemy.getTeam().forEach(pokemon => {
                 if (pokemon.shadow == GameConstants.ShadowStatus.Shadow) {
                     shadows.push({
@@ -335,9 +332,6 @@ const getDungeonShadowPokemon = (dungeon) => {
     });
     dungeon.bossList.forEach(boss => {
         if (boss instanceof DungeonTrainer) {
-            if (boss.options?.requirement?.isCompleted() === false) {
-                return;
-            }
             boss.getTeam().forEach(pokemon => {
                 if (pokemon.shadow == GameConstants.ShadowStatus.Shadow) {
                     shadows.push({
@@ -350,6 +344,15 @@ const getDungeonShadowPokemon = (dungeon) => {
             });
         }
     });
+
+    // Some dungeons have duplicate trainers with the same shadow form, filter these out
+    shadows = shadows.reduce((unique, s) => {
+        if (!unique.some(obj => obj.pokemon === s.pokemon && obj.dungeon === s.dungeon
+            && obj.trainer.name === s.trainer.name && obj.boss === s.boss)) {
+            unique.push(s);
+        }
+        return unique;
+    }, []);
 
     return shadows;
 };

@@ -1,4 +1,4 @@
-#### Mutations 
+#### Mutations
 Oran Berries can mutate into the following Berries.
 
 | Used In                                       | Other Requirements |
@@ -9,7 +9,7 @@ Oran Berries can mutate into the following Berries.
 | [[File:Passho.png\|32px]] [[Berries/Passho]]  | [[File:Chesto.png\|32px]] [[Berries/Chesto]] [[File:Kelpsy.png\|32px]] [[Berries/Kelpsy]] [[File:Coba.png\|32px]] [[Berries/Coba]] |
 
 ### Acquisition
-Oran Berries can be obtained from the following dungeons.
+Oran Berries can drop from any route and can also be obtained from the following dungeons.
 
 | Location	                        | Tier	    | Requirement   |
 | :---:                             | :---:     | :---:         |

@@ -1,0 +1,194 @@
+<div>
+    <br/>
+    <h4>By Region</h4>
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Region</th>
+                    <th>PB</th>
+                    <th>PB + MB</th>
+                    <th>GB</th>
+                    <th>GB + MB</th>
+                    <th>UB</th>
+                    <th>UB + MB</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r <= GameConstants.MAX_AVAILABLE_REGION && r != GameConstants.Region.none)">
+                <tr>
+                    <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data])"></td>
+                    <td data-bind="html: Wiki.dungeonTokens.highestRoute($data, 0)[0][0]"></td>
+                    <td data-bind="html: Wiki.dungeonTokens.highestRoute($data, 0)[0][1]"></td>
+                    <td data-bind="html: Wiki.dungeonTokens.highestRoute($data, 0)[0][2]"></td>
+                    <td data-bind="html: Wiki.dungeonTokens.highestRoute($data, 0)[0][3]"></td>
+                    <td data-bind="html: Wiki.dungeonTokens.highestRoute($data, 0)[0][4]"></td>
+                    <td data-bind="html: Wiki.dungeonTokens.highestRoute($data, 0)[0][5]"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><b>*Note:</b> Optimal routes in the above table assume Clear weather. Due to weather affecting encounters in Galar, the optimal routes change accordingly. Check next section for more details.</p>
+
+    <br/>
+    <h4>Galar's Optimal Routes by Weather</h4>
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Weather</th>
+                    <th>PB</th>
+                    <th>PB + MB</th>
+                    <th>GB</th>
+                    <th>GB + MB</th>
+                    <th>UB</th>
+                    <th>UB + MB</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: GameHelper.enumNumbers(WeatherType)">
+                <tr>
+                    <td>
+                        <img width="18" class="me-1" data-bind="attr: { src: `./images/weather/${GameConstants.camelCaseToString(WeatherType[$data])}.png` }" />
+                        <ko data-bind="text: GameConstants.camelCaseToString(WeatherType[$data])"></ko>
+                    </td>
+                    <td data-bind="html: Wiki.dungeonTokens.highestRoute(7, $data)[0][0]"></td>
+                    <td data-bind="html: Wiki.dungeonTokens.highestRoute(7, $data)[0][1]"></td>
+                    <td data-bind="html: Wiki.dungeonTokens.highestRoute(7, $data)[0][2]"></td>
+                    <td data-bind="html: Wiki.dungeonTokens.highestRoute(7, $data)[0][3]"></td>
+                    <td data-bind="html: Wiki.dungeonTokens.highestRoute(7, $data)[0][4]"></td>
+                    <td data-bind="html: Wiki.dungeonTokens.highestRoute(7, $data)[0][5]"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<hr>
+<div>
+    <h2>Regional Rate Tables</h2>
+    <p>The following tables provide detailed information for every route, separated by region. DT represents the DT you gain per capture on each route, and the values underneath each Pokéball/Magic Ball combination represent the average Dungeon Tokens you will gain per second.</p>
+    <div data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r <= GameConstants.MAX_AVAILABLE_REGION && r != GameConstants.Region.none)">
+        <h4><a data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data]), attr: { href: `#!Regions/${GameConstants.camelCaseToString(GameConstants.Region[$data])}` }">Region</a></h4>
+        <!-- ko if: $data != 7 -->
+        <div class="table-responsive">
+            <table class="table table-hover table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Route</th>
+                        <th>DT</th>
+                        <th>PB</th>
+                        <th>PB + MB</th>
+                        <th>GB</th>
+                        <th>GB + MB</th>
+                        <th>UB</th>
+                        <th>UB + MB</th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: Wiki.dungeonTokens.highestRoute($data, 0)[1]">
+                    <tr>
+                        <td data-bind="text: $data[0]"></td>
+                        <td data-bind="text: $data[1]"></td>
+                        <td data-bind="text: $data[2]"></td>
+                        <td data-bind="text: $data[3]"></td>
+                        <td data-bind="text: $data[4]"></td>
+                        <td data-bind="text: $data[5]"></td>
+                        <td data-bind="text: $data[6]"></td>
+                        <td data-bind="text: $data[7]"></td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- /ko -->
+        <!-- ko if: $data == 7 -->
+        <div class="tab" data-bind="foreach: GameHelper.enumNumbers(WeatherType)">
+            <button class="tablinks" data-bind="click: function() {Wiki.dungeonTokens.setWeather(event, $data)}">
+                <img width="18" class="me-1" data-bind="attr: { src: `./images/weather/${GameConstants.camelCaseToString(WeatherType[$data])}.png` }" /> 
+                <ko data-bind="text: GameConstants.camelCaseToString(WeatherType[$data])"></ko>
+            </button>
+        </div>
+        <div class="table-responsive" data-bind="foreach: GameHelper.enumNumbers(WeatherType)">
+            <div class="tabcontent" data-bind="attr: {id: 'galar'+$index()}">
+                <table class="table table-hover table-striped table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Route</th>
+                            <th>DT</th>
+                            <th>PB</th>
+                            <th>PB + MB</th>
+                            <th>GB</th>
+                            <th>GB + MB</th>
+                            <th>UB</th>
+                            <th>UB + MB</th>
+                        </tr>
+                    </thead>
+                    <tbody id="weatherTable" data-bind="foreach: Wiki.dungeonTokens.highestRoute($parent, $data)[1]">
+                        <tr>
+                            <td data-bind="text: $data[0]"></td>
+                            <td data-bind="text: $data[1]"></td>
+                            <td data-bind="text: $data[2]"></td>
+                            <td data-bind="text: $data[3]"></td>
+                            <td data-bind="text: $data[4]"></td>
+                            <td data-bind="text: $data[5]"></td>
+                            <td data-bind="text: $data[6]"></td>
+                            <td data-bind="text: $data[7]"></td>
+                            </tr>
+                    </tbody>
+                </table>    
+            </div>
+        </div>
+        <br>
+        <!-- /ko -->
+    </div>
+</div>
+<hr>
+<h2>Uses</h2>
+<h4>Dungeon Entry Cost</h4>
+<div data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r <= GameConstants.MAX_AVAILABLE_REGION && r != GameConstants.Region.none)">
+    <h4><a data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data]), attr: { href: `#!Regions/${GameConstants.camelCaseToString(GameConstants.Region[$data])}` }">Region</a></h4>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Entry Price</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: Object.keys(dungeonList).filter((r) => GameConstants.getDungeonRegion(dungeonList[r].name) == $data)">
+                <tr>
+                    <td data-bind="text: $data"></td>
+                    <td>
+                        <img width="18" class="me-1" data-bind="attr: { src: `./images/dungeonToken.svg` }" />
+                        <ko data-bind="text: dungeonList[$data].tokenCost.toLocaleString(), attr: { 'data-sort': dungeonList[$data].tokenCost }"></ko>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<h4>Shopmon</h4>
+<div>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <th>Item</th>
+                <th>Base Price</th>
+                <th>Shop</th>
+                <th>Region</th>
+            </thead>
+            <tbody data-bind="foreach: Wiki.dungeonTokens.getShopMons(2)">
+                <tr>
+                    <td class="align-middle">
+                        <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data[1].image }" />
+                        <a href="#!" class="text-decoration-none" data-bind="text: $data[1].displayName,
+                            attr: { href: `#!${$data[1] instanceof PokemonItem ? 'Pokemon' : 'Items'}/${$data[1].displayName}` }"></a>
+                    </td>
+                    <td class="align-middle">
+                        <img width="18" class="me-1" data-bind="attr: { src: `./images/${GameConstants.Currency[$data[1].currency]}.svg` }" />
+                        <ko data-bind="text: $data[1].basePrice.toLocaleString(), attr: { 'data-sort':  $data[1].basePrice }"></ko>
+                    </td>
+                    <td data-bind="text: $data[0].name + ' (' + $data[0].parent.name + ')'"></td>
+                    <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0].parent.region])"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -2,20 +2,9 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Haban Berries. Purple squares indicate where mutations can occur.
+Haban has a chance of mutating when [[Berries/Occa]], [[Berries/Passho]], [[Berries/Rindo]], and [[Berries/Wacan]] are touching an empty plot. You can fill your farm in the following way to obtain Haban Berries. Purple squares indicate where mutations can occur.
 
-Two formations can be used. 10 mutation spots, [[Berries/Occa]] takeover possible:
-
-::: table-mutations
-| :----: | :----: | :----: | :----: | :----: |
-| [[File:Occa.png\|32px]] [[Berries/Occa]] | {.mutation} | [[File:Passho.png\|32px]] [[Berries/Passho]] | {.mutation} | [[File:Occa.png\|32px]] [[Berries/Occa]] | |
-| [[File:Wacan.png\|32px]] [[Berries/Wacan]] | {.mutation} | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | {.mutation} | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | |
-| | {.mutation} | | {.mutation} | | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | {.mutation} | [[File:Occa.png\|32px]] [[Berries/Occa]] | {.mutation} | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
-| [[File:Rindo.png\|32px]] [[Berries/Rindo]] | {.mutation} | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | {.mutation} | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | |
-:::
-
-No [[Berries/Occa]] takeover, only 8 mutation spots:
+Since [[Berries/Occa]] is a parasite berry and can take over other berries, it's recommended to use this specific formation to prevent that from happening:
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |

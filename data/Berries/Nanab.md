@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Nanab Berries. Purple squares indicate where mutations can occur.
+Nanab has a chance of mutating when [[Berries/Pecha]] and [[Berries/Aspear]] are touching an empty plot. You can fill your farm in the following way to obtain Nanab Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations

@@ -11,7 +11,7 @@
         </thead>
         <tbody data-bind="foreach: BattleFrontierMilestones.milestoneRewards">
             <tr>
-                <td data-bind="text: $data.stage.toLocaleString()"></td>
+                <td data-bind="text: $data.stage.toLocaleString(), attr: { 'data-order': $data.stage }"></td>
                 <td>
                     <ko data-bind="text: $data.description"></ko>
                     <img data-bind="attr: { src: `./pokeclicker/docs/${$data.image}` }" width="28px"/>
@@ -20,7 +20,7 @@
                     BattleFrontierRunner.stage = ko.observable($data.stage);
                     BattleFrontierBattle.generateNewEnemy();
                     return BattleFrontierBattle.enemyPokemon.peek().health().toLocaleString();
-                  })()"></td>
+                  })(), attr: { 'data-order': $data.stage }"></td>
             </tr>
         </tbody>
     </table>

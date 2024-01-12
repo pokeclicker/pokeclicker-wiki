@@ -1,0 +1,1 @@
+Unusable. Rewards a random currency upon dropping.

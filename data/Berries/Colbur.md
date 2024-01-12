@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Colbur Berries. Purple squares indicate where mutations can occur.
+Colbur has a chance of mutating when [[Berries/Rabuta]], [[Berries/Kasib]], and [[Berries/Payapa]] are touching an empty plot. You can fill your farm in the following way to obtain Colbur Berries. Purple squares indicate where mutations can occur.
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |

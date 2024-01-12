@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain Anorith
+Can be put in the hatchery to obtain [[Pokémon/Anorith]]

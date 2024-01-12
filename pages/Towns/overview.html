@@ -10,7 +10,7 @@
             </tr>
         </thead>
         <tbody>
-            <!-- ko foreach: Object.values(TownList).filter(t => t.region < GameConstants.Region.final) -->
+            <!-- ko foreach: Object.values(TownList).filter(t => t.region <= GameConstants.MAX_AVAILABLE_REGION) -->
             <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Towns', $data.name); return false; }">
                 <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region]), attr: { 'data-order': $data.region }"></td>
                 <td data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name, attr: { 'data-order': $data.subRegion ?? 0 }"></td>

@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain Amaura
+Can be put in the hatchery to obtain [[Pokémon/Amaura]]
