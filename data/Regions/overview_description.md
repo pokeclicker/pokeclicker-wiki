@@ -3,7 +3,7 @@ Regions are areas in the world of Pokémon. Each new region introduces a new set
 #### [[Regions/Kanto]]
 Kanto is the first region and introduces the player to the core gameplay features. There are 151 unique Pokémon to catch and breed. Step by step the player gets introduced to the mechanics of breeding and hatching Pokémon, digging up items in the Underground, growing [[Berries]] on the [[Farm]], finishing Quests, the usage of [[Oak_Items]], [[Gems]], and Achievements.
 
-By giving [[Items/Protein]] to obtained Pokémon the amount of added damage per breeding cycle is increased. Protein becomes available towards the end of Kanto at the [[Towns/Indigo_Plateau_Kanto]].
+By giving [[Items/Protein]] to obtained Pokémon the amount of added damage per breeding cycle is increased, but the number of egg steps also increases. Protein becomes available towards the end of Kanto at the [[Towns/Indigo_Plateau_Kanto]].
 
 A unique feature in Kanto is the [[Towns/Safari_Zone]], where the player can freely move and catch Pokémon with the support of throwing rocks increase the capture chance and feeding bait to decrease the fleeing chance of encountered Pokémon.
 
@@ -22,7 +22,7 @@ Breeding Queue in the hatchery: 4
 Maximum Vitamins per Pokémon: 10**
 
 #### [[Regions/Hoenn]]
-Hoenn is the third region and the player can catch another 135 unique Pokémon here. The player will find the last missing Oak item here and can take the challenge of the Battle Frontier. There is also a Pokémon that appears based on the current weather here. [[Items/Calcium]] becomes available for purchase.
+Hoenn is the third region and the player can catch another 135 unique Pokémon here. The player will find the last missing Oak item here and can take the challenge of the Battle Frontier. There is also a Pokémon that appears based on the current weather here. [[Items/Calcium]] becomes available for purchase, which increases damage when bred by a percentage of attack, rather than by a flat increase. Finally, completing Hoenn offers access to [[Regions/Orre]] as well as [[Regions/Sevii 4567]].
 
 In the Battle Frontier the player can take a challenge and win great prizes, including 4 unique Pokémon. It is not necessary for the progression to Sinnoh to capture these Pokémon from the [[Battle_Frontier]]. To reach the last prize at stage 386 the player should have a minimum of 1,000,000 attack damage including all gems at maximum. Manual clicks are not possible in the Battle Frontier.
 
@@ -31,28 +31,28 @@ Breeding Queue in the hatchery: 8
 Maximum Vitamins per Pokémon: 15**
 
 #### [[Regions/Sinnoh]]
-Sinnoh is the fourth region and 107 unique Pokémon are waiting to be caught. The player will encounter some Pokémon that only evolve when they are in a certain area. One should pay attention to the hints from the local people. At this stage it is suggested to give maximum protein at least to the Pokémon that are actively being bred.
+Sinnoh is the fourth region and 107 unique Pokémon are waiting to be caught. The player will encounter some Pokémon that only evolve when they are in a certain area. One should pay attention to the hints from the local people.
 
 **Non-native Pokémon retain 40% damage
 Breeding Queue in the hatchery: 16
 Maximum Vitamins per Pokémon: 20**
 
 #### [[Regions/Unova]]
-Unova is the fifth region with 156 unique Pokémon to catch. There are lots of dungeons in this region that require a substantial amount of Dungeon Tokens as well as damage. Breeding and hatching Pokémon that are native to this region for several days is quite common at this stage. [[Items/Carbos]] becomes available for purchase.
+Unova is the fifth region with 156 unique Pokémon to catch. There are lots of dungeons in this region that require a substantial amount of Dungeon Tokens as well as damage. Breeding and hatching Pokémon that are native to this region for several days is quite common at this stage. [[Items/Carbos]] becomes available for purchase, which decrease egg steps. Finally, clearing Unova unlocks a new quest line in Orre.
 
 **Non-native Pokémon retain 50% damage
 Breeding Queue in the hatchery: 32
 Maximum Vitamins per Pokémon: 25**
 
 #### [[Regions/Kalos]]
-Kalos is the sixth region and has 72 unique Pokémon to catch, breed and hatch. Some currently unobtainable forms will be added in the future. Kalos' gyms and dungeons are quite tough but offer great rewards as well. At this stage it should be easily possible for the player to give every Pokémon the maximum amount of protein.
+Kalos is the sixth region and has 72 unique Pokémon to catch, breed and hatch. It also unlocks [[Mega Pokémon]], which can be evolved when your Pokémon are very strong.
 
 **Non-native Pokémon retain 60% damage
 Breeding Queue in the hatchery: 64
 Maximum Vitamins per Pokémon: 30**
 
 #### [[Regions/Alola]]
-Alola is the seventh region and currently has 104 new Pokémon to catch, breed and hatch. Alola gyms and dungeons are quite tough but offer great rewards as well.
+Alola is the seventh region and currently has 104 new Pokémon to catch, breed and hatch. Alola dungeons are the first dungeons with two floors.
 
 **Non-native Pokémon retain 70% damage
 Breeding Queue in the hatchery: 96
@@ -66,14 +66,14 @@ Breeding Queue in the hatchery: 128
 Maximum Vitamins per Pokémon: 40**
 
 #### [[Regions/Hisui]] (In Development)
-Hisui is the ninth region and currently has 26 new Pokémon to catch, breed and hatch. Hisui gyms and dungeons are quite tough and its postgame is tougher, but they offer great rewards as well.
+Hisui is the ninth region and currently has 26 new Pokémon to catch, breed and hatch. Hisui is under development and is not currently available.
 
 **Non-native Pokémon retain 90% damage
 Breeding Queue in the hatchery: 160
 Maximum Vitamins per Pokémon: 45**
 
 #### [[Regions/Paldea]] (In Development)
-Paldea is the tenth region and currently has 106 new Pokémon to catch, breed and hatch. Paldea gyms and dungeons are quite tough and its postgame is tougher, but they offer great rewards as well.
+Paldea is the tenth region and currently has 106 new Pokémon to catch, breed and hatch. Paldea is under development and is not currently available.
 
 **Non-native Pokémon retain 100% damage
 Breeding Queue in the hatchery: 192
