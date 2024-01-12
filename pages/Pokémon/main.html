@@ -385,23 +385,21 @@
                 <!--
                     SHADOW POKEMON
                 -->
-                <!-- ko with: Wiki.pokemon.getAllAvailableShadowPokemon().filter(p => p.pokemon == Wiki.pageName()) -->
-                    <!-- ko if: $data.length -->
-                    <div class="accordion-item">
-                        <h4 class="accordion-header">
-                            <button data-bs-target="#obtain-method-shadow" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                                <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
-                                Shadow Pokémon
-                            </button>
-                        </h4>
-                        <div id="obtain-method-shadow" class="accordion-collapse collapse">
-                            <div class="accordion-body" data-bind="foreach: $data">
-                                <a class="badge text-bg-secondary" data-bind="text: `${$data.trainer.name} in ${$data.dungeon}`, attr: { href: `#!Dungeons/${$data.dungeon}` }"></a>
-                            </div>
+                <!-- ko if: $data[PokemonLocationType.ShadowPokemon] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-shadow" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            Shadow Pokémon
+                        </button>
+                    </h4>
+                    <div id="obtain-method-shadow" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: $data[PokemonLocationType.ShadowPokemon]">
+                            <a class="badge text-bg-secondary" data-bind="text: `${$data}`, attr: { href: `#!Dungeons/${$data}` }"></a>
                         </div>
                     </div>
-                    <!-- /ko -->
-                <!-- /ko -->
+                </div>
+            <!-- /ko -->
 
                 <!--
                     BATTLE FRONTIER
