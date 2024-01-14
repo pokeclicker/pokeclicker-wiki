@@ -7,4 +7,4 @@
 |274 captures|15
 
 Repeat Ball gives x5 EVs per successful capture.
-Also, note that the Pokémon Captures refer to the "Captured" statistic of the relevant Pokémon in the Pokédex.
+Also, note that the Pokémon Captures refer to the "Captured" statistic of the relevant Pokémon in the Pokédex. That means that hatching eggs can be used to increase the catch rate bonus without the need of catching extra wild Pokémon.
