@@ -7,7 +7,7 @@ Once inside the Safari, the player has the option to either catch, throw a rock,
 
 |**Action** | **Effect** {.no-data-tables}
 |---|---|
-|Ball | Attempt to catch the Pokémon with a Safari Ball. Based on catch chance, this action may fail, after which the Pokémon might flee (based on escape chance), watch carefully / be angry (i.e. do nothing), or resume eating bait. Upon running out of Safari Balls, the player will be forced out of the Safari, requiring them to pay the entrance fee again to re-enter. Throwing a ball awards **10 Safari experience** and succesfully capturing a Pokémon awards **50 Safari experience**. This value is multiplied by **5x** if the Pokémon is a shiny.
+|Ball | Attempt to catch the Pokémon with a Safari Ball. Based on catch chance, this action may fail, after which the Pokémon might flee (based on escape chance), watch carefully / be angry (i.e. do nothing), or resume eating bait. Upon running out of Safari Balls, the player will be forced out of the Safari, requiring them to pay the entrance fee again to re-enter. Throwing a ball awards **10 Safari experience** and succesfully capturing a Pokémon awards **50 Safari experience**. This value is multiplied by **5x** if the Pokémon is a shiny. Note that capturing Pokémon in the Safari does **not** give Dungeon Tokens.
 |Rock | Toss a rock at the Pokémon, removing "eating" status and making it angry for 2 - 7 turns. When angry, a Pokémon's catch chance and escape chance are both doubled.  Awards **10 Safari experience**.
 |Bait (generic) | Gives the Pokémon "eating" status for 2 - 7 turns. No other effects.
 |Bait (Razz Berry) | Gives the Pokémon "eating" status for 2 - 8 turns. Divides escape chance by 1.5x for the rest of the encounter unless another type of bait is used.
