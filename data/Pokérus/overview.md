@@ -52,9 +52,9 @@ EVs gained | Slow EVs | Catching Method
 EV modifier | Method
 :--- | ---:
 0x | Base wanderer
-2x | Obtained Pokémon is a Shadow Pokémon
+2x | Pokémon is captured as a Shadow Pokémon
 3x | Pokémon is encountered and captured as a Dungeon Pokémon
-5x | Obtained Pokémon is Shiny.
+5x | Pokémon is captured as a Shiny.
 10x | Pokémon is encountered and captured as a Dungeon Boss Pokémon
 10x | Pokémon is encountered and captured as a Mimic
 50x | Pokémon is encountered and captured as a Roaming Pokemon
