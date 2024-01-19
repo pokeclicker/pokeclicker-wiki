@@ -67,13 +67,13 @@ Variable | [[File:Blue_Flute.png\|40px]] [[Items/Blue Flute]]
 #### Examples
 
 Example 1: Catching a **Shiny Dungeon Pokémon** with a **Repeatball** yields:
-**0.1 \* 3 \* 5 \* 5 = 7.5**
+**0.1 (Catching) \* 3 (Dungeon Pokémon) \* 5 (Shiny) \* 5 (Repeatball) = 7.5**
 
 Example 2: Catching a **Shiny Roaming Pokémon** yields:
-**0.1 \* 5 \* 50 = 25 EVs**
+**0.1 (Catching) \* 5 (Shiny) \* 50 (Roaming) = 25 EVs**
 
 Example 3: Catching a **Shiny Roaming Pokémon** with a **Repeatball** yields:
-**0.1 \* 5 \* 5 \* 50 = 125 EVs**
+**0.1 (Catching)  \* 5 (Shiny) \* 5 (Repeatball) \* 50 (Roaming) = 125 EVs**
 
 ### EV Damage Multiplier
 
