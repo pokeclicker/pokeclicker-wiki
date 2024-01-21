@@ -56,10 +56,20 @@ const getAllAvailableShadowPokemon = () => {
         .map(d => Wiki.dungeons.getDungeonShadowPokemon(d)).flat();
 };
 
+const getAvailablePokemon = () => {
+    return pokemonList.filter(p =>
+        p.id >= 0 &&
+        Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION] &&
+        p.nativeRegion <= GameConstants.MAX_AVAILABLE_REGION &&
+        Object.keys(PokemonHelper.getPokemonLocations(p.name)).length
+    );
+}
+
 module.exports = {
     getBreedingAttackBonus,
     calcEggSteps,
     getEfficiency,
     getBestVitamins,
+    getAvailablePokemon,
     getAllAvailableShadowPokemon,
 }

@@ -79591,11 +79591,21 @@ const getAllAvailableShadowPokemon = () => {
         .map(d => Wiki.dungeons.getDungeonShadowPokemon(d)).flat();
 };
 
+const getAvailablePokemon = () => {
+    return pokemonList.filter(p =>
+        p.id >= 0 &&
+        Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION] &&
+        p.nativeRegion <= GameConstants.MAX_AVAILABLE_REGION &&
+        Object.keys(PokemonHelper.getPokemonLocations(p.name)).length
+    );
+}
+
 module.exports = {
     getBreedingAttackBonus,
     calcEggSteps,
     getEfficiency,
     getBestVitamins,
+    getAvailablePokemon,
     getAllAvailableShadowPokemon,
 }
 
@@ -79682,6 +79692,7 @@ module.exports = {
 
 },{}],531:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
+const { getAvailablePokemon } = require('./pages/pokemon');
 
 const searchOptions = [
   {
@@ -79705,7 +79716,7 @@ const searchOptions = [
     type: 'Pokémon',
     page: '',
   },
-  ...Object.values(pokemonList).filter(p => Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION]).map(p => ({
+  ...Object.values(getAvailablePokemon()).map(p => ({
     display: `#${Math.floor(p.id).toString().padStart(3, '0')} - ${p.name}`,
     type: 'Pokémon',
     page: p.name,
