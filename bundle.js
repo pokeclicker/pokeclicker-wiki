@@ -78307,6 +78307,14 @@ $(document).ready(() => {
       applyDatatables();
     }
   });
+
+  // Search for pages
+  document.getElementById('search').addEventListener('keyup', ({key, target}) => {
+    if (key === 'Enter') {
+      gotoPage('Search', target.value);
+      target.value = '';
+    }
+  });
 });
 
 // Save any settings the user has set before they leave
@@ -80050,6 +80058,7 @@ const searchOptions = [
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
+  a.sort = a.display.replace(/.*-\s/, '').replace(/\(.*\)/, '');
   const duplicates = searchOptions.filter(b => b.display == a.display);
   if (duplicates.length > 1) {
     duplicates.forEach(d => d.display = `${d.display} (${d.type})`);
@@ -80064,15 +80073,16 @@ function escapeRegExp(text) {
   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&').replace(/[eé]/g, '[eé]');
 }
 // This is the function which figures out the results to show
-var substringMatcher = (searchData) => {
+const substringMatcher = (searchData) => {
   return (query, cb) => {
     // regex used to determine if a string contains the substring `q`
     const substrRegex = new RegExp(escapeRegExp(query), 'i');
 
     // iterate through the pool of strings and for any string that matches the regex
     const results = searchData.filter(d => substrRegex.test(d.display));
+    const sortedResults = results.sort((a, b) => a.sort.search(substrRegex) - b.sort.search(substrRegex) || a.sort.length - b.sort.length || a.display.length - b.display.length);
 
-    cb(results.sort((a, b) => a.display.search(substrRegex) - b.display.search(substrRegex) || a.display.length - b.display.length));
+    return cb ? cb(sortedResults) : sortedResults;
   };
 };
 
@@ -80109,6 +80119,7 @@ $('#search').bind('typeahead:autocomplete', (ev, suggestion) => {
 
 module.exports = { 
   searchOptions,
+  searchViaKeyword: substringMatcher(searchOptions),
 };
 
 },{"./navigation":518}]},{},[511]);
