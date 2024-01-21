@@ -5,14 +5,19 @@ const checkExist = setInterval(function() {
     }
  }, 100);
 
+const highestRouteCache = {};
+
 const highestRoute = (region, weather) => {
+    const cacheKey = `${region}-${weather}`;
+    const cachedResult = highestRouteCache[cacheKey];
+    if (cachedResult) return cachedResult;
+
     region = region;
     weather = weather;
 
     var routeArr = [];
 
     Routes.getRoutesByRegion(region).map(route => {
-        const routes = Routes.getRoutesByRegion(region).map(r => MapHelper.normalizeRoute(r.number, region, false));
         var pkmon1 = [];
         pkmon1.push(Object.values(route.pokemon).flat());
         route.pokemon.special.forEach((element) => {
@@ -68,7 +73,9 @@ const highestRoute = (region, weather) => {
         return dt[7] > max[7] ? dt : max;
     });
 
-    return( [[highestPB[0], highestPBMB[0], highestGB[0], highestGBMB[0], highestUB[0], highestUBMB[0]],routeArr] );
+    const result = [[highestPB[0], highestPBMB[0], highestGB[0], highestGBMB[0], highestUB[0], highestUBMB[0]], routeArr];
+    highestRouteCache[cacheKey] = result;
+    return result;
 }
 
 const setWeather = (evt, weather) => {
