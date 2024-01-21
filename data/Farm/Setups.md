@@ -272,7 +272,7 @@ Purple spots are where the player is meant to harvest the berry and replace with
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | |
 :::
 
-### Infinity Farm
+### Infinite Farm
 This setup is another way to have a Farm that boosts egg steps gain. The combination of [[Berries/Haban]] and [[Berries/Lum]] in this formation make [[Berries/Petaya]] live for around 3.5 years once the setup fully ripens. While not as efficient as other setups in the [[Hatchery]] page, it works for those who want to forget about the Farm.
 
 Note that replacing the [[Berries/Chople]] with a different berry like [[Berries/Rowap]] or [[Berries/Starf]] will make the bonus only be 1.70x.
