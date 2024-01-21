@@ -242,7 +242,7 @@ const getDungeonLoot = (dungeon) => {
 getDungeonLoot.cache = new WeakMap();
 
 const getDungeonLootChancesForItem = (itemName) => {
-    const dungeonsDroppingItem = Object.values(dungeonList).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == itemName)));
+    const dungeonsDroppingItem = Object.values(dungeonList).filter((d) => GameConstants.getDungeonRegion(d.name) <= GameConstants.MAX_AVAILABLE_REGION).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == itemName)));
     const dungeonsWithLootTables = dungeonsDroppingItem.map(dungeon => (
         {
             dungeonName: dungeon.name,
