@@ -77184,7 +77184,7 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":1,"call-bind":6,"call-bind/callBound":5,"for-each":63,"gopd":67,"has-tostringtag/shams":72}],505:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
-  "version": "0.10.17",
+  "version": "0.10.18",
   "description": "PokéClicker repository",
   "main": "index.js",
   "scripts": {
