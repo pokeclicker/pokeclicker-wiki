@@ -1,6 +1,6 @@
-Pokemon Dollars [[File:money.svg|25px]] are the basic golden currency of PokéClicker, also known as simply Money or Poké. 
+Pokédollars [[File:money.svg|25px]] are the basic golden currency of PokéClicker, also known as simply Money or Poké.
 
-They are obtained by defeating enemies and are primarily spent on various Items. Poké Dollars can be collected while offline for up to 24 hours.
+They are obtained by defeating enemies and are primarily spent on various Items. Pokédollars can be collected while offline for up to 24 hours.
 
 ---
 
@@ -37,7 +37,7 @@ Galar | Path to the Peak | Elite Peony
 
 ## Uses
 #### Item Purchasing
-A large portion of in-game items are purchasable with Pokémon Dollars, please see the [[Shops]] page for a full listing. 
+A large portion of in-game items are purchasable with Pokédollars, please see the [[Shops]] page for a full listing.
 
 #### Oak Items
 The upgrades of some [[Oak Items]].

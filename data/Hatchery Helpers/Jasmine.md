@@ -1,1 +1,1 @@
-*Purchased in @[[Towns/Mauville City]] for 10,000,000 Poké Dollars*
+*Purchased in @[[Towns/Mauville City]] for 10,000,000 Pokédollars*
