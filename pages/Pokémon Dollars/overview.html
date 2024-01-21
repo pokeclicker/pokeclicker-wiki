@@ -8,7 +8,7 @@
                 <th>Shop</th>
                 <th>Region</th>
             </thead>
-            <tbody data-bind="foreach: Wiki.pokemonDollars.getShopMons(0)">
+            <tbody data-bind="foreach: Wiki.shopMon.getShopMons(Currency.money)">
                 <tr>
                     <td class="align-middle">
                         <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data[1].image }" />
