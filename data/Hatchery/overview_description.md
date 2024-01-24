@@ -119,7 +119,7 @@ The easiest strategy for planting Chople berries is to leave empty rows separati
 
 ## Chople + [[Berries/Yache]]/[[Berries/Haban]]
 
-A slightly more complex strategy for planting Chople berries is to plant berries that decrease growth rates ([[Berries/Yache]] or [[Berries/Haban]]) between each of the rows of Chople berries. While this takes Chople berries longer to grow, it also results in longer wither times for Chople berries. While this doesn't appear to be incredibly challenging to accomplish, and uses only 4th generation berries, the berries on the ends of each row receive a diminished growth aura effect relative to more central berries on the farm. This can make timing simultaneous ripeness of all berries on the farm challenging.
+A slightly more complex strategy for planting Chople berries is to plant berries that decrease decay rates ([[Berries/Yache]] or [[Berries/Haban]]) between each of the rows of Chople berries as it results in longer wither times for Chople berries.
 
 **Egg Step Bonus: 1.56x**
 ::: table-mutations
