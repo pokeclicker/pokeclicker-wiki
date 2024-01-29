@@ -108,8 +108,8 @@ Tier | 0 clears | 100 clears | 250 clears | 500 clears | Debuffed {.no-data-tabl
 
 **Example 2:** Mt. Moon has Greatball, Small Restore and Star Piece as 3 of its 5 lootable items from Dungeon chests. All 3 items are in the Mythic tier, but the Greatball Has Weight 2 while the Small Restore and Star Piece have the base weight of 1. This means the Greatball will be twice as likely to be dropped as the other 2 items. In other words, on average when an item looted from Mt. Moon is from the Mythic Tier, 50% of the time it will be a Greatball, 25% of the time it will be a Small Restore, 25% of the time it will be a Star Piece.
 
-### Dowsing machine
+### Dowsing Machine
 
-The Dowsing Machine increases the yield of items looted from Dungeons. The amount of items looted depends on both the region of the dungeon, and the Tier of the looted item.
+The Dowsing Machine increases the yield of items looted from Dungeons. The amount of items looted depends on both the region of the dungeon, and the Tier of the looted item. Check [[Items/Dowsing Machine]] for more details.
 
 ## Dungeon Locations
