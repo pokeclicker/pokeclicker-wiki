@@ -1,0 +1,1 @@
+See [[Berries/Charti]] for more information on the berry.

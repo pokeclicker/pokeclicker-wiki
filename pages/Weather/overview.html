@@ -25,7 +25,7 @@
             <td class="align-middle text-center tight" data-bind="style: { 'background-color': Weather.weatherConditions[$data.type].color }">
                 <img data-bind="attr: { src: `./pokeclicker/docs/assets/images/weather/${WeatherType[$data.type]}.png` }" width="24px">
             </td>
-            <td class="align-middle" data-bind="text: WeatherType[$data.type]"></td>
+            <td class="align-middle" data-bind="text: GameConstants.humanifyString(WeatherType[$data.type])"></td>
             <td class="align-middle" data-bind="text: $data.description"></td>
             <td class="align-middle" data-bind="text: $data.multipliers.map(m => `${PokemonType[m.type]} x${m.multiplier}`).join(', ') || 'None'"></td>
             <td class="align-middle" data-bind="text: $data.weight"></td>
