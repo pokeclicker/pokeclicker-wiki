@@ -66,7 +66,7 @@ Munchlax can also be obtained as a Wanderer by using [[Berries/Chilan]] berries.
 ### Weather-dependent Pokémon
 |Pokémon | Evolution | Required Weather |
 |---|---|---|
-| [[File:pokemon/421.png\|25px]] [[Pokémon/Cherrim (Overcast)]] | [[File:pokemon/421.01.png\|25px]] [[Pokémon/Cherrim (Sunshine)]] | Sunny |
+| [[File:pokemon/421.png\|25px]] [[Pokémon/Cherrim (Overcast)]] | [[File:pokemon/421.01.png\|25px]] [[Pokémon/Cherrim (Sunshine)]] | Harsh Sunlight |
 
 ### Level-dependent Pokémon
 **Note:** Level-dependant Pokémon evolve at or above the level specified excluding level 100. Pokémon at level 100 must be bred and retrained to the correct level.
