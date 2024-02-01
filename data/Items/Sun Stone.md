@@ -1,6 +1,6 @@
 Base chance of dropping: 1 in 2048 (Routes)
 Base chance of dropping: 1 in 512 (Dungeon)
-Base chance of dropping: 1 in 341.3 (Dungeon Boss
+Base chance of dropping: 1 in 341.3 (Dungeon Boss)
 
 ## Use
 Base Pokémon |Evolves into |Available in
