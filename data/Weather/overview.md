@@ -15,5 +15,5 @@ Pokémon | Requirements | Required Weather | Near to | Notes
 :--- | :--- | :--- | :--- | :---
 Wild Houndoom Horde | Captured 500 [[Pokemon/Houndour]] and defeated [[Towns/Pokémon League Kalos]] | Harsh Sunlight | [[Routes/Kalos Route 16]] | Awards Houndoominite to evolve [[Pokemon/Mega Houndoom]]
 Wild Manectrike Horde | Captured 500 [[Pokemon/Electrike]] and defeated [[Towns/Pokémon League Kalos]] | Thunderstorm | [[Routes/Kalos Route 16]] | Awards Manectite to evolve [[Pokemon/Mega Manectric]]
-Primal Groudon | Progress through [[Quest Lines/Primal Reversion]] | Hardsh Sunlight | [[Routes/Hoenn Route 126]] | Awards Red Orb to evolve [[Pokemon/Primal Groudon]]
+Primal Groudon | Progress through [[Quest Lines/Primal Reversion]] | Harsh Sunlight | [[Routes/Hoenn Route 126]] | Awards Red Orb to evolve [[Pokemon/Primal Groudon]]
 Primal Kyogre | Progress through [[Quest Lines/Primal Reversion]] | Rain | [[Routes/Hoenn Route 126]] | Awards Blue Orb to evolve [[Pokemon/Primal Kyogre]]
