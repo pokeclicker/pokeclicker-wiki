@@ -81,7 +81,7 @@
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
                     <td class="align-middle" data-bind="text: $data.level.toLocaleString()"></td>
-                    <td class="align-middle" data-bind="text: (pokemonList.find(p => p.name == $data.name).exp * 1.5).toLocaleString()"></td>
+                    <td class="align-middle" data-bind="text: (pokemonMap[$data.name].exp * 1.5).toLocaleString()"></td>
                     <td class="align-middle" data-bind="foreach: pokemonMap[$data.name].type">
                         <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
                             backgroundColor: TypeColor[$data]
@@ -118,7 +118,7 @@
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
                     <td class="align-middle" data-bind="text: $data.level.toLocaleString()"></td>
-                    <td class="align-middle" data-bind="text: (pokemonList.find(p => p.name == $data.name).exp * 1.5).toLocaleString()"></td>
+                    <td class="align-middle" data-bind="text: (pokemonMap[$data.name].exp * 1.5).toLocaleString()"></td>
                     <td class="align-middle" data-bind="foreach: pokemonMap[$data.name].type">
                         <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
                             backgroundColor: TypeColor[$data]
@@ -147,7 +147,7 @@
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
                     <td class="align-middle" data-bind="text: $data.level.toLocaleString()"></td>
-                    <td class="align-middle" data-bind="text: (pokemonList.find(p => p.name == $data.name).exp * 1.5).toLocaleString()"></td>
+                    <td class="align-middle" data-bind="text: (pokemonMap[$data.name].exp * 1.5).toLocaleString()"></td>
                     <td class="align-middle" data-bind="foreach: pokemonMap[$data.name].type">
                         <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
                             backgroundColor: TypeColor[$data]
