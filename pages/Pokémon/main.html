@@ -28,10 +28,14 @@
                     text: $data"></a>
             <!-- /ko -->
         </div>
-        <div data-bind="visible: Object.entries(PokemonHelper.getPokemonLocations($data.name)).length">
+        <div>
             <h3>Obtain methods:</h3>
             <div class="accordion obtain-methods">
             <!-- ko with: PokemonHelper.getPokemonLocations($data.name) -->
+                <!-- ko if: Object.entries($data).length === 0 -->
+                <h4 data-bind="text: `${Wiki.pageName()} is not currently obtainable`"></h4>
+                <!-- /ko -->
+
                 <!--
                     ROUTES
                 -->
@@ -568,6 +572,75 @@
                                     placement: 'bottom',
                                     trigger: 'hover'
                                 }"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+
+                <!--
+                    DREAM ORBS
+                -->
+                <!-- ko if: $data[PokemonLocationType.DreamOrb] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-dreamorbs" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            Dream Orbs
+                        </button>
+                    </h4>
+                    <div id="obtain-method-dreamorbs" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.DreamOrb])">
+                            <a href="#" class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Dream Orbs` }"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+
+                <!--
+                    BATTLE CAFE
+                -->
+                <!-- ko if: $data[PokemonLocationType.BattleCafe] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-battlecafe" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            Battle Café
+                        </button>
+                    </h4>
+                    <div id="obtain-method-battlecafe" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="with: $data[PokemonLocationType.BattleCafe]">
+                            <a href="#" class="badge text-bg-secondary" data-bind="text: `${Wiki.pokemon.battleCafeToHumanReadableString($data)}`,
+                                attr: { href: `#!Battle Cafe` }"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+
+                <!--
+                    SAFARI ITEM
+                -->
+                <!-- ko if: $data[PokemonLocationType.SafariItem] -->
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button data-bs-target="#obtain-method-safariitem" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            Safari Item
+                        </button>
+                    </h4>
+                    <div id="obtain-method-safariitem" class="accordion-collapse collapse">
+                        <div class="accordion-body" data-bind="foreach: Object.entries($data[PokemonLocationType.SafariItem])">
+                            <h5 data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0]])"></h5>
+                            <p data-bind="with: $data[1]">
+                                <a class="badge text-bg-secondary" data-bind="text: `Chance ${$data.chance * 100}%${$data.requirement ? ' 🔒' : ''}`,
+                                    attr: { href: `#!Towns/${Object.values(TownList).find(t => t.region == $parent[0] && t.content.filter(c => c instanceof SafariTownContent).length).name}` },
+                                    tooltip: {
+                                        title: $data.requirement ?? '',
+                                        html: false,
+                                        placement: 'bottom',
+                                        trigger: 'hover'
+                                    }">
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
