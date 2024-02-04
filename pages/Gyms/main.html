@@ -68,6 +68,8 @@
                 <tr>
                     <th>Pokémon</th>
                     <th>HP</th>
+                    <th>Level</th>
+                    <th>Experience</th>
                     <th>Type</th>
                 </tr>
             </thead>
@@ -78,6 +80,8 @@
                         <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: {href: `#!Pokemon/${$data.name}` }"></a>
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
+                    <td class="align-middle" data-bind="text: $data.level.toLocaleString()"></td>
+                    <td class="align-middle" data-bind="text: (pokemonMap[$data.name].exp * 1.5).toLocaleString()"></td>
                     <td class="align-middle" data-bind="foreach: pokemonMap[$data.name].type">
                         <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
                             backgroundColor: TypeColor[$data]
@@ -97,6 +101,8 @@
                     <th>Starter</th>
                     <th>Pokémon</th>
                     <th>HP</th>
+                    <th>Level</th>
+                    <th>Experience</th>
                     <th>Type</th>
                 </tr>
             </thead>
@@ -111,6 +117,8 @@
                         <knockout data-bind="text: $data.name"></knockout>
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
+                    <td class="align-middle" data-bind="text: $data.level.toLocaleString()"></td>
+                    <td class="align-middle" data-bind="text: (pokemonMap[$data.name].exp * 1.5).toLocaleString()"></td>
                     <td class="align-middle" data-bind="foreach: pokemonMap[$data.name].type">
                         <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
                             backgroundColor: TypeColor[$data]
@@ -119,7 +127,7 @@
                 </tr>
             <!-- /ko -->
                 <tr>
-                   <td class="bg-primary text-center small" colspan="4">Party will differ based on which regional starter the player selected.</td> 
+                   <td class="bg-primary text-center small" colspan="6">Party will differ based on which regional starter the player selected.</td>
                 </tr>
             </tbody>
             <tbody data-bind="foreach: Object.entries($data.pokemons.filter((p) => p.requirements?.some((r) => r instanceof StarterRequirement))
@@ -138,6 +146,8 @@
                         <knockout data-bind="text: $data.name"></knockout>
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
+                    <td class="align-middle" data-bind="text: $data.level.toLocaleString()"></td>
+                    <td class="align-middle" data-bind="text: (pokemonMap[$data.name].exp * 1.5).toLocaleString()"></td>
                     <td class="align-middle" data-bind="foreach: pokemonMap[$data.name].type">
                         <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
                             backgroundColor: TypeColor[$data]
