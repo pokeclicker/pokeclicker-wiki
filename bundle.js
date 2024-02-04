@@ -77184,7 +77184,7 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":1,"call-bind":6,"call-bind/callBound":5,"for-each":63,"gopd":67,"has-tostringtag/shams":72}],505:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
-  "version": "0.10.17",
+  "version": "0.10.19",
   "description": "PokéClicker repository",
   "main": "index.js",
   "scripts": {
@@ -78901,15 +78901,16 @@ const getDungeonLoot = (dungeon) => {
 getDungeonLoot.cache = new WeakMap();
 
 const getDungeonLootChancesForItem = (itemName) => {
-    const dungeonsDroppingItem = Object.values(dungeonList).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == itemName)));
+    const item = UndergroundItems.getByName(itemName) ?? ItemList[itemName];
+    const lootName = item.displayName;
+
+    const dungeonsDroppingItem = Object.values(dungeonList).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == itemName || l.loot == lootName)));
     const dungeonsWithLootTables = dungeonsDroppingItem.map(dungeon => (
         {
             dungeonName: dungeon.name,
             lootTable: getDungeonLoot(dungeon)
         }
     ));
-    const item = UndergroundItems.getByName(itemName) ?? ItemList[itemName];
-    const lootName = item.displayName;
 
     // Collate and flatten all item-specific data from each dungeon's loot tables
     const itemData = [];

@@ -25,3 +25,5 @@ Cheri Berries can drop from any route and can also be obtained from the followin
 | [[Dungeons/Ruins of Conflict]]    | Common	| `N/A`         |
 | [[Dungeons/Ruins of Life]]	    | Common	| `N/A`         |
 | [[Dungeons/Glimwood Tangle]]	    | Common	| `N/A`         |
+
+Can also obtain 100 Cheri by using FARMINGBOOST code.

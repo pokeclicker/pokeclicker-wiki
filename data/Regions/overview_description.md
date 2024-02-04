@@ -5,7 +5,7 @@ Kanto is the first region and introduces the player to the core gameplay feature
 
 By giving [[Items/Protein]] to obtained Pokémon the amount of added damage per breeding cycle is increased, but the number of egg steps also increases. Protein becomes available towards the end of Kanto at the [[Towns/Indigo_Plateau_Kanto]].
 
-A unique feature in Kanto is the [[Towns/Safari_Zone]], where the player can freely move and catch Pokémon with the support of throwing rocks increase the capture chance and feeding bait to decrease the fleeing chance of encountered Pokémon.
+A feature in Kanto is the [[Towns/Safari_Zone]], where the player can freely move and catch Pokémon with the support of throwing rocks increase the capture chance and feeding bait to decrease the fleeing chance of encountered Pokémon.
 
 **Non-native Pokémon retain 20% damage
 Maximum Vitamins per Pokémon: 5**
@@ -16,6 +16,8 @@ This is the first region where the damage debuff becomes noticeable. Any non-nat
 
 The breeding queue allows the player to queue up 4 Pokémon besides the 4 currently breeding eggs. As soon as the Pokémon are queued up, their damage is no longer added to the overall damage of the team until they are either bred and hatched or otherwise removed from the queue.
 In Johto the player has the opportunity to get another Oak item to boost the farm.
+
+A safari zone returns in Johto named [[Towns/National_Park]] though there are no unique Pokemon, instead a new currency can be earned.
 
 **Non-native Pokémon retain 20% damage
 Breeding Queue in the hatchery: 4
@@ -32,6 +34,8 @@ Maximum Vitamins per Pokémon: 15**
 
 #### [[Regions/Sinnoh]]
 Sinnoh is the fourth region and 107 unique Pokémon are waiting to be caught. The player will encounter some Pokémon that only evolve when they are in a certain area. One should pay attention to the hints from the local people.
+
+A safari zone is once again available in Sinnoh named [[Towns/Great_Marsh]] which offers unique Pokemon.
 
 **Non-native Pokémon retain 40% damage
 Breeding Queue in the hatchery: 16

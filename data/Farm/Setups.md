@@ -210,7 +210,7 @@ Here are a few highly efficient strategies on how to level up the [[Oak Items/Sq
 
 ### Occa/Kebia Planting Formation (a.k.a. Berry Wars)
 If you want to be able to gain experience more passively, then the best strategy is with Occa and Kebia berries. Colbur works for this as well, but takes longer enough to grow that it isn't as useful. This strategy will likely let you level up your Squirtbottle from 0 to 5 without having to set it up again unless you get unlucky with a full takeover.
-- _Note: When using this strategy, make sure to plant the berries so that they ripen at the same time to lower the chance of full takeover._
+- _Note: When using this strategy, make sure to plant the berries so that they ripen at the same time, so planting Kebia Berries when Occa has 10 minutes left till ripen; to lower the chance of full takeover._
 
 **Farm**
 ::: table-mutations
@@ -272,7 +272,7 @@ Purple spots are where the player is meant to harvest the berry and replace with
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | |
 :::
 
-### Infinity Farm
+### Infinite Farm
 This setup is another way to have a Farm that boosts egg steps gain. The combination of [[Berries/Haban]] and [[Berries/Lum]] in this formation make [[Berries/Petaya]] live for around 3.5 years once the setup fully ripens. While not as efficient as other setups in the [[Hatchery]] page, it works for those who want to forget about the Farm.
 
 Note that replacing the [[Berries/Chople]] with a different berry like [[Berries/Rowap]] or [[Berries/Starf]] will make the bonus only be 1.70x.

@@ -63,6 +63,11 @@
                         <knockout data-bind="text: $data.name"></knockout>
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
+                    <td class="align-middle" data-bind="foreach: pokemonMap[$data.name].type">
+                        <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
+                            backgroundColor: TypeColor[$data]
+                        }"></span>
+                    </td>
                 </tr>
             </tbody>
         </table>
