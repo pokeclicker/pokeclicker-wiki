@@ -1,4 +1,4 @@
-Pokémon are your partners in this adventure and your main source of power. Currently the game has **1,390** different Pokémon forms. Most of them based on main games, with 32 coming from side games, 53 coming from anime and films, and 18 custom forms.
+Pokémon are your partners in this adventure and your main source of power. Currently the game has **1,391** different Pokémon forms. Most of them based on main games, with 33 coming from side games, 53 coming from anime and films, and 18 custom forms.
 
 ## Statistics
 
@@ -58,7 +58,6 @@ There are exceptions to this rule:
 
 * The egg cycle values for Sand Cloak and Trash Cloak forms of Burmy and Wormadam are 1.5x higher than their Plant Cloak counterparts, since [[Pokémon/Burmy (Plant)]] evolves into [[Pokémon/Burmy (Sand)]] and [[Pokémon/Burmy (Trash)]].
 * [[Pokémon/Cherrim (Sunshine)]] has 1.5x the egg cycle value of [[Pokémon/Cherrim (Overcast)]].
-* All Mega Evolved Pokémon have 1.5x the egg cycle value of their base form.
 
 ### Other Pokémon Lists
 - [[Alternate Pokémon Forms]] page lists all alternate forms available in the game, including Regional forms, and the corresponding base Pokémon.

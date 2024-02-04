@@ -210,7 +210,7 @@ Here are a few highly efficient strategies on how to level up the [[Oak Items/Sq
 
 ### Occa/Kebia Planting Formation (a.k.a. Berry Wars)
 If you want to be able to gain experience more passively, then the best strategy is with Occa and Kebia berries. Colbur works for this as well, but takes longer enough to grow that it isn't as useful. This strategy will likely let you level up your Squirtbottle from 0 to 5 without having to set it up again unless you get unlucky with a full takeover.
-- _Note: When using this strategy, make sure to plant the berries so that they ripen at the same time to lower the chance of full takeover._
+- _Note: When using this strategy, make sure to plant the berries so that they ripen at the same time, so planting Kebia Berries when Occa has 10 minutes left till ripen; to lower the chance of full takeover._
 
 **Farm**
 ::: table-mutations
