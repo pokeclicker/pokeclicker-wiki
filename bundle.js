@@ -77861,10 +77861,8 @@ window.Wiki = {
   dreamOrbs: require('./pages/dreamOrbs'),
   farmSimulator: require('./pages/farmSimulator'),
   dungeons: require('./pages/dungeons'),
-  pokemonDollars: require('./pages/shopMon'),
+  shopMon: require('./pages/shopMon'),
   dungeonTokens: require('./pages/dungeonTokens'),
-  battlePoints: require('./pages/shopMon'),
-  diamonds: require('./pages/shopMon'),
   oakItems: require('./pages/oakItems'),
   getDealChains: require('./pages/dealChains').getDealChains,
   ...require('./navigation'),
@@ -78546,14 +78544,19 @@ const checkExist = setInterval(function() {
     }
  }, 100);
 
+const highestRouteCache = {};
+
 const highestRoute = (region, weather) => {
+    const cacheKey = `${region}-${weather}`;
+    const cachedResult = highestRouteCache[cacheKey];
+    if (cachedResult) return cachedResult;
+
     region = region;
     weather = weather;
 
     var routeArr = [];
 
     Routes.getRoutesByRegion(region).map(route => {
-        const routes = Routes.getRoutesByRegion(region).map(r => MapHelper.normalizeRoute(r.number, region, false));
         var pkmon1 = [];
         pkmon1.push(Object.values(route.pokemon).flat());
         route.pokemon.special.forEach((element) => {
@@ -78609,7 +78612,9 @@ const highestRoute = (region, weather) => {
         return dt[7] > max[7] ? dt : max;
     });
 
-    return( [[highestPB[0], highestPBMB[0], highestGB[0], highestGBMB[0], highestUB[0], highestUBMB[0]],routeArr] );
+    const result = [[highestPB[0], highestPBMB[0], highestGB[0], highestGBMB[0], highestUB[0], highestUBMB[0]], routeArr];
+    highestRouteCache[cacheKey] = result;
+    return result;
 }
 
 const setWeather = (evt, weather) => {
@@ -78626,35 +78631,9 @@ const setWeather = (evt, weather) => {
     return;
 }
 
-const getShopMons = (currency) => {
-    var towns = Object.values(TownList).filter(t => t.region < GameConstants.Region.final);
-    var filteredTowns = [];
-    var filteredShops = [];
-    
-    for (var j = 0; j < towns.length; j++){
-        var test = towns[j].content.filter((c) => c instanceof Shop && c.items.length > 0);
-        if (test.length > 0) {
-            test.forEach(function(i) {
-                filteredTowns = [...filteredTowns, i];
-            });
-        }
-    }
-    
-    for (var k = 0; k < filteredTowns.length; k++){
-        var test1 = filteredTowns[k].items.filter((c) => c.currency == currency && c instanceof PokemonItem)
-        if (test1.length > 0) {
-            test1.forEach(function(s) {
-                filteredShops = [...filteredShops, [filteredTowns[k], s]];
-            });
-        }
-    }
-    return filteredShops;
-}
-
 module.exports = {
     highestRoute,
     setWeather,
-    getShopMons
 };
 },{}],523:[function(require,module,exports){
 const getTableClearCounts = (dungeon) => {
@@ -80019,8 +79998,8 @@ const searchOptions = [
   },
   //Currency Pages
   {
-    display: 'Pokémon Dollars',
-    type: 'Pokémon Dollars',
+    display: 'Pokédollars',
+    type: 'Pokédollars',
     page: '',
   },
   {
@@ -80136,4 +80115,4 @@ module.exports = {
   searchOptions,
 };
 
-},{"./navigation":518}]},{},[511]);
+},{"./navigation":518,"./pages/pokemon":528}]},{},[511]);

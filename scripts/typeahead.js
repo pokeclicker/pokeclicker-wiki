@@ -312,8 +312,8 @@ const searchOptions = [
   },
   //Currency Pages
   {
-    display: 'Pokémon Dollars',
-    type: 'Pokémon Dollars',
+    display: 'Pokédollars',
+    type: 'Pokédollars',
     page: '',
   },
   {
