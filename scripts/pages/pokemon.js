@@ -56,6 +56,18 @@ const getAllAvailableShadowPokemon = () => {
         .map(d => Wiki.dungeons.getDungeonShadowPokemon(d)).flat();
 };
 
+const battleCafeToHumanReadableString = (battleCafeLocation) => {
+    const sweet = GameConstants.AlcremieSweet[battleCafeLocation.sweet];
+    const sweetString = sweet ? sweet : 'Any Sweet';
+
+    const spinEnum = GameHelper.enumStrings(GameConstants.AlcremieSpins)[battleCafeLocation.spin];
+    const splitCamelCase = GameConstants.camelCaseToString(spinEnum).replace('3600', ' 3600');
+    const commaSeperated = splitCamelCase.replaceAll(' ', ', ');
+    const relativeSeconds = commaSeperated.replace('Above5', '5 or more').replace('Above10', '11 or more').replace('Below5', 'Less than 5');
+    const spinWording = relativeSeconds.replace('At5', 'Dusk, Any').replace('Any', 'Any direction');
+    return `${sweetString} - ${spinWording} seconds`;
+};
+
 const getAvailablePokemon = () => {
     return pokemonList.filter(p =>
         p.id >= 0 &&
@@ -72,4 +84,5 @@ module.exports = {
     getBestVitamins,
     getAvailablePokemon,
     getAllAvailableShadowPokemon,
+    battleCafeToHumanReadableString,
 }

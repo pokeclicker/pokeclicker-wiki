@@ -8,6 +8,7 @@
                 <th>Base Attack</th>
                 <th>Egg Steps</th>
                 <th>Base BE</th>
+                <th>Experience</th>
                 <th>Catch Rate</th>
             </tr>
         </thead>
@@ -23,6 +24,7 @@
                 <td data-bind="text: $data.attack"></td>
                 <td data-bind="text: App.game.breeding.getSteps($data.eggCycles).toLocaleString(), attr: { 'data-order': $data.eggCycles }"></td>
                 <td data-bind="text: Wiki.pokemon.getEfficiency([0,0,0], $data.attack, $data.eggCycles).toLocaleString('en-US', { maximumSignificantDigits: 2 })"></td>
+                <td data-bind="text: ($data.exp || 0).toLocaleString()"></td>
                 <td data-bind="text: PokemonFactory.catchRateHelper($data.catchRate, true) + '%'"></td>
             </tr>
         </tbody>
