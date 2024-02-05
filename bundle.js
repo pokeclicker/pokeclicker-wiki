@@ -77184,7 +77184,7 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":1,"call-bind":6,"call-bind/callBound":5,"for-each":63,"gopd":67,"has-tostringtag/shams":72}],505:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
-  "version": "0.10.17",
+  "version": "0.10.19",
   "description": "PokéClicker repository",
   "main": "index.js",
   "scripts": {
@@ -77861,10 +77861,8 @@ window.Wiki = {
   dreamOrbs: require('./pages/dreamOrbs'),
   farmSimulator: require('./pages/farmSimulator'),
   dungeons: require('./pages/dungeons'),
-  pokemonDollars: require('./pages/shopMon'),
+  shopMon: require('./pages/shopMon'),
   dungeonTokens: require('./pages/dungeonTokens'),
-  battlePoints: require('./pages/shopMon'),
-  diamonds: require('./pages/shopMon'),
   oakItems: require('./pages/oakItems'),
   getDealChains: require('./pages/dealChains').getDealChains,
   ...require('./navigation'),
@@ -78546,14 +78544,19 @@ const checkExist = setInterval(function() {
     }
  }, 100);
 
+const highestRouteCache = {};
+
 const highestRoute = (region, weather) => {
+    const cacheKey = `${region}-${weather}`;
+    const cachedResult = highestRouteCache[cacheKey];
+    if (cachedResult) return cachedResult;
+
     region = region;
     weather = weather;
 
     var routeArr = [];
 
     Routes.getRoutesByRegion(region).map(route => {
-        const routes = Routes.getRoutesByRegion(region).map(r => MapHelper.normalizeRoute(r.number, region, false));
         var pkmon1 = [];
         pkmon1.push(Object.values(route.pokemon).flat());
         route.pokemon.special.forEach((element) => {
@@ -78609,7 +78612,9 @@ const highestRoute = (region, weather) => {
         return dt[7] > max[7] ? dt : max;
     });
 
-    return( [[highestPB[0], highestPBMB[0], highestGB[0], highestGBMB[0], highestUB[0], highestUBMB[0]],routeArr] );
+    const result = [[highestPB[0], highestPBMB[0], highestGB[0], highestGBMB[0], highestUB[0], highestUBMB[0]], routeArr];
+    highestRouteCache[cacheKey] = result;
+    return result;
 }
 
 const setWeather = (evt, weather) => {
@@ -78626,35 +78631,9 @@ const setWeather = (evt, weather) => {
     return;
 }
 
-const getShopMons = (currency) => {
-    var towns = Object.values(TownList).filter(t => t.region < GameConstants.Region.final);
-    var filteredTowns = [];
-    var filteredShops = [];
-    
-    for (var j = 0; j < towns.length; j++){
-        var test = towns[j].content.filter((c) => c instanceof Shop && c.items.length > 0);
-        if (test.length > 0) {
-            test.forEach(function(i) {
-                filteredTowns = [...filteredTowns, i];
-            });
-        }
-    }
-    
-    for (var k = 0; k < filteredTowns.length; k++){
-        var test1 = filteredTowns[k].items.filter((c) => c.currency == currency && c instanceof PokemonItem)
-        if (test1.length > 0) {
-            test1.forEach(function(s) {
-                filteredShops = [...filteredShops, [filteredTowns[k], s]];
-            });
-        }
-    }
-    return filteredShops;
-}
-
 module.exports = {
     highestRoute,
     setWeather,
-    getShopMons
 };
 },{}],523:[function(require,module,exports){
 const getTableClearCounts = (dungeon) => {
@@ -78901,15 +78880,16 @@ const getDungeonLoot = (dungeon) => {
 getDungeonLoot.cache = new WeakMap();
 
 const getDungeonLootChancesForItem = (itemName) => {
-    const dungeonsDroppingItem = Object.values(dungeonList).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == itemName)));
+    const item = UndergroundItems.getByName(itemName) ?? ItemList[itemName];
+    const lootName = item.displayName;
+
+    const dungeonsDroppingItem = Object.values(dungeonList).filter((d) => GameConstants.getDungeonRegion(d.name) <= GameConstants.MAX_AVAILABLE_REGION).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == itemName || l.loot == lootName)));
     const dungeonsWithLootTables = dungeonsDroppingItem.map(dungeon => (
         {
             dungeonName: dungeon.name,
             lootTable: getDungeonLoot(dungeon)
         }
     ));
-    const item = UndergroundItems.getByName(itemName) ?? ItemList[itemName];
-    const lootName = item.displayName;
 
     // Collate and flatten all item-specific data from each dungeon's loot tables
     const itemData = [];
@@ -79591,12 +79571,35 @@ const getAllAvailableShadowPokemon = () => {
         .map(d => Wiki.dungeons.getDungeonShadowPokemon(d)).flat();
 };
 
+const battleCafeToHumanReadableString = (battleCafeLocation) => {
+    const sweet = GameConstants.AlcremieSweet[battleCafeLocation.sweet];
+    const sweetString = sweet ? sweet : 'Any Sweet';
+
+    const spinEnum = GameHelper.enumStrings(GameConstants.AlcremieSpins)[battleCafeLocation.spin];
+    const splitCamelCase = GameConstants.camelCaseToString(spinEnum).replace('3600', ' 3600');
+    const commaSeperated = splitCamelCase.replaceAll(' ', ', ');
+    const relativeSeconds = commaSeperated.replace('Above5', '5 or more').replace('Above10', '11 or more').replace('Below5', 'Less than 5');
+    const spinWording = relativeSeconds.replace('At5', 'Dusk, Any').replace('Any', 'Any direction');
+    return `${sweetString} - ${spinWording} seconds`;
+};
+
+const getAvailablePokemon = () => {
+    return pokemonList.filter(p =>
+        p.id >= 0 &&
+        Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION] &&
+        p.nativeRegion <= GameConstants.MAX_AVAILABLE_REGION &&
+        Object.keys(PokemonHelper.getPokemonLocations(p.name)).length
+    );
+}
+
 module.exports = {
     getBreedingAttackBonus,
     calcEggSteps,
     getEfficiency,
     getBestVitamins,
+    getAvailablePokemon,
     getAllAvailableShadowPokemon,
+    battleCafeToHumanReadableString,
 }
 
 },{}],529:[function(require,module,exports){
@@ -79682,6 +79685,7 @@ module.exports = {
 
 },{}],531:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
+const { getAvailablePokemon } = require('./pages/pokemon');
 
 const searchOptions = [
   {
@@ -79705,7 +79709,7 @@ const searchOptions = [
     type: 'Pokémon',
     page: '',
   },
-  ...Object.values(pokemonList).filter(p => Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION]).map(p => ({
+  ...Object.values(getAvailablePokemon()).map(p => ({
     display: `#${Math.floor(p.id).toString().padStart(3, '0')} - ${p.name}`,
     type: 'Pokémon',
     page: p.name,
@@ -79994,8 +79998,8 @@ const searchOptions = [
   },
   //Currency Pages
   {
-    display: 'Pokémon Dollars',
-    type: 'Pokémon Dollars',
+    display: 'Pokédollars',
+    type: 'Pokédollars',
     page: '',
   },
   {
@@ -80122,4 +80126,4 @@ module.exports = {
   searchOptions,
 };
 
-},{"./navigation":518}]},{},[511]);
+},{"./navigation":518,"./pages/pokemon":528}]},{},[511]);

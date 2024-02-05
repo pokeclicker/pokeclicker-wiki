@@ -38,6 +38,10 @@
       <p data-bind="text: Math.round(PokemonFactory.routeHealth($data.number, $data.region)).toLocaleString()"></p>
   </div>
   <div>
+    <h3>Level:</h3>
+    <p data-bind="text: Math.round(PokemonFactory.routeLevel($data.number, $data.region)).toLocaleString()"></p>
+  </div>
+  <div>
     <h3>Egg Steps:</h3>
     <p data-bind="text: +Math.sqrt(MapHelper.normalizeRoute($data?.number, $data.region)).toFixed(2)"></p>
   </div>

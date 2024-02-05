@@ -17,12 +17,9 @@
             <tbody data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r <= GameConstants.MAX_AVAILABLE_REGION && r != GameConstants.Region.none)">
                 <tr>
                     <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data])"></td>
-                    <td data-bind="html: Wiki.dungeonTokens.highestRoute($data, 0)[0][0]"></td>
-                    <td data-bind="html: Wiki.dungeonTokens.highestRoute($data, 0)[0][1]"></td>
-                    <td data-bind="html: Wiki.dungeonTokens.highestRoute($data, 0)[0][2]"></td>
-                    <td data-bind="html: Wiki.dungeonTokens.highestRoute($data, 0)[0][3]"></td>
-                    <td data-bind="html: Wiki.dungeonTokens.highestRoute($data, 0)[0][4]"></td>
-                    <td data-bind="html: Wiki.dungeonTokens.highestRoute($data, 0)[0][5]"></td>
+                    <!-- ko foreach: Wiki.dungeonTokens.highestRoute($data, 0)[0] -->
+                    <td data-bind="text: $data"></td>
+                    <!-- /ko -->
                 </tr>
             </tbody>
         </table>
@@ -50,12 +47,9 @@
                         <img width="18" class="me-1" data-bind="attr: { src: `./images/weather/${GameConstants.camelCaseToString(WeatherType[$data])}.png` }" />
                         <ko data-bind="text: GameConstants.camelCaseToString(WeatherType[$data])"></ko>
                     </td>
-                    <td data-bind="html: Wiki.dungeonTokens.highestRoute(7, $data)[0][0]"></td>
-                    <td data-bind="html: Wiki.dungeonTokens.highestRoute(7, $data)[0][1]"></td>
-                    <td data-bind="html: Wiki.dungeonTokens.highestRoute(7, $data)[0][2]"></td>
-                    <td data-bind="html: Wiki.dungeonTokens.highestRoute(7, $data)[0][3]"></td>
-                    <td data-bind="html: Wiki.dungeonTokens.highestRoute(7, $data)[0][4]"></td>
-                    <td data-bind="html: Wiki.dungeonTokens.highestRoute(7, $data)[0][5]"></td>
+                    <!-- ko foreach: Wiki.dungeonTokens.highestRoute(7, $data)[0] -->
+                    <td data-bind="text: $data"></td>
+                    <!-- /ko -->
                 </tr>
             </tbody>
         </table>
@@ -83,16 +77,9 @@
                     </tr>
                 </thead>
                 <tbody data-bind="foreach: Wiki.dungeonTokens.highestRoute($data, 0)[1]">
-                    <tr>
-                        <td data-bind="text: $data[0]"></td>
-                        <td data-bind="text: $data[1]"></td>
-                        <td data-bind="text: $data[2]"></td>
-                        <td data-bind="text: $data[3]"></td>
-                        <td data-bind="text: $data[4]"></td>
-                        <td data-bind="text: $data[5]"></td>
-                        <td data-bind="text: $data[6]"></td>
-                        <td data-bind="text: $data[7]"></td>
-                        </tr>
+                    <tr data-bind="foreach: $data">
+                        <td data-bind="text: $data"></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -120,16 +107,9 @@
                         </tr>
                     </thead>
                     <tbody id="weatherTable" data-bind="foreach: Wiki.dungeonTokens.highestRoute($parent, $data)[1]">
-                        <tr>
-                            <td data-bind="text: $data[0]"></td>
-                            <td data-bind="text: $data[1]"></td>
-                            <td data-bind="text: $data[2]"></td>
-                            <td data-bind="text: $data[3]"></td>
-                            <td data-bind="text: $data[4]"></td>
-                            <td data-bind="text: $data[5]"></td>
-                            <td data-bind="text: $data[6]"></td>
-                            <td data-bind="text: $data[7]"></td>
-                            </tr>
+                        <tr data-bind="foreach: $data">
+                            <td data-bind="text: $data"></td>
+                        </tr>
                     </tbody>
                 </table>    
             </div>
@@ -174,7 +154,7 @@
                 <th>Shop</th>
                 <th>Region</th>
             </thead>
-            <tbody data-bind="foreach: Wiki.dungeonTokens.getShopMons(2)">
+            <tbody data-bind="foreach: Wiki.shopMon.getShopMons(Currency.dungeonToken)">
                 <tr>
                     <td class="align-middle">
                         <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data[1].image }" />

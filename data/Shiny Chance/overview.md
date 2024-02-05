@@ -12,6 +12,7 @@ Reward | 1 / 1024 | 1 / 512 | 1 / 353
 [Battle Frontier Milestone](#!Battle_Frontier) | 1 / 1024 | 1 / 512 | 1 / 353
 Purchased Shop Pokémon | 1 / 1024 | 1 / 512 | 1 / 353
 [Farm Wanderer](#!Wandering_Pokémon) | 1 / 1024 | 1 / 512 | 1 / 353
+OOOSHINY code | 1 / 1 | 1 / 1 | 1 / 1
 
 ## Farm Strategies
 [Breeding](#!Hatchery) is the most effective way to obtain Shiny Pokémon. The [[Farm]] can be used to increase both the Egg Steps gained by defeating a Pokémon (thus hatching eggs faster) and the Shiny Rate in general. Below is a table of optimal Shiny strategies along with planting formation to achieve these strategies.

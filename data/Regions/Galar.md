@@ -57,7 +57,7 @@ Mimic Pokémon are Pokémon that can be encountered by opening a chest inside [[
 |---|---|---|
 | [[File:pokemon/845.01.png\|25px]] [[Pokémon/Cramorant (Gulping)]] | Rain | [[Routes/Axew's Eye]], [[Routes/Bridge Field]], [[Routes/Stony Wilderness]], [[Routes/Lake of Outrage]], [[Routes/Galar Route 9]], [[Routes/Circhester Bay]], [[Routes/Forest of Focus]], [[Routes/Challenge Beach]], and [[Routes/Training Lowlands]] |
 | [[File:pokemon/845.02.png\|25px]] [[Pokémon/Cramorant (Gorging)]] | Thunderstorm | [[Routes/Axew's Eye]], [[Routes/Galar Route 9]], [[Routes/Circhester Bay]], [[Routes/Forest of Focus]], [[Routes/Challenge Beach]], and [[Routes/Training Lowlands]] |
-| [[File:pokemon/875.01.png\|25px]] [[Pokémon/Eiscue (Noice Face)]] | Sunny | [[Routes/Route 10]] and [[Routes/Frigid Sea]] |
+| [[File:pokemon/875.01.png\|25px]] [[Pokémon/Eiscue (Noice Face)]] | Harsh Sunlight | [[Routes/Route 10]] and [[Routes/Frigid Sea]] |
 
 ### Location-dependent Pokémon
 **Note:** Location-dependant Pokémon evolve at or above the level specified (excluding level 100) when leveled at a particular location. Pokémon at level 100 must be bred and retrained to the correct level (level 34), and then leveled at the specified location.
