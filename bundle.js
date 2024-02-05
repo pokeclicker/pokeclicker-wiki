@@ -80115,4 +80115,4 @@ module.exports = {
   searchOptions,
 };
 
-},{"./navigation":518}]},{},[511]);
+},{"./navigation":518,"./pages/pokemon":528}]},{},[511]);
