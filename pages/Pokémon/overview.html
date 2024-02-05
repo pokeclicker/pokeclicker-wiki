@@ -12,7 +12,7 @@
                 <th>Catch Rate</th>
             </tr>
         </thead>
-        <tbody data-bind="foreach: pokemonList.filter(p => p.id >= 0 && Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION])">
+        <tbody data-bind="foreach: Wiki.pokemon.getAvailablePokemon()">
             <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Pokemon', $data.name); return false; }">
                 <td data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`, attr: { 'data-sort': $data.id }"></td>
                 <td data-bind="text: $data.name"></td>

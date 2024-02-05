@@ -78904,7 +78904,7 @@ const getDungeonLootChancesForItem = (itemName) => {
     const item = UndergroundItems.getByName(itemName) ?? ItemList[itemName];
     const lootName = item.displayName;
 
-    const dungeonsDroppingItem = Object.values(dungeonList).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == itemName || l.loot == lootName)));
+    const dungeonsDroppingItem = Object.values(dungeonList).filter((d) => GameConstants.getDungeonRegion(d.name) <= GameConstants.MAX_AVAILABLE_REGION).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == itemName || l.loot == lootName)));
     const dungeonsWithLootTables = dungeonsDroppingItem.map(dungeon => (
         {
             dungeonName: dungeon.name,
@@ -79604,11 +79604,21 @@ const battleCafeToHumanReadableString = (battleCafeLocation) => {
     return `${sweetString} - ${spinWording} seconds`;
 };
 
+const getAvailablePokemon = () => {
+    return pokemonList.filter(p =>
+        p.id >= 0 &&
+        Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION] &&
+        p.nativeRegion <= GameConstants.MAX_AVAILABLE_REGION &&
+        Object.keys(PokemonHelper.getPokemonLocations(p.name)).length
+    );
+}
+
 module.exports = {
     getBreedingAttackBonus,
     calcEggSteps,
     getEfficiency,
     getBestVitamins,
+    getAvailablePokemon,
     getAllAvailableShadowPokemon,
     battleCafeToHumanReadableString,
 }
@@ -79696,6 +79706,7 @@ module.exports = {
 
 },{}],531:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
+const { getAvailablePokemon } = require('./pages/pokemon');
 
 const searchOptions = [
   {
@@ -79719,7 +79730,7 @@ const searchOptions = [
     type: 'Pokémon',
     page: '',
   },
-  ...Object.values(pokemonList).filter(p => Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION]).map(p => ({
+  ...Object.values(getAvailablePokemon()).map(p => ({
     display: `#${Math.floor(p.id).toString().padStart(3, '0')} - ${p.name}`,
     type: 'Pokémon',
     page: p.name,
