@@ -1,6 +1,6 @@
 ## Egg Pool Odds {#EggPoolOdds}
 
-As you enter subsequent [[Regions]], the odds of obtaining Pokémon from Eggs from prior Regions decreases to 50% of its prior rate.
+As you enter subsequent [[Regions]], the odds of obtaining Pokémon from Eggs from prior Regions decreases to 50% of its prior rate. (i.e: In Sinnoh, there is a 50% chance to obtain Pokémon from the Sinnoh egg pool, a 25% to obtain Pokémon from the Hoenn egg pool, and a 12.5% to obtain Pokémon from the Kanto and Johto egg pool.)
 The Kanto and Johto pools are given equal odds in every region (excluding Kanto).
 The [[Items/Mystery Egg]] will pull randomly from its own pool and all typed egg pools, making it most useful when you have not obtained any egg Pokémon for that region yet.
 

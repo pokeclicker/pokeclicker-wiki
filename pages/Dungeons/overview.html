@@ -53,7 +53,7 @@
             </tr>
         </tbody>
         <tfoot>
-            <tr data-bind="with: {total: Object.values(GameConstants.RegionDungeons).flat().map(d => dungeonList[d]).reduce((sum, d) => sum + d.tokenCost, 0)}">
+            <tr data-bind="with: {total: Object.values(GameConstants.RegionDungeons).filter((r, i) => i <= GameConstants.MAX_AVAILABLE_REGION).flat().map(d => dungeonList[d]).reduce((sum, d) => sum + d.tokenCost, 0)}">
                 <td>Total</td>
                 <td><img src="./images/dungeonToken.svg" width="18px"/> 
                     <ko data-bind="text: $data.total.toLocaleString()"></ko></td>

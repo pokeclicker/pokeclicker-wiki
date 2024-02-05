@@ -77184,7 +77184,7 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":1,"call-bind":6,"call-bind/callBound":5,"for-each":63,"gopd":67,"has-tostringtag/shams":72}],505:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
-  "version": "0.10.17",
+  "version": "0.10.19",
   "description": "PokéClicker repository",
   "main": "index.js",
   "scripts": {
@@ -78880,15 +78880,16 @@ const getDungeonLoot = (dungeon) => {
 getDungeonLoot.cache = new WeakMap();
 
 const getDungeonLootChancesForItem = (itemName) => {
-    const dungeonsDroppingItem = Object.values(dungeonList).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == itemName)));
+    const item = UndergroundItems.getByName(itemName) ?? ItemList[itemName];
+    const lootName = item.displayName;
+
+    const dungeonsDroppingItem = Object.values(dungeonList).filter((d) => GameConstants.getDungeonRegion(d.name) <= GameConstants.MAX_AVAILABLE_REGION).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == itemName || l.loot == lootName)));
     const dungeonsWithLootTables = dungeonsDroppingItem.map(dungeon => (
         {
             dungeonName: dungeon.name,
             lootTable: getDungeonLoot(dungeon)
         }
     ));
-    const item = UndergroundItems.getByName(itemName) ?? ItemList[itemName];
-    const lootName = item.displayName;
 
     // Collate and flatten all item-specific data from each dungeon's loot tables
     const itemData = [];
@@ -79570,12 +79571,35 @@ const getAllAvailableShadowPokemon = () => {
         .map(d => Wiki.dungeons.getDungeonShadowPokemon(d)).flat();
 };
 
+const battleCafeToHumanReadableString = (battleCafeLocation) => {
+    const sweet = GameConstants.AlcremieSweet[battleCafeLocation.sweet];
+    const sweetString = sweet ? sweet : 'Any Sweet';
+
+    const spinEnum = GameHelper.enumStrings(GameConstants.AlcremieSpins)[battleCafeLocation.spin];
+    const splitCamelCase = GameConstants.camelCaseToString(spinEnum).replace('3600', ' 3600');
+    const commaSeperated = splitCamelCase.replaceAll(' ', ', ');
+    const relativeSeconds = commaSeperated.replace('Above5', '5 or more').replace('Above10', '11 or more').replace('Below5', 'Less than 5');
+    const spinWording = relativeSeconds.replace('At5', 'Dusk, Any').replace('Any', 'Any direction');
+    return `${sweetString} - ${spinWording} seconds`;
+};
+
+const getAvailablePokemon = () => {
+    return pokemonList.filter(p =>
+        p.id >= 0 &&
+        Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION] &&
+        p.nativeRegion <= GameConstants.MAX_AVAILABLE_REGION &&
+        Object.keys(PokemonHelper.getPokemonLocations(p.name)).length
+    );
+}
+
 module.exports = {
     getBreedingAttackBonus,
     calcEggSteps,
     getEfficiency,
     getBestVitamins,
+    getAvailablePokemon,
     getAllAvailableShadowPokemon,
+    battleCafeToHumanReadableString,
 }
 
 },{}],529:[function(require,module,exports){
@@ -79661,6 +79685,7 @@ module.exports = {
 
 },{}],531:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
+const { getAvailablePokemon } = require('./pages/pokemon');
 
 const searchOptions = [
   {
@@ -79684,7 +79709,7 @@ const searchOptions = [
     type: 'Pokémon',
     page: '',
   },
-  ...Object.values(pokemonList).filter(p => Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION]).map(p => ({
+  ...Object.values(getAvailablePokemon()).map(p => ({
     display: `#${Math.floor(p.id).toString().padStart(3, '0')} - ${p.name}`,
     type: 'Pokémon',
     page: p.name,

@@ -1,4 +1,5 @@
 const { gotoPage } = require('./navigation');
+const { getAvailablePokemon } = require('./pages/pokemon');
 
 const searchOptions = [
   {
@@ -22,7 +23,7 @@ const searchOptions = [
     type: 'Pokémon',
     page: '',
   },
-  ...Object.values(pokemonList).filter(p => Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION]).map(p => ({
+  ...Object.values(getAvailablePokemon()).map(p => ({
     display: `#${Math.floor(p.id).toString().padStart(3, '0')} - ${p.name}`,
     type: 'Pokémon',
     page: p.name,
