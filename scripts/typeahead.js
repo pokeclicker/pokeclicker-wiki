@@ -365,6 +365,17 @@ const searchOptions = [
     type: 'Achievements',
     page: '',
   },
+  // Poké Balls
+  {
+    display: 'Poké Balls',
+    type: 'Poké Balls',
+    page: '',
+  },
+  {
+    display: 'Pokéballs',
+    type: 'Poké Balls',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
