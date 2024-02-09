@@ -1,4 +1,4 @@
-The **Battle Frontier** is a location in Hoenn where your Pokémon fight endless teams of three randomly generated Pokémon. There is a 30 second time limit for each stage - if you do not defeat the three Pokémon within the time limit you will be awarded Pokédollars and Battle Points. *(you won't be awarded if you quit)*
+.The **Battle Frontier** is a location in Hoenn where your Pokémon fight endless teams of three randomly generated Pokémon. There is a 30 second time limit for each stage - if you do not defeat the three Pokémon within the time limit you will be awarded Pokédollars and Battle Points. *(you won't be awarded if you quit)*
 Items such as XAttack are permitted; however, you **cannot** Click to damage Pokémon in the Battle Frontier and the time flute **does not** have any effect.
 
 [//]: # (Here will go BF image from old wiki: [[Battle_Frontier.png]])
@@ -27,7 +27,7 @@ Gems = `Stage Number / 80`
 ## Rewards
 ### Currencies
 
-**Note:** Currency Rewards are not awarded if your Battle Frontier run is Quit. You must lose your attempt normally to gain Pokédollars and Battle Points
+**Note:** Currency Rewards are not awarded if your Battle Frontier run is Quit. You must lose your attempt normally to gain Pokédollars and Battle Points.
 
 Currency Reward | Formula
 :--- | ---:
