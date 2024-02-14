@@ -31,7 +31,8 @@ Gems = `Stage Number / 80`
 
 Currency Reward | Formula
 :--- | ---:
-Pokédollars | `Stage Beaten ^ 2`
-Battle Points\* | `(Stage Beaten ^ 2) / 100`
+Pokédollars | `Stage Beaten ^ 2`\*\*
+Battle Points\* | `(Stage Beaten ^ 2) / 100`\*\*
 
 \* *Battle Points are rounded to the nearest whole number*
+\*\* *Upon losing before the stage 100, a player will actually gain 1 Battle Point and 100 Pokédollars for each beaten stage*
