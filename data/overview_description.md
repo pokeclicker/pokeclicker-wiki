@@ -7,5 +7,5 @@
 #### This is an idle & clicker type game that is currently in beta release phase.
 #### New content and patches are released frequently.
 
-----------l
+----------
 :::
