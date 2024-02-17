@@ -1,5 +1,5 @@
 ## List of Pokémon
-After completing the [[Quest Line/Egg_Hunt]] Quest Line, 3 Pokémon will get added to random dungeons in Kanto, Johto, and Hoenn. After encountering the Pokémon in the right dungeon, they have a chance to then jump to another one in the same region. Note that it may take one encounter or multiple ones for the Pokémon to jump to another dungeon!
+After completing the [[Quest Lines/Egg_Hunt]] Quest Line, 3 Pokémon will get added to random dungeons in Kanto, Johto, and Hoenn. After encountering the Pokémon in the right dungeon, they have a chance to then jump to another one in the same region. Note that it may take one encounter or multiple ones for the Pokémon to jump to another dungeon!
 
 | Pokémon | Region | Dungeons |
 |:---:|:---:|:---:|
