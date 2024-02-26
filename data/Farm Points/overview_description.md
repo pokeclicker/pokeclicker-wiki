@@ -11,20 +11,20 @@ Farm Points can be used to purchase the following:
 
 Name | Starting Price | Maximum Price | Description
 :---: | :---: | :---: | :---:
-[[File:Masterball.png\|25px]] [[Items/Master_Ball]] | 3,000 [[File:farmPoint.svg\|25px]] | 300,000 [[File:farmPoint.svg\|25px]] | The ultimate Pokéball to capture Pokémon with, it has a 100% catch rate and catches Pokémon in 0.5s.
+[[File:Masterball.png\|25px]] [[Items/Master Ball]] | 3,000 [[File:farmPoint.svg\|25px]] | 300,000 [[File:farmPoint.svg\|25px]] | The ultimate Pokéball to capture Pokémon with, it has a 100% catch rate and catches Pokémon in 0.5s.
 
 #### Farm Items
 Farm Items purchasable at the Berry Masters.
 
 Name | Starting Price | Description
 :---: | :---: | :---:
-[[File:Boost_Mulch.png\|25px]] [[Items/Boost_Mulch]] | 50 [[File:farmPoint.svg\|25px]] | Increases Berry growth rate by 50% when applied to a plot occupied by a Berry plant
-[[File:Rich_Mulch.png\|25px]] [[Items/Rich_Mulch]] | 100 [[File:farmPoint.svg\|25px]] | Doubles the amount of berries gained from harvesting a ripe Berry plant. Can be applied immediately prior to harvesting. Doubles replant chance if berry withers while mulched.
-[[File:Surprise_Mulch.png\|25px]] [[Items/Surprise_Mulch]] | 150 [[File:farmPoint.svg\|25px]] | Increases the chance of Berry mutations by 50% on any (can be empty or occupied) plot it is applied to
-[[File:Amaze_Mulch.png\|25px]] [[Items/Amaze_Mulch]] | 200 [[File:farmPoint.svg\|25px]] | Increases all Berry effects on a plot: Growth and Mutation rates both boosted by 25%, Harvest rate boosted by 50%, Replant chance boosted by 50%
-[[File:Freeze_Mulch.png\|25px]] [[Items/Freeze_Mulch]] | 350 [[File:farmPoint.svg\|25px]] | Stops Berry growth (and withering) timer and aura effect when applied to a plot occupied by a Berry plant.
-[[File:Berry_Shovel.png\|25px]] [[Items/Berry_Shovel]] | 300 [[File:farmPoint.svg\|25px]] | Clears an occupied plot instantly. Harvestable plots that are shoveled are harvested and not cleared
-[[File:Mulch_Shovel.png\|25px]] [[Items/Mulch_Shovel]] | 300 [[File:farmPoint.svg\|25px]] | Removes Mulch from a plot in the Farm
+[[File:Boost_Mulch.png\|25px]] [[Items/Boost Mulch]] | 50 [[File:farmPoint.svg\|25px]] | Increases Berry growth rate by 50% when applied to a plot occupied by a Berry plant
+[[File:Rich_Mulch.png\|25px]] [[Items/Rich Mulch]] | 100 [[File:farmPoint.svg\|25px]] | Doubles the amount of berries gained from harvesting a ripe Berry plant. Can be applied immediately prior to harvesting. Doubles replant chance if berry withers while mulched.
+[[File:Surprise_Mulch.png\|25px]] [[Items/Surprise Mulch]] | 150 [[File:farmPoint.svg\|25px]] | Increases the chance of Berry mutations by 50% on any (can be empty or occupied) plot it is applied to
+[[File:Amaze_Mulch.png\|25px]] [[Items/Amaze Mulch]] | 200 [[File:farmPoint.svg\|25px]] | Increases all Berry effects on a plot: Growth and Mutation rates both boosted by 25%, Harvest rate boosted by 50%, Replant chance boosted by 50%
+[[File:Freeze_Mulch.png\|25px]] [[Items/Freeze Mulch]] | 350 [[File:farmPoint.svg\|25px]] | Stops Berry growth (and withering) timer and aura effect when applied to a plot occupied by a Berry plant.
+[[File:Berry_Shovel.png\|25px]] [[Items/Berry Shovel]] | 300 [[File:farmPoint.svg\|25px]] | Clears an occupied plot instantly. Harvestable plots that are shoveled are harvested and not cleared
+[[File:Mulch_Shovel.png\|25px]] [[Items/Mulch Shovel]] | 300 [[File:farmPoint.svg\|25px]] | Removes Mulch from a plot in the Farm
 
 #### Berries
 One of some exclusive Berries in Challenge Modes.
@@ -41,8 +41,8 @@ The one-time purchase and upgrades of the Squirtbottle and Sprinklotad.
 
 Name | Cost | Purchase Location | Level 1 Upgrade | Level 2 Upgrade | Level 3 Upgrade | Level 4 Upgrade | Level 5 Upgrade
 :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
-|[[Oak_Items/Squirtbottle]] [[File:Squirtbottle.png\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | [[Towns/Goldenrod_City]] | 2,000 [[File:farmPoint.svg\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | 20,000 [[File:farmPoint.svg\|25px]] | 50,000 [[File:farmPoint.svg\|25px]]
-|[[Oak_Items/Sprinklotad]] [[File:Sprinklotad.png\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | [[Towns/Mauville_City]] | 2,000 [[File:farmPoint.svg\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | 20,000 [[File:farmPoint.svg\|25px]] | 50,000 [[File:farmPoint.svg\|25px]]
+|[[Oak_Items/Squirtbottle]] [[File:Squirtbottle.png\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | [[Towns/Goldenrod City]] | 2,000 [[File:farmPoint.svg\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | 20,000 [[File:farmPoint.svg\|25px]] | 50,000 [[File:farmPoint.svg\|25px]]
+|[[Oak_Items/Sprinklotad]] [[File:Sprinklotad.png\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | [[Towns/Mauville City]] | 2,000 [[File:farmPoint.svg\|25px]] | 5,000 [[File:farmPoint.svg\|25px]] | 10,000 [[File:farmPoint.svg\|25px]] | 20,000 [[File:farmPoint.svg\|25px]] | 50,000 [[File:farmPoint.svg\|25px]]
 
 #### Farm Hands
 [[Farm Hands]] are unlockable and purchasable "Items" that allow the player to automate their farm. Below are the Farm Hands purchasable via Farm Points.
