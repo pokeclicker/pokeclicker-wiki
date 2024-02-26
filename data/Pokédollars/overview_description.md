@@ -7,7 +7,7 @@ They are obtained by defeating enemies and are primarily spent on various Items.
 ## Formulas
 #### Earnings
 $$ \text{Earnings} = \max(10,3 \times \text{route}(\text{order}) + 5 \times \text{route}^{1.15} + \text{Deviation}) $$
-$$ \text{Deviation} = Floor([\text{Random Integer between 0 and 1}] \times 51) - 25 \text{ or } \text{Deviation} = 12 $$ 
+$$ \text{Deviation} = Floor([\text{Random Integer between 0 and 1}] \times 51) - 25 \text{ or } \text{Deviation} = 12 $$
 #### Offline Earnings
 $$ \text{Offline Earnings} = \text{Number Of Pokemon Defeated} \times \text{routeMoney} \times 0.5 $$
 
@@ -43,14 +43,14 @@ A large portion of in-game items are purchasable with Pokédollars, please see t
 The upgrades of some [[Oak Items]].
 Name | Level 1 Upgrade | Level 2 Upgrade | Level 3 Upgrade | Level 4 Upgrade | Level 5 Upgrade
 :---:| :---: | :---: | :---: | :---: |:---:
-[[Oak_Items/Magic_Ball]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
-[[Oak_Items/Amulet_Coin]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
-[[Oak_Items/Rocky_Helmet]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
-[[Oak_Items/EXP_Share]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
+[[Oak_Items/Magic Ball]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
+[[Oak_Items/Amulet Coin]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
+[[Oak_Items/Rocky Helmet]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
+[[Oak_Items/EXP Share]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
 [[Oak_Items/Sprayduck]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
-[[Oak_Items/Shiny_Charm]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
-[[Oak_Items/Blaze_Cassette]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
-[[Oak_Items/Cell_Battery]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
-[[Oak_Items/Explosive_Charge]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
-[[Oak_Items/Treasure_Scanner]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
+[[Oak_Items/Shiny Charm]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
+[[Oak_Items/Blaze Cassette]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
+[[Oak_Items/Cell Battery]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
+[[Oak_Items/Explosive Charge]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
+[[Oak_Items/Treasure Scanner]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
 
