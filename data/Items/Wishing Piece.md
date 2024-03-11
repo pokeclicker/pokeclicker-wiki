@@ -1,5 +1,5 @@
-Obtained from Max Raid Temporary Battles.
-Namely :
+Obtained from Max Raid Temporary Battles, only 10 can be acquired each day and 240 are needed in total.
+Namely, the following temporary battles grant the player a wishing piece :
 - [[Temporary Battles/Max Raid Venusaur]]
 - [[Temporary Battles/Max Raid Charizard]]
 - [[Temporary Battles/Max Raid Blastoise]]
@@ -30,5 +30,3 @@ Namely :
 - [[Temporary Battles/Max Raid Alcremie]]
 - [[Temporary Battles/Max Raid Copperajah]]
 - [[Temporary Battles/Max Raid Duraludon]]
-
-They are obtained at best at a rate of 10 a day and a grand total of 240 is required.
