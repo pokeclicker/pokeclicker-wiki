@@ -2,4 +2,5 @@
 Left
 Left
 Straight
+Straight
 Right
