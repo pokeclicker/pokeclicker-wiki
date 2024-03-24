@@ -224,7 +224,7 @@
                     <!-- ko if: $parent.region == GameConstants.Region.johto -->
                     <td class="align-middle">
                         <img width="18" class="me-1" data-bind="attr: { src: `./images/contestToken.svg` }" />
-                        <knockout data-bind="text: Math.floor(pokemonList.find(p => p.name == $data.name).attack / 5)"></knockout> 
+                        <knockout data-bind="text: Math.floor(pokemonMap[$data.name].attack / 5), attr: { 'data-sort': pokemonMap[$data.name].attack }"></knockout> 
                     </td>
                     <!-- /ko -->
                 </tr>
