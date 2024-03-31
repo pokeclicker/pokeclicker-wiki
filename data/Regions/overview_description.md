@@ -1,11 +1,11 @@
 Regions are areas in the world of Pokémon. Each new region introduces a new set of [[Routes]], [[Towns]], [[Gyms]] and [[Pokémon]]. Pokémon that are not native to a region get a damage debuff, but with each new region entered, this debuff decreases by 10%. Furthermore, some region offer unique gameplay elements.
 
 #### [[Regions/Kanto]]
-Kanto is the first region and introduces the player to the core gameplay features. There are 151 unique Pokémon to catch and breed. Step by step the player gets introduced to the mechanics of breeding and hatching Pokémon, digging up items in the Underground, growing [[Berries]] on the [[Farm]], finishing Quests, the usage of [[Oak_Items]], [[Gems]], and Achievements.
+Kanto is the first region and introduces the player to the core gameplay features. There are 151 unique Pokémon to catch and breed. Step by step the player gets introduced to the mechanics of breeding and hatching Pokémon, digging up items in the Underground, growing [[Berries]] on the [[Farm]], finishing Quests, the usage of [[Oak Items]], [[Gems]], and Achievements.
 
-By giving [[Items/Protein]] to obtained Pokémon the amount of added damage per breeding cycle is increased, but the number of egg steps also increases. Protein becomes available towards the end of Kanto at the [[Towns/Indigo_Plateau_Kanto]].
+By giving [[Items/Protein]] to obtained Pokémon the amount of added damage per breeding cycle is increased, but the number of egg steps also increases. Protein becomes available towards the end of Kanto at the [[Towns/Indigo Plateau Kanto]].
 
-A feature in Kanto is the [[Towns/Safari_Zone]], where the player can freely move and catch Pokémon with the support of throwing rocks increase the capture chance and feeding bait to decrease the fleeing chance of encountered Pokémon.
+A feature in Kanto is the [[Towns/Safari Zone]], where the player can freely move and catch Pokémon with the support of throwing rocks increase the capture chance and feeding bait to decrease the fleeing chance of encountered Pokémon.
 
 **Non-native Pokémon retain 20% damage
 Maximum Vitamins per Pokémon: 5**
@@ -17,7 +17,7 @@ This is the first region where the damage debuff becomes noticeable. Any non-nat
 The breeding queue allows the player to queue up 4 Pokémon besides the 4 currently breeding eggs. As soon as the Pokémon are queued up, their damage is no longer added to the overall damage of the team until they are either bred and hatched or otherwise removed from the queue.
 In Johto the player has the opportunity to get another Oak item to boost the farm.
 
-A safari zone returns in Johto named [[Towns/National_Park]] though there are no unique Pokemon, instead a new currency can be earned.
+A safari zone returns in Johto named [[Towns/National Park]] though there are no unique Pokemon, instead a new currency can be earned.
 
 **Non-native Pokémon retain 20% damage
 Breeding Queue in the hatchery: 4
@@ -26,7 +26,7 @@ Maximum Vitamins per Pokémon: 10**
 #### [[Regions/Hoenn]]
 Hoenn is the third region and the player can catch another 135 unique Pokémon here. The player will find the last missing Oak item here and can take the challenge of the Battle Frontier. There is also a Pokémon that appears based on the current weather here. [[Items/Calcium]] becomes available for purchase, which increases damage when bred by a percentage of attack, rather than by a flat increase. Finally, completing Hoenn offers access to [[Regions/Orre]] as well as [[Regions/Sevii 4567]].
 
-In the Battle Frontier the player can take a challenge and win great prizes, including 4 unique Pokémon. It is not necessary for the progression to Sinnoh to capture these Pokémon from the [[Battle_Frontier]]. To reach the last prize at stage 386 the player should have a minimum of 1,000,000 attack damage including all gems at maximum. Manual clicks are not possible in the Battle Frontier.
+In the Battle Frontier the player can take a challenge and win great prizes, including 4 unique Pokémon. It is not necessary for the progression to Sinnoh to capture these Pokémon from the [[Battle Frontier]]. To reach the last prize at stage 386 the player should have a minimum of 1,000,000 attack damage including all gems at maximum. Manual clicks are not possible in the Battle Frontier.
 
 **Non-native Pokémon retain 30% damage
 Breeding Queue in the hatchery: 8
@@ -35,7 +35,7 @@ Maximum Vitamins per Pokémon: 15**
 #### [[Regions/Sinnoh]]
 Sinnoh is the fourth region and 107 unique Pokémon are waiting to be caught. The player will encounter some Pokémon that only evolve when they are in a certain area. One should pay attention to the hints from the local people.
 
-A safari zone is once again available in Sinnoh named [[Towns/Great_Marsh]] which offers unique Pokemon.
+A safari zone is once again available in Sinnoh named [[Towns/Great Marsh]] which offers unique Pokemon.
 
 **Non-native Pokémon retain 40% damage
 Breeding Queue in the hatchery: 16
@@ -56,14 +56,14 @@ Breeding Queue in the hatchery: 64
 Maximum Vitamins per Pokémon: 30**
 
 #### [[Regions/Alola]]
-Alola is the seventh region and currently has 104 new Pokémon to catch, breed and hatch. Alola dungeons are the first dungeons with two floors.
+Alola is the seventh region and currently has 104 new Pokémon to catch, breed and hatch. Alola dungeons are the first dungeons with two floors. Finally, clearing Alola unlocks [[Quest Lines/Magikarp Jump]] as its whole new sub region.
 
 **Non-native Pokémon retain 70% damage
 Breeding Queue in the hatchery: 96
 Maximum Vitamins per Pokémon: 35**
 
 #### [[Regions/Galar]]
-Galar is the eighth region and currently has 108 new Pokémon to catch, breed and hatch. Galar gyms and dungeons are quite tough and its postgame is tougher, but they offer great rewards as well. It introduces the [[Battle_Cafe]] that when you select a sweet, spin duration and direction depeding on the time you will be awarded with an Alcremie form.
+Galar is the eighth region and currently has 108 new Pokémon to catch, breed and hatch. Galar gyms and dungeons are quite tough and its postgame is tougher, but they offer great rewards as well. It introduces the [[Battle Cafe]] that when you select a sweet, spin duration and direction depending on the time you will be awarded with an Alcremie form.
 
 **Non-native Pokémon retain 80% damage
 Breeding Queue in the hatchery: 128

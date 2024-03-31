@@ -53,9 +53,9 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 ### Roamers
 |Pokémon|Requirement|
 |---|---|
-| [[File:pokemon/381.png\|25px]] [[Pokémon/Latios]]|Unlocks during [[Quest_Lines/The_Eon_Duo]]|
-| [[File:pokemon/380.png\|25px]] [[Pokémon/Latias]]|Unlocks during [[Quest_Lines/The_Eon_Duo]]|
-| [[File:pokemon/385.png\|25px]] [[Pokémon/Jirachi]]|Unlocks during [[Quest_Lines/Wish_Maker]]|
+| [[File:pokemon/381.png\|25px]] [[Pokémon/Latios]]|Unlocks during [[Quest_Lines/The Eon Duo]]|
+| [[File:pokemon/380.png\|25px]] [[Pokémon/Latias]]|Unlocks during [[Quest_Lines/The Eon Duo]]|
+| [[File:pokemon/385.png\|25px]] [[Pokémon/Jirachi]]|Unlocks during [[Quest_Lines/Wish Maker]]|
 
 The player can pick either Latios or Latias after completing [[Quest Lines/The Eon Duo]] Quest Line but the other one will need to be captured as a Roamer.
 Jirachi can also be obtained as a Wanderer by using [[Berries/Starf]] berries.

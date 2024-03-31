@@ -55,11 +55,11 @@
             </tr>
             <tr>
                 <td>Battle Points</td>
-                <td data-bind="text: Math.max(1, Math.round(($data.stage() ** 2) / 100)).toLocaleString()"></td>       
+                <td data-bind="text: Math.round($data.stage() * Math.max($data.stage() / 100, 1)).toLocaleString()"></td>       
             </tr>
             <tr>
                 <td>Pokédollars</td>
-                <td data-bind="text: Math.max(100, Math.round($data.stage() ** 2)).toLocaleString()"></td>     
+                <td data-bind="text: ($data.stage() * 100 * Math.max($data.stage() / 100, 1)).toLocaleString()"></td>     
             </tr>
             <tr>
                 <td>Egg Steps per Pokémon</td>

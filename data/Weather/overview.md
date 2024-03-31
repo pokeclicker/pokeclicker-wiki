@@ -2,9 +2,6 @@
 
 Pokémon | Required Weather | Route(s)
 :--- | :--- | :---
-| [[Pokemon/Castform (Sunny)]] | Harsh Sunlight | [[Routes/Hoenn Route 119]]
-| [[Pokemon/Castform (Rainy)]] | Rain or Thunderstorm | [[Routes/Hoenn Route 119]]
-| [[Pokemon/Castform (Snowy)]] | Snow, Blizzard, Hail, or Fog | [[Routes/Hoenn Route 119]]
 | [[Pokemon/Cramorant (Gulping)]] | Rain | [[Routes/Axew's Eye]], [[Routes/Bridge Field]], [[Routes/Stony Wilderness]], [[Routes/Lake of Outrage]], [[Routes/Galar Route 9]], [[Routes/Circhester Bay]], [[Routes/Forest of Focus]], [[Routes/Challenge Beach]], [[Routes/Training Lowlands]]
 | [[Pokemon/Cramorant (Gorging)]] | Thunderstorm | [[Routes/Axew's Eye]], [[Routes/Galar Route 9]], [[Routes/Circhester Bay]], [[Routes/Forest of Focus]], [[Routes/Challenge Beach]], [[Routes/Training Lowlands]]
 | [[Pokemon/Eiscue (Noice Face)]] | Harsh Sunlight | [[Routes/Galar Route 10]], [[Routes/Frigid Sea]]

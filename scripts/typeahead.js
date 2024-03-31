@@ -216,6 +216,11 @@ const searchOptions = [
     type: 'Farm Hands',
     page: '',
   },
+  ...FarmHands.list.map(fh => ({
+    display: `${fh.name} (Farm Hands)`,
+    type: 'Farm Hands',
+    page: fh.name,
+  })),
   // Pokérus
   {
     display: 'Pokérus',

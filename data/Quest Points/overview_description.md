@@ -13,22 +13,22 @@ Quest Points can be used to purchase the following:
 #### Key Items
 Key | Item Cost
 :---: | :---:
-|[[File:Dungeon_ticket.png\|25px]] [[Items/Dungeon_Ticket]] | 100 [[File:questPoint.svg\|25px]]
-|[[File:Explorer_kit.png\|25px]] [[Items/Explorer_Kit]] | 5,000 [[File:questPoint.svg\|25px]]
-|[[File:Explosive_Charge.png\|25px]] [[Items/Explosive_Charge]] | 5,000 [[File:questPoint.svg\|25px]]
-|[[File:Treasure_Scanner.png\|25px]] [[Items/Treasure_Scanner]] | 10,000 [[File:questPoint.svg\|25px]]
+|[[File:Dungeon_ticket.png\|25px]] [[Items/Dungeon Ticket]] | 100 [[File:questPoint.svg\|25px]]
+|[[File:Explorer_kit.png\|25px]] [[Items/Explorer Kit]] | 5,000 [[File:questPoint.svg\|25px]]
+|[[File:Explosive_Charge.png\|25px]] [[Items/Explosive Charge]] | 5,000 [[File:questPoint.svg\|25px]]
+|[[File:Treasure_Scanner.png\|25px]] [[Items/Treasure Scanner]] | 10,000 [[File:questPoint.svg\|25px]]
 
 #### Evolution Items
 These Evolution Items cost 2,500 [[File:questPoint.svg\|25px]]
 
 :---: | :---: | :---: | :---:
-|[[File:Fire_stone.png\|25px]] [[Items/Fire_Stone]] | [[File:Water_stone.png\|25px]] [[Items/Water_Stone]] | [[File:Thunder_stone.png\|25px]] [[Items/Thunder_Stone]] | [[File:Leaf_stone.png\|25px]] [[Items/Leaf_Stone]]
-|[[File:Moon_stone.png\|25px]] [[Items/Moon_Stone]] | [[File:Sun_stone.png\|25px]] [[Items/Sun_Stone]] | [[File:Linking_cord.png\|25px]] [[Items/Linking_Cord]] | [[File:Dragon_scale.png\|25px]] [[Items/Dragon_Scale]]
-|[[File:Metal_coat.png\|25px]] [[Items/Metal_Coat]] | [[File:Kings_rock.png\|25px]] [[Items/King's Rock]] | [[File:Upgrade.png\|25px]] [[Items/Upgrade]] | [[File:Soothe_bell.png\|25px]] [[Items/Soothe_Bell]]
-|[[File:Deepsea_tooth.png\|25px]] [[Items/Deep Sea Tooth]] | [[File:Deepsea_scale.png\|25px]] [[Items/Deep Sea_Scale]] | [[File:Dawn_stone.png\|25px]] [[Items/Dawn_Stone]] | [[File:Dusk_stone.png\|25px]] [[Items/Dusk_Stone]]
-|[[File:Shiny_stone.png\|25px]] [[Items/Shiny_Stone]] | [[File:Dubious_disc.png\|25px]] [[Items/Dubious_Disc]] | [[File:Electirizer.png\|25px]] [[Items/Electirizer]] | [[File:Magmarizer.png\|25px]] [[Items/Magmarizer]]
-|[[File:Protector.png\|25px]] [[Items/Protector]] | [[File:Reaper_cloth.png\|25px]] [[Items/Reaper_Cloth]] | [[File:Razor_claw.png\|25px]] [[Items/Razor_Claw]] | [[File:Razor_fang.png\|25px]] [[Items/Razor_Fang]]
-|[[File:Prism_scale.png\|25px]] [[Items/Prism_Scale]] | [[File:Sachet.png\|25px]] [[Items/Sachet]] | [[File:Whipped_dream.png\|25px]] [[Items/Whipped_Dream]] | [[File:Ice_stone.png\|25px]] [[Items/Ice_Stone]]
+|[[File:Fire_stone.png\|25px]] [[Items/Fire Stone]] | [[File:Water_stone.png\|25px]] [[Items/Water Stone]] | [[File:Thunder_stone.png\|25px]] [[Items/Thunder Stone]] | [[File:Leaf_stone.png\|25px]] [[Items/Leaf Stone]]
+|[[File:Moon_stone.png\|25px]] [[Items/Moon Stone]] | [[File:Sun_stone.png\|25px]] [[Items/Sun Stone]] | [[File:Linking_cord.png\|25px]] [[Items/Linking Cord]] | [[File:Dragon_scale.png\|25px]] [[Items/Dragon Scale]]
+|[[File:Metal_coat.png\|25px]] [[Items/Metal Coat]] | [[File:Kings_rock.png\|25px]] [[Items/King's Rock]] | [[File:Upgrade.png\|25px]] [[Items/Upgrade]] | [[File:Soothe_bell.png\|25px]] [[Items/Soothe Bell]]
+|[[File:Deepsea_tooth.png\|25px]] [[Items/Deep Sea Tooth]] | [[File:Deepsea_scale.png\|25px]] [[Items/Deep Sea Scale]] | [[File:Dawn_stone.png\|25px]] [[Items/Dawn Stone]] | [[File:Dusk_stone.png\|25px]] [[Items/Dusk Stone]]
+|[[File:Shiny_stone.png\|25px]] [[Items/Shiny Stone]] | [[File:Dubious_disc.png\|25px]] [[Items/Dubious Disc]] | [[File:Electirizer.png\|25px]] [[Items/Electirizer]] | [[File:Magmarizer.png\|25px]] [[Items/Magmarizer]]
+|[[File:Protector.png\|25px]] [[Items/Protector]] | [[File:Reaper_cloth.png\|25px]] [[Items/Reaper Cloth]] | [[File:Razor_claw.png\|25px]] [[Items/Razor Claw]] | [[File:Razor_fang.png\|25px]] [[Items/Razor Fang]]
+|[[File:Prism_scale.png\|25px]] [[Items/Prism Scale]] | [[File:Sachet.png\|25px]] [[Items/Sachet]] | [[File:Whipped_dream.png\|25px]] [[Items/Whipped Dream]] | [[File:Ice_stone.png\|25px]] [[Items/Ice Stone]]
 
 These Evolution Items cost 5,000 [[File:questPoint.svg\|25px]]
 
@@ -39,7 +39,7 @@ These Evolution Items cost 5,000 [[File:questPoint.svg\|25px]]
 #### Held Items
 Held items | Cost
 :---: | :---:
-|[[File:Macho_Brace.png\|25px]] [[Items/Macho_Brace]] | 1,500 [[File:questPoint.svg\|25px]]
+|[[File:Macho_Brace.png\|25px]] [[Items/Macho Brace]] | 1,500 [[File:questPoint.svg\|25px]]
 |[[File:Power_Bracer.png\|25px]] [[Items/Power Bracer]] | 2,000 [[File:questPoint.svg\|25px]]
 
 #### Eggs
