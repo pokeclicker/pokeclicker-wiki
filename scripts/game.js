@@ -8,6 +8,15 @@ themes.options.push(new SettingOption('Morph', 'morph'));
 themes.options.push(new SettingOption('Quartz', 'quartz'));
 themes.options.push(new SettingOption('Vapor', 'vapor'));
 themes.options.push(new SettingOption('Zephyr', 'zephyr'));
+
+const now = new Date();
+if (now.getMonth() == 3 && now.getDate() == 1) {
+  themes.options.forEach((t) => {
+  t.value = "sketchy";
+  });
+  themes.set("sketchy");
+  themes.options.push(new SettingOption("Definitely Not Sketchy", "sketchy"));
+}
 themes.options.sort((a, b) => (a.text).localeCompare(b.text));
 
 // Suppress game notifications
@@ -61,7 +70,6 @@ BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 AchievementHandler.initialize(multiplier, new Challenges());
 
-const now = new Date();
 DailyDeal.generateDeals(5, now);
 BerryDeal.generateDeals(now);
 GemDeal.generateDeals();

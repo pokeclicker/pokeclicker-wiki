@@ -195,6 +195,9 @@
                     <th class="text-center">Weight</th>
                     <th class="text-center">Environment</th>
                     <th class="text-center">Requirement</th>
+                    <!-- ko if: $data.region == GameConstants.Region.johto -->
+                    <th class="text-center">Contest Tokens</th>
+                    <!-- /ko -->
                 </tr>
             </thead>
             <tbody data-bind="foreach: SafariPokemonList.list[$data.region]().filter(p => !p.requireCaught || !p.showUncaught)">
@@ -218,6 +221,12 @@
                         <knockout data-bind="text: $data.environments.map(env => SafariEnvironments[env]).join(', ')"></knockout>
                     </td>
                     <td class="align-middle" data-bind="text: $data.requireCaught ? 'Must be caught elsewhere first.' : 'N/A'"></td>
+                    <!-- ko if: $parent.region == GameConstants.Region.johto -->
+                    <td class="align-middle">
+                        <img width="18" class="me-1" data-bind="attr: { src: `./images/contestToken.svg` }" />
+                        <knockout data-bind="text: Math.floor(pokemonMap[$data.name].attack / 5), attr: { 'data-sort': pokemonMap[$data.name].attack }"></knockout> 
+                    </td>
+                    <!-- /ko -->
                 </tr>
             </tbody>
         </table>
