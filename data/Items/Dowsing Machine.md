@@ -1,7 +1,7 @@
 ### Chance of Gaining More Items
 The Dowsing Machine gives a chance of gaining extra items from Dungeon chests. The specific chance depends on the item's Tier and follows this formula:
 
-**Activation Chance** = (0.5 / (4 / Tier + 1))
+**Activation Chance** = (0.5 / (4 / (Tier + 1)))
 
 The **Tier** variable takes a value from 4 (Common) to 0 (Mythic). This translates to this table:
 
