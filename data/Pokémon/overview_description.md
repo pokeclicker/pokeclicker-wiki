@@ -42,6 +42,8 @@ $BE = \frac{Attack Bonus}{Egg Cycles} * EV Bonus * Shadow Status * Held Item Bon
 
 Since [[Vitamins]] modify the Attack Bonus value, they also affect Breeding Efficiency. Individual Pokémon pages have the best Vitamin distribution to increase this statistic.
 
+The table in this page shows only Base BE, in other words, the stat without Vitamins nor any kind of multiplier (like the ones mentioned in the formula).
+
 ### Egg Steps
 
 Egg Steps is the value that determines how long it will take for an egg to hatch.
