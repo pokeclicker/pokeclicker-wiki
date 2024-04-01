@@ -6,7 +6,7 @@ These typed Gems can be invested into the Gems tab to increase type effectivity,
 
 ## Upgrades
 
-The gems allows you to increase the damage effectivity of all your types from the base multiple to +1x as indicated in the table bellow:
+The gems allows you to increase the damage effectivity of all your types from the base multiple to +1x as indicated in the table below:
 
 Effectivity | Base Multiplier | Maxed multiplier {.no-data-tables}
 :--- | :---: | ---:
