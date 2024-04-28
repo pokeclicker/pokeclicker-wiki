@@ -203,7 +203,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 Item Name | Number Required | Necessary to Obtain | Cost
 :---: | :---: | :---: | :---:
 |[[File:Fire_egg.png\|25px]] Fire Egg | 1 | [[File:pokemon/390.png\|25px]] Chimchar | 1,000 [[File:questPoint.svg\|25px]]
-|[[File:Grass_egg.png\|25px]] Grass Egg | 2 | [[File:pokemon/387.png\|25px]] Turtwig [[File:pokemon/455.png\|25px]] Carnivine | 2,000 [[File:questPoint.svg\|25px]]
+|[[File:Grass_egg.png\|25px]] Grass Egg | 2 | [[File:pokemon/387.png\|25px]] Turtwig | 2,000 [[File:questPoint.svg\|25px]]
 |[[File:Water_egg.png\|25px]] Water Egg | 1 | [[File:pokemon/393.png\|25px]] Piplup | 1,000 [[File:questPoint.svg\|25px]]
 |[[File:Fighting_egg.png\|25px]] Fighting Egg | 1 | [[File:pokemon/447.png\|25px]] Riolu | 1,000 [[File:questPoint.svg\|25px]]
 |[[File:Electric_egg.png\|25px]] Electric Egg | 1 | [[File:pokemon/417.png\|25px]] Pachirisu | 1,000 [[File:questPoint.svg\|25px]]
