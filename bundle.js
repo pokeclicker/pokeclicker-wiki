@@ -78101,7 +78101,7 @@ onhashchange = (event) => {
     pageElement.html(errorPage);
   });
 
-  const cleanFileName = (s) => s.replace(/[^\s\w\(\)'"!-é]/gi, "-");
+  const cleanFileName = (s) => s.replace(/[^\s\w\(\)'"!-é]/gi, "-").replace('?', '');
 
   const pageElementCustom = $('#wiki-page-custom-content');
   pageElementCustom.html('');
