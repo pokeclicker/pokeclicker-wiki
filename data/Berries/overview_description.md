@@ -18,3 +18,11 @@ Most berry mutations happen at the Berry (fully ripe) stage and have a chance to
 If the conditions for multiple mutations are met simultaneously, the mutation triggered will be selected at random.
 
 [Here is a Walkthrough](https://docs.google.com/document/d/1TE5cAKSlA7TAliA001_mIiO1odZ6e4yUEMre0GBW1to/edit) for unlocking all of the Farm Slots in order.
+
+### Setups
+Thanks to certain Berries having helpful auras, it's possible to use them to achieve different goals. These Setups can be found in:
+- [[Hatchery]]: Setups related to Egg Step gain.
+- [[Shiny Chance]]: Setups related to increasing Shiny Chance.
+- [[Farm/Setups]]: Setups not contained in the previous two pages, like EV gain, or formations to speed up experience gain for the Farm Oak Items.
+
+## List of Available Berries
