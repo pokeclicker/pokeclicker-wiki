@@ -16,7 +16,7 @@ Two possible farming setups are listed below.
 **Timing Table**
 |Berry|Planting Time with No Modifier |Planting Time with Mulch or Sprayduck |	Planting Time with Mulch & Sprayduck |
 |---|---|---|---|
-|[[File:Wiki.png\|32px]] [[Berries/Wiki]] 	| `N/A`   |	`N/A`  |	`N/A`  |
+|[[File:Wiki.png\|32px]] [[Berries/Wiki]] 	| `Planted First` |||
 |[[File:Aguav.png\|32px]] [[Berries/Aguav]] |	5 mins 50 secs until ripe |	3 mins 53 secs until ripe |	`N/A`   |
 
 ::: table-mutations
@@ -31,7 +31,7 @@ Two possible farming setups are listed below.
 **Timing Table**
 |Berry|Planting Time with No Modifier |Planting Time with Mulch or Sprayduck |	Planting Time with Mulch & Sprayduck |
 |---|---|---|---|
-|[[File:Aguav.png\|32px]] [[Berries/Aguav]] 	| `N/A`  |	`N/A` |	`N/A` |
+|[[File:Aguav.png\|32px]] [[Berries/Aguav]] 	| `Planted First` |||
 |[[File:Chesto.png\|32px]] [[Berries/Chesto]] |	40 secs until ripe |	27 secs until ripe |	`N/A` |
 
 #### Mutations
