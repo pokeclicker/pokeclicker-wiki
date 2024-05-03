@@ -17,7 +17,7 @@ Colbur has a chance of mutating when [[Berries/Rabuta]], [[Berries/Kasib]], and 
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Payapa.png\|32px]] [[Berries/Payapa]]  | `N/A`         | `N/A`                                 | `N/A`                                 |
+| [[File:Payapa.png\|32px]] [[Berries/Payapa]]  | `Planted First` |||
 | [[File:Rabuta.png\|32px]] [[Berries/Rabuta]]  | 03:24:00      | 02:16:00                              | 01:30:40                              |
 | [[File:Kasib.png\|32px]] [[Berries/Kasib]]    | 00:05:00      | 00:03:20                              | 00:02:13                              |
 
