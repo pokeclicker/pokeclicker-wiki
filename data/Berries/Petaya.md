@@ -88,7 +88,7 @@ The berry that will die first is [[Berries/Wacan]] — it will die around 1 hour
 All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times
 | Berry | Planting Time with No Modifier | Planting Time with Mulch or Sprayduck | Planting Time with  Mulch & Sprayduck |
 |---|---|---|---|
-| [[File:Haban.png\|32px]] [[Berries/Haban]] | - | - | -|
+| [[File:Haban.png\|32px]] [[Berries/Haban]] | `Planted First` |||
 | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | 20:00:00 until ripe | 14:00:00 until ripe | 10:00:00 until ripe|
 | [[File:Yache.png\|32px]] [[Berries/Yache]] | 12:00:00 until ripe | 8:00:00 until ripe | 5:20:00 until ripe|
 | [[File:Shuca.png\|32px]] [[Berries/Shuca]] | 11:03:35 until ripe |	7:22:24 until ripe |	4:54:56 until ripe|
@@ -112,7 +112,7 @@ If [[Berries/Wacan]] dies, harvest and replant [[Berries/Chilan]], [[Berries/Tan
 All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times
 | Berry | Planting Time with No Modifier|  Planting Time with Mulch | Planting Time with Mulch & Sprayduck|
 |---|---|---|---|
-| [[File:Chilan.png\|32px]] [[Berries/Chilan]] | `N/A` | `N/A` | `N/A`|
+| [[File:Chilan.png\|32px]] [[Berries/Chilan]] | `Planted First` |||
 | [[File:Tanga.png\|32px]] [[Berries/Tanga]] | 1 hour 3 mins 35 seconds until ripe | 42 mins 24 secs until ripe | 28 mins 16 secs until ripe |
 | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | 33 mins 35 secs until ripe |  22 mins 24 secs until ripe | 14 mins 56 secs until ripe|
 
