@@ -25,7 +25,7 @@ Razz has a chance of mutating when [[Berries/Cheri]] and [[Berries/Leppa]] are t
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Leppa.png\|32px]] [[Berries/Leppa]]    | `N/A`         | `N/A`                                 | `N/A`                                 |
+| [[File:Leppa.png\|32px]] [[Berries/Leppa]]    | `Planted First` |||
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]]    | 00:00:30      | 00:00:20                              | `N/A`                                 |
 
 #### Mutations
