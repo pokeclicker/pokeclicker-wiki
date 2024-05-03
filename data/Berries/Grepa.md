@@ -23,12 +23,7 @@ Grepa has a chance of mutating when [[Berries/Figy]] and [[Berries/Aguav]] are t
 | {.mutation} | [[File:Aguav.png\|32px]] [[Berries/Aguav]] | {.mutation} | {.mutation} | [[File:Aguav.png\|32px]] [[Berries/Aguav]] | |
 :::
 
-**Timing Table**
-All planting times refer to the "Until Ripe" value of the first Berry planted. *(**Note**: [[File:Aguav.png\|32px]] [[Berries/Aguav]] and [[File:Figy.png\|32px]] [[Berries/Figy]] Berries possess equivalent growth times.)*
-| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
-| :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Aguav.png\|32px]] [[Berries/Aguav]]      | `N/A`         | `N/A`                                 | `N/A`                                 |
-| [[File:Figy.png\|32px]] [[Berries/Figy]]    | `N/A`         | `N/A`                                 | `N/A`                                 |
+*(**Note**: [[File:Aguav.png\|32px]] [[Berries/Aguav]] and [[File:Figy.png\|32px]] [[Berries/Figy]] Berries possess equivalent growth times.)*
 
 #### Mutations
 Grepa Berries can mutate into the following berries.
