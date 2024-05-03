@@ -18,7 +18,7 @@ Roseli has a chance of mutating when [[Berries/Mago]], [[Berries/Magost]], [[Ber
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Watmel.png\|32px]] [[Berries/Watmel]]  | `N/A`         | `N/A`                                 | `N/A`                                 |
+| [[File:Watmel.png\|32px]] [[Berries/Watmel]]  | `Planted First` |||
 | [[File:Magost.png\|32px]] [[Berries/Magost]]  | 04:00:00      | 02:40:00                              | 01:46:40                              |
 | [[File:Mago.png\|32px]] [[Berries/Mago]]      | 00:06:10      | 00:04:07                              |00:02:44                                |
 | [[File:Nanab.png\|32px]] [[Berries/Nanab]]    | 00:04:10      | 00:02:47                              | 00:01:51                                |
