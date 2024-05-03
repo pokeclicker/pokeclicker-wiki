@@ -25,7 +25,7 @@ Pinap has a chance of mutating when [[Berries/Sitrus]] and [[Berries/Aspear]] ar
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Sitrus.png\|32px]] [[Berries/Sitrus]]  | `N/A`         | `N/A`                                 | `N/A`                                 |
+| [[File:Sitrus.png\|32px]] [[Berries/Sitrus]]  | `Planted First` |||
 | [[File:Aspear.png\|32px]] [[Berries/Aspear]]  | 00:02:00      | 00:01:20                              | `N/A`                                 |
 
 #### Mutations
