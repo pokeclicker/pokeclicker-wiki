@@ -26,7 +26,7 @@ Cornn has a chance of mutating when [[Berries/Leppa]], [[Berries/Bluk]], and [[B
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Wiki.png\|32px]] [[Berries/Wiki]]      | `N/A`         | `N/A`                                 | `N/A`                                 |
+| [[File:Wiki.png\|32px]] [[Berries/Wiki]]      | `Planted First` |||
 | [[File:Bluk.png\|32px]] [[Berries/Bluk]]      | 00:05:30      | 00:03:40                              | `N/A`                                 |
 | [[File:Leppa.png\|32px]] [[Berries/Leppa]]    | 00:04:00      | 00:02:40                              | `N/A`                                 |
 
