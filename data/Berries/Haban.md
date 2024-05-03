@@ -19,7 +19,7 @@ Since [[Berries/Occa]] is a parasite berry and can take over other berries, it's
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Rindo.png\|32px]] [[Berries/Rindo]]    | `N/A`         | `N/A`                                 | `N/A`                                 |
+| [[File:Rindo.png\|32px]] [[Berries/Rindo]]    | `Planted First` |||
 | [[File:Occa.png\|32px]] [[Berries/Occa]]      | 06:06:00      | 04:04:00                              | 02:42:40                              |
 | [[File:Passho.png\|32px]] [[Berries/Passho]]  | 06:00:00      | 04:00:00                              | 02:40:00                              |
 | [[File:Wacan.png\|32px]] [[Berries/Wacan]]    | 00:30:00      | 00:20:00                              | 00:13:20                              |
