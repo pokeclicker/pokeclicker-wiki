@@ -40,10 +40,10 @@ Qualot has a chance of mutating by surrounding an empty plot with at least 10, b
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Mago.png\|32px]] [[Berries/Mago]]      | `N/A`         | `N/A`                                 | `N/A`                                 |
+| [[File:Mago.png\|32px]] [[Berries/Mago]]      | `Planted First` |||
 | [[File:Pinap.png\|32px]] [[Berries/Pinap]]    | 00:04:00      | 00:02:40                              | `N/A`                                 |
 | `or` ||||
-| [[File:Aspear.png\|32px]] [[Berries/Aspear]]  | `N/A`         | `N/A`                                 | `N/A`                                 |
+| [[File:Aspear.png\|32px]] [[Berries/Aspear]]  | `Planted First` |||
 | [[File:Pecha.png\|32px]] [[Berries/Pecha]]    | 00:01:00      | 00:00:40                              | `N/A`                                 |
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]]    | 00:00:30      | 00:00:20                              | `N/A`                                 |
 
