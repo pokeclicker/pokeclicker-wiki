@@ -26,7 +26,7 @@ Occa has a chance of mutating when [[Berries/Razz]], [[Berries/Figy]], [[Berries
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Spelon.png\|32px]] [[Berries/Spelon]]  | `N/A`         | `N/A`                                 | `N/A`                                 |
+| [[File:Spelon.png\|32px]] [[Berries/Spelon]]  | `Planted First` |||
 | [[File:Tamato.png\|32px]] [[Berries/Tamato]]  | 02:24:00      | 01:36:00                              | 01:04:00                              |
 | [[File:Figy.png\|32px]] [[Berries/Figy]]      | 00:05:50      | 00:03:53                              | `N/A`                                 |
 | [[File:Razz.png\|32px]] [[Berries/Razz]]      | 00:04:10      | 00:02:47                              | `N/A`                                 |
