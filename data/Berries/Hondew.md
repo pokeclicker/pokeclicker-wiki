@@ -25,7 +25,7 @@ Hondew has a chance of mutating by surrounding an empty plot with exactly 15 poi
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Wiki.png\|32px]] [[Berries/Wiki]]      | `N/A`         | `N/A`                                 | `N/A`                                 |
+| [[File:Wiki.png\|32px]] [[Berries/Wiki]]      | `Planted First` |||
 | [[File:Figy.png\|32px]] [[Berries/Figy]]      | 00:05:50      | 00:03:47                              | `N/A`                                 |
 | [[File:Aguav.png\|32px]] [[Berries/Aguav]]    | 00:05:50      | 00:03:47                              | `N/A`                                 |
 
