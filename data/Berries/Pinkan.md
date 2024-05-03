@@ -27,7 +27,7 @@ Pinkan has a chance of mutating by surrounding an empty plot with all Pink color
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Watmel.png\|32px]] [[Berries/Watmel]]  | 04:36:00       | 03:03:59                               | 02:02:39                                |
+| [[File:Watmel.png\|32px]] [[Berries/Watmel]]  | `N/A`       | `N/A`                                | `N/A`                                 |
 | [[File:Magost.png\|32px]] [[Berries/Magost]]  | 04:00:00      | 02:40:00                              | 01:46:40                              |
 | [[File:Qualot.png\|32px]] [[Berries/Qualot]]  | 01:20:00      | 00:53:20                              | 00:35:33                              |
 | [[File:Mago.png\|32px]] [[Berries/Mago]]      | 00:06:10      | 00:04:07                              | 00:02:44                               |
