@@ -25,7 +25,7 @@ Tamato has a chance of mutating when a Taller or later stage [[Berries/Razz]] be
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Pomeg.png\|32px]] [[Berries/Pomeg]]    |`N/A`          | `N/A`                               | `N/A`                                 |
+| [[File:Pomeg.png\|32px]] [[Berries/Pomeg]]    | `Planted First` |||
 | [[File:Razz.png\|32px]] [[Berries/Razz]]      | 00:04:10      | 00:02:47                              | `N/A`                                 |
 
 #### Mutations
