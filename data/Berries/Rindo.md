@@ -43,9 +43,6 @@ All planting times refer to the "Until Ripe" value of the first Berry planted. *
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
 | [[File:Aguav.png\|32px]] [[Berries/Aguav]]    | `Planted First` |||
-| [[File:Figy.png\|32px]] [[Berries/Figy]]      | `N/A`         | `N/A`                                 | `N/A`                                 |
-| `or` ||||
-| [[File:Aguav.png\|32px]] [[Berries/Aguav]]    | `Planted First` |||
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]]    | 00:00:30      | 00:00:20                              | `N/A`                                 |
 
 #### Mutations
