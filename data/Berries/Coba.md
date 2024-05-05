@@ -15,9 +15,9 @@ Two possible farming setups are listed below.
 
 **Timing Table**
 |Berry|Planting Time with No Modifier |Planting Time with Mulch or Sprayduck |	Planting Time with Mulch & Sprayduck |
-|---|---|---|---|
+|:---:|:---:|:---:|:---:|
 |[[File:Wiki.png\|32px]] [[Berries/Wiki]] 	| `Planted First` |||
-|[[File:Aguav.png\|32px]] [[Berries/Aguav]] |	5 mins 50 secs until ripe |	3 mins 53 secs until ripe |	`N/A`   |
+|[[File:Aguav.png\|32px]] [[Berries/Aguav]] |	00:05:50 | 00:03:53 |	`N/A`   |
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -30,9 +30,9 @@ Two possible farming setups are listed below.
 
 **Timing Table**
 |Berry|Planting Time with No Modifier |Planting Time with Mulch or Sprayduck |	Planting Time with Mulch & Sprayduck |
-|---|---|---|---|
+|:---:|:---:|:---:|:---:|
 |[[File:Aguav.png\|32px]] [[Berries/Aguav]] 	| `Planted First` |||
-|[[File:Chesto.png\|32px]] [[Berries/Chesto]] |	40 secs until ripe |	27 secs until ripe |	`N/A` |
+|[[File:Chesto.png\|32px]] [[Berries/Chesto]] |	00:00:40 |	00:00:27 |	`N/A` |
 
 #### Mutations
 Coba Berries can be used to mutate the following Berries.
