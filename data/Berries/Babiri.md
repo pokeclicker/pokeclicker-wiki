@@ -13,9 +13,9 @@ Babiri can be mutated by surrounding a plot with four Shuca and four Charti berr
 ### Timing Table
 All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times,
 |Berry| 	Planting Time with No Modifier|	Planting Time with Mulch or Sprayduck |	Planting Time with Mulch & Sprayduck|
-|---|---|---|---|
+|:---:|:---:|:---:|:---:|
 |[[File:Shuca.png\|32px]] [[Berries/Shuca]]|  `Planted First` |||
-|[[File:Charti.png\|32px]] [[Berries/Charti]] |10 hours 30 mins until ripe |	7 hours until ripe |	4 hours 40 mins until ripe |
+|[[File:Charti.png\|32px]] [[Berries/Charti]] | 10:30:00 |	07:00:00 |	04:40:00 |
 
 #### Mutations
 Babiri Berries can be used to mutate the following Berries.
