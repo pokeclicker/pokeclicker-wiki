@@ -3,7 +3,7 @@ Berries can be grown in the Farm to earn Farm Points. You can trade certain berr
 ### Features
 #### Related Oak Items
 
-The Sprayduck, Squirtbottle, and Sprinklotad are all Oak Items that speed up or otherwise improve the process of growing berries.
+The [[Oak Items/Sprayduck]], [[Oak Items/Squirtbottle]], and [[Oak Items/Sprinklotad]] are all Oak Items that speed up or otherwise improve the process of growing berries.
 
 #### Wanderers
 
