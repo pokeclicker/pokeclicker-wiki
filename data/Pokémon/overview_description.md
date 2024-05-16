@@ -61,6 +61,12 @@ There are exceptions to this rule:
 * Although [[Mega Pokémon]] are technically evolutions, they share the same egg cycle value as their counterpart.
 * [[Pokémon/Elf Munchlax]] acts as a Baby Pokémon of [[Pokémon/Santa Snorlax]], in regard of its egg cycle value, but is not.
 
+#### Click Attack
+Besides [[Achievements]], Pokémon also contribute to the player's click attack value. The formula used is the following:
+$ClickAttack=⌊(1 + achievementBonus) * (numCaught + numShiny + numResistant + 1) ^ {1.4}⌋$
+
+Where **numCaught**, **numShiny**, and **numResistant** refers to the number of unique captured Pokémon, unique shiny Pokémon, and unique Pokémon resisted respectively.
+
 ### Other Pokémon Lists
 - [[Alternate Pokémon Forms]] page lists all alternate forms available in the game, including Regional forms, and the corresponding base Pokémon.
 - [[Mega Pokémon]] page has details about which Pokémon can Mega Evolve and the requirements necessary to do so.
