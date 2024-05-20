@@ -80,7 +80,7 @@ Kalos | Hoenn
 Alola | Sinnoh
 Galar | Unova
 
-*Note: Some items are excluded from the debuff so their drop rate isn't affected in debuffed regions (As of v.0.10.9 the exception applies to [[Pokémon/Darmanitan (Zen)]] and [Megastones](#!Mega_Pokémon/))*
+*Note: Some items are excluded from the debuff so their drop rate isn't affected in debuffed regions.
 
 **Example:** Viridian Forest has four dungeon chest drops. Two loot items, Small Restore and Pokéball, are in Rarity Tiers of a greater rarity than Rare. **Before** the player reaches Sinnoh, the odds of finding these items increases with increasing dungeon clears, and the items will not have the Regional Debuff applied to their drop chances.
 **After** the player reaches Sinnoh, only those two loot items would be impacted by the Dungeon Loot Regional Debuff in Viridian Forest. Consequently, those two loot items would become roughly 20x as rare. In general, it is better to go for rare item drops before you are affected by the debuff; however, it is more difficult to clear those early game dungeons early on.
