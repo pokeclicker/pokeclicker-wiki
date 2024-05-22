@@ -33,6 +33,7 @@ Planting Enigma berries next to certain other berries will cause them to mutate.
 | Original Berry | Mutated Berry |
 | :---: | :---: |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Liechi.png\|32px]] [[Berries/Liechi]] |
+| [[File:Passho.png\|32px]] [[Berries/Passho]] || [[File:Yache.png\|32px]] [[Berries/Yache]] |
 | [[File:Shuca.png\|32px]] [[Berries/Shuca]] | [[File:Ganlon.png\|32px]] [[Berries/Ganlon]] |
 | [[File:Coba.png\|32px]] [[Berries/Coba]] | [[File:Salac.png\|32px]] [[Berries/Salac]] |
 | [[File:Payapa.png\|32px]] [[Berries/Payapa]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] |
