@@ -92,7 +92,7 @@ Legend:
 
 | Full Strategy | MESBM | BD (hours) | MRT (hours) | U% | MESBM w/ U%| ER|
 |---|---|---|---|---|---|---|
-| [[Berries/Chople ]]| 1.56x | 10 hours | 10 hours | 50% | 1.28x | 8 |
+| [[Berries/Chople]]| 1.56x | 10 hours | 10 hours | 50% | 1.28x | 8 |
 | [[Berries/Chople]] + [[Berries/Yache]]| 1.56x | 14.29 hours | 14.29 hours | 50% | 1.28x | 8|
 | [[Berries/Chople]] + [[Berries/Haban]]| 1.56x | 20 hours | 20 hours | 50% | 1.28x | 8|
 | [[Berries/Chople]] + [[Berries/Petaya]]| 1.56x | 4 days 10 hours | 24 hours | 81.54% | 1.46x | 5|
