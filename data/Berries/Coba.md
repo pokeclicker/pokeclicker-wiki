@@ -32,7 +32,7 @@ Two possible farming setups are listed below.
 |Berry|Planting Time with No Modifier |Planting Time with Mulch or Sprayduck |	Planting Time with Mulch & Sprayduck |
 |:---:|:---:|:---:|:---:|
 |[[File:Aguav.png\|32px]] [[Berries/Aguav]] 	| `Planted First` |||
-|[[File:Chesto.png\|32px]] [[Berries/Chesto]] |	00:00:40 |	00:00:27 |	`N/A` |
+|[[File:Chesto.png\|32px]] [[Berries/Chesto]] |	00:00:40 |	00:00:27 |	00:00:17 |
 
 #### Mutations
 Coba Berries can be used to mutate the following Berries.
