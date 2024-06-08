@@ -19,8 +19,8 @@ All planting times use the time-to-ripe remaining of the first planted berry for
 |:---:|:---:|:---:|:---:|
 |[[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | `Planted First` |||
 |[[File:Cornn.png\|32px]] [[Berries/Cornn]] |	02:30:00 |	01:40:00 | 01:06:07|
-|[[File:Wiki.png\|32px]] [[Berries/Wiki]] |	00:06:00 |	00:04:00 |	`N/A` |
-|[[File:Bluk.png\|32px]] [[Berries/Bluk]] |	00:05:30 |	00:03:40 |	`N/A` |
+|[[File:Wiki.png\|32px]] [[Berries/Wiki]] |	00:06:00 |	00:04:00 |	00:02:40 |
+|[[File:Bluk.png\|32px]] [[Berries/Bluk]] |	00:05:30 |	00:03:40 |	00:02:26 |
 
 #### Mutations
 Payapa Berries can be used to mutate the following Berries.
