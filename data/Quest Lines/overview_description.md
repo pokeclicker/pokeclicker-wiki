@@ -9,6 +9,7 @@ Region | City | N° of possible quests
 **Johto** | New Bark Town | 3
 **Hoenn** | Littleroot Town | 10
 **Sinnoh** | Twinleaf Town | 2
+**Unova** | Aspertia City | 2
 **Kalos** | Vaniville Town | 7
 **Alola (Main)** | Professor Kukui's lab | 4
 **Alola (Magikarp Jump)** | Hoppy Town | 1
