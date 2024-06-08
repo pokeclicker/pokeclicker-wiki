@@ -27,8 +27,8 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
 | [[File:Wiki.png\|32px]] [[Berries/Wiki]]      | `Planted First` |||
-| [[File:Bluk.png\|32px]] [[Berries/Bluk]]      | 00:05:30      | 00:03:40                              | `N/A`                                 |
-| [[File:Leppa.png\|32px]] [[Berries/Leppa]]    | 00:04:00      | 00:02:40                              | `N/A`                                 |
+| [[File:Bluk.png\|32px]] [[Berries/Bluk]]      | 00:05:30      | 00:03:40                              | 00:02:26                                 |
+| [[File:Leppa.png\|32px]] [[Berries/Leppa]]    | 00:04:00      | 00:02:40                              | 00:01:46                                |
 
 #### Mutations
 Cornn Berries can mutate into the following Berries.
