@@ -26,7 +26,7 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
 | [[File:Persim.png\|32px]] [[Berries/Persim]]  | `Planted First` |||
-| [[File:Chesto.png\|32px]] [[Berries/Chesto]]  | 00:00:40      | 00:00:26                              | `N/A`                                 |
+| [[File:Chesto.png\|32px]] [[Berries/Chesto]]  | 00:00:40      | 00:00:26                              | 00:00:17                                 |
 
 #### Mutations
 Kelpsy Berries can mutate into the following Berries.
