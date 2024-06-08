@@ -17,7 +17,7 @@ Two possible farming setups are listed below.
 |Berry|Planting Time with No Modifier |Planting Time with Mulch or Sprayduck |	Planting Time with Mulch & Sprayduck |
 |:---:|:---:|:---:|:---:|
 |[[File:Wiki.png\|32px]] [[Berries/Wiki]] 	| `Planted First` |||
-|[[File:Aguav.png\|32px]] [[Berries/Aguav]] |	00:05:50 | 00:03:53 |	`N/A`   |
+|[[File:Aguav.png\|32px]] [[Berries/Aguav]] |	00:05:50 | 00:03:53 |	00:02:35   |
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
