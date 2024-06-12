@@ -17,11 +17,11 @@ The following is a list of Pokémon obtainable in Sinnoh which cannot be found o
 |[[File:Razor_claw.png\|25px]] [[Items/Razor Claw]]|1 | [[File:pokemon/461.png\|25px]] [[Pokémon/Weavile]]
 |[[File:Razor_fang.png\|25px]] [[Items/Razor Fang]]|1 | [[File:pokemon/472.png\|25px]] [[Pokémon/Gliscor]]|
 |[[File:Dawn_stone.png\|25px]] [[Items/Dawn Stone]]|2 | [[File:pokemon/475.png\|25px]] [[Pokémon/Gallade]], [[File:pokemon/478.png\|25px]] [[Pokémon/Froslass]]
+|[[File:Dusk_stone.png\|25px]] [[Items/Dusk Stone]]|2 | [[File:pokemon/430.png\|25px]] [[Pokémon/Honchkrow]], [[File:pokemon/429.png\|25px]] [[Pokémon/Mismagius]]
 |[[File:Shiny_stone.png\|25px]] [[Items/Shiny Stone]]|2 | [[File:pokemon/468.png\|25px]] [[Pokémon/Togekiss]], [[File:pokemon/407.png\|25px]] [[Pokémon/Roserade]]
 |[[File:Dubious_disc.png\|25px]] [[Items/Dubious Disc]]|1 | [[File:pokemon/474.png\|25px]] [[Pokémon/Porygon-Z]]
 |[[File:Protector.png\|25px]][[Items/Protector]]|1 | [[File:pokemon/464.png\|25px]] [[Pokémon/Rhyperior]]
 |[[File:Reaper_cloth.png\|25px]] [[Items/Reaper Cloth]]|1 | [[File:pokemon/477.png\|25px]] [[Pokémon/Dusknoir]]
-|[[File:Dusk_stone.png\|25px]] [[Items/Reaper Cloth]]|2 | [[File:pokemon/430.png/ |25px]] [[Pokémon/Honchkrow]], [[File:pokemon/429.png\|25px]] [[Pokémon/Mismagius]]
 
 **Note:** Lucario requires daytime (6am - 6pm / 6:00 - 18:00). Weavile and Gliscor require nighttime (6pm - 6am / 18:00 - 06:00).
 
