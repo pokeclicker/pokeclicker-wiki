@@ -1,0 +1,26 @@
+<div class="table-responsive">
+    <table class="table table-hover table-striped table-bordered" data-order="[]">
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Region</th>
+                <th>Sub Region</th>
+                <th>Town Name</th>
+                <th>Requirement</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- ko foreach: Object.values(TownList).filter(t => t.region <= GameConstants.MAX_AVAILABLE_REGION) -->
+            <!-- ko foreach: $data.npcs?.filter(npc => !(npc instanceof ProfNPC)) -->
+            <tr>
+                <td data-bind="text: name"></td>
+                <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$parent.region]), attr: { 'data-order': $parent.region }"></td>
+                <td data-bind="text: SubRegions.list[$parent.region][$parent.subRegion ?? 0].name, attr: { 'data-order': $parent.subRegion ?? 0 }"></td>
+                <td data-bind="text: $parent.name"></td>
+                <td data-bind="html: Wiki.md.renderInline(Wiki.gameHelper.requirementHints(options.requirement).join('\n'))"></td>
+            </tr>
+            <!-- /ko -->
+            <!-- /ko -->
+        </tbody>
+    </table>
+</div>
