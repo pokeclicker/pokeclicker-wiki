@@ -36,8 +36,6 @@ Galar | Path to the Peak | Elite Peony
 ---
 
 ## Uses
-#### Item Purchasing
-A large portion of in-game items are purchasable with Pokédollars, please see the [[Shops]] page for a full listing.
 
 #### Oak Items
 The upgrades of some [[Oak Items]].
@@ -54,3 +52,5 @@ Name | Level 1 Upgrade | Level 2 Upgrade | Level 3 Upgrade | Level 4 Upgrade | L
 [[Oak_Items/Explosive Charge]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
 [[Oak_Items/Treasure Scanner]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
 
+#### Item Purchasing
+A large portion of in-game items are purchasable with Pokédollars, special items are listed below, please see the [[Shops]] page for a list of all available items.
