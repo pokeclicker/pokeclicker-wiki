@@ -79473,7 +79473,7 @@ module.exports = {
 
 },{}],526:[function(require,module,exports){
 function getShopItemsByCurrencyAndFilter(currency, itemFilter) {
-    var towns = Object.values(TownList).filter(t => t.region < GameConstants.MAX_AVAILABLE_REGION);
+    var towns = Object.values(TownList).filter(t => t.region <= GameConstants.MAX_AVAILABLE_REGION);
     var filteredTowns = [];
     var filteredShops = [];
     
