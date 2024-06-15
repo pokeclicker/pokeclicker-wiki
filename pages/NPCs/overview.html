@@ -12,7 +12,7 @@
         <tbody>
             <!-- ko foreach: Object.values(TownList).filter(t => t.region <= GameConstants.MAX_AVAILABLE_REGION) -->
             <!-- ko foreach: $data.npcs?.filter(npc => !(npc instanceof ProfNPC)) -->
-            <tr>
+            <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Towns', $parent.name); return false; }">
                 <td data-bind="text: name"></td>
                 <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$parent.region]), attr: { 'data-order': $parent.region }"></td>
                 <td data-bind="text: SubRegions.list[$parent.region][$parent.subRegion ?? 0].name, attr: { 'data-order': $parent.subRegion ?? 0 }"></td>
