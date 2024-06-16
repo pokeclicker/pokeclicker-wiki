@@ -64,7 +64,7 @@ const battleCafeToHumanReadableString = (battleCafeLocation) => {
     const splitCamelCase = GameConstants.camelCaseToString(spinEnum).replace('3600', ' 3600');
     const commaSeperated = splitCamelCase.replaceAll(' ', ', ');
     const relativeSeconds = commaSeperated.replace('Above5', '5 or more').replace('Above10', '11 or more').replace('Below5', 'Less than 5');
-    const spinWording = relativeSeconds.replace('At5', 'Dusk, Any').replace('Any', 'Any direction');
+    const spinWording = relativeSeconds.replace('At5', 'Dusk, Counterclockwise').replace('Any', 'Any direction');
     return `${sweetString} - ${spinWording} seconds`;
 };
 
