@@ -44,7 +44,7 @@
             <tbody data-bind="foreach: GameHelper.enumNumbers(WeatherType)">
                 <tr>
                     <td>
-                        <img width="18" class="me-1" data-bind="attr: { src: `./images/weather/${GameConstants.camelCaseToString(WeatherType[$data])}.png` }" />
+                        <img width="18" class="me-1" data-bind="attr: { src: `./images/weather/${WeatherType[$data]}.png` }" />
                         <ko data-bind="text: GameConstants.camelCaseToString(WeatherType[$data])"></ko>
                     </td>
                     <!-- ko foreach: Wiki.dungeonTokens.highestRoute(7, $data)[0] -->
@@ -87,7 +87,7 @@
         <!-- ko if: $data == 7 -->
         <div class="tab" data-bind="foreach: GameHelper.enumNumbers(WeatherType)">
             <button class="tablinks" data-bind="click: function() {Wiki.dungeonTokens.setWeather(event, $data)}">
-                <img width="18" class="me-1" data-bind="attr: { src: `./images/weather/${GameConstants.camelCaseToString(WeatherType[$data])}.png` }" /> 
+                <img width="18" class="me-1" data-bind="attr: { src: `./images/weather/${WeatherType[$data]}.png` }" /> 
                 <ko data-bind="text: GameConstants.camelCaseToString(WeatherType[$data])"></ko>
             </button>
         </div>
@@ -144,6 +144,37 @@
         </table>
     </div>
 </div>
+<div class="mt-3">
+    <h4>Shop(s)</h4>
+    <div>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <th>Item</th>
+                    <th>Base Price</th>
+                    <th>Shop</th>
+                    <th>Region</th>
+                </thead>
+                <tbody data-bind="foreach: Wiki.shopMon.getUniqueItems(Currency.dungeonToken)">
+                    <tr>
+                        <td class="align-middle">
+                            <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data[1].image }" />
+                            <a href="#!" class="text-decoration-none" data-bind="text: $data[1].displayName,
+                                attr: { href: `#!Items/${$data[1].displayName}` }"></a>
+                        </td>
+                        <td class="align-middle" data-bind="attr: { 'data-sort': $data[1].basePrice }">
+                            <img width="18" class="me-1" data-bind="attr: { src: `./images/${GameConstants.Currency[$data[1].currency]}.svg` }" />
+                            <ko data-bind="text: $data[1].basePrice.toLocaleString()"></ko>
+                        </td>
+                        <td><a data-bind="text: $data[0].name ?? 'Poké Mart' + ' (' + $data[0].parent.name + ')', attr: { href: `#!Towns/${$data[0].parent.name}` }"></a></td>
+                        <td data-bind="with: GameConstants.camelCaseToString(GameConstants.Region[$data[0].parent.region])"><a data-bind="text: $data, attr: { href: `#!Regions/${$data}` }"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br/>
 <h4>Shopmon</h4>
 <div>
     <div class="table-responsive">
@@ -161,12 +192,12 @@
                         <a href="#!" class="text-decoration-none" data-bind="text: $data[1].displayName,
                             attr: { href: `#!Pokemon/${$data[1].name}` }"></a>
                     </td>
-                    <td class="align-middle">
+                    <td class="align-middle" data-bind="attr: { 'data-sort': $data[1].basePrice }">
                         <img width="18" class="me-1" data-bind="attr: { src: `./images/${GameConstants.Currency[$data[1].currency]}.svg` }" />
-                        <ko data-bind="text: $data[1].basePrice.toLocaleString(), attr: { 'data-sort':  $data[1].basePrice }"></ko>
+                        <ko data-bind="text: $data[1].basePrice.toLocaleString()"></ko>
                     </td>
-                    <td data-bind="text: $data[0].name + ' (' + $data[0].parent.name + ')'"></td>
-                    <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0].parent.region])"></td>
+                    <td><a data-bind="text: $data[0].name + ' (' + $data[0].parent.name + ')', attr: { href: `#!Towns/${$data[0].parent.name}` }"></a></td>
+                    <td data-bind="with: GameConstants.camelCaseToString(GameConstants.Region[$data[0].parent.region])"><a data-bind="text: $data, attr: { href: `#!Regions/${$data}` }"></a></td>
                 </tr>
             </tbody>
         </table>
