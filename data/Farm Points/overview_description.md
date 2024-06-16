@@ -70,7 +70,7 @@ Name | Wage
 #### Shopmon
 Shop | Token | Pokémon | Cost
 :---: | :---: | :---:
-Friseur Furfrou (Kalos)	| [[File:Furfrou (Matron).png\|25px]] | [[File:pokemon/676.05.png\|35px]] [[Furfrou (Matron)]] | 1,500,000 [[File:farmPoint.svg\|25px]]
+|[Friseur Furfrou (Kalos)](#!Towns/Lumiose_City)	| [[File:Furfrou (Matron).png\|25px]] | [[File:pokemon/676.05.png\|35px]] [[Pokemon/Furfrou (Matron)]] | 1,500,000 [[File:farmPoint.svg\|25px]]
 
 ---
 

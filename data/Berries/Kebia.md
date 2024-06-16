@@ -1,7 +1,7 @@
 ## Acquisition
 The Kebia berry can be mutated by equipping the [[Oak Items/Rocky Helmet]] while there is a [[Berries/Pamtre]] berry at Taller stage or later in the [[Farm]]. The Pamtre berry will then mutate into a Kebia berry.
 
-If the "No Oak Items" challenge is on, the Kebia berry can be bought from the Johto Berry Master for 10,000 Farm Points.
+If the "No Oak Items" challenge is on, the Kebia berry can be bought from the Johto Berry Master for 10,000 Farm Points after unlocking [[Berries/Pamtre]].
 
 #### Mutations
 Kebia Berries can be used to mutate the following Berries.
