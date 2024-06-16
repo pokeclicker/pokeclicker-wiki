@@ -44,7 +44,7 @@
             <tbody data-bind="foreach: GameHelper.enumNumbers(WeatherType)">
                 <tr>
                     <td>
-                        <img width="18" class="me-1" data-bind="attr: { src: `./images/weather/${GameConstants.camelCaseToString(WeatherType[$data])}.png` }" />
+                        <img width="18" class="me-1" data-bind="attr: { src: `./images/weather/${WeatherType[$data]}.png` }" />
                         <ko data-bind="text: GameConstants.camelCaseToString(WeatherType[$data])"></ko>
                     </td>
                     <!-- ko foreach: Wiki.dungeonTokens.highestRoute(7, $data)[0] -->
@@ -87,7 +87,7 @@
         <!-- ko if: $data == 7 -->
         <div class="tab" data-bind="foreach: GameHelper.enumNumbers(WeatherType)">
             <button class="tablinks" data-bind="click: function() {Wiki.dungeonTokens.setWeather(event, $data)}">
-                <img width="18" class="me-1" data-bind="attr: { src: `./images/weather/${GameConstants.camelCaseToString(WeatherType[$data])}.png` }" /> 
+                <img width="18" class="me-1" data-bind="attr: { src: `./images/weather/${WeatherType[$data]}.png` }" /> 
                 <ko data-bind="text: GameConstants.camelCaseToString(WeatherType[$data])"></ko>
             </button>
         </div>
