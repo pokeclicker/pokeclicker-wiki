@@ -6,7 +6,7 @@
             <!-- /ko -->
             <div class="plot col ps-1 pe-1" data-bind="event: { contextmenu: (_, e) => { Wiki.farmSimulator.showPlotContextMenu(e, $index()); return false; } }">
                 <div class="plot-content" style="cursor: pointer;"
-                    data-bind="class: FarmController.calculateCssClass(), click: () => { Wiki.farmSimulator.selectPlot($index()); }">
+                    data-bind="class: FarmController.calculateCssClass($data), click: () => { Wiki.farmSimulator.selectPlot($index()); }">
                     <div class="plotImage">
                         <img style="width: 100%;" src="./images/farm/soil.png" data-bind="class: FarmController.calcMulchClass($data)">
                         <div class="plotButton"

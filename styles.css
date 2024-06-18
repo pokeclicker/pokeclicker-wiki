@@ -341,6 +341,10 @@ td.tight {
   filter: brightness(200%) hue-rotate(210deg);
 }
 
+.Gooey_Mulch {
+  filter: hue-rotate(30deg) saturate(200%);
+}
+
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
