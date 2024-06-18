@@ -278,6 +278,15 @@ const setMapLocation = (selector) => {
     }
 }
 
+const getSafariSpriteId = (safariEncounter) => {
+    const pokemon = PokemonHelper.getPokemonByName(safariEncounter.name);
+    switch (safariEncounter.sprite) {
+        case 'base' : return Math.floor(pokemon.id);
+        case 'self' : return pokemon.id;
+        default : return PokemonHelper.getPokemonByName(safariEncounter.sprite).id;
+    }
+}
+
 module.exports = {
     requirementHints,
     getEvolutionHints,
@@ -285,4 +294,5 @@ module.exports = {
     getLocationOverlaySVG,
     getRouteOverlaySVG,
     overlaySVG,
+    getSafariSpriteId,
 }
