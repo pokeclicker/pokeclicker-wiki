@@ -40,18 +40,16 @@ Different methods of catching a Pokémon will yield different amounts of EVs. If
 EVs gained | Slow EVs | Catching Method
 :--- | :---: | ---:
 0.1 | 0.01 | Wild Pokémon
+0.1 | 0.01 | Base Wanderer Pokémon
 1 | 0.1 | Evolution Item
 1 | 0.1 | Shop Bought Pokémon
 1 | 0.1 | Safari Zone Pokémon
 0.5 | 0.05 | Wanderer Pokémon
 
-*Note: Base wanderers (wanderers attracted by any berry) don't give EVs*
-
 #### EV yield modifiers
 
 EV modifier | Method
 :--- | ---:
-0x | Base wanderer
 2x | Pokémon is captured as a Shadow Pokémon
 3x | Pokémon is encountered and captured as a Dungeon Pokémon
 5x | Pokémon is captured as a Shiny.
