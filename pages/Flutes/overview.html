@@ -8,7 +8,7 @@
             <th>Purchase Cost</th>
         </tr>
     </thead>
-    <tbody data-bind="foreach: { data: Object.values(ItemList).filter(i => i instanceof FluteItem), as: 'flute' }">
+    <tbody data-bind="foreach: { data: GameHelper.enumStrings(GameConstants.FluteItemType).map(f => ItemList[f]), as: 'flute' }">
         <tr class="align-middle" data-bind="let: {
             gemMasterShop: Object.keys(GemDeals.list).find(key => GemDeals.list[key]().find(d => d.item.itemType == flute))
         }">
