@@ -77535,7 +77535,9 @@ const getEvolutionHints = (evoData) => {
 
     if (isHeldItemRestrictedEvolution(evoData)) {
         const itemReq = getRequirementFromRestrictions(restrictions, 'HoldingItemRequirement');
-        hint += ` while holding ${GameHelper.anOrA(itemReq.itemName)} ${GameConstants.humanifyString(itemReq.itemName)}`;
+        if (itemReq.itemName != 'Everstone' || (itemReq.itemName == 'Everstone' && itemReq.option !== 0)) {
+            hint += ` while holding ${GameHelper.anOrA(itemReq.itemName)} ${GameConstants.humanifyString(itemReq.itemName)}`;
+        }
     }
 
     if (isMegaEvolution(evoData)) {
