@@ -1,0 +1,1 @@
+This item increases a Magikarp's attack by +150% base attack.
