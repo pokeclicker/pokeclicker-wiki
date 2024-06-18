@@ -149,33 +149,33 @@ _**EV Gain Bonus: 2.54x**_
 [[Wandering Pokémon]] are attracted to ripe berries. For the maximum chance of attracting a desired wandering Pokémon, use one of the setups below.
 
 ### Roseli + Lum + Attracting Berry
-Using a single Lum berry surrounded by 7 Roseli berries, and then filling the remainder of open farm spots with an attracting berry (a berry that attracts a particular species of wandering Pokémon) is the most effective way of attracting wandering Pokémon to the farm.
+Using 2 Lum berries surrounded by 13 Roseli berries, and then filling the remainder of open farm spots with an attracting berry (a berry that attracts a particular species of wandering Pokémon) is the most effective way of attracting wandering Pokémon to the farm.
 - _Note: Do not use this setup with [[Berries/Occa]], [[Berries/Colbur]], or [[Berries/Kebia]] berries. Due to their nature of overtaking other berries, it is most efficient to simply plant 25 of those berries._
 
-_**Attract Aura: 1.51x,
-Encounter Chance per 1.5s: 1.29%**_
+_**Attract Aura: 3.54x,
+Encounter Chance per 1.5s: 1.77%**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
 :::
 
 ### Roseli + Lum + Petaya + Attracting Berry
 For a significantly longer uptime than the above setup to attract a wandering Pokémon - perhaps if you're looking for a specific Pokémon or group of Pokémon to turn shiny for example - replace a Roseli berry with a Petaya berry.
 This doesn't decrease the encounter chance per second significantly, but it does make this setup viable for several days instead of several hours.
 
-_**Attract Aura: 1.43x<,
-Encounter Chance per 1.5s: 1.21%**_
+_**Attract Aura: 3.21x,
+Encounter Chance per 1.5s: 1.61%**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | |
 :::
 
 ## Regaining Lost Gen 5 Berries
