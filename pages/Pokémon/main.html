@@ -432,12 +432,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-wandering" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <!-- ko if: Object.values($data[PokemonLocationType.Wandering]) == "Always" -->
-                                <img src="./images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
-                            <!-- /ko -->
-                            <!-- ko ifnot: Object.values($data[PokemonLocationType.Wandering]) == "Always" -->
-                                <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
-                            <!-- /ko -->
+                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
                             Farm Wandering
                         </button>
                     </h4>
