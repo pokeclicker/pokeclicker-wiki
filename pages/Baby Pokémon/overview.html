@@ -12,7 +12,7 @@
                 <td class="align-middle">
                     <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
                     <a href="#!" data-bind="text: $data.name, attr: {href: `#!Pokemon/${$data.name}` },
-                        css: { 'fw-bold': Object.keys(PokemonHelper.getPokemonLocations($data.name, PokemonHelper.calcNativeRegion($data.name))).length == 1 }"></a>
+                        css: { 'fw-bold': Object.keys(PokemonLocations.getPokemonLocations($data.name, PokemonHelper.calcNativeRegion($data.name))).length == 1 }"></a>
                 </td>
                 <td class="align-middle">
                     <div data-bind="foreach: ((pokemonName) => {

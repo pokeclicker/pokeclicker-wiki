@@ -31,7 +31,7 @@
         <div>
             <h3>Obtain methods:</h3>
             <div class="accordion obtain-methods">
-            <!-- ko with: PokemonHelper.getPokemonLocations($data.name) -->
+            <!-- ko with: PokemonLocations.getPokemonLocations($data.name) -->
                 <!-- ko if: Object.entries($data).length === 0 -->
                 <h4 data-bind="text: `${Wiki.pageName()} is not currently obtainable`"></h4>
                 <!-- /ko -->
@@ -360,7 +360,7 @@
                     TODO: Add Friend Safari to PokemonLocationType
                 -->
                 <!-- ko if: SafariPokemonList.list[GameConstants.Region.kalos]().find(p => p.name == Wiki.pageName()) ||
-                    PokemonHelper.isObtainableAndNotEvable(Wiki.pageName()) && (PokemonHelper.calcNativeRegion(Wiki.pageName()) <= GameConstants.MAX_AVAILABLE_REGION) -->
+                    PokemonLocations.isObtainableAndNotEvable(Wiki.pageName()) && (PokemonHelper.calcNativeRegion(Wiki.pageName()) <= GameConstants.MAX_AVAILABLE_REGION) -->
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-friend-safari" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">

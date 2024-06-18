@@ -72,7 +72,7 @@ AchievementHandler.initialize(multiplier, new Challenges());
 
 DailyDeal.generateDeals(5, now);
 BerryDeal.generateDeals(now);
-GemDeal.generateDeals();
+GemDeals.generateDeals();
 ShardDeal.generateDeals();
 SafariPokemonList.generateSafariLists(); // This needs to be after anything that generates shopmon due to Friend Safari calcs
 

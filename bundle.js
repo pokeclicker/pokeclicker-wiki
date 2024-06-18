@@ -77045,11 +77045,12 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":1,"call-bind":6,"call-bind/callBound":5,"for-each":62,"gopd":66,"has-tostringtag/shams":70}],502:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
-  "version": "0.10.19",
+  "version": "0.10.20",
   "description": "PokéClicker repository",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development gulp",
+    "build": "cross-env NODE_ENV=development gulp build",
     "test": "npm run ts-test && npm run eslint && npm run stylelint && npm run vitest",
     "ts-test": "gulp scripts",
     "vitest": "vitest --run",
@@ -77081,7 +77082,6 @@ module.exports={
   "devDependencies": {
     "@types/bootstrap": "^4.3.1",
     "@types/bootstrap-notify": "^3.1.34",
-    "@types/gtag.js": "0.0.4",
     "@types/intro.js": "^2.4.7",
     "@types/jquery": "^3.5.16",
     "@types/knockout": "^3.4.66",
@@ -77372,7 +77372,7 @@ AchievementHandler.initialize(multiplier, new Challenges());
 
 DailyDeal.generateDeals(5, now);
 BerryDeal.generateDeals(now);
-GemDeal.generateDeals();
+GemDeals.generateDeals();
 ShardDeal.generateDeals();
 SafariPokemonList.generateSafariLists(); // This needs to be after anything that generates shopmon due to Friend Safari calcs
 
@@ -79457,7 +79457,7 @@ const getAvailablePokemon = () => {
         p.id >= 0 &&
         Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION] &&
         p.nativeRegion <= GameConstants.MAX_AVAILABLE_REGION &&
-        Object.keys(PokemonHelper.getPokemonLocations(p.name)).length
+        Object.keys(PokemonLocations.getPokemonLocations(p.name)).length
     );
 }
 

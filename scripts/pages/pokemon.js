@@ -73,7 +73,7 @@ const getAvailablePokemon = () => {
         p.id >= 0 &&
         Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION] &&
         p.nativeRegion <= GameConstants.MAX_AVAILABLE_REGION &&
-        Object.keys(PokemonHelper.getPokemonLocations(p.name)).length
+        Object.keys(PokemonLocations.getPokemonLocations(p.name)).length
     );
 }
 
