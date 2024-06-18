@@ -55,7 +55,7 @@
                     <td style="text-align: right;">
                         <!-- ko if: $parent.costList[$index()] -->
                         <knockout data-bind="text: $parent.costList[$index()].amount.toLocaleString()"></knockout>
-                        <img width="18" data-bind="attr: { src: `./images/${Currency[$parent.costList[$index()].currency]}.svg` }" />
+                        <img width="18" data-bind="attr: { src: `./images/${GameConstants.Currency[$parent.costList[$index()].currency]}.svg` }" />
                         <!-- /ko -->
                         <!-- ko ifnot: $parent.costList[$index()] -->
                         <span>N/A</span>
