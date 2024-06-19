@@ -63,9 +63,9 @@ There are exceptions to this rule:
 
 #### Click Attack
 Besides [[Achievements]], Pokémon also contribute to the player's click attack value. The formula used is the following:
-$ClickAttack=⌊(1 + achievementBonus) * (numCaught + numShiny + numResistant + 1) ^ {1.4}⌋$
+$ClickAttack=⌊(1 + achievementBonus) * (numCaught + numShiny + numResistant + numPurified + 1) ^ {1.4}⌋$
 
-Where **numCaught**, **numShiny**, and **numResistant** refers to the number of unique captured Pokémon, unique shiny Pokémon, and unique Pokémon resisted respectively.
+Where **numCaught**, **numShiny**,  **numResistant**, and **numPurified** refers to the number of unique captured Pokémon, unique shiny Pokémon, unique Pokémon resisted, and unique Pokémon purified respectively.
 
 ### Other Pokémon Lists
 - [[Alternate Pokémon Forms]] page lists all alternate forms available in the game, including Regional forms, and the corresponding base Pokémon.
