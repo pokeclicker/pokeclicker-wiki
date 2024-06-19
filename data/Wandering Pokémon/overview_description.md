@@ -1,4 +1,4 @@
-A Farm with at least one fully ripe Berry can attract Wandering Pokémon that are automatically caught without the use of a Poké Ball. Which Wandering Pokémon is attracted is based on Berry type and the farthest region you have progressed to, with all valid options having an equal chance to be encountered.
+A Farm with at least one fully ripe Berry can attract Wandering Pokémon that stay on the field until interacted by either a farm hand or the player. You  need to interact with the Wandering Pokémon in order to catch it and it is not guaranteed. Interacting with Wandering Pokémon at all awards Farm Points and catching them awards Dungeon Tokens. Which Wandering Pokémon is attracted is based on Berry type and the farthest region you have progressed to, with all valid options having an equal chance to be encountered.
 
 Some Berries attract rare Pokémon that can be used strategically to complete a region's Pokédex.
 
