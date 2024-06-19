@@ -148,9 +148,10 @@ _**EV Gain Bonus: 2.54x**_
 ## Wandering Pokémon Setups
 [[Wandering Pokémon]] are attracted to ripe berries. For the maximum chance of attracting a desired wandering Pokémon, use one of the setups below.
 
-### Roseli + Lum + Attracting Berry
+### Regular Berries
+#### Roseli + Lum + Attracting Berry
 Using 2 Lum berries surrounded by 13 Roseli berries, and then filling the remainder of open farm spots with an attracting berry (a berry that attracts a particular species of wandering Pokémon) is the most effective way of attracting wandering Pokémon to the farm.
-- _Note: Do not use this setup with [[Berries/Occa]], [[Berries/Colbur]], or [[Berries/Kebia]] berries. Due to their nature of overtaking other berries, it is most efficient to simply plant 25 of those berries._
+- _Note: Do not use this setup with [[Berries/Occa]], [[Berries/Colbur]], or [[Berries/Kebia]] berries. Due to their nature of overtaking other berries, it is most efficient to simply plant 25 of those berries. Check the next section for those setups._
 
 _**Attract Aura: 3.54x,
 Encounter Chance per 1.5s: 1.77%**_
@@ -163,7 +164,7 @@ Encounter Chance per 1.5s: 1.77%**_
 | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
 :::
 
-### Roseli + Lum + Petaya + Attracting Berry
+#### Roseli + Lum + Petaya + Attracting Berry
 For a significantly longer uptime than the above setup to attract a wandering Pokémon - perhaps if you're looking for a specific Pokémon or group of Pokémon to turn shiny for example - replace a Roseli berry with a Petaya berry.
 This doesn't decrease the encounter chance per second significantly, but it does make this setup viable for several days instead of several hours.
 
@@ -176,6 +177,38 @@ Encounter Chance per 1.5s: 1.61%**_
 | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
 | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
 | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | |
+:::
+
+### Parasite Berries
+These setups will work for all Parasite berries, namely [[Berries/Occa]], [[Berries/Kebia]], and [[Berries/Colbur]].
+
+#### Roseli + Lum + Babiri + Attracting Berry
+Using 1 Lum berry surrounded by 8 Roseli berries, with each side being protected by a Babiri, and then filling the remainder of open farm spots with the parasite berry is the most effective way of attracting wandering Pokémon to the farm.
+
+_**Attract Aura: 2.18x,
+Encounter Chance per 1.5s: 1.48%**_
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+:::
+
+#### Roseli + Lum + Babiri + Petaya + Attracting Berry
+For a significantly longer uptime than the above setup to attract a wandering Pokémon - perhaps if you're looking for a specific Pokémon or group of Pokémon to turn shiny for example - replace a Roseli berry with a Petaya berry.
+This doesn't decrease the encounter chance per second significantly, but it does make this setup viable for several days instead of several hours.
+
+_**Attract Aura: 1.97x,
+Encounter Chance per 1.5s: 1.38%**_
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | |
 :::
 
 ## Regaining Lost Gen 5 Berries
