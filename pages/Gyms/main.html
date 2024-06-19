@@ -98,7 +98,7 @@
         <table class="table table-bordered no-data-tables">
             <thead>
                 <tr>
-                    <th>Starter</th>
+                    <th>Requirements</th>
                     <th>Pokémon</th>
                     <th>HP</th>
                     <th>Level</th>
@@ -110,7 +110,7 @@
                 <!-- ko foreach: $data.pokemons.filter((p) => !p.requirements?.length) -->
                 <tr>
                     <!-- ko if: $index() == 0 -->
-                    <td class="align-middle" data-bind="attr: { rowspan: $parent.pokemons.filter((p) => !p.requirements?.length).length }">All</td>
+                    <td class="align-middle" data-bind="attr: { rowspan: $parent.pokemons.filter((p) => !p.requirements?.length).length }">No requirement</td>
                     <!-- /ko -->
                     <td class="align-middle">
                         <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
@@ -127,19 +127,18 @@
                 </tr>
             <!-- /ko -->
                 <tr>
-                   <td class="bg-primary text-center small" colspan="6">Party will differ based on which regional starter the player selected.</td>
+                   <td class="bg-primary text-center small" colspan="6">Party will differ based on which requirement is met.</td>
                 </tr>
             </tbody>
-            <tbody data-bind="foreach: Object.entries($data.pokemons.filter((p) => p.requirements?.some((r) => r instanceof StarterRequirement))
+            <tbody data-bind="foreach: Object.entries($data.pokemons.filter((p) => p.requirements?.length)
                 .reduce((map, p) => {
-                    const req = p.requirements.find((r) => r instanceof StarterRequirement);
-                    const starter = GameConstants.RegionalStarters[req.region][req.starter];
-                    return { ...map, [starter]: [...(map[starter] || []), p] };
+                    const hint = Wiki.gameHelper.requirementHints(p.requirements, false).join('\n');
+                    return { ...map, [hint]: [...(map[hint] || []), p] };
                 }, {}))">
                 <!-- ko foreach: $data[1] -->
                 <tr>
                     <!-- ko if: $index() == 0 -->
-                    <td class="align-middle" data-bind="text: PokemonHelper.getPokemonById($parent[0]).name, attr: { rowspan: $parent[1].length }"></td>
+                    <td class="align-middle" style="max-width: 10vw;" data-bind="text: $parent[0], attr: { rowspan: $parent[1].length }"></td>
                     <!-- /ko -->
                     <td class="align-middle">
                         <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
