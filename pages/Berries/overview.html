@@ -7,7 +7,8 @@
                 <th>Color</th>
                 <th>Exp</th>
                 <th>Harvest Amount</th>
-                <th>Farm Points</th>
+                <th>FP per Harvest</th>
+                <th>FP per Wanderer</th>
                 <th>Growth Time</th>
             </tr>
         </thead>
@@ -24,6 +25,10 @@
                 <td data-bind="attr: { 'data-sort': $data.farmValue }">
                     <img src="./images/farmPoint.svg" width="18px"/>
                     <ko data-bind="text: $data.farmValue.toLocaleString()"></ko>
+                </td>
+                <td>
+                    <img src="./images/farmPoint.svg" width="18px"/>
+                    <ko data-bind="text: (Math.floor($data.farmValue / (4 + $data.growthTime[PlotStage.Bloom] / 1800))).toLocaleString()"></ko>
                 </td>
                 <td data-bind="attr: { 'data-sort': $data.growthTime[3] }, html: `${GameConstants.formatSecondsToTime($data.growthTime[3]).replace(/<\/br>/g, ' ')} to Ripe<br/>${GameConstants.formatSecondsToTime($data.growthTime[4] - $data.growthTime[3]).replace(/<\/br>/g, ' ')} to Death`"></td>
             </tr>
