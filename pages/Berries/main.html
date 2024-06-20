@@ -48,10 +48,17 @@
                     </tr>
                     <!-- /ko -->
                     <tr>
-                        <td>Farm Points</td>
+                        <td>FP per Harvest</td>
                         <td>
                             <img src="./images/farmPoint.svg" width="18px"/>
                             <ko data-bind="text: $data.farmValue.toLocaleString()"></ko>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>FP per Wanderer</td>
+                        <td>
+                            <img src="./images/farmPoint.svg" width="18px"/>
+                            <ko data-bind="text: (Math.floor($data.farmValue / (4 + $data.growthTime[PlotStage.Bloom] / 1800))).toLocaleString()"></ko>
                         </td>
                     </tr>
                     <tr>
