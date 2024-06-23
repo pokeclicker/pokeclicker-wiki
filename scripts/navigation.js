@@ -32,6 +32,14 @@ const gotoPage = (type, name, other, noHistory) => {
   window.location.hash = hash;
 };
 
+const gotoPageClick = (event, type, name, other) => {
+  if (event.ctrlKey) { // don't navigate when holding CTRL key
+    return true;
+  }
+  gotoPage(type, name, other);
+  return false;
+}
+
 // When the hash changes, we will load the new page
 // This also allows us to go forwards and back in history
 onhashchange = (event) => {
@@ -177,4 +185,5 @@ module.exports = {
     pageType,
     pageName,
     gotoPage,
+    gotoPageClick,
 };
