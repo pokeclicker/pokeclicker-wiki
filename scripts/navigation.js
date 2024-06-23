@@ -16,6 +16,12 @@ const pageType = ko.observable();
 const pageName = ko.observable();
 const applyBindings = ko.observable(false);
 
+const pageLink = (type, name, other) => {
+  const hash = `#!${encodeURI(type).replace(/%20/g, '_')}/${encodeURI(name).replace(/%20/g, '_')}${other ? `/${other}`: ''}`;
+  const url = new URL(window.location.href);
+  url.hash = hash;
+  return url.toString();
+}
 // This is our main function for changing pages
 // Look at onhashchange for what happens after
 const gotoPage = (type, name, other, noHistory) => {
@@ -177,4 +183,5 @@ module.exports = {
     pageType,
     pageName,
     gotoPage,
+    pageLink,
 };
