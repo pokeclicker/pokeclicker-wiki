@@ -1,0 +1,1 @@
+Pewter City is the third city in the Kanto region and home to the Battle Item Master who explains how to obtain Battle items and the Gem Scientist who after defeating [Giovanni's Gym](https://wiki.pokeclicker.com/#!Gyms/Viridian%20City) explains how [[Gems]] work. This town also contains [Brock's Gym](https://wiki.pokeclicker.com/#!Gyms/Pewter%20City)
