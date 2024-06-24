@@ -1,0 +1,1 @@
+You can access this location by selecting the single rock located to the left of [[Dungeons/Mt.Moon]]. This location is home to the Shady Salesman and has no other content at this time.
