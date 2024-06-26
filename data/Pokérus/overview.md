@@ -51,7 +51,7 @@ EVs gained | Slow EVs | Catching Method
 EV modifier | Method
 :--- | ---:
 2x | Pokémon is captured as a Shadow Pokémon
-3x | Pokémon is encountered and captured as a Dungeon Pokémon
+3x | Pokémon is encountered and captured as a Dungeon Pokémon (not a boss or mimic)
 5x | Pokémon is captured as a Shiny.
 10x | Pokémon is encountered and captured as a Dungeon Boss Pokémon
 10x | Pokémon is encountered and captured as a Mimic
