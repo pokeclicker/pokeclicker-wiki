@@ -40,11 +40,11 @@ Different methods of catching a Pokémon will yield different amounts of EVs. If
 EVs gained | Slow EVs | Catching Method
 :--- | :---: | ---:
 0.1 | 0.01 | Wild Pokémon
-0.1 | 0.01 | Base Wanderer Pokémon
+0.2 | 0.02 | Base Wanderer Pokémon
 1 | 0.1 | Evolution Item
-1 | 0.1 | Shop Bought Pokémon
+1 | 0.1 | Shop Bought / Dream Orb Pokémon
 1 | 0.1 | Safari Zone Pokémon
-0.5 | 0.05 | Wanderer Pokémon
+1 | 0.1 | Wanderer Pokémon
 
 #### EV yield modifiers
 

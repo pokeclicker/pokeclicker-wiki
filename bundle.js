@@ -77489,7 +77489,13 @@ const getEvolutionHints = (evoData) => {
     }
 
     const hints = [];
-    const restrictions = evoData.restrictions;
+    const restrictions = evoData.restrictions.filter(r => {
+        // Filter Everstone from restrictions so it doesn't show up in hints
+        if (r.itemName == 'Everstone') {
+            return false;
+        }
+        return true;
+    });
     const listFormatter = new Intl.ListFormat('en', { type: 'disjunction' });
 
     let hint = '';
@@ -77503,44 +77509,42 @@ const getEvolutionHints = (evoData) => {
     }
 
     // Additional restrictions
-    if (isDungeonRestrictedEvolution(evoData)) {
+    if (isDungeonRestrictedEvolution(restrictions)) {
         const dungeonReq = getRequirementFromRestrictions(restrictions, 'InDungeonRequirement');
         hint += ` in the ${dungeonReq.dungeon} dungeon`;
     }
 
-    if (isTimeRestrictedEvolution(evoData)) {
+    if (isTimeRestrictedEvolution(restrictions)) {
         const timeReq = getRequirementFromRestrictions(restrictions, 'DayCyclePartRequirement');
         hint += ` while the time is ${listFormatter.format(timeReq.dayCycleParts.map((t) => DayCyclePart[t]))}`;
     }
 
-    if (isEnvironmentRestrictedEvolution(evoData)) {
+    if (isEnvironmentRestrictedEvolution(restrictions)) {
         const envReq = getRequirementFromRestrictions(restrictions, 'InEnvironmentRequirement');
         hint += ` in ${GameHelper.anOrA(envReq.environment)} ${envReq.environment} environment`;
     }
 
-    if (isQuestLineRestrictedEvolution(evoData)) {
+    if (isQuestLineRestrictedEvolution(restrictions)) {
         const questReq = getRequirementFromRestrictions(restrictions, 'QuestLineRequirement');
         hint += ` after completing the ${questReq.questLineName} quest line`;
     };
 
-    if (isInRegionRestrictedEvolution(evoData)) {
+    if (isInRegionRestrictedEvolution(restrictions)) {
         const inRegionReq = getRequirementFromRestrictions(restrictions, 'InRegionRequirement');
         hint += ` in the ${listFormatter.format(inRegionReq.regions.map(r => getRegionName(r)))} region`;
     }
 
-    if (isWeatherRestrictedEvolution(evoData)) {
+    if (isWeatherRestrictedEvolution(restrictions)) {
         const weatherReq = getRequirementFromRestrictions(restrictions, 'WeatherRequirement');
         hint += ` during ${listFormatter.format(weatherReq.weather.map(w => WeatherType[w]))} weather`;
     }
 
-    if (isHeldItemRestrictedEvolution(evoData)) {
+    if (isHeldItemRestrictedEvolution(restrictions)) {
         const itemReq = getRequirementFromRestrictions(restrictions, 'HoldingItemRequirement');
-        if (itemReq.itemName != 'Everstone' || (itemReq.itemName == 'Everstone' && itemReq.option !== 0)) {
-            hint += ` while holding ${GameHelper.anOrA(itemReq.itemName)} ${GameConstants.humanifyString(itemReq.itemName)}`;
-        }
+        hint += ` while holding ${GameHelper.anOrA(itemReq.itemName)} ${GameConstants.humanifyString(itemReq.itemName)}`;
     }
 
-    if (isMegaEvolution(evoData)) {
+    if (isMegaEvolution(restrictions)) {
         const megaReq = getRequirementFromRestrictions(restrictions, 'MegaEvolveRequirement');
         const requiredAttack = pokemonMap[megaReq.name].attack * GameConstants.MEGA_REQUIRED_ATTACK_MULTIPLIER;
         hint += ` after obtaining ${GameConstants.humanifyString(GameConstants.MegaStoneType[megaReq.megaStone])} and ${megaReq.name} has ${requiredAttack.toLocaleString()} or more attack`;
@@ -77572,36 +77576,36 @@ const isStoneEvolution = (evoData) => {
     return evoData.trigger == EvoTrigger.STONE;
 };
 
-const isDungeonRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['InDungeonRequirement']);
+const isDungeonRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['InDungeonRequirement']);
 };
 
-const isTimeRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['DayCyclePartRequirement']);
+const isTimeRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['DayCyclePartRequirement']);
 };
 
-const isEnvironmentRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['InEnvironmentRequirement']);
+const isEnvironmentRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['InEnvironmentRequirement']);
 };
 
-const isQuestLineRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['QuestLineRequirement']);
+const isQuestLineRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['QuestLineRequirement']);
 }
 
-const isInRegionRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['InRegionRequirement']);
+const isInRegionRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['InRegionRequirement']);
 };
 
-const isWeatherRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['WeatherRequirement']);
+const isWeatherRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['WeatherRequirement']);
 };
 
-const isHeldItemRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['HoldingItemRequirement']);
+const isHeldItemRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['HoldingItemRequirement']);
 };
 
-const isMegaEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['MegaEvolveRequirement']);
+const isMegaEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['MegaEvolveRequirement']);
 };
 
 const hasEvoRestrictions = (restrictions, requirements) => {

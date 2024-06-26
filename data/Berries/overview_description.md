@@ -7,7 +7,7 @@ The [[Oak Items/Sprayduck]], [[Oak Items/Squirtbottle]], and [[Oak Items/Sprinkl
 
 #### Wanderers
 
-Farms with at least one ripe Berry can attract [[Wandering Pokémon]] that are automatically caught without the use of a Pokéball. Some Berries can attract rare Pokémon and can thus be used strategically to complete the Pokédex. Wandering Pokémon can also be shiny, attracting a shiny Wandering Pokémon when the Farm has at least one empty plot is the condition for a Starf Berry to spawn on the Farm (in one of the empty plots).
+Farms with at least one ripe Berry can attract [[Wandering Pokémon]]. Some Berries can attract rare Pokémon and can thus be used strategically to complete the Pokédex. Wandering Pokémon can also be shiny, capturing shiny Wandering Pokémon when the Farm has at least one empty plot is the condition for a Starf Berry to spawn on the Farm (in one of the empty plots).
 
 ### Mutations
 
@@ -26,3 +26,4 @@ Thanks to certain Berries having helpful auras, it's possible to use them to ach
 - [[Farm/Setups]]: Setups not contained in the previous two pages, like EV gain, or formations to speed up experience gain for the Farm Oak Items.
 
 ## List of Available Berries
+Note that FP stands for [[Farm Points]].

@@ -13,7 +13,7 @@
     </thead>
     <tbody data-bind="foreach: Object.entries(GymList).filter((g) => {
         const gymRegion = GameConstants.getGymRegion(g[0]);
-        return (gymRegion <= GameConstants.MAX_AVAILABLE_REGION || gymRegion >= GameConstants.Region.final) && !g[0].includes('Trial')
+        return (gymRegion <= GameConstants.MAX_AVAILABLE_REGION || gymRegion >= GameConstants.Region.final)
     })">
         <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Gyms', $data[0]); return false; }">
             <td class="align-middle" data-bind="text: $index() + 1"></td>
