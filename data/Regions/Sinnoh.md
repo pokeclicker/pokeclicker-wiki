@@ -60,6 +60,7 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 | [[File:pokemon/439.png\|25px]] [[Pokémon/Mime Jr.]] | [[File:pokemon/122.png\|25px]] [[Pokémon/Mr. Mime]] |
 | [[File:pokemon/440.png\|25px]] [[Pokémon/Happiny]] | [[File:pokemon/113.png\|25px]] [[Pokémon/Chansey]] |
 | [[File:pokemon/446.png\|25px]] [[Pokémon/Munchlax]] | [[File:pokemon/143.png\|25px]] [[Pokémon/Snorlax]] |
+| [[File:pokemon/458.png\|25px]] [[Pokémon/Mantyke]] | [[File:pokemon/226.png\|25px]] [[Pokémon/Mantine]] |
 | [[File:pokemon/489.png\|25px]] [[Pokémon/Phione]] | [[File:pokemon/490.png\|25px]] [[Pokémon/Manaphy]] |
 
 Munchlax can also be obtained as a Wanderer by using [[Berries/Chilan]] berries.
