@@ -80,13 +80,14 @@
                     </h4>
                     <div id="obtain-method-roaming" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Roaming])">
-                            <span class="badge text-bg-secondary" data-bind="text: ($data.roamingGroup?.name ?? GameConstants.camelCaseToString(GameConstants.Region[$data.region])) + `${$data.requirements ? ' 🔒' : ''}`,
+                            <a class="badge text-bg-secondary" data-bind="text: ($data.roamingGroup?.name ?? GameConstants.camelCaseToString(GameConstants.Region[$data.region])) + `${$data.requirements ? ' 🔒' : ''}`,
+                            attr: { href: `#!Roaming Pokémon` },
                             tooltip: {
                                 title: $data.requirements ?? '',
                                 html: false,
                                 placement: 'bottom',
                                 trigger: 'hover'
-                            }"></span>
+                            }"></a>
                         </div>
                     </div>
                 </div>
@@ -275,7 +276,7 @@
                     </h4>
                     <div id="obtain-method-fossil" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Fossil])">
-                            <span class="badge text-bg-secondary" data-bind="text: $data"></span>
+                            <a class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Items/${$data}` }"></a>
                         </div>
                     </div>
                 </div>
@@ -419,7 +420,7 @@
                     </h4>
                     <div id="obtain-method-battle-frontier" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.BattleFrontier])">
-                            <span class="badge text-bg-secondary" data-bind="text: `Stage ${$data}`"></span>
+                            <a class="badge text-bg-secondary" data-bind="text: `Stage ${$data}`, attr: { href: `#!Battle Frontier` }"></a>
                         </div>
                     </div>
                 </div>
@@ -462,7 +463,7 @@
                     </h4>
                     <div id="obtain-method-discord" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Discord])">
-                            <a target="_BLANK" href="https://discord.gg/a6DFe4p" class="badge text-bg-secondary" data-bind="text: `${$data.toLocaleString()} points`"></a>
+                            <a href="https://discord.gg/a6DFe4p" class="badge text-bg-secondary" data-bind="text: `${$data.toLocaleString()} points`"></a>
                         </div>
                     </div>
                 </div>
@@ -481,7 +482,7 @@
                     </h4>
                     <div id="obtain-method-quest" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.QuestLineReward])">
-                            <a target="_BLANK" href="#" class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Quest_Lines/${$data}` }"></a>
+                            <a href="#" class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Quest_Lines/${$data}` }"></a>
                         </div>
                     </div>
                 </div>
@@ -500,8 +501,7 @@
                     </h4>
                     <div id="obtain-method-tempbattle" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.TempBattleReward])">
-                            <!--<a target="_BLANK" href="#" class="badge text-bg-secondary" data-bind="text: $data"></a>-->
-                            <span class="badge text-bg-secondary" data-bind="text: $data"></span>
+                            <a href="#" class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Temporary_Battles/${$data}` }"></a>
                         </div>
                     </div>
                 </div>
@@ -520,8 +520,7 @@
                     </h4>
                     <div id="obtain-method-gym" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.GymReward])">
-                            <!--<a target="_BLANK" href="#" class="badge text-bg-secondary" data-bind="text: $data"></a>-->
-                            <span class="badge text-bg-secondary" data-bind="text: $data"></span>
+                            <a href="#" class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Gyms/${$data}` }"></a>
                         </div>
                     </div>
                 </div>
@@ -540,7 +539,7 @@
                     </h4>
                     <div id="obtain-method-dungeon" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.DungeonReward])">
-                            <a target="_BLANK" href="#" class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Dungeons/${$data}` }"></a>
+                            <a href="#" class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Dungeons/${$data}` }"></a>
                         </div>
                     </div>
                 </div>
@@ -559,7 +558,7 @@
                     </h4>
                     <div id="obtain-method-giftnpc" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.GiftNPC])">
-                            <a target="_blank" href="#" class="badge text-bg-secondary" data-bind="text: `${$data.town} - ${$data.npc}${$data.requirements ? ' 🔒' : ''}`,
+                            <a href="#" class="badge text-bg-secondary" data-bind="text: `${$data.town} - ${$data.npc}${$data.requirements ? ' 🔒' : ''}`,
                                 attr: { href: `#!Towns/${$data.town}` },
                                 tooltip: {
                                     title: $data.requirements ?? '',
