@@ -6,7 +6,7 @@ To purify a Shadow Pokémon, the player needs to gain Flow. **1 Flow** is gained
 
 $Flow = [15 * Purified^2 + 15 * Purified + 1500 * e^{(0.1 * Purified)}]$
 
-:::collapse See the Flow table
+:::collapsed See the Flow table
 N° of Purification | Flow Required
 ---: | ---:
 1 | 1,500
@@ -140,6 +140,7 @@ N° of Purification | Flow Required
 129 | 543,573,854
 130 | 600,719,837
 131 | 663,875,538
+:::
 
 Shadow Pokémon can also equip special Held Items that boost experience gain called Scents. Currently, there are three Scents in the game: [[Items/Joy Scent]], [[Items/Vivid Scent]], and [[Items/Excite Scent]].
 
