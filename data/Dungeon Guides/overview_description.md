@@ -1,0 +1,1 @@
+Dungeon Guides provide dungeon automation, at a cost. Guides can be hired after clearing a dungeon 10 times and each have their own dungeon exploring specialty and costs.
