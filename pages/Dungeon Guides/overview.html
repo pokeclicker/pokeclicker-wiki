@@ -1,0 +1,34 @@
+<h3>Available Dungeon Guides</h3>
+<div class="table-responsive">
+    <table class="table table-hover table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Guide</th>
+                <th>Description</th>
+                <th>Hiring Currency</th>
+                <th>Movement Speed</th>
+                <th>Unlock Requirement</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: DungeonGuides.list">
+            <tr>
+                <td class="text-nowrap">
+                    <img class="me-1" data-bind="attr: { src: `./pokeclicker/docs/assets/images/profile/trainer-${$data.trainerSprite}.png` }"/>
+                    <a href="#!" class="text-decoration-none" data-bind="text: $data.name,
+                        attr: { href: `#!Dungeon Guides/${$data.name}` }"></a>
+                </td>
+                <td data-bind="text: $data.description"></td>
+                <td>
+                    <!-- ko foreach: $data.cost -->
+                    <img width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/currency/${GameConstants.Currency[$data[1]]}.svg` }"/>
+                    <!-- /ko -->
+                    <!-- ko foreach: $data.fixedCost -->
+                    <img width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/currency/${GameConstants.Currency[$data.currency]}.svg` }"/>
+                    <!-- /ko -->
+                </td>
+                <td data-bind="text: `${$data.interval / GameConstants.SECOND}s`"></td>
+                <td data-bind="html: Wiki.md.renderInline(Wiki.gameHelper.requirementHints(unlockRequirement).join('<br/>')) || '-'"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

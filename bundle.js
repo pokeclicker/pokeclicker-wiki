@@ -79969,6 +79969,17 @@ const searchOptions = [
     type: 'Poké Balls',
     page: '',
   },
+  // Dungeon Guides
+  {
+    display: 'Dungeon Guides',
+    type: 'Dungeon Guides',
+    page: '',
+  },
+  ...DungeonGuides.list.map(g => ({
+    display: g.name,
+    type: 'Dungeon Guides',
+    page: g.name,
+  })),
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
