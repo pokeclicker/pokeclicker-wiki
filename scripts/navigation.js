@@ -166,6 +166,14 @@ $(document).ready(() => {
       applyDatatables();
     }
   });
+
+  // Search for pages
+  document.getElementById('search').addEventListener('keyup', ({key, target}) => {
+    if (key === 'Enter') {
+      gotoPage('Search', target.value);
+      target.value = '';
+    }
+  });
 });
 
 // Save any settings the user has set before they leave
