@@ -31,7 +31,7 @@ Mulch and Berry Shovel can be bought in Goldenrod City, Mauville City, Hearthome
 |[[File:Surprise_Mulch.png\|32px]]  Surprise Mulch | 150 [[File:currency/farmPoint.svg\|24px]]  | Increases the chance of Berry mutations by 50% on any (can be empty or occupied) plot it is applied to. |
 |[[File:Amaze_Mulch.png\|32px]]  Amaze Mulch | 200 [[File:currency/farmPoint.svg\|24px]]  | Increases the growth and mutation rates by 25% and the harvest rate and replant chance  by 50%.  |
 |[[File:Freeze_Mulch.png\|32px]]  Freeze Mulch | 350 [[File:currency/farmPoint.svg\|24px]]  | Pauses Berry growth and auras. This includes the Colbur berry blocking Kasib berries from mutating, but not parasitic effects since those are strictly a mutation.  |
-|[[File:Freeze_Gooey.png\|32px]]  Gooey Mulch | 100 [[File:currency/farmPoint.svg\|24px]]  | Improves the catch rate of wandering Pokémon on mulched plot by 10%. Also increases the weights of berry or color specific wandering Pokémon, making them more likely to appear.  |
+|[[File:Gooey_Mulch.png\|32px]]  Gooey Mulch | 100 [[File:currency/farmPoint.svg\|24px]]  | Improves the catch rate of wandering Pokémon on mulched plot by 10%. Also increases the weights of berry or color specific wandering Pokémon, making them more likely to appear.  |
 |[[File:Berry_Shovel.png\|32px]]  Berry Shovel | 300 [[File:currency/farmPoint.svg\|24px]]  | Clears an occupied plot instantly. Harvestable plots that are shoveled are harvested and not cleared. |
 |[[File:Mulch_Shovel.png\|32px]]  Mulch Shovel | 300 [[File:currency/farmPoint.svg\|24px]]  | Removes Mulch from a plot in the Farm. |
 
