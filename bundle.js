@@ -79930,6 +79930,7 @@ const searchOptions = [
     display: 'Diamonds',
     type: 'Diamonds',
     page: '',
+    redirects: ['Underground'], // remove when Underground page added
   },
   {
     display: 'Battle Points',
