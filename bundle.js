@@ -79815,7 +79815,7 @@ const searchOptions = [
     display: 'Pokérus',
     type: 'Pokérus',
     page: '',
-    redirects: ['EVs', 'Effort Values'],
+    redirects: ['EVs', 'Effort Values', 'Infected', 'Contagious', 'Resistant'],
   },
   // Dream Orbs
   {
