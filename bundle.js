@@ -79709,6 +79709,7 @@ const searchOptions = [
     display: 'Hatchery',
     type: 'Hatchery',
     page: '',
+    redirects: ['Daycare'],
   },
   // Hatchery Helpers
   {
@@ -79814,6 +79815,7 @@ const searchOptions = [
     display: 'Pokérus',
     type: 'Pokérus',
     page: '',
+    redirects: ['EVs', 'Effort Values'],
   },
   // Dream Orbs
   {
@@ -79988,6 +79990,12 @@ searchOptions.forEach(a => {
     duplicates.forEach(d => d.display = `${d.display} (${d.type})`);
   }
 })
+// Redirects
+searchOptions.forEach(a => {
+  a.redirects?.forEach(r => {
+    searchOptions.push({ ...a, redirect: r });
+  });
+});
 
 /*
     AUTO FILL FOR SEARCH BAR
@@ -80003,7 +80011,7 @@ var substringMatcher = (searchData) => {
     const substrRegex = new RegExp(escapeRegExp(query), 'i');
 
     // iterate through the pool of strings and for any string that matches the regex
-    const results = searchData.filter(d => substrRegex.test(d.display));
+    const results = searchData.filter(d => substrRegex.test(d.redirect || d.display));
 
     cb(results.sort((a, b) => a.display.search(substrRegex) - b.display.search(substrRegex) || a.display.length - b.display.length));
   };
@@ -80029,7 +80037,8 @@ $('#search').typeahead({
   templates: {
     notFound: '<a class="dropdown-item disabled">No results found...</a>',
     suggestion: (suggestion) => {
-      return `<a href="#!${suggestion.type}/${suggestion.page}">${suggestion.display}</a>`;
+      const display = suggestion.redirect ? `${suggestion.redirect} → ${suggestion.display}` : suggestion.display;
+      return `<a href="#!${suggestion.type}/${suggestion.page}">${display}</a>`;
     },
   },
 });
