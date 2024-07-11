@@ -703,7 +703,7 @@
                     $data[PokemonLocationType.Evolution]?.filter(a => a.restrictions.some(b => b.environment)).forEach(c => env.push(c.restrictions.filter(d => d.environment)[0].environment));
                     return env.includes(e)});
                 ">
-                <h3 data-bind="text: `${GameConstants.camelCaseToString($data)} Environments:`">Environments:</h3>
+                    <h3 data-bind="text: `${GameConstants.camelCaseToString($data)} Environments:`">Environments:</h3>
                     <table class="table table-hover table-striped table-bordered">
                         <thead>
                             <tr>
@@ -712,15 +712,15 @@
                                 <th>Town or Dungeon</th>
                             </tr>
                         </thead>
-                        <tbody data-bind="foreach: Object.entries(GameConstants.Environments[$data])">
+                         <tbody data-bind="foreach: Object.keys(GameConstants.Environments[$data])">
                             <tr>
-                                <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0][0]])"></td>
-                                <td data-bind="foreach: Array.from(Object.entries($data)[1][1]).filter((area) => typeof area === 'number')">
-                                    <!-- ko with: Routes.regionRoutes.filter((r) => r.region == $parent[0][0]).filter(r => r.number == $data)[0].routeName -->
+                                <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data])"></td>
+                                <td data-bind="foreach: Array.from(GameConstants.Environments[$parent][$data].values()).filter((area) => typeof area === 'number')">
+                                    <!-- ko with: Routes.regionRoutes.filter((r) => r.region == $parent).filter(r => r.number == $data)[0].routeName -->
                                     <a class="badge text-bg-secondary" style="font-size: small;" href="#!" data-bind="text: $data, attr: { href: `#!Routes/${$data}` }"></a>
                                     <!-- /ko -->
                                 </td>
-                                <td data-bind="foreach: Array.from(Object.entries($data)[1][1]).filter((area) => typeof area === 'string')">
+                                <td data-bind="foreach: Array.from(GameConstants.Environments[$parent][$data].values()).filter((area) => typeof area === 'string')">
                                     <a class="badge text-bg-secondary" style="font-size: small;" href="#!" data-bind="text: $data, attr: { href: TownList[$data] instanceof DungeonTown ? `#!Dungeons/${$data}` : `#!Towns/${$data}` }"></a>
                                 </td>
                             </tr>
