@@ -1,0 +1,4 @@
+Amaze mulch increases the growth and mutation rates by 25% (1.25x) and the harvest rate and replant chance by 50% (1.5x).  Each amaze mulch lasts for 5 minutes (300 seconds), and they can be stacked for a longer effect time.
+These effects stack with the effects of the [[Sprayduck]], [[Sprinklotad]], and [[Squirtbottle]] Oak Items.
+
+If you are wanting to achieve a specific effect, [[Boost Mulch]] gives a stronger growth boost (50%), [[Surprise Mulch]] gives a higher mutation boost (50%), and  [[Rich Mulch]] gives a higher harvest boost, and each of these costs fewer [[Farm Points]] than Amaze Mulch.
