@@ -79788,6 +79788,7 @@ const searchOptions = [
     display: 'Farm',
     type: 'Farm',
     page: '',
+    redirects: ['Mutating Berries', 'Mutation'],
   },
   {
     display: 'Farm Simulator',
