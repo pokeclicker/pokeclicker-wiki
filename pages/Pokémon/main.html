@@ -684,7 +684,7 @@
                                 <td data-bind="text: $data.protein || '-'"></td>
                                 <td data-bind="text: $data.calcium || '-'"></td>
                                 <td data-bind="text: $data.carbos || '-'"></td>
-                                <td data-bind="text: $data.eff.toLocaleString('en-US', { maximumSignificantDigits: 2 })"></td>
+                                <td data-bind="text: $data.eff.toLocaleString('en-US', { maximumFractionDigits: 3 })"></td>
                             <!-- /ko -->
                         </tr>
                     </tbody>
