@@ -1,2 +1,2 @@
-## Description:
-Used to mega evolve Abomasnow
+## Acquisition
+Legendary chest drop in [[Dungeons/Frost Cavern]].
