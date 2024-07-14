@@ -1,3 +1,3 @@
 ### Related Pages
 [[Mega Pokémon]]
-[[Items/Blastoisinite]]
+[[Items/Blazikenite]]
