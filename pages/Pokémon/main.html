@@ -724,6 +724,16 @@
                                     <a class="badge text-bg-secondary" style="font-size: small;" href="#!" data-bind="text: $data, attr: { href: TownList[$data] instanceof DungeonTown ? `#!Dungeons/${$data}` : `#!Towns/${$data}` }"></a>
                                 </td>
                             </tr>
+                            <!-- TODO: delete top example -->
+                            <tr>
+                                <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data])"></td>
+                                <td data-bind="foreach: Routes.regionRoutes.filter((r) => r.region == $parent).filter((r) => MapHelper.getEnvironments(r.number, $parent).includes($parent[1]))">
+                                    <a class="badge text-bg-secondary" style="font-size: small;" href="#!" data-bind="text: $data.routeName, attr: { href: `#!Routes/${$data.routeName}` }"></a>
+                                </td>
+                                <td data-bind="foreach: Object.values(TownList).filter((t) => t.region == $data).filter((t) => MapHelper.getEnvironments(t.name, t.region).includes($parent[1]))">
+                                    <a class="badge text-bg-secondary" style="font-size: small;" href="#!" data-bind="text: $data.name, attr: { href: TownList[$data] instanceof DungeonTown ? `#!Dungeons/${$data}` : `#!Towns/${$data}` }"></a>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
