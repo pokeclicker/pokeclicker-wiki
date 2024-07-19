@@ -138,7 +138,7 @@
                 <!-- ko foreach: $data[1] -->
                 <tr>
                     <!-- ko if: $index() == 0 -->
-                    <td class="align-middle" style="max-width: 10vw;" data-bind="text: $parent[0], attr: { rowspan: $parent[1].length }"></td>
+                    <td class="align-middle" data-bind="text: $parent[0], attr: { rowspan: $parent[1].length }"></td>
                     <!-- /ko -->
                     <td class="align-middle">
                         <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
