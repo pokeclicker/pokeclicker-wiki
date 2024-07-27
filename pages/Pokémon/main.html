@@ -50,18 +50,23 @@
                     <div id="obtain-method-route" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.entries($data[PokemonLocationType.Route])">
                             <h5 data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0]])"></h5>
-                            <p data-bind="foreach: $data[1]">
-                                <ko data-bind="with: Routes.regionRoutes.find(r => r.region == $parent[0] && r.number == $data.route)">
-                                    <a class="badge text-bg-secondary" data-bind="text: $data.routeName.replace(new RegExp(`^${GameConstants.Region[$parents[1][0]]}`, 'i'), '') + `${$parent.requirements ? ' 🔒' : ''}`,
-                                    attr: { href: `#!Routes/${$data.routeName}` },
-                                    tooltip: {
+                            <div class="d-flex flex-wrap gap-2 mb-2" data-bind="foreach: $data[1]">
+                                <div class="input-group input-group-sm w-auto" data-bind="with: Routes.regionRoutes.find(r => r.region == $parent[0] && r.number == $data.route)">
+                                    <span class="input-group-text">
+                                        <a class="text-decoration-none text-body" data-bind="
+                                            text: $data.routeName.replace(new RegExp(`^${GameConstants.Region[$parents[1][0]]}`, 'i'), ''),
+                                            attr: { href: `#!Routes/${$data.routeName}` }"></a>
+                                    </span>
+                                    <!-- ko if: $parent.requirements -->
+                                    <span class="input-group-text" style="cursor: help;" data-bind="tooltip: {
                                         title: $parent.requirements ?? '',
                                         html: false,
                                         placement: 'bottom',
                                         trigger: 'hover'
-                                    }"></a>
-                                </ko>
-                            </p>
+                                    }">🔒</span>
+                                    <!-- /ko -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -79,15 +84,22 @@
                         </button>
                     </h4>
                     <div id="obtain-method-roaming" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Roaming])">
-                            <a class="badge text-bg-secondary" data-bind="text: ($data.roamingGroup?.name ?? GameConstants.camelCaseToString(GameConstants.Region[$data.region])) + `${$data.requirements ? ' 🔒' : ''}`,
-                            attr: { href: `#!Roaming Pokémon` },
-                            tooltip: {
-                                title: $data.requirements ?? '',
-                                html: false,
-                                placement: 'bottom',
-                                trigger: 'hover'
-                            }"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.Roaming])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="
+                                        text: ($data.roamingGroup?.name ?? GameConstants.camelCaseToString(GameConstants.Region[$data.region])),
+                                        attr: { href: `#!Roaming Pokémon` }"></a>
+                                </span>
+                                <!-- ko if: $data.requirements -->
+                                <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
+                                    title: $data.requirements ?? '',
+                                    html: false,
+                                    placement: 'bottom',
+                                    trigger: 'hover'
+                                }">🔒</span>
+                                <!-- /ko -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -105,15 +117,21 @@
                         </button>
                     </h4>
                     <div id="obtain-method-dungeon" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Dungeon])">
-                            <a class="badge text-bg-secondary" data-bind="text: $data.dungeon + `${$data.requirements ? ' 🔒' : ''}`,
-                            attr: { href: `#!Dungeons/${$data.dungeon}` },
-                            tooltip: {
-                                title: $data.requirements ?? '',
-                                html: false,
-                                placement: 'bottom',
-                                trigger: 'hover'
-                            }"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.Dungeon])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="
+                                        text: $data.dungeon, attr: { href: `#!Dungeons/${$data.dungeon}` }"></a>
+                                </span>
+                                <!-- ko if: $data.requirements -->
+                                <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
+                                    title: $data.requirements ?? '',
+                                    html: false,
+                                    placement: 'bottom',
+                                    trigger: 'hover'
+                                }">🔒</span>
+                                <!-- /ko -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -131,15 +149,21 @@
                         </button>
                     </h4>
                     <div id="obtain-method-dungeon-boss" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.DungeonBoss])">
-                            <a class="badge text-bg-secondary" data-bind="text: $data.dungeon + `${$data.requirements ? ' 🔒' : ''}`,
-                            attr: { href: `#!Dungeons/${$data.dungeon}` },
-                            tooltip: {
-                                title: $data.requirements ?? '',
-                                html: false,
-                                placement: 'bottom',
-                                trigger: 'hover'
-                            }"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.DungeonBoss])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="
+                                        text: $data.dungeon, attr: { href: `#!Dungeons/${$data.dungeon}` }"></a>
+                                </span>
+                                <!-- ko if: $data.requirements -->
+                                <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
+                                    title: $data.requirements ?? '',
+                                    html: false,
+                                    placement: 'bottom',
+                                    trigger: 'hover'
+                                }">🔒</span>
+                                <!-- /ko -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -157,15 +181,21 @@
                         </button>
                     </h4>
                     <div id="obtain-method-dungeon-chest" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.DungeonChest])">
-                            <a class="badge text-bg-secondary" data-bind="text: $data.dungeon + `${$data.requirements ? ' 🔒' : ''}`,
-                            attr: { href: `#!Dungeons/${$data.dungeon}` },
-                            tooltip: {
-                                title: $data.requirements ?? '',
-                                html: false,
-                                placement: 'bottom',
-                                trigger: 'hover'
-                            }"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.DungeonChest])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="
+                                        text: $data.dungeon, attr: { href: `#!Dungeons/${$data.dungeon}` }"></a>
+                                </span>
+                                <!-- ko if: $data.requirements -->
+                                <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
+                                    title: $data.requirements ?? '',
+                                    html: false,
+                                    placement: 'bottom',
+                                    trigger: 'hover'
+                                }">🔒</span>
+                                <!-- /ko -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -183,15 +213,20 @@
                         </button>
                     </h4>
                     <div id="obtain-method-level-evolution" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Evolution]?.filter(e => e.stone == null || e.stone == GameConstants.StoneType.None))">
-                            <a class="badge text-bg-secondary" data-bind="text: $data.basePokemon + `${$data.restrictions ? ' 🔒' : ''}`,
-                            attr: { href: `#!Pokemon/${$data.basePokemon}` },
-                            tooltip: {
-                                title: Wiki.gameHelper.getEvolutionHints($data).join('<br/>') ?? '',
-                                html: true,
-                                placement: 'bottom',
-                                trigger: 'hover'
-                            }"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.Evolution]?.filter(e => e.stone == null || e.stone == GameConstants.StoneType.None))">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="text: $data.basePokemon, attr: { href: `#!Pokemon/${$data.basePokemon}` }"></a>
+                                </span>
+                                <!-- ko if: $data.restrictions -->
+                                <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
+                                    title: Wiki.gameHelper.getEvolutionHints($data).join('<br/>') ?? '',
+                                    html: true,
+                                    placement: 'bottom',
+                                    trigger: 'hover'
+                                }">🔒</span>
+                                <!-- /ko -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -209,15 +244,19 @@
                         </button>
                     </h4>
                     <div id="obtain-method-item-evolution" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Evolution]?.filter(e => e.stone > GameConstants.StoneType.None))">
-                            <a class="badge text-bg-secondary" data-bind="text: $data.basePokemon + `${$data.restrictions ? ' 🔒' : ''}`,
-                            attr: { href: `#!Pokemon/${$data.basePokemon}` },
-                            tooltip: {
-                                title: Wiki.gameHelper.getEvolutionHints($data).join('<br/>') ?? '',
-                                html: true,
-                                placement: 'bottom',
-                                trigger: 'hover'
-                            }"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.Evolution]?.filter(e => e.stone > GameConstants.StoneType.None))">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="
+                                        text: $data.basePokemon, attr: { href: `#!Pokemon/${$data.basePokemon}` }"></a>
+                                </span>
+                                <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
+                                    title: Wiki.gameHelper.getEvolutionHints($data).join('<br/>') ?? '',
+                                    html: true,
+                                    placement: 'bottom',
+                                    trigger: 'hover'
+                                }">🔒</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -235,10 +274,13 @@
                         </button>
                     </h4>
                     <div id="obtain-method-egg" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Egg])">
-                            <a href="#!" class="badge text-bg-secondary" data-bind="
-                            attr: { href: `#!Items/${$data} Egg` },
-                            text: `${$data} Egg`"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.Egg])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="
+                                        text: `${$data} Egg`, attr: { href: `#!Items/${$data} Egg` }"></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -256,8 +298,12 @@
                         </button>
                     </h4>
                     <div id="obtain-method-baby" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Baby])">
-                            <a class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Pokemon/${$data}` }"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.Baby])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Pokemon/${$data}` }"></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -275,8 +321,12 @@
                         </button>
                     </h4>
                     <div id="obtain-method-fossil" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Fossil])">
-                            <a class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Items/${$data}` }"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.Fossil])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Items/${$data}` }"></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -294,10 +344,12 @@
                         </button>
                     </h4>
                     <div id="obtain-method-shop" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Shop])">
-                            <a href="#!" class="badge text-bg-secondary" data-bind="
-                            attr: { href: `#!Towns/${$data}` },
-                            text: $data"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.Shop])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Towns/${$data}` }"></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -315,10 +367,12 @@
                         </button>
                     </h4>
                     <div id="obtain-method-trade" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Trade])">
-                            <a href="#!" class="badge text-bg-secondary" data-bind="
-                            attr: { href: `#!Towns/${$data}` },
-                            text: $data"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.Trade])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Towns/${$data}` }"></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -338,19 +392,23 @@
                     <div id="obtain-method-safari" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.entries($data[PokemonLocationType.Safari])">
                             <h5 data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0]])"></h5>
-                            <p data-bind="foreach: Object.entries($data[1])">
-                                <knockout data-bind="with: { chance: $data[1], requireCaught: SafariPokemonList.list[$parent[0]]().find(p => p.name == Wiki.pageName())?.requireCaught }">
-                                    <a class="badge text-bg-secondary" data-bind="text: `Chance ${$data.chance}%${$data.requireCaught ? ' 🔒' : ''}`,
-                                        attr: { href: `#!Towns/${Object.values(TownList).find(t => t.region == $parents[1][0] && t.content.filter(c => c instanceof SafariTownContent).length).name}` },
-                                        tooltip: {
-                                            title: $data.requireCaught ? `${Wiki.pageName()} will become available in the Safari Zone after being obtained elsewhere.` : '',
-                                            html: true,
-                                            placement: 'bottom',
-                                            trigger: 'hover'
-                                        }">
-                                    </a>
-                                </knockout>
-                            </p>
+                            <div class="d-flex flex-wrap gap-2 mb-2" data-bind="foreach: Object.entries($data[1])">
+                                <div class="input-group input-group-sm w-auto" data-bind="with: { chance: $data[1], requirement: SafariPokemonList.list[$parent[0]]().find(p => p.name == Wiki.pageName())?.requirement }">
+                                    <span class="input-group-text">
+                                        <a class="text-decoration-none text-body" data-bind="
+                                            text: `Spawn Chance - ${$data.chance}%`,
+                                            attr: { href: `#!Towns/${Object.values(TownList).find(t => t.region == $parents[1][0] && t.content.filter(c => c instanceof SafariTownContent).length).name}` }"></a>
+                                    </span>
+                                    <!-- ko if: $data.requirement -->
+                                    <span class="input-group-text" style="cursor: help;" data-bind="tooltip: {
+                                        title: $data.requirement.hint(),
+                                        html: false,
+                                        placement: 'bottom',
+                                        trigger: 'hover'
+                                    }">🔒</span>
+                                    <!-- /ko -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -372,17 +430,23 @@
                     <div id="obtain-method-friend-safari" class="accordion-collapse collapse">
                         <div class="accordion-body">
                             <h5 data-bind="">Kalos</h5>
-                                <knockout data-bind="using: !(SafariPokemonList.list[GameConstants.Region.kalos]().find(p => p.name == Wiki.pageName())?.requireCaught == false), as: 'requireCaught'">
-                                    <a class="badge text-bg-secondary"  data-bind="text: `In ${SafariPokemonList.getEnvironmentByPokemonType(Wiki.pageName()).map(env => SafariEnvironments[env]).join(', ')}${requireCaught ? ' 🔒' : ''}`,
-                                        attr: { href: `#!Towns/Friend Safari` },
-                                        tooltip: {
-                                            title: requireCaught ? `${Wiki.pageName()} will become available in the Friend Safari after being obtained elsewhere.` : '',
-                                            html: true,
-                                            placement: 'bottom',
-                                            trigger: 'hover'
-                                        }">
-                                    </a>
-                                </knockout>
+                            <div class="d-flex flex-wrap gap-2 mb-2">
+                                <div class="input-group input-group-sm w-auto" data-bind="using: (!SafariPokemonList.list[GameConstants.Region.kalos]().find(p => p.name == Wiki.pageName()) || SafariPokemonList.list[GameConstants.Region.kalos]().find(p => p.name == Wiki.pageName()).requirement !== undefined), as: 'requireCaught'">
+                                    <span class="input-group-text">
+                                        <a class="text-decoration-none text-body" data-bind="
+                                            text: `In ${SafariPokemonList.getEnvironmentByPokemonType(Wiki.pageName()).map(env => SafariEnvironments[env]).join(', ')}`,
+                                            attr: { href: `#!Towns/Friend Safari` }"></a>
+                                    </span>
+                                    <!-- ko if: requireCaught -->
+                                    <span class="input-group-text" style="cursor: help;" data-bind="tooltip: {
+                                        title: requireCaught ? `${Wiki.pageName()} will become available in the Friend Safari after being obtained elsewhere.` : '',
+                                        html: true,
+                                        placement: 'bottom',
+                                        trigger: 'hover'
+                                    }">🔒</span>
+                                    <!-- /ko -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -400,8 +464,12 @@
                         </button>
                     </h4>
                     <div id="obtain-method-shadow" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: $data[PokemonLocationType.ShadowPokemon]">
-                            <a class="badge text-bg-secondary" data-bind="text: `${$data}`, attr: { href: `#!Dungeons/${$data}` }"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: $data[PokemonLocationType.ShadowPokemon]">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Dungeons/${$data}` }"></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -419,8 +487,12 @@
                         </button>
                     </h4>
                     <div id="obtain-method-battle-frontier" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.BattleFrontier])">
-                            <a class="badge text-bg-secondary" data-bind="text: `Stage ${$data}`, attr: { href: `#!Battle Frontier` }"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.BattleFrontier])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="text: `Stage ${$data}`, attr: { href: `#!Battle Frontier` }"></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -438,13 +510,17 @@
                         </button>
                     </h4>
                     <div id="obtain-method-wandering" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Wandering])">
-                            <!-- ko if: $data == 'Always' -->
-                                <span class="badge text-bg-secondary" data-bind="text: $data"></span>
-                            <!-- /ko -->
-                            <!-- ko ifnot: $data == 'Always' -->
-                                <a class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Berries/${$data}` }"></a>
-                            <!-- /ko -->
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.Wandering])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <!-- ko if: $data == 'Always' -->
+                                    <span class="text-decoration-none text-body" data-bind="text: $data"></span>
+                                    <!-- /ko -->
+                                    <!-- ko ifnot: $data == 'Always' -->
+                                    <a class="text-decoration-none text-body" data-bind="text: `${$data} Berry`, attr: { href: `#!Berries/${$data}` }"></a>
+                                    <!-- /ko -->
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -462,8 +538,12 @@
                         </button>
                     </h4>
                     <div id="obtain-method-discord" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.Discord])">
-                            <a href="https://discord.gg/a6DFe4p" class="badge text-bg-secondary" data-bind="text: `${$data.toLocaleString()} points`"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.Discord])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a href="https://discord.gg/a6DFe4p" class="text-decoration-none text-body" data-bind="text: `${$data.toLocaleString()} points`"></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -481,8 +561,12 @@
                         </button>
                     </h4>
                     <div id="obtain-method-quest" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.QuestLineReward])">
-                            <a href="#" class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Quest_Lines/${$data}` }"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.QuestLineReward])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Quest_Lines/${$data}` }"></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -500,8 +584,12 @@
                         </button>
                     </h4>
                     <div id="obtain-method-tempbattle" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.TempBattleReward])">
-                            <a href="#" class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Temporary_Battles/${$data}` }"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.TempBattleReward])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Temporary_Battles/${$data}` }"></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -519,8 +607,12 @@
                         </button>
                     </h4>
                     <div id="obtain-method-gym" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.GymReward])">
-                            <a href="#" class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Gyms/${$data}` }"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.GymReward])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Gyms/${$data}` }"></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -538,8 +630,12 @@
                         </button>
                     </h4>
                     <div id="obtain-method-dungeon" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.DungeonReward])">
-                            <a href="#" class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Dungeons/${$data}` }"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.DungeonReward])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Dungeons/${$data}` }"></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -557,15 +653,21 @@
                         </button>
                     </h4>
                     <div id="obtain-method-giftnpc" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.GiftNPC])">
-                            <a href="#" class="badge text-bg-secondary" data-bind="text: `${$data.town} - ${$data.npc}${$data.requirements ? ' 🔒' : ''}`,
-                                attr: { href: `#!Towns/${$data.town}` },
-                                tooltip: {
-                                    title: $data.requirements ?? '',
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.GiftNPC])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="text: `${$data.town} - ${$data.npc}`,
+                                        attr: { href: `#!Towns/${$data.town}` }"></a>
+                                </span>
+                                <!-- ko if: $data.requirements -->
+                                <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
+                                    title:  $data.requirements ?? '',
                                     html: false,
                                     placement: 'bottom',
                                     trigger: 'hover'
-                                }"></a>
+                                }">🔒</span>
+                                <!-- /ko -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -583,8 +685,12 @@
                         </button>
                     </h4>
                     <div id="obtain-method-dreamorbs" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: Object.values($data[PokemonLocationType.DreamOrb])">
-                            <a href="#" class="badge text-bg-secondary" data-bind="text: $data, attr: { href: `#!Dream Orbs` }"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.DreamOrb])">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Dream Orbs` }"></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -602,9 +708,13 @@
                         </button>
                     </h4>
                     <div id="obtain-method-battlecafe" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="with: $data[PokemonLocationType.BattleCafe]">
-                            <a href="#" class="badge text-bg-secondary" data-bind="text: `${Wiki.pokemon.battleCafeToHumanReadableString($data)}`,
-                                attr: { href: `#!Battle Cafe` }"></a>
+                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="with: $data[PokemonLocationType.BattleCafe]">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text">
+                                    <a class="text-decoration-none text-body" data-bind="text: `${Wiki.pokemon.battleCafeToHumanReadableString($data)}`,
+                                        attr: { href: `#!Battle Cafe` }"></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -624,17 +734,23 @@
                     <div id="obtain-method-safariitem" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.entries($data[PokemonLocationType.SafariItem])">
                             <h5 data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0]])"></h5>
-                            <p data-bind="with: $data[1]">
-                                <a class="badge text-bg-secondary" data-bind="text: `Chance ${$data.chance * 100}%${$data.requirement ? ' 🔒' : ''}`,
-                                    attr: { href: `#!Towns/${Object.values(TownList).find(t => t.region == $parent[0] && t.content.filter(c => c instanceof SafariTownContent).length).name}` },
-                                    tooltip: {
+                            <div class="d-flex flex-wrap gap-2 mb-2" data-bind="with: $data[1]">
+                                <div class="input-group input-group-sm w-auto">
+                                    <span class="input-group-text">
+                                        <a class="text-decoration-none text-body" data-bind="
+                                            text: `Chance - ${$data.chance * 100}%`,
+                                            attr: { href: `#!Towns/${Object.values(TownList).find(t => t.region == $parent[0] && t.content.filter(c => c instanceof SafariTownContent).length).name}` }"></a>
+                                    </span>
+                                    <!-- ko if: $data.requirement -->
+                                    <span class="input-group-text" style="cursor: help;" data-bind="tooltip: {
                                         title: $data.requirement ?? '',
                                         html: false,
                                         placement: 'bottom',
                                         trigger: 'hover'
-                                    }">
-                                </a>
-                            </p>
+                                    }">🔒</span>
+                                    <!-- /ko -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
