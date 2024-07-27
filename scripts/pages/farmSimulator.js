@@ -259,6 +259,21 @@ const importFarm = (str) => {
     });
 };
 
+const importFromFile = (file) => {
+    fileReader.readAsText(file);
+};
+
+const fileReader = new FileReader();
+fileReader.addEventListener('load', () => {
+    const saveData = JSON.parse(atob(fileReader.result));
+    const plotList = saveData.save.farming.plotList;
+    App.game.farming.plotList.forEach((plot, idx) => {
+        plot._berry(plotList[idx].berry);
+        plot._age(plotList[idx].age);
+        plot._mulch(plotList[idx].mulch);
+    });
+});
+
 let contextMenuSetup = false;
 let copiedPlot = { berry: BerryType.None, age: 0, mulch: MulchType.None };
 
@@ -314,5 +329,6 @@ module.exports = {
     clearAllPlots,
     exportFarm,
     importFarmPrompt,
+    importFromFile,
     showPlotContextMenu,
 }
