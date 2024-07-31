@@ -1,0 +1,1 @@
+Each Gooey mulch lasts for 5 minutes (300 seconds), and they can be stacked for a longer effect time.
