@@ -1,1 +1,0 @@
-There is visual bug in the second image!
