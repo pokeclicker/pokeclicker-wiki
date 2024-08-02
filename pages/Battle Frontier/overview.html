@@ -10,7 +10,7 @@
             </tr>
         </thead>
         <tbody data-bind="foreach: BattleFrontierMilestones.milestoneRewards">
-            <tr>
+            <tr class="clickable" data-bind="click: () => { if ($data.pokemonName) { Wiki.gotoPage('Pokemon', $data.pokemonName); } else { Wiki.gotoPage('Items', ItemList[$data.itemName].displayName); } return false; }">
                 <td data-bind="text: $data.stage.toLocaleString(), attr: { 'data-order': $data.stage }"></td>
                 <td>
                     <ko data-bind="text: $data.description"></ko>
