@@ -69,7 +69,7 @@ Sinnoh | [[File:Burmy (Plant).png\|25px]] | [[File:pokemon/412.png\|30px]] Burmy
 Sinnoh | [[File:Cherubi.png\|25px]] | [[File:pokemon/420.png\|30px]] Cherubi | 6,750 [[File:questPoint.svg\|25px]]
 Sinnoh | [[File:Spiritomb.png\|25px]] | [[File:pokemon/442.png\|30px]] Spiritomb | 6,750 [[File:questPoint.svg\|25px]]
 Unova | [[File:Zorua.png\|25px]] | [[File:pokemon/570.png\|30px]] Zorua | 50,625 [[File:questPoint.svg\|25px]]
-Unova | [[File:Meloetta (pirouette).png\|25px]] | [[File:pokemon/648.01.png\|30px]] Meloetta (Pirouette) | 200,000 [[File:questPoint.svg\|25px]]
+Unova | [[File:Meloetta (Pirouette).png\|25px]] | [[File:pokemon/648.01.png\|30px]] Meloetta (Pirouette) | 200,000 [[File:questPoint.svg\|25px]]
 Kalos | [[File:Furfrou (Dandy).png\|25px]] | [[File:pokemon/676.06.png\|30px]] Furfrou (Dandy) | 250,000 [[File:questPoint.svg\|25px]]
 Alola | [[File:Type Null.png\|25px]] | [[File:pokemon/772.png\|30px]] Type Null | 114,000 [[File:questPoint.svg\|25px]]
 Alola | [[File:Poipole.png\|25px]] | [[File:pokemon/803.png\|30px]] Poipole | 90,000 [[File:questPoint.svg\|25px]]
