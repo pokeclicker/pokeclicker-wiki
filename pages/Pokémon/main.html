@@ -492,6 +492,14 @@
                                 <span class="input-group-text">
                                     <a class="text-decoration-none text-body" data-bind="text: `Stage ${$data}`, attr: { href: `#!Battle Frontier` }"></a>
                                 </span>
+                                <!-- ko with: BattleFrontierMilestones.milestoneRewards.find(m => m instanceof BattleFrontierMilestone && m._description == Wiki.pageName())?.requirement -->
+                                <span class="input-group-text" style="cursor: help;" data-bind="tooltip: {
+                                    title: $data.hint(),
+                                    html: false,
+                                    placement: 'bottom',
+                                    trigger: 'hover'
+                                }">🔒</span>
+                                <!-- /ko -->
                             </div>
                         </div>
                     </div>
