@@ -38,7 +38,6 @@ Aguav Berries can be obtained from the following dungeons.
 | Location	                        | Tier	    | Requirement   |
 | :---:                             | :---:     | :---:         |
 | [[Dungeons/Pattern Bush]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Pinkan Mountain]]      | Common	| `N/A`         |
 | [[Dungeons/Radio Tower]]	        | Epic  	| `N/A`         |
 | [[Dungeons/Flower Paradise]]      | Common  	| `N/A`         |
 | [[Dungeons/Chargestone Cave]]     | Common	| `N/A`         |
