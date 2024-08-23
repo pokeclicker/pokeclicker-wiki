@@ -14,3 +14,6 @@ Pokémon #459 [[Pokémon/Snover]] must be caught to unlock this berry. You can f
 | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | | | |
 | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]]| | | {.mutation} | |
 :::
+
+#### Uses
+Snover can be used to purchase Pokémon at [[Towns/Secret Berry Shop]].
