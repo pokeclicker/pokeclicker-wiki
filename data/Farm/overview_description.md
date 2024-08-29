@@ -1,12 +1,12 @@
 The Farm is a location in Kanto where Berries can be planted. Harvesting them yields Farming Points and more of the same type of Berry. Occasionally, mutations can occur when Berries are planted in certain configurations. The Farm is unlocked upon reaching Kanto Route 14 and obtaining the Wailmer pail.
 
-Two Quests can appear involving the usage of the Farm, asking for get Farm Points or harvesting specific berries for QP
+Two Quests can appear involving the usage of the Farm, asking for get Farm Points or harvesting specific berries for [[QP]].
 
 ## Usage
 
 _For a breakdown of harvest yields, flavors, and mutation configurations for the various types of Berries, consult the [[Berries]] specific pages._
 
-Before completing Kanto, the Farm can be accessed by clicking on its location on the map between Routes 14 and Route 15. Upon reaching Johto, it becomes available in the Shortcuts dropdown modal.
+Before completing Kanto, the Farm can be accessed by clicking on its location on the map between Routes 14 and Route 15.
 
 The eight Gen 1 Berries are dropped by defeated Pokémon on routes. They can be planted by selecting the desired type in the left-hand column and clicking on plots in the field on the right. Alternatively, the "Plant All" button can be clicked to plant the selected Berry in every empty plot.
 
