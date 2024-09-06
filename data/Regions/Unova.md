@@ -52,3 +52,4 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 | [[File:pokemon/641.png\|25px]] [[Pokémon/Tornadus]] | Unlocks after beating [[Gyms/Opelucid City]]'s Gym |
 | [[File:pokemon/642.png\|25px]] [[Pokémon/Thundurus]] | Unlocks after beating [[Gyms/Opelucid City]]'s Gym |
 | [[File:pokemon/648.png\|25px]] [[Pokémon/Meloetta (Aria)]] | Unlocks after becoming Unova Champion |
+| [[File:pokemon/649.05.png\|25px]] [[Pokémon/Genesect (High-Speed)]] | Unlocks after quest line [[Quest Lines/The Legend Awakened]] complete. |
