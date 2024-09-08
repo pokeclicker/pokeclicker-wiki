@@ -1,4 +1,4 @@
-Farm Points [[File:farmPoint.svg|25px]] are the brown currency gained by harvesting [[Berries]] on the [[Farm]].
+Farm Points [[File:farmPoint.svg|25px]] are the brown currency gained by harvesting [[Berries]] on the [[Farm]], or interacting with [[Roaming Pokémon]].
 
 Berries that wither do not grant farm points, and different types of berries give differing amounts Farm Points as detailed in the Farm Points Earned Table below.
 
