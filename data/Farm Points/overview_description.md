@@ -1,4 +1,4 @@
-Farm Points [[File:farmPoint.svg|25px]] are the brown currency gained by harvesting [[Berries]] on the [[Farm]], or interacting with [[Roaming Pokémon]].
+Farm Points [[File:farmPoint.svg|25px]] are the brown currency gained by harvesting [[Berries]] on the [[Farm]].
 
 Berries that wither do not grant farm points, and different types of berries give differing amounts Farm Points as detailed in the Farm Points Earned Table below.
 
@@ -60,7 +60,7 @@ Name | Wage
 |[[Farm_Hands/Alex]] [[File:trainer-87.png\|25px]] | 140 [[File:farmPoint.svg\|25px]]
 |[[Farm_Hands/Logan]] [[File:trainer-28.png\|25px]] | 440 [[File:farmPoint.svg\|25px]]
 |[[Farm_Hands/Joey]] [[File:trainer-70.png\|25px]] | 630 [[File:farmPoint.svg\|25px]]
-|[[Farm_Hands/Charlie]] [[File:trainer-109.png\|25px]] | 910 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Charlie]] [[File:trainer-54.png\|25px]] | 910 [[File:farmPoint.svg\|25px]]
 |[[Farm_Hands/Bailey]] [[File:trainer-68.png\|25px]] | 1,300 [[File:farmPoint.svg\|25px]]
 |[[Farm_Hands/Kerry]] [[File:trainer-32.png\|25px]] | 1,900 [[File:farmPoint.svg\|25px]]
 |[[Farm_Hands/Riley]] [[File:trainer-92.png\|25px]] | 4,000 [[File:farmPoint.svg\|25px]]
