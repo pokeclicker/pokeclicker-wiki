@@ -2,6 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
+The Liechi berry can be acquired by having 23 Passho Berries in your farm.
 Pokémon #382 [[Pokémon/Kyogre]] must be caught to unlock this berry. You can fill your farm in the following way to obtain Liechi Berries. Purple squares indicate where mutations can occur.
 
 ::: table-mutations

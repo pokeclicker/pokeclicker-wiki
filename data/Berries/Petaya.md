@@ -15,7 +15,7 @@ You can fill your farm in the following way to obtain Petaya berries. Note that 
 ### External Timers
 Please note that these timers are from the moment Haban is planted, so, for example, 2 hours 40 minutes **after** planting Haban and Babiri, you should plant Yache. These are **not** time until Haban is ripe. For those, please refer to the **Timing Table** section lower in the page.
 
-|Berry | Time | Mulch Amount|
+|Berry | Time | Boost Mulch Needed|
 |---|---|---|
 | [[Berries/Haban]] | --- | 128|
 | [[Berries/Babiri]] | --- | 52|
@@ -58,7 +58,7 @@ Mutating a Petaya with Freeze Mulch makes the entire thing incredibly easy.  Wha
 
 **Note: This table assumes you have given Haban 128 Boost Mulch and Babiri 52 Boost Mulch, and maxed [[Oak Items/Sprayduck]] is equipped.**
 
-| Berry | Freeze mulch needed | Time Displayed |
+| Berry | Freeze Mulch Needed | Time Displayed |
 |---|---|---|
 | [[Berries/Haban]] | 0 | --|
 | [[Berries/Babiri]] | 0 | --|

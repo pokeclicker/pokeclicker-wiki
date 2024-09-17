@@ -77045,7 +77045,7 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":1,"call-bind":6,"call-bind/callBound":5,"for-each":62,"gopd":66,"has-tostringtag/shams":70}],502:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
-  "version": "0.10.20",
+  "version": "0.10.21",
   "description": "PokéClicker repository",
   "main": "index.js",
   "scripts": {
@@ -79173,6 +79173,21 @@ const importFarm = (str) => {
     });
 };
 
+const importFromFile = (file) => {
+    fileReader.readAsText(file);
+};
+
+const fileReader = new FileReader();
+fileReader.addEventListener('load', () => {
+    const saveData = JSON.parse(atob(fileReader.result));
+    const plotList = saveData.save.farming.plotList;
+    App.game.farming.plotList.forEach((plot, idx) => {
+        plot._berry(plotList[idx].berry);
+        plot._age(plotList[idx].age);
+        plot._mulch(plotList[idx].mulch);
+    });
+});
+
 let contextMenuSetup = false;
 let copiedPlot = { berry: BerryType.None, age: 0, mulch: MulchType.None };
 
@@ -79228,6 +79243,7 @@ module.exports = {
     clearAllPlots,
     exportFarm,
     importFarmPrompt,
+    importFromFile,
     showPlotContextMenu,
 }
 
@@ -79709,6 +79725,7 @@ const searchOptions = [
     display: 'Hatchery',
     type: 'Hatchery',
     page: '',
+    redirects: ['Daycare'],
   },
   // Hatchery Helpers
   {
@@ -79787,6 +79804,7 @@ const searchOptions = [
     display: 'Farm',
     type: 'Farm',
     page: '',
+    redirects: ['Mutating Berries', 'Mutation'],
   },
   {
     display: 'Farm Simulator',
@@ -79814,6 +79832,7 @@ const searchOptions = [
     display: 'Pokérus',
     type: 'Pokérus',
     page: '',
+    redirects: ['EVs', 'Effort Values', 'Infected', 'Contagious', 'Resistant'],
   },
   // Dream Orbs
   {
@@ -79928,6 +79947,7 @@ const searchOptions = [
     display: 'Diamonds',
     type: 'Diamonds',
     page: '',
+    redirects: ['Underground'], // remove when Underground page added
   },
   {
     display: 'Battle Points',
@@ -79969,6 +79989,17 @@ const searchOptions = [
     type: 'Poké Balls',
     page: '',
   },
+  // Dungeon Guides
+  {
+    display: 'Dungeon Guides',
+    type: 'Dungeon Guides',
+    page: '',
+  },
+  ...DungeonGuides.list.map(g => ({
+    display: g.name,
+    type: 'Dungeon Guides',
+    page: g.name,
+  })),
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
@@ -79977,6 +80008,12 @@ searchOptions.forEach(a => {
     duplicates.forEach(d => d.display = `${d.display} (${d.type})`);
   }
 })
+// Redirects
+searchOptions.forEach(a => {
+  a.redirects?.forEach(r => {
+    searchOptions.push({ ...a, redirect: r });
+  });
+});
 
 /*
     AUTO FILL FOR SEARCH BAR
@@ -79992,7 +80029,7 @@ var substringMatcher = (searchData) => {
     const substrRegex = new RegExp(escapeRegExp(query), 'i');
 
     // iterate through the pool of strings and for any string that matches the regex
-    const results = searchData.filter(d => substrRegex.test(d.display));
+    const results = searchData.filter(d => substrRegex.test(d.redirect || d.display));
 
     cb(results.sort((a, b) => a.display.search(substrRegex) - b.display.search(substrRegex) || a.display.length - b.display.length));
   };
@@ -80018,7 +80055,8 @@ $('#search').typeahead({
   templates: {
     notFound: '<a class="dropdown-item disabled">No results found...</a>',
     suggestion: (suggestion) => {
-      return `<a href="#!${suggestion.type}/${suggestion.page}">${suggestion.display}</a>`;
+      const display = suggestion.redirect ? `${suggestion.redirect} → ${suggestion.display}` : suggestion.display;
+      return `<a href="#!${suggestion.type}/${suggestion.page}">${display}</a>`;
     },
   },
 });

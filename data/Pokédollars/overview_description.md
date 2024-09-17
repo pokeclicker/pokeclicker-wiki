@@ -47,7 +47,7 @@ Name | Level 1 Upgrade | Level 2 Upgrade | Level 3 Upgrade | Level 4 Upgrade | L
 [[Oak_Items/EXP Share]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
 [[Oak_Items/Sprayduck]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
 [[Oak_Items/Shiny Charm]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
-[[Oak_Items/Blaze Cassette]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
+[[Oak_Items/Magma Stone]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
 [[Oak_Items/Cell Battery]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
 [[Oak_Items/Explosive Charge]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000
 [[Oak_Items/Treasure Scanner]] | 50,000 | 100,000 | 250,000 | 500,000 | 1,000,000

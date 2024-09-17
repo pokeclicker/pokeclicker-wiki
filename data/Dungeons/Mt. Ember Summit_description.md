@@ -1,1 +1,1 @@
-Located North of [[Routes/Kindle Road]].
+Located north of [[Routes/Kindle Road]].

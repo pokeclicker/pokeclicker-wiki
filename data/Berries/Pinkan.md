@@ -41,3 +41,6 @@ Pinkan Berries can mutate into the following Berries.
 | Used In                                       | Other Requirements |
 | :---:                                         | :---: |
 | [[File:Custap.png\|32px]] [[Berries/Custap]]  | `N/A` |
+
+#### Uses
+Pinkan can be used to purchase Pokémon at [[Towns/Pinkan Pokémon Reserve]].

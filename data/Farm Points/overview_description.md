@@ -49,23 +49,23 @@ Name | Cost | Purchase Location | Level 1 Upgrade | Level 2 Upgrade | Level 3 Up
 
 Name | Cost | Purchase Location
 :---: | :---: | :---:
-[[Farm_Hands/Bailey]] [[File:trainer-68.png\|25px]] | 50,000 [[File:farmPoint.svg\|25px]] | Johto Berry Master
-[[Farm_Hands/Kerry]] [[File:trainer-32.png\|25px]] | 100,000 [[File:farmPoint.svg\|25px]] | Hoenn Berry Master
-[[Farm_Hands/Riley]] [[File:trainer-92.png\|25px]] | 200,000 [[File:farmPoint.svg\|25px]] | Sinnoh Berry Master
+[[Farm_Hands/Bailey]] [[File:trainer-85.png\|25px]] | 50,000 [[File:farmPoint.svg\|25px]] | Johto Berry Master
+[[Farm_Hands/Kerry]] [[File:trainer-10.png\|25px]] | 100,000 [[File:farmPoint.svg\|25px]] | Hoenn Berry Master
+[[Farm_Hands/Riley]] [[File:trainer-55.png\|25px]] | 200,000 [[File:farmPoint.svg\|25px]] | Sinnoh Berry Master
 
 Once hired, farm hands will work until they are fired for an hourly wage. Below are the hourly wages per Farm Hand.
 
 Name | Wage
 :---: | :---:
-|[[Farm_Hands/Alex]] [[File:trainer-87.png\|25px]] | 140 [[File:farmPoint.svg\|25px]]
-|[[Farm_Hands/Logan]] [[File:trainer-28.png\|25px]] | 440 [[File:farmPoint.svg\|25px]]
-|[[Farm_Hands/Joey]] [[File:trainer-70.png\|25px]] | 630 [[File:farmPoint.svg\|25px]]
-|[[Farm_Hands/Charlie]] [[File:trainer-109.png\|25px]] | 910 [[File:farmPoint.svg\|25px]]
-|[[Farm_Hands/Bailey]] [[File:trainer-68.png\|25px]] | 1,300 [[File:farmPoint.svg\|25px]]
-|[[Farm_Hands/Kerry]] [[File:trainer-32.png\|25px]] | 1,900 [[File:farmPoint.svg\|25px]]
-|[[Farm_Hands/Riley]] [[File:trainer-92.png\|25px]] | 4,000 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Alex]] [[File:trainer-61.png\|25px]] | 140 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Logan]] [[File:trainer-97.png\|25px]] | 440 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Joey]] [[File:trainer-111.png\|25px]] | 630 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Charlie]] [[File:trainer-54.png\|25px]] | 910 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Bailey]] [[File:trainer-85.png\|25px]] | 1,300 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Kerry]] [[File:trainer-10.png\|25px]] | 1,900 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Riley]] [[File:trainer-55.png\|25px]] | 4,000 [[File:farmPoint.svg\|25px]]
 |[[Farm_Hands/Jamie]] [[File:trainer-23.png\|25px]] | 4,000 [[File:farmPoint.svg\|25px]]
-|[[Farm_Hands/Jessie]] [[File:trainer-74.png\|25px]] | 8,300 [[File:farmPoint.svg\|25px]]
+|[[Farm_Hands/Jessie]] [[File:trainer-96.png\|25px]] | 8,300 [[File:farmPoint.svg\|25px]]
 
 #### Shopmon
 Shop | Token | Pokémon | Cost
