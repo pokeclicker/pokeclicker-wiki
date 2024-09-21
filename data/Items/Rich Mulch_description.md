@@ -1,1 +1,1 @@
-Rich mulch increases the harvest rate of berries by 100% (2x) for the duration of the item's effect.  Each rich mulch lasts for 5 minutes, and they can be stacked for a longer effect time.
+Rich mulch increases the harvest rate of berries by 100% (2x) for the duration of the item's effect.  Each rich mulch lasts for 5 minutes (300 seconds), and they can be stacked for a longer effect time.
