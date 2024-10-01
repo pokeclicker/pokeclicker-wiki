@@ -10,6 +10,7 @@
                 <th>Base BE</th>
                 <th>Experience</th>
                 <th>Catch Rate</th>
+                <th>Native Region</th>
             </tr>
         </thead>
         <tbody data-bind="foreach: Wiki.pokemon.getAvailablePokemon()">
@@ -26,6 +27,7 @@
                 <td data-bind="text: Wiki.pokemon.getEfficiency([0,0,0], $data.attack, $data.eggCycles).toLocaleString('en-US', { maximumFractionDigits: 3 })"></td>
                 <td data-bind="text: ($data.exp || 0).toLocaleString()"></td>
                 <td data-bind="text: PokemonFactory.catchRateHelper($data.catchRate, true) + '%'"></td>
+                <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.nativeRegion])"></td>
             </tr>
         </tbody>
     </table>

@@ -89,6 +89,10 @@
             <td>Catch Rate</td>
             <td data-bind="text: PokemonFactory.catchRateHelper($data.catchRate, true) + '%'"></td>
         </tr>
+        <tr>
+            <td>Native Region</td>
+            <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.nativeRegion])"></td>
+        </tr>
         <tr data-bind="if: $data.heldItem">
             <td>Rare Hold Item</td>
             <td>
