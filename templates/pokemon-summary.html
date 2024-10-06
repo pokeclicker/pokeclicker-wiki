@@ -14,7 +14,7 @@
                     <input type="radio" class="btn-check" name="sprite" id="btnshiny" autocomplete="off">
                     <label class="btn btn-primary rounded-0" for="btnshiny" data-bind="click: () => { sprite('shinypokemon'); return true; }">Shiny</label>
 
-                    <!-- ko if: Wiki.pokemon.getAllAvailableShadowPokemon().map(s => s.pokemon).includes($data.name) -->
+                    <!-- ko if: Wiki.pokemon.getAllAvailableShadowPokemon().some(s => s.pokemon == $data.name) -->
                     <input type="radio" class="btn-check" name="sprite" id="btnshadow" autocomplete="off">
                     <label class="btn btn-primary rounded-0" for="btnshadow" data-bind="click: () => { sprite('shadowpokemon'); return true; }">Shadow</label>
 
