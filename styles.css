@@ -450,3 +450,9 @@ td.tight {
 .obtain-methods .accordion-button img {
   padding-right: 10px;
 }
+
+a.unstyled-link {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+}
