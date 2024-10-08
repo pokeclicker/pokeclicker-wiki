@@ -10,8 +10,10 @@
             </tr>
         </thead>
         <tbody data-bind="foreach: Object.values(dungeonList).filter(d => GameConstants.getDungeonRegion(d.name) <= GameConstants.MAX_AVAILABLE_REGION)">
-            <tr class="text-nowrap clickable" data-bind="click: () => { Wiki.gotoPage('Dungeons', $data.name); return false; }">
-                <td data-bind="text: $data.name"></td>
+            <tr class="text-nowrap clickable" data-bind="click: (_, e) => { return Wiki.gotoPageClick(e, 'Dungeons', $data.name); }">
+                <td>
+                    <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Dungeons/${$data.name}` }"></a>
+                </td>
                 <!-- ko with: Object.values(TownList).find(town => town.dungeon === $data) -->
                 <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region])"></td>
                 <td data-bind="text: SubRegions.getSubRegionById($data.region, $data.subRegion).name"></td>

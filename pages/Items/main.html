@@ -118,8 +118,10 @@
                 </thead>
                 <tbody>
                     <!-- ko foreach: itemChances -->
-                    <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Dungeons', $data.dungeonName); return false; }">
-                        <td data-bind="text: $data.dungeonName"></td>
+                    <tr class="clickable align-middle" data-bind="click: (_, e) => { return Wiki.gotoPageClick(e, 'Dungeons', $data.dungeonName); }">
+                        <td>
+                            <a class="text-decoration-none" href="#!" data-bind="text: $data.dungeonName, attr: { href: `#!Dungeons/${$data.dungeonName}` }"></a>
+                        </td>
                         <td data-bind="text: $data.region"></td>
                         <td class="text-center">
                             <img width="40px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/dungeons/chest-${$data.tier.toLowerCase()}.png`, title: `${$data.tier}` }"/>

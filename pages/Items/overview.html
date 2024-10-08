@@ -16,8 +16,10 @@
             </tr>
             <!-- /ko -->
             <!-- ko foreach: UndergroundItems.list.filter((ui) => !Object.values(ItemList).some((i) => i.displayName == ui.displayName)) -->
-            <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Items', $data.displayName); return false; }">
-                <td data-bind="text: $data.displayName"></td>
+            <tr class="clickable" data-bind="click: (_, e) => { return Wiki.gotoPageClick(e, 'Items', $data.displayName); }">
+                <td>
+                    <a class="text-decoration-none" href="#!" data-bind="text: $data.displayName, attr: { href: `#!Items/${$data.displayName}` }"></a>
+                </td>
                 <td data-bind="html: GameConstants.camelCaseToString($data.constructor.name)"></td>
                 <td>An item found in the underground</td>
             </tr>

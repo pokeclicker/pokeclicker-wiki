@@ -213,16 +213,16 @@
                                 <td style="font-weight: bold; text-transform: capitalize; text-align: center" data-bind="text: $data.tier, attr: { colspan: Wiki.dungeons.getTableClearCounts($parent).length + 2 + (Wiki.dungeons.hasLootWithRequirements($parent) ? 1 : 0) }"></td>
                             </tr>
                             <!-- ko foreach: $data.items -->
-                                <tr>
-                                    <td class="text-nowrap clickable" data-bind="click: () => { Wiki.gotoPage(Wiki.dungeons.itemTypeCategories[$data.type], $data.item); return false; }">
+                                <tr class="align-middle">
+                                    <td class="text-nowrap">
                                         <!-- ko if: $data.image -->
                                         <img class="table-image" data-bind="attr: { src: `./pokeclicker/docs/${$data.image}`, alt: `Icon of ${$data.type === 'pokemon' ? 'Pokémon' : $data.type} ${$data.item}` }"/>
                                         <!-- /ko -->
-                                        <ko data-bind="text: $data.item"></ko>
+                                        <a class="text-decoration-none" href="#!" data-bind="text: $data.item, attr: { href: `#!${Wiki.dungeons.itemTypeCategories[$data.type]}/${$data.item}` }"></a>
                                     </td>
                                     <td data-bind="text: $data.weight ?? 'N/A'"></td>
                                     <!-- ko foreach: $data.chances -->
-                                        <td data-bind="text: typeof $data.chance === 'number' ? ($data.chance >= 0.0001 ? $data.chance.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }) : ('<' + 0.0001.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }))) : ($data.chance ?? '-')"></td>
+                                    <td data-bind="text: typeof $data.chance === 'number' ? ($data.chance >= 0.0001 ? $data.chance.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }) : ('<' + 0.0001.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }))) : ($data.chance ?? '-')"></td>
                                     <!-- /ko -->
                                     <!-- ko if: Wiki.dungeons.hasLootWithRequirements($parents[1]) -->
                                     <td data-bind="text: $data.requirement ?? '-'"></td>
