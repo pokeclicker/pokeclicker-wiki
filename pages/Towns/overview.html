@@ -11,10 +11,12 @@
         </thead>
         <tbody>
             <!-- ko foreach: Object.values(TownList).filter(t => t.region <= GameConstants.MAX_AVAILABLE_REGION) -->
-            <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Towns', $data.name); return false; }">
+            <tr class="clickable" data-bind="click: (_, e) => { return Wiki.gotoPageClick(e, 'Towns', $data.name); }">
                 <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region]), attr: { 'data-order': $data.region }"></td>
                 <td data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name, attr: { 'data-order': $data.subRegion ?? 0 }"></td>
-                <td data-bind="text: $data.name"></td>
+                <td>
+                    <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${$data.name}` }"></a>
+                </td>
                 <td data-bind="foreach: $data.content">
                     <span class="badge text-bg-secondary" data-bind="text: GameConstants.camelCaseToString($data.__proto__.constructor.name.replace(/(MoveTo|TownContent|Temporary)/, ''))"></span>
                 </td>
