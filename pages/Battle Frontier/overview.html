@@ -10,7 +10,7 @@
             </tr>
         </thead>
         <tbody data-bind="foreach: BattleFrontierMilestones.milestoneRewards">
-            <tr>
+            <tr class="clickable" data-bind="click: () => { if ($data.pokemonName) { Wiki.gotoPage('Pokemon', $data.pokemonName); } else { Wiki.gotoPage('Items', ItemList[$data.itemName].displayName); } return false; }">
                 <td data-bind="text: $data.stage.toLocaleString(), attr: { 'data-order': $data.stage }"></td>
                 <td>
                     <ko data-bind="text: $data.description"></ko>
@@ -55,11 +55,11 @@
             </tr>
             <tr>
                 <td>Battle Points</td>
-                <td data-bind="text: Math.max(1, Math.round(($data.stage() ** 2) / 100)).toLocaleString()"></td>       
+                <td data-bind="text: Math.round($data.stage() * Math.max($data.stage() / 100, 1)).toLocaleString()"></td>       
             </tr>
             <tr>
-                <td>PokéDollars</td>
-                <td data-bind="text: Math.max(100, Math.round($data.stage() ** 2)).toLocaleString()"></td>     
+                <td>Pokédollars</td>
+                <td data-bind="text: ($data.stage() * 100 * Math.max($data.stage() / 100, 1)).toLocaleString()"></td>     
             </tr>
             <tr>
                 <td>Egg Steps per Pokémon</td>

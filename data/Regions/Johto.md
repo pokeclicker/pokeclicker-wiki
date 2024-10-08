@@ -51,5 +51,5 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 
 |Pokémon|Requirement|
 |---|---|
-| [[File:pokemon/244.png\|25px]] [[Pokémon/Entei]]|Unlocks during [[Quest_Lines/The_Legendary_Beasts]]|
-| [[File:pokemon/243.png\|25px]] [[Pokémon/Raikou]]|Unlocks during [[Quest_Lines/The_Legendary_Beasts]]|
+| [[File:pokemon/244.png\|25px]] [[Pokémon/Entei]]|Unlocks during [[Quest_Lines/The Legendary Beasts]]|
+| [[File:pokemon/243.png\|25px]] [[Pokémon/Raikou]]|Unlocks during [[Quest_Lines/The Legendary Beasts]]|

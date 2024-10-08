@@ -1,0 +1,1 @@
+Cerulean City is the fourth town and home to [Misty's Gym](https://wiki.pokeclicker.com/#!Gyms/Cerulean%20City). This town also provides access to [[Dungeons/Cerulean_Cave]] and is the first town with a Shard Trader.

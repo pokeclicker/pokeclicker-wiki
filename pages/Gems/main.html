@@ -17,7 +17,7 @@
                         <th>Location</th>
                     </tr>
                 </thead>
-                <tbody data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r != GameConstants.Region.final && r != GameConstants.Region.none)">
+                <tbody data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r <= GameConstants.MAX_AVAILABLE_REGION && r != GameConstants.Region.none)">
                     <tr>
                         <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data])" rowspan="2" class="align-middle"></td>
                         <td>Gym</td>

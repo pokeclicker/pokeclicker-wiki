@@ -1,0 +1,2 @@
+### Acquisition
+Purchasable at the Stone Emporium in [[Towns/Lumiose City]] after battling [[Temporary Battles/Kalos Stone Salesman]] which becomes available after progressing in [[Quest Lines/A Beautiful World]]. Free if [[Pokémon/Squirtle]] was picked as the Kanto starter.

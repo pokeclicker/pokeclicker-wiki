@@ -25,10 +25,10 @@ Wacan has a chance of mutating when [[Berries/Pinap]], [[Berries/Iapapa]], [[Ber
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Grepa.png\|32px]] [[Berries/Grepa]]    | `N/A`         | `N/A`                                 | `N/A`                                 |
+| [[File:Grepa.png\|32px]] [[Berries/Grepa]]    | `Planted First` |||
 | [[File:Qualot.png\|32px]] [[Berries/Qualot]]  | 01:20:00      | 00:53:20                              | 00:35:33                              |
-| [[File:Iapapa.png\|32px]] [[Berries/Iapapa]]  | 00:06:20      | 00:04:13                              | `N/A`                                 |
-| [[File:Pinap.png\|32px]] [[Berries/Pinap]]    | 00:04:00      | 00:02:40                              | `N/A`                                 |
+| [[File:Iapapa.png\|32px]] [[Berries/Iapapa]]  | 00:06:20      | 00:04:13                              | 00:02:48                                 |
+| [[File:Pinap.png\|32px]] [[Berries/Pinap]]    | 00:04:00      | 00:02:40                              | 00:01:46                                |
 
 #### Mutations
 Wacan Berries can mutate into the following Berries.

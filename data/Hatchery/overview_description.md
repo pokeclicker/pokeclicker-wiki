@@ -25,7 +25,7 @@ When an Egg/Fossil in the Hatchery has obtained the required number of Egg Steps
 
 Baby Pokémon are Pokémon obtained exclusively through Breeding the evolved stage of that Pokémon. The first time a Baby Pokémon is hatched the player will obtain both the original evolved stage, and the baby stage of that Pokémon.
 
-The 25% increase to a Pokémon's Base Attack through breeding can be increased through the use of [[Protein]]. Proteins increase the Attack bonus from Breeding by 1 for each Protein used on an individual Pokémon. Consult [[Protein]] for further information on Breeding Efficiency using Proteins.
+The 25% increase to a Pokémon's Base Attack through breeding can be increased through the use of [[Items/Protein]]. Proteins increase the Attack bonus from Breeding by 1 for each Protein used on an individual Pokémon. Consult [[Items/Protein]] for further information on Breeding Efficiency using Proteins.
 
 Breeding Pokémon also offers the highest shiny odds in the game (alongside [[Wandering Pokémon]] and [[Shop Pokémon]]) at 1/1024. Consult [[Shiny Chance]] for further information on Shiny Odds using the Hatchery.
 
@@ -92,7 +92,7 @@ Legend:
 
 | Full Strategy | MESBM | BD (hours) | MRT (hours) | U% | MESBM w/ U%| ER|
 |---|---|---|---|---|---|---|
-| [[Berries/Chople ]]| 1.56x | 10 hours | 10 hours | 50% | 1.28x | 8 |
+| [[Berries/Chople]]| 1.56x | 10 hours | 10 hours | 50% | 1.28x | 8 |
 | [[Berries/Chople]] + [[Berries/Yache]]| 1.56x | 14.29 hours | 14.29 hours | 50% | 1.28x | 8|
 | [[Berries/Chople]] + [[Berries/Haban]]| 1.56x | 20 hours | 20 hours | 50% | 1.28x | 8|
 | [[Berries/Chople]] + [[Berries/Petaya]]| 1.56x | 4 days 10 hours | 24 hours | 81.54% | 1.46x | 5|
@@ -119,7 +119,7 @@ The easiest strategy for planting Chople berries is to leave empty rows separati
 
 ## Chople + [[Berries/Yache]]/[[Berries/Haban]]
 
-A slightly more complex strategy for planting Chople berries is to plant berries that decrease growth rates ([[Berries/Yache]] or [[Berries/Haban]]) between each of the rows of Chople berries. While this takes Chople berries longer to grow, it also results in longer wither times for Chople berries. While this doesn't appear to be incredibly challenging to accomplish, and uses only 4th generation berries, the berries on the ends of each row receive a diminished growth aura effect relative to more central berries on the farm. This can make timing simultaneous ripeness of all berries on the farm challenging.
+A slightly more complex strategy for planting Chople berries is to plant berries that decrease decay rates ([[Berries/Yache]] or [[Berries/Haban]]) between each of the rows of Chople berries as it results in longer wither times for Chople berries.
 
 **Egg Step Bonus: 1.56x**
 ::: table-mutations

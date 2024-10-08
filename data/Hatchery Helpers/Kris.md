@@ -1,1 +1,1 @@
-*Purchased in @[[Towns/Cinnabar Island]] for 2,000 Diamonds*
+*Purchased in @[[Towns/Cinnabar Island]] for 400 Diamonds*

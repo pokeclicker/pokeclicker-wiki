@@ -1,0 +1,26 @@
+<table class="table table-bordered table-striped table-hover no-data-tables">
+    <thead>
+        <tr>
+            <th>Poké Ball</th>
+            <th>Description</th>
+            <th class="text-center">Catch Time</th>
+            <th class="text-center">Catch Rate Bonus</th>
+            <th>Unlock Requirement</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: App.game.pokeballs.pokeballs">
+        <tr class="align-middle">
+            <td data-bind="let: { displayName: ItemList[GameConstants.Pokeball[type]].displayName }">
+                <img width="24" class="me-1" data-bind="attr: { src: `./pokeclicker/docs/assets/images/pokeball/${GameConstants.Pokeball[type]}.svg` }" />
+                <a href="#!" class="text-decoration-none" target="_blank" data-bind="text: displayName, attr: { href: `#!Items/${displayName}` }"></a>
+            </td>
+            <td data-bind="text: description"></td>
+            <td class="text-center" data-bind="text: `${catchTime / 1000}s`"></td>
+            <td class="text-center" data-bind="text: (() => {
+                const match = catchBonus.toString().match(/^\(\)\s*=>\s*(\d+)$/);
+                return match ? `${match[1]}%` : 'Variable';
+            })()"></td>
+            <td data-bind="html: Wiki.md.renderInline(Wiki.gameHelper.requirementHints(unlockRequirement).join('<br/>')) || '-'"></td>
+        </tr>
+    </tbody>
+</table>

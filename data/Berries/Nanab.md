@@ -25,8 +25,8 @@ Nanab has a chance of mutating when [[Berries/Pecha]] and [[Berries/Aspear]] are
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Aspear.png\|32px]] [[Berries/Aspear]]  | `N/A`         | `N/A`                                 | `N/A`                                 |
-| [[File:Pecha.png\|32px]] [[Berries/Pecha]]    | 00:01:00      | 00:00:40                              | `N/A`                                 |
+| [[File:Aspear.png\|32px]] [[Berries/Aspear]]  | `Planted First` |||
+| [[File:Pecha.png\|32px]] [[Berries/Pecha]]    | 00:01:00      | 00:00:40                              | 00:00:26                                 |
 
 #### Mutations
 Nanab Berries can mutate into the following Berries.

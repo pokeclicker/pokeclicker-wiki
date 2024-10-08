@@ -1,1 +1,0 @@
-Can be obtained from [[Dream Orbs]].

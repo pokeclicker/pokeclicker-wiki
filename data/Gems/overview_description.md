@@ -6,7 +6,7 @@ These typed Gems can be invested into the Gems tab to increase type effectivity,
 
 ## Upgrades
 
-The gems allows you to increase the damage effectivity of all your types from the base multiple to +1x as indicated in the table bellow:
+The gems allows you to increase the damage effectivity of all your types from the base multiple to +1x as indicated in the table below:
 
 Effectivity | Base Multiplier | Maxed multiplier {.no-data-tables}
 :--- | :---: | ---:
@@ -35,7 +35,3 @@ Level | Gems Price {.no-data-tables}
 ## Helpful Tips
 
 The Gems you get from defeating a Pokémon depend on the type(s) that Pokémon has. Wild Pokémon on routes give 1 Gem per type, dungeon encounters (both wild Pokémon and trainers) give 3, gym Pokémon give 5, and dungeon bosses (only Pokémon, not trainer bosses) give 20. Battle Frontier Pokémon give gems which number increases as the player progresses further (every 80 stages the number goes up by 1).
-
-Note: Gyms yield 5 Gems per Pokémon, but not every pokemon in a gym will be the appropriate type. The most efficient gyms yield the most Gems per gym clear.
-
-*(e.g. Violet City Gym is less efficient than the Petalburg City Gym because it takes twice as many clears of the Violet City Gym to obtain the same number of Gems).*

@@ -26,10 +26,10 @@ Passho has a chance of mutating when [[Berries/Chesto]], [[Berries/Oran]], [[Ber
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Coba.png\|32px]] [[Berries/Coba]]      | `N/A`         | `N/A`                                 | `N/A`                                 |
+| [[File:Coba.png\|32px]] [[Berries/Coba]]      | `Planted First` |||
 | [[File:Kelpsy.png\|32px]] [[Berries/Kelpsy]]  | 01:40:00      | 01:06:40                              | 00:44:27                              |
-| [[File:Oran.png\|32px]] [[Berries/Oran]]      | 00:05:00      | 00:03:20                              | `N/A`                                 |
-| [[File:Chesto.png\|32px]] [[Berries/Chesto]]  | 00:00:40      | 00:00:27                              | `N/A`                                 |
+| [[File:Oran.png\|32px]] [[Berries/Oran]]      | 00:05:00      | 00:03:20                              | 00:02:13                                |
+| [[File:Chesto.png\|32px]] [[Berries/Chesto]]  | 00:00:40      | 00:00:27                              | 00:00:17                               |
 
 #### Mutations
 Passho Berries can mutate into the following Berries.

@@ -1,4 +1,4 @@
-Pokémon are your partners in this adventure and your main source of power. Currently the game has **1,339** different Pokémon forms. Most of them based on main games, with 32 coming from side games, 53 coming from anime and films, and 18 custom forms.
+Pokémon are your partners in this adventure and your main source of power. Currently the game has **1,395** different Pokémon forms. Most of them based on main games, with 33 coming from side games, 53 coming from anime and films, and 18 custom forms.
 
 ## Statistics
 
@@ -16,13 +16,13 @@ Base attack = √(Base Defense \* Base stamina) \* (Base offense/250)
 * This value is floored.
 *This formula means that all Pokémon stats contribute to Pokémon attack, but not in the same amount. HP and attack values are more significant than defense or speed.*
 
-#### Attack
+### Attack
 
 When first caught, a Pokémon will, at level 100, have an Attack stat equal to their Base Attack. Beneath level 100, their Attack scales linearly from 0 to their maximum Attack. However, at no point may a Pokémon’s Attack be less than 1.
 
 Total Pokémon attack will increase while breeding according to the attack bonus.
 
-##### Attack Bonus
+### Attack Bonus
 
 The attack bonus is the extra damage that a Pokémon will get each breeding cycle.
 This is **always** calculated using the base attack, not the current attack.
@@ -33,7 +33,7 @@ The **Attack bonus** can be increased using 2 different [[Vitamins]]: [[Items/Pr
 * **Protein** gives +1 attack bonus. *In our example, Metapod will have 6 attack bonus after using 1 Protein and 15 attack bonus after using 10 Proteins. While Pidgeot (with 112 base attack) will have 29 attack bonus after 1 Protein and 38 after 10 Proteins.*
 * **Calcium** gives 1% base attack as attack bonus. *In our example, Metapod will have 5.2 attack bonus after 1 Calcium and 7 attack bonus after 10 Calcium. While Pidgeot will have 29.12 attack bonus after 1 Calcium and 39.2 after 10 Calcium.*
 
-#### Breeding Efficiency (BE)
+### Breeding Efficiency (BE)
 A Pokémon with a high base attack and a low number of egg steps will have a high Breeding Efficiency stat, which is calculated with the following formula:
 
 $BE = \frac{Attack Bonus}{Egg Cycles} * EV Bonus * Shadow Status * Held Item Bonus$
@@ -41,6 +41,8 @@ $BE = \frac{Attack Bonus}{Egg Cycles} * EV Bonus * Shadow Status * Held Item Bon
 *Attack Bonus refers to the same value from the previous section. An Egg Cycle equals to 40 Egg Steps. Also, Held Item Bonus only applies if the Pokémon is holding an item that explicitly raises the attack.*
 
 Since [[Vitamins]] modify the Attack Bonus value, they also affect Breeding Efficiency. Individual Pokémon pages have the best Vitamin distribution to increase this statistic.
+
+The table in this page shows only Base BE, in other words, the stat without Vitamins nor any kind of multiplier (like the ones mentioned in the formula).
 
 ### Egg Steps
 
@@ -56,11 +58,20 @@ There is a hard cap of 120 egg cycles, equaling 4,800 egg steps, after all facto
 
 There are exceptions to this rule:
 
-* The egg cycle values for Sand Cloak and Trash Cloak forms of Burmy and Wormadam are 1.5x higher than their Plant Cloak counterparts, since [[Pokémon/Burmy (Plant)]] evolves into [[Pokémon/Burmy (Sand)]] and [[Pokémon/Burmy (Trash)]].
-* [[Pokémon/Cherrim (Sunshine)]] has 1.5x the egg cycle value of [[Pokémon/Cherrim (Overcast)]].
-* All Mega Evolved Pokémon have 1.5x the egg cycle value of their base form.
+* Although [[Mega Pokémon]] are technically evolutions, they share the same egg cycle value as their counterpart.
+* [[Pokémon/Elf Munchlax]] acts as a Baby Pokémon of [[Pokémon/Santa Snorlax]], in regard of its egg cycle value, but is not.
 
-### Other Pokémon Lists
+### Native Region
+Native Region doesn't necessarily refer to when the Pokémon is available but rather the Region the game considers it for Pokédex completion and Regional Debuff calculations.
+
+## Click Attack
+Besides [[Achievements]], Pokémon also contribute to the player's click attack value. The formula used is the following:
+$ClickAttack=⌊(1 + achievementBonus) * (numCaught + numShiny + numResistant + numPurified + 1) ^ {1.4}⌋$
+
+Where **numCaught**, **numShiny**,  **numResistant**, and **numPurified** refers to the number of unique captured Pokémon, unique shiny Pokémon, unique Pokémon resisted, and unique Pokémon purified respectively.
+
+## Other Pokémon Lists
+- [[Alternate Pokémon Forms]] page lists all alternate forms available in the game, including Regional forms, and the corresponding base Pokémon.
 - [[Mega Pokémon]] page has details about which Pokémon can Mega Evolve and the requirements necessary to do so.
 - [[Baby Pokémon]] page has a list of all Baby Pokémon available in the game and the Region needed to acquire them.
 - [[Wandering Pokémon]] page has all available wanderer Pokémon, as in, the Pokémon that can show up in the farm.

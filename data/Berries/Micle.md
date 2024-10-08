@@ -13,3 +13,14 @@ Micle can be obtained by having at least one empty plot and at least 600 points 
 | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | |
 | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | |
 :::
+
+Alternatively, you can fill the farm in this way to have at least one spot, the corner, free from Pamtre's Overgrow effect.
+
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | |
+| [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | |
+| [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | |
+| [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | {.mutation} | {.mutation} | |
+| [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | {.mutation} | {.mutation} | {.mutation} | |
+:::

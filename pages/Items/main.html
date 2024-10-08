@@ -31,7 +31,7 @@
                         <ko data-bind="text: $data.basePrice.toLocaleString()"></ko>
                     </td>
                 </tr>
-                <!-- ko with: Object.values(GemDeal.list).flatMap((d) => d()).find((d) => d.item.itemType.name == $data.name) -->
+                <!-- ko with: Object.values(GemDeals.list).flatMap((d) => d()).find((d) => d.item.itemType.name == $data.name) -->
                 <tr data-bind="if: $data">
                     <td>Trade</td>
                     <td data-bind="foreach: $data.gems">
@@ -75,9 +75,9 @@
         <!-- /ko -->
     </div>
     <!-- Gem Trade -->
-    <div class="mt-3" data-bind="if: Object.values(GemDeal.list).flatMap((d) => d()).find((d) => d.item.itemType.name == $data.name)">
+    <div class="mt-3" data-bind="if: Object.values(GemDeals.list).flatMap((d) => d()).find((d) => d.item.itemType.name == $data.name)">
         <h3>Can be traded for Gems in the following town:</h3>
-        <div data-bind="foreach: Object.values(TownList).filter(t => t.content.some(c => c instanceof GemMasterShop && GemDeal.list[c.shop]?.().some(d => d.item.itemType.name == $data.name)))">
+        <div data-bind="foreach: Object.values(TownList).filter(t => t.content.some(c => c instanceof GemMasterShop && GemDeals.list[c.shop]?.().some(d => d.item.itemType.name == $data.name)))">
             <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${$data.name}` }"></a>
         </div>
     </div>
@@ -88,7 +88,7 @@
             <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${$data.name}` }"></a>
         </div>
     </div>
-    <div class="mt-3" style="clear: right;" data-bind="if: Object.values(dungeonList).some((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name)))">
+    <div class="mt-3" style="clear: right;" data-bind="if: Object.values(dungeonList).some((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name || l.loot == $data.displayName)))">
         <h3>Can be found in the following dungeons:</h3>
         <p>Chance shown is for any given chest in the dungeon to contain the item.</p>
         <div class="table-responsive">
@@ -136,9 +136,9 @@
             </table>
         </div>
     </div>
-    <div class="mt-3" data-bind="if: pokemonList.some((p) => ([ItemType.item, ItemType.underground]).includes(p.heldItem?.type) && p.heldItem?.id == $data.name)">
+    <div class="mt-3" data-bind="if: pokemonList.some((p) => ([ItemType.item, ItemType.underground]).includes(p.heldItem?.type) && p.heldItem?.id == $data.name || p.heldItem?.id == $data.displayName)">
         <h3>Can be dropped by the following Pokémon:</h3>
-        <!-- ko foreach : pokemonList.filter((p) => ([ItemType.item, ItemType.underground]).includes(p.heldItem?.type) && p.heldItem?.id == $data.name) -->
+        <!-- ko foreach : pokemonList.filter((p) => ([ItemType.item, ItemType.underground]).includes(p.heldItem?.type) && p.heldItem?.id == $data.name || p.heldItem?.id == $data.displayName) -->
         <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokémon/${$data.name}` }"></a>
         <!-- /ko -->
     </div>

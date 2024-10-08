@@ -17,6 +17,7 @@ The following is a list of Pokémon obtainable in Sinnoh which cannot be found o
 |[[File:Razor_claw.png\|25px]] [[Items/Razor Claw]]|1 | [[File:pokemon/461.png\|25px]] [[Pokémon/Weavile]]
 |[[File:Razor_fang.png\|25px]] [[Items/Razor Fang]]|1 | [[File:pokemon/472.png\|25px]] [[Pokémon/Gliscor]]|
 |[[File:Dawn_stone.png\|25px]] [[Items/Dawn Stone]]|2 | [[File:pokemon/475.png\|25px]] [[Pokémon/Gallade]], [[File:pokemon/478.png\|25px]] [[Pokémon/Froslass]]
+|[[File:Dusk_stone.png\|25px]] [[Items/Dusk Stone]]|2 | [[File:pokemon/430.png\|25px]] [[Pokémon/Honchkrow]], [[File:pokemon/429.png\|25px]] [[Pokémon/Mismagius]]
 |[[File:Shiny_stone.png\|25px]] [[Items/Shiny Stone]]|2 | [[File:pokemon/468.png\|25px]] [[Pokémon/Togekiss]], [[File:pokemon/407.png\|25px]] [[Pokémon/Roserade]]
 |[[File:Dubious_disc.png\|25px]] [[Items/Dubious Disc]]|1 | [[File:pokemon/474.png\|25px]] [[Pokémon/Porygon-Z]]
 |[[File:Protector.png\|25px]][[Items/Protector]]|1 | [[File:pokemon/464.png\|25px]] [[Pokémon/Rhyperior]]
@@ -59,6 +60,7 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 | [[File:pokemon/439.png\|25px]] [[Pokémon/Mime Jr.]] | [[File:pokemon/122.png\|25px]] [[Pokémon/Mr. Mime]] |
 | [[File:pokemon/440.png\|25px]] [[Pokémon/Happiny]] | [[File:pokemon/113.png\|25px]] [[Pokémon/Chansey]] |
 | [[File:pokemon/446.png\|25px]] [[Pokémon/Munchlax]] | [[File:pokemon/143.png\|25px]] [[Pokémon/Snorlax]] |
+| [[File:pokemon/458.png\|25px]] [[Pokémon/Mantyke]] | [[File:pokemon/226.png\|25px]] [[Pokémon/Mantine]] |
 | [[File:pokemon/489.png\|25px]] [[Pokémon/Phione]] | [[File:pokemon/490.png\|25px]] [[Pokémon/Manaphy]] |
 
 Munchlax can also be obtained as a Wanderer by using [[Berries/Chilan]] berries.
@@ -66,7 +68,7 @@ Munchlax can also be obtained as a Wanderer by using [[Berries/Chilan]] berries.
 ### Weather-dependent Pokémon
 |Pokémon | Evolution | Required Weather |
 |---|---|---|
-| [[File:pokemon/421.png\|25px]] [[Pokémon/Cherrim (Overcast)]] | [[File:pokemon/421.01.png\|25px]] [[Pokémon/Cherrim (Sunshine)]] | Sunny |
+| [[File:pokemon/421.png\|25px]] [[Pokémon/Cherrim (Overcast)]] | [[File:pokemon/421.01.png\|25px]] [[Pokémon/Cherrim (Sunshine)]] | Harsh Sunlight |
 
 ### Level-dependent Pokémon
 **Note:** Level-dependant Pokémon evolve at or above the level specified excluding level 100. Pokémon at level 100 must be bred and retrained to the correct level.

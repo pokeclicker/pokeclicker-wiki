@@ -20,15 +20,15 @@ $$ \frac{\text{Dungeon Tokens} \times \text{Average Catch \%}}{\text{Defeat Time
 
 ## Obtaining Dungeon Tokens
 The following tables present the relevant information for gaining Dungeon Tokens. The most efficient routes are included in the Optimal Farming Routes table. All route rates are also included below in subsequent tables.
-The columns included in each table represent all the various combinations of the four standard Pokéballs and the [[Oak_Items/Magic_Ball]].
+The columns included in each table represent all the various combinations of the four standard Pokéballs and the [[Oak_Items/Magic Ball]].
 
 :---: | :---:
-PB | Just [[Items/Poké_Ball]]
-PB + MB | Both [[Items/Poké_Ball]] and [[Oak_Items/Magic_Ball]]
-GB | Just [[Items/Great_Ball]]
-GB + MB | Both [[Items/Great_Ball]] and [[Oak_Items/Magic_Ball]]
-UB | Just [[Items/Ultra_Ball]]
-UB + MB | Both [[Items/Ultra_Ball]] and [[Oak_Items/Magic_Ball]]
+PB | Just [[Items/Poké Ball]]
+PB + MB | Both [[Items/Poké Ball]] and [[Oak_Items/Magic Ball]]
+GB | Just [[Items/Great Ball]]
+GB + MB | Both [[Items/Great Ball]] and [[Oak_Items/Magic Ball]]
+UB | Just [[Items/Ultra Ball]]
+UB + MB | Both [[Items/Ultra Ball]] and [[Oak_Items/Magic Ball]]
 
 Importantly, the following tables assume two things:
 

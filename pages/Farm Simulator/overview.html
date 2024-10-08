@@ -6,7 +6,7 @@
             <!-- /ko -->
             <div class="plot col ps-1 pe-1" data-bind="event: { contextmenu: (_, e) => { Wiki.farmSimulator.showPlotContextMenu(e, $index()); return false; } }">
                 <div class="plot-content" style="cursor: pointer;"
-                    data-bind="class: FarmController.calculateCssClass(), click: () => { Wiki.farmSimulator.selectPlot($index()); }">
+                    data-bind="class: FarmController.calculateCssClass($data), click: () => { Wiki.farmSimulator.selectPlot($index()); }">
                     <div class="plotImage">
                         <img style="width: 100%;" src="./images/farm/soil.png" data-bind="class: FarmController.calcMulchClass($data)">
                         <div class="plotButton"
@@ -99,15 +99,22 @@
                 <hr class="my-2" />
                 <div class="d-flex justify-content-center align-items-center mt-2">
                     <input type="checkbox" class="btn-check" id="plot-labels-checkbox" autocomplete="off" data-bind="checked: Wiki.farmSimulator.plotLabelsEnabled">
-                    <label class="btn btn-secondary btn-sm me-auto" for="plot-labels-checkbox"
+                    <label class="btn btn-secondary btn-sm me-auto text-nowrap" for="plot-labels-checkbox"
                         data-bind="text: Wiki.farmSimulator.plotLabelsEnabled() ? '&check; Labels' : '&times; Labels'"></label>
-
-                    <button class="btn btn-sm btn-primary me-1" data-bind="click: () => { Wiki.farmSimulator.importFarmPrompt() }">Import</button>
+                    <input type="file" id="farmSimFileSelector" accept=".txt" class="d-none" onchange="Wiki.farmSimulator.importFromFile(this.files[0])">
+                    <div class="btn-group me-1">
+                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown">Import</button>
+                        <ul class="dropdown-menu">
+                            <li><button class="dropdown-item" type="button" data-bind="click: () => { Wiki.farmSimulator.importFarmPrompt() }">Import From Text</button></li>
+                            <li><button class="dropdown-item" type="button" data-bind="click: () => document.getElementById('farmSimFileSelector').click()">Import From Save</button></li>
+                        </ul>
+                    </div>
                     <button class="btn btn-sm btn-primary me-1" data-bind="click: () => { Wiki.farmSimulator.exportFarm() }">Export</button>
                     <button class="btn btn-sm btn-primary me-1" data-bind="click: () => { Wiki.farmSimulator.clearAllPlots() }">Clear</button>
                 </div>
             </div>
         </div>
+        <div class="text-muted small">* Right click a plot to copy/paste.</div>
     </div>
     <div class="col-12 col-lg-5">
         
@@ -245,7 +252,6 @@
         </div>
     </div>
 </div>
-<div class="text-muted small">* Right click a plot to copy/paste.</div>
 
 <div class="dropdown-menu dropdown-menu-sm dropdown-menu-dark" id="plot-context-menu">
     <button class="dropdown-item" data-action="copy">Copy</button>

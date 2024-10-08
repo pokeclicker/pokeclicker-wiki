@@ -1,0 +1,1 @@
+Pallet Town is the starting region for Kanto and the first town of the game. It is home to Professor Oak and Mom. Once all Pokémon in the Kanto region are caught the player must speak to Professor Oak here to proceed to the next region [[Regions/Johto]].

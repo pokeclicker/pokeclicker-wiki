@@ -32,6 +32,7 @@ Base Pokémon |Evolves into |Available in
 [[File:pokemon/310.png\|25px]] [[Pokemon/Manectric]]  | [[File:pokemon/310.01.png\|25px]] [[Pokemon/Mega Manectric]] |Kalos onward
 [[File:pokemon/319.png\|25px]] [[Pokemon/Sharpedo]]  | [[File:pokemon/319.01.png\|25px]] [[Pokemon/Mega Sharpedo]] |Kalos onward
 [[File:pokemon/323.png\|25px]] [[Pokemon/Camerupt]]  | [[File:pokemon/323.01.png\|25px]] [[Pokemon/Mega Camerupt]] |Kalos onward
+[[File:pokemon/354.png\|25px]] [[Pokemon/Banette]]  | [[File:pokemon/354.01.png\|25px]] [[Pokemon/Mega Banette]] |Kalos onward
 [[File:pokemon/359.png\|25px]] [[Pokemon/Absol]]  | [[File:pokemon/359.01.png\|25px]] [[Pokemon/Mega Absol]] |Kalos onward
 [[File:pokemon/362.png\|25px]] [[Pokemon/Glalie]]  | [[File:pokemon/362.01.png\|25px]] [[Pokemon/Mega Glalie]] |Kalos onward
 [[File:pokemon/373.png\|25px]] [[Pokemon/Salamence]]  | [[File:pokemon/373.01.png\|25px]] [[Pokemon/Mega Salamence]] |Kalos onward

@@ -9,10 +9,10 @@ Clearing Dungeons requires active play. To enter a dungeon, select it on the Tow
 4. **Ladder** - Allows the player to progress to the next floor and also adds 10 seconds to the timer. You can either click "Go to next floor" or press Spacebar. This tile can only be encountered from Alola onwards.
 5. **A chest**- Many Items can be collected from chests by either clicking on them or by pressing the Spacebar. They may also contain Pokémon which are known as **Mimics**. Some of them are even exclusive Pokémon that can only be encountered in this way.
 6. **A trainer**- Trainers are found on tiles and have teams of Pokémon that must all be defeated to progress. Wild Pokémon are almost always ~4 times more likely to appear on an enemy tile than a trainer, but in some dungeons this weighting is different. Defeating trainers yields the following rewards:
-	- Dungeon Trainers reward 4% of the dungeon cost as Dungeon Tokens [[File:dungeonToken.svg|18px]] and 50% of the dungeon cost as Poké Dollars whenever they are defeated.
-	- Dungeon Trainer Bosses reward 10% of the dungeon cost as Dungeon Tokens [[File:dungeonToken.svg|18px]]  and 100% of the dungeon cost as Poké Dollars whenever they are defeated.
+	- Dungeon Trainers reward 4% of the dungeon cost as Dungeon Tokens [[File:dungeonToken.svg|18px]] and 50% of the dungeon cost as Pokédollars whenever they are defeated.
+	- Dungeon Trainer Bosses reward 10% of the dungeon cost as Dungeon Tokens [[File:dungeonToken.svg|18px]]  and 100% of the dungeon cost as Pokédollars whenever they are defeated.
 
-Note: Amulet coin and other items that grant increased amounts of pokédollars **do not** affect the amount of money that you receive from Dungeon Trainers or Dungeon Trainer Bosses
+Note: Amulet coin and other items that grant increased amounts of Pokédollars **do not** affect the amount of money that you receive from Dungeon Trainers or Dungeon Trainer Bosses
 
 ## Dungeon Perks and Mechanics
 
@@ -80,7 +80,7 @@ Kalos | Hoenn
 Alola | Sinnoh
 Galar | Unova
 
-*Note: Some items are excluded from the debuff so their drop rate isn't affected in debuffed regions (As of v.0.10.9 the exception applies to [[Pokémon/Darmanitan (Zen)]] and [Megastones](#!Mega_Pokémon/))*
+*Note: Some items are excluded from the debuff so their drop rate isn't affected in debuffed regions.
 
 **Example:** Viridian Forest has four dungeon chest drops. Two loot items, Small Restore and Pokéball, are in Rarity Tiers of a greater rarity than Rare. **Before** the player reaches Sinnoh, the odds of finding these items increases with increasing dungeon clears, and the items will not have the Regional Debuff applied to their drop chances.
 **After** the player reaches Sinnoh, only those two loot items would be impacted by the Dungeon Loot Regional Debuff in Viridian Forest. Consequently, those two loot items would become roughly 20x as rare. In general, it is better to go for rare item drops before you are affected by the debuff; however, it is more difficult to clear those early game dungeons early on.
@@ -108,8 +108,8 @@ Tier | 0 clears | 100 clears | 250 clears | 500 clears | Debuffed {.no-data-tabl
 
 **Example 2:** Mt. Moon has Greatball, Small Restore and Star Piece as 3 of its 5 lootable items from Dungeon chests. All 3 items are in the Mythic tier, but the Greatball Has Weight 2 while the Small Restore and Star Piece have the base weight of 1. This means the Greatball will be twice as likely to be dropped as the other 2 items. In other words, on average when an item looted from Mt. Moon is from the Mythic Tier, 50% of the time it will be a Greatball, 25% of the time it will be a Small Restore, 25% of the time it will be a Star Piece.
 
-### Dowsing machine
+### Dowsing Machine
 
-The Dowsing Machine increases the yield of items looted from Dungeons. The amount of items looted depends on both the region of the dungeon, and the Tier of the looted item.
+The Dowsing Machine increases the yield of items looted from Dungeons. The amount of items looted depends on both the region of the dungeon, and the Tier of the looted item. Check [[Items/Dowsing Machine]] for more details.
 
 ## Dungeon Locations

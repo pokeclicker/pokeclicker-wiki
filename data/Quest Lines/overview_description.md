@@ -7,11 +7,12 @@ Region | City | N° of possible quests
 **Kanto (Main)** | Pallet Town | 2
 **Kanto (Sevii 4567)** | Pummelo Island | 1
 **Johto** | New Bark Town | 3
-**Hoenn** | Littleroot Town | 10
+**Hoenn** | Littleroot Town | 9
 **Sinnoh** | Twinleaf Town | 2
+**Unova** | Aspertia City | 3
 **Kalos** | Vaniville Town | 7
 **Alola (Main)** | Professor Kukui's lab | 4
 **Alola (Magikarp Jump)** | Hoppy Town | 1
 **Galar South** | Postwick | 2
 **Galar Isle of Armor** | Master Dojo | 2
-**Galar Crown Tundra** |Freezington | 3
+**Galar Crown Tundra** |Freezington | 4

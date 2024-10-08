@@ -26,6 +26,7 @@ Iapapa Berries can mutate into the following Berries.
 
 | Used In                                       | Other Requirements |
 | :---:                                         | :---: |
+| [[File:Pomeg.png\|32px]] [[Berries/Pomeg]]  | [[File:Mago.png\|32px]] [[Berries/Mago]] |
 | [[File:Wacan.png\|32px]] [[Berries/Wacan]]  | [[File:Pinap.png\|32px]] [[Berries/Pinap]] [[File:Qualot.png\|32px]] [[Berries/Qualot]] [[File:Grepa.png\|32px]] [[Berries/Grepa]] |
 
 ### Acquisition

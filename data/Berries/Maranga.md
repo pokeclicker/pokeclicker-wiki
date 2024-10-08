@@ -17,5 +17,5 @@ You can fill your farm in the following way to obtain Maranga Berries. Purple sq
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Salac.png\|32px]] [[Berries/Salac]]    | `N/A`         | `N/A`                                 | `N/A`                                 |
+| [[File:Salac.png\|32px]] [[Berries/Salac]]    | `Planted First` |||
 | [[File:Petaya.png\|32px]] [[Berries/Petaya]]  | 24:00:00      | 16:00:00                              | 10:40:00                              |

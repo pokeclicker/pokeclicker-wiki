@@ -64,4 +64,4 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 
 [[Pokémon/Scyther]] is also often obtained as a [[Wandering Pokémon]] in the [[Farm]].
 [[Pokémon/Pinsir]] can also be obtained as a Wanderer using [[Berries/Tanga]] berries.
-[[Pokémon/Charity Chansey]] can also be obtained as a client-exclusive Pokemon at [[Towns/Client_Island]] in the Sevii Islands 123. Obtaining this Pokémon instead of regular Chansey still counts for Pokédex completion.
+[[Pokémon/Charity Chansey]] can also be obtained as a client-exclusive Pokemon at [[Towns/Client Island]] in the Sevii Islands 123. Obtaining this Pokémon instead of regular Chansey still counts for Pokédex completion.

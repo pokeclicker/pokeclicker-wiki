@@ -1,4 +1,5 @@
 const { gotoPage } = require('./navigation');
+const { getAvailablePokemon } = require('./pages/pokemon');
 
 const searchOptions = [
   {
@@ -22,11 +23,16 @@ const searchOptions = [
     type: 'Pokémon',
     page: '',
   },
-  ...Object.values(pokemonList).filter(p => Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION]).map(p => ({
+  ...Object.values(getAvailablePokemon()).map(p => ({
     display: `#${Math.floor(p.id).toString().padStart(3, '0')} - ${p.name}`,
     type: 'Pokémon',
     page: p.name,
   })),
+  {
+    display: 'Alternate Pokémon Forms',
+    type: 'Alternate Pokémon Forms',
+    page: '',
+  },
   {
     display: 'Mega Pokémon',
     type: 'Mega Pokémon',
@@ -115,6 +121,7 @@ const searchOptions = [
     display: 'Hatchery',
     type: 'Hatchery',
     page: '',
+    redirects: ['Daycare'],
   },
   // Hatchery Helpers
   {
@@ -193,6 +200,7 @@ const searchOptions = [
     display: 'Farm',
     type: 'Farm',
     page: '',
+    redirects: ['Mutating Berries', 'Mutation'],
   },
   {
     display: 'Farm Simulator',
@@ -210,11 +218,17 @@ const searchOptions = [
     type: 'Farm Hands',
     page: '',
   },
+  ...FarmHands.list.map(fh => ({
+    display: `${fh.name} (Farm Hands)`,
+    type: 'Farm Hands',
+    page: fh.name,
+  })),
   // Pokérus
   {
     display: 'Pokérus',
     type: 'Pokérus',
     page: '',
+    redirects: ['EVs', 'Effort Values', 'Infected', 'Contagious', 'Resistant'],
   },
   // Dream Orbs
   {
@@ -306,8 +320,8 @@ const searchOptions = [
   },
   //Currency Pages
   {
-    display: 'Pokémon Dollars',
-    type: 'Pokémon Dollars',
+    display: 'Pokédollars',
+    type: 'Pokédollars',
     page: '',
   },
   {
@@ -329,6 +343,7 @@ const searchOptions = [
     display: 'Diamonds',
     type: 'Diamonds',
     page: '',
+    redirects: ['Underground'], // remove when Underground page added
   },
   {
     display: 'Battle Points',
@@ -359,6 +374,28 @@ const searchOptions = [
     type: 'Achievements',
     page: '',
   },
+  // Poké Balls
+  {
+    display: 'Poké Balls',
+    type: 'Poké Balls',
+    page: '',
+  },
+  {
+    display: 'Pokéballs',
+    type: 'Poké Balls',
+    page: '',
+  },
+  // Dungeon Guides
+  {
+    display: 'Dungeon Guides',
+    type: 'Dungeon Guides',
+    page: '',
+  },
+  ...DungeonGuides.list.map(g => ({
+    display: g.name,
+    type: 'Dungeon Guides',
+    page: g.name,
+  })),
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
@@ -367,6 +404,12 @@ searchOptions.forEach(a => {
     duplicates.forEach(d => d.display = `${d.display} (${d.type})`);
   }
 })
+// Redirects
+searchOptions.forEach(a => {
+  a.redirects?.forEach(r => {
+    searchOptions.push({ ...a, redirect: r });
+  });
+});
 
 /*
     AUTO FILL FOR SEARCH BAR
@@ -382,7 +425,7 @@ var substringMatcher = (searchData) => {
     const substrRegex = new RegExp(escapeRegExp(query), 'i');
 
     // iterate through the pool of strings and for any string that matches the regex
-    const results = searchData.filter(d => substrRegex.test(d.display));
+    const results = searchData.filter(d => substrRegex.test(d.redirect || d.display));
 
     cb(results.sort((a, b) => a.display.search(substrRegex) - b.display.search(substrRegex) || a.display.length - b.display.length));
   };
@@ -408,7 +451,8 @@ $('#search').typeahead({
   templates: {
     notFound: '<a class="dropdown-item disabled">No results found...</a>',
     suggestion: (suggestion) => {
-      return `<a href="#!${suggestion.type}/${suggestion.page}">${suggestion.display}</a>`;
+      const display = suggestion.redirect ? `${suggestion.redirect} → ${suggestion.display}` : suggestion.display;
+      return `<a href="#!${suggestion.type}/${suggestion.page}">${display}</a>`;
     },
   },
 });

@@ -148,34 +148,67 @@ _**EV Gain Bonus: 2.54x**_
 ## Wandering Pokémon Setups
 [[Wandering Pokémon]] are attracted to ripe berries. For the maximum chance of attracting a desired wandering Pokémon, use one of the setups below.
 
-### Roseli + Lum + Attracting Berry
-Using a single Lum berry surrounded by 7 Roseli berries, and then filling the remainder of open farm spots with an attracting berry (a berry that attracts a particular species of wandering Pokémon) is the most effective way of attracting wandering Pokémon to the farm.
-- _Note: Do not use this setup with [[Berries/Occa]], [[Berries/Colbur]], or [[Berries/Kebia]] berries. Due to their nature of overtaking other berries, it is most efficient to simply plant 25 of those berries._
+### Regular Berries
+#### Roseli + Lum + Attracting Berry
+Using 2 Lum berries surrounded by 13 Roseli berries, and then filling the remainder of open farm spots with an attracting berry (a berry that attracts a particular species of wandering Pokémon) is the most effective way of attracting wandering Pokémon to the farm.
+- _Note: Do not use this setup with [[Berries/Occa]], [[Berries/Colbur]], or [[Berries/Kebia]] berries. Due to their nature of overtaking other berries, it is most efficient to simply plant 25 of those berries. Check the next section for those setups._
 
-_**Attract Aura: 1.51x,
-Encounter Chance per 1.5s: 1.29%**_
+_**Attract Aura: 3.54x,
+Encounter Chance per 1.5s: 1.77%**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
 :::
 
-### Roseli + Lum + Petaya + Attracting Berry
+#### Roseli + Lum + Petaya + Attracting Berry
 For a significantly longer uptime than the above setup to attract a wandering Pokémon - perhaps if you're looking for a specific Pokémon or group of Pokémon to turn shiny for example - replace a Roseli berry with a Petaya berry.
 This doesn't decrease the encounter chance per second significantly, but it does make this setup viable for several days instead of several hours.
 
-_**Attract Aura: 1.43x<,
-Encounter Chance per 1.5s: 1.21%**_
+_**Attract Aura: 3.21x,
+Encounter Chance per 1.5s: 1.61%**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
-| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | |
+:::
+
+### Parasite Berries
+These setups will work for all Parasite berries, namely [[Berries/Occa]], [[Berries/Kebia]], and [[Berries/Colbur]].
+
+#### Roseli + Lum + Babiri + Attracting Berry
+Using 1 Lum berry surrounded by 8 Roseli berries, with each side being protected by a Babiri, and then filling the remainder of open farm spots with the parasite berry is the most effective way of attracting wandering Pokémon to the farm.
+
+_**Attract Aura: 2.18x,
+Encounter Chance per 1.5s: 1.48%**_
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+:::
+
+#### Roseli + Lum + Babiri + Petaya + Attracting Berry
+For a significantly longer uptime than the above setup to attract a wandering Pokémon - perhaps if you're looking for a specific Pokémon or group of Pokémon to turn shiny for example - replace a Roseli berry with a Petaya berry.
+This doesn't decrease the encounter chance per second significantly, but it does make this setup viable for several days instead of several hours.
+
+_**Attract Aura: 1.97x,
+Encounter Chance per 1.5s: 1.38%**_
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | |
 :::
 
 ## Regaining Lost Gen 5 Berries
@@ -210,7 +243,7 @@ Here are a few highly efficient strategies on how to level up the [[Oak Items/Sq
 
 ### Occa/Kebia Planting Formation (a.k.a. Berry Wars)
 If you want to be able to gain experience more passively, then the best strategy is with Occa and Kebia berries. Colbur works for this as well, but takes longer enough to grow that it isn't as useful. This strategy will likely let you level up your Squirtbottle from 0 to 5 without having to set it up again unless you get unlucky with a full takeover.
-- _Note: When using this strategy, make sure to plant the berries so that they ripen at the same time to lower the chance of full takeover._
+- _Note: When using this strategy, make sure to plant the berries so that they ripen at the same time, so planting Kebia Berries when Occa has 10 minutes left till ripen; to lower the chance of full takeover._
 
 **Farm**
 ::: table-mutations
@@ -272,8 +305,8 @@ Purple spots are where the player is meant to harvest the berry and replace with
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | |
 :::
 
-### Infinity Farm
-This setup is another way to have a Farm that boosts egg steps gain. The combination of [[Berries/Haban]] and [[Berries/Lum]] in this formation make [[Berries/Petaya]] live for around 3.5 years once the setup fully ripens. While not as efficient as other setups in the [[Hatchery]] page, it works for those who want to forget about the Farm.
+### Infinite Farm
+This setup is another way to have a Farm that boosts egg steps gain. The combination of [[Berries/Haban]] and [[Berries/Lum]] in this formation make [[Berries/Petaya]] live forever once the setup fully ripens. While not as efficient as other setups in the [[Hatchery]] page, it works for those who want to forget about the Farm.
 
 Note that replacing the [[Berries/Chople]] with a different berry like [[Berries/Rowap]] or [[Berries/Starf]] will make the bonus only be 1.70x.
 

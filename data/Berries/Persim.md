@@ -25,8 +25,8 @@ Persim has a chance of mutating when [[Berries/Oran]] and [[Berries/Pecha]] are 
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Oran.png\|32px]] [[Berries/Oran]]      | `N/A`         | `N/A`                                 | `N/A`                                 |
-| [[File:Pecha.png\|32px]] [[Berries/Pecha]]    | 00:01:00      | 00:00:40                              | `N/A`                                 |
+| [[File:Oran.png\|32px]] [[Berries/Oran]]      | `Planted First` |||
+| [[File:Pecha.png\|32px]] [[Berries/Pecha]]    | 00:01:00      | 00:00:40                              | 00:00:26                                 |
 
 #### Mutations
 Persim Berries can mutate into the following Berries.
