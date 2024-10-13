@@ -12,10 +12,12 @@
         </thead>
         <tbody>
             <!-- ko foreach: FarmHands.list -->
-            <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Farm Hands', $data.name); return false; }">
+            <tr class="clickable align-middle" data-bind="
+                click: (_, e) => { return Wiki.gotoPageClick(e, 'Farm Hands', $data.name); },
+                attr: { 'data-href': `#!Farm Hands/${$data.name}` }">
                 <td class="text-nowrap">
-                    <img data-bind="attr: { src: `./pokeclicker/docs/assets/images/profile/trainer-${$data.trainerSprite}.png` }"/>
-                    <ko data-bind="text: $data.name"></ko>
+                    <img class="me-1" width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/profile/trainer-${$data.trainerSprite}.png` }"/>
+                    <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Farm Hands/${$data.name}` }"></a>
                 </td>
                 <td class="text-nowrap" data-bind="attr: { 'data-order': $data.cost.amount }">
                     <img width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/currency/${GameConstants.Currency[$data.cost.currency]}.svg` }"/>
