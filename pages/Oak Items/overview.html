@@ -8,7 +8,9 @@
     </thead>
     <tbody>
         <!-- ko foreach: App.game.oakItems.itemList -->
-        <tr class="clickable" data-bind="click: (_, e) => { return Wiki.gotoPageClick(e, 'Oak Items', $data.displayName); }">
+        <tr class="clickable" data-bind="
+            click: (_, e) => { return Wiki.gotoPageClick(e, 'Oak Items', $data.displayName); },
+            attr: { 'data-href': `#!Oak_Items/${$data.displayName}` }">
             <td class="align-middle">
                 <img width="28" class="me-1" data-bind="attr: { src: `./images/${OakItemType[$data.name]}.png` }" />
                 <a class="text-decoration-none align-middle" href="#!" data-bind="text: $data.displayName, attr: { href: `#!Oak_Items/${$data.displayName}` }"></a>

@@ -11,7 +11,9 @@
         </thead>
         <tbody>
             <!-- ko foreach: HatcheryHelpers.list -->
-            <tr class="clickable align-middle" data-bind="click: (_, e) => { return Wiki.gotoPageClick(e, 'Hatchery Helpers', $data.name); }">
+            <tr class="clickable align-middle" data-bind="
+                click: (_, e) => { return Wiki.gotoPageClick(e, 'Hatchery Helpers', $data.name); },
+                attr: { 'data-href': `#!Hatchery Helpers/${$data.name}` }">
                 <td class="text-nowrap">
                     <img class="me-1" width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/profile/trainer-${$data.trainerSprite}.png` }"/>
                     <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Hatchery Helpers/${$data.name}` }"></a>

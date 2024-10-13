@@ -118,7 +118,9 @@
                 </thead>
                 <tbody>
                     <!-- ko foreach: itemChances -->
-                    <tr class="clickable align-middle" data-bind="click: (_, e) => { return Wiki.gotoPageClick(e, 'Dungeons', $data.dungeonName); }">
+                    <tr class="clickable align-middle" data-bind="
+                        click: (_, e) => { return Wiki.gotoPageClick(e, 'Dungeons', $data.dungeonName); },
+                        attr: { 'data-href': `#!Dungeons/${$data.dungeonName}` }">
                         <td>
                             <a class="text-decoration-none" href="#!" data-bind="text: $data.dungeonName, attr: { href: `#!Dungeons/${$data.dungeonName}` }"></a>
                         </td>

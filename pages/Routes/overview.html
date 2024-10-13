@@ -14,7 +14,9 @@
             </tr>
         </thead>
         <tbody data-bind="foreach: Routes.regionRoutes.filter((route) => route.region <= GameConstants.MAX_AVAILABLE_REGION)">
-            <tr class="text-nowrap clickable" data-bind="click: (_, e) => { return Wiki.gotoPageClick(e, 'Routes', $data.routeName); }">
+            <tr class="text-nowrap clickable" data-bind="
+                click: (_, e) => { return Wiki.gotoPageClick(e, 'Routes', $data.routeName); },
+                attr: { 'data-href': `#!Routes/${$data.routeName}` }">
                 <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region]), attr: { 'data-order': $data.region }"></td>
                 <td data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name, attr: { 'data-order': $data.subRegion ?? 0 }"></td>
                 <td data-bind="attr: { 'data-order': $index() }">

@@ -11,7 +11,9 @@
         </thead>
         <tbody>
             <!-- ko foreach: Object.values(TownList).filter(t => t.region <= GameConstants.MAX_AVAILABLE_REGION) -->
-            <tr class="clickable" data-bind="click: (_, e) => { return Wiki.gotoPageClick(e, 'Towns', $data.name); }">
+            <tr class="clickable" data-bind="
+                click: (_, e) => { return Wiki.gotoPageClick(e, 'Towns', $data.name); },
+                attr: { 'data-href': `#!Towns/${$data.name}` }">
                 <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region]), attr: { 'data-order': $data.region }"></td>
                 <td data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name, attr: { 'data-order': $data.subRegion ?? 0 }"></td>
                 <td>

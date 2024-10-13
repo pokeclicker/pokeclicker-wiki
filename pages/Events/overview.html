@@ -13,7 +13,9 @@
                 </tr>
             </thead>
             <tbody data-bind="foreach: App.game.specialEvents.events.sort((a, b) => a.startTime - b.startTime);">
-                <tr class="clickable" data-bind="click: (_, e) => { return Wiki.gotoPageClick(e, 'Events', $data.title); }">
+                <tr class="clickable align-middle" data-bind="
+                    click: (_, e) => { return Wiki.gotoPageClick(e, 'Events', $data.title); },
+                    attr: { 'data-href': `#!Events/${$data.title}` }">
                     <td>
                         <a class="text-decoration-none" href="#!" data-bind="text: $data.title, attr: { href: `#!Events/${$data.title}` }"></a>
                     </td>

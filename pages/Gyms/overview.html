@@ -15,7 +15,9 @@
         const gymRegion = GameConstants.getGymRegion(g[0]);
         return (gymRegion <= GameConstants.MAX_AVAILABLE_REGION || gymRegion >= GameConstants.Region.final)
     })">
-        <tr class="clickable align-middle" data-bind="click: (_, e) => { return Wiki.gotoPageClick(e, 'Gyms', $data[0]); }">
+        <tr class="clickable align-middle" data-bind="
+            click: (_, e) => { return Wiki.gotoPageClick(e, 'Gyms', $data[0]); },
+            attr: { 'data-href': `#!Gyms/${$data[0]}` }">
             <td data-bind="text: $index() + 1"></td>
             <td>
                 <a class="text-decoration-none" href="#!" data-bind="text: $data[1].leaderName.replace(/\d/g, ''), attr: { href: `#!Gyms/${$data[0]}` }"></a>

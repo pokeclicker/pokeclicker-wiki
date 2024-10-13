@@ -12,7 +12,9 @@
         </thead>
         <tbody>
             <!-- ko foreach: FarmHands.list -->
-            <tr class="clickable align-middle" data-bind="click: (_, e) => { return Wiki.gotoPageClick(e, 'Farm Hands', $data.name); }">
+            <tr class="clickable align-middle" data-bind="
+                click: (_, e) => { return Wiki.gotoPageClick(e, 'Farm Hands', $data.name); },
+                attr: { 'data-href': `#!Farm Hands/${$data.name}` }">
                 <td class="text-nowrap">
                     <img class="me-1" width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/profile/trainer-${$data.trainerSprite}.png` }"/>
                     <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Farm Hands/${$data.name}` }"></a>
