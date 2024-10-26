@@ -64,12 +64,6 @@ There are exceptions to this rule:
 ### Native Region
 Native Region doesn't necessarily refer to when the Pokémon is available but rather the Region the game considers it for Pokédex completion and Regional Debuff calculations.
 
-## Click Attack
-Besides [[Achievements]], Pokémon also contribute to the player's click attack value. The formula used is the following:
-$ClickAttack=⌊(1 + achievementBonus) * (numCaught + numShiny + numResistant + numPurified + 1) ^ {1.4}⌋$
-
-Where **numCaught**, **numShiny**,  **numResistant**, and **numPurified** refers to the number of unique captured Pokémon, unique shiny Pokémon, unique Pokémon resisted, and unique Pokémon purified respectively.
-
 ## Other Pokémon Lists
 - [[Alternate Pokémon Forms]] page lists all alternate forms available in the game, including Regional forms, and the corresponding base Pokémon.
 - [[Mega Pokémon]] page has details about which Pokémon can Mega Evolve and the requirements necessary to do so.

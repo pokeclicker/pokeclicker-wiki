@@ -396,6 +396,12 @@ const searchOptions = [
     type: 'Dungeon Guides',
     page: g.name,
   })),
+  // Click Attack
+  {
+    display: 'Click Attack',
+    type: 'Click Attack',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
