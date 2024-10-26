@@ -77459,7 +77459,9 @@ const requirementHints = (requirement, includeMarkdown = true) => {
                     }
                     break;
                 case QuestLineCompletedRequirement:
-                    hint = `Complete the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
+                    hint = req.option >= GameConstants.AchievementOption.equal
+                        ? `Complete the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
+                        : `No longer appears after completing the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
                     break;
                 case GymBadgeRequirement:
                     hint = req.option == GameConstants.AchievementOption.more
