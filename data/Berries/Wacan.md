@@ -4,7 +4,7 @@
 
 Wacan has a chance of mutating when [[Berries/Pinap]], [[Berries/Iapapa]], [[Berries/Qualot]], and [[Berries/Grepa]] are touching an empty plot. You can fill your farm in the following way to obtain Wacan Berries. Purple squares indicate where mutations can occur.
 
-**Note:** The planted [[Berries/Pinap]] can cause [[Berries/Nomel]] to mutate in the purple squares adjacent to them. If you don't want Nomel berries be ready to shovel them up in order to reopen the spot for a [[Berries/Wacan]] to mutate.
+**Note:** The planted [[Berries/Pinap]] can cause [[Berries/Nomel]] to mutate in the purple squares adjacent to them. If you don't want Nomel berries be ready to shovel them up in order to reopen the spot for Wacan to mutate.
 
 **Base Formation**
 ::: table-mutations
