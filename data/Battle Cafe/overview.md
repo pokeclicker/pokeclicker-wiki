@@ -7,7 +7,7 @@ While using the Battle Café, there are a number of factors that contribute to t
 
 **Time of Day**   | **Device Time (12-Hour)** | **Device Time (24-Hour)** {.no-data-tables}
 :---:             | :---:                     | :---:
-Day               | 6:00 AM - 5:59 PM         | 06:00 - 17:59
+Day               | 6:00 AM - 4:59 PM         | 06:00 - 16:59
 Dusk              | 5:00 PM - 5:59 PM         | 17:00 - 17:59
 Night             | 6:00 PM - 5:59 AM         | 18:00 - 05:59
 
