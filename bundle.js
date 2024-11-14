@@ -77045,15 +77045,16 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":1,"call-bind":6,"call-bind/callBound":5,"for-each":62,"gopd":66,"has-tostringtag/shams":70}],502:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
-  "version": "0.10.21",
+  "version": "0.10.22",
   "description": "PokéClicker repository",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development gulp",
     "build": "cross-env NODE_ENV=development gulp build",
-    "test": "npm run ts-test && npm run eslint && npm run stylelint && npm run vitest",
-    "ts-test": "gulp scripts",
+    "test": "npm-run-all --continue-on-error test-scripts eslint stylelint",
+    "test-scripts": "gulp scripts && npm run vitest-nocoverage",
     "vitest": "vitest --run",
+    "vitest-nocoverage": "vitest --run --coverage false",
     "eslint": "eslint --ext ts ./src/scripts ./src/modules",
     "eslint-fix": "eslint --ext ts --fix ./src/scripts ./src/modules",
     "stylelint": "stylelint \"./src/**/*.less\" --cache",
@@ -77088,7 +77089,7 @@ module.exports={
     "@types/sortablejs": "^1.10.5",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",
-    "@vitest/coverage-c8": "^0.29.8",
+    "@vitest/coverage-v8": "^2.1.1",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
@@ -77097,6 +77098,7 @@ module.exports={
     "cross-env": "^7.0.2",
     "del": "^5.1.0",
     "es6-promise": "^4.2.8",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.22.1",
     "gh-pages": "^4.0.0",
@@ -77123,21 +77125,22 @@ module.exports={
     "gulp-typescript": "^5.0.1",
     "gulp-util": "^3.0.7",
     "husky": "^4.3.8",
+    "jsdom": "^25.0.0",
     "natives": "^1.1.6",
+    "npm-run-all2": "^6.2.0",
     "postcss-less": "^6.0.0",
     "stylelint": "^15.10.1",
     "stylelint-config-standard-less": "^1.0.0",
     "ts-loader": "^8.0.4",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5",
-    "vitest": "^0.29.8",
+    "vitest": "^2.1.1",
     "webpack": "^5.76.0",
     "webpack-cli": "^5.0.1",
     "webpack-stream": "^6.1.0"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
-    "eslint": "^7.4.0",
     "i18next": "^21.9.2",
     "i18next-browser-languagedetector": "^6.1.5",
     "i18next-chained-backend": "^3.1.0",
@@ -77325,6 +77328,9 @@ Notifier.notify = () => {};
 // Ensure weather never satisfies requirements so they are always shown
 Weather.currentWeather = () => -1;
 
+// Not sure why but this was causing an error on load after the v0.10.22 update
+SortModules = () => {};
+
 // Custom binds as these aren't loaded
 player = new Player();
 player.highestRegion(1);
@@ -77370,10 +77376,10 @@ BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 AchievementHandler.initialize(multiplier, new Challenges());
 
-DailyDeal.generateDeals(5, now);
 BerryDeal.generateDeals(now);
 GemDeals.generateDeals();
 ShardDeal.generateDeals();
+GenericDeal.generateDeals();
 SafariPokemonList.generateSafariLists(); // This needs to be after anything that generates shopmon due to Friend Safari calcs
 
 // Farm Simulator
@@ -79887,18 +79893,6 @@ const searchOptions = [
     display: 'Rare Hold Items',
     type: 'Rare Hold Items',
     page: '',
-  },
-  // Daily Deals
-  {
-    display: 'Daily Deals',
-    type: 'Daily Deals',
-    page: '',
-  },
-  // Deal Chains
-  {
-    display: 'Daily Deal Chains',
-    type: 'Daily Deal Chains',
-    page: ''
   },
   // Weather
   {
