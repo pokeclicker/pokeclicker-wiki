@@ -855,22 +855,10 @@
                          <tbody data-bind="foreach: Object.keys(GameConstants.Environments[$data])">
                             <tr>
                                 <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data])"></td>
-                                <td data-bind="foreach: Array.from(GameConstants.Environments[$parent][$data].values()).filter((area) => typeof area === 'number')">
-                                    <!-- ko with: Routes.regionRoutes.filter((r) => r.region == $parent).filter(r => r.number == $data)[0].routeName -->
-                                    <a class="badge text-bg-secondary" style="font-size: small;" href="#!" data-bind="text: $data, attr: { href: `#!Routes/${$data}` }"></a>
-                                    <!-- /ko -->
-                                </td>
-                                <td data-bind="foreach: Array.from(GameConstants.Environments[$parent][$data].values()).filter((area) => typeof area === 'string')">
-                                    <a class="badge text-bg-secondary" style="font-size: small;" href="#!" data-bind="text: $data, attr: { href: TownList[$data] instanceof DungeonTown ? `#!Dungeons/${$data}` : `#!Towns/${$data}` }"></a>
-                                </td>
-                            </tr>
-                            <!-- TODO: delete top example -->
-                            <tr>
-                                <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data])"></td>
-                                <td data-bind="foreach: Routes.regionRoutes.filter((r) => r.region == $parent).filter((r) => MapHelper.getEnvironments(r.number, $parent).includes($parent[1]))">
+                                <td data-bind="foreach: Routes.regionRoutes.filter((r) => r.region == $data).filter((r) => MapHelper.getEnvironments(r.number, $data).includes($parent))">
                                     <a class="badge text-bg-secondary" style="font-size: small;" href="#!" data-bind="text: $data.routeName, attr: { href: `#!Routes/${$data.routeName}` }"></a>
                                 </td>
-                                <td data-bind="foreach: Object.values(TownList).filter((t) => t.region == $data).filter((t) => MapHelper.getEnvironments(t.name, t.region).includes($parent[1]))">
+                                <td data-bind="foreach: Object.values(TownList).filter((t) => t.region == $data).filter((t) => MapHelper.getEnvironments(t.name, t.region).includes($parent))">
                                     <a class="badge text-bg-secondary" style="font-size: small;" href="#!" data-bind="text: $data.name, attr: { href: TownList[$data] instanceof DungeonTown ? `#!Dungeons/${$data}` : `#!Towns/${$data}` }"></a>
                                 </td>
                             </tr>
