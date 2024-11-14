@@ -59,7 +59,7 @@
                                     </span>
                                     <!-- ko if: $parent.requirements -->
                                     <span class="input-group-text" style="cursor: help;" data-bind="tooltip: {
-                                        title: $parent.requirements ?? '',
+                                        title: Wiki.gameHelper.requirementHints($parent.requirements, false).join('\n'),
                                         html: false,
                                         placement: 'bottom',
                                         trigger: 'hover'
@@ -93,7 +93,7 @@
                                 </span>
                                 <!-- ko if: $data.requirements -->
                                 <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
-                                    title: $data.requirements ?? '',
+                                    title: Wiki.gameHelper.requirementHints($data.requirements, false).join('\n'),
                                     html: false,
                                     placement: 'bottom',
                                     trigger: 'hover'
@@ -132,7 +132,7 @@
                                     </span>
                                     <!-- ko if: $data.requirements -->
                                     <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
-                                        title: $data.requirements ?? '',
+                                        title: Wiki.gameHelper.requirementHints($data.requirements, false).join('\n'),
                                         html: false,
                                         placement: 'bottom',
                                         trigger: 'hover'
@@ -172,7 +172,7 @@
                                     </span>
                                     <!-- ko if: $data.requirements -->
                                     <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
-                                        title: $data.requirements ?? '',
+                                        title: Wiki.gameHelper.requirementHints($data.requirements, false).join('\n'),
                                         html: false,
                                         placement: 'bottom',
                                         trigger: 'hover'
@@ -205,7 +205,7 @@
                                 </span>
                                 <!-- ko if: $data.requirements -->
                                 <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
-                                    title: $data.requirements ?? '',
+                                    title: Wiki.gameHelper.requirementHints($data.requirements, false).join('\n'),
                                     html: false,
                                     placement: 'bottom',
                                     trigger: 'hover'
@@ -417,7 +417,7 @@
                                     </span>
                                     <!-- ko if: $data.requirement -->
                                     <span class="input-group-text" style="cursor: help;" data-bind="tooltip: {
-                                        title: $data.requirement.hint(),
+                                        title: Wiki.gameHelper.requirementHints($data.requirement, false).join('\n'),
                                         html: false,
                                         placement: 'bottom',
                                         trigger: 'hover'
@@ -685,7 +685,7 @@
                                 </span>
                                 <!-- ko if: $data.requirements -->
                                 <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
-                                    title:  $data.requirements ?? '',
+                                    title: Wiki.gameHelper.requirementHints($data.requirements, false).join('\n'),
                                     html: false,
                                     placement: 'bottom',
                                     trigger: 'hover'
@@ -767,7 +767,7 @@
                                     </span>
                                     <!-- ko if: $data.requirement -->
                                     <span class="input-group-text" style="cursor: help;" data-bind="tooltip: {
-                                        title: $data.requirement ?? '',
+                                        title: Wiki.gameHelper.requirementHints($data.requirement, false).join('\n'),
                                         html: false,
                                         placement: 'bottom',
                                         trigger: 'hover'

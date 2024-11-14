@@ -23,7 +23,7 @@
                 </td>
                 <td data-bind="foreach: $data.type">
                     <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
-                        backgroundColor: TypeColor[$data]
+                        backgroundColor: GameConstants.TypeColor[$data]
                     }"></span>
                 </td>
                 <td data-bind="text: $data.attack"></td>
