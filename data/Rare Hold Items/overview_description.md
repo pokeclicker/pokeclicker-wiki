@@ -12,6 +12,7 @@ Some items have their own drop chance (the multipliers still applies):
 Item | Chance
 :---|---:
 Underground Items | 1/2048
+Rare Candy | 1/1024
 Magikarp Biscuit | 1/256
 Griseous Orb | 1/50
 Black and White DNA | 1/45

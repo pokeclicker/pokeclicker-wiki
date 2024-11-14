@@ -1,1 +1,0 @@
-The step 6 of [[Quest_Lines/Princess_Diancie]] quest rewards the player with a Aegislash (Blade)

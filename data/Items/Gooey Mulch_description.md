@@ -1,1 +1,1 @@
-Each Gooey mulch lasts for 5 minutes (300 seconds), and they can be stacked for a longer effect time.
+Increases chance of a wandering Pokémon to be attracted to applied berry and increases chance for a rare wandering Pokémon. Also increases catch chance by 10% for wandering Pokémon. Each Gooey mulch lasts for 5 minutes (300 seconds), and they can be stacked for a longer effect time.

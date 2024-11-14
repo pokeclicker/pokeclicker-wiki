@@ -3,7 +3,7 @@ Quest Points can be obtained by completing Quests.
 The Player gets 1 quest slot after completing the Tutorial. After that at level 5, 10, and 15, the 2nd, 3rd and 4th quest slot will open.
 Each time you complete a quest, the experience added to your Quest Level follows this formula:
 
-$QuestExperience=100 + \frac{QPReward}{100}$
+$QuestExperience=100 + \frac{QPReward}{10}$
 
 ---
 
@@ -202,7 +202,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 Item Name | Number Required | Necessary to Obtain | Cost
 :---: | :---: | :---: | :---:
 |[[File:Fire_egg.png\|25px]] Fire Egg | 1 | [[File:pokemon/390.png\|25px]] Chimchar | 1,000 [[File:questPoint.svg\|25px]]
-|[[File:Grass_egg.png\|25px]] Grass Egg | 2 | [[File:pokemon/387.png\|25px]] Turtwig | 2,000 [[File:questPoint.svg\|25px]]
+|[[File:Grass_egg.png\|25px]] Grass Egg | 1 | [[File:pokemon/387.png\|25px]] Turtwig | 1,000 [[File:questPoint.svg\|25px]]
 |[[File:Water_egg.png\|25px]] Water Egg | 1 | [[File:pokemon/393.png\|25px]] Piplup | 1,000 [[File:questPoint.svg\|25px]]
 |[[File:Fighting_egg.png\|25px]] Fighting Egg | 1 | [[File:pokemon/447.png\|25px]] Riolu | 1,000 [[File:questPoint.svg\|25px]]
 |[[File:Electric_egg.png\|25px]] Electric Egg | 1 | [[File:pokemon/417.png\|25px]] Pachirisu | 1,000 [[File:questPoint.svg\|25px]]

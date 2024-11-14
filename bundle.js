@@ -77459,7 +77459,9 @@ const requirementHints = (requirement, includeMarkdown = true) => {
                     }
                     break;
                 case QuestLineCompletedRequirement:
-                    hint = `Complete the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
+                    hint = req.option >= GameConstants.AchievementOption.equal
+                        ? `Complete the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
+                        : `No longer appears after completing the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
                     break;
                 case GymBadgeRequirement:
                     hint = req.option == GameConstants.AchievementOption.more
@@ -77759,6 +77761,11 @@ const { md } = require('./markdown-renderer');
 const getContent = (editor) => editor.value().split('\n').map(l => l.trimEnd()).join('\n');
 const getOriginalContent = (editor) => editor._rendered.value.split('\n').map(l => l.trimEnd()).join('\n');
 
+// list of discord ids banned from editing the wiki
+const banList = [
+  '516241570853552129', // primorollins (repeatedly editing a page after being told to stop)
+];
+
 const saveChanges = (editor, filename, btn) => {
   const content = getContent(editor);
   const originalContent = getOriginalContent(editor);
@@ -77768,6 +77775,10 @@ const saveChanges = (editor, filename, btn) => {
     Wiki.alert('No file changes detected..', 'warning', 3e3);
     btn.classList.remove('disabled');
     btn.innerText = 'Save Changes';
+    return;
+  }
+
+  if (banList.includes(Wiki.discord.ID())) {
     return;
   }
 
@@ -78056,6 +78067,14 @@ const gotoPage = (type, name, other, noHistory) => {
   window.location.hash = hash;
 };
 
+const gotoPageClick = (event, type, name, other) => {
+  if (event.ctrlKey) { // don't navigate when holding CTRL key
+    return true;
+  }
+  gotoPage(type, name, other);
+  return false;
+}
+
 // When the hash changes, we will load the new page
 // This also allows us to go forwards and back in history
 onhashchange = (event) => {
@@ -78192,6 +78211,28 @@ $(document).ready(() => {
   });
 });
 
+// clickable table rows - handle middle clicking
+$(document).on('mousedown', 'tr.clickable', (e) => {
+  // disable the auto scroll toggle from middle clicking
+  if (e.button == 1 && $(e.currentTarget).data('href')) {
+    e.preventDefault();
+    return false;
+  }
+});
+
+$(document).on('mouseup', 'tr.clickable', (e) => {
+  if (e.target.tagName == 'A') {
+    return true;
+  }
+
+  if (e.button == 1 || (e.button == 0 && e.ctrlKey)) {
+    const href = $(e.currentTarget).data('href');
+    if (href) {
+      window.open(href, '_blank');
+    }
+  }
+});
+
 // Save any settings the user has set before they leave
 window.onbeforeunload = () => {
   Settings.saveDefault();
@@ -78201,6 +78242,7 @@ module.exports = {
     pageType,
     pageName,
     gotoPage,
+    gotoPageClick,
 };
 
 },{"./datatables":504,"./markdown-editor":509,"./markdown-renderer":514,"./redirections":527}],516:[function(require,module,exports){
@@ -80000,6 +80042,12 @@ const searchOptions = [
     type: 'Dungeon Guides',
     page: g.name,
   })),
+  // Click Attack
+  {
+    display: 'Click Attack',
+    type: 'Click Attack',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {

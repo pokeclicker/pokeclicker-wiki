@@ -117,20 +117,28 @@
                         </button>
                     </h4>
                     <div id="obtain-method-dungeon" class="accordion-collapse collapse">
-                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.Dungeon])">
-                            <div class="input-group input-group-sm w-auto">
-                                <span class="input-group-text">
-                                    <a class="text-decoration-none text-body" data-bind="
-                                        text: $data.dungeon, attr: { href: `#!Dungeons/${$data.dungeon}` }"></a>
-                                </span>
-                                <!-- ko if: $data.requirements -->
-                                <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
-                                    title: $data.requirements ?? '',
-                                    html: false,
-                                    placement: 'bottom',
-                                    trigger: 'hover'
-                                }">🔒</span>
-                                <!-- /ko -->
+                        <div class="accordion-body" data-bind="foreach: Object.entries($data[PokemonLocationType.Dungeon].reduce((a, d) => {
+                            const region = TownList[d.dungeon].region;
+                            a[region] = a[region] || [];
+                            a[region].push(d);
+                            return a;
+                        }, {}))">
+                            <h5 data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0]])"></h5>
+                            <div class="d-flex flex-wrap gap-2 mb-2" data-bind="foreach: $data[1]">
+                                <div class="input-group input-group-sm w-auto">
+                                    <span class="input-group-text">
+                                        <a class="text-decoration-none text-body" data-bind="
+                                            text: $data.dungeon, attr: { href: `#!Dungeons/${$data.dungeon}` }"></a>
+                                    </span>
+                                    <!-- ko if: $data.requirements -->
+                                    <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
+                                        title: $data.requirements ?? '',
+                                        html: false,
+                                        placement: 'bottom',
+                                        trigger: 'hover'
+                                    }">🔒</span>
+                                    <!-- /ko -->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -149,20 +157,28 @@
                         </button>
                     </h4>
                     <div id="obtain-method-dungeon-boss" class="accordion-collapse collapse">
-                        <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.DungeonBoss])">
-                            <div class="input-group input-group-sm w-auto">
-                                <span class="input-group-text">
-                                    <a class="text-decoration-none text-body" data-bind="
-                                        text: $data.dungeon, attr: { href: `#!Dungeons/${$data.dungeon}` }"></a>
-                                </span>
-                                <!-- ko if: $data.requirements -->
-                                <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
-                                    title: $data.requirements ?? '',
-                                    html: false,
-                                    placement: 'bottom',
-                                    trigger: 'hover'
-                                }">🔒</span>
-                                <!-- /ko -->
+                        <div class="accordion-body" data-bind="foreach: Object.entries($data[PokemonLocationType.DungeonBoss].reduce((a, d) => {
+                            const region = TownList[d.dungeon].region;
+                            a[region] = a[region] || [];
+                            a[region].push(d);
+                            return a;
+                        }, {}))">
+                            <h5 data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0]])"></h5>
+                            <div class="d-flex flex-wrap gap-2 mb-2" data-bind="foreach: $data[1]">
+                                <div class="input-group input-group-sm w-auto">
+                                    <span class="input-group-text">
+                                        <a class="text-decoration-none text-body" data-bind="
+                                            text: $data.dungeon, attr: { href: `#!Dungeons/${$data.dungeon}` }"></a>
+                                    </span>
+                                    <!-- ko if: $data.requirements -->
+                                    <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
+                                        title: $data.requirements ?? '',
+                                        html: false,
+                                        placement: 'bottom',
+                                        trigger: 'hover'
+                                    }">🔒</span>
+                                    <!-- /ko -->
+                                </div>
                             </div>
                         </div>
                     </div>

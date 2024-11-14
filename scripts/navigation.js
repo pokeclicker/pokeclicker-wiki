@@ -32,6 +32,14 @@ const gotoPage = (type, name, other, noHistory) => {
   window.location.hash = hash;
 };
 
+const gotoPageClick = (event, type, name, other) => {
+  if (event.ctrlKey) { // don't navigate when holding CTRL key
+    return true;
+  }
+  gotoPage(type, name, other);
+  return false;
+}
+
 // When the hash changes, we will load the new page
 // This also allows us to go forwards and back in history
 onhashchange = (event) => {
@@ -168,6 +176,28 @@ $(document).ready(() => {
   });
 });
 
+// clickable table rows - handle middle clicking
+$(document).on('mousedown', 'tr.clickable', (e) => {
+  // disable the auto scroll toggle from middle clicking
+  if (e.button == 1 && $(e.currentTarget).data('href')) {
+    e.preventDefault();
+    return false;
+  }
+});
+
+$(document).on('mouseup', 'tr.clickable', (e) => {
+  if (e.target.tagName == 'A') {
+    return true;
+  }
+
+  if (e.button == 1 || (e.button == 0 && e.ctrlKey)) {
+    const href = $(e.currentTarget).data('href');
+    if (href) {
+      window.open(href, '_blank');
+    }
+  }
+});
+
 // Save any settings the user has set before they leave
 window.onbeforeunload = () => {
   Settings.saveDefault();
@@ -177,4 +207,5 @@ module.exports = {
     pageType,
     pageName,
     gotoPage,
+    gotoPageClick,
 };
