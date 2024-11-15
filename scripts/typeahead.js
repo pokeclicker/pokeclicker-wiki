@@ -242,6 +242,12 @@ const searchOptions = [
     type: 'Rare Hold Items',
     page: '',
   },
+  // Daily Deals
+  {
+    display: 'Daily Deals',
+    type: 'Daily Deals',
+    page: '',
+  },
   // Weather
   {
     display: 'Weather',
