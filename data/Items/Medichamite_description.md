@@ -1,2 +1,2 @@
 ### Acquisition
-Chance of dropping after completing a Quest. Must be at least Quest Level 16 and have reached Kalos.
+Found by completing quests at Quest Level 16 or higher. Must have reached Kalos.
