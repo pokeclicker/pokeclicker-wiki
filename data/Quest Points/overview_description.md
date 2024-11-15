@@ -67,7 +67,6 @@ Hoenn | [[File:Pinkan Dodrio.png\|25px]] | [[File:pokemon/85.01.png\|30px]] Pink
 Sinnoh | [[File:Combee.png\|25px]] | [[File:pokemon/415.png\|30px]] Combee | 6,750 [[File:questPoint.svg\|25px]]
 Sinnoh | [[File:Burmy (Plant).png\|25px]] | [[File:pokemon/412.png\|30px]] Burmy (Plant) | 6,750 [[File:questPoint.svg\|25px]]
 Sinnoh | [[File:Cherubi.png\|25px]] | [[File:pokemon/420.png\|30px]] Cherubi | 6,750 [[File:questPoint.svg\|25px]]
-Sinnoh | [[File:Spiritomb.png\|25px]] | [[File:pokemon/442.png\|30px]] Spiritomb | 6,750 [[File:questPoint.svg\|25px]]
 Unova | [[File:Zorua.png\|25px]] | [[File:pokemon/570.png\|30px]] Zorua | 50,625 [[File:questPoint.svg\|25px]]
 Unova | [[File:Meloetta (Pirouette).png\|25px]] | [[File:pokemon/648.01.png\|30px]] Meloetta (Pirouette) | 200,000 [[File:questPoint.svg\|25px]]
 Kalos | [[File:Furfrou (Dandy).png\|25px]] | [[File:pokemon/676.06.png\|30px]] Furfrou (Dandy) | 250,000 [[File:questPoint.svg\|25px]]
@@ -181,7 +180,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Beldum.png\|25px]] | 1 | [[File:pokemon/374.png\|30px]] Beldum | 22,500 [[File:questPoint.svg\|25px]]
 
 #### Sinnoh
-Without using the Underground to mine stones and using typed eggs, 78,250 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 19,950 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 71,500 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 13,200 [[File:questPoint.svg\|25px]] are needed.
 
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -215,7 +214,6 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Combee.png\|25px]] | 1 | [[File:pokemon/415.png\|30px]] Combee | 6,750 [[File:questPoint.svg\|25px]]
 |[[File:Burmy (Plant).png\|25px]] | 1 | [[File:pokemon/412.png\|30px]] Burmy | 6,750 [[File:questPoint.svg\|25px]]
 |[[File:Cherubi.png\|25px]] | 1 | [[File:pokemon/420.png\|30px]] Cherubi | 6,750 [[File:questPoint.svg\|25px]]
-|[[File:Spiritomb.png\|25px]] | 1 | [[File:pokemon/442.png\|30px]] Spiritomb | 6,750 [[File:questPoint.svg\|25px]]
 
 #### Unova
 Without using the Underground to mine stones and using typed eggs, 98,125 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 19,900 [[File:questPoint.svg\|25px]] are needed.
