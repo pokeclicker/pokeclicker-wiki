@@ -22,8 +22,8 @@ themes.options.sort((a, b) => (a.text).localeCompare(b.text));
 // Suppress game notifications
 Notifier.notify = () => {};
 
-// Ensure weather never satisfies requirements so they are always shown
-Weather.currentWeather = () => -1;
+// Ensure requirements are never satisfied so they are always shown
+Requirement.prototype.isCompleted = () => false;
 
 // Not sure why but this was causing an error on load after the v0.10.22 update
 SortModules = () => {};
@@ -78,6 +78,7 @@ GemDeals.generateDeals();
 ShardDeal.generateDeals();
 GenericDeal.generateDeals();
 SafariPokemonList.generateSafariLists(); // This needs to be after anything that generates shopmon due to Friend Safari calcs
+Weather.generateWeather(now);
 
 // Farm Simulator
 App.game.farming.plotList.forEach((p) => p.isUnlocked = true); // All plots unlocked
