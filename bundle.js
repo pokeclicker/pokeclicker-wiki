@@ -77381,6 +77381,7 @@ GemDeals.generateDeals();
 ShardDeal.generateDeals();
 GenericDeal.generateDeals();
 SafariPokemonList.generateSafariLists(); // This needs to be after anything that generates shopmon due to Friend Safari calcs
+Weather.generateWeather(now);
 
 // Farm Simulator
 App.game.farming.plotList.forEach((p) => p.isUnlocked = true); // All plots unlocked
@@ -77757,11 +77758,12 @@ window.Wiki = {
   shopMon: require('./pages/shopMon'),
   dungeonTokens: require('./pages/dungeonTokens'),
   oakItems: require('./pages/oakItems'),
+  gems: require('./pages/gems'),
   getDealChains: require('./pages/dealChains').getDealChains,
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":502,"./components":503,"./datatables":504,"./discord":505,"./game":506,"./gameHelper":507,"./markdown-renderer":514,"./navigation":515,"./notifications":516,"./pages/dealChains":517,"./pages/dreamOrbs":518,"./pages/dungeonTokens":519,"./pages/dungeons":520,"./pages/farm":521,"./pages/farmSimulator":522,"./pages/items":523,"./pages/oakItems":524,"./pages/pokemon":525,"./pages/shopMon":526,"./typeahead":528}],509:[function(require,module,exports){
+},{"../pokeclicker/package.json":502,"./components":503,"./datatables":504,"./discord":505,"./game":506,"./gameHelper":507,"./markdown-renderer":514,"./navigation":515,"./notifications":516,"./pages/dealChains":517,"./pages/dreamOrbs":518,"./pages/dungeonTokens":519,"./pages/dungeons":520,"./pages/farm":521,"./pages/farmSimulator":522,"./pages/gems":523,"./pages/items":524,"./pages/oakItems":525,"./pages/pokemon":526,"./pages/shopMon":527,"./typeahead":529}],509:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const getContent = (editor) => editor.value().split('\n').map(l => l.trimEnd()).join('\n');
@@ -78251,7 +78253,7 @@ module.exports = {
     gotoPageClick,
 };
 
-},{"./datatables":504,"./markdown-editor":509,"./markdown-renderer":514,"./redirections":527}],516:[function(require,module,exports){
+},{"./datatables":504,"./markdown-editor":509,"./markdown-renderer":514,"./redirections":528}],516:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -78523,7 +78525,7 @@ const highestRoute = (region, weather) => {
         const GBMB = (DT* (catchChanceAV+.15))/(2);
         const UB = (DT* (catchChanceAV+.1))/(1.75)
         const UBMB = (DT* (catchChanceAV+.2))/(1.75);
-        routeArr.push( [Routes.getRoute(region,route.number).routeName, DT.toLocaleString(), +(PB). toFixed(2), +(PBMB). toFixed(2), +(GB). toFixed(2), +(GBMB). toFixed(2), +(UB). toFixed(2), +(UBMB). toFixed(2)] );
+        routeArr.push([Routes.getRoute(region,route.number).routeName, DT.toLocaleString(), +(PB).toFixed(2), +(PBMB).toFixed(2), +(GB).toFixed(2), +(GBMB).toFixed(2), +(UB).toFixed(2), +(UBMB).toFixed(2)])
     })
 
     var highestPB = routeArr.reduce((max, dt) => {
@@ -79296,6 +79298,146 @@ module.exports = {
 }
 
 },{}],523:[function(require,module,exports){
+// routeAvgHp copied from PokemonFactory.generateWildPokemon
+const routeAvgHp = (region, route) => {
+    const poke = [...new Set(Object.values(Routes.getRoute(region, route).pokemon).flat().map(p => p.pokemon ?? p).flat())];
+    const total = poke.map(p => pokemonMap[p].base.hitpoints).reduce((s, a) => s + a, 0);
+    return total / poke.length;
+};
+
+const getStandardEncounters = (route) => {
+    return Object.values(route.pokemon).flat().filter((p) => typeof p === 'string');
+}
+
+const maxRouteHp = (regionRoutes, routeName) => {
+    const route = regionRoutes.find((r) => r.routeName === routeName);
+    const allMons = getStandardEncounters(route);
+    const maxHpStat = Math.max(...allMons.map((p) => PokemonHelper.getPokemonByName(p).hitpoints));
+    return Math.round(PokemonFactory.routeHealth(route.number, route.region) * (0.9 + (maxHpStat / routeAvgHp(route.region, route.number)) / 10));
+}
+
+const maxGymHp = (gymName) => {
+    return Math.max(...GymList[gymName].pokemons.map((p) => p.maxHealth));
+}
+
+const gemsPerPokemon = (pokemonName, gemType) => {
+    const pokemon = PokemonHelper.getPokemonByName(pokemonName);
+    const targetType = PokemonType[gemType];
+    if (pokemon.type2 === PokemonType.None) {
+        return pokemon.type1 === targetType ? 2 : 0;
+    } else {
+        return (pokemon.type1 === targetType || pokemon.type2 === targetType) ? 1 : 0;
+    }
+}
+
+const gemsPerGymEncounter = (gymName, gemType) => {
+    const gym = GymList[gymName];
+    const totalMons = gym.pokemons.length;
+    const totalGemsOfType = gym.pokemons.reduce((acc, p) => acc + 5 * gemsPerPokemon(p.name, gemType), 0);
+    return totalGemsOfType / totalMons;
+}
+
+const gemsPerRouteEncounter = (route, gemType) => {
+    const allMons = getStandardEncounters(route);
+    const totalMons = allMons.length;
+    const totalGemsOfType = allMons.reduce((acc, p) => acc + gemsPerPokemon(p, gemType), 0);
+    return totalGemsOfType / totalMons;
+}
+
+const bestGemsPerRegion = (region, gemType) => {
+    const regionRoutes = Routes.regionRoutes.filter((r) => r.region == region);
+    const allRouteGems = regionRoutes.map((route) => ({
+        battleType: "Route",
+        name: route.routeName,
+        gemsPerEncounter: gemsPerRouteEncounter(route, gemType),
+    }));
+
+    const regionGyms = GameConstants.RegionGyms[region].filter((g) => !g.includes('Trial'));
+    const allGymGems = regionGyms.map((gym) => ({
+        battleType: "Gym",
+        name: gym,
+        gemsPerEncounter: gemsPerGymEncounter(gym, gemType),
+    }));
+
+    return allRouteGems.concat(allGymGems)
+        .filter((battle) => battle.gemsPerEncounter > 0)
+        .sort((a, b) => b.gemsPerEncounter - a.gemsPerEncounter)
+        .splice(0, 2)
+        .map((gemData) => {
+            gemData.maxHealth = gemData.battleType === "Route" ? maxRouteHp(regionRoutes, gemData.name) : maxGymHp(gemData.name);
+            return gemData;
+        });
+}
+
+const bestCaptureRoutesPerRegion = (region, type) => {
+    const regionRoutes = Routes.regionRoutes.filter((r) => r.region == region);
+    const currentWeather = Weather.regionalWeather[region]();
+    const today = GameHelper.today().getDay();
+    const allRegionRoutesTypeCatchChance = regionRoutes.map((route) => {
+        const normalEncounters = getStandardEncounters(route);
+        const specialEncounters = route.pokemon.special.flatMap((special) => {
+            if (special.req instanceof OneFromManyRequirement || special.req instanceof SpecialEventRandomRequirement) {
+                // OneFromMany is Santa Jynx only
+                return [];
+            }
+            if (special.req instanceof WeatherRequirement) {
+                return special.req.weather.includes(currentWeather) ? special.pokemon : [];
+            }
+            if (special.req instanceof DayOfWeekRequirement) {
+                return special.req.DayOfWeekNum === today ? special.pokemon : [];
+            }
+            if (special.req instanceof MultiRequirement) {
+                // This might not cover all permutations of requirements
+                if (special.req.requirements.find((req) => req instanceof SpecialEventRequirement)) return [];
+                const weatherReq = special.req.requirements.find((req) => req instanceof WeatherRequirement);
+                if (weatherReq) return weatherReq.weather.includes(currentWeather) ? special.pokemon : [];
+                const dayReq = special.req.requirements.find((req) => req instanceof DayOfWeekRequirement);
+                if (dayReq) return dayReq.DayOfWeekNum === today ? special.pokemon : [];
+            }
+            return special.pokemon
+        });
+
+        const allEncounters = normalEncounters.concat(specialEncounters);
+        const typeCatchChances = allEncounters.map((p) => {
+            const pokemon = PokemonHelper.getPokemonByName(p);
+            return (pokemon.type1 === type || pokemon.type2 === type) ? PokemonFactory.catchRateHelper(pokemon.catchRate, true) : 0;
+        });
+        return {
+            route: route,
+            catchChances: typeCatchChances,
+        };
+    });
+
+    const allRoutesWithType = allRegionRoutesTypeCatchChance.filter((route) => route.catchChances.some((chance) => chance > 0));
+    const allRoutesWithCatchBonuses = allRoutesWithType.map((route) => {
+        const encounters = route.catchChances.length;
+        return {
+            route: route.route,
+            pokeball: route.catchChances.reduce((a, b) => a + b, 0) / encounters,
+            ultraball: route.catchChances.map((chance) => chance > 0 ? chance + 10 : chance).reduce((a, b) => a + b, 0) / encounters,
+            ultraballMagicBall: route.catchChances.map((chance) => chance > 0 ? chance + 20 : chance).reduce((a, b) => a + b, 0) / encounters,
+        }
+    });
+    return allRoutesWithCatchBonuses
+        .sort((a, b) => b.ultraballMagicBall - a.ultraballMagicBall)
+        .splice(0, 2)
+        .map((route) => {
+            return {
+                ...route,
+                weather: currentWeather,
+                today: today,
+                maxHealth: maxRouteHp(regionRoutes, route.route.routeName),
+            }
+        });
+}
+
+
+module.exports = {
+    bestGemsPerRegion,
+    bestCaptureRoutesPerRegion,
+}
+
+},{}],524:[function(require,module,exports){
 const getItemName =  (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
@@ -79387,7 +79529,7 @@ module.exports = {
     getItemCategoryAndPageFromObject,
 };
 
-},{}],524:[function(require,module,exports){
+},{}],525:[function(require,module,exports){
 const getOakItemBonus = (oakItem, level) => {
     const bonus = oakItem.bonusList[level];
     switch (oakItem.name) {
@@ -79461,7 +79603,7 @@ module.exports = {
     getOakItemBonus,
     getOakItemUpgradeReq,
 };
-},{}],525:[function(require,module,exports){
+},{}],526:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -79551,7 +79693,7 @@ module.exports = {
     battleCafeToHumanReadableString,
 }
 
-},{}],526:[function(require,module,exports){
+},{}],527:[function(require,module,exports){
 function getShopItemsByCurrencyAndFilter(currency, itemFilter) {
     var towns = Object.values(TownList).filter(t => t.region <= GameConstants.MAX_AVAILABLE_REGION);
     var filteredTowns = [];
@@ -79597,7 +79739,7 @@ module.exports = {
     getShopItems,
     getUniqueItems,
 };
-},{}],527:[function(require,module,exports){
+},{}],528:[function(require,module,exports){
 const redirections = [
     ({type, name}) => {
         if (type === 'Pokemon') {
@@ -79649,7 +79791,7 @@ module.exports = {
     redirections
 };
 
-},{}],528:[function(require,module,exports){
+},{}],529:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 const { getAvailablePokemon } = require('./pages/pokemon');
 
@@ -79710,6 +79852,11 @@ const searchOptions = [
   ...GameHelper.enumStrings(PokemonType).filter(t => t != 'None').map(t => ({
     display: `${t} Gem`,
     type: 'Gems',
+    page: t,
+  })),
+  ...GameHelper.enumStrings(PokemonType).filter(t => t != 'None').map(t => ({
+    display: `${t} Catch Type Quests`,
+    type: 'Catch Type Quests',
     page: t,
   })),
   // Berries
@@ -80119,4 +80266,4 @@ module.exports = {
   searchOptions,
 };
 
-},{"./navigation":515,"./pages/pokemon":525}]},{},[508]);
+},{"./navigation":515,"./pages/pokemon":526}]},{},[508]);
