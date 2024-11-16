@@ -81,7 +81,7 @@ const getEvolutionHints = (evoData) => {
     // Base Evo type (Level or Stone)
     if (isLevelEvolution(evoData)) {
         const levelReq = getRequirementFromRestrictions(restrictions, 'PokemonLevelRequirement');
-        hint = levelReq.requiredValue == 1 ? `Hatch ${levelReq.pokemon}` : `${levelReq.pokemon} must reach level ${levelReq.requiredValue}`;
+        hint = levelReq.requiredValue == 1 ? `Hatch or feed a Rare Candy to ${levelReq.pokemon}` : `${levelReq.pokemon} must reach level ${levelReq.requiredValue}`;
     } else if (isStoneEvolution(evoData)) {
         const stone = ItemList[GameConstants.StoneType[evoData.stone]]._displayName;
         hint = `Requires using ${GameHelper.anOrA(stone)} ${stone}`;
@@ -127,6 +127,12 @@ const getEvolutionHints = (evoData) => {
         const megaReq = getRequirementFromRestrictions(restrictions, 'MegaEvolveRequirement');
         const requiredAttack = pokemonMap[megaReq.name].attack * GameConstants.MEGA_REQUIRED_ATTACK_MULTIPLIER;
         hint += ` after obtaining ${GameConstants.humanifyString(GameConstants.MegaStoneType[megaReq.megaStone])} and ${megaReq.name} has ${requiredAttack.toLocaleString()} or more attack`;
+    }
+
+    if (isRequiredAttackEvolution(restrictions)) {
+        const req = getRequirementFromRestrictions(restrictions, 'PokemonAttackRequirement');
+        const requiredAttack = pokemonMap[req.pokemon].attack * req.requiredValue;
+        hint += ` when it has ${requiredAttack.toLocaleString()} or more attack`;
     }
 
     if (hint.length) {
@@ -186,6 +192,10 @@ const isHeldItemRestrictedEvolution = (restrictions) => {
 const isMegaEvolution = (restrictions) => {
     return hasEvoRestrictions(restrictions, ['MegaEvolveRequirement']);
 };
+
+const isRequiredAttackEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['PokemonAttackRequirement']);
+}
 
 const hasEvoRestrictions = (restrictions, requirements) => {
     return requirements.every(req => restrictions.some(res => res.constructor.name == req));
