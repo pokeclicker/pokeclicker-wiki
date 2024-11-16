@@ -77534,7 +77534,7 @@ const getEvolutionHints = (evoData) => {
     }
 
     if (isQuestLineRestrictedEvolution(restrictions)) {
-        const questReq = getRequirementFromRestrictions(restrictions, 'QuestLineRequirement');
+        const questReq = getRequirementFromRestrictions(restrictions, 'QuestLineCompletedRequirement');
         hint += ` after completing the ${questReq.questLineName} quest line`;
     };
 
@@ -77604,7 +77604,7 @@ const isEnvironmentRestrictedEvolution = (restrictions) => {
 };
 
 const isQuestLineRestrictedEvolution = (restrictions) => {
-    return hasEvoRestrictions(restrictions, ['QuestLineRequirement']);
+    return hasEvoRestrictions(restrictions, ['QuestLineCompletedRequirement']);
 }
 
 const isInRegionRestrictedEvolution = (restrictions) => {
