@@ -450,3 +450,10 @@ td.tight {
 .obtain-methods .accordion-button img {
   padding-right: 10px;
 }
+
+.type-icon {
+  line-height: normal;
+  text-shadow: 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 2px black, 0px 0px 2px black, 0px 0px 3px black;
+  text-transform: uppercase;
+  color: #f5f5f5;
+}

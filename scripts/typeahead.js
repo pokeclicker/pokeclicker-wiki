@@ -60,6 +60,11 @@ const searchOptions = [
     type: 'Gems',
     page: t,
   })),
+  ...GameHelper.enumStrings(PokemonType).filter(t => t != 'None').map(t => ({
+    display: `${t} Catch Type Quests`,
+    type: 'Catch Type Quests',
+    page: t,
+  })),
   // Berries
   {
     display: 'Berries',

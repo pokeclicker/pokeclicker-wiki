@@ -1,0 +1,75 @@
+<div>
+    <!-- ko ifnot: PokemonType[Wiki.pageName()] >= 0 -->
+    <h3>Pokémon type not found...</h3>
+    <!-- /ko -->
+    <!-- ko if: PokemonType[Wiki.pageName()] >= 0 -->
+    <div data-bind="with: Wiki.pageName()">
+        <h3 data-bind="text: `Best locations for completing Capture ${$data}-type Pokémon quests`"></h3>
+        <p>The top two locations from each Region are listed below, if they exist.</p>
+        <p>Current weather and day of week are taken into account for Route encounters, but other requirements (such as previously caught) are assumed to be met.</p>
+        <p>The number shown is the chance that any single encounter on that route will be a successful catch of the desired type, while using the equipment specified.</p>
+        <div class="table-responsive">
+            <table class="table table-hover table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="align-middle">Region</th>
+                        <th class="align-middle">Current Weather</th>
+                        <th class="align-middle">Location</th>
+                        <th class="align-middle" style="text-align: right;">Maximum HP</th>
+                        <th class="align-middle" style="text-align: right; width: 15%;">
+                            <img width="24" class="me-1" src="./pokeclicker/docs/assets/images/pokeball/Pokeball.svg" data-bind="tooltip: {
+                                title: 'Poké Ball',
+                                trigger: 'hover'
+                            }">
+                        </th>
+                        <th class="align-middle" style="text-align: right; width: 15%;">
+                            <img width="24" class="me-1" src="./pokeclicker/docs/assets/images/pokeball/Pokeball.svg" data-bind="tooltip: {
+                                title: 'Poké Ball',
+                                trigger: 'hover'
+                            }"> +
+                            <img width="32" class="me-1" src="./images/Magic_Ball.png" data-bind="tooltip: {
+                                title: 'Magic Ball (Level 5)',
+                                trigger: 'hover'
+                            }">
+                            or&nbsp;
+                            <img width="24" class="me-1" src="./pokeclicker/docs/assets/images/pokeball/Ultraball.svg" data-bind="tooltip: {
+                                title: 'Ultra Ball',
+                                trigger: 'hover'
+                            }">
+                        </th>
+                        <th class="align-middle" style="text-align: right; width: 15%;">
+                            <img width="24" class="me-1" src="./pokeclicker/docs/assets/images/pokeball/Ultraball.svg" data-bind="tooltip: {
+                                title: 'Ultra Ball',
+                                trigger: 'hover'
+                            }"> +
+                            <img width="32" class="me-1" src="./images/Magic_Ball.png" data-bind="tooltip: {
+                                title: 'Magic Ball (Level 5)',
+                                trigger: 'hover'
+                            }">
+                        </th>
+                    </tr>
+                </thead>
+                <tbody
+                    data-bind="foreach: { data: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r <= GameConstants.MAX_AVAILABLE_REGION && r != GameConstants.Region.none), as: 'region' }">
+                    <!-- ko foreach: Wiki.gems.bestCaptureRoutesPerRegion(region, PokemonType[$parent]) -->
+                    <tr>
+                        <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[region]), attr: { 'data-sort': region }"></td>
+                        <td class="align-middle text-center tight" style="box-shadow: none; border: none;" data-bind="style: { 'background-color': Weather.weatherConditions[$data.weather].color, display: 'flex', width: 'auto' }">
+                            <img data-bind="attr: { src: `./pokeclicker/docs/assets/images/weather/${WeatherType[$data.weather]}.png` }"
+                                width="24px">
+                            <ko data-bind="text: GameConstants.humanifyString(WeatherType[$data.weather])"></ko>
+                        </td>
+                        <td><a class="text-nowrap" style="text-decoration: none;" data-bind="text: $data.route.routeName.replace(), attr: { href: `#!Routes/${$data.route.routeName}` }"></a></td>
+                        <td class="text-nowrap" style="text-align: right;" data-bind="text: `${$data.maxHealth.toLocaleString()} ❤️`, attr: { 'data-sort' : $data.maxHealth }"></td>
+                        <td style="text-align: right;" data-bind="text: `${($data.pokeball / 100).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, attr: { 'data-sort': $data.pokeball }"></td>
+                        <td style="text-align: right;" data-bind="text: `${($data.ultraball / 100).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, attr: { 'data-sort': $data.ultraball }"></td>
+                        <td style="text-align: right;" data-bind="text: `${($data.ultraballMagicBall / 100).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, attr: { 'data-sort': $data.ultraballMagicBall }"></td>
+                    </tr>
+                    <!-- /ko -->
+                </tbody>
+            </table>
+        </div>
+        <p>Refresh if the weather in the regions above are out of sync with your game.</p>
+    </div>
+    <!-- /ko -->
+</div>
