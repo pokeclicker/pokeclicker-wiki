@@ -100,7 +100,7 @@ const getEvolutionHints = (evoData) => {
 
     if (isEnvironmentRestrictedEvolution(restrictions)) {
         const envReq = getRequirementFromRestrictions(restrictions, 'InEnvironmentRequirement');
-        hint += ` in ${GameHelper.anOrA(envReq.environment)} ${envReq.environment} environment`;
+        hint += ` in ${GameHelper.anOrA(envReq.environment)} ${GameConstants.camelCaseToString(envReq.environment)} environment`;
     }
 
     if (isQuestLineRestrictedEvolution(restrictions)) {
