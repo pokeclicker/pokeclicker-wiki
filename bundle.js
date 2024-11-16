@@ -77545,7 +77545,7 @@ const getEvolutionHints = (evoData) => {
 
     if (isWeatherRestrictedEvolution(restrictions)) {
         const weatherReq = getRequirementFromRestrictions(restrictions, 'WeatherRequirement');
-        hint += ` during ${listFormatter.format(weatherReq.weather.map(w => WeatherType[w]))} weather`;
+        hint += ` during ${listFormatter.format(weatherReq.weather.map(w => GameConstants.humanifyString(WeatherType[w])))} weather`;
     }
 
     if (isHeldItemRestrictedEvolution(restrictions)) {

@@ -49,7 +49,7 @@
             <td data-bind="text: $data.basePokemon"></td>
             <td data-bind="text: $data.evolvedPokemon"></td>
             <td data-bind="text:
-                $data.restrictions.find(r => r instanceof WeatherRequirement).weather.map(w => WeatherType[w])
+                $data.restrictions.find(r => r instanceof WeatherRequirement).weather.map(w => GameConstants.humanifyString(WeatherType[w]))
                     .reduce((str, w, i, arr) => i === arr.length - 1 ? `${str}, or ${w}` : `${str}, ${w}`)"></td>
         </tr>
     </tbody>
