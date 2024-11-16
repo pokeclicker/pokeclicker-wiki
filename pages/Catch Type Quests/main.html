@@ -57,7 +57,7 @@
                         <td class="align-middle text-center tight" style="box-shadow: none; border: none;" data-bind="style: { 'background-color': Weather.weatherConditions[$data.weather].color, display: 'flex', width: 'auto' }">
                             <img data-bind="attr: { src: `./pokeclicker/docs/assets/images/weather/${WeatherType[$data.weather]}.png` }"
                                 width="24px">
-                            <ko data-bind="text: GameConstants.humanifyString(WeatherType[$data.weather])"></ko>
+                            <ko class="text-dark" data-bind="text: GameConstants.humanifyString(WeatherType[$data.weather])"></ko>
                         </td>
                         <td><a class="text-nowrap" style="text-decoration: none;" data-bind="text: $data.route.routeName.replace(), attr: { href: `#!Routes/${$data.route.routeName}` }"></a></td>
                         <td class="text-nowrap" style="text-align: right;" data-bind="text: `${$data.maxHealth.toLocaleString()} ❤️`, attr: { 'data-sort' : $data.maxHealth }"></td>
