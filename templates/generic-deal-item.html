@@ -1,0 +1,36 @@
+<!-- ko with: model -->
+
+<!-- ko if: $data.type == 'Gem' -->
+<img width="24" data-bind="attr: { src: `./images/${PokemonType[$data.gemType]} Gem.png` }" />
+<ko data-bind="text: `${$data.amount.toLocaleString()} × `"></ko>
+<a href="#!" class="text-decoration-none" data-bind="text: `${PokemonType[$data.gemType]} Gem`,
+    attr: { href: `#!Gems/${PokemonType[$data.gemType]}` }"></a>
+<!-- /ko -->
+
+<!-- ko if: $data.type == 'Shard' -->
+<img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.shardItem.image }" />
+<ko data-bind="text: `${$data.amount.toLocaleString()} × `"></ko>
+<a href="#!" class="text-decoration-none" data-bind="text: `${$data.shardItem.displayName}`,
+    attr: { href: `#!${Wiki.items.getItemPageFromObject($data.shardItem)}` }"></a>
+<!-- /ko -->
+
+<!-- ko if: $data.type == 'Berry' -->
+<img width="24" class="me-1" data-bind="attr: { src: `./images/${BerryType[$data.berryType]}.png` }">
+<ko data-bind="text: `${$data.amount.toLocaleString()} × `"></ko>
+<a href="#!" class="text-decoration-none" data-bind="text: `${BerryType[$data.berryType]} Berry`,
+    attr: { href: `#!Berries/${BerryType[$data.berryType]}` }"></a>
+<!-- /ko -->
+
+<!-- ko if: $data.type == 'Item' -->
+<img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.item.image }" />
+<ko data-bind="text: `${$data.amount.toLocaleString()} × `"></ko>
+<a href="#!" class="text-decoration-none" data-bind="text: `${$data.item.displayName}`,
+    attr: { href: `#!${Wiki.items.getItemPageFromObject($data.item)}` }"></a>
+<!-- /ko -->
+
+<!-- ko if: $data.type == 'Amount' -->
+<img width="18" class="me-1" data-bind="attr: { src: `./images/${GameConstants.Currency[$data.currency.currency]}.svg` }" />
+<ko data-bind="text: `${$data.currency.amount.toLocaleString()} × ${GameConstants.camelCaseToString(GameConstants.Currency[$data.currency.currency])}`"></ko>
+<!-- /ko -->
+
+<!-- /ko -->

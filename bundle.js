@@ -77172,6 +77172,15 @@ ko.components.register('pokemon-summary', {
   template: { fromUrl: 'pokemon-summary' },
 });
 
+function GenericDeal(params) {
+  this.model = params.model;
+}
+
+ko.components.register('generic-deal-item', {
+  viewModel: GenericDeal,
+  template: { fromUrl: 'generic-deal-item' },
+});
+
 },{}],504:[function(require,module,exports){
 // Applying datatables to all tables on the page (with some exceptions)
 const applyDatatables = () => {

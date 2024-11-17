@@ -184,6 +184,29 @@
         </div>
     </div>
     <!-- /ko -->
+    <!-- ko foreach: $data.content.filter(c => c instanceof GenericTraderShop)  -->
+    <div class="mt-3">
+        <h3 data-bind="text: $data.name"></h3>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <th>Cost</th>
+                    <th>Receive</th>
+                </thead>
+                <tbody data-bind="foreach: GenericDeal.list[$data.traderID]()">
+                    <tr class="align-middle">
+                        <td data-bind="foreach: $data._costs">
+                            <div><generic-deal-item params="model: $data"></generic-deal-item></div>
+                        </td>
+                        <td data-bind="foreach: $data._profits">
+                            <div><generic-deal-item params="model: $data"></generic-deal-item></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- /ko -->
     <!-- ko if: $data.content.filter(c => c instanceof SafariTownContent).length -->
     <div class="mt-3">
         <h2>Safari Encounters</h2>
