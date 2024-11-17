@@ -79539,6 +79539,20 @@ const getItemCategoryAndPageFromObject = (item) => {
     }
 };
 
+const getTownsWithTradesForItem = (itemName) => {
+    return Object.values(TownList).filter(t => t.content.some(c => {
+        if (c instanceof ShardTraderShop && ShardDeal.list[c.location]?.().some(d => d.item.itemType.name == itemName)) {
+            return true;
+        }
+
+        if (c instanceof GenericTraderShop && GenericDeal.list[c.traderID]?.().some(d => d._profits.some(p => p.item?.name == itemName))) {
+            return true;
+        }
+
+        return false;
+    }));
+};
+
 module.exports = {
     getItemName,
     getItemImage,
@@ -79546,6 +79560,7 @@ module.exports = {
     getItemCategoryAndPageFromTypeAndId,
     getItemPageFromObject,
     getItemCategoryAndPageFromObject,
+    getTownsWithTradesForItem,
 };
 
 },{}],525:[function(require,module,exports){
