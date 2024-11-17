@@ -77454,7 +77454,7 @@ const requirementHints = (requirement, includeMarkdown = true) => {
             let hint = req.hint();
             switch (req.constructor) {
                 case RouteKillRequirement:
-                    const routeName = Routes.getName(req.route, req.region, true);
+                    const routeName = Routes.getName(req.route, req.region, false);
                     hint = `Defeat ${req.requiredValue} or more Pokémon on ${includeMarkdown ? `[[Routes/${routeName}]]` : routeName}.`;
                     break;
                 case ClearDungeonRequirement:
