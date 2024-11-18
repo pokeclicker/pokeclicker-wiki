@@ -146,7 +146,7 @@
                             </div>
                             <!-- /ko -->
                             <div data-bind="if: $data.questPointCost > 0">
-                                <img class="me-1" width="18" data-bind="attr: { src: './images/questPoint.svg' }" width="18px"/>
+                                <img class="me-1" width="18" data-bind="attr: { src: `./images/${GameConstants.Currency[$data.currencyType]}.svg` }" width="18px"/>
                                 <ko data-bind="text: $data.questPointCost.toLocaleString()"></ko>
                             </div>
                         </td>
