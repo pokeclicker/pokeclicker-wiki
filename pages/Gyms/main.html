@@ -81,7 +81,7 @@
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
                     <td class="align-middle" data-bind="text: $data.level.toLocaleString()"></td>
-                    <td class="align-middle" data-bind="text: (pokemonMap[$data.name].exp * 1.5).toLocaleString()"></td>
+                    <td class="align-middle" data-bind="text: (Math.floor(pokemonMap[$data.name].exp * $data.level * 1.5 / 9)).toLocaleString()"></td>
                     <td class="align-middle" data-bind="foreach: pokemonMap[$data.name].type">
                         <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
                             backgroundColor: GameConstants.TypeColor[$data]
@@ -118,7 +118,7 @@
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
                     <td class="align-middle" data-bind="text: $data.level.toLocaleString()"></td>
-                    <td class="align-middle" data-bind="text: (pokemonMap[$data.name].exp * 1.5).toLocaleString()"></td>
+                    <td class="align-middle" data-bind="text: (Math.floor(pokemonMap[$data.name].exp * $data.level * 1.5 / 9)).toLocaleString()"></td>
                     <td class="align-middle" data-bind="foreach: pokemonMap[$data.name].type">
                         <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
                             backgroundColor: GameConstants.TypeColor[$data]
@@ -146,7 +146,7 @@
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
                     <td class="align-middle" data-bind="text: $data.level.toLocaleString()"></td>
-                    <td class="align-middle" data-bind="text: (pokemonMap[$data.name].exp * 1.5).toLocaleString()"></td>
+                    <td class="align-middle" data-bind="text: (Math.floor(pokemonMap[$data.name].exp * $data.level * 1.5 / 9)).toLocaleString()"></td>
                     <td class="align-middle" data-bind="foreach: pokemonMap[$data.name].type">
                         <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
                             backgroundColor: GameConstants.TypeColor[$data]
