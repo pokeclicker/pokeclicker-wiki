@@ -46,7 +46,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Egg Steps</td>
+                    <td>Egg Steps per Pokémon</td>
                     <td data-bind="text: +Math.sqrt(MapHelper.normalizeRoute($data.badgeReward * 3 + 1, GameConstants.Region.none)).toFixed(2)"></td>
                 </tr>
                 <!-- ko if: $data.requirements.length -->
@@ -69,7 +69,7 @@
                     <th>Pokémon</th>
                     <th>HP</th>
                     <th>Level</th>
-                    <th>Experience</th>
+                    <th>Base Experience</th>
                     <th>Type</th>
                 </tr>
             </thead>
@@ -81,7 +81,7 @@
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
                     <td class="align-middle" data-bind="text: $data.level.toLocaleString()"></td>
-                    <td class="align-middle" data-bind="text: (pokemonMap[$data.name].exp * 1.5).toLocaleString()"></td>
+                    <td class="align-middle" data-bind="text: (Math.floor(pokemonMap[$data.name].exp * $data.level * 1.5 / 9)).toLocaleString()"></td>
                     <td class="align-middle" data-bind="foreach: pokemonMap[$data.name].type">
                         <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
                             backgroundColor: GameConstants.TypeColor[$data]
@@ -102,7 +102,7 @@
                     <th>Pokémon</th>
                     <th>HP</th>
                     <th>Level</th>
-                    <th>Experience</th>
+                    <th>Base Experience</th>
                     <th>Type</th>
                 </tr>
             </thead>
@@ -118,7 +118,7 @@
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
                     <td class="align-middle" data-bind="text: $data.level.toLocaleString()"></td>
-                    <td class="align-middle" data-bind="text: (pokemonMap[$data.name].exp * 1.5).toLocaleString()"></td>
+                    <td class="align-middle" data-bind="text: (Math.floor(pokemonMap[$data.name].exp * $data.level * 1.5 / 9)).toLocaleString()"></td>
                     <td class="align-middle" data-bind="foreach: pokemonMap[$data.name].type">
                         <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
                             backgroundColor: GameConstants.TypeColor[$data]
@@ -146,7 +146,7 @@
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
                     <td class="align-middle" data-bind="text: $data.level.toLocaleString()"></td>
-                    <td class="align-middle" data-bind="text: (pokemonMap[$data.name].exp * 1.5).toLocaleString()"></td>
+                    <td class="align-middle" data-bind="text: (Math.floor(pokemonMap[$data.name].exp * $data.level * 1.5 / 9)).toLocaleString()"></td>
                     <td class="align-middle" data-bind="foreach: pokemonMap[$data.name].type">
                         <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
                             backgroundColor: GameConstants.TypeColor[$data]
