@@ -23,7 +23,7 @@ Name | Starting Price | Description
 [[File:Surprise_Mulch.png\|25px]] [[Items/Surprise Mulch]] | 150 [[File:farmPoint.svg\|25px]] | Increases the chance of Berry mutations by 50% on any (can be empty or occupied) plot it is applied to
 [[File:Amaze_Mulch.png\|25px]] [[Items/Amaze Mulch]] | 200 [[File:farmPoint.svg\|25px]] | Increases all Berry effects on a plot: Growth and Mutation rates both boosted by 25%, Harvest rate boosted by 50%, Replant chance boosted by 50%
 [[File:Freeze_Mulch.png\|25px]] [[Items/Freeze Mulch]] | 350 [[File:farmPoint.svg\|25px]] | Stops Berry growth (and withering) timer and aura effect when applied to a plot occupied by a Berry plant.
-[[File:Gooey_Mulch.png\|25px]] [[Items/Gooey Mulch]] 100 [[File:farmPoint.svg\|25px]] | Helps attract rarer species of wandering Pokémon. Gooed Pokémon are 10% more likely to be caught.
+[[File:Gooey_Mulch.png\|25px]] [[Items/Gooey Mulch]]| 100 [[File:farmPoint.svg\|25px]] | Helps attract rarer species of wandering Pokémon. Gooed Pokémon are 10% more likely to be caught.
 [[File:Berry_Shovel.png\|25px]] [[Items/Berry Shovel]] | 300 [[File:farmPoint.svg\|25px]] | Clears an occupied plot instantly. Harvestable plots that are shoveled are harvested and not cleared
 [[File:Mulch_Shovel.png\|25px]] [[Items/Mulch Shovel]] | 300 [[File:farmPoint.svg\|25px]] | Removes Mulch from a plot in the Farm
 
