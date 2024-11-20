@@ -34,7 +34,7 @@
                 <!-- ko if: $index() === 0 -->
                 <td class="align-middle ps-4" data-bind="attr: { rowspan: $parent.berries.length }">→</td>
                 <td class="align-middle" data-bind="attr: { rowspan: $parent.berries.length }">
-                    <img data-bind="attr: { src: `./images/${$parent.item.itemType.name}.png` }" width="28px" class="me-2">
+                    <img data-bind="attr: { src: `./pokeclicker/docs/${ItemList[$parent.item.itemType.name].image}` }" width="28px" class="me-2">
                     <ko data-bind="text: `${$parent.item.amount} × ${$parent.item.itemType._displayName ?? $parent.item.itemType.name}`"></ko>
                 </td>
                 <!-- /ko -->

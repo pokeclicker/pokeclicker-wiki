@@ -88,6 +88,19 @@
                 </div>
                 <!-- /ko -->
                 <!-- /ko -->
+
+                <!-- ko if: $data instanceof GenericTraderShop -->
+                <!-- ko foreach: GenericDeal.list[$data.traderID]() -->
+                <div class="d-flex align-items-center p-1" data-bind="css: { 'border-top': $index() > 0 }" style="border-color: var(--bs-table-border-color) !important;">
+                    <div class="w-50" data-bind="foreach: $data._profits">
+                        <div><generic-deal-item params="model: $data"></generic-deal-item></div>
+                    </div>
+                    <div class="w-50" data-bind="foreach: $data._costs">
+                        <div><generic-deal-item params="model: $data"></generic-deal-item></div> 
+                    </div>
+                </div>
+                <!-- /ko -->
+                <!-- /ko -->
             </td>
         </tr>
     </tbody>

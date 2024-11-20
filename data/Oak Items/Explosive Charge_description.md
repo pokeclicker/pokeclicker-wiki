@@ -1,1 +1,1 @@
-When equipped, the Explosive Charge causes new mining layers in the Underground to start with damaged tiles. Any tiles it affects will have a single layer removed.
+When equipped, the Explosive Charge increases the number of tiles the Bomb tool can target, up to 10 extra.
