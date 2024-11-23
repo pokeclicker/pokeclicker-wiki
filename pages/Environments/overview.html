@@ -1,12 +1,20 @@
 <div class="table-responsive">
-    <h3 data-bind="text: `List of all Environments:`">List of Environments:</h3>
-    <table class="table table-hover table-striped table-bordered">
-            <tbody data-bind="foreach: Object.keys(GameConstants.Environments)">
-            <tr>
-                <td>
-                    <a class="text-decoration-none" style="font-size: small;" href="#!" data-bind="text: GameConstants.camelCaseToString($data), attr: { href: `#!Environments/${GameConstants.camelCaseToString($data)} Environments` }"></a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <h3 data-bind="text: `List of multiregional Environments:`">List of Environments:</h3>
+    <ul data-bind="foreach: Object.keys(GameConstants.Environments)">
+        <!-- ko if: Object.keys(GameConstants.Environments[$data]).length > 1 -->
+        <li>
+            <a class="text-decoration-none" style="font-size: larger;" href="#!" data-bind="text: GameConstants.camelCaseToString($data), attr: { href: `#!Environments/${GameConstants.camelCaseToString($data)} Environments` }"></a>   
+        </li>
+        <!-- /ko -->
+    </ul>
+    <!-- ko if: Object.keys(GameConstants.Environments).some((string) => Object.keys(GameConstants.Environments[string]).length == 1 && Object.keys(GameConstants.Environments[string])[0] <= GameConstants.MAX_AVAILABLE_REGION) -->
+    <h3 data-bind="text: `List of region-specific Environments:`">List of Region-specific Environments:</h3>
+    <ul data-bind="foreach: Object.keys(GameConstants.Environments)">
+        <!-- ko if: Object.keys(GameConstants.Environments[$data]).length == 1 -->
+        <li>
+            <a class="text-decoration-none" style="font-size: larger;" href="#!" data-bind="text: GameConstants.camelCaseToString($data), attr: { href: `#!Environments/${GameConstants.camelCaseToString($data)} Environments` }"></a>   
+        </li>
+        <!-- /ko -->
+    </ul>
+    <!-- /ko -->
 </div>
