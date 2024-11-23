@@ -80042,6 +80042,17 @@ const searchOptions = [
     type: 'Click Attack',
     page: '',
   },
+  // Environments
+  {
+    display: 'Environments',
+    type: 'Environments',
+    page: '',
+  },
+  ...Object.keys(GameConstants.Environments).map(env => ({
+    display: `${GameConstants.camelCaseToString(env)} (Environment)`,
+    type: 'Environments',
+    page: `${GameConstants.camelCaseToString(env)} Environments`,
+  })),
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {

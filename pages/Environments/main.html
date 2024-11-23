@@ -1,0 +1,76 @@
+<div>
+    <!-- ko ifnot: Object.keys(GameConstants.Environments).some(env => `${GameConstants.camelCaseToString(env)} Environments` == Wiki.pageName()) -->
+        <h3>Environment not found...</h3>
+    <!-- /ko -->
+    <!-- ko with: Object.keys(GameConstants.Environments).find(env => `${GameConstants.camelCaseToString(env)} Environments` == Wiki.pageName()) -->
+        <div class="table-responsive">
+            <h3 data-bind="text: `List of Routes classified as ${GameConstants.camelCaseToString($data)} Environments:`">List of Environments:</h3>
+            <table class="table table-hover table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Region</th>
+                        <th>Route</th>
+                    </tr>
+                </thead>
+                    <tbody data-bind="foreach: Object.keys(GameConstants.Environments[$data])">
+                    <!-- ko if: $data <= GameConstants.MAX_AVAILABLE_REGION -->
+                    <!-- ko if: Routes.regionRoutes.filter((r) => r.region == $data).filter((r) => MapHelper.getEnvironments(r.number, $data).includes($parent)).length > 0 -->
+                    <tr>
+                        <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data])"></td>
+                        <td data-bind="foreach: Routes.regionRoutes.filter((r) => r.region == $data).filter((r) => MapHelper.getEnvironments(r.number, $data).includes($parent))">
+                            <a class="badge text-bg-secondary" style="font-size: small;" href="#!" data-bind="text: $data.routeName, attr: { href: `#!Routes/${$data.routeName}` }"></a>
+                        </td>
+                    </tr>
+                    <!-- /ko -->
+                        <!-- /ko -->
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive">
+            <h3 data-bind="text: `List of Dungeons classified as ${GameConstants.camelCaseToString($data)} Environments:`">List of Environments:</h3>
+            <table class="table table-hover table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Region</th>
+                        <th>Dungeon</th>
+                    </tr>
+                </thead>
+                    <tbody data-bind="foreach: Object.keys(GameConstants.Environments[$data])">
+                    <!-- ko if: $data <= GameConstants.MAX_AVAILABLE_REGION -->
+                    <!-- ko if: Object.values(TownList).filter((t) => t.region == $data).filter((t) => MapHelper.getEnvironments(t.name, t.region).includes($parent)).filter((t) => t instanceof DungeonTown).length > 0 -->
+                    <tr>
+                        <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data])"></td>
+                        <td data-bind="foreach: Object.values(TownList).filter((t) => t.region == $data).filter((t) => MapHelper.getEnvironments(t.name, t.region).includes($parent)).filter((t) => t instanceof DungeonTown)">
+                            <a class="badge text-bg-secondary" style="font-size: small;" href="#!" data-bind="text: $data.name, attr: { href: `#!Dungeons/${$data.name}` }"></a>
+                        </td>
+                    </tr>
+                    <!-- /ko -->
+                    <!-- /ko -->
+                </tbody>
+            </table>
+        </div>
+        <div class="table-responsive">
+            <h3 data-bind="text: `List of Towns classified as ${GameConstants.camelCaseToString($data)} Environments:`">List of Environments:</h3>
+            <table class="table table-hover table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Region</th>
+                        <th>Town</th>
+                    </tr>
+                </thead>
+                    <tbody data-bind="foreach: Object.keys(GameConstants.Environments[$data])">
+                    <!-- ko if: $data <= GameConstants.MAX_AVAILABLE_REGION -->
+                    <!-- ko if: Object.values(TownList).filter((t) => t.region == $data).filter((t) => MapHelper.getEnvironments(t.name, t.region).includes($parent)).filter((t) => !(t instanceof DungeonTown)).length > 0 -->
+                    <tr>
+                        <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data])"></td>
+                        <td data-bind="foreach: Object.values(TownList).filter((t) => t.region == $data).filter((t) => MapHelper.getEnvironments(t.name, t.region).includes($parent)).filter((t) => !(t instanceof DungeonTown))">
+                            <a class="badge text-bg-secondary" style="font-size: small;" href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${$data.name}` }"></a>
+                        </td>
+                    </tr>
+                    <!-- /ko -->
+                    <!-- /ko -->
+                </tbody>
+            </table>
+        </div>
+    <!-- /ko -->
+</div>
