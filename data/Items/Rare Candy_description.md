@@ -1,1 +1,1 @@
-This item increases a Pokémon's attack by +25% base attack.
+This item increases a Pokémon's attack by +25% base attack, grants +1 level, and can trigger level evolutions.

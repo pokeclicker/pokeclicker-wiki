@@ -1,12 +1,12 @@
 <div>
     <!-- ko ifnot: PokemonType[Wiki.pageName()] >= 0 -->
-        <h3>Gem type not found...</h3>
+    <h3>Gem type not found...</h3>
     <!-- /ko -->
     <!-- ko if: PokemonType[Wiki.pageName()] >= 0 -->
     <div data-bind="with: Wiki.pageName()">
         <img data-bind="attr: {src: './pokeclicker/docs/' + Gems.image(PokemonType[$data])}"/>
-
-        <h3>Best locations</h3>
+        <h3 data-bind="text: `Best ${$data} Gem farming locations`"></h3>
+        <p>The top two locations from each Region are listed below, if they exist.</p>
         <p>Pokémon that appear during certain weather or other special conditions are not included in the route calculation.</p>
         <div class="table-responsive">
             <table class="table table-hover table-striped table-bordered">
@@ -15,48 +15,23 @@
                         <th>Region</th>
                         <th>Battle Type</th>
                         <th>Location</th>
+                        <th style="text-align: right;">Maximum HP</th>
+                        <th style="width: 20%; text-align: right;">Average Gems Per Pokémon</th>
                     </tr>
                 </thead>
-                <tbody data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r <= GameConstants.MAX_AVAILABLE_REGION && r != GameConstants.Region.none)">
+                <tbody data-bind="foreach: { data: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r <= GameConstants.MAX_AVAILABLE_REGION && r != GameConstants.Region.none), as: 'region' }">
+                    <!-- ko foreach: Wiki.gems.bestGemsPerRegion(region, $parent) -->
                     <tr>
-                        <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data])" rowspan="2" class="align-middle"></td>
-                        <td>Gym</td>
-                        <td data-bind="text: (() => {
-                            var regionGyms = GameConstants.RegionGyms[$data].filter((g) => !g.includes('Trial'));
-                            var amountPerGym = regionGyms
-                                .map((g) => {
-                                    var totalMons = GymList[g].pokemons.length;
-                                    var totalOfType = GymList[g].pokemons.filter((p) => PokemonHelper.getPokemonByName(p.name).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p.name).type2 == PokemonType[$parent]).length;
-                                    return Math.round(totalOfType / totalMons * 100);
-                                });
-                            var max = Math.max(...amountPerGym);
-                            if (!max) {
-                                return 'No gym with this gem';
-                            }
-                            return max + '% at ' + regionGyms[amountPerGym.indexOf(max)];
-                        })()
-                        "></td>
+                        <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[region]), attr: { 'data-sort': region }"></td>
+                        <td data-bind="text: $data.battleType"></td>
+                        <td><a style="text-decoration: none;" data-bind="text: $data.name, attr: { href: `#!${$data.battleType}s/${$data.name}` }"></a></td>
+                        <td style="text-align: right;" data-bind="text: `${$data.maxHealth.toLocaleString()} ❤️`, attr: { 'data-sort' : $data.maxHealth }"></td>
+                        <td style="text-align: right;" data-bind="attr: { 'data-sort': $data.gemsPerEncounter }">
+                            <ko data-bind="text: $data.gemsPerEncounter.toFixed(2)"></ko>
+                            <img style="margin: -6px 0" data-bind="attr: { src: './pokeclicker/docs/' + Gems.image(PokemonType[Wiki.pageName()]) }"/>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Route</td>
-                        <td data-bind="text: (() => {
-                            var regionRoutes = Routes.regionRoutes.filter((r) => r.region == $data);
-                            var amountPerRoute = regionRoutes
-                                .map((r) => {
-                                    var totalMons = r.pokemon.land.length+r.pokemon.water.length+r.pokemon.headbutt.length;
-                                    var totalOfType = r.pokemon.land.filter((p) => PokemonHelper.getPokemonByName(p).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p).type2 == PokemonType[$parent]).length +
-                                                    r.pokemon.water.filter((p) => PokemonHelper.getPokemonByName(p).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p).type2 == PokemonType[$parent]).length +
-                                                    r.pokemon.headbutt.filter((p) => PokemonHelper.getPokemonByName(p).type1 == PokemonType[$parent] || PokemonHelper.getPokemonByName(p).type2 == PokemonType[$parent]).length;
-                                    return Math.round(totalOfType / totalMons * 100);
-                                });
-                            var max = Math.max(...amountPerRoute);
-                            if (!max) {
-                                return 'No route with this gem';
-                            }
-                            return max + '% at ' + regionRoutes[amountPerRoute.indexOf(max)].routeName;
-                        })()
-                        "></td>
-                    </tr>
+                    <!-- /ko -->
                 </tbody>
             </table>
         </div>

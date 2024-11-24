@@ -20,6 +20,7 @@ window.Wiki = {
   shopMon: require('./pages/shopMon'),
   dungeonTokens: require('./pages/dungeonTokens'),
   oakItems: require('./pages/oakItems'),
+  gems: require('./pages/gems'),
   getDealChains: require('./pages/dealChains').getDealChains,
   ...require('./navigation'),
 }

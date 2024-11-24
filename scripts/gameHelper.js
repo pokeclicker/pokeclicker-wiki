@@ -15,7 +15,7 @@ const requirementHints = (requirement, includeMarkdown = true) => {
             let hint = req.hint();
             switch (req.constructor) {
                 case RouteKillRequirement:
-                    const routeName = Routes.getName(req.route, req.region, true);
+                    const routeName = Routes.getName(req.route, req.region, false);
                     hint = `Defeat ${req.requiredValue} or more Pokémon on ${includeMarkdown ? `[[Routes/${routeName}]]` : routeName}.`;
                     break;
                 case ClearDungeonRequirement:
@@ -81,7 +81,7 @@ const getEvolutionHints = (evoData) => {
     // Base Evo type (Level or Stone)
     if (isLevelEvolution(evoData)) {
         const levelReq = getRequirementFromRestrictions(restrictions, 'PokemonLevelRequirement');
-        hint = levelReq.requiredValue == 1 ? `Hatch ${levelReq.pokemon}` : `${levelReq.pokemon} must reach level ${levelReq.requiredValue}`;
+        hint = levelReq.requiredValue == 1 ? `Hatch or feed a Rare Candy to ${levelReq.pokemon}` : `${levelReq.pokemon} must reach level ${levelReq.requiredValue}`;
     } else if (isStoneEvolution(evoData)) {
         const stone = ItemList[GameConstants.StoneType[evoData.stone]]._displayName;
         hint = `Requires using ${GameHelper.anOrA(stone)} ${stone}`;
@@ -104,7 +104,7 @@ const getEvolutionHints = (evoData) => {
     }
 
     if (isQuestLineRestrictedEvolution(restrictions)) {
-        const questReq = getRequirementFromRestrictions(restrictions, 'QuestLineRequirement');
+        const questReq = getRequirementFromRestrictions(restrictions, 'QuestLineCompletedRequirement');
         hint += ` after completing the ${questReq.questLineName} quest line`;
     };
 
@@ -115,7 +115,7 @@ const getEvolutionHints = (evoData) => {
 
     if (isWeatherRestrictedEvolution(restrictions)) {
         const weatherReq = getRequirementFromRestrictions(restrictions, 'WeatherRequirement');
-        hint += ` during ${listFormatter.format(weatherReq.weather.map(w => WeatherType[w]))} weather`;
+        hint += ` during ${listFormatter.format(weatherReq.weather.map(w => GameConstants.humanifyString(WeatherType[w])))} weather`;
     }
 
     if (isHeldItemRestrictedEvolution(restrictions)) {
@@ -127,6 +127,12 @@ const getEvolutionHints = (evoData) => {
         const megaReq = getRequirementFromRestrictions(restrictions, 'MegaEvolveRequirement');
         const requiredAttack = pokemonMap[megaReq.name].attack * GameConstants.MEGA_REQUIRED_ATTACK_MULTIPLIER;
         hint += ` after obtaining ${GameConstants.humanifyString(GameConstants.MegaStoneType[megaReq.megaStone])} and ${megaReq.name} has ${requiredAttack.toLocaleString()} or more attack`;
+    }
+
+    if (isRequiredAttackEvolution(restrictions)) {
+        const req = getRequirementFromRestrictions(restrictions, 'PokemonAttackRequirement');
+        const requiredAttack = pokemonMap[req.pokemon].attack * req.requiredValue;
+        hint += ` when it has ${requiredAttack.toLocaleString()} or more attack`;
     }
 
     if (hint.length) {
@@ -168,7 +174,7 @@ const isEnvironmentRestrictedEvolution = (restrictions) => {
 };
 
 const isQuestLineRestrictedEvolution = (restrictions) => {
-    return hasEvoRestrictions(restrictions, ['QuestLineRequirement']);
+    return hasEvoRestrictions(restrictions, ['QuestLineCompletedRequirement']);
 }
 
 const isInRegionRestrictedEvolution = (restrictions) => {
@@ -186,6 +192,10 @@ const isHeldItemRestrictedEvolution = (restrictions) => {
 const isMegaEvolution = (restrictions) => {
     return hasEvoRestrictions(restrictions, ['MegaEvolveRequirement']);
 };
+
+const isRequiredAttackEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['PokemonAttackRequirement']);
+}
 
 const hasEvoRestrictions = (restrictions, requirements) => {
     return requirements.every(req => restrictions.some(res => res.constructor.name == req));

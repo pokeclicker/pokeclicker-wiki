@@ -1,4 +1,4 @@
-Pokémon are your partners in this adventure and your main source of power. Currently the game has **1,395** different Pokémon forms. Most of them based on main games, with 33 coming from side games, 53 coming from anime and films, and 18 custom forms.
+Pokémon are your partners in this adventure and your main source of power. Currently the game has **1,399** different Pokémon forms. Most of them based on main games, with 33 coming from side games, 53 coming from anime and films, and 18 custom forms.
 
 ## Statistics
 

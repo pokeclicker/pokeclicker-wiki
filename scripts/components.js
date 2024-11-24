@@ -15,3 +15,12 @@ ko.components.register('pokemon-summary', {
   viewModel: PokemonSummary,
   template: { fromUrl: 'pokemon-summary' },
 });
+
+function GenericDeal(params) {
+  this.model = params.model;
+}
+
+ko.components.register('generic-deal-item', {
+  viewModel: GenericDeal,
+  template: { fromUrl: 'generic-deal-item' },
+});

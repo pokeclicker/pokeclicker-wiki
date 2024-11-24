@@ -3,4 +3,4 @@ Diamonds [[File:diamond.svg|25px]] are currency that can be obtained in the Unde
 ---
 
 ## Acquisition
-To maximize Diamond gain, study the [[Daily_Deals]] in the Underground and trade upwards to get items that are worth more. Heart Scales can usually be sold immediately since there is nothing more valuable (as of 0.10.21).
+

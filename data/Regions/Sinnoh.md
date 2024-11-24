@@ -34,7 +34,7 @@ For the evolution to happen, you must equip the Held Item to the corresponding P
 ### Shopmons
 |Location|Pokémon|Cost|
 |---|---|---|
-|[[Towns/Solaceon Town]] | [[File:pokemon/442.png\|25px]] [[Pokémon/Spiritomb]]|[[File:questPoint.svg\|20px]] 6,750|
+|[[Towns/Solaceon Town]] | [[File:pokemon/442.png\|25px]] [[Pokémon/Spiritomb]]|[[File:Odd Keystone.png\|20px]] 1 + [[File:diamond.svg\|20px]] 5,000|
 |[[Towns/Pal Park]] | [[File:pokemon/415.png\|25px]] [[Pokémon/Combee]]|[[File:questPoint.svg\|20px]] 6,750|
 |[[Towns/Pal Park]] | [[File:pokemon/412.png\|25px]] [[Pokémon/Burmy (Plant)]]|[[File:questPoint.svg\|20px]] 6,750|
 |[[Towns/Pal Park]] | [[File:pokemon/420.png\|25px]] [[Pokémon/Cherubi]]|[[File:questPoint.svg\|20px]] 6,750|

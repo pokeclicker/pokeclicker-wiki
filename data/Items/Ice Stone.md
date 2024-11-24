@@ -1,3 +1,6 @@
+Base chance of dropping: 1 in 85.3 (Dungeon Boss)
+
+## Use
 Base Pokémon |Evolves into |Available in
 :---|:---|:---
 [[File:pokemon/27.01.png\|25px]] [[Pokemon/Alolan Sandshrew]]  | [[File:pokemon/28.01.png\|25px]] [[Pokemon/Alolan Sandslash]] |Alola onward
