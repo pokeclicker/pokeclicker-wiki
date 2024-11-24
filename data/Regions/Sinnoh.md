@@ -80,30 +80,30 @@ Munchlax can also be obtained as a Wanderer by using [[Berries/Chilan]] berries.
 | [[File:pokemon/193.png\|25px]] [[Pokémon/Yanma]] | [[File:pokemon/469.png\|25px]] [[Pokémon/Yanmega]] | 33 | Any |
 | [[File:pokemon/221.png\|25px]] [[Pokémon/Piloswine]] | [[File:pokemon/473.png\|25px]] [[Pokémon/Mamoswine]] | 53 | Any |
 
-### Location-dependent Pokémon
-**Note:** Location-dependant Pokémon evolve at or above the level specified (excluding level 100) when leveled at a particular location. Pokémon at level 100 must be bred and retrained to the correct level (level 20), and then leveled at the specified location.
-|Pokémon | Evolution | Required Location |
-|---|---|---|
-| [[File:pokemon/82.png\|25px]] [[Pokémon/Magneton]] | [[File:pokemon/462.png\|25px]] [[Pokémon/Magnezone]] | [[Dungeons/Mt. Coronet North]] or [[Dungeons/Mt. Coronet South]] |
-| [[File:pokemon/133.png\|25px]] [[Pokémon/Eevee]] | [[File:pokemon/470.png\|25px]] [[Pokémon/Leafeon]] | [[Dungeons/Eterna Forest]] |
-| [[File:pokemon/133.png\|25px]] [[Pokémon/Eevee]] | [[File:pokemon/471.png\|25px]] [[Pokémon/Glaceon]] | [[Dungeons/Lake Acuity]] |
-| [[File:pokemon/299.png\|25px]] [[Pokémon/Nosepass]] | [[File:pokemon/476.png\|25px]] [[Pokémon/Probopass]] | [[Dungeons/Mt. Coronet North]] or [[Dungeons/Mt. Coronet South]] |
-
 ### Environment-dependent Pokémon
-**Note:** Environment-dependant Pokémon evolve at or above the level specified (excluding level 100) when leveled at a location that matches the environment specified. Pokémon at level 100 must be bred and then retrained while being inside the right location.
-|Pokémon | Evolution | Required Environment |
-|---|---|---|
-| [[File:pokemon/412.png\|25px]] [[Pokémon/Burmy (Plant)]] | [[File:pokemon/412.01.png\|25px]] [[Pokémon/Burmy (Sand)]] | Cave or Gem Cave |
-| [[File:pokemon/412.png\|25px]] [[Pokémon/Burmy (Plant)]] | [[File:pokemon/412.02.png\|25px]] [[Pokémon/Burmy (Trash)]] | Power Plant, Mansion, or Graveyard |
+**Note:** Environment-dependant Pokémon evolve at or above the level specified (excluding level 100) when leveled at a location that matches the environment specified. Pokémon at level 100 must be bred and then retrained to the correct level (level 20, or for Burmy level 1) while being inside the right location.
+|Pokémon | Evolution | Required Environment | Example Location |
+|---|---|---|---|
+| [[File:pokemon/82.png\|25px]] [[Pokémon/Magneton]] | [[File:pokemon/462.png\|25px]] [[Pokémon/Magnezone]] | [[Environments/Magnetic Field]] | [[Dungeons/Mt. Coronet North]] or [[Dungeons/Mt. Coronet South]] |
+| [[File:pokemon/133.png\|25px]] [[Pokémon/Eevee]] | [[File:pokemon/470.png\|25px]] [[Pokémon/Leafeon]] | [[Environments/Moss Rock]] | [[Dungeons/Eterna Forest]] |
+| [[File:pokemon/133.png\|25px]] [[Pokémon/Eevee]] | [[File:pokemon/471.png\|25px]] [[Pokémon/Glaceon]] | [[Environments/Ice Rock]] | [[Routes/Sinnoh Route 217]] or [[Dungeons/Lake Acuity]] |
+| [[File:pokemon/299.png\|25px]] [[Pokémon/Nosepass]] | [[File:pokemon/476.png\|25px]] [[Pokémon/Probopass]] | [[Environments/Magnetic Field]] | [[Dungeons/Mt. Coronet North]] or [[Dungeons/Mt. Coronet South]] |
+| [[File:pokemon/412.01.png\|25px]] [[Pokémon/Burmy (Sand)]] or [[File:pokemon/412.02.png\|25px]] [[Pokémon/Burmy (Trash)]] | [[File:pokemon/412.png\|25px]] [[Pokémon/Burmy (Plant)]] | [[Environments/Plant Cloak]] | [[Routes/Sinnoh Route 201]]
+| [[File:pokemon/412.png\|25px]] [[Pokémon/Burmy (Plant)]] or [[File:pokemon/412.02.png\|25px]] [[Pokémon/Burmy (Trash)]] | [[File:pokemon/412.01.png\|25px]] [[Pokémon/Burmy (Sand)]] | [[Environments/Sandy Cloak]] | [[Dungeons/Oreburgh Gate]]
+| [[File:pokemon/412.png\|25px]] [[Pokémon/Burmy (Plant)]] or [[File:pokemon/412.01.png\|25px]] [[Pokémon/Burmy (Sand)]] | [[File:pokemon/412.02.png\|25px]] [[Pokémon/Burmy (Trash)]] | [[Environments/Trash Cloak]] | [[Dungeons/Valley Windworks]]
 
 ### Roamers
 |Pokémon|Requirement|
 |---|---|
 | [[File:pokemon/490.png\|25px]] [[Pokémon/Manaphy]]|Unlocks during [[Quest_Lines/Recover the Precious Egg]]|
 | [[File:pokemon/481.png\|25px]] [[Pokémon/Mesprit]]|Unlocks after clearing [[Dungeons/Distortion World]]|
-| [[File:pokemon/488.png\|25px]] [[Pokémon/Cresselia]]|Unlocks after clearing [[Dungeons/Fullmoon Island]]|
+| [[File:pokemon/488.png\|25px]] [[Pokémon/Cresselia]]|Unlocks after clearing [[Dungeons/Fullmoon Island]] and the moon phase is Full Moon Or Waxing Gibbous Or Waning Gibbous Or First Quarter Or Third Quarter|
+| [[File:pokemon/491.png\|25px]] [[Pokémon/Darkrai]]|Unlocks after clearing [[Dungeons/Newmoon Island]] and the moon phase is New Moon Or Waxing Crescent Or Waning Crescent|
 
-**Note:** Manaphy will be awarded to the player after completing [[Quest Lines/Recover the Previous Egg]] Quest Line. It can also be obtained as a Wanderer by using [[Berries/Liechi]] berries.
+**Notes:**
+Manaphy will be awarded to the player after completing [[Quest Lines/Recover the Previous Egg]] Quest Line. It can also be obtained as a Wanderer by using [[Berries/Liechi]] berries.
+Cresselia and Darkrai can be found in their respective dungeons when not roaming.
+
 
 ### Safari ([[Towns/Great Marsh]])
 
