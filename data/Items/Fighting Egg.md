@@ -5,7 +5,7 @@ Region | Pokemon
 Kanto | _**[[Pokemon/Hitmonlee]]**_, _**[[Pokemon/Hitmonchan]]**_, [[Pokemon/Machop]], [[Pokemon/Mankey]]
 Johto | [[Pokemon/Tyrogue]], [[Pokemon/Heracross]]
 Hoenn | [[Pokemon/Makuhita]], [[Pokemon/Meditite]]
-Sinnoh | **[[Pokemon/Riolu]]**, [[Pokemon/Croagunk]]
+Sinnoh | _**[[Pokemon/Riolu]]**_, [[Pokemon/Croagunk]]
 Unova | _**[[Pokemon/Throh]]**_, _**[[Pokemon/Sawk]]**_, [[Pokemon/Scraggy]]
 Kalos | [[Pokemon/Pancham]], [[Pokemon/Hawlucha]]
 Alola | **[[Pokemon/Crabrawler]]**, [[Pokemon/Stufful]]
