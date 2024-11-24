@@ -39,7 +39,7 @@
                     <tr>
                         <td>Environment</td>
                         <td data-bind="foreach: MapHelper.getEnvironments($data.name, $data.region)">
-                            <a href="#!" data-bind="text: GameConstants.camelCaseToString($data), attr: { href: `#!Environments/${GameConstants.camelCaseToString($data)} Environments` }"></a>
+                            <a href="#!" data-bind="text: GameConstants.camelCaseToString($data), attr: { href: `#!Environments/${GameConstants.camelCaseToString($data)}` }"></a>
                         </td>
                     </tr>
                     <!-- /ko -->
