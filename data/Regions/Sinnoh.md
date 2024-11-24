@@ -97,8 +97,8 @@ Munchlax can also be obtained as a Wanderer by using [[Berries/Chilan]] berries.
 |---|---|
 | [[File:pokemon/490.png\|25px]] [[Pokémon/Manaphy]]|Unlocks during [[Quest_Lines/Recover the Precious Egg]]|
 | [[File:pokemon/481.png\|25px]] [[Pokémon/Mesprit]]|Unlocks after clearing [[Dungeons/Distortion World]]|
-| [[File:pokemon/488.png\|25px]] [[Pokémon/Cresselia]]|Unlocks after clearing [[Dungeons/Fullmoon Island]] and the moon phase is Full Moon Or Waxing Gibbous Or Waning Gibbous Or First Quarter Or Third Quarter|
-| [[File:pokemon/491.png\|25px]] [[Pokémon/Darkrai]]|Unlocks after clearing [[Dungeons/Newmoon Island]] and the moon phase is New Moon Or Waxing Crescent Or Waning Crescent|
+| [[File:pokemon/488.png\|25px]] [[Pokémon/Cresselia]]|Unlocks after clearing [[Dungeons/Fullmoon Island]] and the moon phase is New Moon Or Waxing Crescent Or Waning Crescent|
+| [[File:pokemon/491.png\|25px]] [[Pokémon/Darkrai]]|Unlocks after clearing [[Dungeons/Newmoon Island]] and the moon phase is Full Moon Or Waxing Gibbous Or Waning Gibbous Or First Quarter Or Third Quarter|
 
 **Notes:**
 Manaphy will be awarded to the player after completing [[Quest Lines/Recover the Previous Egg]] Quest Line. It can also be obtained as a Wanderer by using [[Berries/Liechi]] berries.
