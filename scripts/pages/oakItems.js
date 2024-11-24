@@ -16,7 +16,7 @@ const getOakItemBonus = (oakItem, level) => {
         case OakItemType.Blaze_Cassette:
             return `x${bonus} Hatching Speed`;
         case OakItemType.Cell_Battery:
-            return `x${bonus} Energy Regeneration`;
+            return `Tier ${bonus} Discharge Patterns`;
         case OakItemType.Squirtbottle:
             return `x${bonus} Mutation Rate`;
         case OakItemType.Sprinklotad:
@@ -53,7 +53,7 @@ const getOakItemUpgradeReqText = (oakItemType, val) => {
         case OakItemType.Blaze_Cassette:
             return `Hatch ${val} Eggs`;
         case OakItemType.Cell_Battery:
-            return `Mine ${val} items in the Underground`;
+            return `Use Discharge ${val} times`;
         case OakItemType.Squirtbottle:
             return `Trigger ${val} berry mutations`;
         case OakItemType.Sprinklotad:
