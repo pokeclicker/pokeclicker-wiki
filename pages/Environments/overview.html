@@ -3,7 +3,7 @@
     <ul data-bind="foreach: Object.keys(GameConstants.Environments)">
         <!-- ko if: Object.keys(GameConstants.Environments[$data]).length > 1 -->
         <li>
-            <a class="text-decoration-none" style="font-size: larger;" href="#!" data-bind="text: GameConstants.camelCaseToString($data), attr: { href: `#!Environments/${GameConstants.camelCaseToString($data)} Environments` }"></a>   
+            <a class="text-decoration-none" style="font-size: larger;" href="#!" data-bind="text: GameConstants.camelCaseToString($data), attr: { href: `#!Environments/${GameConstants.camelCaseToString($data)} Environments` }"></a>
         </li>
         <!-- /ko -->
     </ul>
@@ -12,7 +12,7 @@
     <ul data-bind="foreach: Object.keys(GameConstants.Environments)">
         <!-- ko if: Object.keys(GameConstants.Environments[$data]).length == 1 -->
         <li>
-            <a class="text-decoration-none" style="font-size: larger;" href="#!" data-bind="text: GameConstants.camelCaseToString($data), attr: { href: `#!Environments/${GameConstants.camelCaseToString($data)} Environments` }"></a>   
+            <a class="text-decoration-none" style="font-size: larger;" href="#!" data-bind="text: GameConstants.camelCaseToString($data), attr: { href: `#!Environments/${GameConstants.camelCaseToString($data)} Environments` }"></a>
         </li>
         <!-- /ko -->
     </ul>
