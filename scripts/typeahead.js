@@ -399,7 +399,7 @@ const searchOptions = [
   ...Object.keys(GameConstants.Environments).map(env => ({
     display: `${GameConstants.camelCaseToString(env)} (Environment)`,
     type: 'Environments',
-    page: `${GameConstants.camelCaseToString(env)} Environments`,
+    page: `${GameConstants.camelCaseToString(env)}`,
   })),
 ];
 // Differentiate our different links with the same name
