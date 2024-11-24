@@ -11,7 +11,7 @@
     <!-- ko with: Object.keys(GameConstants.Environments).find(env => `${GameConstants.camelCaseToString(env)}` == Wiki.pageName()) -->
         <!-- ko if: Routes.regionRoutes.filter((r) => r.region < GameConstants.MAX_AVAILABLE_REGION).filter((r) => MapHelper.getEnvironments(r.number, r.region).includes($data)).length > 0 -->
         <div class="table-responsive">
-            <h3 data-bind="text: `List of Routes classified as ${GameConstants.camelCaseToString($data)} Environments:`">List of Environments:</h3>
+            <h3>Routes</h3>
             <table class="table table-hover table-striped table-bordered">
                 <thead>
                     <tr>
@@ -34,7 +34,7 @@
         <!-- /ko -->
         <!-- ko if: Object.values(TownList).filter((t) => t.region < GameConstants.MAX_AVAILABLE_REGION).filter((t) => MapHelper.getEnvironments(t.name, t.region).includes($data)).filter((t) => t instanceof DungeonTown).length > 0 -->
         <div class="table-responsive">
-            <h3 data-bind="text: `List of Dungeons classified as ${GameConstants.camelCaseToString($data)} Environments:`">List of Environments:</h3>
+            <h3>Dungeons</h3>
             <table class="table table-hover table-striped table-bordered">
                 <thead>
                     <tr>
@@ -57,7 +57,7 @@
         <!-- /ko -->
         <!-- ko if: Object.values(TownList).filter((t) => t.region < GameConstants.MAX_AVAILABLE_REGION).filter((t) => MapHelper.getEnvironments(t.name, t.region).includes($data)).filter((t) => !(t instanceof DungeonTown)).length > 0 -->
         <div class="table-responsive">
-            <h3 data-bind="text: `List of Towns classified as ${GameConstants.camelCaseToString($data)} Environments:`">List of Environments:</h3>
+            <h3>Towns</h3>
             <table class="table table-hover table-striped table-bordered">
                 <thead>
                     <tr>
