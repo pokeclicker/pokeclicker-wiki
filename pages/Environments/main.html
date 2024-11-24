@@ -1,7 +1,7 @@
 <div>
     <!-- ko ifnot: Object.keys(GameConstants.Environments).some(env => `${GameConstants.camelCaseToString(env)} Environments` == Wiki.pageName()) -->
         <h3>Page not found...</h3>
-        <!-- ko if: Object.keys(GameConstants.Environments).some(env => Wiki.pageName().includes(GameConstants.camelCaseToString(env)) || Wiki.pageName().includes(env)) -->
+        <!-- ko if:  Wiki.pageName() && Object.keys(GameConstants.Environments).some(env => Wiki.pageName().includes(GameConstants.camelCaseToString(env)) || Wiki.pageName().includes(env)) -->
         <p style="font-size: larger;">Did you mean:</p>
         <p data-bind="with: Object.keys(GameConstants.Environments).find(env => Wiki.pageName().includes(GameConstants.camelCaseToString(env)) || Wiki.pageName().includes(env))">
             <a class="text-decoration-none" style="font-size: larger;" href="#!" data-bind="text: `${GameConstants.camelCaseToString($data)} Environments`, attr: { href: `#!Environments/${GameConstants.camelCaseToString($data)} Environments` }"></a>
