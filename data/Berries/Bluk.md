@@ -39,11 +39,11 @@ Bluk Berries can mutate into the following Berries.
 ### Acquisition
 Bluk Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
-| :---:                             | :---:     | :---:         |
-| [[Dungeons/Berry Forest]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Pattern Bush]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Radio Tower]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Seafloor Cavern]]      | Epic  	| `N/A`         |
-| [[Dungeons/Eterna Forest]]        | Common	| `N/A`         |
-| [[Dungeons/Sea Spirit's Den]]     | Common	| `N/A`         |
+| Location	                        | Tier	    |Region              |
+| :---:                             | :---:     |:---:            |
+| [[Dungeons/Berry Forest]]	        | Epic  	| [[Regions/Kanto]](Sevii Islands 123)|
+| [[Dungeons/Pattern Bush]]	        | Epic  	| [[Regions/Kanto]](Sevii Islands 4567)|
+| [[Dungeons/Radio Tower]]	        | Epic  	| [[Regions/Johto]]|
+| [[Dungeons/Seafloor Cavern]]      | Epic  	| [[Regions/Hoenn]]|
+| [[Dungeons/Eterna Forest]]        | Common	| [[Regions/Sinnoh]]|
+| [[Dungeons/Sea Spirit's Den]]     | Common	| [[Regions/Kalso]]|
