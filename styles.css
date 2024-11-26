@@ -457,3 +457,7 @@ td.tight {
   text-transform: uppercase;
   color: #f5f5f5;
 }
+
+.breadcrumb-no-divider::before {
+  content: '' !important;
+}
