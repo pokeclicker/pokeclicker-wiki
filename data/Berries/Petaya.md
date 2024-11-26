@@ -13,7 +13,7 @@ You can fill your farm in the following way to obtain Petaya berries. Note that 
 :::
 
 ### External Timers
-Please note that these timers are from the moment Haban is planted, so, for example, 2 hours 40 minutes **after** planting Haban and Babiri, you should plant Yache. These are **not** time until Haban is ripe. For those, please refer to the **Timing Table** section lower in the page.
+Please note that these timers are from the moment Haban is planted, so, for example, 2 hours 40 minutes **after** planting Haban and Babiri, you should plant Yache. These are **not** time until Haban is ripe. For those, please refer to the **[Timing Table](#timing-table)** section lower in the page.
 
 |Berry | Time | Boost Mulch Needed|
 |---|---|---|
@@ -49,12 +49,10 @@ Before you start this process, you need to be prepared to spend around 11 hours 
 
 * It is very important that the [[Berries/Babiri]] finishes growing before the [[Berries/Occa]], [[Berries/Colbur]], and [[Berries/Kebia]]. As such, it is planted to finish very early since it also has a very long lifespan. When using the tables below, base your planting on the time left for [[Berries/Haban]] to finish. Don't use a different berry for timing.
 
-### Critical information for when all berries have ripened
-After all 18 berries are ripe, the requirements for Petaya to spawn have been fully met. At this point, immediately switch out your [[Oak Items/Sprayduck]] for the [[Oak Items/Squirtbottle]], if possible, otherwise another Oak Item if not. It is highly recommended that you make a save here so you don't have to go through the whole setup again in case nothing mutates. Petaya can spawn on any of the seven open plots in your farm. The seven empty plots should all be permanently applied with surprise mulch. Note that even though the [[Berries/Kebia]] has the ability to overtake other berries, it can only do so at the taller or later stages, so you will be able to let the mutation keep going if you want to mutate multiple Petaya before the [[Berries/Wacan]] withers. Specifically, you have 6 hours from time of mutation to remove the [[Berries/Kebia]] before it threatens to take over your newly mutated Petaya unless it mutates on one of the two edge plots.
-If you intend to use [[Items/Freeze Mulch]] to make the setup live longer, you must **never** freeze [[Berries/Babiri]], [[Berries/Kebia]] and [[Berries/Payapa]] since this mulch gets rid of auras. Freezing Babiri would remove its protection causing the nearby parasites to mutate berries into themselves, ruining the setup. Freezing Kebia and Payapa would remove their mutation chance up aura while leaving their ability to parasite intact since that's not considered an aura. As for the rest of the berries, those can be frozen without causing any issues.
+* Remember to check the [critical information](#critical-info) section once the setup is fully ripe!
 
 ### Petaya with Freeze Mulch (easy mode)
-Mutating a Petaya with Freeze Mulch makes the entire thing incredibly easy.  What you need to do is plant all the berries simultaneously, as seen in the mutation formation, and then simply apply the appropriate amount of freeze mulch to the berry seeds, such that when the freeze mulch runs out the berry would start growing as if you had just planted it according to the timing table.  Below is a table for how much freeze mulch each berry needs for the timings to be correct.  Kasib and Kebia have such a short growth time (5 and 10 minutes without Sprayduck) that it's probably worth just planting them when the rest of the berries are nearly ripe, hence the optional.
+Mutating a Petaya with Freeze Mulch makes the entire thing incredibly easy.  What you need to do is plant all the berries simultaneously, as seen in the mutation formation, and then simply apply the appropriate amount of Freeze Mulch to the berry seeds, such that when the freeze mulch runs out the berry would start growing as if you had just planted it according to the timing table.  Below is a table for how much Freeze Mulch each berry needs for the timings to be correct.  Kasib and Kebia have such a short growth time (5 and 10 minutes without Sprayduck) that it's probably worth just planting them when the rest of the berries are nearly ripe, hence the optional.
 
 **Note: This table assumes you have given Haban 128 Boost Mulch and Babiri 52 Boost Mulch, and maxed [[Oak Items/Sprayduck]] is equipped.**
 
@@ -79,12 +77,9 @@ Mutating a Petaya with Freeze Mulch makes the entire thing incredibly easy.  Wha
 | [[Berries/Kebia]] | 126 (optional) | 10:30:00 |
 | [[Berries/Kasib]] | 126 (optional) | 10:30:00 |
 
-In total 1,006 (or 1,258 counting the optional 2 last berries) Freeze Mulches are needed to use this method.
+In total 1,006 (or 1,258 counting the optional 2 last berries) Freeze Mulches are needed to use this method. Remember to check the [critical information](#critical-info) section once the setup is fully ripe!
 
-### What to do if Petaya doesn't spawn before other berries start dying
-The berry that will die first is [[Berries/Wacan]] — it will die around 1 hours 25 mins after it ripens. This ''should'' be enough for you to get a Petaya to spawn. If the [[Berries/Wacan]] dies before mutation, you will have to replant [[Berries/Chilan]], [[Berries/Tanga]], and [[Berries/Wacan]]. If you start within 38 minutes of [[Berries/Wacan]] dying (1 hour 15 minutes with boost mulch), you ''should'' be able to get one more full [[Berries/Wacan]] cycle before the [[Berries/Coba]] dies and you have to start over. The ability to do this increases overall chance of mutation to 99% or 84.4% without [[Oak Items/Squirtbottle]].
-
-### Timing Table
+### Timing Table {#timing-table}
 All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times
 | Berry | Planting Time with No Modifier | Planting Time with Mulch or Sprayduck | Planting Time with  Mulch & Sprayduck |
 |:---:|:---:|:---:|:---:|
@@ -107,7 +102,14 @@ All planting times use the time-to-ripe remaining of the first planted berry for
 | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | 00:10:00  | 00:06:40  |	00:04:27 |
 | [[File:Kasib.png\|32px]] [[Berries/Kasib]] | 00:05:00	 | 00:03:20  |	00:02:13 |
 
-If [[Berries/Wacan]] dies, harvest and replant [[Berries/Chilan]], [[Berries/Tanga]], and [[Berries/Wacan]] following this table to get the setup again. Note that you will want to make sure [[Berries/Coba]] and [[Berries/Shuca]] have at least about 2 hours 46 mins left on their timers (3 hours 26 mins without boost mulch) for another full [[Berries/Wacan]] cycle. You may want to replant [[Berries/Kasib]] as well to avoid [[Berries/Shuca]] dying before [[Berries/Coba]], but this is not very important at this time.
+### Critical information for when all berries have ripened {#critical-info}
+After all 18 berries are ripe, the requirements for Petaya to spawn have been fully met. At this point, immediately switch out your [[Oak Items/Sprayduck]] for the [[Oak Items/Squirtbottle]], if possible, otherwise another Oak Item if not. It is highly recommended that you make a save here so you don't have to go through the whole setup again in case nothing mutates. Petaya can spawn on any of the seven open plots in your farm. The seven empty plots should all be permanently applied with surprise mulch. Note that even though the [[Berries/Kebia]] has the ability to overtake other berries, it can only do so at the taller or later stages, so you will be able to let the mutation keep going if you want to mutate multiple Petaya before the [[Berries/Wacan]] withers. Specifically, you have 6 hours from time of mutation to remove the [[Berries/Kebia]] before it threatens to take over your newly mutated Petaya unless it mutates on one of the two edge plots.
+If you intend to use [[Items/Freeze Mulch]] to make the setup live longer, you must **never** freeze [[Berries/Babiri]], [[Berries/Kebia]] and [[Berries/Payapa]] since this mulch gets rid of auras. Freezing Babiri would remove its protection causing the nearby parasites to mutate berries into themselves, ruining the setup. Freezing Kebia and Payapa would remove their mutation chance up aura while leaving their ability to parasite intact since that's not considered an aura. As for the rest of the berries, those can be frozen without causing any issues.
+
+### What to do if Petaya doesn't spawn before other berries start dying
+The berry that will die first is [[Berries/Wacan]] — it will die around 1 hours 25 mins after it ripens. This ''should'' be enough for you to get a Petaya to spawn. If the [[Berries/Wacan]] dies before mutation, you will have to replant [[Berries/Chilan]], [[Berries/Tanga]], and [[Berries/Wacan]]. If you start within 38 minutes of [[Berries/Wacan]] dying (1 hour 15 minutes with boost mulch), you ''should'' be able to get one more full [[Berries/Wacan]] cycle before the [[Berries/Coba]] dies and you have to start over. The ability to do this increases overall chance of mutation to 99% or 84.4% without [[Oak Items/Squirtbottle]].
+
+When [[Berries/Wacan]] dies, harvest and replant [[Berries/Chilan]], [[Berries/Tanga]], and [[Berries/Wacan]] following this table to get the setup again. Note that you will want to make sure [[Berries/Coba]] and [[Berries/Shuca]] have at least about 2 hours 46 mins left on their timers (3 hours 26 mins without boost mulch) for another full [[Berries/Wacan]] cycle. You may want to replant [[Berries/Kasib]] as well to avoid [[Berries/Shuca]] dying before [[Berries/Coba]], but this is not very important at this time.
 
 All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times
 | Berry | Planting Time with No Modifier|  Planting Time with Mulch | Planting Time with Mulch & Sprayduck|
