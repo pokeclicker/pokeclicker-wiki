@@ -1,2 +1,2 @@
 # Location hint
-Near Geosenge Town.
+Near [[Towns/Geosenge Town]].
