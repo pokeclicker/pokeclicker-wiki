@@ -13,12 +13,12 @@ Oran Berries can drop from any route and can also be obtained from the following
 
 | Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Berry Forest]]         | Kanto | Common	|
-| [[Dungeons/Pattern Bush]]         | Kanto | Common	|
+| [[Dungeons/Berry Forest]]         | Kanto (Sevii Islands 123) | Common	|
+| [[Dungeons/Pattern Bush]]         | Kanto (Sevii Islands 4567) | Common	|
 | [[Dungeons/Ruins of Alph]]        | Johto | Common    |
 | [[Dungeons/Eterna Forest]]        | Sinnoh | Common    |
 | [[Dungeons/Victory Road Sinnoh]]  | Sinnoh | Common    |
 | [[Dungeons/Frost Cavern]]         | Kalos | Common    |
 | [[Dungeons/Trainers' School]]     | Alola | Common    |
 | [[Dungeons/Verdant Cavern]]       | Alola | Common    |
-| [[Dungeons/Dyna Tree Hill]]       | Galar | Common    |
+| [[Dungeons/Dyna Tree Hill]]       | Galar (Crown Tundra) | Common    |
