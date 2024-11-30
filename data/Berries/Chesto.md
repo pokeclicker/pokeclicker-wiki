@@ -12,13 +12,13 @@ Chesto Berries can mutate into the following Berries.
 ### Acquisition
 Chesto Berries can drop from any route and can also be obtained from the following dungeons.
 
-| Location	                                | Tier	    | Requirement   |
+| Location	                                | Region | Tier	    |
 | :---:                                     | :---:     | :---:         |
-| [[Dungeons/Pokémon Tower]]                | Common    | `N/A`         |
-| [[Dungeons/Berry Forest]]	                | Common	| `N/A`         |
-| [[Dungeons/Pattern Bush]]	                | Common	| `N/A`         |
-| [[Dungeons/Pinwheel Forest]]	            | Common	| `N/A`         |
-| [[Dungeons/Pokémon Village]]	            | Common	| `N/A`         |
-| [[Dungeons/Aether Foundation]]            | Common	| `N/A`         |
-| [[Dungeons/Lake of the Sunne and Moone]]  | Common	| `N/A`         |
-| [[Dungeons/Slumbering Weald Shrine]]	    | Common	| `N/A`         |
+| [[Dungeons/Pokémon Tower]]                | Kanto | Common    |
+| [[Dungeons/Berry Forest]]	                | Kanto | Common	|
+| [[Dungeons/Pattern Bush]]	                | Kanto | Common	|
+| [[Dungeons/Pinwheel Forest]]	            | Unova | Common	|
+| [[Dungeons/Pokémon Village]]	            | Kalos | Common	|
+| [[Dungeons/Aether Foundation]]            | Alola | Common	|
+| [[Dungeons/Lake of the Sunne and Moone]]  | Alola | Common	|
+| [[Dungeons/Slumbering Weald Shrine]]	    | Galar | Common	|

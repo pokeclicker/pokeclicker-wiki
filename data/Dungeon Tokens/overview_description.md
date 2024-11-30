@@ -6,7 +6,7 @@ Dungeon Tokens [[File:dungeonToken.svg|25px]] are blue tokens earned when a Pok√
 
 Dungeon Tokens are obtained via the following formula. Each Dungeon has an associated route that is approximately the same difficulty that is used in this calculation.
 
-$$ \text{Dungeon Tokens} = \max\Bigg( 1, 6 \times \frac{\text{route} \times 2}{\frac{2.8}{1 + \frac{\text{region}}{3}}}\Bigg) \times \text{Achievement Bonus} $$
+$$ \text{Dungeon Tokens} = \max\Bigg( 1, 6 \times (\frac{\text{route} \times 2}{\frac{2.8}{1 + \frac{\text{region}}{3}}})^{1.08}\Bigg) \times \text{Achievement Bonus} $$
 
 A rate of Average Dungeon Tokens Gained per Second has been calculated for each route in order to calculate the most efficient routes for Dungeon Token Farming in each region. The formula used to calculate the rates detailed on this page is as follows:
 

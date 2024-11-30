@@ -38,17 +38,17 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 ### Acquisition
 Lum Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
-| :---:                             | :---:     | :---:         |
-| [[Dungeons/Berry Forest]]	        | Mythic  	| 400 Clears    |
-| [[Dungeons/Pattern Bush]]	        | Mythic  	| 150 Clears    |
-| [[Dungeons/Radio Tower]]	        | Mythic  	| 250 Clears    |
-| [[Dungeons/Cave of Origin]]       | Mythic  	| 150 Clears    |
-| [[Dungeons/Relic Cave]] | Mythic | N/A |
-| [[Dungeons/Under Colosseum]] | Legendary | 50 Clears |
-| [[Dungeons/Moor of Icirrus]]       | Mythic  	| 200 Clears    |
-| [[Dungeons/Pinwheel Forest]]      | Mythic  	| 200 Clears    |
-| [[Dungeons/Thrifty Megamart]]     | Mythic  	| 100 Clears    |
+| Location	                        | Region | Tier	    | Requirement   |
+| :---:                             | :---:  | :---:     | :---:         |
+| [[Dungeons/Berry Forest]]	        | Kanto  | Mythic  	| 400 Clears    |
+| [[Dungeons/Pattern Bush]]	        | Kanto  | Mythic  	| 150 Clears    |
+| [[Dungeons/Radio Tower]]	        | Johto  | Mythic  	| 250 Clears    |
+| [[Dungeons/Cave of Origin]]       | Hoenn  | Mythic  	| 150 Clears    |
+| [[Dungeons/Relic Cave]] | Hoenn  | Mythic | N/A |
+| [[Dungeons/Under Colosseum]] | Hoenn  | Legendary | 50 Clears |
+| [[Dungeons/Moor of Icirrus]]       | Unova  | Mythic  	| 200 Clears    |
+| [[Dungeons/Pinwheel Forest]]      | Unova  | Mythic  	| 200 Clears    |
+| [[Dungeons/Thrifty Megamart]]     | Alola  | Mythic  	| 100 Clears    |
 
 #### Dropped by
 | :---|
