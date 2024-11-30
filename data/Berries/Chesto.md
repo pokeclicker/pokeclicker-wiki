@@ -15,10 +15,10 @@ Chesto Berries can drop from any route and can also be obtained from the followi
 | Location	                                | Region | Tier	    |
 | :---:                                     | :---:     | :---:         |
 | [[Dungeons/Pokémon Tower]]                | Kanto | Common    |
-| [[Dungeons/Berry Forest]]	                | Kanto | Common	|
-| [[Dungeons/Pattern Bush]]	                | Kanto | Common	|
+| [[Dungeons/Berry Forest]]	                | Kanto (Sevii Islands 123) | Common	|
+| [[Dungeons/Pattern Bush]]	                | Kanto (Sevii Islands 4567) | Common	|
 | [[Dungeons/Pinwheel Forest]]	            | Unova | Common	|
 | [[Dungeons/Pokémon Village]]	            | Kalos | Common	|
 | [[Dungeons/Aether Foundation]]            | Alola | Common	|
 | [[Dungeons/Lake of the Sunne and Moone]]  | Alola | Common	|
-| [[Dungeons/Slumbering Weald Shrine]]	    | Galar | Common	|
+| [[Dungeons/Slumbering Weald Shrine]]	    | Galar (South) | Common	|
