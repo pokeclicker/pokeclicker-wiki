@@ -14,6 +14,6 @@ Leppa Berries can drop from any route and can also be obtained from the followin
 | Location	                    | Region | Tier	    |
 | :---:                         | :---:     | :---:         |
 | [[Dungeons/Rock Tunnel]]      | Kanto | Common    |
-| [[Dungeons/Berry Forest]]     | Kanto | Common	|
-| [[Dungeons/Pattern Bush]]     | Kanto | Common	|
+| [[Dungeons/Berry Forest]]     | Kanto (Sevii Islands 123) | Common	|
+| [[Dungeons/Pattern Bush]]     | Kanto (Sevii Islands 4567) | Common	|
 | [[Dungeons/Ruins of Alph]]    | Johto | Epic      |
