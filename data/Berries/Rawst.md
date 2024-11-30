@@ -10,14 +10,14 @@ Rawst Berries can mutate into the following Berries.
 ### Acquisition
 Rawst Berries can drop from any route and can also be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Pokémon Mansion]]      | Common    | `N/A`         |
-| [[Dungeons/Berry Forest]]	        | Common	| `N/A`         |
-| [[Dungeons/Pattern Bush]]	        | Common	| `N/A`         |
-| [[Dungeons/Wayward Cave]]	        | Common	| `N/A`         |
-| [[Dungeons/Stark Mountain]]	    | Common	| `N/A`         |
-| [[Dungeons/Pokémon Village]]	    | Common	| `N/A`         |
-| [[Dungeons/Wela Volcano Park]]    | Common	| `N/A`         |
-| [[Dungeons/Ruins of Abundance]]   | Common	| `N/A`         |
-| [[Dungeons/Tunnel to the Top]]	| Common	| `N/A`         |
+| [[Dungeons/Pokémon Mansion]]      | Kanto | Common    |
+| [[Dungeons/Berry Forest]]	        | Kanto | Common	|
+| [[Dungeons/Pattern Bush]]	        | Kanto | Common	|
+| [[Dungeons/Wayward Cave]]	        | Sinnoh | Common	|
+| [[Dungeons/Stark Mountain]]	    | Sinnoh | Common	|
+| [[Dungeons/Pokémon Village]]	    | Kalos | Common	|
+| [[Dungeons/Wela Volcano Park]]    | Alola | Common	|
+| [[Dungeons/Ruins of Abundance]]   | Alola | Common	|
+| [[Dungeons/Tunnel to the Top]]	| Galar | Common	|
