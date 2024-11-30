@@ -11,9 +11,9 @@ Leppa Berries can mutate into the following Berries.
 ### Acquisition
 Leppa Berries can drop from any route and can also be obtained from the following dungeons.
 
-| Location	                    | Tier	    | Requirement   |
+| Location	                    | Region | Tier	    |
 | :---:                         | :---:     | :---:         |
-| [[Dungeons/Rock Tunnel]]      | Common    | `N/A`         |
-| [[Dungeons/Berry Forest]]     | Common	| `N/A`         |
-| [[Dungeons/Pattern Bush]]     | Common	| `N/A`         |
-| [[Dungeons/Ruins of Alph]]    | Epic      | `N/A`         |
+| [[Dungeons/Rock Tunnel]]      | Kanto | Common    |
+| [[Dungeons/Berry Forest]]     | Kanto | Common	|
+| [[Dungeons/Pattern Bush]]     | Kanto | Common	|
+| [[Dungeons/Ruins of Alph]]    | Johto | Epic      |
