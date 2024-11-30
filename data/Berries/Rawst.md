@@ -13,11 +13,11 @@ Rawst Berries can drop from any route and can also be obtained from the followin
 | Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
 | [[Dungeons/Pokémon Mansion]]      | Kanto | Common    |
-| [[Dungeons/Berry Forest]]	        | Kanto | Common	|
-| [[Dungeons/Pattern Bush]]	        | Kanto | Common	|
+| [[Dungeons/Berry Forest]]	        | Kanto (Sevii Islands 123) | Common	|
+| [[Dungeons/Pattern Bush]]	        | Kanto ( 	Sevii Islands 4567) | Common	|
 | [[Dungeons/Wayward Cave]]	        | Sinnoh | Common	|
 | [[Dungeons/Stark Mountain]]	    | Sinnoh | Common	|
 | [[Dungeons/Pokémon Village]]	    | Kalos | Common	|
 | [[Dungeons/Wela Volcano Park]]    | Alola | Common	|
 | [[Dungeons/Ruins of Abundance]]   | Alola | Common	|
-| [[Dungeons/Tunnel to the Top]]	| Galar | Common	|
+| [[Dungeons/Tunnel to the Top]]	| Galar (Crown Tundra) | Common	|
