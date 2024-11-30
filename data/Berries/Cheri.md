@@ -15,8 +15,8 @@ Cheri Berries can drop from any route and can also be obtained from the followin
 | Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
 | [[Dungeons/Power Plant]]	        | Kanto | Common    |
-| [[Dungeons/Berry Forest]]	        | Kanto |Common	|
-| [[Dungeons/Pattern Bush]]	        | Kanto | Common	|
+| [[Dungeons/Berry Forest]]	        | Kanto (Sevii Islands 123) |Common	|
+| [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567) | Common	|
 | [[Dungeons/New Mauville]]	        | Hoenn | Common	|
 | [[Dungeons/Eterna Forest]]	    | Sinnoh | Common	|
 | [[Dungeons/Hall of Origin]]       | Sinnoh | Common	|
@@ -24,6 +24,6 @@ Cheri Berries can drop from any route and can also be obtained from the followin
 | [[Dungeons/Pikachu Valley]]	    | Alola | Common	|
 | [[Dungeons/Ruins of Conflict]]    | Alola | Common	|
 | [[Dungeons/Ruins of Life]]	    | Alola | Common	|
-| [[Dungeons/Glimwood Tangle]]	    | Galar | Common	|
+| [[Dungeons/Glimwood Tangle]]	    | Galar (North) | Common	|
 
 Can also obtain 100 Cheri by using FARMINGBOOST code.
