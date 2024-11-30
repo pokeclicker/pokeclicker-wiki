@@ -44,7 +44,7 @@ Lum Berries can be obtained from the following dungeons.
 | [[Dungeons/Pattern Bush]]	        | Kanto  | Mythic  	| 150 Clears    |
 | [[Dungeons/Radio Tower]]	        | Johto  | Mythic  	| 250 Clears    |
 | [[Dungeons/Cave of Origin]]       | Hoenn  | Mythic  	| 150 Clears    |
-| [[Dungeons/Relic Cave]] | Hoenn  | Mythic | |
+| [[Dungeons/Relic Cave]] | Hoenn  | Mythic | N/A |
 | [[Dungeons/Under Colosseum]] | Hoenn  | Legendary | 50 Clears |
 | [[Dungeons/Moor of Icirrus]]       | Unova  | Mythic  	| 200 Clears    |
 | [[Dungeons/Pinwheel Forest]]      | Unova  | Mythic  	| 200 Clears    |
