@@ -13,14 +13,14 @@ Aspear Berries can mutate into the following Berries.
 ### Acquisition
 Aspear Berries can drop from any route and can also be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Seafoam Islands]]	    | Common    | `N/A`         |
-| [[Dungeons/Berry Forest]]	        | Common	| `N/A`         |
-| [[Dungeons/Icefall Cave]]	        | Common	| `N/A`         |
-| [[Dungeons/Pattern Bush]]         | Common	| `N/A`         |
-| [[Dungeons/Snowpoint Temple]]     | Common	| `N/A`         |
-| [[Dungeons/Giant Chasm]]          | Common	| `N/A`         |
-| [[Dungeons/Poni Meadow]]          | Common	| `N/A`         |
-| [[Dungeons/Ruins of Hope]]        | Common	| `N/A`         |
-| [[Dungeons/Tunnel to the Top]]    | Common	| `N/A`         |
+| [[Dungeons/Seafoam Islands]]	    | Kanto | Common    |
+| [[Dungeons/Berry Forest]]	        | Kanto | Common	|
+| [[Dungeons/Icefall Cave]]	        | Kanto | Common	|
+| [[Dungeons/Pattern Bush]]         | Kanto | Common	|
+| [[Dungeons/Snowpoint Temple]]     | Sinnoh | Common	|
+| [[Dungeons/Giant Chasm]]          | Unova | Common	|
+| [[Dungeons/Poni Meadow]]          | Alola | Common	|
+| [[Dungeons/Ruins of Hope]]        | Alola | Common	|
+| [[Dungeons/Tunnel to the Top]]    | Galar | Common	|
