@@ -32,6 +32,6 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 ### Acquisition
 Hondew Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Dyna Tree Hill]]       | Epic	    | `N/A`         |
+| [[Dungeons/Dyna Tree Hill]]       | Galar (Crown Tundra) | Epic	    |
