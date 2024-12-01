@@ -35,6 +35,6 @@ Wepear Berries can be obtained from the following dungeons.
 | :---:                             | :---:     | :---:         |
 | [[Dungeons/Berry Forest]]	        | Kanto (Sevii Islands 123) | Epic  	|
 | [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567) | Epic  	|
-| [[Dungeons/Radio Tower]]	        | Johto Epic  	|
+| [[Dungeons/Radio Tower]]	        | Johto | Epic  	|
 | [[Dungeons/Floccesy Ranch]]       | Unova | Epic      |
 | [[Dungeons/Connecting Cave]]      | Kalos | Common	|
