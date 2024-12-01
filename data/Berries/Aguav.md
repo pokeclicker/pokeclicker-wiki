@@ -35,10 +35,10 @@ Aguav Berries can mutate into the following Berries.
 ### Acquisition
 Aguav Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Pattern Bush]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Radio Tower]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Flower Paradise]]      | Common  	| `N/A`         |
-| [[Dungeons/Chargestone Cave]]     | Common	| `N/A`         |
-| [[Dungeons/Pokémon Village]]      | Common  	| `N/A`         |
+| [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567) | Epic  	|
+| [[Dungeons/Radio Tower]]	        | Johto | Epic  	|
+| [[Dungeons/Flower Paradise]]      | Sinnoh | Common  	|
+| [[Dungeons/Chargestone Cave]]     | Unova | Common	|
+| [[Dungeons/Pokémon Village]]      | Kalos | Common  	|
