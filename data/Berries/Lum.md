@@ -40,12 +40,12 @@ Lum Berries can be obtained from the following dungeons.
 
 | Location	                        | Region | Tier	    | Requirement   |
 | :---:                             | :---:  | :---:     | :---:         |
-| [[Dungeons/Berry Forest]]	        | Kanto  | Mythic  	| 400 Clears    |
-| [[Dungeons/Pattern Bush]]	        | Kanto  | Mythic  	| 150 Clears    |
+| [[Dungeons/Berry Forest]]	        | Kanto (Sevii Islands 123)  | Mythic  	| 400 Clears    |
+| [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567)  | Mythic  	| 150 Clears    |
 | [[Dungeons/Radio Tower]]	        | Johto  | Mythic  	| 250 Clears    |
 | [[Dungeons/Cave of Origin]]       | Hoenn  | Mythic  	| 150 Clears    |
 | [[Dungeons/Relic Cave]] | Hoenn  | Mythic | N/A |
-| [[Dungeons/Under Colosseum]] | Hoenn  | Legendary | 50 Clears |
+| [[Dungeons/Under Colosseum]] | Hoenn (Orre)  | Legendary | 50 Clears |
 | [[Dungeons/Moor of Icirrus]]       | Unova  | Mythic  	| 200 Clears    |
 | [[Dungeons/Pinwheel Forest]]      | Unova  | Mythic  	| 200 Clears    |
 | [[Dungeons/Thrifty Megamart]]     | Alola  | Mythic  	| 100 Clears    |
