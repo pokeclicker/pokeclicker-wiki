@@ -3,11 +3,11 @@ A Farm with at least one fully ripe Berry can attract Wandering Pokémon that st
 The Farm Point quantity depends on the farm points value and the growth time of the berry the Pokémon is attracted to. The exact formula is :
 $$ \text{Wanderer Farm Points} =  \frac{\text{Berry Farm Points}}{ 4 + \frac{\text{Berry Growth Time}} { 1800}} $$
 
-The Amount of Dungeon Tokens equals that of a route in the highest region the player stepped in. Which route is based on the the native region of the wandering Pokémon : the higher the region the Pokémon is native to, the higher the route.
+The Number of Dungeon Tokens equals that of a route in the highest region the player stepped in. Which route is based on the the native region of the wandering Pokémon : the higher the region the Pokémon is native to, the higher the route.
 
-The route is chosen using the following formula.
+The route is chosen is using the following formula.
 
-$$ \text{route} = \text{random route from}   ⌊\Bigg( (\text{totalroutes}-1) \times \frac{\text{pokemon region}}{\text{highest region}+2} \Bigg)⌋  \text{to}   ⌊\Bigg( (\text{totalroutes}-1) \times \frac{\text{pokemon region}+2}{\text{highest region}+2} \Bigg)⌋ $$
+$$ \text{route} = \text{random route from}   ⌊\Bigg( (\text{totalroutes}-1) \times \frac{\text{pokemon region}}{\text{highest region}+2} \Bigg)  \text{to}   ⌊\Bigg( (\text{totalroutes}-1) \times \frac{\text{pokemon region}+2}{\text{highest region}+2} \Bigg) $$
 
 Dungeon Tokens are obtained via the following formula.
 
