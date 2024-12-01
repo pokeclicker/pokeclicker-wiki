@@ -31,10 +31,10 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 ### Acquisition
 Wepear Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Berry Forest]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Pattern Bush]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Radio Tower]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Floccesy Ranch]]       | Epic      | `N/A`         |
-| [[Dungeons/Connecting Cave]]      | Common	| `N/A`         |
+| [[Dungeons/Berry Forest]]	        | Kanto (Sevii Islands 123) | Epic  	|
+| [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567) | Epic  	|
+| [[Dungeons/Radio Tower]]	        | Johto Epic  	|
+| [[Dungeons/Floccesy Ranch]]       | Unova | Epic      |
+| [[Dungeons/Connecting Cave]]      | Kalos | Common	|
