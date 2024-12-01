@@ -34,10 +34,10 @@ Figy Berries can mutate into the following Berries.
 ### Acquisition
 Figy Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Pokémon Mansion]]      | Epic  	| `N/A`         |
-| [[Dungeons/Pattern Bush]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Radio Tower]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Magma Hideout]]        | Common	| `N/A`         |
-| [[Dungeons/Liberty Garden]]       | Common	| `N/A`         |
+| [[Dungeons/Pokémon Mansion]]      | Kanto | Epic  	|
+| [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567) | Epic  	|
+| [[Dungeons/Radio Tower]]	        | Johto | Epic  	|
+| [[Dungeons/Magma Hideout]]        | Hoenn | Common	|
+| [[Dungeons/Liberty Garden]]       | Unova | Common	|
