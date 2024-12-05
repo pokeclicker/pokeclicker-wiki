@@ -1,6 +1,6 @@
 ## Hints
 
-Each Memory is hidden in a different dungeon indicated by a hint. The following table has an equivalent of hints and dungeons:
+Each Memory is hidden in a different town indicated by a hint. The following table has an equivalent of hints and towns:
 
 Step | Hint | Place | Memory
 :---: | :---: | :---: | :---:
