@@ -5,6 +5,7 @@
 Lum has a chance of mutating when all Generation 1 Berries (#1 Cheri to #8 Sitrus) are touching an empty plot. You can fill your farm in the following way to obtain Lum Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
+*(Note: You will want to have a lot of [[Items/Berry Shovel]] Berry Shovels on hand for this. This formation can form all berries #9 [[Berries/Persim]] Persim to #14 [[Berries/Pinap]] alongside [[Berries/Lum]] Lum, so make sure you have those so you can clear the plots for your Lum Berries.)*
 ::: table-mutations
 | :----: | :----: | :----: |
 | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | [[File:Oran.png\|32px]] [[Berries/Oran]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | |
