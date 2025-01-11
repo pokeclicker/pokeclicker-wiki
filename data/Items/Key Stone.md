@@ -29,6 +29,7 @@ Base Pokémon |Evolves into |Available in
 [[File:pokemon/302.png\|25px]] [[Pokemon/Sableye]]  | [[File:pokemon/302.01.png\|25px]] [[Pokemon/Mega Sableye]] |Kalos onward
 [[File:pokemon/303.png\|25px]] [[Pokemon/Mawile]]  | [[File:pokemon/303.01.png\|25px]] [[Pokemon/Mega Mawile]] |Kalos onward
 [[File:pokemon/306.png\|25px]] [[Pokemon/Aggron]]  | [[File:pokemon/306.01.png\|25px]] [[Pokemon/Mega Aggron]] |Kalos onward
+[[File:pokemon/308.png\|25px]] [[Pokemon/Medicham]]  | [[File:pokemon/308.01.png\|25px]] [[Pokemon/Mega Medicham]] |Kalos onward
 [[File:pokemon/310.png\|25px]] [[Pokemon/Manectric]]  | [[File:pokemon/310.01.png\|25px]] [[Pokemon/Mega Manectric]] |Kalos onward
 [[File:pokemon/319.png\|25px]] [[Pokemon/Sharpedo]]  | [[File:pokemon/319.01.png\|25px]] [[Pokemon/Mega Sharpedo]] |Kalos onward
 [[File:pokemon/323.png\|25px]] [[Pokemon/Camerupt]]  | [[File:pokemon/323.01.png\|25px]] [[Pokemon/Mega Camerupt]] |Kalos onward
