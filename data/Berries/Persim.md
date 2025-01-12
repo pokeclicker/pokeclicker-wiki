@@ -39,7 +39,7 @@ Persim Berries can mutate into the following Berries.
 ### Acquisition
 Persim Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
 | [[Dungeons/Berry Forest]]	        | Kanto ( 	Sevii Islands 123) |a Epic  	|
 | [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567) | Epic  	|
