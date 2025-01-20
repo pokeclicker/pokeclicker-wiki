@@ -8,4 +8,4 @@
 #### New content and patches are released frequently.
 
 ----------
-:::
+:::                                                                                                  This game is free
