@@ -17,7 +17,7 @@ Aura | Effect | Notes | Berries
 **Mutation Chance** | Changes the chance that any of the 8 surrounding plots will mutate a berry if possible| Effect is multiplicative and stacks with Squirtbottle and Surprise Mulch effects. Affects Overgrow and Parasite effects | @[[Berries/Kebia]] @[[Berries/Payapa]] @[[Berries/Babiri]]
 **Kasib Prevention** | Prevents berries from mutating into Kasib berries when they wither | A single berry with this ability will affect the entire field | @[[Berries/Colbur]]
 **Wither Prevention** | Prevents other berries from withering while this berry is ripe | A single berry with this ability will affect the entire field. Berries with this ability do not affect each other. Once this berry withers or is harvested other berries will reset their timers from the beginning of the Ripe stage. | @[[Berries/Petaya]]
-**Egg Growth** | Increases the growth speed of eggs in the hatchery | Effect is multiplicative over the whole field. Effect stacks with Magma Stone | @[[Berries/Chople]]
+**Egg Growth** | Increases the growth speed of eggs in the hatchery | Effect is multiplicative over the whole field. Effect stacks with Magma Stone | @[[Berries/Chople]] @[[Berries/Chilan]]
 **Shiny Chance** | Increases chance of finding Shiny Pokémon | Effect is multiplicative over the whole field. Effect stacks with Shiny Charm | @[[Berries/Starf]]
 **Attract Aura** | Modifies the chance of Pokémon wandering onto the farm | Effect is multiplicative over the whole field | @[[Berries/Roseli]] @[[Berries/Micle]]
 **Roamer Chance** | Increases chance of finding Roaming Pokémon on routes | Effect is multiplicative over the whole field | @[[Berries/Jaboca]]
