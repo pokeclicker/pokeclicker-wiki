@@ -8,4 +8,3 @@
 #### New content and patches are released frequently.
 
 ----------
-::: New Release : 0.10.23
