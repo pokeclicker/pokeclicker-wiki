@@ -57,54 +57,54 @@ Key Stone's base price starts at 250 [[File:battlePoint.svg\|16px]] and goes up 
 :::collapsed Price Table
 Purchased | Battle Points [[File:battlePoint.svg\|16px]] |
 :--- | :--- |
-Base Price | 250 [[File:battlePoint.svg\|16px]] |
-After 1 | 275 [[File:battlePoint.svg\|16px]] |
-After 2 | 303 [[File:battlePoint.svg\|16px]] |
-After 3 | 333 [[File:battlePoint.svg\|16px]] |
-After 4 | 366 [[File:battlePoint.svg\|16px]] |
-After 5 | 403 [[File:battlePoint.svg\|16px]] |
-After 6 | 443 [[File:battlePoint.svg\|16px]] |
-After 7 | 487 [[File:battlePoint.svg\|16px]] |
-After 8 | 536 [[File:battlePoint.svg\|16px]] |
-After 9 | 589 [[File:battlePoint.svg\|16px]] |
-After 10 | 648 [[File:battlePoint.svg\|16px]] |
-After 11 | 713 [[File:battlePoint.svg\|16px]] |
-After 12 | 785 [[File:battlePoint.svg\|16px]] |
-After 13 | 863 [[File:battlePoint.svg\|16px]] |
-After 14 | 949 [[File:battlePoint.svg\|16px]] |
-After 15 | 1,044 [[File:battlePoint.svg\|16px]] |
-After 16 | 1,149 [[File:battlePoint.svg\|16px]] |
-After 17 | 1,264 [[File:battlePoint.svg\|16px]] |
-After 18 | 1,390 [[File:battlePoint.svg\|16px]] |
-After 19 | 1,529 [[File:battlePoint.svg\|16px]] |
-After 20 | 1,682 [[File:battlePoint.svg\|16px]] |
-After 21 | 1,850 [[File:battlePoint.svg\|16px]] |
-After 22 | 2,035 [[File:battlePoint.svg\|16px]] |
-After 23 | 2,239 [[File:battlePoint.svg\|16px]] |
-After 24 | 2,462 [[File:battlePoint.svg\|16px]] |
-After 25 | 2,709 [[File:battlePoint.svg\|16px]] |
-After 26 | 2,980 [[File:battlePoint.svg\|16px]] |
-After 27 | 3,277 [[File:battlePoint.svg\|16px]] |
-After 28 | 3,605 [[File:battlePoint.svg\|16px]] |
-After 29 | 3,966 [[File:battlePoint.svg\|16px]] |
-After 30 | 4,362 [[File:battlePoint.svg\|16px]] |
-After 31 | 4,799 [[File:battlePoint.svg\|16px]] |
-After 32 | 5,278 [[File:battlePoint.svg\|16px]] |
-After 33 | 5,806 [[File:battlePoint.svg\|16px]] |
-After 34 | 6,387 [[File:battlePoint.svg\|16px]] |
-After 35 | 7,026 [[File:battlePoint.svg\|16px]] |
-After 36 | 7,728 [[File:battlePoint.svg\|16px]] |
-After 37 | 8,501 [[File:battlePoint.svg\|16px]] |
-After 38 | 9,351 [[File:battlePoint.svg\|16px]] |
-After 39 | 10,286 [[File:battlePoint.svg\|16px]] |
-After 40 | 11,315 [[File:battlePoint.svg\|16px]] |
-After 41 | 12,446 [[File:battlePoint.svg\|16px]] |
-After 42 | 13,691 [[File:battlePoint.svg\|16px]] |
-After 43 | 15,060 [[File:battlePoint.svg\|16px]] |
-After 44 | 16,566 [[File:battlePoint.svg\|16px]] |
-After 45 | 18,223 [[File:battlePoint.svg\|16px]] |
-After 46 | 20,045 [[File:battlePoint.svg\|16px]] |
-After 47 | 22,049 [[File:battlePoint.svg\|16px]] |
-After 48 | 24,545 [[File:battlePoint.svg\|16px]] |
-After 49+ | 25,000 [[File:battlePoint.svg\|16px]] |
+Base Price {data-sort=0} | 250 [[File:battlePoint.svg\|16px]] |
+After 1 {data-sort=1} | 275 [[File:battlePoint.svg\|16px]] |
+After 2 {data-sort=2} | 303 [[File:battlePoint.svg\|16px]] |
+After 3 {data-sort=3} | 333 [[File:battlePoint.svg\|16px]] |
+After 4 {data-sort=4} | 366 [[File:battlePoint.svg\|16px]] |
+After 5 {data-sort=5} | 403 [[File:battlePoint.svg\|16px]] |
+After 6 {data-sort=6} | 443 [[File:battlePoint.svg\|16px]] |
+After 7 {data-sort=7} | 487 [[File:battlePoint.svg\|16px]] |
+After 8 {data-sort=8} | 536 [[File:battlePoint.svg\|16px]] |
+After 9 {data-sort=9} | 589 [[File:battlePoint.svg\|16px]] |
+After 10 {data-sort=10} | 648 [[File:battlePoint.svg\|16px]] |
+After 11 {data-sort=11} | 713 [[File:battlePoint.svg\|16px]] |
+After 12 {data-sort=12} | 785 [[File:battlePoint.svg\|16px]] |
+After 13 {data-sort=13} | 863 [[File:battlePoint.svg\|16px]] |
+After 14 {data-sort=14} | 949 [[File:battlePoint.svg\|16px]] |
+After 15 {data-sort=15} | 1,044 [[File:battlePoint.svg\|16px]] |
+After 16 {data-sort=16} | 1,149 [[File:battlePoint.svg\|16px]] |
+After 17 {data-sort=17} | 1,264 [[File:battlePoint.svg\|16px]] |
+After 18 {data-sort=18} | 1,390 [[File:battlePoint.svg\|16px]] |
+After 19 {data-sort=19} | 1,529 [[File:battlePoint.svg\|16px]] |
+After 20 {data-sort=20} | 1,682 [[File:battlePoint.svg\|16px]] |
+After 21 {data-sort=21} | 1,850 [[File:battlePoint.svg\|16px]] |
+After 22 {data-sort=22} | 2,035 [[File:battlePoint.svg\|16px]] |
+After 23 {data-sort=23} | 2,239 [[File:battlePoint.svg\|16px]] |
+After 24 {data-sort=24} | 2,462 [[File:battlePoint.svg\|16px]] |
+After 25 {data-sort=25} | 2,709 [[File:battlePoint.svg\|16px]] |
+After 26 {data-sort=26} | 2,980 [[File:battlePoint.svg\|16px]] |
+After 27 {data-sort=27} | 3,277 [[File:battlePoint.svg\|16px]] |
+After 28 {data-sort=28} | 3,605 [[File:battlePoint.svg\|16px]] |
+After 29 {data-sort=29} | 3,966 [[File:battlePoint.svg\|16px]] |
+After 30 {data-sort=30} | 4,362 [[File:battlePoint.svg\|16px]] |
+After 31 {data-sort=31} | 4,799 [[File:battlePoint.svg\|16px]] |
+After 32 {data-sort=32} | 5,278 [[File:battlePoint.svg\|16px]] |
+After 33 {data-sort=33} | 5,806 [[File:battlePoint.svg\|16px]] |
+After 34 {data-sort=34} | 6,387 [[File:battlePoint.svg\|16px]] |
+After 35 {data-sort=35} | 7,026 [[File:battlePoint.svg\|16px]] |
+After 36 {data-sort=36} | 7,728 [[File:battlePoint.svg\|16px]] |
+After 37 {data-sort=37} | 8,501 [[File:battlePoint.svg\|16px]] |
+After 38 {data-sort=38} | 9,351 [[File:battlePoint.svg\|16px]] |
+After 39 {data-sort=39} | 10,286 [[File:battlePoint.svg\|16px]] |
+After 40 {data-sort=40} | 11,315 [[File:battlePoint.svg\|16px]] |
+After 41 {data-sort=41} | 12,446 [[File:battlePoint.svg\|16px]] |
+After 42 {data-sort=42} | 13,691 [[File:battlePoint.svg\|16px]] |
+After 43 {data-sort=43} | 15,060 [[File:battlePoint.svg\|16px]] |
+After 44 {data-sort=44} | 16,566 [[File:battlePoint.svg\|16px]] |
+After 45 {data-sort=45} | 18,223 [[File:battlePoint.svg\|16px]] |
+After 46 {data-sort=46} | 20,045 [[File:battlePoint.svg\|16px]] |
+After 47 {data-sort=47} | 22,049 [[File:battlePoint.svg\|16px]] |
+After 48 {data-sort=48} | 24,545 [[File:battlePoint.svg\|16px]] |
+After 49+ {data-sort=49} | 25,000 [[File:battlePoint.svg\|16px]] |
 :::
