@@ -79379,7 +79379,9 @@ const gemGymsPerFlute = (fluteType) => {
 
             const totalGems = gems.reduce((sum, gem) => sum + gem.amount, 0);
 
-            return totalGems > 0 ? { name, gems, totalGems } : null;
+            const displayName = GymList[name].pokemons.some(p => p.requirements.length > 0) ? `${name}*` : name;
+
+            return totalGems > 0 ? { displayName, name, gems, totalGems } : null;
         })
         .filter(Boolean) 
         .sort((a, b) => b.totalGems - a.totalGems);

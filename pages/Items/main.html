@@ -94,7 +94,10 @@
     <!-- ko if: $data.constructor.name == 'FluteItem'-->
     <div class="mt-3" style="clear:both">
         <h3>Gyms that include the required types</h3>
-        <p>Hint: Use the search to filter for specific types or combinations. Search for "<span data-bind="text: $data.gemTypes.join(' ')"></span>" to only list Gyms that give all three types.</p>
+        <p>
+            Hint: Use the search to filter for specific types or combinations. Search for "<span data-bind="text: $data.gemTypes.join(' ')"></span>" to only list Gyms that give all three types.
+            Gyms with an * next to their name may provide different gems depending on the players chosen starter.
+        </p>
         <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
@@ -119,7 +122,7 @@
             <tbody data-bind="foreach: { data: Wiki.gems.gemGymsPerFlute($data.name) }">
                 <tr>
                     <td data-bind="text: $index() + 1"></td>
-                    <td><a style="text-decoration: none;" data-bind="text: $data.name, attr: { href: `#!Gyms/${$data.name}` }"></a></td>
+                    <td><a style="text-decoration: none;" data-bind="text: $data.displayName, attr: { href: `#!Gyms/${$data.name}` }"></a></td>
                     <td data-bind="text: $data.gems[0].amount.toFixed(2)"></td>
                     <td data-bind="text: $data.gems[1].amount.toFixed(2)"></td>
                     <td data-bind="text: $data.gems[2].amount.toFixed(2)"></td>
