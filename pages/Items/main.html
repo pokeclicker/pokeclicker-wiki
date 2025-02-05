@@ -90,6 +90,46 @@
         </div>
     </div>
     <!-- /ko -->
+    <!-- ko if: $data.constructor.name == 'FluteItem'-->
+    <div class="mt-3" style="clear:both">
+        <h3>Gyms that include the required types</h3>
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Order</th>
+                    <th>Name</th>
+                    <th data-bind="text: $data.gemTypes[0] + ' Gem'"></th>
+                    <th data-bind="text: $data.gemTypes[1] + ' Gem'"></th>
+                    <th data-bind="text: $data.gemTypes[2] + ' Gem'"></th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: { data: Wiki.gems.gemGymsPerFlute($data.name) }">
+                <tr>
+                    <td data-bind="text: $index() + 1"></td>
+                    <td><a style="text-decoration: none;" data-bind="text: $data.name, attr: { href: `#!Gyms/${$data.name}` }"></a></td>
+                    <td style="text-align: right;" data-bind="attr: { 'data-sort': $data.gems[0].amount }">
+                        <ko data-bind="text: $data.gems[0].amount.toFixed(2)"></ko>
+                        <img style="margin: -6px 0" data-bind="attr: { src: './pokeclicker/docs/' + Gems.image(PokemonType[$data.gems[0].type]) }" />
+                    </td>
+                    <td style="text-align: right;" data-bind="attr: { 'data-sort': $data.gems[1].amount }">
+                        <ko data-bind="text: $data.gems[1].amount.toFixed(2)"></ko>
+                        <img style="margin: -6px 0" data-bind="attr: { src: './pokeclicker/docs/' + Gems.image(PokemonType[$data.gems[1].type]) }" />
+                    </td>
+                    <td style="text-align: right;" data-bind="attr: { 'data-sort': $data.gems[2].amount }">
+                        <ko data-bind="text: $data.gems[2].amount.toFixed(2)"></ko>
+                        <img style="margin: -6px 0" data-bind="attr: { src: './pokeclicker/docs/' + Gems.image(PokemonType[$data.gems[2].type]) }" />
+                    </td>
+                    <td style="text-align: right;" data-bind="attr: { 'data-sort': $data.totalGems / 3 }">
+                        <ko data-bind="text: ($data.totalGems /3).toFixed(2)"></ko>
+                        <img style="margin: -6px 0" data-bind="attr: { src: './pokeclicker/docs/' + Gems.image(PokemonType.Normal) }" />
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- /ko -->
 
     <div class="mt-3" style="clear: right;" data-bind="if: Object.values(dungeonList).some((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name || l.loot == $data.displayName)))">
         <h3>Can be found in the following dungeons:</h3>
