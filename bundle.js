@@ -79367,24 +79367,23 @@ const gemsPerRouteEncounter = (route, gemType) => {
 const gemGymsPerFlute = (fluteType) => {
    const gemTypes = ItemList[fluteType]?.gemTypes || [];
 
-let validGyms = Object.keys(GymList)
-    .map(name => {
-        const region = GameConstants.getGymRegion(name);
-        if (region > GameConstants.MAX_AVAILABLE_REGION && region < GameConstants.Region.final) {
-            return null;
-        }
+    let validGyms = Object.keys(GymList)
+        .map(name => {
+            const region = GameConstants.getGymRegion(name);
+            if (region > GameConstants.MAX_AVAILABLE_REGION && region < GameConstants.Region.final) {
+                return null;
+            }
 
-        const gems = gemTypes
-            .map(type => ({ type, amount: gemsPerGymEncounter(name, type) || 0 }))
+            const gems = gemTypes
+                .map(type => ({ type, amount: gemsPerGymEncounter(name, type) || 0 }))
 
-        const totalGems = gems.reduce((sum, gem) => sum + gem.amount, 0);
+            const totalGems = gems.reduce((sum, gem) => sum + gem.amount, 0);
 
-        return totalGems > 0 ? { name, gems, totalGems } : null;
-    })
-    .filter(Boolean) 
-    .sort((a, b) => b.totalGems - a.totalGems);
+            return totalGems > 0 ? { name, gems, totalGems } : null;
+        })
+        .filter(Boolean) 
+        .sort((a, b) => b.totalGems - a.totalGems);
 
-console.log(validGyms);
 
     return validGyms;
 }
