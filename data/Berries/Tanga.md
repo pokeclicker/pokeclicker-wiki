@@ -1,6 +1,7 @@
 ## Acquisition
 
 Tanga berries can be obtained by surrounding an empty plot with eight [[Berries/Rindo]] berries.
+*(Note: Be ready with some  [[File:Berry_Shovel.png\|32px]] [[Items/Berry Shovel]]s, as Rindo Berries can also appear in this configuration.)*
 
 **Base Formation**
 ::: table-mutations
