@@ -273,5 +273,5 @@ All planting times use the time-to-ripe remaining of the first planted berry for
 |---|---|---|---|
 | [[Berries/Petaya]] | - | - | -|
 | [[Berries/Babiri]] | - | - | -|
-| [[Berries/Chople]] | 19 hours 59 minutes 59 seconds until ripe OR 9 hours until ripe (no [[Chilan]] chance) | 13 hours 19 mins 59 secs until ripe OR 6 hours until ripe (no [[Berries/Chilan]] chance) | 8 hours 53 mins 19 secs until ripe OR 4 hours until ripe (no [[Chilan]] chance)|
+| [[Berries/Chople]] | 19 hours 59 minutes 59 seconds until ripe OR 9 hours until ripe (no [[Berries/Chilan]] chance) | 13 hours 19 mins 59 secs until ripe OR 6 hours until ripe (no [[Berries/Chilan]] chance) | 8 hours 53 mins 19 secs until ripe OR 4 hours until ripe (no [[Berries/Chilan]] chance)|
 | [[Berries/Lum]] | 11 hours 59 minutes 59 seconds until ripe | 7 hours 59 mins 59 secs until ripe | 5 hours 19 mins 59 secs until ripe|
