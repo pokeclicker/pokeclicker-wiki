@@ -144,7 +144,7 @@ A slightly more complex strategy for planting Chople berries is to plant berries
 
 ## Chople + [[Berries/Petaya]]
 
-A strategy that is easier in many respects than Chople + Yache/Haban is Chople + [[Berries/Petaya]]. Petaya is one of the final berries to unlock, and it is one of the most challenging to do so, so it might not be the most accessible option. However, the aura effect of Petaya berries "freeze" the timers of ripe berries on the farm, locking them at infinity so long as the Petaya plant is ripe. This is an incredibly powerful effect as Petaya berries remain ripe for 5 days (no modifiers). Thus, this strategy provides a very stable setup for three rows of Chople berries for much longer than using two empty rows.
+A strategy that is easier in many respects than Chople + Yache/Haban is Chople + [[Berries/Petaya]]. Petaya is one of the final berries to unlock, and it is one of the most challenging to do so, so it might not be the most accessible option. However, the aura effect of Petaya berries "freeze" the timers of ripe berries on the farm, locking them at infinity so long as the Petaya plant is ripe. This is an incredibly powerful effect as Petaya berries remain ripe for 4 days (no modifiers). Thus, this strategy provides a very stable setup for three rows of Chople berries for much longer than using two empty rows.
 
 **Egg Step Bonus: 1.56x**
 ::: table-mutations
