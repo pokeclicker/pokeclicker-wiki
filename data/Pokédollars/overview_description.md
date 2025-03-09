@@ -25,7 +25,7 @@ It is always most efficient to farm money on the highest strength route when idl
 Region | Route | Gym
 :---:| :---: |:---:
 Kanto | 23 | Cinnabar Island & Champion Blue
-Johto | 28 | Johto Elite Four (All equivalent, Will is the easiest)
+Johto | 28 | Champion Lance
 Hoenn | 134 | Champion Wallace
 Sinnoh | 230 | Champion Cynthia
 Unova | 18 | Champion Iris
