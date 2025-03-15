@@ -124,5 +124,3 @@ Petaya Berries can be used to mutate the following Berries.
 | Used In                                       | Other Requirements |
 | :---:                                         | :---: |
 | [[File:Maranga.png\|32px]] [[Berries/Maranga]]  | [[File:Salac.png\|32px]] [[Berries/Salac]] |
-
-Note: This berry may be the most complicated berry since it has to have all Gen 4 berries and perfect timing.
