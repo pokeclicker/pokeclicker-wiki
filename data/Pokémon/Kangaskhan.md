@@ -1,1 +1,1 @@
-Note: When you breed Kangaskhan, it drops an another Pokemon if it's baby verison.
+Note: When you breed Kangaskhan, it drops an another Pokemon, which is it's baby variation.
