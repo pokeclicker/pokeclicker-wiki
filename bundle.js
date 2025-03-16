@@ -77791,6 +77791,7 @@ const getOriginalContent = (editor) => editor._rendered.value.split('\n').map(l 
 // list of discord ids banned from editing the wiki
 const banList = [
   '516241570853552129', // primorollins (repeatedly editing a page after being told to stop)
+  '1320473652361433161' // the_spectrumyt_70106 (making unwanted page edits, not in discord to tell to stop)
 ];
 
 const saveChanges = (editor, filename, btn) => {
