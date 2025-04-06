@@ -29,7 +29,7 @@ The 25% increase to a Pokémon's Base Attack through breeding can be increased t
 
 Breeding Pokémon also offers the highest shiny odds in the game (alongside [[Wandering Pokémon]] and [[Shop Pokémon]]) at 1/1024. Consult [[Shiny Chance]] for further information on Shiny Odds using the Hatchery.
 
-[[Hatchery Helpers]] are unlock-able and purchasable [[Items]] that allow the player to automate the hatchery. As of Version 0.9.3 this is a BETA feature and is likely to change in the future.
+[[Hatchery Helpers]] are unlock-able and purchasable [[Items]] that allow the player to automate the hatchery.
 
 # Efficiency
 
