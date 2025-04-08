@@ -183,7 +183,7 @@ Encounter Chance per 1.5s: 1.61%**_
 These setups will work for all Parasite berries, namely [[Berries/Occa]], [[Berries/Kebia]], and [[Berries/Colbur]].
 
 #### Roseli + Lum + Babiri + Attracting Berry
-Using 1 Lum berry surrounded by 8 Roseli berries, with each side being protected by a Babiri, and then filling the remainder of open farm spots with the parasite berry is the most effective way of attracting wandering Pokémon to the farm.
+Using one [[Berries/Lum]] berry surrounded by eight [[Berries/Roseli]] berries, with each side being protected by a [[Berries/Babiri]], and then filling the remainder of open farm spots with the parasite berry is the most effective way of attracting wandering Pokémon to the farm.  Parasite setups also work for attracting wanderers to [[Berries/Enigma]] without any risk of mutations.
 
 _**Attract Aura: 2.18x,
 Encounter Chance per 1.5s: 1.48%**_
