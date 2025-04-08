@@ -27,7 +27,7 @@ Baby Pokémon are Pokémon obtained exclusively through Breeding the evolved sta
 
 The 25% increase to a Pokémon's Base Attack through breeding can be increased through the use of [[Items/Protein]]. Proteins increase the Attack bonus from Breeding by 1 for each Protein used on an individual Pokémon. Consult [[Items/Protein]] for further information on Breeding Efficiency using Proteins.
 
-Breeding Pokémon also offers the highest shiny odds in the game (alongside [[Wandering Pokémon]] and [[Shop Pokémon]]) at 1/1024. Consult [[Shiny Chance]] for further information on Shiny Odds using the Hatchery.
+Breeding Pokémon also offers the highest shiny odds in the game (alongside [[Wandering Pokémon]] and [[Shop Pokémon]]) at 1/1024. Consult [[Shiny Chance]] for further information on Shiny Odds using the Hatchery. Hatching a shiny Pokémon will grant it 5 times the usual attack gain. Note that this bonus does not apply to every hatch of existing shiny pokemon. In other words, if you breed a shiny Pokémon, it will only receive the bonus if it hatches shiny again.
 
 [[Hatchery Helpers]] are unlock-able and purchasable [[Items]] that allow the player to automate the hatchery.
 
