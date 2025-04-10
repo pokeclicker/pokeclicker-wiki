@@ -54,10 +54,20 @@ const requirementHints = (requirement, includeMarkdown = true) => {
                 case DevelopmentRequirement:
                     hint = 'Not currently available.'
                     break;
+                case PokemonDefeatedSelectNRequirement:
+                    hint = null;
+                    break;
             }
-            hints.push(hint);
+
+            if (hint?.length) {
+                hints.push(hint);
+            }
         }
     });
+
+    if (requirement.some((req) => req instanceof PokemonDefeatedSelectNRequirement)) { // show last
+        hints.push('Has a chance to appear here; randomly changes locations after being defeated.');
+    }
 
     return hints;
 };
