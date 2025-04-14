@@ -1,1 +1,1 @@
-**Note:** [[Pokémon/Sawk]] and [[Pokémon/Throh]] can be encountered in this dungeon **only** after capturing them somewhere else.
+**Note:** [[Pokémon/Sawk]], [[Pokémon/Throh]], [[Pokémon/Deino]] and [[Pokémon/Zweilous]] can be encountered in this dungeon **only** after capturing them with another method.

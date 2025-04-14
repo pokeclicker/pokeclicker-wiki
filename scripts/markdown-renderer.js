@@ -11,7 +11,7 @@ const md = new markdownit({
   .use(require('markdown-it-attrs'), {
     leftDelimiter: '{',
     rightDelimiter: '}',
-    allowedAttributes: ['id', 'class'],
+    allowedAttributes: ['id', 'class', 'data-sort', 'data-order'],
   })
   .use(require('markdown-it-mathjax3'))
   .use(require('markdown-it-container'), 'text-center')
