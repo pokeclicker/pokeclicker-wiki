@@ -39,12 +39,12 @@ Persim Berries can mutate into the following Berries.
 ### Acquisition
 Persim Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Berry Forest]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Pattern Bush]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Pinkan Mountain]]      | Common	| `N/A`         |
-| [[Dungeons/Radio Tower]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Solaceon Ruins]]       | Common	| `N/A`         |
-| [[Dungeons/Reversal Mountain]]	| Common	| `N/A`         |
-| [[Dungeons/Seaside Cave]]	        | Common	| `N/A`         |
+| [[Dungeons/Berry Forest]]	        | Kanto (Sevii Islands 123) | Epic  	|
+| [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567) | Epic  	|
+| [[Dungeons/Pinkan Mountain]]      | Kanto (Sevii Islands 4567) | Common	|
+| [[Dungeons/Radio Tower]]	        | Johto | Epic  	|
+| [[Dungeons/Solaceon Ruins]]       | Sinnoh | Common	|
+| [[Dungeons/Reversal Mountain]]	| Unova | Common	|
+| [[Dungeons/Seaside Cave]]	        | Unova | Common	|

@@ -26,14 +26,14 @@ Mulch and Berry Shovel can be bought in Goldenrod City, Mauville City, Hearthome
 
 | Name | Price | Description |
 |:--------: | :--------: |:--------:|
-|[[File:Boost_Mulch.png\|32px]]  Boost Mulch | 50 [[File:currency/farmPoint.svg\|24px]] | Increases Berry growth rate by 50% when applied to a plot occupied by a Berry plant. |
-|[[File:Rich_Mulch.png\|32px]]  Rich Mulch | 100 [[File:currency/farmPoint.svg\|24px]] | Doubles the amount of berries gained from harvesting a ripe Berry plant. Can be applied immediately prior to harvesting a plant to gain the full doubling boost. Doubles replant chance if berry withers while mulched.  |
-|[[File:Surprise_Mulch.png\|32px]]  Surprise Mulch | 150 [[File:currency/farmPoint.svg\|24px]]  | Increases the chance of Berry mutations by 50% on any (can be empty or occupied) plot it is applied to. |
-|[[File:Amaze_Mulch.png\|32px]]  Amaze Mulch | 200 [[File:currency/farmPoint.svg\|24px]]  | Increases the growth and mutation rates by 25% and the harvest rate and replant chance  by 50%.  |
-|[[File:Freeze_Mulch.png\|32px]]  Freeze Mulch | 350 [[File:currency/farmPoint.svg\|24px]]  | Pauses Berry growth and auras. This includes the Colbur berry blocking Kasib berries from mutating, but not parasitic effects since those are strictly a mutation.  |
-|[[File:Gooey_Mulch.png\|32px]]  Gooey Mulch | 100 [[File:currency/farmPoint.svg\|24px]]  | Improves the catch rate of wandering Pokémon on mulched plot by 10%. Also increases the weights of berry or color specific wandering Pokémon, making them more likely to appear.  |
-|[[File:Berry_Shovel.png\|32px]]  Berry Shovel | 300 [[File:currency/farmPoint.svg\|24px]]  | Clears an occupied plot instantly. Harvestable plots that are shoveled are harvested and not cleared. |
-|[[File:Mulch_Shovel.png\|32px]]  Mulch Shovel | 300 [[File:currency/farmPoint.svg\|24px]]  | Removes Mulch from a plot in the Farm. |
+|[[File:Boost_Mulch.png\|32px]]  [[Items/Boost Mulch]]  | 50 [[File:currency/farmPoint.svg\|24px]] | Increases Berry growth rate by 50% when applied to a plot occupied by a Berry plant. |
+|[[File:Rich_Mulch.png\|32px]]  [[Items/Rich Mulch]]  | 100 [[File:currency/farmPoint.svg\|24px]] | Doubles the amount of berries gained from harvesting a ripe Berry plant. Can be applied immediately prior to harvesting a plant to gain the full doubling boost. Doubles replant chance if berry withers while mulched.  |
+|[[File:Surprise_Mulch.png\|32px]]  [[Items/Surprise Mulch]] | 150 [[File:currency/farmPoint.svg\|24px]]  | Increases the chance of Berry mutations by 50% on any (can be empty or occupied) plot it is applied to. |
+|[[File:Amaze_Mulch.png\|32px]]  [[Items/Amaze Mulch]] | 200 [[File:currency/farmPoint.svg\|24px]]  | Increases the growth and mutation rates by 25% and the harvest rate and replant chance  by 50%.  |
+|[[File:Freeze_Mulch.png\|32px]]  [[Items/Freeze Mulch]] | 350 [[File:currency/farmPoint.svg\|24px]]  | Pauses Berry growth and auras. This includes the Colbur berry blocking Kasib berries from mutating, but not parasitic effects since those are strictly a mutation.  |
+|[[File:Gooey_Mulch.png\|32px]]  [[Items/Gooey Mulch]] | 100 [[File:currency/farmPoint.svg\|24px]]  | Improves the catch rate of wandering Pokémon on mulched plot by 10%. Also increases the weights of berry or color specific wandering Pokémon, making them more likely to appear.  |
+|[[File:Berry_Shovel.png\|32px]]  [[Items/Berry Shovel]] | 300 [[File:currency/farmPoint.svg\|24px]]  | Clears an occupied plot instantly. Harvestable plots that are shoveled are harvested and not cleared. |
+|[[File:Mulch_Shovel.png\|32px]]  [[Items/Mulch Shovel]] | 300 [[File:currency/farmPoint.svg\|24px]]  | Removes Mulch from a plot in the Farm. |
 
 
 

@@ -5,6 +5,7 @@
 Qualot has a chance of mutating by surrounding an empty plot with at least 10, but no more than 15 points of Spicy, Sweet, and Sour flavors, and 0 points of all other flavors. You can fill your farm in the following way to obtain Qualot Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
+*(**Note**: This formation may also yield [[File:Nomel.png\|32px]] [[Berries/Nomel]] Berries.)*
 ::: table-mutations
 | :----: | :----: |
 | [[File:Pinap.png\|32px]] [[Berries/Pinap]] | {.mutation} | |
@@ -58,6 +59,6 @@ Qualot Berries can mutate into the following Berries.
 ### Acquisition
 Qualot Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Pinkan Mountain]]      | Epic	| `N/A`         |
+| [[Dungeons/Pinkan Mountain]]      | Kanto (Sevii Islands 4567) | Epic	|

@@ -77465,11 +77465,11 @@ const requirementHints = (requirement, includeMarkdown = true) => {
                     break;
                 case QuestLineStepCompletedRequirement:
                     if (typeof req.questIndex === 'function') {
-                        hint = req.option == GameConstants.AchievementOption.equal
+                        hint = req.option == GameConstants.AchievementOption.equal || req.option == GameConstants.AchievementOption.more
                             ? `Progress in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
                             : `Have not progessed to a certain step in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
                     } else {
-                        hint = req.option == GameConstants.AchievementOption.equal
+                        hint = req.option == GameConstants.AchievementOption.equal || req.option == GameConstants.AchievementOption.more
                             ? `Complete step ${req.questIndex + 1} in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
                             : `Have not completed step ${req.questIndex + 1} in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
                     }
@@ -77493,10 +77493,20 @@ const requirementHints = (requirement, includeMarkdown = true) => {
                 case DevelopmentRequirement:
                     hint = 'Not currently available.'
                     break;
+                case PokemonDefeatedSelectNRequirement:
+                    hint = null;
+                    break;
             }
-            hints.push(hint);
+
+            if (hint?.length) {
+                hints.push(hint);
+            }
         }
     });
+
+    if (requirement.some((req) => req instanceof PokemonDefeatedSelectNRequirement)) { // show last
+        hints.push('Has a chance to appear here; randomly changes locations after being defeated.');
+    }
 
     return hints;
 };
@@ -77791,6 +77801,7 @@ const getOriginalContent = (editor) => editor._rendered.value.split('\n').map(l 
 // list of discord ids banned from editing the wiki
 const banList = [
   '516241570853552129', // primorollins (repeatedly editing a page after being told to stop)
+  '1320473652361433161' // the_spectrumyt_70106 (making unwanted page edits, not in discord to tell to stop)
 ];
 
 const saveChanges = (editor, filename, btn) => {
@@ -80229,6 +80240,17 @@ const searchOptions = [
     type: 'Click Attack',
     page: '',
   },
+  // Environments
+  {
+    display: 'Environments',
+    type: 'Environments',
+    page: '',
+  },
+  ...Object.keys(GameConstants.Environments).map(env => ({
+    display: `${GameConstants.camelCaseToString(env)} (Environment)`,
+    type: 'Environments',
+    page: `${GameConstants.camelCaseToString(env)}`,
+  })),
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {

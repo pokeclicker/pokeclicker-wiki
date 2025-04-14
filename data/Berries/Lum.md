@@ -5,6 +5,7 @@
 Lum has a chance of mutating when all Generation 1 Berries (#1 Cheri to #8 Sitrus) are touching an empty plot. You can fill your farm in the following way to obtain Lum Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
+*(Note: You will want to have a lot of [[File:Berry_Shovel.png\|32px]] [[Items/Berry Shovel]] on hand for this. This formation can form all berries #9 [[File:Persim.png\|32px]] [[Berries/Persim]] to #14 [[File:Pinap.png\|32px]] [[Berries/Pinap]] alongside [[File:Lum.png\|32px]] Lum, so make sure you have those so you can clear the plots for your Lum Berries.)*
 ::: table-mutations
 | :----: | :----: | :----: |
 | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | [[File:Oran.png\|32px]] [[Berries/Oran]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | |
@@ -38,17 +39,17 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 ### Acquisition
 Lum Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
-| :---:                             | :---:     | :---:         |
-| [[Dungeons/Berry Forest]]	        | Mythic  	| 400 Clears    |
-| [[Dungeons/Pattern Bush]]	        | Mythic  	| 150 Clears    |
-| [[Dungeons/Radio Tower]]	        | Mythic  	| 250 Clears    |
-| [[Dungeons/Cave of Origin]]       | Mythic  	| 150 Clears    |
-| [[Dungeons/Relic Cave]] | Mythic | N/A |
-| [[Dungeons/Under Colosseum]] | Legendary | 50 Clears |
-| [[Dungeons/Moor of Icirrus]]       | Mythic  	| 200 Clears    |
-| [[Dungeons/Pinwheel Forest]]      | Mythic  	| 200 Clears    |
-| [[Dungeons/Thrifty Megamart]]     | Mythic  	| 100 Clears    |
+| Location	                        | Region | Tier	    | Requirement   |
+| :---:                             | :---:  | :---:     | :---:         |
+| [[Dungeons/Berry Forest]]	        | Kanto (Sevii Islands 123)  | Mythic  	| 400 Clears    |
+| [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567)  | Mythic  	| 150 Clears    |
+| [[Dungeons/Radio Tower]]	        | Johto  | Mythic  	| 250 Clears    |
+| [[Dungeons/Cave of Origin]]       | Hoenn  | Mythic  	| 150 Clears    |
+| [[Dungeons/Relic Cave]] | Hoenn  | Mythic | N/A |
+| [[Dungeons/Under Colosseum]] | Hoenn (Orre)  | Legendary | 50 Clears |
+| [[Dungeons/Moor of Icirrus]]       | Unova  | Mythic  	| 200 Clears    |
+| [[Dungeons/Pinwheel Forest]]      | Unova  | Mythic  	| 200 Clears    |
+| [[Dungeons/Thrifty Megamart]]     | Alola  | Mythic  	| 100 Clears    |
 
 #### Dropped by
 | :---|

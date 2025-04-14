@@ -1,0 +1,1 @@
+>Increased catch rate in dungeons or at night

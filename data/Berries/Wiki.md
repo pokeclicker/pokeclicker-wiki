@@ -34,9 +34,9 @@ Wiki Berries can mutate into the following Berries.
 ### Acquisition
 Wiki Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Diglett's Cave]]       | Mythic	| `N/A`         |
-| [[Dungeons/Pattern Bush]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Radio Tower]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Pokémon Village]]      | Common  	| `N/A`         |
+| [[Dungeons/Diglett's Cave]]       | Kanto | Mythic	|
+| [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567) | Epic  	|
+| [[Dungeons/Radio Tower]]	        | Johto | Epic  	|
+| [[Dungeons/Pokémon Village]]      | Kalos | Common  	|

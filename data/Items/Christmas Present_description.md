@@ -1,1 +1,1 @@
-Unusable. Rewards a random currency upon dropping.
+Unusable. Rewards [[Pokédollars]], [[Quest Points]], [[Dungeon Tokens]], [[Diamonds]], or [[Farm Points]] upon dropping.

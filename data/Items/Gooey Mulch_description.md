@@ -1,1 +1,3 @@
-Increases chance of a wandering Pokémon to be attracted to applied berry and increases chance for a rare wandering Pokémon. Also increases catch chance by 10% for wandering Pokémon. Each Gooey mulch lasts for 5 minutes (300 seconds), and they can be stacked for a longer effect time.
+Doubles the weighted chance for each rare [[Wandering Pokémon]] and increases catch chance by 10% for any wandering Pokémon on the [[Farm]] that appears on a Gooey Mulch plot.  Lasts for five minutes (300 seconds), and like all Mulches multiple of the same type can be applied to extend the total duration.  Rare wanderers include berry exclusive and color exclusive species.  [[Shiny Chance]] is unaffected by Gooey Mulch.
+
+Example: Burmy (No Coat) is only available as a wanderer on [[Berries/Custap]] berries.  The base odds are 1/16 (6%; twelve common, four rare) if the player has unlocked all regions. With Gooey Mulch, that goes up to 2/20 (10%).

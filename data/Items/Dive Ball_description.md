@@ -1,1 +1,1 @@
->Increased catch rate on water routes
+>Increased catch rate on [Water routes and dungeons](#!Environments/Water)

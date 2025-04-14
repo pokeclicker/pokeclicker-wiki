@@ -1,4 +1,4 @@
-There are a number of Farming Setups not related to [Breeding Pokemon faster](#!Hatchery/ "Hatchery") or  [Increasing Shiny Chance](#!Shiny_Chance)  that are quite useful, particularly when either mutating berries or trying to harvest mutated berries faster, or, even without mutating berries, if you just want to harvest a lot of berries to trade to the  [Berry Master](https://pokeclicker.miraheze.org/wiki/Berry_Master "Berry Master").
+There are a number of Farming Setups not related to [Breeding Pokemon faster](#!Hatchery/ "Hatchery") or  [Increasing Shiny Chance](#!Shiny_Chance)  that are quite useful, particularly when either mutating berries or trying to harvest mutated berries faster, or, even without mutating berries, if you just want to harvest a lot of berries to trade to [Berry Masters](#!Daily_Deals).
 Here are some useful berry setups to know.
 
 _Note: Aura Received is multiplicative from all the auras affecting a berry. If a Berry receives the aura from 4 aura berries each at 1.3x aura output, that Berry receives 1.3^4 = 2.8561, or ~2.86x as an aura multiplier. If a Berry receives auras from 3 berries, two at 1.3x and one at 1.2x, the berry receives 1.3^2 * 1.2x = 2.028, or ~2.03x aura output_
@@ -151,7 +151,7 @@ _**EV Gain Bonus: 2.54x**_
 ### Regular Berries
 #### Roseli + Lum + Attracting Berry
 Using 2 Lum berries surrounded by 13 Roseli berries, and then filling the remainder of open farm spots with an attracting berry (a berry that attracts a particular species of wandering Pokémon) is the most effective way of attracting wandering Pokémon to the farm.
-- _Note: Do not use this setup with [[Berries/Occa]], [[Berries/Colbur]], or [[Berries/Kebia]] berries. Due to their nature of overtaking other berries, it is most efficient to simply plant 25 of those berries. Check the next section for those setups._
+- _Note: Do not use this setup with [[Berries/Occa]], [[Berries/Colbur]], or [[Berries/Kebia]] or [[Berries/Enigma]] berries due to their nature of overtaking other berries. See "Parasite Berries" below for those setups._
 
 _**Attract Aura: 3.54x,
 Encounter Chance per 1.5s: 1.77%**_
@@ -180,10 +180,10 @@ Encounter Chance per 1.5s: 1.61%**_
 :::
 
 ### Parasite Berries
-These setups will work for all Parasite berries, namely [[Berries/Occa]], [[Berries/Kebia]], and [[Berries/Colbur]].
+These setups will work for all Parasite berries, namely [[Berries/Occa]], [[Berries/Kebia]] and [[Berries/Colbur]], plus [[Berries/Enigma]].  While Enigma is not a true parasite berry, it has the unique ability to mutate Roselis and so requires the same protection.
 
 #### Roseli + Lum + Babiri + Attracting Berry
-Using 1 Lum berry surrounded by 8 Roseli berries, with each side being protected by a Babiri, and then filling the remainder of open farm spots with the parasite berry is the most effective way of attracting wandering Pokémon to the farm.
+Using one [[Berries/Lum]] berry surrounded by eight [[Berries/Roseli]] berries, with each side being protected by a [[Berries/Babiri]], and then filling the remainder of open farm spots with the parasite berry is the most effective way of attracting wandering Pokémon to the farm.  Parasite setups also work for attracting wanderers to [[Berries/Enigma]] without any risk of mutations.
 
 _**Attract Aura: 2.18x,
 Encounter Chance per 1.5s: 1.48%**_

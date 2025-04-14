@@ -28,11 +28,19 @@
                         <!-- /ko -->
                     <tr>
                         <td>Region</td>
-                        <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region])"></td>
+                        <td>
+                            <a href="#!" data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region]), attr: { href: `#!Regions/${GameConstants.camelCaseToString(GameConstants.Region[$data.region])}` }"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td>Sub Region</td>
                         <td data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name"></td>
+                    </tr>
+                    <tr>
+                        <td>Environment</td>
+                        <td data-bind="foreach: MapHelper.getEnvironments($data.name, $data.region)">
+                            <a href="#!" data-bind="text: `${GameConstants.camelCaseToString($data)}`, attr: { href: `#!Environments/${GameConstants.camelCaseToString($data)}` }"></a><br />
+                        </td>
                     </tr>
                     <!-- /ko -->
                     <tr>

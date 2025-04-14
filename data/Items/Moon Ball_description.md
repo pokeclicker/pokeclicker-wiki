@@ -1,0 +1,1 @@
+>Increased catch rate based on fullness of the moon

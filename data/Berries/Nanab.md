@@ -40,12 +40,12 @@ Nanab Berries can mutate into the following Berries.
 ### Acquisition
 Nanab Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        |Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Berry Forest]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Pattern Bush]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Pinkan Mountain]]      | Common	| `N/A`         |
-| [[Dungeons/Radio Tower]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Fullmoon Island]]      | Common  	| `N/A`         |
-| [[Dungeons/Newmoon Island]]       | Common	| `N/A`         |
-| [[Dungeons/Floccesy Ranch]]       | Epic      | `N/A`         |
+| [[Dungeons/Berry Forest]]	        | Kanto (Sevii Islands 123) | Epic  	|
+| [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567) | Epic  	|
+| [[Dungeons/Pinkan Mountain]]      | Kanto (Sevii Islands 4567) | Common	|
+| [[Dungeons/Radio Tower]]	        | Johto | Epic  	|
+| [[Dungeons/Fullmoon Island]]      | Sinnoh | Common  	|
+| [[Dungeons/Newmoon Island]]       | Sinnoh | Common	|
+| [[Dungeons/Floccesy Ranch]]       | Unova | Epic      |

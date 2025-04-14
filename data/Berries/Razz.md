@@ -39,12 +39,12 @@ Razz Berries can mutate into the following Berries.
 ### Acquisition
 Razz Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Berry Forest]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Pattern Bush]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Radio Tower]]	        | Epic  	| `N/A`         |
-| [[Dungeons/New Mauville]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Eterna Forest]]        | Common	| `N/A`         |
-| [[Dungeons/Wayward Cave]]         | Common	| `N/A`         |
-| [[Dungeons/Dragonspiral Tower]]   | Common	| `N/A`         |
+| [[Dungeons/Berry Forest]]	        | Kanto (Sevii Islands 123) | Epic  	|
+| [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567) | Epic  	|
+| [[Dungeons/Radio Tower]]	        | Johto | Epic  	|
+| [[Dungeons/New Mauville]]	        | Hoenn | Epic  	|
+| [[Dungeons/Eterna Forest]]        | Sinnoh | Common	|
+| [[Dungeons/Wayward Cave]]         | Sinnoh | Common	|
+| [[Dungeons/Dragonspiral Tower]]   | Unova | Common	|

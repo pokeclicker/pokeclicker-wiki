@@ -29,6 +29,7 @@ Base Pokémon |Evolves into |Available in
 [[File:pokemon/302.png\|25px]] [[Pokemon/Sableye]]  | [[File:pokemon/302.01.png\|25px]] [[Pokemon/Mega Sableye]] |Kalos onward
 [[File:pokemon/303.png\|25px]] [[Pokemon/Mawile]]  | [[File:pokemon/303.01.png\|25px]] [[Pokemon/Mega Mawile]] |Kalos onward
 [[File:pokemon/306.png\|25px]] [[Pokemon/Aggron]]  | [[File:pokemon/306.01.png\|25px]] [[Pokemon/Mega Aggron]] |Kalos onward
+[[File:pokemon/308.png\|25px]] [[Pokemon/Medicham]]  | [[File:pokemon/308.01.png\|25px]] [[Pokemon/Mega Medicham]] |Kalos onward
 [[File:pokemon/310.png\|25px]] [[Pokemon/Manectric]]  | [[File:pokemon/310.01.png\|25px]] [[Pokemon/Mega Manectric]] |Kalos onward
 [[File:pokemon/319.png\|25px]] [[Pokemon/Sharpedo]]  | [[File:pokemon/319.01.png\|25px]] [[Pokemon/Mega Sharpedo]] |Kalos onward
 [[File:pokemon/323.png\|25px]] [[Pokemon/Camerupt]]  | [[File:pokemon/323.01.png\|25px]] [[Pokemon/Mega Camerupt]] |Kalos onward
@@ -57,15 +58,15 @@ Key Stone's base price starts at 250 [[File:battlePoint.svg\|16px]] and goes up 
 Purchased | Battle Points [[File:battlePoint.svg\|16px]] |
 :--- | :--- |
 Base Price | 250 [[File:battlePoint.svg\|16px]] |
-After 1 | 275 [[File:battlePoint.svg\|16px]] |
-After 2 | 303 [[File:battlePoint.svg\|16px]] |
-After 3 | 333 [[File:battlePoint.svg\|16px]] |
-After 4 | 366 [[File:battlePoint.svg\|16px]] |
-After 5 | 403 [[File:battlePoint.svg\|16px]] |
-After 6 | 443 [[File:battlePoint.svg\|16px]] |
-After 7 | 487 [[File:battlePoint.svg\|16px]] |
-After 8 | 536 [[File:battlePoint.svg\|16px]] |
-After 9 | 589 [[File:battlePoint.svg\|16px]] |
+After 01 | 275 [[File:battlePoint.svg\|16px]] |
+After 02 | 303 [[File:battlePoint.svg\|16px]] |
+After 03 | 333 [[File:battlePoint.svg\|16px]] |
+After 04 | 366 [[File:battlePoint.svg\|16px]] |
+After 05 | 403 [[File:battlePoint.svg\|16px]] |
+After 06 | 443 [[File:battlePoint.svg\|16px]] |
+After 07 | 487 [[File:battlePoint.svg\|16px]] |
+After 08 | 536 [[File:battlePoint.svg\|16px]] |
+After 09 | 589 [[File:battlePoint.svg\|16px]] |
 After 10 | 648 [[File:battlePoint.svg\|16px]] |
 After 11 | 713 [[File:battlePoint.svg\|16px]] |
 After 12 | 785 [[File:battlePoint.svg\|16px]] |

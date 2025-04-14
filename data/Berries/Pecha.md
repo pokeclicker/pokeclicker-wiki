@@ -14,13 +14,13 @@ Pecha Berries can mutate into the following Berries.
 ### Acquisition
 Pecha Berries can drop from any route and can also be obtained from the following dungeons.
 
-| Location	                    | Tier	    | Requirement   |
+| Location	                    | Region | Tier	    |
 | :---:                         | :---:     | :---:         |
-| [[Dungeons/Viridian Forest]]	| Common    | `N/A`         |
-| [[Dungeons/Berry Forest]]	    | Common	| `N/A`         |
-| [[Dungeons/Pattern Bush]]	    | Common	| `N/A`         |
-| [[Dungeons/Pinkan Mountain]]	| Common	| `N/A`         |
-| [[Dungeons/Ruins of Alph]]    | Common	| `N/A`         |
-| [[Dungeons/Pinwheel Forest]]  | Common	| `N/A`         |
-| [[Dungeons/Resolution Cave]]  | Common	| `N/A`         |
-| [[Dungeons/Glimwood Tangle]]  | Common	| `N/A`         |
+| [[Dungeons/Viridian Forest]]	| Kanto | Common    |
+| [[Dungeons/Berry Forest]]	    | Kanto (Sevii Islands 123) | Common	|
+| [[Dungeons/Pattern Bush]]	    | Kanto (Sevii Islands 4567) | Common	|
+| [[Dungeons/Pinkan Mountain]]	| Kanto (Sevii Islands 4567) | Common	|
+| [[Dungeons/Ruins of Alph]]    | Johto | Common	|
+| [[Dungeons/Pinwheel Forest]]  | Unova | Common	|
+| [[Dungeons/Resolution Cave]]  | Alola | Common	|
+| [[Dungeons/Glimwood Tangle]]  | Galar (North) | Common	|

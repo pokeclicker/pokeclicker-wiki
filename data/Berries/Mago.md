@@ -35,12 +35,12 @@ Mago Berries can mutate into the following Berries.
 ### Acquisition
 Mago Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Pattern Bush]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Pinkan Mountain]]      | Common	| `N/A`         |
-| [[Dungeons/Radio Tower]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Flower Paradise]]      | Common  	| `N/A`         |
-| [[Dungeons/Relic Castle]]         | Common	| `N/A`         |
-| [[Dungeons/Abundant Shrine]]      | Common    | `N/A`         |
-| [[Dungeons/Lush Jungle]]          | Common    | `N/A`         |
+| [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567) | Epic  	|
+| [[Dungeons/Pinkan Mountain]]      | Kanto (Sevii Islands 4567) | Common	|
+| [[Dungeons/Radio Tower]]	        | Johto | Epic  	|
+| [[Dungeons/Flower Paradise]]      | Sinnoh | Common  	|
+| [[Dungeons/Relic Castle]]         | Unova | Common	|
+| [[Dungeons/Abundant Shrine]]      | Unova | Common    |
+| [[Dungeons/Lush Jungle]]          | Alola | Common    |

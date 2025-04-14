@@ -39,6 +39,6 @@ Tamato Berries can mutate into the following Berries.
 ### Acquisition
 Tamato Berries can be obtained from the following dungeons.
 
-| Location	                    | Tier	    | Requirement   |
+| Location	                    | Region | Tier	    |
 | :---:                         | :---:     | :---:         |
-| [[Dungeons/Dyna Tree Hill]]	| Epic      | `N/A`         |
+| [[Dungeons/Dyna Tree Hill]]	| Galar (Crown Tundra) | Epic      |

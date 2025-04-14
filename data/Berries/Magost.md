@@ -41,6 +41,6 @@ Magost Berries can mutate into the following Berries.
 ### Acquisition
 Magost Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Pinkan Mountain]]      | Epic	    | `N/A`         |
+| [[Dungeons/Pinkan Mountain]]      | Kanto (Sevii Islands 4567) | Epic	    |
