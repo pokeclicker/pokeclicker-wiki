@@ -79374,6 +79374,30 @@ const gemsPerRouteEncounter = (route, gemType) => {
     return totalGemsOfType / totalMons;
 }
 
+const gemGymsPerFlute = (fluteType) => {
+    const gemTypes = ItemList[fluteType]?.gemTypes || [];
+    const validGyms = [];
+
+    for (const name of Object.keys(GymList)) {
+        const region = GameConstants.getGymRegion(name);
+        if (region > GameConstants.MAX_AVAILABLE_REGION && region < GameConstants.Region.final) {
+            continue;
+        }
+
+        const gems = gemTypes.map(type => ({ type, amount: gemsPerGymEncounter(name, type) || 0 }));
+        const totalGems = gems.reduce((sum, gem) => sum + gem.amount, 0);
+
+        if (totalGems <= 0) {
+            continue;
+        }
+
+        const displayName = GymList[name].pokemons.some(p => p.requirements.length > 0) ? `${name}*` : name;
+        validGyms.push({ displayName, name, gems, totalGems });
+    }
+
+    return validGyms.sort((a, b) => b.totalGems - a.totalGems);
+}
+
 const bestGemsPerRegion = (region, gemType) => {
     const regionRoutes = Routes.regionRoutes.filter((r) => r.region == region);
     const allRouteGems = regionRoutes.map((route) => ({
@@ -79465,6 +79489,7 @@ const bestCaptureRoutesPerRegion = (region, type) => {
 module.exports = {
     bestGemsPerRegion,
     bestCaptureRoutesPerRegion,
+    gemGymsPerFlute
 }
 
 },{}],524:[function(require,module,exports){

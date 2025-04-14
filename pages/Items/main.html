@@ -3,7 +3,7 @@
         Object.values(ItemList).find((i) => i.displayName == Wiki.pageName())
         || UndergroundItems.list.filter((ui) => !Object.values(ItemList).some((i) => i.displayName == ui.displayName)).find((i) => i.displayName == Wiki.pageName())
     -->
-        <h3>Item not found...</h3>
+    <h3>Item not found...</h3>
     <!-- /ko -->
     <!-- ko with: Object.values(ItemList).find((i) => i.displayName == Wiki.pageName()) || UndergroundItems.list.filter((ui) => !Object.values(ItemList).some((i) => i.displayName == ui.displayName)).find((i) => i.displayName == Wiki.pageName())-->
     <div class="float-lg-end col-lg-3 m-2">
@@ -16,7 +16,7 @@
             <tbody>
                 <tr>
                     <td class="text-center" colspan="2">
-                        <img data-bind="attr: {src: './pokeclicker/docs/' + $data.image}"/>
+                        <img data-bind="attr: {src: './pokeclicker/docs/' + $data.image}" />
                     </td>
                 </tr>
                 <tr>
@@ -27,7 +27,7 @@
                     && Object.values(TownList).some((t) => t.content.some((c) => c instanceof Shop && c.items.some((i) => i.name == $data.name)))">
                     <td>Price</td>
                     <td>
-                        <img data-bind="attr: { src: `./images/${GameConstants.Currency[$data.currency]}.svg` }" width="18px"/>
+                        <img data-bind="attr: { src: `./images/${GameConstants.Currency[$data.currency]}.svg` }" width="18px" />
                         <ko data-bind="text: $data.basePrice.toLocaleString()"></ko>
                     </td>
                 </tr>
@@ -54,7 +54,7 @@
                         </div>
                         <!-- /ko -->
                         <div>
-                            <img data-bind="attr: { src: './images/questPoint.svg' }" width="18px"/>
+                            <img data-bind="attr: { src: './images/questPoint.svg' }" width="18px" />
                             <ko data-bind="text: $data.questPointCost.toLocaleString()"></ko>
                         </div>
                     </td>
@@ -90,6 +90,51 @@
         </div>
     </div>
     <!-- /ko -->
+    <!-- ko if: $data.constructor.name == 'FluteItem'-->
+    <div class="mt-3" style="clear:both">
+        <h3>Gyms that reward gems used by this flute</h3>
+        <p>
+            Hint: Use the search to filter for specific types or combinations. Search for "<span data-bind="text: $data.gemTypes.join(' ')"></span>" to only list Gyms that give all three types.
+            Gyms with an * next to their name may provide different gems depending on the players chosen starter.
+        </p>
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Order</th>
+                    <th>Name</th>
+                    <th style="text-align: right;">
+                        <ko data-bind="text: $data.gemTypes[0] + ' Gem'"></ko>
+                        <img style="margin: -6px 0" data-bind="attr: { src: './pokeclicker/docs/' + Gems.image(PokemonType[$data.gemTypes[0]]) }" />
+                    </th>
+                    <th style="text-align: right;">
+                        <ko data-bind="text: $data.gemTypes[1] + ' Gem'"></ko>
+                        <img style="margin: -6px 0" data-bind="attr: { src: './pokeclicker/docs/' + Gems.image(PokemonType[$data.gemTypes[1]]) }" />
+                    </th>
+                    <th style="text-align: right;">
+                        <ko data-bind="text: $data.gemTypes[2] + ' Gem'"></ko>
+                        <img style="margin: -6px 0" data-bind="attr: { src: './pokeclicker/docs/' + Gems.image(PokemonType[$data.gemTypes[2]]) }" />
+                    </th>
+                    <th>Total</th>
+                    <th class="d-none">Gem Types</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: { data: Wiki.gems.gemGymsPerFlute($data.name) }">
+                <tr>
+                    <td data-bind="text: $index() + 1"></td>
+                    <td><a style="text-decoration: none;" data-bind="text: $data.displayName, attr: { href: `#!Gyms/${$data.name}` }"></a></td>
+                    <td data-bind="text: $data.gems[0].amount.toFixed(2)"></td>
+                    <td data-bind="text: $data.gems[1].amount.toFixed(2)"></td>
+                    <td data-bind="text: $data.gems[2].amount.toFixed(2)"></td>
+                    <td data-bind="text: ($data.totalGems /3).toFixed(2)"></td>
+                    <td data-bind="foreach: $data.gems.filter(g => g.amount > 0)" class="d-none">
+                        <span class="badge text-bg-secondary" data-bind="text: $data.type"></span>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- /ko -->
 
     <div class="mt-3" style="clear: right;" data-bind="if: Object.values(dungeonList).some((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == $data.name || l.loot == $data.displayName)))">
         <h3>Can be found in the following dungeons:</h3>
@@ -122,14 +167,14 @@
                 <tbody>
                     <!-- ko foreach: itemChances -->
                     <tr class="clickable align-middle" data-bind="
-                        click: (_, e) => { return Wiki.gotoPageClick(e, 'Dungeons', $data.dungeonName); },
+                        click: (_, e)=> { return Wiki.gotoPageClick(e, 'Dungeons', $data.dungeonName); },
                         attr: { 'data-href': `#!Dungeons/${$data.dungeonName}` }">
                         <td>
                             <a class="text-decoration-none" href="#!" data-bind="text: $data.dungeonName, attr: { href: `#!Dungeons/${$data.dungeonName}` }"></a>
                         </td>
                         <td data-bind="text: $data.region"></td>
                         <td class="text-center">
-                            <img width="40px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/dungeons/chest-${$data.tier.toLowerCase()}.png`, title: `${$data.tier}` }"/>
+                            <img width="40px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/dungeons/chest-${$data.tier.toLowerCase()}.png`, title: `${$data.tier}` }" />
                         </td>
                         <!-- ko foreach: $data.chances -->
                         <td data-bind="text: typeof $data.chance === 'number' ? ($data.chance >= 0.0001 ? $data.chance.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }) : ('<' + 0.0001.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }))) : ($data.chance ?? '-'), attr: { 'data-order': $data.chance }"></td>
