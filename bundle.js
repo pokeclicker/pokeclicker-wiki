@@ -77465,11 +77465,11 @@ const requirementHints = (requirement, includeMarkdown = true) => {
                     break;
                 case QuestLineStepCompletedRequirement:
                     if (typeof req.questIndex === 'function') {
-                        hint = req.option == GameConstants.AchievementOption.equal
+                        hint = req.option == GameConstants.AchievementOption.equal || req.option == GameConstants.AchievementOption.more
                             ? `Progress in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
                             : `Have not progessed to a certain step in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
                     } else {
-                        hint = req.option == GameConstants.AchievementOption.equal
+                        hint = req.option == GameConstants.AchievementOption.equal || req.option == GameConstants.AchievementOption.more
                             ? `Complete step ${req.questIndex + 1} in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
                             : `Have not completed step ${req.questIndex + 1} in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
                     }
