@@ -23,8 +23,7 @@
                     <td class="align-middle">Category</td>
                     <td data-bind="text: GameConstants.camelCaseToString($data.constructor.name)"></td>
                 </tr>
-                <tr data-bind="if: $data.basePrice >
-                    0 && $data.basePrice <= 1e11
+                <tr data-bind="if: $data.basePrice > 0 && $data.basePrice <= 1e11
                     && Object.values(TownList).some((t) => t.content.some((c) => c instanceof Shop && c.items.some((i) => i.name == $data.name)))">
                     <td>Price</td>
                     <td>
@@ -93,7 +92,7 @@
     <!-- /ko -->
     <!-- ko if: $data.constructor.name == 'FluteItem'-->
     <div class="mt-3" style="clear:both">
-        <h3>Gyms that include the required types</h3>
+        <h3>Gyms that reward gems used by this flute</h3>
         <p>
             Hint: Use the search to filter for specific types or combinations. Search for "<span data-bind="text: $data.gemTypes.join(' ')"></span>" to only list Gyms that give all three types.
             Gyms with an * next to their name may provide different gems depending on the players chosen starter.
@@ -168,8 +167,7 @@
                 <tbody>
                     <!-- ko foreach: itemChances -->
                     <tr class="clickable align-middle" data-bind="
-                        click: (_, e)=>
-                        { return Wiki.gotoPageClick(e, 'Dungeons', $data.dungeonName); },
+                        click: (_, e)=> { return Wiki.gotoPageClick(e, 'Dungeons', $data.dungeonName); },
                         attr: { 'data-href': `#!Dungeons/${$data.dungeonName}` }">
                         <td>
                             <a class="text-decoration-none" href="#!" data-bind="text: $data.dungeonName, attr: { href: `#!Dungeons/${$data.dungeonName}` }"></a>
