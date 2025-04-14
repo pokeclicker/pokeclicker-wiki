@@ -58,15 +58,15 @@ Key Stone's base price starts at 250 [[File:battlePoint.svg\|16px]] and goes up 
 Purchased | Battle Points [[File:battlePoint.svg\|16px]] |
 :--- | :--- |
 Base Price {data-sort=0} | 250 [[File:battlePoint.svg\|16px]] |
-After 1 {data-sort=1} | 275 [[File:battlePoint.svg\|16px]] |
-After 2 {data-sort=2} | 303 [[File:battlePoint.svg\|16px]] |
-After 3 {data-sort=3} | 333 [[File:battlePoint.svg\|16px]] |
-After 4 {data-sort=4} | 366 [[File:battlePoint.svg\|16px]] |
-After 5 {data-sort=5} | 403 [[File:battlePoint.svg\|16px]] |
-After 6 {data-sort=6} | 443 [[File:battlePoint.svg\|16px]] |
-After 7 {data-sort=7} | 487 [[File:battlePoint.svg\|16px]] |
-After 8 {data-sort=8} | 536 [[File:battlePoint.svg\|16px]] |
-After 9 {data-sort=9} | 589 [[File:battlePoint.svg\|16px]] |
+After 01 {data-sort=1} | 275 [[File:battlePoint.svg\|16px]] |
+After 02 {data-sort=2} | 303 [[File:battlePoint.svg\|16px]] |
+After 03 {data-sort=3} | 333 [[File:battlePoint.svg\|16px]] |
+After 04 {data-sort=4} | 366 [[File:battlePoint.svg\|16px]] |
+After 05 {data-sort=5} | 403 [[File:battlePoint.svg\|16px]] |
+After 06 {data-sort=6} | 443 [[File:battlePoint.svg\|16px]] |
+After 07 {data-sort=7} | 487 [[File:battlePoint.svg\|16px]] |
+After 08 {data-sort=8} | 536 [[File:battlePoint.svg\|16px]] |
+After 09 {data-sort=9} | 589 [[File:battlePoint.svg\|16px]] |
 After 10 {data-sort=10} | 648 [[File:battlePoint.svg\|16px]] |
 After 11 {data-sort=11} | 713 [[File:battlePoint.svg\|16px]] |
 After 12 {data-sort=12} | 785 [[File:battlePoint.svg\|16px]] |

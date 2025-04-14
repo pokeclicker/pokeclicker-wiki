@@ -173,8 +173,8 @@
                                     </span>
                                     <!-- ko if: $data.requirements -->
                                     <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
-                                        title: Wiki.gameHelper.requirementHints($data.requirements, false).join('\n'),
-                                        html: false,
+                                        title: Wiki.gameHelper.requirementHints($data.requirements, false).join('<br/>'),
+                                        html: true,
                                         placement: 'bottom',
                                         trigger: 'hover'
                                     }">🔒</span>

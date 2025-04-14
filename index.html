@@ -122,11 +122,16 @@
                         <span data-bind="text: Wiki.pageName()"></span>
                     </li>
                     <!-- /ko -->
-                    <!-- ko if: Wiki.discord.ID() -->
-                    <li class="ms-auto">
+                    <li class="breadcrumb-item breadcrumb-no-divider ms-auto">
+                        <!-- ko if: Wiki.discord.ID() -->
                         <a href="#!" data-bind="attr: { href: `#!${Wiki.pageType() || ''}/${Wiki.pageName() || ''}/edit` }">Edit</a>
+                        <!-- /ko -->
+                        <!-- ko ifnot: Wiki.discord.ID() -->
+                        <a href="#!" data-bind="attr: { href: `https://discord.pokeclicker.com/proxy?action=login&redirect_uri=${encodeURIComponent(location.origin + location.pathname)}` }">
+                            Sign In to Edit
+                        </a>
+                        <!-- /ko -->
                     </li>
-                    <!-- /ko -->
                 </ol>
             </nav>
             <div id="page-title">
@@ -247,6 +252,6 @@
         </template>
 
         <!-- Main wiki script -->
-        <script src="bundle.js?t=1732476076817"></script>
+        <script src="bundle.js?t=1742243474311"></script>
     </body>
 </html>
