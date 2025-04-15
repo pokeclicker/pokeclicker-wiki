@@ -1,3 +1,6 @@
+### Can be purchased in the following towns:
+@[[Towns/Goldenrod City]]
+
 ## Leveling Strategies
 Here are a few highly efficient strategies on how to level up the Squirtbottle based on which berries you have unlocked.
 
