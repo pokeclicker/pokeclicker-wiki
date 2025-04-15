@@ -1,6 +1,13 @@
 const { gotoPage } = require('./navigation');
 const { getAvailablePokemon } = require('./pages/pokemon');
 
+const excludedItemTypes = [
+  'PokemonItem',
+  'BerryItem',
+  'BuyKeyItem',
+  'BuyOakItem',
+];
+
 const searchOptions = [
   {
     display: 'Home',
@@ -88,7 +95,7 @@ const searchOptions = [
     type: 'Items',
     page: '',
   },
-  ...Object.values(ItemList).filter(i => !(i instanceof PokemonItem)).map(i => ({
+  ...Object.values(ItemList).filter(i => !excludedItemTypes.includes(i.constructor.name)).map(i => ({
     display: i.displayName,
     type: 'Items',
     page: i.displayName,
