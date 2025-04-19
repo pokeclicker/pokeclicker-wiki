@@ -65,7 +65,8 @@ Row | lorem | ipsum
 ```
 [[Pokemon]] or [[Pokemon/Charmander]] or @[[Wiki Guide]]
 ```
-
+[Link to a page with text other than its name](#!Pokemon/Charmander)
+```
 ---
 
 ### Images {#images}
