@@ -65,8 +65,11 @@ Row | lorem | ipsum
 ```
 [[Pokemon]] or [[Pokemon/Charmander]] or @[[Wiki Guide]]
 ```
-[Link to a page with text other than its name](#!Pokemon/Charmander)
+[Evolves into Charmeleon](#!Pokemon/Charmander)
 ```
+Link to a page with text other than its name. [Evolves into Charmeleon](#!Pokemon/Charmander)
+```
+
 ---
 
 ### Images {#images}
