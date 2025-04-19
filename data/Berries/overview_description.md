@@ -1,9 +1,9 @@
-Berries can be grown in the Farm to earn Farm Points. You can trade certain berries for Masterballs, Protein, and other Evolution Items at Berry Master shops.
+Berries can be grown in the [[Farm]] to earn [[Farm Points]]. You can trade certain berries for Masterballs, Protein, and other Evolution Items at Berry Master shops.
 
 ### Features
-#### Related Oak Items
+#### Related Items
 
-The [[Oak Items/Sprayduck]], [[Oak Items/Squirtbottle]], and [[Oak Items/Sprinklotad]] are all Oak Items that speed up or otherwise improve the process of growing berries.
+The [[Oak Items/Sprayduck]], [[Oak Items/Squirtbottle]], and [[Oak Items/Sprinklotad]] are all [[Oak Items]] that speed up or otherwise improve the process of growing berries.  Mulches can be applied to berries for various effects, increasing yield, affecting growth or attracting more rare Wanderers.  [[Items/Berry Shovel]] will remove and destroy any planted berry.
 
 #### Wanderers
 
