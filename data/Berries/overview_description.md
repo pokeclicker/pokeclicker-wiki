@@ -11,11 +11,11 @@ Farms with at least one ripe Berry can attract [[Wandering Pokémon]]. Some Berr
 
 ### Mutations
 
-The first 10 berries are found in routes or dungeons, but after that the player needs to generate new berries through **mutation**. Each berry requires specific conditions to be able to mutate. The Kanto Berry Master (Cerulean City) will give a different hint daily for berry mutations.
+The first eight berries are dropped by wild pokemon or looted from chests in [[Dungeons]].  Every other berry can generated through **mutation**, though many of the early mutations also appear in later regions as dungeon loot. Each berry requires specific conditions to be able to mutate, usually two or more other berries adjacent to an empty plot. Adjacencies are checked orthogonally (north, south, east, west) and diagonally (NE, SE, NW, SW).  The Kanto Berry Master in [[Towns/Cerulean City]] will give a hint daily for berries the player hasn't yet acquired.
 
-Most berry mutations happen at the Berry (fully ripe) stage and have a chance to occur until they die. Evolution *(a berry transforming into another)* and flavor mutations can occur starting at the Taller stage. For mutations involving flavor requirements, all berries emit flavor points beginning at the Taller stage (berries have 0.5x flavor in the Taller stage, 0.75x flavor in the Bloom stage, and 1x flavor in the Berry stage).
+Most berry mutations happen at the Berry (fully ripe) stage and have a chance to occur every 1.5 seconds until they die. Evolution *(a berry transforming into another)* and flavor mutations can occur starting at the Taller stage. For mutations involving flavor requirements, all berries emit flavor points beginning at the Taller stage (berries have 0.5x flavor in the Taller stage, 0.75x flavor in the Bloom stage, and 1x flavor in the Berry stage).
 
-If the conditions for multiple mutations are met simultaneously, the mutation triggered will be selected at random.
+If the conditions for multiple mutations are met simultaneously for a given farm plot, the mutation triggered will be selected at random.
 
 [Here is a Walkthrough](https://docs.google.com/document/d/1TE5cAKSlA7TAliA001_mIiO1odZ6e4yUEMre0GBW1to/edit) for unlocking all of the Farm Slots in order.
 
