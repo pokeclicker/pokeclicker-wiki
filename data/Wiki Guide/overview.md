@@ -69,7 +69,10 @@ Row | lorem | ipsum
 ```
 Link to a page with text other than its name. [Evolves into Charmeleon](#!Pokemon/Charmander)
 ```
-
+[PokéClicker Companion](https://companion.pokeclicker.com)
+```
+External link. [PokéClicker Companion](https://companion.pokeclicker.com)
+```
 ---
 
 ### Images {#images}
