@@ -1,6 +1,7 @@
 const selectedPlotIndex = ko.observable(12);
-const plotLabelsEnabled = ko.observable(false);
 const selectedPlot = ko.pureComputed(() => App.game.farming.plotList[selectedPlotIndex()]);
+const plotLabelsEnabled = ko.observable(false);
+const importSaveDataText = ko.observable('');
 
 const getImage = (plot) => {
     if (plot.berry === BerryType.None) {
@@ -224,13 +225,6 @@ const exportFarm = () => {
     prompt('Save the below text to restore the farm to this state.', btoa(JSON.stringify(data)));
 };
 
-const importFarmPrompt = () => {
-    const input = prompt();
-    if (input) {
-        importFarm(JSON.parse(atob(input)));
-    }
-};
-
 const importFarm = (saveData) => {
     const plotList = saveData.save?.farming?.plotList ?? saveData.plots; // saveData.plots = old export format
     if (!plotList) {
@@ -243,6 +237,13 @@ const importFarm = (saveData) => {
         plot._age(plotList[idx].age);
         plot._mulch(plotList[idx].mulch);
     });
+};
+
+const importFromText = () => {
+    const saveData = JSON.parse(atob(importSaveDataText()));
+    importFarm(saveData);
+    importSaveDataText('');
+    $('#loadFromTextModal').modal('hide');
 };
 
 const importFromFile = (file) => {
@@ -289,6 +290,7 @@ module.exports = {
     selectedPlot,
     selectedPlotIndex,
     plotLabelsEnabled,
+    importSaveDataText,
     getImage,
     setPlotBerry,
     setPlotStage,
@@ -309,7 +311,7 @@ module.exports = {
     getReceivedAuras,
     clearAllPlots,
     exportFarm,
-    importFarmPrompt,
+    importFromText,
     importFromFile,
     showPlotContextMenu,
 }

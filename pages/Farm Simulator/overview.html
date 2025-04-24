@@ -107,7 +107,7 @@
                         <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-bs-toggle="dropdown">Import</button>
                         <ul class="dropdown-menu">
                             <li>
-                                <button class="dropdown-item" type="button" data-bind="click: () => { Wiki.farmSimulator.importFarmPrompt() }">Import From Text</button>
+                                <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#loadFromTextModal">Import From Text</button>
                             </li>
                             <li>
                                 <button class="dropdown-item" type="button" data-bind="click: () => document.getElementById('farmSimFileSelector').click()">Import From Save File</button>
@@ -261,4 +261,19 @@
 <div class="dropdown-menu dropdown-menu-sm dropdown-menu-dark" id="plot-context-menu">
     <button class="dropdown-item" data-action="copy">Copy</button>
     <button class="dropdown-item" data-action="paste">Paste</button>
+</div>
+
+<div class="modal" id="loadFromTextModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>Paste Save Data</p>
+                <textarea class="form-control" rows="5" autocomplete="off" data-bind="value: Wiki.farmSimulator.importSaveDataText"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bind="click: () => Wiki.farmSimulator.importFromText()">Load</button>
+            </div>
+        </div>
+    </div>
 </div>
