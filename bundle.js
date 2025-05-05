@@ -79855,6 +79855,7 @@ const excludedItemTypes = [
   'BuyOakItem',
 ];
 
+// Load gyms and handle duplicate leader names
 const gymEntries = Object.entries(GymList).filter(([key, gym]) => GameConstants.getGymRegion(gym) <= GameConstants.MAX_AVAILABLE_REGION).map(([key, gym]) => ({
   display: gym.leaderName,
   type: 'Gyms',
@@ -79869,7 +79870,13 @@ if (duplicateGymDisplayNames.size) {
   for (let entry of gymEntries) {
     if (duplicateGymDisplayNames.has(entry.display)) {
       const gymInstance = GymList[entry.page];
-      entry.display = `${entry.display} (${gymInstance.displayName ?? entry.page})`;
+
+      // Elite check mirrors AchievementHandler.initialize
+      const elite = entry.page.includes('Elite') || entry.page.includes('Champion') || entry.page.includes('Supreme');
+
+      const gymName = gymInstance.displayName ?? `${entry.page}${!elite ? ' Gym' : ''}`;
+
+      entry.display = `${entry.display} (${gymName})`;
     }
   }
 }
