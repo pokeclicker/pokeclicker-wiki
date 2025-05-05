@@ -8,6 +8,25 @@ const excludedItemTypes = [
   'BuyOakItem',
 ];
 
+const gymEntries = Object.entries(GymList).filter(([key, gym]) => GameConstants.getGymRegion(gym) <= GameConstants.MAX_AVAILABLE_REGION).map(([key, gym]) => ({
+  display: gym.leaderName,
+  type: 'Gyms',
+  page: key,
+}));
+
+const duplicateGymDisplayNames = new Set(gymEntries.filter((entry, idx, list) => {
+  return list.findLastIndex(innerEntry => innerEntry.display === entry.display) !== idx;
+}).map(entry => entry.display));
+
+if (duplicateGymDisplayNames.size) {
+  for (let entry of gymEntries) {
+    if (duplicateGymDisplayNames.has(entry.display)) {
+      const gymInstance = GymList[entry.page];
+      entry.display = `${entry.display} (${gymInstance.displayName ?? entry.page})`;
+    }
+  }
+}
+
 const searchOptions = [
   {
     display: 'Home',
@@ -191,11 +210,7 @@ const searchOptions = [
     type: 'Gyms',
     page: '',
   },
-  ...Object.entries(GymList).filter(([key, gym]) => GameConstants.getGymRegion(gym) <= GameConstants.MAX_AVAILABLE_REGION).map(([key, gym]) => ({
-    display: gym.leaderName,
-    type: 'Gyms',
-    page: key,
-  })),
+  ...gymEntries,
   // Routes
   {
     display: 'Routes',
