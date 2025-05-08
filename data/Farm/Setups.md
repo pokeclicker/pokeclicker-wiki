@@ -151,7 +151,7 @@ _**EV Gain Bonus: 2.54x**_
 ### Regular Berries
 #### Roseli + Lum + Attracting Berry
 Using 2 Lum berries surrounded by 13 Roseli berries, and then filling the remainder of open farm spots with an attracting berry (a berry that attracts a particular species of wandering Pokémon) is the most effective way of attracting wandering Pokémon to the farm.
-- _Note: Do not use this setup with [[Berries/Occa]], [[Berries/Colbur]], or [[Berries/Kebia]] or [[Berries/Enigma]] berries due to their nature of overtaking other berries. See "Parasite Berries" below for those setups._
+- _Note: Do not use this setup with [[Berries/Occa]], [[Berries/Colbur]], or [[Berries/Kebia]] or [[Berries/Enigma]] berries due to their nature of overtaking other berries. See "Parasite Berries" below for those setups. Using this exact setup with [Berries/Chople] may cause it to mutate into [Berries/Chilan], but moving one of the rows of Chople to the very bottom eliminates any risk of mutation with no downside._
 
 _**Attract Aura: 3.54x,
 Encounter Chance per 1.5s: 1.77%**_
