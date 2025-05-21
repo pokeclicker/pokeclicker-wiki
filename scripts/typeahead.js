@@ -179,6 +179,12 @@ const searchOptions = [
     type: 'Towns',
     page: t.name,
   })),
+  // NPCs
+  {
+    display: 'NPCs',
+    type: 'NPCs',
+    page: '',
+  },
   // Safari
   {
     display: 'Safari',
