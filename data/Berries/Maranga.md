@@ -16,6 +16,7 @@ You can fill your farm in the following way to obtain Maranga Berries. Purple sq
 Alternatively, you can use [[Berries/Kebia]] to get better mutation chances while needing less Petaya and Salac berries. Be sure to remove it once you are done mutating Maranga.
 
 ::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
 | {.mutation} | [[File:Salac.png\|32px]] [[Berries/Salac]] | {.mutation} | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | {.mutation} | |
 | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | {.mutation} | {.mutation} | {.mutation} | [[File:Salac.png\|32px]] [[Berries/Salac]] | |
 | {.mutation} | {.mutation} | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | {.mutation} | {.mutation} | |
