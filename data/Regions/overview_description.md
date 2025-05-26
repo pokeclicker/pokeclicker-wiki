@@ -17,7 +17,7 @@ This is the first region where the damage debuff becomes noticeable. Any non-nat
 The breeding queue allows the player to queue up 4 Pokémon besides the 4 currently breeding eggs. As soon as the Pokémon are queued up, their damage is no longer added to the overall damage of the team until they are either bred and hatched or otherwise removed from the queue.
 In Johto the player has the opportunity to get another Oak item to boost the farm.
 
-A safari zone returns in Johto named [[Towns/National Park]] though there are no unique Pokemon, instead a new currency can be earned.
+A safari zone is also present in Johto named [[Towns/National Park]] where a new currency can be earned, which is used for purchasing Pokémon.
 
 **Non-native Pokémon retain 20% damage
 Breeding Queue in the hatchery: 4
@@ -35,7 +35,7 @@ Maximum Vitamins per Pokémon: 15**
 #### [[Regions/Sinnoh]]
 Sinnoh is the fourth region and 107 unique Pokémon are waiting to be caught. The player will encounter some Pokémon that only evolve when they are in a certain area. One should pay attention to the hints from the local people.
 
-A safari zone is once again available in Sinnoh named [[Towns/Great Marsh]] which offers unique Pokemon.
+A safari zone is once again available in Sinnoh named [[Towns/Great Marsh]] which offers unique Pokémon.
 
 **Non-native Pokémon retain 40% damage
 Breeding Queue in the hatchery: 16
@@ -50,6 +50,8 @@ Maximum Vitamins per Pokémon: 25**
 
 #### [[Regions/Kalos]]
 Kalos is the sixth region and has 72 unique Pokémon to catch, breed and hatch. It also unlocks [[Mega Pokémon]], which can be evolved when your Pokémon are very strong.
+
+Another safari zone is available after beating the champion named [[Towns/Friend Safari]] which is useful for resisting Pokémon with limited availablity or unique evolution methods.
 
 **Non-native Pokémon retain 60% damage
 Breeding Queue in the hatchery: 64
