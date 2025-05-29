@@ -1,3 +1,5 @@
+_If you are looking how to mutate and unlock the different Berries, check [[Berries]] instead._
+
 There are a number of Farming Setups not related to [Breeding Pokemon faster](#!Hatchery/ "Hatchery") or  [Increasing Shiny Chance](#!Shiny_Chance)  that are quite useful, particularly when either mutating berries or trying to harvest mutated berries faster, or, even without mutating berries, if you just want to harvest a lot of berries to trade to [Berry Masters](#!Daily_Deals).
 Here are some useful berry setups to know.
 
