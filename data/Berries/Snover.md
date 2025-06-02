@@ -12,8 +12,36 @@ Pokémon #459 [[Pokémon/Snover]] must be caught to unlock this berry. You can f
 | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | |
 | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | |
 | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | | | |
-| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]]| | | {.mutation} | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | | | {.mutation} | |
 :::
+
+### Freeze Mulch Setup
+
+Using this setup allows you to minimize the amount of Freeze Mulch needed to maximize the amount of potential mutation plots. Purple squares indicate where mutations can occur.
+**Note: A mutation is only possible as long as the shown Babiri are affected by Freeze Mulch.**
+
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] {.freeze} | [[File:Babiri.png\|32px]] [[Berries/Babiri]] {.freeze} | [[File:Babiri.png\|32px]] [[Berries/Babiri]] {.freeze} | [[File:Babiri.png\|32px]] [[Berries/Babiri]] {.freeze} | [[File:Babiri.png\|32px]] [[Berries/Babiri]] {.freeze} | |
+| {.mutation} | {.mutation} | {.mutation} | {.mutation} | {.mutation} | |
+:::
+
+### Kebia Setup
+
+This setup aims to maximize the mutation chance by using Kebia Berries and Freeze Mulch. Purple squares indicate where mutations can occur.
+**Note: Keep close to your device with Pokéclicker as Kebia might overtake the newly mutated Snover Berry. A mutation is only possible as long as the shown Babiri are affected by Freeze Mulch.**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] {.freeze} | [[File:Babiri.png\|32px]] [[Berries/Babiri]] {.freeze} | [[File:Babiri.png\|32px]] [[Berries/Babiri]] {.freeze} | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] {.freeze} | {.mutation} | [[File:Kebia.png\|32px]] [[Berries/Kebia]]  | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | {.mutation} | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | |
+:::
+
 
 #### Uses
 Snover can be used to purchase Pokémon at [[Towns/Secret Berry Shop]].
