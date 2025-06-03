@@ -14,8 +14,8 @@ Base Pokémon |Evolves into |Available in
 [[File:pokemon/127.png\|25px]] [[Pokemon/Pinsir]]  | [[File:pokemon/127.01.png\|25px]] [[Pokemon/Mega Pinsir]] |Kalos onward
 [[File:pokemon/130.png\|25px]] [[Pokemon/Gyarados]]  | [[File:pokemon/130.01.png\|25px]] [[Pokemon/Mega Gyarados]] |Kalos onward
 [[File:pokemon/142.png\|25px]] [[Pokemon/Aerodactyl]]  | [[File:pokemon/142.01.png\|25px]] [[Pokemon/Mega Aerodactyl]] |Kalos onward
-[[File:pokemon/150.png\|25px]] [[Pokemon/Mewtwo]]  | [[File:pokemon/150.01.png\|25px]] [[Pokemon/Mega Mewtwo X]] |Kalos onward
-[[File:pokemon/150.png\|25px]] [[Pokemon/Mewtwo]]  | [[File:pokemon/150.02.png\|25px]] [[Pokemon/Mega Mewtwo Y]] |Kalos onward
+[[File:pokemon/150.png\|25px]] [[Pokemon/Mewtwo]]  | [[File:pokemon/150.01.png\|25px]] [[Pokemon/Mega Mewtwo X]] |Kalos onward during the day or dusk
+[[File:pokemon/150.png\|25px]] [[Pokemon/Mewtwo]]  | [[File:pokemon/150.02.png\|25px]] [[Pokemon/Mega Mewtwo Y]] |Kalos onward during the night or dawn
 [[File:pokemon/181.png\|25px]] [[Pokemon/Ampharos]]  | [[File:pokemon/181.01.png\|25px]] [[Pokemon/Mega Ampharos]] |Kalos onward
 [[File:pokemon/208.png\|25px]] [[Pokemon/Steelix]]  | [[File:pokemon/208.01.png\|25px]] [[Pokemon/Mega Steelix]] |Kalos onward
 [[File:pokemon/212.png\|25px]] [[Pokemon/Scizor]]  | [[File:pokemon/212.01.png\|25px]] [[Pokemon/Mega Scizor]] |Kalos onward
