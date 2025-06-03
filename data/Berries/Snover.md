@@ -18,7 +18,7 @@ Pokémon #459 [[Pokémon/Snover]] must be caught to unlock this berry. You can f
 ### Freeze Mulch Setup
 
 Using this setup allows you to minimize the amount of [[Items/Freeze_Mulch]] needed to maximize the amount of potential mutation plots. Purple squares indicate where mutations can occur.
-**Note: A mutation is only possible as long as the shown Babiri are affected by Freeze Mulch.**
+**Note: A mutation is only possible as long as the marked [[Berries/Babiri]] Berries are affected by Freeze Mulch.**
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -32,7 +32,7 @@ Using this setup allows you to minimize the amount of [[Items/Freeze_Mulch]] nee
 ### Kebia Setup
 
 This setup aims to maximize the mutation chance by using [[Berries/Kebia]] Berries and [[Items/Freeze_Mulch]]. Purple squares indicate where mutations can occur.
-**Note: Keep close to your device with Pokéclicker as Kebia might overtake the newly mutated Snover Berry. A mutation is only possible as long as the shown Babiri are affected by Freeze Mulch.**
+**Note: Keep close to your device with Pokéclicker as Kebia might overtake the newly mutated Snover Berry. A mutation is only possible as long as the marked [[Berries/Babiri]] Berries are affected by Freeze Mulch.**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | |
