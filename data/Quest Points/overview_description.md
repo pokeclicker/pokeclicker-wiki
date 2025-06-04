@@ -17,7 +17,13 @@ Key | Item Cost
 |[[File:Explorer_kit.png\|25px]] [[Items/Explorer Kit]] | 5,000 [[File:questPoint.svg\|25px]]
 |[[File:Explosive_Charge.png\|25px]] [[Items/Explosive Charge]] | 5,000 [[File:questPoint.svg\|25px]]
 |[[File:Treasure_Scanner.png\|25px]] [[Items/Treasure Scanner]] | 10,000 [[File:questPoint.svg\|25px]]
-|[[File:Event_Calendar.png\|25px]] [[Items/Event Calendar]] | 100,000 [[File:questPoint.svg\|25px]]
+|[[File:Event_calendar.png\|25px]] [[Items/Event Calendar]] | 100,000 [[File:questPoint.svg\|25px]]
+
+#### Quest Items
+
+Name | Item Cost
+:---: | :---: | :---: | :---:
+[[File:Grass_Memory_Silvally.png\|25px]] [[Items/Ground Memory]] | 125,000 [[File:questPoint.svg\|25px]] |
 
 #### Evolution Items
 These Evolution Items cost 2,500 [[File:questPoint.svg\|25px]]
