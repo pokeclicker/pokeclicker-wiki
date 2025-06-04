@@ -15,9 +15,9 @@ Name | Starting Price | Maximum Price | Description
 
 #### Quest Items
 
-Name | Starting Price | Maximum Price | Shop
+Name | Item Cost
 :---: | :---: | :---: | :---:
-[[File:Ground_Memory_Silvally.png\|25px]] [[Items/Ground Memory]] | 200,000 [[File:farmPoint.svg\|25px]] | 300,000 [[File:farmPoint.svg\|25px]] |Hapu's Trade
+[[File:Ground_Memory_Silvally.png\|25px]] [[Items/Ground Memory]] | 200,000 [[File:farmPoint.svg\|25px]] |
 
 #### Farm Items
 Farm Items purchasable at the Berry Masters.
