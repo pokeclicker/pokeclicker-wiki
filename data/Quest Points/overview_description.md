@@ -23,7 +23,7 @@ Key | Item Cost
 
 Name | Item Cost
 :---: | :---: | :---: | :---:
-[[File:Grass_Memory_Silvally.png\|25px]] [[Items/Ground Memory]] | 125,000 [[File:questPoint.svg\|25px]] |
+[[File:Grass_Memory_Silvally.png\|25px]] [[Items/Grass Memory]] | 125,000 [[File:questPoint.svg\|25px]] |
 
 #### Evolution Items
 These Evolution Items cost 2,500 [[File:questPoint.svg\|25px]]
