@@ -92,6 +92,15 @@ td.tight {
 .table-mutations table.table td.mutation > * {
   filter: hue-rotate(-300deg);
 }
+.table-mutations table.table td.freeze {
+  filter: brightness(200%) hue-rotate(210deg);
+}
+.table-mutations table.table td.freeze > * {
+  filter: brightness(50%) hue-rotate(-210deg);
+}
+.table-mutations table.table td.freeze > a {
+  color: rgb(34, 34, 34);
+}
 .table-mutations table.table td a {
   text-decoration: none;
   color: inherit;
