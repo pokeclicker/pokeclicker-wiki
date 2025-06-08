@@ -419,6 +419,12 @@ const searchOptions = [
     type: 'Environments',
     page: `${GameConstants.camelCaseToString(env)}`,
   })),
+  // Desktop Client
+  {
+    display: 'Desktop Client',
+    type: 'Desktop Client',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
