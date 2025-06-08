@@ -1,0 +1,1 @@
+Power Bracer cannot be given to Pokémon as a held item unless it has the [[Pokérus]] already.
