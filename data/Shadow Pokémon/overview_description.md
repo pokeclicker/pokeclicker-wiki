@@ -144,4 +144,6 @@ N° of Purification | Flow Required
 
 Shadow Pokémon can also equip special Held Items that boost experience gain called Scents. Currently, there are three Scents in the game: [[Items/Joy Scent]], [[Items/Vivid Scent]], and [[Items/Excite Scent]].
 
+Shadow is a state, like [Shiny](#!Shiny_Chance).  To properly Catch Filter for Shadow pokemon, use a combination of "Shadow: True" and "Caught Shadow: False" to throw balls only at new encounters, or just "Shadow: True" for all.
+
 ## List of Shadow Pokémon
