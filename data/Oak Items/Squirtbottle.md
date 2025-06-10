@@ -38,5 +38,4 @@ You can find the formation and timings on the [[Berries/Persim]] page.
 This is a very active strategy, but this setup should provide a little over 3.58 mutations on average including time waiting for growth.
 This strategy is also the fastest, but needs at least about 4 and a half hours of active growth and mutation time to complete.
 
-### Kasib Planting Formation
-The transformation of a berry into Kasib upon death is not categorized as a mutation and thusnot level up the Squirtbottle. This means that there is no planting formation for the Kasib berry.
+**Note:** The transformation of a berry into Kasib upon death is not categorized as a mutation and thus does not level up the Squirtbottle.
