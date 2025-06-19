@@ -3,7 +3,7 @@
 # Headers use the `(#)` symbol {#header-info}
 ### Add more for subheadings
 ```
-# Headers use the `(#)` symbol {#header-info}
+# Headers use the `(#)` symbol
 ### Add more for subheadings
 ```
 ---
@@ -33,7 +33,7 @@ Row | lorem | ipsum
 
 ---
 
-### Collapse: {#tables}
+### Collapse: {#collapse}
 
 :::collapse This is a collapsible block.
 
@@ -73,7 +73,17 @@ Link to a page with text other than its name. [Evolves into Charmeleon](#!Pokemo
 ```
 External link. [PokéClicker Companion](https://companion.pokeclicker.com)
 ```
+
 ---
+
+### Anchors {#anchors}
+Use anchors to send the reader to a different section on the same page.  Anchors are placed with `{#anchor}` and linked like an external link but use the `(#anchor)` text instead of a URL.
+
+[scroll to header info](#header-info) or [scroll to here](#here) {#here}
+
+```
+[scroll to header info](#header-info) or [scroll to here](#here) {#here}
+```
 
 ### Images {#images}
 
@@ -87,15 +97,7 @@ Images should be located in the `/images/` folder.
 
 ---
 
-### Links {#links}
-
-[PokéClicker](https://pokeclicker.com) or [scroll to header info](#header-info) or [scroll to here](#here) {#here}
-
-```
-[PokéClicker](https://pokeclicker.com) or [scroll to header info](#header-info) or [scroll to here](#here) {#here}
-```
-
-### Comments
+### Comments{#comments}
 
 If you want to add a comment that won't be seen in the render version, you can use the following:
 
@@ -104,3 +106,12 @@ If you want to add a comment that won't be seen in the render version, you can u
 <!-- comment here -->
 ```
 
+---
+
+### Escaping Markdown {#escape}
+To display characters that would normally be turned into markdown, prefix with a backslash `\` to escape.
+
+\* this escaped asterisk won't turn into a bullet list
+```
+\* this escaped asterisk won't turn into a bullet list
+```
