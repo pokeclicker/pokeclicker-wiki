@@ -1,11 +1,11 @@
 _If you are looking how to mutate and unlock the different Berries, check [[Berries]] instead._
 
-There are a number of Farming Setups not related to [Breeding Pokemon faster](#!Hatchery/ "Hatchery") or  [Increasing Shiny Chance](#!Shiny_Chance)  that are quite useful, particularly when either mutating berries or trying to harvest mutated berries faster, or, even without mutating berries, if you just want to harvest a lot of berries to trade to [Berry Masters](#!Daily_Deals).
+There are a number of Farming Setups not related to [Breeding Pokemon faster](#!Hatchery) or  [Increasing Shiny Chance](#!Shiny_Chance)  that are quite useful, particularly when either mutating berries or trying to harvest mutated berries faster, or, even without mutating berries, if you just want to harvest a lot of berries to trade to [Berry Masters](#!Daily_Deals).
 Here are some useful berry setups to know.
 
 _Note: Aura Received is multiplicative from all the auras affecting a berry. If a Berry receives the aura from 4 aura berries each at 1.3x aura output, that Berry receives 1.3^4 = 2.8561, or ~2.86x as an aura multiplier. If a Berry receives auras from 3 berries, two at 1.3x and one at 1.2x, the berry receives 1.3^2 * 1.2x = 2.028, or ~2.03x aura output_
 
-## Growth Aura Setups
+## Growth Aura Setups{#growth}
 You can use Boost Mulch to speed up berry growth. If you are ready to harvest the boosted berry use Rich Mulch for maximum harvesting gain.
 
 - _Tip: Once a berry has grown enough using [[Berries/Wacan]]'s Boost Aura, swap the Wacans for [[Berries/Passho]] berries to gain maximum Berry Harvests._
@@ -64,7 +64,7 @@ _**Growth Aura + Boost Mulch: 14.19x**_
 | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | | | |
 :::
 
-## Harvest Aura Setups
+## Harvest Aura Setups{#harvest}
 These setups are the most efficient setups for harvesting the greatest amount of berries.
 _Remember to apply [[Items/Rich Mulch]] before harvesting!_
 
@@ -104,7 +104,7 @@ _**Harvest Aura + Rich Mulch: 5 Plots: 9.66x - 3 Plots: 5.72x - 1 Plot: 7.42x - 
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 :::
 
-## Growth and Harvest Aura Setup (Wacan + Passho Handoff)
+## Growth and Harvest Aura Setup (Wacan + Passho Handoff){#handoff}
 Combining the Wacan and Passho setups is incredibly useful when trying to quickly grow and harvest multiple Gen 5 berries that have a base 0.5 berry harvest yield, such as Starf or Petaya. This two-part setup, going from the Wacan formation to the following Passho formation, is the most efficient way to harvest more of these berries in the shortest amount of time.
 
 Using Farmhands Jessie or Riley to either: harvest and replant Wacans, or just replant Wacans as they wither (which is faster, but requires actively watching out for Kasib mutations on withered plots) is the best way to cultivate slow growing Gen 5 berries in a reasonable amount of time.
@@ -141,7 +141,7 @@ _**Harvest Aura + Rich Mulch Bonus: 16.28x**_
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 :::
 
-## EV Yield Setup
+## EV Yield Setup{#EV}
 [EV](#!Pokérus "Pokérus") yield is affected by the Rowap berry. The setup below increases the yield of EVs gained in all applicable situations.
 
 _**EV Gain Bonus: 2.54x**_
@@ -154,7 +154,7 @@ _**EV Gain Bonus: 2.54x**_
 | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
 :::
 
-## Wandering Pokémon Setups
+## Wandering Pokémon Setups{#wanderers}
 [[Wandering Pokémon]] are attracted to ripe berries. For the maximum chance of attracting a desired wandering Pokémon, use one of the setups below.
 
 ### Regular Berries
@@ -221,7 +221,7 @@ Encounter Chance per 1.5s: 1.38%**_
 | [[File:Kebia.png\|32px]] [[Berries/Kebia]]{.gooey} | [[File:Kebia.png\|32px]] [[Berries/Kebia]]{.gooey} | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | |
 :::
 
-## Regaining Lost Gen 5 Berries
+## Regaining Lost Gen 5 Berries{#enigma}
 Shoveled your only copy of a Gen 5 berry by accident? You can use [[Berries/Enigma]] berries to mutate another rather than having to go through the original mutation process.
 Here is the setup you need to mutate a Petaya berry if you shovel your only one by accident.
 - _Note: Don't forget to equip the [[Oak Items/Squirtbottle]], and use [[Items/Surprise Mulch]] as this is a mutation. Purple squares indicate where mutations can occur._
@@ -235,7 +235,7 @@ Here is the setup you need to mutate a Petaya berry if you shovel your only one 
 | [[File:Payapa.png\|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\|32px]] [[Berries/Payapa]] {.mutation} | |
 :::
 
-## Roaming Pokémon Setup
+## Roaming Pokémon Setup{#roamers}
 Trying to attract a roaming Pokémon? The [[Berries/Jaboca]] berry can help boost your roaming encounter chances, and Lum can help boost those odds further.
 
 _**Roaming Pokémon Chance: 2.54x**_
@@ -248,7 +248,7 @@ _**Roaming Pokémon Chance: 2.54x**_
 | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | |
 :::
 
-## Squirtbottle Leveling Strategies
+## Squirtbottle Leveling Strategies{#squirtbottle}
 Here are a few highly efficient strategies on how to level up the [[Oak Items/Squirtbottle]] based on which berries you have unlocked.
 
 ### Occa/Kebia Planting Formation (a.k.a. Berry Wars)
@@ -285,7 +285,7 @@ You can find the formation and timings on the [[Berries/Persim]] page.
 This is a very active strategy, but this setup should provide a little over 3.58 mutations on average including time waiting for growth.
 This strategy is also the fastest, but needs at least about 4 and a half hours of active growth and mutation time to complete.
 
-## Sprinklotad Leveling Strategy
+## Sprinklotad Leveling Strategy{#sprinklotad}
 The most efficient way to gain experience for the [[Oak Items/Sprinklotad]] is to equip the fully-leveled Sprayduck and surround 4 Kasib berries with Cheri berries in the following way. Keep replanting Cheri as they wither while either shoveling or harvesting extra Kasib that may sprout.
 
 **Farm**
@@ -300,7 +300,7 @@ The most efficient way to gain experience for the [[Oak Items/Sprinklotad]] is t
 
 ## Other Setups
 
-### Colbur + Cheri (a.k.a. Colbur Nonsense)
+### Colbur + Cheri (a.k.a. Colbur Nonsense){#nonsense}
 This setup's objective is to earn the maximum number of Farm Points per second. It requires active gameplay so it's not recommended unless the player wants to be watching the Farm constantly. The way this setup works is: [[Berries/Colbur]], being a Parasite Berry, overtakes [[Berries/Cheri]], the player harvests the Colbur, and then plants another Cheri on the spot. Colbur has a considerably higher Farm Point gain compared to Cheri (2,300 vs 5) but takes considerably longer to grow. By doing this, however, Colbur can be harvested rather quickly as Cheri takes 30 seconds to grow (or less if [[Oak Items/Sprayduck]] is equipped). [[Berries/Babiri]] is there to protect [[Berries/Petaya]] from being overtaken. There are 2 plots where the player can plant whatever they want. In this example, [[Berries/Payapa]] was used since it has Mutation Chance up aura. Other recommended berry is [[Berries/Haban]] to make Petaya live longer.
 
 Purple spots are where the player is meant to harvest the berry and replace with more Cheri. Note that if a Colbur overtakes a Cheri at a stage different from Berry (ripe), it's highly recommended to shovel it and plant another Cheri there. Also, it's recommended to equip [[Oak Items/Squirtbottle]] as it increases mutation chance.
