@@ -275,3 +275,30 @@ All planting times use the time-to-ripe remaining of the first planted berry for
 | [[Berries/Babiri]] | - | - | -|
 | [[Berries/Chople]] | 19 hours 59 minutes 59 seconds until ripe OR 9 hours until ripe (no [[Berries/Chilan]] chance) | 13 hours 19 mins 59 secs until ripe OR 6 hours until ripe (no [[Berries/Chilan]] chance) | 8 hours 53 mins 19 secs until ripe OR 4 hours until ripe (no [[Berries/Chilan]] chance)|
 | [[Berries/Lum]] | 11 hours 59 minutes 59 seconds until ripe | 7 hours 59 mins 59 secs until ripe | 5 hours 19 mins 59 secs until ripe|
+
+### Infinite Farm
+The combination of [[Berries/Haban]] and [[Berries/Lum]] in this formation make [[Berries/Petaya]] live for approximately 3.5 years once the setup fully ripens. While not as efficient as other setups, it works for those who want to forget about the Farm.
+
+Note that replacing the [[Berries/Chople]] with a different berry like [[Berries/Rowap]] or [[Berries/Starf]] will make the bonus only be 1.70x.
+
+**Egg Step Bonus: 2.03x**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+:::
+
+#### Timing Table
+
+The placement of Choples in the Infinite setup means there's no chance of [[Berries/Chilan]] mutating.
+
+All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times.
+| Berry | Planting Time with No Modifier | Planting Time with Mulch/Sprayduck | Planting Time with  Mulch+Sprayduck|
+|---|---|---|---|
+| [[Berries/Petaya]] | - | - | - |
+| [[Berries/Haban]] | - | - | - |
+| [[Berries/Chople]] | 19 hours 59 minutes 59 seconds until ripe | 13 hours 19 mins 59 secs until ripe | 8 hours 53 mins 19 secs until ripe |
+| [[Berries/Lum]] | 11 hours 59 minutes 59 seconds until ripe | 7 hours 59 mins 59 secs until ripe | 5 hours 19 mins 59 secs until ripe|
