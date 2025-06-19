@@ -277,9 +277,7 @@ All planting times use the time-to-ripe remaining of the first planted berry for
 | [[Berries/Lum]] | 11 hours 59 minutes 59 seconds until ripe | 7 hours 59 mins 59 secs until ripe | 5 hours 19 mins 59 secs until ripe|
 
 ### Infinite Farm
-The combination of [[Berries/Haban]] and [[Berries/Lum]] in this formation make [[Berries/Petaya]] live for approximately 3.5 years once the setup fully ripens. While not as efficient as other setups, it works for those who want to forget about the Farm.
-
-Note that replacing the [[Berries/Chople]] with a different berry like [[Berries/Rowap]] or [[Berries/Starf]] will make the bonus only be 1.70x.
+The combination of [[Berries/Haban]] and [[Berries/Lum]] in this formation make the [[Berries/Petaya]] live for approximately 3.5 years once the setup fully ripens. While not as efficient as other setups, it works for those who want to forget about the Farm. The placement of Choples in the Infinite setup means there's no chance of [[Berries/Chilan]] mutating.
 
 **Egg Step Bonus: 2.03x**
 ::: table-mutations
@@ -292,8 +290,6 @@ Note that replacing the [[Berries/Chople]] with a different berry like [[Berries
 :::
 
 #### Timing Table
-
-The placement of Choples in the Infinite setup means there's no chance of [[Berries/Chilan]] mutating.
 
 All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times.
 | Berry | Planting Time with No Modifier | Planting Time with Mulch/Sprayduck | Planting Time with  Mulch+Sprayduck|
