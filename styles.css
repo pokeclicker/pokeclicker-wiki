@@ -130,6 +130,7 @@ td.tight {
 }
 .table-mutations table.table td.freeze > * {
   filter: brightness(50%) hue-rotate(-210deg);
+  color: #000;
 }
 .table-mutations table.table td.gooey {
   filter: hue-rotate(30deg) saturate(200%);
