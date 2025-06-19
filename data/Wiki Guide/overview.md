@@ -33,6 +33,24 @@ Row | lorem | ipsum
 
 ---
 
+### Farm table: {#farm_table}
+This makes a farm layout with soil in each cell.  A berry can be placed with ```[[File:Cheri.png\|32px]][[Berries/Cheri]]```, change Cheri to whatever species is desired. If there is nothing betweeen pipes ```|``` an empty plot will be rendered.  Plots can be colored to represent different Mulches with {.mutation}, {.boost}, {.rich} {.freeze}, {.amaze}, or  {.gooey}, which should be appended after all the other data in the cell.  Use five rows of fives cells if representing the full [[Farm]].
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Cheri.png\|32px]] [[Berries/Cheri]]{.gooey} | {.rich} | {.freeze}| {.amaze} | | |
+[[File:Rowap.png\|32px]] [[Berries/Rowap]]{.mutation} | [[File:Petaya.png\|32px]] [[Berries/Petaya]]{.boost} | [[File:Wacan.png\|32px]] [[Berries/Wacan]]{.rich} | [[File:Babiri.png\|32px]] [[Berries/Babiri]]{.freeze} | [[File:Chople.png\|32px]] [[Berries/Chople]]{.amaze} | |
+:::
+
+```
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Cheri.png\|32px]] [[Berries/Cheri]]{.gooey} | {.rich} | {.freeze}| {.amaze} | | |
+[[File:Rowap.png\|32px]] [[Berries/Rowap]]{.mutation} | [[File:Petaya.png\|32px]] [[Berries/Petaya]]{.boost} | [[File:Wacan.png\|32px]] [[Berries/Wacan]]{.rich} | [[File:Babiri.png\|32px]] [[Berries/Babiri]]{.freeze} | [[File:Chople.png\|32px]] [[Berries/Chople]]{.amaze} | |
+:::
+```
+
+---
+
 ### Collapse: {#collapse}
 
 :::collapse This is a collapsible block.
