@@ -1,4 +1,4 @@
-Berries can be grown in the [[Farm]] to earn [[Farm Points]]. You can trade certain berries for Masterballs, Protein, and other Evolution Items at Berry Master shops.
+Berries can be grown in the [[Farm]] to earn [[Farm Points]] and multiply, used to attract Wandering Pokémon, or provide special bonuses via auras.  Collected berries can be traded for specialty [[Poké Balls]], [[Vitamins]], and other Evolution Items at Berry Master shops and spent to evolve [[Pokemon/Milcery]] into Alcremies at the [[Battle Cafe]].  Common berries drop as loot from wild Pokémon, but most require setting up specific layouts on the Farm and getting a lucky mutation to a new species.
 
 ### Features
 #### Related Items
