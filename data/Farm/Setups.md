@@ -141,8 +141,8 @@ _**Harvest Aura + Rich Mulch Bonus: 16.28x**_
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 :::
 
-## EV Yield Setup{#EV}
-[EV](#!Pokérus "Pokérus") yield is affected by the Rowap berry. The setup below increases the yield of EVs gained in all applicable situations.
+## EV Yield Setups{#EV}
+[EV](#!Pokérus "Pokérus") yield is affected by the Rowap berry. The setup below increases the yield of EVs gained in all applicable situations.  It stacks with other EV bonuses, including [[Items/Blue Flute]] and [[Items/Repeat Ball]].
 
 _**EV Gain Bonus: 2.54x**_
 ::: table-mutations
@@ -152,6 +152,21 @@ _**EV Gain Bonus: 2.54x**_
 | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
 | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
 | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
+:::
+
+### Rowap + Lum + Petaya
+
+The Petaya variant has slightly less EV yield but will last for up to five days vs. Rowap's normal lifespan of less than six hours. For an even longer uptime, use the [Infinite Farm](#infinite) setup.
+
+_**EV Gain Bonus: 2.43x**_
+
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
+| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
+| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
+| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
+| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | |
 :::
 
 ## Wandering Pokémon Setups{#wanderers}
