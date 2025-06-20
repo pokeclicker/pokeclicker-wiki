@@ -78113,6 +78113,15 @@ const gotoPageClick = (event, type, name, other) => {
   return false;
 }
 
+scrollToId = (id) => {
+  const el = document.getElementById(id);
+  if (el) {
+    const navEl = document.getElementById('nav-bar');
+    const y = (el?.getBoundingClientRect()?.top || 0) - (navEl?.scrollHeight || 0)
+    scrollBy(0, y);
+  }
+}
+
 // When the hash changes, we will load the new page
 // This also allows us to go forwards and back in history
 onhashchange = (event) => {
@@ -78123,15 +78132,13 @@ onhashchange = (event) => {
     // Change the url back to the current page
     location.hash = event.oldURL.replace(/.*#!/, '#!');
     // Scroll to the element they wanted to view
-    const el = document.getElementById(event.newURL.replace(/.*#/, ''));
-    if (el) {
-      const navEl = document.getElementById('nav-bar');
-      const y = (el?.getBoundingClientRect()?.top || 0) - (navEl?.scrollHeight || 0)
-      scrollBy(0, y);
-    }
+    scrollToId(event.newURL.replace(/.*#/, ''));
     return;
   }
-  let [ type, name, other ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
+  
+  const [match, path, _scrollElem] = (/.*#!([^#]*)#?(.*)/).exec(event.newURL) ?? [];
+  const scrollElem = _scrollElem?.endsWith('/') ? _scrollElem.slice(0,-1) : _scrollElem
+  let [ type, name, other ] = path.split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
   if (type == 'loading') {
     return;
   }
@@ -78168,6 +78175,7 @@ onhashchange = (event) => {
   $.get(page, (data) => {
     pageElement.html(data);
     applyBindings(true);
+    scrollToId(scrollElem)
   }).fail(() => {
     pageType('Page not found');
     pageName('');
@@ -78184,6 +78192,7 @@ onhashchange = (event) => {
       pageElementCustom.html(`<textarea id="custom-edit">${data}</textarea>`);
     } else {
       pageElementCustom.html(md.render(data));
+      scrollToId(scrollElem)
     }
   }).fail(() => {
     if (other == 'edit') {
@@ -78207,6 +78216,7 @@ onhashchange = (event) => {
       pageElementCustomDescription.html(`<textarea id="custom-edit-desc">${data}</textarea>`);
     } else {
       pageElementCustomDescription.html(md.render(data));
+      scrollToId(scrollElem)
     }
   }).fail(() => {
     if (other == 'edit') {
