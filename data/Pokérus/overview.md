@@ -29,7 +29,7 @@ There is a known bug that Pokémon infected via typed eggs will remain Infected 
 
 ## Effort Values (EVs)
 
-EVs are a damage multiplying stat for each individual Pokémon that can be seen in the Pokédex page for that Pokémon and by using the Display Value setting in the Hatchery. EVs for a Pokémon can currently only be increased by obtaining that Pokémon again after it has caught the Pokérus. You can gain EVs for a Pokémon by: catching it on a Route, Dungeon, or Safari, obtaining it as a Wandering Pokemon, or by evolving it using Evolution Items. Breeding a Pokémon does not count towards gaining EVs. EV gain is further affected by the Rowap Berry Aura, Blue Flute, and other factors listed below.
+EVs are a damage multiplying stat for each individual Pokémon that can be seen in the Pokédex page for that Pokémon and by using the Display Value setting in the Hatchery. EVs for a Pokémon can currently only be increased by obtaining that Pokémon again after it has caught the Pokérus. You can gain EVs for a Pokémon by: catching it on a Route, Dungeon, or Safari, obtaining it as a Wandering Pokemon, or by evolving it using Evolution Items. Breeding a Pokémon does not count towards gaining EVs. EV gain is further affected by the [[Berries/Rowap]] Berry Aura, Blue Flute, and other factors listed below.  Using a [Farm Setup](#!Farm/Setups) for EV boosting can give up to 2.5x more Effort Values.
 
 ### Gaining EVs (Methods)
 
