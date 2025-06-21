@@ -77465,11 +77465,11 @@ const requirementHints = (requirement, includeMarkdown = true) => {
                     break;
                 case QuestLineStepCompletedRequirement:
                     if (typeof req.questIndex === 'function') {
-                        hint = req.option == GameConstants.AchievementOption.equal
+                        hint = req.option == GameConstants.AchievementOption.equal || req.option == GameConstants.AchievementOption.more
                             ? `Progress in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
                             : `Have not progessed to a certain step in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
                     } else {
-                        hint = req.option == GameConstants.AchievementOption.equal
+                        hint = req.option == GameConstants.AchievementOption.equal || req.option == GameConstants.AchievementOption.more
                             ? `Complete step ${req.questIndex + 1} in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
                             : `Have not completed step ${req.questIndex + 1} in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
                     }
@@ -77493,10 +77493,20 @@ const requirementHints = (requirement, includeMarkdown = true) => {
                 case DevelopmentRequirement:
                     hint = 'Not currently available.'
                     break;
+                case PokemonDefeatedSelectNRequirement:
+                    hint = null;
+                    break;
             }
-            hints.push(hint);
+
+            if (hint?.length) {
+                hints.push(hint);
+            }
         }
     });
+
+    if (requirement.some((req) => req instanceof PokemonDefeatedSelectNRequirement)) { // show last
+        hints.push('Has a chance to appear here; randomly changes locations after being defeated.');
+    }
 
     return hints;
 };
@@ -77791,6 +77801,7 @@ const getOriginalContent = (editor) => editor._rendered.value.split('\n').map(l 
 // list of discord ids banned from editing the wiki
 const banList = [
   '516241570853552129', // primorollins (repeatedly editing a page after being told to stop)
+  '1320473652361433161' // the_spectrumyt_70106 (making unwanted page edits, not in discord to tell to stop)
 ];
 
 const saveChanges = (editor, filename, btn) => {
@@ -77999,7 +78010,7 @@ const md = new markdownit({
   .use(require('markdown-it-attrs'), {
     leftDelimiter: '{',
     rightDelimiter: '}',
-    allowedAttributes: ['id', 'class'],
+    allowedAttributes: ['id', 'class', 'data-sort', 'data-order'],
   })
   .use(require('markdown-it-mathjax3'))
   .use(require('markdown-it-container'), 'text-center')
@@ -78102,6 +78113,15 @@ const gotoPageClick = (event, type, name, other) => {
   return false;
 }
 
+scrollToId = (id) => {
+  const el = document.getElementById(id);
+  if (el) {
+    const navEl = document.getElementById('nav-bar');
+    const y = (el?.getBoundingClientRect()?.top || 0) - (navEl?.scrollHeight || 0)
+    scrollBy(0, y);
+  }
+}
+
 // When the hash changes, we will load the new page
 // This also allows us to go forwards and back in history
 onhashchange = (event) => {
@@ -78112,15 +78132,13 @@ onhashchange = (event) => {
     // Change the url back to the current page
     location.hash = event.oldURL.replace(/.*#!/, '#!');
     // Scroll to the element they wanted to view
-    const el = document.getElementById(event.newURL.replace(/.*#/, ''));
-    if (el) {
-      const navEl = document.getElementById('nav-bar');
-      const y = (el?.getBoundingClientRect()?.top || 0) - (navEl?.scrollHeight || 0)
-      scrollBy(0, y);
-    }
+    scrollToId(event.newURL.replace(/.*#/, ''));
     return;
   }
-  let [ type, name, other ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
+  
+  const [match, path, _scrollElem] = (/.*#!([^#]*)#?(.*)/).exec(event.newURL) ?? [];
+  const scrollElem = _scrollElem?.endsWith('/') ? _scrollElem.slice(0,-1) : _scrollElem
+  let [ type, name, other ] = path.split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
   if (type == 'loading') {
     return;
   }
@@ -78157,6 +78175,7 @@ onhashchange = (event) => {
   $.get(page, (data) => {
     pageElement.html(data);
     applyBindings(true);
+    scrollToId(scrollElem)
   }).fail(() => {
     pageType('Page not found');
     pageName('');
@@ -78173,6 +78192,7 @@ onhashchange = (event) => {
       pageElementCustom.html(`<textarea id="custom-edit">${data}</textarea>`);
     } else {
       pageElementCustom.html(md.render(data));
+      scrollToId(scrollElem)
     }
   }).fail(() => {
     if (other == 'edit') {
@@ -78196,6 +78216,7 @@ onhashchange = (event) => {
       pageElementCustomDescription.html(`<textarea id="custom-edit-desc">${data}</textarea>`);
     } else {
       pageElementCustomDescription.html(md.render(data));
+      scrollToId(scrollElem)
     }
   }).fail(() => {
     if (other == 'edit') {
@@ -78981,16 +79002,10 @@ module.exports = {
 };
 
 },{}],522:[function(require,module,exports){
-const selectedPlot = ko.observable(undefined);
-const selectedPlotIndex = ko.observable(undefined);
+const selectedPlotIndex = ko.observable(12);
+const selectedPlot = ko.pureComputed(() => App.game.farming.plotList[selectedPlotIndex()]);
 const plotLabelsEnabled = ko.observable(false);
-
-const selectPlot = (plotIndex) => {
-    selectedPlot(App.game.farming.plotList[plotIndex]);
-    selectedPlotIndex(plotIndex);
-    $('#plotList > .plot > .plot-content').removeClass('selected');
-    $(`#plotList > .plot:eq(${plotIndex}) > .plot-content`).addClass('selected');
-};
+const importSaveDataText = ko.observable('');
 
 const getImage = (plot) => {
     if (plot.berry === BerryType.None) {
@@ -79198,48 +79213,41 @@ const clearAllPlots = () => {
 
 const exportFarm = () => {
     const data = {
-        plots: App.game.farming.plotList.map((plot) => {
-            return {
-                berry: plot.berry,
-                age: plot.age,
-                mulch: plot.mulch,
-            };
-        }),
-        oakItems: {},
+        save: {
+            farming: {
+                plotList: App.game.farming.plotList.map((plot) => {
+                    return {
+                        berry: plot.berry,
+                        age: plot.age,
+                        mulch: plot.mulch,
+                    };
+                })
+            }
+        }
     };
-
-    [OakItemType.Sprayduck, OakItemType.Squirtbottle].forEach((t) => {
-        const oakItem = App.game.oakItems.itemList[t];
-        data.oakItems[t] = {
-            level: oakItem.level,
-            active: oakItem.isActive,
-        };
-    });
 
     prompt('Save the below text to restore the farm to this state.', btoa(JSON.stringify(data)));
 };
 
-const importFarmPrompt = () => {
-    const input = prompt();
-    if (input) {
-        importFarm(input);
+const importFarm = (saveData) => {
+    const plotList = saveData.save?.farming?.plotList ?? saveData.plots; // saveData.plots = old export format
+    if (!plotList) {
+        console.error('Invalid import format');
+        return;
     }
+
+    App.game.farming.plotList.forEach((plot, idx) => {
+        plot._berry(plotList[idx].berry);
+        plot._age(plotList[idx].age);
+        plot._mulch(plotList[idx].mulch);
+    });
 };
 
-const importFarm = (str) => {
-    const data = JSON.parse(atob(str));
-    App.game.farming.plotList.forEach((plot, idx) => {
-        plot._berry(data.plots[idx].berry);
-        plot._age(data.plots[idx].age);
-        plot._mulch(data.plots[idx].mulch);
-    });
-    Object.keys(data.oakItems).forEach((key) => {
-        const oakItem = App.game.oakItems.itemList[key];
-        if (oakItem) {
-            oakItem.level = data.oakItems[key].level;
-            oakItem.isActive = data.oakItems[key].active;
-        }
-    });
+const importFromText = () => {
+    const saveData = JSON.parse(atob(importSaveDataText()));
+    importFarm(saveData);
+    importSaveDataText('');
+    $('#loadFromTextModal').modal('hide');
 };
 
 const importFromFile = (file) => {
@@ -79249,12 +79257,7 @@ const importFromFile = (file) => {
 const fileReader = new FileReader();
 fileReader.addEventListener('load', () => {
     const saveData = JSON.parse(atob(fileReader.result));
-    const plotList = saveData.save.farming.plotList;
-    App.game.farming.plotList.forEach((plot, idx) => {
-        plot._berry(plotList[idx].berry);
-        plot._age(plotList[idx].age);
-        plot._mulch(plotList[idx].mulch);
-    });
+    importFarm(saveData);
 });
 
 let contextMenuSetup = false;
@@ -79289,8 +79292,9 @@ const showPlotContextMenu = (event, plotIndex) => {
 
 module.exports = {
     selectedPlot,
+    selectedPlotIndex,
     plotLabelsEnabled,
-    selectPlot,
+    importSaveDataText,
     getImage,
     setPlotBerry,
     setPlotStage,
@@ -79311,7 +79315,7 @@ module.exports = {
     getReceivedAuras,
     clearAllPlots,
     exportFarm,
-    importFarmPrompt,
+    importFromText,
     importFromFile,
     showPlotContextMenu,
 }
@@ -79361,6 +79365,30 @@ const gemsPerRouteEncounter = (route, gemType) => {
     const totalMons = allMons.length;
     const totalGemsOfType = allMons.reduce((acc, p) => acc + gemsPerPokemon(p, gemType), 0);
     return totalGemsOfType / totalMons;
+}
+
+const gemGymsPerFlute = (fluteType) => {
+    const gemTypes = ItemList[fluteType]?.gemTypes || [];
+    const validGyms = [];
+
+    for (const name of Object.keys(GymList)) {
+        const region = GameConstants.getGymRegion(name);
+        if (region > GameConstants.MAX_AVAILABLE_REGION && region < GameConstants.Region.final) {
+            continue;
+        }
+
+        const gems = gemTypes.map(type => ({ type, amount: gemsPerGymEncounter(name, type) || 0 }));
+        const totalGems = gems.reduce((sum, gem) => sum + gem.amount, 0);
+
+        if (totalGems <= 0) {
+            continue;
+        }
+
+        const displayName = GymList[name].pokemons.some(p => p.requirements.length > 0) ? `${name}*` : name;
+        validGyms.push({ displayName, name, gems, totalGems });
+    }
+
+    return validGyms.sort((a, b) => b.totalGems - a.totalGems);
 }
 
 const bestGemsPerRegion = (region, gemType) => {
@@ -79454,6 +79482,7 @@ const bestCaptureRoutesPerRegion = (region, type) => {
 module.exports = {
     bestGemsPerRegion,
     bestCaptureRoutesPerRegion,
+    gemGymsPerFlute
 }
 
 },{}],524:[function(require,module,exports){
@@ -79829,6 +79858,39 @@ module.exports = {
 const { gotoPage } = require('./navigation');
 const { getAvailablePokemon } = require('./pages/pokemon');
 
+const excludedItemTypes = [
+  'PokemonItem',
+  'BerryItem',
+  'BuyKeyItem',
+  'BuyOakItem',
+];
+
+// Load gyms and handle duplicate leader names
+const gymEntries = Object.entries(GymList).filter(([key, gym]) => GameConstants.getGymRegion(gym) <= GameConstants.MAX_AVAILABLE_REGION).map(([key, gym]) => ({
+  display: gym.leaderName,
+  type: 'Gyms',
+  page: key,
+}));
+
+const duplicateGymDisplayNames = new Set(gymEntries.filter((entry, idx, list) => {
+  return list.findLastIndex(innerEntry => innerEntry.display === entry.display) !== idx;
+}).map(entry => entry.display));
+
+if (duplicateGymDisplayNames.size) {
+  for (let entry of gymEntries) {
+    if (duplicateGymDisplayNames.has(entry.display)) {
+      const gymInstance = GymList[entry.page];
+
+      // Elite check mirrors AchievementHandler.initialize
+      const elite = entry.page.includes('Elite') || entry.page.includes('Champion') || entry.page.includes('Supreme');
+
+      const gymName = gymInstance.displayName ?? `${entry.page}${!elite ? ' Gym' : ''}`;
+
+      entry.display = `${entry.display} (${gymName})`;
+    }
+  }
+}
+
 const searchOptions = [
   {
     display: 'Home',
@@ -79916,7 +79978,7 @@ const searchOptions = [
     type: 'Items',
     page: '',
   },
-  ...Object.values(ItemList).filter(i => !(i instanceof PokemonItem)).map(i => ({
+  ...Object.values(ItemList).filter(i => !excludedItemTypes.includes(i.constructor.name)).map(i => ({
     display: i.displayName,
     type: 'Items',
     page: i.displayName,
@@ -80012,11 +80074,7 @@ const searchOptions = [
     type: 'Gyms',
     page: '',
   },
-  ...Object.entries(GymList).filter(([key, gym]) => GameConstants.getGymRegion(gym) <= GameConstants.MAX_AVAILABLE_REGION).map(([key, gym]) => ({
-    display: gym.leaderName,
-    type: 'Gyms',
-    page: key,
-  })),
+  ...gymEntries,
   // Routes
   {
     display: 'Routes',
@@ -80169,8 +80227,7 @@ const searchOptions = [
   {
     display: 'Diamonds',
     type: 'Diamonds',
-    page: '',
-    redirects: ['Underground'], // remove when Underground page added
+    page: '',   
   },
   {
     display: 'Battle Points',
@@ -80240,6 +80297,25 @@ const searchOptions = [
     type: 'Environments',
     page: `${GameConstants.camelCaseToString(env)}`,
   })),
+  // Desktop Client
+  {
+    display: 'Desktop Client',
+    type: 'Desktop Client',
+    page: '',
+  },
+  // Underground
+  {
+    display: 'Underground',
+    type: 'Underground',
+    page: '',
+    redirects: ['Mine', 'Mining'],
+  },
+  // Underground Helpers
+  {
+    display: 'Underground Helpers',
+    type: 'Underground Helpers',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {

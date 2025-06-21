@@ -1,3 +1,3 @@
-Surprise mulch increases the mutation rate of plots by 50% (1.5x) for the duration of the item's effect.  Each surprise mulch lasts for five minutes (300 seconds), and they can be stacked for a longer effect.
+Surprise mulch increases the mutation rate of plots by 50% (1.5x) for the duration of the item's effect.  Each surprise mulch lasts for five minutes (300 seconds), and they can be stacked for a longer duration.  Apply it to the plot(s) the mutation should happen in.  These will be empty plots for most mutations, or other [[Berries]] for parasites and transformations.
 
-Surprise mulch can be usefully applied to plots with or without berries, depending on the mutation.  This effect stacks with the effect of the [[Squirtbottle]] Oak Item
+This effect stacks with the mutation boost of the ([[Oak_Items/Squirtbottle]]) Oak Item.

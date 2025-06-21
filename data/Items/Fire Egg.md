@@ -2,7 +2,7 @@
 **Bolded** Pokémon can only be obtained in their respective region from hatching shop eggs or as [[Wandering Pokémon]]. ***Bolded and italicized*** Pokémon can only be obtained in their respective region from hatching shop eggs.
 Region | Pokemon
 :--- | :---
-Kanto | **[[Pokemon/Charmander]]**, [[Pokemon/Vulpix]], [[Pokemon/Growlithe]], [[Pokemon/Ponyta]]
+Kanto | **[[Pokemon/Charmander]]**, [[Pokemon/Vulpix]], [[Pokemon/Growlithe]], [[Pokemon/Magmar]]
 Johto | **[[Pokemon/Cyndaquil]]**, _**[[Pokemon/Slugma]]**_, **[[Pokemon/Houndour]]**, [[Pokemon/Magby]]
 Hoenn | **[[Pokemon/Torchic]]**, [[Pokemon/Numel]]
 Sinnoh | **[[Pokemon/Chimchar]]**

@@ -1,4 +1,4 @@
-Base chance of dropping: 1 in 85.3 (Dungeon Boss)
+Base chance of dropping: 1 in 341.3 (Dungeon Boss)
 
 ## Use
 Base Pokémon |Evolves into |Available in

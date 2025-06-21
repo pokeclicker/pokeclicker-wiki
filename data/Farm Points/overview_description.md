@@ -13,6 +13,12 @@ Name | Starting Price | Maximum Price | Description
 :---: | :---: | :---: | :---:
 [[File:Masterball.png\|25px]] [[Items/Master Ball]] | 3,000 [[File:farmPoint.svg\|25px]] | 300,000 [[File:farmPoint.svg\|25px]] | The ultimate Pokéball to capture Pokémon with, it has a 100% catch rate and catches Pokémon in 0.5s.
 
+#### Quest Items
+
+Name | Item Cost
+:---: | :---: | :---: | :---:
+[[File:Ground_Memory_Silvally.png\|25px]] [[Items/Ground Memory]] | 200,000 [[File:farmPoint.svg\|25px]] |
+
 #### Farm Items
 Farm Items purchasable at the Berry Masters.
 

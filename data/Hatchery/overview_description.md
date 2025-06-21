@@ -27,9 +27,9 @@ Baby Pokémon are Pokémon obtained exclusively through Breeding the evolved sta
 
 The 25% increase to a Pokémon's Base Attack through breeding can be increased through the use of [[Items/Protein]]. Proteins increase the Attack bonus from Breeding by 1 for each Protein used on an individual Pokémon. Consult [[Items/Protein]] for further information on Breeding Efficiency using Proteins.
 
-Breeding Pokémon also offers the highest shiny odds in the game (alongside [[Wandering Pokémon]] and [[Shop Pokémon]]) at 1/1024. Consult [[Shiny Chance]] for further information on Shiny Odds using the Hatchery.
+Breeding Pokémon also offers the highest shiny odds in the game (alongside [[Wandering Pokémon]] and [[Shop Pokémon]]) at 1/1024. Consult [[Shiny Chance]] for further information on Shiny Odds using the Hatchery. Hatching a shiny Pokémon will grant it 5 times the usual attack gain. Note that this bonus does not apply to every hatch of existing shiny pokemon. In other words, if you breed a shiny Pokémon, it will only receive the bonus if it hatches shiny again.
 
-[[Hatchery Helpers]] are unlock-able and purchasable [[Items]] that allow the player to automate the hatchery. As of Version 0.9.3 this is a BETA feature and is likely to change in the future.
+[[Hatchery Helpers]] are unlock-able and purchasable [[Items]] that allow the player to automate the hatchery.
 
 # Efficiency
 
@@ -144,7 +144,7 @@ A slightly more complex strategy for planting Chople berries is to plant berries
 
 ## Chople + [[Berries/Petaya]]
 
-A strategy that is easier in many respects than Chople + Yache/Haban is Chople + [[Berries/Petaya]]. Petaya is one of the final berries to unlock, and it is one of the most challenging to do so, so it might not be the most accessible option. However, the aura effect of Petaya berries "freeze" the timers of ripe berries on the farm, locking them at infinity so long as the Petaya plant is ripe. This is an incredibly powerful effect as Petaya berries remain ripe for 5 days (no modifiers). Thus, this strategy provides a very stable setup for three rows of Chople berries for much longer than using two empty rows.
+A strategy that is easier in many respects than Chople + Yache/Haban is Chople + [[Berries/Petaya]]. Petaya is one of the final berries to unlock, and it is one of the most challenging to do so, so it might not be the most accessible option. However, the aura effect of Petaya berries "freeze" the timers of ripe berries on the farm, locking them at infinity so long as the Petaya plant is ripe. This is an incredibly powerful effect as Petaya berries remain ripe for 4 days (no modifiers). Thus, this strategy provides a very stable setup for three rows of Chople berries for much longer than using two empty rows.
 
 **Egg Step Bonus: 1.56x**
 ::: table-mutations
@@ -273,5 +273,28 @@ All planting times use the time-to-ripe remaining of the first planted berry for
 |---|---|---|---|
 | [[Berries/Petaya]] | - | - | -|
 | [[Berries/Babiri]] | - | - | -|
-| [[Berries/Chople]] | 19 hours 59 minutes 59 seconds until ripe OR 9 hours until ripe (no [[Chilan]] chance) | 13 hours 19 mins 59 secs until ripe OR 6 hours until ripe (no [[Berries/Chilan]] chance) | 8 hours 53 mins 19 secs until ripe OR 4 hours until ripe (no [[Chilan]] chance)|
+| [[Berries/Chople]] | 19 hours 59 minutes 59 seconds until ripe OR 9 hours until ripe (no [[Berries/Chilan]] chance) | 13 hours 19 mins 59 secs until ripe OR 6 hours until ripe (no [[Berries/Chilan]] chance) | 8 hours 53 mins 19 secs until ripe OR 4 hours until ripe (no [[Berries/Chilan]] chance)|
+| [[Berries/Lum]] | 11 hours 59 minutes 59 seconds until ripe | 7 hours 59 mins 59 secs until ripe | 5 hours 19 mins 59 secs until ripe|
+
+### Infinite Farm
+The combination of [[Berries/Haban]] and [[Berries/Lum]] in this formation make the [[Berries/Petaya]] live for approximately 3.5 years once the setup fully ripens. While not as efficient as other setups, it works for those who want to forget about the Farm. The placement of Choples in the Infinite setup means there's no chance of [[Berries/Chilan]] mutating.
+
+**Egg Step Bonus: 2.03x**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+:::
+
+#### Timing Table
+
+All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times.
+| Berry | Planting Time with No Modifier | Planting Time with Mulch/Sprayduck | Planting Time with  Mulch+Sprayduck|
+|---|---|---|---|
+| [[Berries/Petaya]] | - | - | - |
+| [[Berries/Haban]] | - | - | - |
+| [[Berries/Chople]] | 19 hours 59 minutes 59 seconds until ripe | 13 hours 19 mins 59 secs until ripe | 8 hours 53 mins 19 secs until ripe |
 | [[Berries/Lum]] | 11 hours 59 minutes 59 seconds until ripe | 7 hours 59 mins 59 secs until ripe | 5 hours 19 mins 59 secs until ripe|

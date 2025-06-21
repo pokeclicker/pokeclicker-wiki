@@ -1,6 +1,39 @@
 const { gotoPage } = require('./navigation');
 const { getAvailablePokemon } = require('./pages/pokemon');
 
+const excludedItemTypes = [
+  'PokemonItem',
+  'BerryItem',
+  'BuyKeyItem',
+  'BuyOakItem',
+];
+
+// Load gyms and handle duplicate leader names
+const gymEntries = Object.entries(GymList).filter(([key, gym]) => GameConstants.getGymRegion(gym) <= GameConstants.MAX_AVAILABLE_REGION).map(([key, gym]) => ({
+  display: gym.leaderName,
+  type: 'Gyms',
+  page: key,
+}));
+
+const duplicateGymDisplayNames = new Set(gymEntries.filter((entry, idx, list) => {
+  return list.findLastIndex(innerEntry => innerEntry.display === entry.display) !== idx;
+}).map(entry => entry.display));
+
+if (duplicateGymDisplayNames.size) {
+  for (let entry of gymEntries) {
+    if (duplicateGymDisplayNames.has(entry.display)) {
+      const gymInstance = GymList[entry.page];
+
+      // Elite check mirrors AchievementHandler.initialize
+      const elite = entry.page.includes('Elite') || entry.page.includes('Champion') || entry.page.includes('Supreme');
+
+      const gymName = gymInstance.displayName ?? `${entry.page}${!elite ? ' Gym' : ''}`;
+
+      entry.display = `${entry.display} (${gymName})`;
+    }
+  }
+}
+
 const searchOptions = [
   {
     display: 'Home',
@@ -88,7 +121,7 @@ const searchOptions = [
     type: 'Items',
     page: '',
   },
-  ...Object.values(ItemList).filter(i => !(i instanceof PokemonItem)).map(i => ({
+  ...Object.values(ItemList).filter(i => !excludedItemTypes.includes(i.constructor.name)).map(i => ({
     display: i.displayName,
     type: 'Items',
     page: i.displayName,
@@ -184,11 +217,7 @@ const searchOptions = [
     type: 'Gyms',
     page: '',
   },
-  ...Object.entries(GymList).filter(([key, gym]) => GameConstants.getGymRegion(gym) <= GameConstants.MAX_AVAILABLE_REGION).map(([key, gym]) => ({
-    display: gym.leaderName,
-    type: 'Gyms',
-    page: key,
-  })),
+  ...gymEntries,
   // Routes
   {
     display: 'Routes',
@@ -341,8 +370,7 @@ const searchOptions = [
   {
     display: 'Diamonds',
     type: 'Diamonds',
-    page: '',
-    redirects: ['Underground'], // remove when Underground page added
+    page: '',   
   },
   {
     display: 'Battle Points',
@@ -412,6 +440,25 @@ const searchOptions = [
     type: 'Environments',
     page: `${GameConstants.camelCaseToString(env)}`,
   })),
+  // Desktop Client
+  {
+    display: 'Desktop Client',
+    type: 'Desktop Client',
+    page: '',
+  },
+  // Underground
+  {
+    display: 'Underground',
+    type: 'Underground',
+    page: '',
+    redirects: ['Mine', 'Mining'],
+  },
+  // Underground Helpers
+  {
+    display: 'Underground Helpers',
+    type: 'Underground Helpers',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {

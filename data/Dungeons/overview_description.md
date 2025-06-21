@@ -66,21 +66,20 @@ When a number of chests equal to a third of the dungeon's size rounded down are 
 
 ### Dungeon Loot Regional Debuff
 
-When the furthest region reached is greater than 2 regions beyond a dungeon's region, all loot of a tier rarity greater than **Rare** (e.g: *Epic, Legendary, Mythic*) has a dramatically diminished drop rate. The below chart displays the relationship between the Highest Region Reached by the player and the Debuff Region. All Dungeons found in the Debuff Region, or in regions accessed prior to the Debuff Region, will have the debuff applied to the loot drop rate of all loot that belongs to one of the specified Tiers.
+When the furthest region reached is greater than 2 regions beyond a dungeon's region, all loot of a tier rarity greater than **Rare** (e.g: *Epic, Legendary, Mythic*) has a dramatically diminished drop rate. The below chart displays the relationship between the Highest Region Reached by the player and the Debuff Region. All Dungeons found in the Debuff Region, or in regions accessed prior to the Debuff Region, will have the debuff applied to the loot drop rate of all loot that belongs to one of the specified Tiers.  Items/mimics that cannot be obtained in a non-debuffed location are excluded so their drop rate is unchanged.
 
 #### Regional Loot Debuff Chart
-Highest Region Reached	| Debuff Region {.no-data-tables}
+
+Highest Region Reached	| Debuffed Region(s) {.no-data-tables}
 :--- | ---:
 Kanto | N/A
 Johto | N/A
 Hoenn | N/A
-Sinnoh | Kanto
+Sinnoh | Kanto, Sevii123 (except Ruby Path)
 Unova | Johto
-Kalos | Hoenn
+Kalos | Hoenn, Orre1, Sevii4567 + Ruby Path
 Alola | Sinnoh
-Galar | Unova
-
-*Note: Some items are excluded from the debuff so their drop rate isn't affected in debuffed regions.
+Galar | Unova, Orre2
 
 **Example:** Viridian Forest has four dungeon chest drops. Two loot items, Small Restore and Pokéball, are in Rarity Tiers of a greater rarity than Rare. **Before** the player reaches Sinnoh, the odds of finding these items increases with increasing dungeon clears, and the items will not have the Regional Debuff applied to their drop chances.
 **After** the player reaches Sinnoh, only those two loot items would be impacted by the Dungeon Loot Regional Debuff in Viridian Forest. Consequently, those two loot items would become roughly 20x as rare. In general, it is better to go for rare item drops before you are affected by the debuff; however, it is more difficult to clear those early game dungeons early on.

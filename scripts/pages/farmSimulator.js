@@ -1,13 +1,7 @@
-const selectedPlot = ko.observable(undefined);
-const selectedPlotIndex = ko.observable(undefined);
+const selectedPlotIndex = ko.observable(12);
+const selectedPlot = ko.pureComputed(() => App.game.farming.plotList[selectedPlotIndex()]);
 const plotLabelsEnabled = ko.observable(false);
-
-const selectPlot = (plotIndex) => {
-    selectedPlot(App.game.farming.plotList[plotIndex]);
-    selectedPlotIndex(plotIndex);
-    $('#plotList > .plot > .plot-content').removeClass('selected');
-    $(`#plotList > .plot:eq(${plotIndex}) > .plot-content`).addClass('selected');
-};
+const importSaveDataText = ko.observable('');
 
 const getImage = (plot) => {
     if (plot.berry === BerryType.None) {
@@ -215,48 +209,41 @@ const clearAllPlots = () => {
 
 const exportFarm = () => {
     const data = {
-        plots: App.game.farming.plotList.map((plot) => {
-            return {
-                berry: plot.berry,
-                age: plot.age,
-                mulch: plot.mulch,
-            };
-        }),
-        oakItems: {},
+        save: {
+            farming: {
+                plotList: App.game.farming.plotList.map((plot) => {
+                    return {
+                        berry: plot.berry,
+                        age: plot.age,
+                        mulch: plot.mulch,
+                    };
+                })
+            }
+        }
     };
-
-    [OakItemType.Sprayduck, OakItemType.Squirtbottle].forEach((t) => {
-        const oakItem = App.game.oakItems.itemList[t];
-        data.oakItems[t] = {
-            level: oakItem.level,
-            active: oakItem.isActive,
-        };
-    });
 
     prompt('Save the below text to restore the farm to this state.', btoa(JSON.stringify(data)));
 };
 
-const importFarmPrompt = () => {
-    const input = prompt();
-    if (input) {
-        importFarm(input);
+const importFarm = (saveData) => {
+    const plotList = saveData.save?.farming?.plotList ?? saveData.plots; // saveData.plots = old export format
+    if (!plotList) {
+        console.error('Invalid import format');
+        return;
     }
+
+    App.game.farming.plotList.forEach((plot, idx) => {
+        plot._berry(plotList[idx].berry);
+        plot._age(plotList[idx].age);
+        plot._mulch(plotList[idx].mulch);
+    });
 };
 
-const importFarm = (str) => {
-    const data = JSON.parse(atob(str));
-    App.game.farming.plotList.forEach((plot, idx) => {
-        plot._berry(data.plots[idx].berry);
-        plot._age(data.plots[idx].age);
-        plot._mulch(data.plots[idx].mulch);
-    });
-    Object.keys(data.oakItems).forEach((key) => {
-        const oakItem = App.game.oakItems.itemList[key];
-        if (oakItem) {
-            oakItem.level = data.oakItems[key].level;
-            oakItem.isActive = data.oakItems[key].active;
-        }
-    });
+const importFromText = () => {
+    const saveData = JSON.parse(atob(importSaveDataText()));
+    importFarm(saveData);
+    importSaveDataText('');
+    $('#loadFromTextModal').modal('hide');
 };
 
 const importFromFile = (file) => {
@@ -266,12 +253,7 @@ const importFromFile = (file) => {
 const fileReader = new FileReader();
 fileReader.addEventListener('load', () => {
     const saveData = JSON.parse(atob(fileReader.result));
-    const plotList = saveData.save.farming.plotList;
-    App.game.farming.plotList.forEach((plot, idx) => {
-        plot._berry(plotList[idx].berry);
-        plot._age(plotList[idx].age);
-        plot._mulch(plotList[idx].mulch);
-    });
+    importFarm(saveData);
 });
 
 let contextMenuSetup = false;
@@ -306,8 +288,9 @@ const showPlotContextMenu = (event, plotIndex) => {
 
 module.exports = {
     selectedPlot,
+    selectedPlotIndex,
     plotLabelsEnabled,
-    selectPlot,
+    importSaveDataText,
     getImage,
     setPlotBerry,
     setPlotStage,
@@ -328,7 +311,7 @@ module.exports = {
     getReceivedAuras,
     clearAllPlots,
     exportFarm,
-    importFarmPrompt,
+    importFromText,
     importFromFile,
     showPlotContextMenu,
 }

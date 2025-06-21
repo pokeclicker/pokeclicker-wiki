@@ -10,11 +10,13 @@ Base Pokémon |Evolves into |Available in
 [[File:pokemon/173.png\|25px]] [[Pokemon/Cleffa]] | [[File:pokemon/35.png\|25px]] [[Pokemon/Clefairy]] | Johto onward
 [[File:pokemon/174.png\|25px]] [[Pokemon/Igglybuff]] | [[File:pokemon/39.png\|25px]] [[Pokemon/Jigglypuff]] | Johto onward
 [[File:pokemon/175.png\|25px]] [[Pokemon/Togepi]] | [[File:pokemon/176.png\|25px]] [[Pokemon/Togetic]]| Johto onward
+[[File:pokemon/175.01.png\|25px]] [[Pokemon/Spooky Togepi]] | [[File:pokemon/176.01.png\|25px]] [[Pokemon/Spooky Togetic]]| Johto onward
 [[File:pokemon/298.png\|25px]] [[Pokemon/Azurill]] | [[File:pokemon/183.png\|25px]] [[Pokemon/Marill]] | Hoenn onward
 [[File:pokemon/406.png\|25px]] [[Pokemon/Budew]] | [[File:pokemon/315.png\|25px]] [[Pokemon/Roselia]] | Sinnoh onward during the day
 [[File:pokemon/427.png\|25px]] [[Pokemon/Buneary]] | [[File:pokemon/428.png\|25px]] [[Pokemon/Lopunny]] | Sinnoh onward
 [[File:pokemon/433.png\|25px]] [[Pokemon/Chingling]] | [[File:pokemon/358.png\|25px]] [[Pokemon/Chimecho]] | Sinnoh onward during the night
 [[File:pokemon/446.png\|25px]] [[Pokemon/Munchlax]] | [[File:pokemon/143.png\|25px]] [[Pokemon/Snorlax]] | Sinnoh onward
+[[File:pokemon/446.01.png\|25px]] [[Pokemon/Elf Munchlax]] | [[File:pokemon/143.02.png\|25px]] [[Pokemon/Santa Snorlax]] | Sinnoh onward
 [[File:pokemon/447.png\|25px]] [[Pokemon/Riolu]] | [[File:pokemon/448.png\|25px]] [[Pokemon/Lucario]] | Sinnoh onward during the day
 [[File:pokemon/527.png\|25px]] [[Pokemon/Woobat]] | [[File:pokemon/528.png\|25px]] [[Pokemon/Swoobat]] | Unova onward
 [[File:pokemon/541.png\|25px]] [[Pokemon/Swadloon]] | [[File:pokemon/542.png\|25px]] [[Pokemon/Leavanny]] | Unova onward
