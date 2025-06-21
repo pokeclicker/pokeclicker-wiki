@@ -13,3 +13,6 @@
 * [Shiny Chance](#!Shiny_Chance) - Boost the odds of Shiny Pokémon encounters
 * [Wacan Passho Handoff](#handoff) - Accelerate slow growing berries and boost yield on harvest
 * [Wandering Pokémon](#wanderers) - Attract more wanderers to the Farm
+
+
+> _If you are looking how to mutate and unlock the different Berries, check [[Berries]] instead._
