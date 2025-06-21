@@ -1,0 +1,45 @@
+Underground Helpers are people that can be hired to work on your [[Underground]].
+All helpers are available from the start and don't need unlocking.
+Once hired, an Underground Helper will continue working until they are fired.
+
+## Usage
+Helpers perform actions at set time intervals and become more efficient as they level up. Each helper comes equipped with their own tools, so their actions are independent of the player's tool durability. Helpers can be configured to automatically sell all treasures they find—this applies only to Diamon Treasures and Plates.
+
+## Stats 
+Underground Helpers have four main stats that improve as they level up:
+Stat | Description | Base Value | Bonus per Level | Max Value |
+:--- | :--- | :--- | :--- | :---
+Smart tool use | The chance a helper will use the correct use for any given situation | 50% | +2.5% | 100%|
+Reward retention | When a helper digs up a treasure there is a chance they will keep the item for themself. | 60% | -1% | 10% |
+Work cycle | The time needed until a helper does another action | 60 seconds | -1.1s | 5 seconds |
+Discover Chance | The chance a helper finds their favorite mine when searching | 50% | +1% | 100% |
+
+Each helper's level directly enhances these stats.
+Stats improve individually and per helper.
+
+### Favorite Mine 
+Although all helpers begin with the same base stats, each one has a favorite mine type.
+
+If the "Favor mine type" setting is enabled: 
+- After completing a mine, the helper will attempt to find their favorite mine. 
+- If unsuccessful, they will find one of the six other mine types at random.
+
+If the setting is disabled, the helper will simply discover a random mine.
+
+### Experience
+Helpers gain experience alongside the player:
+- Digging up a treasure will grant 25 Experience.
+- Completing a mine will grant an additional 100 experience. 
+- The non-active party (player or helper) receives 25% of the XP gained by the active one. Hiring a helper does not reduce the experience earned by the player.
+
+$$\text{TotalXP}(\text{level}) = \left\lfloor \sum_{i=0}^{\text{level} - 1} \left( i + 300 \cdot 2^{\frac{i}{7}} \right) \right\rfloor$$
+
+### Energy Restore
+
+You can spend resources to boost a helper's work speed using Energy Restores:
+
+Restore | Percentage | Price | Efficiency
+:--- | :--- | :--- | :--- |
+[[Items/Small Restore]] | 25% | 30,000 [[File:money.svg\|16px]] | 1,200 [[File:money.svg\|16px]] per 1%
+[[Items/Medium Restore]] | 50% | 100,000 [[File:money.svg\|16px]] | 2,000 [[File:money.svg\|16px]] per 1%
+[[Items/Large Restore]] | 75% | 400,000 [[File:money.svg\|16px]] | 5,333 [[File:money.svg\|16px]] per 1%
