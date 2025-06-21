@@ -31,7 +31,9 @@
 </div>
 <br>
 <h2>Trivia</h2>
-<p>To complete all Dungeon achievements, you will need the following number of Dungeon Tokens:</p>
+<p>To complete all Dungeon achievements, you will need the following number of Dungeon Tokens:<br />
+    
+Note: Dungeons are counted towards the Region in which they're unlocked. For example Sevii 4567 counts towards Hoenn's total.</p>
 <div class="table-responsive">
     <table class="table table-hover table-striped table-bordered">
         <thead class="thead-dark">
@@ -43,8 +45,12 @@
                 <th>500 Times</th>
             </tr>
         </thead>
-        <tbody data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r <= GameConstants.MAX_AVAILABLE_REGION && r != GameConstants.Region.none)">
-            <tr data-bind="with: { region: GameConstants.camelCaseToString(GameConstants.Region[$data]), total: GameConstants.RegionDungeons[$data].map(d => dungeonList[d]).reduce((sum, d) => sum + d.tokenCost, 0) }">
+        <tbody data-bind="foreach: Object.entries(Object.values(dungeonList).reduce((map, d) => {
+            const region = d.optionalParameters?.dungeonRegionalDifficulty ?? GameConstants.getDungeonRegion(d.name);
+            map[region] = (map[region] ?? 0) + d.tokenCost;
+            return map;
+        }, {})).filter(([region, total]) => region <= GameConstants.MAX_AVAILABLE_REGION)">
+            <tr data-bind="with: { region: GameConstants.camelCaseToString(GameConstants.Region[$data[0]]), total: $data[1] }">
                 <td data-bind="text: $data.region"></td>
                 <td data-bind="attr: { 'data-order': $data.total }"><img src="./images/dungeonToken.svg" width="18px"/> 
                     <ko data-bind="text: $data.total.toLocaleString()"></ko></td>
