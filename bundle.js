@@ -80227,8 +80227,7 @@ const searchOptions = [
   {
     display: 'Diamonds',
     type: 'Diamonds',
-    page: '',
-    redirects: ['Underground'], // remove when Underground page added
+    page: '',   
   },
   {
     display: 'Battle Points',
@@ -80302,6 +80301,19 @@ const searchOptions = [
   {
     display: 'Desktop Client',
     type: 'Desktop Client',
+    page: '',
+  },
+  // Underground
+  {
+    display: 'Underground',
+    type: 'Underground',
+    page: '',
+    redirects: ['Mine', 'Mining'],
+  },
+  // Underground Helpers
+  {
+    display: 'Underground Helpers',
+    type: 'Underground Helpers',
     page: '',
   },
 ];
