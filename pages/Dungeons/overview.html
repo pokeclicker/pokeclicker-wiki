@@ -45,8 +45,12 @@ Note: Dungeons are counted towards the Region in which they're unlocked. For exa
                 <th>500 Times</th>
             </tr>
         </thead>
-        <tbody data-bind="foreach: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r <= GameConstants.MAX_AVAILABLE_REGION && r != GameConstants.Region.none)">
-            <tr data-bind="with: { region: GameConstants.camelCaseToString(GameConstants.Region[$data]), total: Object.values(dungeonList).filter(dngn => {const dffclty = dngn.optionalParameters?.dungeonRegionalDifficulty; const inRegion = GameConstants.RegionDungeons[$data].includes(dngn.name); return (inRegion && dffclty === undefined) || (dffclty === $data);}).reduce((sum, d) => sum + d.tokenCost, 0) }">
+        <tbody data-bind="foreach: Object.entries(Object.values(dungeonList).reduce((map, d) => {
+            const region = d.optionalParameters?.dungeonRegionalDifficulty ?? GameConstants.getDungeonRegion(d.name);
+            map[region] = (map[region] ?? 0) + d.tokenCost;
+            return map;
+        }, {})).filter(([region, total]) => region <= GameConstants.MAX_AVAILABLE_REGION)">
+            <tr data-bind="with: { region: GameConstants.camelCaseToString(GameConstants.Region[$data[0]]), total: $data[1] }">
                 <td data-bind="text: $data.region"></td>
                 <td data-bind="attr: { 'data-order': $data.total }"><img src="./images/dungeonToken.svg" width="18px"/> 
                     <ko data-bind="text: $data.total.toLocaleString()"></ko></td>
