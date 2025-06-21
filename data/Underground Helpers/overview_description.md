@@ -3,7 +3,7 @@ All helpers are available from the start and don't need unlocking.
 Once hired, an Underground Helper will continue working until they are fired.
 
 ## Usage
-Helpers perform actions at set time intervals and become more efficient as they level up. Each helper comes equipped with their own tools, so their actions are independent of the player's tool durability. Helpers can be configured to automatically sell all treasures they find—this applies only to Diamon Treasures and Plates.
+Helpers perform actions at set time intervals and become more efficient as they level up. Each helper comes equipped with their own tools, so their actions are independent of the player's tool durability. Helpers can be configured to automatically sell all treasures they findâ€”this applies only to Diamon Treasures and Plates.
 
 ## Stats 
 Underground Helpers have four main stats that improve as they level up:
