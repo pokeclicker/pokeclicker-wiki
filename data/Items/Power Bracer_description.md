@@ -1,0 +1,1 @@
+Power Bracer cannot be given to Pokémon as a held item unless it has the [[Pokérus]] already.  Stacks with other EV boosting items, including [[Items/Blue Flute]], [[Berries/Rowap]] Berry and [[Items/Repeat Ball]].

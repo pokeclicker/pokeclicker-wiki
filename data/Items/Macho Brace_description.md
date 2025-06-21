@@ -1,0 +1,1 @@
+Macho Brace cannot be given to Pokémon as a held item unless it has the [[Pokérus]] already.  Stacks with other EV boosting items, including [[Items/Blue Flute]], [[Berries/Rowap]] Berry and [[Items/Repeat Ball]].  Its upgrade is the [[Items/Power Bracer]] which is twice as effective.

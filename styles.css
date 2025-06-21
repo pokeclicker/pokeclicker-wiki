@@ -86,12 +86,6 @@ td.tight {
 .table-mutations table.table tr td:nth-last-child(1) {
   display: none;
 }
-.table-mutations table.table td.mutation {
-  filter: hue-rotate(300deg);
-}
-.table-mutations table.table td.mutation > * {
-  filter: hue-rotate(-300deg);
-}
 .table-mutations table.table td a {
   text-decoration: none;
   color: inherit;
@@ -106,6 +100,45 @@ td.tight {
   text-decoration: none;
   color: inherit;
 }
+/* Mulch */
+.table-mutations table.table td.mutation {
+  filter: hue-rotate(300deg);
+}
+.table-mutations table.table td.mutation > * {
+  filter: hue-rotate(-300deg);
+}
+.table-mutations table.table td.boost {
+  filter: hue-rotate(200deg);
+}
+.table-mutations table.table td.boost > * {
+  filter: hue-rotate(-200deg);
+}
+.table-mutations table.table td.rich {
+  filter: hue-rotate(90deg);
+}
+.table-mutations table.table td.rich > * {
+  filter: hue-rotate(-90deg);
+}
+.table-mutations table.table td.amaze {
+  filter: hue-rotate(250deg);
+}
+.table-mutations table.table td.amaze > * {
+  filter: hue-rotate(-250deg);
+}
+.table-mutations table.table td.freeze {
+  filter: brightness(200%) hue-rotate(210deg);
+}
+.table-mutations table.table td.freeze > * {
+  filter: brightness(50%) hue-rotate(-210deg);
+  color: #000;
+}
+.table-mutations table.table td.gooey {
+  filter: hue-rotate(30deg) saturate(200%);
+}
+.table-mutations table.table td.gooey > * {
+  filter: hue-rotate(-30deg) saturate(50%);
+}
+
 
 
 /* THEME OVERIDES */

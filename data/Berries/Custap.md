@@ -17,6 +17,7 @@ Custap can be obtained by having at least one empty plot and at least 600 points
 :::
 
 #### Pinkan Mutation Strategy
+(Note: Trying to mutate Custap berries in this formation will also create [[Berries/Mago]] berries.)
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | [[File:Pinkan.png\|32px]] [[Berries/Pinkan]] | |

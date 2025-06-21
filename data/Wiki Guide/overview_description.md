@@ -13,8 +13,19 @@ All of the standard Markdown tools & syntax should be available. If anything is 
 You can see some tips for Markdown below, like how to make links for other wiki pages.
 [//] (Problems editing the Markdown pages in Android? Change to desktop view to avoid Android duplicating words.)
 
-### Editing HTML pages
-To test your changes to HTML pages, you need to run the site locally. This can be done using a tool like VS Code's "Live Server".
+### Forking and Editing the Repository
+To edit pages not available from the Wiki directly, you need to [sign up](https://github.com/signup/) for a GitHub account, fork the wiki's code, edit, commit, and send a Pull Request (PR) to be merged into the live database. A fork is a private sandboxed copy of the wiki's files that you can freely edit without affecting the actual Wiki.  Committing is saving your changes to this local copy.  A Pull Request is the point where your changes are submitted for review and, if approved, update the Wiki.
+* Go to https://github.com/signup/, follow the steps to get a free account.
+* Go to https://github.com/pokeclicker/pokeclicker-wiki/ and click the "Fork" button in the upper right.  All the default options fine, click "Create Fork"
+* Forks are stored under "Your Repositories" in your account drop-down menu.  This is where you're going to edit.
+* Find the page you want to work on.  Text is stored in /pokeclicker-wiki/Pages/(page_name)/ and may be in Overview.html or Main.html, or in /pokeclicker-wiki/data/(folder)/ - individual Pokemon and Items for example.  If a page has a subcategory in its URL then it's probably in /data/.
+* Click on the pencil (Edit) button in the upper right to change the page.
+* Save your changes to your fork with the green "Commit Changes" button, also upper right.
+* When satisfied with the revised page, go to "Pull Requests" in the upper left, choose the commits you want and submit them for review. Add a descriptive title and notes about the changes.
+* Wait for approval or a request for revision.
+
+### Testing HTML pages
+To see a 1:1 representation of changes to HTML pages, you need to run the site locally. This can be done using a tool like VS Code's "Live Server".
 All game data is available for use in the HTML pages, using the framework Knockout (just like what the game is using).
 To run it locally, you might need to run the command `git submodule update --remote`.
 
@@ -24,7 +35,7 @@ Try to write page specific JavaScript in Knockout, if possible.
 You can run `npm start` to see your changes and test if they've worked. This will also keep the `bundle.js` file updated with your changes.
 Otherwise after you have edited a JavaScript file, you need to run `npm run build` so the `bundle.js` file has your changes applied.
 
-### Page structure
+### Page Structure
 Each page needs to have one or two HTML pages in the `pages` folder. The `overview.html` file should always be included. This is used to either display an overview for pages with more than one page (like `Pokémon`), or the full page for pages with no sub-pages (like `Farm`).
 The `main.html` file is used for a bunch of pages, where we can autogenerate the page-specific content. Like the Pokémon page, all the stats can be pulled from the game data, so there's no need to make a page for each individual Pokémon.
 
