@@ -446,6 +446,19 @@ const searchOptions = [
     type: 'Desktop Client',
     page: '',
   },
+  // Underground
+  {
+    display: 'Underground',
+    type: 'Underground',
+    page: '',
+    redirects: ['Mine', 'Mining'],
+  },
+  // Underground Helpers
+  {
+    display: 'Underground Helpers',
+    type: 'Underground Helpers',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
