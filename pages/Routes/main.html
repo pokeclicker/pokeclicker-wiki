@@ -62,7 +62,7 @@
       const routes = Routes.getRoutesByRegion(region).filter(r => RoamingPokemonList.findGroup(region, r.subRegion || 0) == RoamingPokemonList.findGroup(region, subRegionid));
       const routeNum = routes.indexOf(Routes.getRoute(region, numBer));
       const maxRouteNum = routes.length - 1;
-      const roamingChance = ((max, min, maxRoute, minRoute) => Math.floor((max + ((min - max) * (maxRoute - minRoute) / (maxRoute)))))(GameConstants.ROAMING_MAX_CHANCE, GameConstants.ROAMING_MIN_CHANCE, maxRouteNum, routeNum)
+      const roamingChance = ((max, min, maxRoute, minRoute) => Math.floor((max + ((min - max) * (maxRoute - minRoute) / (maxRoute)))))(GameConstants.ROAMING_MAX_CHANCE, GameConstants.ROAMING_MIN_CHANCE, maxRouteNum, routeNum);
       return '1/' + roamingChance.toLocaleString();
     })()"></p>
   </div>
