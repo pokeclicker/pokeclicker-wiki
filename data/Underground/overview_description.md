@@ -3,7 +3,7 @@ The **Underground** is a special location in [[Kanto]] where players can obtain 
 - Plates that can be sold for [[Gems]]
 - Shards, which are used for various trades
 - Fossil and Fossil Pieces, which can be revived into new Pokémon
-- Evolution Stones 
+- Evolution Stones
 - Special Items such as [Mega Stones](/#!Mega%20Pokémon/) or an [exclusive Pikachu](/#!Pokémon/Pikachu_(Palaeontologist)).
 
 The Underground is unlocked upon buying the [[Key Items]] Explorer Kit on [[Towns/Cinnabar Island]] for 5,000 Quest Points [[File:questPoint.svg\|20px]].
@@ -23,7 +23,7 @@ Players have two options when starting a new mine:
 - Search for a specific mine: Select a desired treasure type.
 - Automatically find a mine of the last completed type. *This does not skip the discovery time.*
 
-When searching for a mine, there is a 4% chance for it to become a Special Mine
+When the player - not a helper- is searching for a mine, there is a 4% chance for it to become a Special Mine
 
 ### Discovery Time
 
@@ -64,7 +64,7 @@ Each tool has an individual durability gauge that determines how many times it c
 
 
 ### Tool Overview
-| Tool | Action | Base Repair Rate | Repair amount per Repair Rate | Damage per USe |
+| Tool | Action | Base Repair Rate | Repair amount per Repair Rate | Damage per Use |
 |---|---|---|---|---|
 | [[File:Chisel.png]] Chisel | Mines 2 layers on the selected spot. | 20 seconds | 2% | 2% |
 | [[File:Hammer.png]] Hammer | Mines 1 layer on all 9 tiles in a 3x3 grid. | 20 seconds | 2% | 6% |
@@ -80,7 +80,7 @@ You can trade treasures within the same category—such as Plates, Fossils, or S
 Both the player and the Underground Helper (if hired) gain experience while mining.
 
 - Digging up a treasure will grant 25 Experience.
-- Completing a mine will grant an additional 100 experience. 
+- Completing a mine will grant an additional 100 experience.
 - The non-active party (player or helper) receives 25% of the XP gained by the active one. Hiring a helper does not reduce the experience earned by the player.
 - Leveling up improves various aspects of Underground gameplay (see next section).
 
