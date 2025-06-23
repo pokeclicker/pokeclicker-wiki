@@ -14,6 +14,5 @@ The Moon Ball catch rate bonus is determined by the current Moon Phase:
 | Waning Crescent | +5% |
 
 
-In addition to the above, when attempting to catch certain Pokémon with a Moon Ball, a further +10% bonus is also applied up to a maximum of +20% from the current moon phase.
-These Pokémon are:
-Nidoran, Nidorina, Nidorino, Nidoqueen, Nidoking, Clefairy, Clefable, Jigglypuff, Wigglytuff, Cleffa, Igglybuff, Skitty, Delcatty, Munna, and Musharna
+In addition to the above, when attempting to catch certain Pokémon with a Moon Ball a further +10% bonus is also applied up to a maximum of +20%, these Pokémon are:
+(#!Pokémon/Nidoran), (#!Pokémon/Nidorina), Nidorino, Nidoqueen, Nidoking, Clefairy, Clefable, Jigglypuff, Wigglytuff, Cleffa, Igglybuff, Skitty, Delcatty, Munna, and Musharna
