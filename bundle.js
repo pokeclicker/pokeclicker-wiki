@@ -79746,6 +79746,16 @@ const getAvailablePokemon = () => {
     );
 }
 
+const getRouteRoamingChance = (region, subRegion, routeNumber) => {
+    const group = RoamingPokemonList.findGroup(region, subRegion);
+    const regionRoutes = Routes.getRoutesByRegion(region).filter(r => RoamingPokemonList.findGroup(region, r.subRegion || 0) == group);
+    const routeIndex = regionRoutes.indexOf(Routes.getRoute(region, routeNumber));
+    const maxRoute = regionRoutes.length - 1;
+    const max = GameConstants.ROAMING_MAX_CHANCE;
+    const min = GameConstants.ROAMING_MIN_CHANCE;
+    return Math.floor((max + ((min - max) * (maxRoute - routeIndex) / (maxRoute))));
+};
+
 module.exports = {
     getBreedingAttackBonus,
     calcEggSteps,
@@ -79754,6 +79764,7 @@ module.exports = {
     getAvailablePokemon,
     getAllAvailableShadowPokemon,
     battleCafeToHumanReadableString,
+    getRouteRoamingChance,
 }
 
 },{}],527:[function(require,module,exports){

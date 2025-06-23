@@ -26,13 +26,7 @@
                 <td data-bind="text: `❤️ ${Math.round(PokemonFactory.routeHealth($data.number, $data.region)).toLocaleString()}`, attr: { 'data-order': PokemonFactory.routeHealth($data.number, $data.region) }"></td>
                 <td data-bind="text: `${Math.round(PokemonFactory.routeLevel($data.number, $data.region)).toLocaleString()}`, attr: { 'data-order': PokemonFactory.routeLevel($data.number, $data.region) }"></td>
                 <td data-bind="text: +Math.sqrt(MapHelper.normalizeRoute($data?.number, $data.region)).toFixed(2)"></td>
-                <td data-bind="text: (() => {
-                    const region = $data.region;
-                    const routes = Routes.getRoutesByRegion($data.region).map(r => MapHelper.normalizeRoute(r.number, region));
-                    const routeNum = MapHelper.normalizeRoute($data?.number, region);
-                    const roamingChance = ((max, min, maxRoute, minRoute) => Math.floor(max + ( (min - max) * (maxRoute - routeNum) / (maxRoute - minRoute))))(GameConstants.ROAMING_MAX_CHANCE, GameConstants.ROAMING_MIN_CHANCE, Math.max(...routes), Math.min(...routes));
-                    return '1/' + roamingChance.toLocaleString();
-                })()"></td>
+                <td data-bind="text: `1/${Wiki.pokemon.getRouteRoamingChance($data.region, $data.subRegion ?? 0, $data.number).toLocaleString()}`"></td>
             </tr>
         </tbody>
     </table>
