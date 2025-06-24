@@ -15,7 +15,7 @@ Disables the usage of [[Items/X Attack]], [[Items/X Click]], [[Items/Lucky Egg]]
 Disables the usage of [Master Balls](#!Items/Master_Ball). You still can buy them, so you can complete the related achievements.
 
 #### No Oak Items
-Disables the usage of all [[Oak Items]]. The achievements related to leveling up these items will disappear, and the percentages will be distributed among the other general achievements. In order to get the [[Berries]] that mutate while using some Oak Items you can buy them at the Johto Berry Master in [[Towns/Goldenrod City]] once you have unlocked the Berry that evolves into them.
+Disables the usage of all [[Oak Items]]. The achievements related to leveling up these items will disappear, and the percentages will be distributed among the other general achievements. In order to get the [[Berries]] that mutate while using some Oak Items you can buy them at the Johto [Berry Master](#!Berry_Masters) in [[Towns/Goldenrod City]] once you have unlocked the Berry that evolves into them.
 
 #### No Gem Upgrades
 Disables the usage of [[Gems]] to increase damage multipliers. You can still get gems and use them to buy items such as [[Flutes]] or Pokémon.
