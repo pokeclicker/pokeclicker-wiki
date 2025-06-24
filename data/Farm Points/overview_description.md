@@ -20,7 +20,7 @@ Name | Item Cost
 [[File:Ground_Memory_Silvally.png\|25px]] [[Items/Ground Memory]] | 200,000 [[File:farmPoint.svg\|25px]] |
 
 #### Farm Items
-Farm Items purchasable at the Berry Masters.
+Farm Items purchasable at the [[Berry Masters]].
 
 Name | Starting Price | Description
 :---: | :---: | :---:
