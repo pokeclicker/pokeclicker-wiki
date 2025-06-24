@@ -1,7 +1,7 @@
 ## Acquisition
 The Shuca berry can be acquired by equipping the [[Oak Items/Sprinklotad]] while there is a [[Berries/Watmel]] berry at Taller stage or later on the farm. The Watmel berry will then have a chance to mutate into a Shuca berry.
 
-If the "No Oak Items" challenge is on, Shuca can be bought from the Johto Berry Master for 10,000 Farm Points after unlocking [[Berries/Watmel]].
+If the "No Oak Items" challenge is on, Shuca can be bought from the [Johto Berry Master](#!Berry_Masters) for 10,000 Farm Points after unlocking [[Berries/Watmel]].
 
 #### Mutations
 Shuca Berries can be used to mutate the following Berries.
