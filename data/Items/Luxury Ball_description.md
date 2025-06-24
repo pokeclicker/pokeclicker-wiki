@@ -1,1 +1,1 @@
->A Luxury Poké Ball, awards a random currency for catches
+>Awards a small amount of a random currency ([[Pokédollars]][[File:money.svg|25px]], [[Dungeon Tokens]][[File:dungeonToken.svg|25px]], [[Farm Points]][[File:farmPoint.svg|25px]], [[Quest Points]][[File:questPoint.svg|25px]], [[Battle Points]][[File:battlePoint.svg|25px]] or [[Diamonds]][[File:diamond.svg|25px]]) for successful catches.  One of the rotating trades offered by [[Towns/Goldenrod City]]'s [Berry Master](#!Berry_Masters).
