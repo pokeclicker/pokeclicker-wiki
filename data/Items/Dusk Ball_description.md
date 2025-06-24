@@ -1,1 +1,1 @@
->Increased catch rate in dungeons or at night
+>Increased catch rate in dungeons or at night.  One of the rotating [[Daily Deals]] trades offered by [[Towns/Goldenrod City]]'s [Berry Master](#!Berry_Masters).
