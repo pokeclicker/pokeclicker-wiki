@@ -1,4 +1,4 @@
-Farming Setups are specific arrangements of berries that combine [Auras](#!Berries#aura) of various Berries together.  There are many useful setups for [Breeding Pokemon faster](#!Hatchery),  [Increasing Shiny Chance](#!Shiny_Chance), accelerating berry growth, or harvesting a lot of berries to trade to [Berry Masters](#!Daily_Deals).
+Farming Setups are specific arrangements of berries that combine [Auras](#!Berries#aura) of various Berries together.  There are many useful setups for [Breeding Pokemon faster](#!Hatchery),  [Increasing Shiny Chance](#!Shiny_Chance), accelerating berry growth, or harvesting a lot of berries to trade to [[Berry Masters]] for their [[Daily Deals]].
 
 > _Aura Received is multiplicative from all eligible auras affecting a berry. If a Berry receives the aura from four aura berries each at 1.3x aura output, that Berry receives 1.3^4 = 2.8561, or ~2.86x as an aura multiplier. If a Berry receives auras from 3 berries, two at 1.3x and one at 1.2x, the berry receives 1.3^2 * 1.2x = 2.028, or ~2.03x aura output.  Not all Berry auras stack, such as Lum._
 
