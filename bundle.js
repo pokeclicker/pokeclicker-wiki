@@ -80327,6 +80327,11 @@ const searchOptions = [
     type: 'Underground Helpers',
     page: '',
   },
+  {
+    diplay: 'Berry Masters',
+    type: 'Berry Masters',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
