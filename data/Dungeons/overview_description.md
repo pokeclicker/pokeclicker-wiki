@@ -1,5 +1,4 @@
-####Jump to:
-* [Basic Information](#general)
+#### Jump to:
 * [Timer](#time)
 * [Size & Layout](#size)
 * [Visibility (Flash)](#flash)
@@ -11,7 +10,7 @@
 
 Dungeons include forests, caves, buildings, and other places that are accessible by spending [[Dungeon Tokens]], in which wild Pokémon and/or Trainers are encountered. Apart from the entrance fee, they differ from routes in that only 60 seconds are given to find and defeat a "Boss Pokémon" or "Boss Trainer", after which the dungeon is considered cleared.  There are [[Achievements]] for 10, 100, 250 and 500 clears of every Dungeon.  [[Dungeon Guides]] can be used to automatically explore dungeons for a fee.
 
-## Dungeon Basics{#basic}
+## Dungeon Basics
 Clearing Dungeons requires active play. To enter a dungeon, select it on the Town Map and either click "Start" or press the Spacebar on the keyboard. Dungeons can be navigated either by clicking on the dungeon tiles or by using the arrow keys or **WASD** keys. Only unexplored tiles adjacent to explored tiles can be accessed. Moving to unexplored tiles in dungeons can reveal one of 4 things:
 
 1. **Empty tiles** - You can simply move onto next tile without having to do anything.
