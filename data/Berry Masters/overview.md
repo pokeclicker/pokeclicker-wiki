@@ -1,4 +1,4 @@
-Berry Masters offer [[Farm]] specific information, special items, and rotating [[Daily Deals]] in exchange for specific berries.  There are five Berry Masters in the game, located in [[Towns/Cerulean City]], [[Towns/Goldenrod City]], [[Towns/Mauville City]], [[Towns/Hearthome City]] and [[Towns/Driftveil City]].   The Berry Master in Cerulean is an NPC and only offers daily hints for undiscovered berries, while the other four are shops who trade and sell items.
+Berry Masters offer [[Farm]] specific information, special items, and rotating [[Daily Deals]] in exchange for specific [[Berries]].  There are five Berry Masters in the game, located in [[Towns/Cerulean City]], [[Towns/Goldenrod City]], [[Towns/Mauville City]], [[Towns/Hearthome City]] and [[Towns/Driftveil City]].   The Berry Master in Cerulean is an NPC and only offers daily hints for undiscovered Berries, while the other four are shops who trade and sell items.
 
 ## Shops
 Item prices increase with repeat purchases and decrease by harvesting Berries on the Farm.  Price inflation/deflation is shared across all Berry Master shops, but does not apply to trades.  FP stands for [[Farm Points]].
@@ -27,7 +27,7 @@ Item prices increase with repeat purchases and decrease by harvesting Berries on
 - 2 - Requires Spelon, Pamtre, Watmel or Cornn unlocked.  Only available to players with No Oak Items [Challenge](#!Challenge_Modes) enabled.{#2}
 
 ## Trades
-See [[Daily Deals]] for currently available trades.  Visit [PokéClicker Companion](https://companion.pokeclicker.com/#!Forecast/Berry/GoldenrodCity) for forecasts and next available trade date for any specific item.  Trades always have stable prices for that day, regardless of quantity exchanged.  For trade balancing purposes, berries are divided up into generations based on ID number.  Equal odds are assigned to any given berry being selected randomly, and all players will have the same trades every day.
+See [[Daily Deals]] for currently available trades.  Visit [PokéClicker Companion](https://companion.pokeclicker.com/#!Forecast/Berry/GoldenrodCity) for forecasts and next available trade date for any specific item.  Trades always have stable prices for that day, regardless of quantity exchanged.  For trade balancing purposes, Berries are divided up into generations based on ID number.  Equal odds are assigned to any given Berry being selected randomly, and all players will have the same trades every day.
 
 - Generation 1 is Cheri #1 through Sitrus #8
 - Generation 2 is Persim #9 through Lum #20
@@ -56,7 +56,7 @@ Best source of bulk specialty [[Pokéballs]].
 | Specialty Pokeball | 1 | Dusk, Timer, Quick, Moon, & Fast Balls: x20-40 Gen1 berries, x5-15 Gen2 berries.  Luxury Ball also requires x5-10 Gen3 berries. |
 
 ### Mauville City - Hoenn
-[[Towns/Mauville City]]'s Berry Master trades can include any standard items from the Underground, excluding the special mine options.  This includes plates, shards, evolution stones, treasures and fossils.  Even currently unused evolution items like [[Items/Peat Block]] can be purchased for future use.
+[[Towns/Mauville City]]'s Berry Master trades can include any standard items from the [[Underground]], excluding the special mine options.  This includes plates, shards, evolution stones, treasures and fossils.  Even currently unused evolution items like [[Items/Peat Block]] or [[Items/Metal Alloy]] can be purchased for future use.
 | Trade Type | Quantity | Requests |
 | :--- | :---: | :--- |
 | Underground Item | 1 - 3 | x30-70 Gen3 berries, x10-30 Gen4 berries |
