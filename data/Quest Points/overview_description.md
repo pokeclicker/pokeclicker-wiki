@@ -15,7 +15,7 @@ Key | Item Cost |
 :---: | :---: |
 [[File:Dungeon_ticket.png\|25px]] [[Items/Dungeon Ticket]] | 100 [[File:questPoint.svg\|25px]] {data-sort=0} |
 [[File:Explorer_kit.png\|25px]] [[Items/Explorer Kit]] | 5,000 [[File:questPoint.svg\|25px]] {data-sort=1} |
-[[File:Explosive_Charge.png\|25px]] [[Items/Explosive Charge]] | 5,000 [[File:questPoint.svg\|25px]] test {data-sort=2} |
+[[File:Explosive_Charge.png\|25px]] [[Items/Explosive Charge]] | 5,000 [[File:questPoint.svg\|25px]] {data-sort=2} |
 [[File:Treasure_Scanner.png\|25px]] [[Items/Treasure Scanner]] | 10,000 [[File:questPoint.svg\|25px]] {data-sort=3} |
 [[File:Event_calendar.png\|25px]] [[Items/Event Calendar]] | 100,000 [[File:questPoint.svg\|25px]] {data-sort=4} |
 
@@ -62,29 +62,29 @@ Key Item | Cost
 |[[File:Mystery_egg.png\|25px]] [[Items/Mystery Egg]] | 700 [[File:questPoint.svg\|25px]]
 
 #### Shopmons
-Region | Token | Pokémon | QP Cost | Additional Cost
-:---: | :---: | :---: | :---: | :---:
-Kanto | [[File:Eevee.png\|25px]] | [[File:pokemon/133.png\|30px]] Eevee | 4,000 [[File:questPoint.svg\|25px]] | None
-Kanto | [[File:Porygon.png\|25px]] | [[File:pokemon/137.png\|30px]] Porygon | 2,000 [[File:questPoint.svg\|25px]] | None
-Kanto | [[File:Jynx.png\|25px]] | [[File:pokemon/124.png\|30px]] Jynx | 2,000 [[File:questPoint.svg\|25px]] | None
-Kanto | [[File:Mr. Mime.png\|25px]] | [[File:pokemon/122.png\|30px]] Mr. Mime | 1,000 [[File:questPoint.svg\|25px]] | None
-Kanto | [[File:Lickitung.png\|25px]] | [[File:pokemon/108.png\|30px]] Lickitung | 1,000 [[File:questPoint.svg\|25px]] | None
-Johto | [[File:Togepi.png\|25px]] | [[File:pokemon/175.png\|30px]] Togepi | 15,000 [[File:questPoint.svg\|25px]] | None
-Hoenn | [[File:Beldum.png\|25px]] | [[File:pokemon/374.png\|30px]] Beldum | 22,500 [[File:questPoint.svg\|25px]] | None
-Hoenn | [[File:Pinkan Dodrio.png\|25px]] | [[File:pokemon/85.01.png\|30px]] Pinkan Dodrio\* | 50,000 [[File:questPoint.svg\|25px]] | None
-Sinnoh | [[File:Combee.png\|25px]] | [[File:pokemon/415.png\|30px]] Combee | 6,750 [[File:questPoint.svg\|25px]] | None
-Sinnoh | [[File:Burmy (Plant).png\|25px]] | [[File:pokemon/412.png\|30px]] Burmy (Plant) | 6,750 [[File:questPoint.svg\|25px]] | None
-Sinnoh | [[File:Cherubi.png\|25px]] | [[File:pokemon/420.png\|30px]] Cherubi | 6,750 [[File:questPoint.svg\|25px]] | None
-Unova | [[File:Zorua.png\|25px]] | [[File:pokemon/570.png\|30px]] Zorua | 50,625 [[File:questPoint.svg\|25px]] | None
-Unova | [[File:Meloetta (Pirouette).png\|25px]] | [[File:pokemon/648.01.png\|30px]] Meloetta (Pirouette) | 200,000 [[File:questPoint.svg\|25px]] | None
-Kalos | [[File:Furfrou (Dandy).png\|25px]] | [[File:pokemon/676.06.png\|30px]] Furfrou (Dandy) | 250,000 [[File:questPoint.svg\|25px]] | None
-Alola | [[File:Type Null.png\|25px]] | [[File:pokemon/772.png\|30px]] Type Null | 114,000 [[File:questPoint.svg\|25px]] | None
-Alola | [[File:Poipole.png\|25px]] | [[File:pokemon/803.png\|30px]] Poipole | 90,000 [[File:questPoint.svg\|25px]] | None
-Galar | [[File:Dracozolt.png\|25px]] | [[File:pokemon/880.png\|30px]] Dracozolt | 25,000 [[File:questPoint.svg\|25px]] | 1x Fossilized Drake [[File:Fossilized Drake.png\|25px]] 1x Fossilized Bird [[File:Fossilized Bird.png\|25px]]
-Galar | [[File:Dracovish.png\|25px]] | [[File:pokemon/882.png\|30px]] Dracovish | 25,000 [[File:questPoint.svg\|25px]] | 1x Fossilized Drake [[File:Fossilized Drake.png\|25px]] 1x Fossilized Fish [[File:Fossilized Fish.png\|25px]]
-Galar | [[File:Arctozolt.png\|25px]] | [[File:pokemon/881.png\|30px]] Arctozolt | 25,000 [[File:questPoint.svg\|25px]] | 1x Fossilized Bird [[File:Fossilized Bird.png\|25px]] 1x Fossilized Dino [[File:Fossilized Dino.png\|25px]]
-Galar| [[File:Arctovish.png\|25px]] | [[File:pokemon/883.png\|30px]] Arctovish | 25,000 [[File:questPoint.svg\|25px]] | 1x Fossilized Fish [[File:Fossilized Fish.png\|25px]] 1x Fossilized Dino [[File:Fossilized Dino.png\|25px]]
-Galar | [[File:Zarude (Dada).png\|25px]] | [[File:pokemon/893.png\|30px]] Zarude (Dada) | 500,000 [[File:questPoint.svg\|25px]] | None
+Region | Token | Pokémon | QP Cost
+:---: | :---: | :---: | :---:
+Kanto | [[File:Eevee.png\|25px]] | [[File:pokemon/133.png\|30px]] Eevee | 4,000 [[File:questPoint.svg\|25px]] {data-order=4000}
+Kanto | [[File:Porygon.png\|25px]] | [[File:pokemon/137.png\|30px]] Porygon | 2,000 [[File:questPoint.svg\|25px]] {data-order=2000}
+Kanto | [[File:Jynx.png\|25px]] | [[File:pokemon/124.png\|30px]] Jynx | 2,000 [[File:questPoint.svg\|25px]] {data-order=2000}
+Kanto | [[File:Mr. Mime.png\|25px]] | [[File:pokemon/122.png\|30px]] Mr. Mime | 1,000 [[File:questPoint.svg\|25px]] {data-order=1000}
+Kanto | [[File:Lickitung.png\|25px]] | [[File:pokemon/108.png\|30px]] Lickitung | 1,000 [[File:questPoint.svg\|25px]] {data-order=1000}
+Johto | [[File:Togepi.png\|25px]] | [[File:pokemon/175.png\|30px]] Togepi | 15,000 [[File:questPoint.svg\|25px]] {data-order=15000}
+Hoenn | [[File:Beldum.png\|25px]] | [[File:pokemon/374.png\|30px]] Beldum | 22,500 [[File:questPoint.svg\|25px]] {data-order=22500}
+Hoenn | [[File:Pinkan Dodrio.png\|25px]] | [[File:pokemon/85.01.png\|30px]] Pinkan Dodrio\* | 50,000 [[File:questPoint.svg\|25px]] {data-order=50000}
+Sinnoh | [[File:Combee.png\|25px]] | [[File:pokemon/415.png\|30px]] Combee | 6,750 [[File:questPoint.svg\|25px]] {data-order=6750}
+Sinnoh | [[File:Burmy (Plant).png\|25px]] | [[File:pokemon/412.png\|30px]] Burmy (Plant) | 6,750 [[File:questPoint.svg\|25px]] {data-order=6750}
+Sinnoh | [[File:Cherubi.png\|25px]] | [[File:pokemon/420.png\|30px]] Cherubi | 6,750 [[File:questPoint.svg\|25px]] {data-order=6750}
+Unova | [[File:Zorua.png\|25px]] | [[File:pokemon/570.png\|30px]] Zorua | 50,625 [[File:questPoint.svg\|25px]] {data-order=50625}
+Unova | [[File:Meloetta (Pirouette).png\|25px]] | [[File:pokemon/648.01.png\|30px]] Meloetta (Pirouette) | 200,000 [[File:questPoint.svg\|25px]] {data-order=200000}
+Kalos | [[File:Furfrou (Dandy).png\|25px]] | [[File:pokemon/676.06.png\|30px]] Furfrou (Dandy) | 250,000 [[File:questPoint.svg\|25px]] {data-order=250000}
+Alola | [[File:Type Null.png\|25px]] | [[File:pokemon/772.png\|30px]] Type Null | 114,000 [[File:questPoint.svg\|25px]] {data-order=114000}
+Alola | [[File:Poipole.png\|25px]] | [[File:pokemon/803.png\|30px]] Poipole | 90,000 [[File:questPoint.svg\|25px]] {data-order=90000}
+Galar | [[File:Dracozolt.png\|25px]] | [[File:pokemon/880.png\|30px]] Dracozolt | 25,000 [[File:questPoint.svg\|25px]] 1x Fossilized Drake [[File:Fossilized Drake.png\|25px]] 1x Fossilized Bird [[File:Fossilized Bird.png\|25px]] {data-order=25000}
+Galar | [[File:Dracovish.png\|25px]] | [[File:pokemon/882.png\|30px]] Dracovish | 25,000 [[File:questPoint.svg\|25px]] 1x Fossilized Drake [[File:Fossilized Drake.png\|25px]] 1x Fossilized Fish [[File:Fossilized Fish.png\|25px]] {data-order=25000}
+Galar | [[File:Arctozolt.png\|25px]] | [[File:pokemon/881.png\|30px]] Arctozolt | 25,000 [[File:questPoint.svg\|25px]] 1x Fossilized Bird [[File:Fossilized Bird.png\|25px]] 1x Fossilized Dino [[File:Fossilized Dino.png\|25px]] {data-order=25000}
+Galar| [[File:Arctovish.png\|25px]] | [[File:pokemon/883.png\|30px]] Arctovish | 25,000 [[File:questPoint.svg\|25px]] 1x Fossilized Fish [[File:Fossilized Fish.png\|25px]] 1x Fossilized Dino [[File:Fossilized Dino.png\|25px]] {data-order=25000}
+Galar | [[File:Zarude (Dada).png\|25px]] | [[File:pokemon/893.png\|30px]] Zarude (Dada) | 500,000 [[File:questPoint.svg\|25px]] {data-order=500000}
 
 **\*Note**: Pinkan Dodrio is found on the Sevii Islands 4567.
 
@@ -262,12 +262,12 @@ Without using the Underground to mine stones and using typed eggs, 18,000 [[File
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
 :---: | :---: | :---: | :---:
-|[[File:Sun_stone.png\|25px]] Sun Stone | 1 | [[File:pokemon/695.png\|25px]] Heliolisk | 2,500 [[File:questPoint.svg\|25px]]
-|[[File:Linking_cord.png\|25px]] Linking Cord | 1 | [[File:pokemon/711.png\|25px]] Gourgeist | 2,500 [[File:questPoint.svg\|25px]]
-|[[File:Dusk_stone.png\|25px]] Dusk Stone | 1 | [[File:pokemon/681.png\|25px]] Aegislash | 2,500 [[File:questPoint.svg\|25px]]
-|[[File:Shiny_stone.png\|25px]] Shiny Stone | 1 **(+4 Optional)** | [[File:pokemon/671.png\|25px]] Florges (Red) [[File:pokemon/671.01.png\|25px]] Florges (Yellow)* [[File:pokemon/671.03.png\|25px]] Florges (Blue)* [[File:pokemon/671.02.png\|25px]] Florges (Orange)* [[File:pokemon/671.04.png\|25px]] Florges (White)* | 2,500 **(+10,000 Optional)** [[File:questPoint.svg\|25px]]
-|[[File:Sachet.png\|25px]] Sachet | 1 | [[File:pokemon/683.png\|25px]] Aromatisse | 2,500 [[File:questPoint.svg\|25px]]
-|[[File:Whipped_dream.png\|25px]] Whipped Dream | 1 | [[File:pokemon/685.png\|25px]] Slurpuff | 2,500 [[File:questPoint.svg\|25px]]
+|[[File:Sun_stone.png\|25px]] Sun Stone | 1 | [[File:pokemon/695.png\|25px]] Heliolisk | 2,500 [[File:questPoint.svg\|25px]] {data-order=2500}
+|[[File:Linking_cord.png\|25px]] Linking Cord | 1 | [[File:pokemon/711.png\|25px]] Gourgeist | 2,500 [[File:questPoint.svg\|25px]] {data-order=2500}
+|[[File:Dusk_stone.png\|25px]] Dusk Stone | 1 | [[File:pokemon/681.png\|25px]] Aegislash | 2,500 [[File:questPoint.svg\|25px]] {data-order=2500}
+|[[File:Shiny_stone.png\|25px]] Shiny Stone | 1 **(+4 Optional)** | [[File:pokemon/671.png\|25px]] Florges (Red) [[File:pokemon/671.01.png\|25px]] Florges (Yellow)* [[File:pokemon/671.03.png\|25px]] Florges (Blue)* [[File:pokemon/671.02.png\|25px]] Florges (Orange)* [[File:pokemon/671.04.png\|25px]] Florges (White)* | 2,500 **(+10,000 Optional)** [[File:questPoint.svg\|25px]] {data-order=2500}
+|[[File:Sachet.png\|25px]] Sachet | 1 | [[File:pokemon/683.png\|25px]] Aromatisse | 2,500 [[File:questPoint.svg\|25px]] {data-order=2500}
+|[[File:Whipped_dream.png\|25px]] Whipped Dream | 1 | [[File:pokemon/685.png\|25px]] Slurpuff | 2,500 [[File:questPoint.svg\|25px]] {data-order=2500}
 **\*Note**: Only one Florges form is required in Kalos.
 
 ##### Eggs
