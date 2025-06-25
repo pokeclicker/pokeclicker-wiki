@@ -1,10 +1,10 @@
-The **Underground** is a special location in [[Kanto]] where players can obtain various treasures. These include:
+The **Underground** is a special location in [[Regions/Kanto]] where players can obtain various treasures. These include:
 - Items that can be sold for [[Diamonds]]
 - Plates that can be sold for [[Gems]]
 - Shards, which are used for various trades
 - Fossil and Fossil Pieces, which can be revived into new Pokémon
 - Evolution Stones
-- Special Items such as [Mega Stones](/#!Mega%20Pokémon/) or an [exclusive Pikachu](/#!Pokémon/Pikachu_(Palaeontologist)).
+- Special Items such as [Mega Stones](/#!Mega%20Pokémon/) or [[Items/Palaeontologist_Token]].
 
 The Underground is unlocked upon buying the [[Key Items]] Explorer Kit on [[Towns/Cinnabar Island]] for 5,000 Quest Points [[File:questPoint.svg\|20px]].
 
