@@ -1,4 +1,4 @@
-The Farm is a location in unlocked in [[Regions/Kanto]] where Berries can be planted. Harvesting them yields Farming Points and more of the same type of Berry. Occasionally, mutations can occur when Berries are planted in certain configurations. The Farm is unlocked upon reaching [[Routes/Kanto Route 11]] and obtaining the Wailmer pail.
+The Farm is a location unlocked in [[Regions/Kanto]] where [[Berries]] can be planted. Harvesting them yields [[Farm Points]] and more of the same type of Berry. Occasionally, mutations can occur when Berries are planted in certain configurations. The Farm is unlocked upon reaching [[Routes/Kanto Route 11]] and obtaining the Wailmer Pail.
 
 Two Quests can appear involving the usage of the Farm: gain a certain number of [[Farm Points]] or harvest specific berries. These will award [[Quest Points]].
 
