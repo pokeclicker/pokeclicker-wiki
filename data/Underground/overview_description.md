@@ -9,7 +9,7 @@ The **Underground** is a special location in [[Kanto]] where players can obtain 
 The Underground is unlocked upon buying the [[Key Items]] Explorer Kit on [[Towns/Cinnabar Island]] for 5,000 Quest Points [[File:questPoint.svg\|20px]].
 
 Once you've obtained the Explorer Kit, you can enter the Underground by:
-- Clicking its location on the map on [[Routes/Kanto Route 11]]
+- Clicking its location on the map on [[Routes/Kanto Route 14]]
 - Using the [U] Shortcut or opening it via a dedicated tab on the main page. *(You can toggle these options in the settings.)*
 
 [[Underground Helpers]] are a form of automation that assist with item collection in the Underground.
