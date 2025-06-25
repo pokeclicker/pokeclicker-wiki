@@ -13,11 +13,11 @@ Quest Points can be used to purchase the following:
 #### Key Items
 Key | Item Cost
 :---: | :---:
-|[[File:Dungeon_ticket.png\|25px]] [[Items/Dungeon Ticket]] | 100 [[File:questPoint.svg\|25px]]
-|[[File:Explorer_kit.png\|25px]] [[Items/Explorer Kit]] | 5,000 [[File:questPoint.svg\|25px]]
-|[[File:Explosive_Charge.png\|25px]] [[Items/Explosive Charge]] | 5,000 [[File:questPoint.svg\|25px]] test
-|[[File:Treasure_Scanner.png\|25px]] [[Items/Treasure Scanner]] | 10,000 [[File:questPoint.svg\|25px]]
-|[[File:Event_calendar.png\|25px]] [[Items/Event Calendar]] | 100,000 [[File:questPoint.svg\|25px]]
+|[[File:Dungeon_ticket.png\|25px]] [[Items/Dungeon Ticket]] | {{nts|100}} [[File:questPoint.svg\|25px]]
+|[[File:Explorer_kit.png\|25px]] [[Items/Explorer Kit]] | {{nts|5,000}} [[File:questPoint.svg\|25px]]
+|[[File:Explosive_Charge.png\|25px]] [[Items/Explosive Charge]] | {{nts|5,000}} [[File:questPoint.svg\|25px]] test
+|[[File:Treasure_Scanner.png\|25px]] [[Items/Treasure Scanner]] | {{nts|10,000}} [[File:questPoint.svg\|25px]]
+|[[File:Event_calendar.png\|25px]] [[Items/Event Calendar]] | {{nts|100,000}} [[File:questPoint.svg\|25px]]
 
 #### Quest Items
 
