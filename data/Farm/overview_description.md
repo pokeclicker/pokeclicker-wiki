@@ -1,4 +1,4 @@
-The Farm is a location in unlocked in [[Regions/Kanto]] where Berries can be planted. Harvesting them yields Farming Points and more of the same type of Berry. Occasionally, mutations can occur when Berries are planted in certain configurations. The Farm is unlocked upon reaching [[Routes/Kanto Route 14]] and obtaining the Wailmer pail.
+The Farm is a location in unlocked in [[Regions/Kanto]] where Berries can be planted. Harvesting them yields Farming Points and more of the same type of Berry. Occasionally, mutations can occur when Berries are planted in certain configurations. The Farm is unlocked upon reaching [[Routes/Kanto Route 11]] and obtaining the Wailmer pail.
 
 Two Quests can appear involving the usage of the Farm: gain a certain number of [[Farm Points]] or harvest specific berries. These will award [[Quest Points]].
 
@@ -18,7 +18,7 @@ The farm can also produce helpful effects (external auras) such as increasing eg
 
 ### Farm Items
 
-Mulch and Berry Shovel can be bought in Goldenrod City, Mauville City, Hearthome City. Mulches can be applied to Berry plants to speed up growth (Boost Mulch), increase harvest yield (Rich Mulch), increase mutation chance (Surprise Mulch), or all the above with a slightly reduced boost for all three (Amaze Mulch). Berry Shovels can be used to clear occupied plots.
+Mulch and Berry Shovel can be bought in [[Towns/Goldenrod City]], [[Towns/Mauville City]], [[Towns/Hearthome City]]. Mulches can be applied to Berry plants to speed up growth (Boost Mulch), increase harvest yield (Rich Mulch), increase mutation chance (Surprise Mulch), or all the above with a slightly reduced boost for all three (Amaze Mulch). Berry Shovels can be used to clear occupied plots.
 
 
 
