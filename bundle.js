@@ -14101,18 +14101,75 @@ module.exports = function (opts) {
 
 const patternsConfig = require('./patterns.js');
 
+/**
+ * @typedef {import('markdown-it')} MarkdownIt
+ *
+ * @typedef {import('markdown-it/lib/rules_core/state_core.mjs').default} StateCore
+ *
+ * @typedef {import('markdown-it/lib/token.mjs').default} Token
+ *
+ * @typedef {import('markdown-it/lib/token.mjs').Nesting} Nesting
+ *
+ * @typedef {Object} Options
+ * @property {!string} leftDelimiter left delimiter, default is `{`(left curly bracket)
+ * @property {!string} rightDelimiter right delimiter, default is `}`(right curly bracket)
+ * @property {AllowedAttribute[]} allowedAttributes empty means no limit
+ *
+ * @typedef {string|RegExp} AllowedAttribute rule of allowed attribute
+ *
+ * @typedef {[string, string]} AttributePair
+ *
+ * @typedef {[number, number]} SourceLineInfo
+ *
+ * @typedef {Object} CurlyAttrsPattern
+ * @property {string} name
+ * @property {DetectingRule[]} tests
+ * @property {(tokens: Token[], i: number, j?: number) => void} transform
+ *
+ * @typedef {Object} MatchedResult
+ * @property {boolean} match true means matched
+ * @property {number?} j postion index number of Array<{@link Token}>
+ *
+ * @typedef {(str: string) => boolean} DetectingStrRule
+ *
+ * @typedef {Object} DetectingRule rule for testing {@link Token}'s properties
+ * @property {number=} shift offset index number of Array<{@link Token}>
+ * @property {number=} position fixed index number of Array<{@link Token}>
+ * @property {(string | DetectingStrRule)=} type
+ * @property {(string | DetectingStrRule)=} tag
+ * @property {DetectingRule[]=} children
+ * @property {(string | DetectingStrRule)=} content
+ * @property {(string | DetectingStrRule)=} markup
+ * @property {(string | DetectingStrRule)=} info
+ * @property {Nesting=} nesting
+ * @property {number=} level
+ * @property {boolean=} block
+ * @property {boolean=} hidden
+ * @property {AttributePair[]=} attrs
+ * @property {SourceLineInfo[]=} map
+ * @property {any=} meta
+ */
+
+/** @type {Options} */
 const defaultOptions = {
   leftDelimiter: '{',
   rightDelimiter: '}',
   allowedAttributes: []
 };
 
+/**
+ * @param {MarkdownIt} md
+ * @param {Options=} options_
+ */
 module.exports = function attributes(md, options_) {
   let options = Object.assign({}, defaultOptions);
   options = Object.assign(options, options_);
 
   const patterns = patternsConfig(options);
 
+  /**
+   * @param {StateCore} state
+   */
   function curlyAttrs(state) {
     const tokens = state.tokens;
 
@@ -14126,10 +14183,16 @@ module.exports = function attributes(md, options_) {
           return res.match;
         });
         if (match) {
-          pattern.transform(tokens, i, j);
-          if (pattern.name === 'inline attributes' || pattern.name === 'inline nesting 0') {
-            // retry, may be several inline attributes
-            p--;
+          try {
+            pattern.transform(tokens, i, j);
+            if (pattern.name === 'inline attributes' || pattern.name === 'inline nesting 0') {
+              // retry, may be several inline attributes
+              p--;
+            }
+          } catch (error) {
+            // eslint-disable-next-line no-console
+            console.error(`markdown-it-attrs: Error in pattern '${pattern.name}': ${error.message}`);
+            console.error(error.stack);
           }
         }
       }
@@ -14142,12 +14205,13 @@ module.exports = function attributes(md, options_) {
 /**
  * Test if t matches token stream.
  *
- * @param {array} tokens
+ * @param {Token[]} tokens
  * @param {number} i
- * @param {object} t Test to match.
- * @return {object} { match: true|false, j: null|number }
+ * @param {DetectingRule} t
+ * @returns {MatchedResult}
  */
 function test(tokens, i, t) {
+  /** @type {MatchedResult} */
   const res = {
     match: false,
     j: null  // position of child
@@ -14177,7 +14241,9 @@ function test(tokens, i, t) {
         return res;
       }
       let match;
+      /** @type {DetectingRule[]} */
       const childTests = t.children;
+      /** @type {Token[]} */
       const children = token.children;
       if (childTests.every(tt => tt.position !== undefined)) {
         // positions instead of shifts, do not loop all children
@@ -14240,14 +14306,19 @@ function isArrayOfFunctions(arr) {
 /**
  * Get n item of array. Supports negative n, where -1 is last
  * element in array.
- * @param {array} arr
+ * @param {Token[]} arr
  * @param {number} n
+ * @returns {Token=}
  */
 function get(arr, n) {
   return n >= 0 ? arr[n] : arr[arr.length + n];
 }
 
-// get last element of array, safe - returns {} if not found
+/**
+ * get last element of array, safe - returns {} if not found
+ * @param {DetectingRule[]} arr
+ * @returns {DetectingRule}
+ */
 function last(arr) {
   return arr.slice(-1)[0] || {};
 }
@@ -14261,6 +14332,10 @@ function last(arr) {
 
 const utils = require('./utils.js');
 
+/**
+ * @param {import('.').Options} options
+ * @returns {import('.').CurlyAttrsPattern[]}
+ */
 module.exports = options => {
   const __hr = new RegExp('^ {0,3}[-*_]{3,} ?'
                           + utils.escapeRegExp(options.leftDelimiter)
@@ -14313,6 +14388,9 @@ module.exports = options => {
           ]
         }
       ],
+      /**
+       * @param {!number} j
+       */
       transform: (tokens, i, j) => {
         const token = tokens[i].children[j];
         const endChar = token.content.indexOf(options.rightDelimiter);
@@ -14360,6 +14438,142 @@ module.exports = options => {
       }
     }, {
       /**
+       * | A | B |
+       * | -- | -- |
+       * | 1 | 2 |
+       *
+       * | C | D |
+       * | -- | -- |
+       *
+       * only `| A | B |` sets the colsnum metadata
+       */
+      name: 'tables thead metadata',
+      tests: [
+        {
+          shift: 0,
+          type: 'tr_close',
+        }, {
+          shift: 1,
+          type: 'thead_close'
+        }, {
+          shift: 2,
+          type: 'tbody_open'
+        }
+      ],
+      transform: (tokens, i) => {
+        const tr = utils.getMatchingOpeningToken(tokens, i);
+        const th = tokens[i - 1];
+        let colsnum = 0;
+        let n = i;
+        while (--n) {
+          if (tokens[n] === tr) {
+            tokens[n - 1].meta = Object.assign({}, tokens[n + 2].meta, { colsnum });
+            break;
+          }
+          colsnum += (tokens[n].level === th.level && tokens[n].type === th.type) >> 0;
+        }
+        tokens[i + 2].meta = Object.assign({}, tokens[i + 2].meta, { colsnum });
+      }
+    }, {
+      /**
+       * | A | B | C | D |
+       * | -- | -- | -- | -- |
+       * | 1 | 11 | 111 | 1111 {rowspan=3} |
+       * | 2 {colspan=2 rowspan=2} | 22 | 222 | 2222 |
+       * | 3 | 33 | 333 | 3333 |
+       */
+      name: 'tables tbody calculate',
+      tests: [
+        {
+          shift: 0,
+          type: 'tbody_close',
+          hidden: false
+        }
+      ],
+      /**
+       * @param {number} i index of the tbody ending
+       */
+      transform: (tokens, i) => {
+        /** index of the tbody beginning */
+        let idx = i - 2;
+        while (idx > 0 && 'tbody_open' !== tokens[--idx].type);
+
+        const calc = tokens[idx].meta.colsnum >> 0;
+        if (calc < 2) { return; }
+
+        const level = tokens[i].level + 2;
+        for (let n = idx; n < i; n++) {
+          if (tokens[n].level > level) { continue; }
+
+          const token = tokens[n];
+          const rows = token.hidden ? 0 : token.attrGet('rowspan') >> 0;
+          const cols = token.hidden ? 0 : token.attrGet('colspan') >> 0;
+
+          if (rows > 1) {
+            let colsnum = calc - (cols > 0 ? cols : 1);
+            for (let k = n, num = rows; k < i, num > 1; k++) {
+              if ('tr_open' == tokens[k].type) {
+                tokens[k].meta = Object.assign({}, tokens[k].meta);
+                if (tokens[k].meta && tokens[k].meta.colsnum) {
+                  colsnum -= 1;
+                }
+                tokens[k].meta.colsnum = colsnum;
+                num--;
+              }
+            }
+          }
+
+          if ('tr_open' == token.type && token.meta && token.meta.colsnum) {
+            const max = token.meta.colsnum;
+            for (let k = n, num = 0; k < i; k++) {
+              if ('td_open' == tokens[k].type) {
+                num += 1;
+              } else if ('tr_close' == tokens[k].type) {
+                break;
+              }
+              num > max && (tokens[k].hidden || hidden(tokens[k]));
+            }
+          }
+
+          if (cols > 1) {
+            /** @type {number[]} index of one row's children */
+            const one = [];
+            /** last index of the row's children */
+            let end = n + 3;
+            /** number of the row's children */
+            let num = calc;
+
+            for (let k = n; k > idx; k--) {
+              if ('tr_open' == tokens[k].type) {
+                num = tokens[k].meta && tokens[k].meta.colsnum || num;
+                break;
+              } else if ('td_open' === tokens[k].type) {
+                one.unshift(k);
+              }
+            }
+
+            for (let k = n + 2; k < i; k++) {
+              if ('tr_close' == tokens[k].type) {
+                end = k;
+                break;
+              } else if ('td_open' == tokens[k].type) {
+                one.push(k);
+              }
+            }
+
+            const off = one.indexOf(n);
+            let real = num - off;
+            real = real > cols ? cols : real;
+            cols > real && token.attrSet('colspan', real + '');
+
+            for (let k = one.slice(num + 1 - calc - real)[0]; k < end; k++) {
+              tokens[k].hidden || hidden(tokens[k]);
+            }
+          }
+        }
+      }
+    }, {
+      /**
        * *emphasis*{.with attrs=1}
        */
       name: 'inline attributes',
@@ -14379,6 +14593,9 @@ module.exports = options => {
           ]
         }
       ],
+      /**
+       * @param {!number} j
+       */
       transform: (tokens, i, j) => {
         const token = tokens[i].children[j];
         const content = token.content;
@@ -14412,6 +14629,9 @@ module.exports = options => {
           ]
         }
       ],
+      /**
+       * @param {!number} j
+       */
       transform: (tokens, i, j) => {
         const token = tokens[i].children[j];
         const content = token.content;
@@ -14482,6 +14702,9 @@ module.exports = options => {
           ]
         }
       ],
+      /**
+       * @param {!number} j
+       */
       transform: (tokens, i, j) => {
         const token = tokens[i].children[j];
         const content = token.content;
@@ -14513,6 +14736,9 @@ module.exports = options => {
           ]
         }
       ],
+      /**
+       * @param {!number} j
+       */
       transform: (tokens, i, j) => {
         const token = tokens[i].children[j];
         const attrs = utils.getAttrs(token.content, 0, options);
@@ -14574,12 +14800,15 @@ module.exports = options => {
           ]
         }
       ],
+      /**
+       * @param {!number} j
+       */
       transform: (tokens, i, j) => {
         const token = tokens[i].children[j];
         const content = token.content;
         const attrs = utils.getAttrs(content, content.lastIndexOf(options.leftDelimiter), options);
         let ii = i + 1;
-        while (tokens[ii + 1] && tokens[ii + 1].nesting === -1) { ii++; }
+        do if (tokens[ii] && tokens[ii].nesting === -1) { break; } while (ii++ < tokens.length);
         const openingToken = utils.getMatchingOpeningToken(tokens, ii);
         utils.addAttrs(attrs, openingToken);
         const trimmed = content.slice(0, content.lastIndexOf(options.leftDelimiter));
@@ -14595,12 +14824,36 @@ function last(arr) {
   return arr.slice(-1)[0];
 }
 
+/**
+ * Hidden table's cells and them inline children,
+ * specially cast inline's content as empty
+ * to prevent that escapes the table's box model
+ * @see https://github.com/markdown-it/markdown-it/issues/639
+ * @param {import('.').Token} token
+ */
+function hidden(token) {
+  token.hidden = true;
+  token.children && token.children.forEach(t => (
+    t.content = '',
+    hidden(t),
+    undefined
+  ));
+}
+
 },{"./utils.js":98}],98:[function(require,module,exports){
+/**
+ * @typedef {import('.').Token} Token
+ * @typedef {import('.').Options} Options
+ * @typedef {import('.').AttributePair} AttributePair
+ * @typedef {import('.').AllowedAttribute} AllowedAttribute
+ * @typedef {import('.').DetectingStrRule} DetectingStrRule
+ */
 /**
  * parse {.class #id key=val} strings
  * @param {string} str: string to parse
- * @param {int} start: where to start parsing (including {)
- * @returns {2d array}: [['key', 'val'], ['class', 'red']]
+ * @param {number} start: where to start parsing (including {)
+ * @param {Options} options
+ * @returns {AttributePair[]}: [['key', 'val'], ['class', 'red']]
  */
 exports.getAttrs = function (str, start, options) {
   // not tab, line feed, form feed, space, solidus, greater than sign, quotation mark, apostrophe and equals sign
@@ -14693,6 +14946,9 @@ exports.getAttrs = function (str, start, options) {
     return attrs.filter(function (attrPair) {
       const attr = attrPair[0];
 
+      /**
+       * @param {AllowedAttribute} allowedAttribute
+       */
       function isAllowedAttribute (allowedAttribute) {
         return (attr === allowedAttribute
           || (allowedAttribute instanceof RegExp && allowedAttribute.test(attr))
@@ -14709,8 +14965,8 @@ exports.getAttrs = function (str, start, options) {
 
 /**
  * add attributes from [['key', 'val']] list
- * @param {array} attrs: [['key', 'val']]
- * @param {token} token: which token to add attributes
+ * @param {AttributePair[]} attrs: [['key', 'val']]
+ * @param {Token} token: which token to add attributes
  * @returns token
  */
 exports.addAttrs = function (attrs, token) {
@@ -14734,8 +14990,9 @@ exports.addAttrs = function (attrs, token) {
  * end: 'asdf {.a}'
  * only: '{.a}'
  *
- * @param {string} where to expect {} curly. start, end or only.
- * @return {function(string)} Function which testes if string has curly.
+ * @param {'start'|'end'|'only'} where to expect {} curly. start, end or only.
+ * @param {Options} options
+ * @return {DetectingStrRule} Function which testes if string has curly.
  */
 exports.hasDelimiters = function (where, options) {
 
@@ -14754,6 +15011,9 @@ exports.hasDelimiters = function (where, options) {
       return false;
     }
 
+    /**
+     * @param {string} curly
+     */
     function validCurlyLength (curly) {
       const isClass = curly.charAt(options.leftDelimiter.length) === '.';
       const isId = curly.charAt(options.leftDelimiter.length) === '#';
@@ -14802,6 +15062,8 @@ exports.hasDelimiters = function (where, options) {
 
 /**
  * Removes last curly from string.
+ * @param {string} str
+ * @param {Options} options
  */
 exports.removeDelimiter = function (str, options) {
   const start = escapeRegExp(options.leftDelimiter);
@@ -14829,6 +15091,8 @@ exports.escapeRegExp = escapeRegExp;
 
 /**
  * find corresponding opening block
+ * @param {Token[]} tokens
+ * @param {number} i
  */
 exports.getMatchingOpeningToken = function (tokens, i) {
   if (tokens[i].type === 'softbreak') {
@@ -14864,10 +15128,18 @@ const HTML_REPLACEMENTS = {
   '"': '&quot;'
 };
 
+/**
+ * @param {string} ch
+ * @returns {string}
+ */
 function replaceUnsafeChar(ch) {
   return HTML_REPLACEMENTS[ch];
 }
 
+/**
+ * @param {string} str
+ * @returns {string}
+ */
 exports.escapeHtml = function (str) {
   if (HTML_ESCAPE_TEST_RE.test(str)) {
     return str.replace(HTML_ESCAPE_REPLACE_RE, replaceUnsafeChar);
