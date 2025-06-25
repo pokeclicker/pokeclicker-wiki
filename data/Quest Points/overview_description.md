@@ -15,7 +15,7 @@ Key | Item Cost |
 :---: | :---: |
 [[File:Dungeon_ticket.png\|25px]] [[Items/Dungeon Ticket]] | 100 [[File:questPoint.svg\|25px]] {data-sort=0} |
 [[File:Explorer_kit.png\|25px]] [[Items/Explorer Kit]] | 5,000 [[File:questPoint.svg\|25px]] {data-sort=1} |
-[[File:Explosive_Charge.png\|25px]] [[Items/Explosive Charge]] | 5,000 [[File:questPoint.svg\|25px]] test {data-sort=2} |
+[[File:Explosive_Charge.png\|25px]] [[Items/Explosive Charge]] | 5,000 [[File:questPoint.svg\|25px]] {data-sort=2} |
 [[File:Treasure_Scanner.png\|25px]] [[Items/Treasure Scanner]] | 10,000 [[File:questPoint.svg\|25px]] {data-sort=3} |
 [[File:Event_calendar.png\|25px]] [[Items/Event Calendar]] | 100,000 [[File:questPoint.svg\|25px]] {data-sort=4} |
 
