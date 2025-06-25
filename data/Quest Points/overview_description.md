@@ -11,13 +11,13 @@ $QuestExperience=100 + \frac{QPReward}{10}$
 Quest Points can be used to purchase the following:
 
 #### Key Items
-Key | Item Cost
-:---: | :---:
-|[[File:Dungeon_ticket.png\|25px]] [[Items/Dungeon Ticket]] | {data-sort=0} 100 [[File:questPoint.svg\|25px]]
-|[[File:Explorer_kit.png\|25px]] [[Items/Explorer Kit]] | {data-sort=2} 5,000 [[File:questPoint.svg\|25px]]
-|[[File:Explosive_Charge.png\|25px]] [[Items/Explosive Charge]] | {data-sort=1} 5,000 [[File:questPoint.svg\|25px]] test
-|[[File:Treasure_Scanner.png\|25px]] [[Items/Treasure Scanner]] | {data-sort=3} 10,000 [[File:questPoint.svg\|25px]]
-|[[File:Event_calendar.png\|25px]] [[Items/Event Calendar]] | {data-sort=4} 100,000 [[File:questPoint.svg\|25px]]
+Key | Item Cost |
+:---: | :---: |
+|[[File:Dungeon_ticket.png\|25px]] [[Items/Dungeon Ticket]] | 100 [[File:questPoint.svg\|25px]] {data-order=100} |
+|[[File:Explorer_kit.png\|25px]] [[Items/Explorer Kit]] | 5,000 [[File:questPoint.svg\|25px]] {data-order=5000} |
+|[[File:Explosive_Charge.png\|25px]] [[Items/Explosive Charge]] | 5,000 [[File:questPoint.svg\|25px]] test {data-order=5000} |
+|[[File:Treasure_Scanner.png\|25px]] [[Items/Treasure Scanner]] | 10,000 [[File:questPoint.svg\|25px]] {data-order=10000} |
+|[[File:Event_calendar.png\|25px]] [[Items/Event Calendar]] | 100,000 [[File:questPoint.svg\|25px]] {data-order=100000} |
 
 
 #### Quest Items
