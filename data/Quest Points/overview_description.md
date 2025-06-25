@@ -12,12 +12,12 @@ Quest Points can be used to purchase the following:
 
 #### Key Items
 Key | Item Cost |
-:---: | :---: |
-|[[File:Dungeon_ticket.png\|25px]] [[Items/Dungeon Ticket]] | 100 [[File:questPoint.svg\|25px]] {data-sort=0} |
-|[[File:Explorer_kit.png\|25px]] [[Items/Explorer Kit]] | 5,000 [[File:questPoint.svg\|25px]] {data-sort=1} |
-|[[File:Explosive_Charge.png\|25px]] [[Items/Explosive Charge]] | 5,000 [[File:questPoint.svg\|25px]] test {data-sort=2} |
-|[[File:Treasure_Scanner.png\|25px]] [[Items/Treasure Scanner]] | 10,000 [[File:questPoint.svg\|25px]] {data-sort=3} |
-|[[File:Event_calendar.png\|25px]] [[Items/Event Calendar]] | 100,000 [[File:questPoint.svg\|25px]] {data-sort=4} |
+:--- | :--- |
+[[File:Dungeon_ticket.png\|25px]] [[Items/Dungeon Ticket]] | 100 {data-sort=0} [[File:questPoint.svg\|25px]] |
+[[File:Explorer_kit.png\|25px]] [[Items/Explorer Kit]] | 5,000 {data-sort=1} [[File:questPoint.svg\|25px]] |
+[[File:Explosive_Charge.png\|25px]] [[Items/Explosive Charge]] | 5,000 {data-sort=2} [[File:questPoint.svg\|25px]] test |
+[[File:Treasure_Scanner.png\|25px]] [[Items/Treasure Scanner]] | 10,000 {data-sort=3} [[File:questPoint.svg\|25px]] |
+[[File:Event_calendar.png\|25px]] [[Items/Event Calendar]] | 100,000 {data-sort=4} [[File:questPoint.svg\|25px]] |
 
 
 #### Quest Items
