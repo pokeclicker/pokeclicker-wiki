@@ -1,4 +1,4 @@
-The Farm is a location in unlocked in [[Kanto]] where Berries can be planted. Harvesting them yields Farming Points and more of the same type of Berry. Occasionally, mutations can occur when Berries are planted in certain configurations. The Farm is unlocked upon reaching [[Kanto Route 14]] and obtaining the Wailmer pail.
+The Farm is a location in unlocked in [[Regions/Kanto]] where Berries can be planted. Harvesting them yields Farming Points and more of the same type of Berry. Occasionally, mutations can occur when Berries are planted in certain configurations. The Farm is unlocked upon reaching [[Routes/Kanto Route 14]] and obtaining the Wailmer pail.
 
 Two Quests can appear involving the usage of the Farm: gain a certain number of [[Farm Points]] or harvest specific berries. These will award [[Quest Points]].
 
@@ -12,7 +12,7 @@ Depending on the type of Berry planted, different lengths of time must pass befo
 
 When Berry plants become ripe, they will die after a set period of time if not harvested. When this happens, only 1/2 of the harvest is obtained. There is also a chance they will replant themselves, spawning a plant of the same berry in that plot. The Replant Rate can be augmented by using the Sprinklotad Oak Item.
 
-Berries can be obtained by planting obtained Berries in special configurations. The Kanto Berry Master in [[Cerulean City]] gives hints as to these configurations. The chance for mutations to occur can be augmented by the Squirtbottle Oak Item.
+Berries can be obtained by planting obtained Berries in special configurations. The Kanto Berry Master in [[Towns/Cerulean City]] gives hints as to these configurations. The chance for mutations to occur can be augmented by the Squirtbottle Oak Item.
 
 The farm can also produce helpful effects (external auras) such as increasing egg steps for faster breeding and better shiny chance. It can also attract specific Pokémon which are referred to as [[Wandering Pokémon]].
 
