@@ -459,9 +459,16 @@ const searchOptions = [
     type: 'Underground Helpers',
     page: '',
   },
+  // Berry Masters
   {
-    diplay: 'Berry Masters',
+    display: 'Berry Masters',
     type: 'Berry Masters',
+    page: '',
+  },
+  // Game Updates
+  {
+    display: 'Game Updates',
+    type: 'Game Updates',
     page: '',
   },
 ];
