@@ -79,10 +79,10 @@ Unova | [[File:Meloetta (Pirouette).png\|25px]] | [[File:pokemon/648.01.png\|30p
 Kalos | [[File:Furfrou (Dandy).png\|25px]] | [[File:pokemon/676.06.png\|30px]] Furfrou (Dandy) | 250,000 [[File:questPoint.svg\|25px]]
 Alola | [[File:Type Null.png\|25px]] | [[File:pokemon/772.png\|30px]] Type Null | 114,000 [[File:questPoint.svg\|25px]]
 Alola | [[File:Poipole.png\|25px]] | [[File:pokemon/803.png\|30px]] Poipole | 90,000 [[File:questPoint.svg\|25px]]
-Galar | [[File:Dracozolt.png\|25px]] | [[File:pokemon/880.png\|30px]] Dracozolt | 25,000 [[File:questPoint.svg\|25px]] 1x Fossilized Drake [[File:Fossilized Drake.png\|25px]] 1x Fossilized Bird [[File:Fossilized Bird.png\|25px]]
-Galar | [[File:Dracovish.png\|25px]] | [[File:pokemon/882.png\|30px]] Dracovish | 25,000 [[File:questPoint.svg\|25px]] 1x Fossilized Drake [[File:Fossilized Drake.png\|25px]] 1x Fossilized Fish [[File:Fossilized Fish.png\|25px]]
-Galar | [[File:Arctozolt.png\|25px]] | [[File:pokemon/881.png\|30px]] Arctozolt | 25,000 [[File:questPoint.svg\|25px]] 1x Fossilized Bird [[File:Fossilized Bird.png\|25px]] 1x Fossilized Dino [[File:Fossilized Dino.png\|25px]]
-Galar| [[File:Arctovish.png\|25px]] | [[File:pokemon/883.png\|30px]] Arctovish | 25,000 [[File:questPoint.svg\|25px]] 1x Fossilized Fish [[File:Fossilized Fish.png\|25px]] 1x Fossilized Dino [[File:Fossilized Dino.png\|25px]]
+Galar | [[File:Dracozolt.png\|25px]] | [[File:pokemon/880.png\|30px]] Dracozolt | 25,000 [[File:questPoint.svg\|25px]] 1 [[File:Fossilized Drake.png\|25px]] 1 [[File:Fossilized Bird.png\|25px]]
+Galar | [[File:Dracovish.png\|25px]] | [[File:pokemon/882.png\|30px]] Dracovish | 25,000 [[File:questPoint.svg\|25px]] 1 [[File:Fossilized Drake.png\|25px]] 1 [[File:Fossilized Fish.png\|25px]]
+Galar | [[File:Arctozolt.png\|25px]] | [[File:pokemon/881.png\|30px]] Arctozolt | 25,000 [[File:questPoint.svg\|25px]] 1 [[File:Fossilized Bird.png\|25px]] 1 [[File:Fossilized Dino.png\|25px]]
+Galar| [[File:Arctovish.png\|25px]] | [[File:pokemon/883.png\|30px]] Arctovish | 25,000 [[File:questPoint.svg\|25px]] 1 [[File:Fossilized Fish.png\|25px]] 1 [[File:Fossilized Dino.png\|25px]]
 Galar | [[File:Zarude (Dada).png\|25px]] | [[File:pokemon/893.png\|30px]] Zarude (Dada) | 500,000 [[File:questPoint.svg\|25px]]
 
 **\*Note**: Pinkan Dodrio is found on the Sevii Islands 4567.
