@@ -1,4 +1,4 @@
-The Farm is a location in Kanto where Berries can be planted. Harvesting them yields Farming Points and more of the same type of Berry. Occasionally, mutations can occur when Berries are planted in certain configurations. The Farm is unlocked upon reaching Kanto Route 14 and obtaining the Wailmer pail.
+The Farm is a location in Kanto where Berries can be planted. Harvesting them yields Farming Points and more of the same type of Berry. Occasionally, mutations can occur when Berries are planted in certain configurations. The Farm is unlocked upon reaching Kanto Route 6 and obtaining the Wailmer pail.
 
 Two Quests can appear involving the usage of the Farm: gain a certain number of [[Farm Points]] or harvest specific berries. These will award [[Quest Points]].
 
