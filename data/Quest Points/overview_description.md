@@ -61,29 +61,29 @@ Key Item | Cost
 |[[File:Mystery_egg.png\|25px]] [[Items/Mystery Egg]] | 700 [[File:questPoint.svg\|25px]]
 
 #### Shopmons
-Region | Token | Pokémon | Cost
-:---: | :---: | :---: | :---:
-Kanto | [[File:Eevee.png\|25px]] | [[File:pokemon/133.png\|30px]] Eevee | 4,000 [[File:questPoint.svg\|25px]]
-Kanto | [[File:Porygon.png\|25px]] | [[File:pokemon/137.png\|30px]] Porygon | 2,000 [[File:questPoint.svg\|25px]]
-Kanto | [[File:Jynx.png\|25px]] | [[File:pokemon/124.png\|30px]] Jynx | 2,000 [[File:questPoint.svg\|25px]]
-Kanto | [[File:Mr. Mime.png\|25px]] | [[File:pokemon/122.png\|30px]] Mr. Mime | 1,000 [[File:questPoint.svg\|25px]]
-Kanto | [[File:Lickitung.png\|25px]] | [[File:pokemon/108.png\|30px]] Lickitung | 1,000 [[File:questPoint.svg\|25px]]
-Johto | [[File:Togepi.png\|25px]] | [[File:pokemon/175.png\|30px]] Togepi | 15,000 [[File:questPoint.svg\|25px]]
-Hoenn | [[File:Beldum.png\|25px]] | [[File:pokemon/374.png\|30px]] Beldum | 22,500 [[File:questPoint.svg\|25px]]
-Hoenn | [[File:Pinkan Dodrio.png\|25px]] | [[File:pokemon/85.01.png\|30px]] Pinkan Dodrio\* | 50,000 [[File:questPoint.svg\|25px]]
-Sinnoh | [[File:Combee.png\|25px]] | [[File:pokemon/415.png\|30px]] Combee | 6,750 [[File:questPoint.svg\|25px]]
-Sinnoh | [[File:Burmy (Plant).png\|25px]] | [[File:pokemon/412.png\|30px]] Burmy (Plant) | 6,750 [[File:questPoint.svg\|25px]]
-Sinnoh | [[File:Cherubi.png\|25px]] | [[File:pokemon/420.png\|30px]] Cherubi | 6,750 [[File:questPoint.svg\|25px]]
-Unova | [[File:Zorua.png\|25px]] | [[File:pokemon/570.png\|30px]] Zorua | 50,625 [[File:questPoint.svg\|25px]]
-Unova | [[File:Meloetta (Pirouette).png\|25px]] | [[File:pokemon/648.01.png\|30px]] Meloetta (Pirouette) | 200,000 [[File:questPoint.svg\|25px]]
-Kalos | [[File:Furfrou (Dandy).png\|25px]] | [[File:pokemon/676.06.png\|30px]] Furfrou (Dandy) | 250,000 [[File:questPoint.svg\|25px]]
-Alola | [[File:Type Null.png\|25px]] | [[File:pokemon/772.png\|30px]] Type Null | 114,000 [[File:questPoint.svg\|25px]]
-Alola | [[File:Poipole.png\|25px]] | [[File:pokemon/803.png\|30px]] Poipole | 90,000 [[File:questPoint.svg\|25px]]
-Galar | [[File:Dracozolt.png\|25px]] | [[File:pokemon/880.png\|30px]] Dracozolt | 25,000 [[File:questPoint.svg\|25px]] 1x Fossilized Drake [[File:Fossilized Drake.png\|25px]] 1x Fossilized Bird [[File:Fossilized Bird.png\|25px]]
-Galar | [[File:Dracovish.png\|25px]] | [[File:pokemon/882.png\|30px]] Dracovish | 25,000 [[File:questPoint.svg\|25px]] 1x Fossilized Drake [[File:Fossilized Drake.png\|25px]] 1x Fossilized Fish [[File:Fossilized Fish.png\|25px]]
-Galar | [[File:Arctozolt.png\|25px]] | [[File:pokemon/881.png\|30px]] Arctozolt | 25,000 [[File:questPoint.svg\|25px]] 1x Fossilized Bird [[File:Fossilized Bird.png\|25px]] 1x Fossilized Dino [[File:Fossilized Dino.png\|25px]]
-Galar| [[File:Arctovish.png\|25px]] | [[File:pokemon/883.png\|30px]] Arctovish | 25,000 [[File:questPoint.svg\|25px]] 1x Fossilized Fish [[File:Fossilized Fish.png\|25px]] 1x Fossilized Dino [[File:Fossilized Dino.png\|25px]]
-Galar | [[File:Zarude (Dada).png\|25px]] | [[File:pokemon/893.png\|30px]] Zarude (Dada) | 500,000 [[File:questPoint.svg\|25px]]
+Region | Token | Pokémon | QP Cost | Additional Cost
+:---: | :---: | :---: | :---: | :---:
+Kanto | [[File:Eevee.png\|25px]] | [[File:pokemon/133.png\|30px]] Eevee | 4,000 [[File:questPoint.svg\|25px]] |
+Kanto | [[File:Porygon.png\|25px]] | [[File:pokemon/137.png\|30px]] Porygon | 2,000 [[File:questPoint.svg\|25px]] |
+Kanto | [[File:Jynx.png\|25px]] | [[File:pokemon/124.png\|30px]] Jynx | 2,000 [[File:questPoint.svg\|25px]] |
+Kanto | [[File:Mr. Mime.png\|25px]] | [[File:pokemon/122.png\|30px]] Mr. Mime | 1,000 [[File:questPoint.svg\|25px]] |
+Kanto | [[File:Lickitung.png\|25px]] | [[File:pokemon/108.png\|30px]] Lickitung | 1,000 [[File:questPoint.svg\|25px]] |
+Johto | [[File:Togepi.png\|25px]] | [[File:pokemon/175.png\|30px]] Togepi | 15,000 [[File:questPoint.svg\|25px]] |
+Hoenn | [[File:Beldum.png\|25px]] | [[File:pokemon/374.png\|30px]] Beldum | 22,500 [[File:questPoint.svg\|25px]] |
+Hoenn | [[File:Pinkan Dodrio.png\|25px]] | [[File:pokemon/85.01.png\|30px]] Pinkan Dodrio\* | 50,000 [[File:questPoint.svg\|25px]] |
+Sinnoh | [[File:Combee.png\|25px]] | [[File:pokemon/415.png\|30px]] Combee | 6,750 [[File:questPoint.svg\|25px]] |
+Sinnoh | [[File:Burmy (Plant).png\|25px]] | [[File:pokemon/412.png\|30px]] Burmy (Plant) | 6,750 [[File:questPoint.svg\|25px]] |
+Sinnoh | [[File:Cherubi.png\|25px]] | [[File:pokemon/420.png\|30px]] Cherubi | 6,750 [[File:questPoint.svg\|25px]] |
+Unova | [[File:Zorua.png\|25px]] | [[File:pokemon/570.png\|30px]] Zorua | 50,625 [[File:questPoint.svg\|25px]] |
+Unova | [[File:Meloetta (Pirouette).png\|25px]] | [[File:pokemon/648.01.png\|30px]] Meloetta (Pirouette) | 200,000 [[File:questPoint.svg\|25px]] |
+Kalos | [[File:Furfrou (Dandy).png\|25px]] | [[File:pokemon/676.06.png\|30px]] Furfrou (Dandy) | 250,000 [[File:questPoint.svg\|25px]] |
+Alola | [[File:Type Null.png\|25px]] | [[File:pokemon/772.png\|30px]] Type Null | 114,000 [[File:questPoint.svg\|25px]] |
+Alola | [[File:Poipole.png\|25px]] | [[File:pokemon/803.png\|30px]] Poipole | 90,000 [[File:questPoint.svg\|25px]] |
+Galar | [[File:Dracozolt.png\|25px]] | [[File:pokemon/880.png\|30px]] Dracozolt | 25,000 [[File:questPoint.svg\|25px]] | 1x Fossilized Drake [[File:Fossilized Drake.png\|25px]] 1x Fossilized Bird [[File:Fossilized Bird.png\|25px]]
+Galar | [[File:Dracovish.png\|25px]] | [[File:pokemon/882.png\|30px]] Dracovish | 25,000 [[File:questPoint.svg\|25px]] | 1x Fossilized Drake [[File:Fossilized Drake.png\|25px]] 1x Fossilized Fish [[File:Fossilized Fish.png\|25px]]
+Galar | [[File:Arctozolt.png\|25px]] | [[File:pokemon/881.png\|30px]] Arctozolt | 25,000 [[File:questPoint.svg\|25px]] | 1x Fossilized Bird [[File:Fossilized Bird.png\|25px]] 1x Fossilized Dino [[File:Fossilized Dino.png\|25px]]
+Galar| [[File:Arctovish.png\|25px]] | [[File:pokemon/883.png\|30px]] Arctovish | 25,000 [[File:questPoint.svg\|25px]] | 1x Fossilized Fish [[File:Fossilized Fish.png\|25px]] 1x Fossilized Dino [[File:Fossilized Dino.png\|25px]]
+Galar | [[File:Zarude (Dada).png\|25px]] | [[File:pokemon/893.png\|30px]] Zarude (Dada) | 500,000 [[File:questPoint.svg\|25px]] |
 
 **\*Note**: Pinkan Dodrio is found on the Sevii Islands 4567.
 
