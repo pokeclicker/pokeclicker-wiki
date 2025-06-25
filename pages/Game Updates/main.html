@@ -1,0 +1,51 @@
+<div>
+    <!-- ko ifnot: ChangelogItems.find(c => c.version === Wiki.pageName()) -->
+    <h3>Update not found...</h3>
+    <!-- /ko -->
+    <!-- ko with: ChangelogItems.find(c => c.version === Wiki.pageName()) -->
+    <p>Release Date: <span data-bind="text: $data.description.match(/\-(?=[^-]*$)(.+)<\/code>/)?.[1]?.trim()"></span></p>
+    <div class="accordion mb-3">
+        <div class="accordion-item">
+            <h4 class="accordion-header">
+                <button data-bs-target="#sectionCollapse" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                    In-game Changelog
+                </button>
+            </h4>
+            <div id="sectionCollapse" class="accordion-collapse collapse">
+                <div class="accordion-body" data-bind="with: (() => {
+                    const startIndex = ChangelogItems.findIndex(c => c.version === Wiki.pageName()) + 1;
+                    const endIndex = ChangelogItems.findIndex((c, i) => i >= startIndex && c.version !== undefined);
+                    return ChangelogItems.slice(startIndex, endIndex);
+                })()">
+                    <div data-bind="with: $data.filter(c => c.type.label === 'NEW')">
+                    <!-- ko if: $data.length -->
+                        <h4>New</h4>
+                        <ul data-bind="foreach: $data">
+                            <li data-bind="text: $data.description"></li>
+                        </ul>
+                    <!-- /ko -->
+                    </div>
+                    
+                    <div data-bind="with: $data.filter(c => c.type.label === 'CHANGE')">
+                    <!-- ko if: $data.length -->
+                        <h4>Changes</h4>
+                        <ul data-bind="foreach: $data">
+                            <li data-bind="text: $data.description"></li>
+                        </ul>
+                    <!-- /ko -->
+                    </div>
+
+                    <div data-bind="with: $data.filter(c => c.type.label === 'FIXED')">
+                    <!-- ko if: $data.length -->
+                        <h4>Fixed</h4>
+                        <ul data-bind="foreach: $data">
+                            <li data-bind="text: $data.description"></li>
+                        </ul>
+                    <!-- /ko -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
