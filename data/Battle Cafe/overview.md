@@ -45,7 +45,6 @@ Outlined below are all of the possible combinations of Battle Café settings and
 
 **Sweet Type**  | **Time**  | **Spin Duration** | **Direction**     | **Pokémon**
 :---:           | :---:     | :---:     | :---:             | :---:
-Any             | Any       | 3600      | Any               | [[Pokemon/Milcery (Cheesy)]]
 Strawberry      | Day       | 1-4       | Clockwise         | [[Pokemon/Alcremie (Strawberry Vanilla)]]
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Strawberry Ruby Cream)]]
 ^^              | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Strawberry Caramel)]]
@@ -109,3 +108,4 @@ Ribbon          | Day       | 1-4       | Clockwise         | [[Pokemon/Alcremie
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Ribbon Salted)]]
 ^^              | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Ribbon Lemon)]]
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Ribbon Mint)]]
+Any             | Any       | 3600      | Any               | [[Pokemon/Milcery (Cheesy)]]
