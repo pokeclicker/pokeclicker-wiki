@@ -11,4 +11,4 @@ $$ \text{Total Price} =  \text{Round}\Bigg(\text{Item Price} \times \frac{1-1.00
 
 The total price is then divided by 1.0005 each time you defeat a Pokémon, down to the Item's base price.
 
-$$ \text{New Reduced Price} =  \frac{\text{Item Price}}{1.0005} $$
+$$ \text{New Reduced Price} =  \frac{\text{Item Price}}{1.00045} $$
