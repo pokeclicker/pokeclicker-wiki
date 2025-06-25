@@ -21,7 +21,7 @@
                     <!-- ko if: $data.length -->
                         <h4>New</h4>
                         <ul data-bind="foreach: $data">
-                            <li data-bind="text: $data.description"></li>
+                            <li data-bind="html: $data.description"></li>
                         </ul>
                     <!-- /ko -->
                     </div>
@@ -30,7 +30,7 @@
                     <!-- ko if: $data.length -->
                         <h4>Changes</h4>
                         <ul data-bind="foreach: $data">
-                            <li data-bind="text: $data.description"></li>
+                            <li data-bind="html: $data.description"></li>
                         </ul>
                     <!-- /ko -->
                     </div>
@@ -39,7 +39,7 @@
                     <!-- ko if: $data.length -->
                         <h4>Fixed</h4>
                         <ul data-bind="foreach: $data">
-                            <li data-bind="text: $data.description"></li>
+                            <li data-bind="html: $data.description"></li>
                         </ul>
                     <!-- /ko -->
                     </div>
