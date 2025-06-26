@@ -3,7 +3,26 @@
     <h3>Update not found...</h3>
     <!-- /ko -->
     <!-- ko with: ChangelogItems.find(c => c.version === Wiki.pageName()) -->
-    <p>Release Date: <span data-bind="text: $data.description.match(/\-(?=[^-]*$)(.+)<\/code>/)?.[1]?.trim()"></span></p>
+    <div class="d-flex mb-3">
+        <div>Release Date: <span data-bind="text: $data.description.match(/\-(?=[^-]*$)(.+)<\/code>/)?.[1]?.trim()"></span></div>
+        <div class="ms-auto">
+            <div class="d-flex" style="gap: 20px;" data-bind="with: (() => {
+                const index = ChangelogItems.findIndex(c => c.version === Wiki.pageName());
+                return {
+                    previous: ChangelogItems.find((c, i) => i > index && c.version !== undefined)?.version,
+                    next: ChangelogItems.findLast((c, i) => i < index && c.version !== undefined)?.version,
+                }
+            })()">
+                <!-- ko if: $data.previous -->
+                <a href="#" class="text-decoration-none" data-bind="text: `← ${$data.previous}`, attr: { href: `/#!Game_Updates/${$data.previous}` }"></a>
+                <!-- /ko -->
+                <!-- ko if: $data.next -->
+                <a href="#" class="text-decoration-none" data-bind="text: `${$data.next} →`, attr: { href: `/#!Game_Updates/${$data.next}` }"></a>
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+
     <div class="accordion mb-3">
         <div class="accordion-item">
             <h4 class="accordion-header">
