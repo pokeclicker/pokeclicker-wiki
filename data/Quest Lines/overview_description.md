@@ -2,7 +2,7 @@ Quest Lines are a special type of Quest that requires the player to follow a ser
 
 ## Bulletin Boards
 Bulletin boards are located in **starting towns** and offer optional quest lines that the player can choose to accept.
-Region | City | N° of possible quests
+Region | City | Number of possible quests
 ---: | :--- | :---
 **Kanto (Main)** | Pallet Town | 2
 **Kanto (Sevii 4567)** | Pummelo Island | 1
