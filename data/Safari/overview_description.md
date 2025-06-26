@@ -76,7 +76,9 @@ $Catch Chance = (\frac{CatchRate}{6}) + Magic Ball + (Multiplier * 10)$
 
 Where **CatchRate** is the Pokémon's base catch rate.
 
-This is further modified by the effect of rocks (Angry status) and berries (Eating status). If **Eating** status:
+This is further modified by the effect of rocks (Angry status) and berries (Eating status).
+
+If **Eating** status:
 
 $Catch Chance = \frac{Catch Chance}{2 - Multiplier}$
 
