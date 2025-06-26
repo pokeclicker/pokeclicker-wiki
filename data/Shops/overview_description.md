@@ -4,7 +4,7 @@ The prices shown in the tables below reflect the base prices of each item. When 
 
 
 
-If you are buying more than 100 items the price increases as follows
+The price increases as follows
 
 $$ \text{Total Price} =  \text{Round}\Bigg(\text{Item Price} \times \frac{1-1.00045^{\text{Number of Items}}}{1-1.00045}\Bigg) $$
 
