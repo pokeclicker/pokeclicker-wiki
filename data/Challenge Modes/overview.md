@@ -9,7 +9,7 @@ Requires a complete regional Pokédex before moving on to the next [Region](#!Re
 Disables the ability to use [click attacks](#!Click_Attack). You still can click in the very first battle of the game.
 
 #### No Battle Items
-Disables the usage of [[Items/X Attack]], [[Items/X Click]], [[Items/Lucky Egg]], [[Items/Token Collector]], [[Items/Dowsing Machine]], and [[Items/Lucky Incense]]. You can still buy or find these items even if you can't use them.
+Disables the usage of [[Items/X Attack]], [[Items/X Click]], [[Items/Lucky Egg]], [[Items/Token Collector]], [[Items/Dowsing Machine]], and [[Items/Lucky Incense]]. You can still buy or find these items even if you can't use them. Despite this restriction on the usage of battle items, [[Flutes]] are still able to be used and provide their +0.5% attack buff.
 
 #### No Master Balls
 Disables the usage of [Master Balls](#!Items/Master_Ball). You still can buy them, so you can complete the related achievements.
