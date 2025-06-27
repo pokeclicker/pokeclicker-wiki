@@ -43,7 +43,7 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
 | [[File:Mago.png\|32px]] [[Berries/Mago]]      | `Planted First` | | |
 | [[File:Pinap.png\|32px]] [[Berries/Pinap]]    | 00:04:00      | 00:02:40                              | 00:01:46                                |
-| `or` | | ||
+| `or` | | | |
 | [[File:Aspear.png\|32px]] [[Berries/Aspear]]  | `Planted First` | | |
 | [[File:Pecha.png\|32px]] [[Berries/Pecha]]    | 00:01:00      | 00:00:40                              | 00:00:26                                |
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]]    | 00:00:30      | 00:00:20                              | 00:00:13                                 |
