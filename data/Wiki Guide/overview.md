@@ -34,7 +34,7 @@ Row | lorem | ipsum
 ---
 
 ### Farm table: {#farm_table}
-This makes a farm layout with soil in each cell.  A berry can be placed with ```[[File:Cheri.png\|32px]][[Berries/Cheri]]```, change Cheri to whatever species is desired. If there is nothing betweeen pipes ```|``` an empty plot will be rendered.  Plots can be colored to represent different Mulches with {.mutation}, {.boost}, {.rich} {.freeze}, {.amaze}, or  {.gooey}, which should be appended after all the other data in the cell.  Use five rows of fives cells if representing the full [[Farm]].
+This makes a farm layout with soil in each cell.  A berry can be placed with ```[[File:Cheri.png\|32px]][[Berries/Cheri]]```, change Cheri to whatever species is desired. If there is a space betweeen pipes ```|``` an empty plot will be rendered.  Plots can be colored to represent different Mulches with {.mutation}, {.boost}, {.rich} {.freeze}, {.amaze}, or  {.gooey}, which should be appended after all the other data in the cell.  Use five rows of fives cells if representing the full [[Farm]].
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]]{.gooey} | {.rich} | {.freeze}| {.amaze} | | |
