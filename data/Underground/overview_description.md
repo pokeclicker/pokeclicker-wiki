@@ -73,7 +73,7 @@ Each tool has an individual durability gauge that determines how many times it c
 
 
 ## Trading
-You can trade treasures within the same category—such as Plates, Fossils, or Shards—with each other. However, Diamond treasures are excluded from trading. Trade 3 items of one type for 1 item of the desired type in the same category.
+You can trade treasures within the same category —such as Plates, Fossils, or Shards— with each other at an exchange rate of 3:1.  Example: 3 Draco Plates can be traded for 1 Pixie Plate, 3 Dome Fossils for 1 Old Amber, etc. Diamond treasures cannot be traded, only sold for [[Diamonds]].  Plates can also be echanged for [[Gems]], at the rate of 1 plate per 100 Gems of the same type only.  To trade, open the Underground window, go to the Treasures tab, and click on the item to be exchanged.
 
 ## Experience and Leveling
 
