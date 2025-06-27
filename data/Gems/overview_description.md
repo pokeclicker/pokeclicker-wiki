@@ -1,20 +1,24 @@
-Gems are an item dropped when defeating any kind of Pokémon once the player has the Gem Case unlocked after defeat Giovanni Gym in Viridian City
+Gems are a resource dropped when defeating any kind of Pokémon once the player has the Gem Case [[File:Gem_case.png|25px]] unlocked, after defeating [Giovanni's Gym](#!Towns/Viridian_City) in Viridian City.
 
-[[File:Gem_case.png]]
+Gems can be invested into the Gems tab to permanently increase the Attack power of all Pokémon of their type. They can also be used to purchase and run flutes.
 
-These typed Gems can be invested into the Gems tab to increase type effectivity, and your damage output. They can also be used to purchase and use flutes.
+## Obtaining
+
+The Gems you get from defeating a Pokémon depend on the type(s) that Pokémon has. Wild Pokémon on routes give 2 Gems for monotypes and 1 Gem of each for dual types. [[Dungeons]] (both wild Pokémon and trainers) give 3x, Gym Pokémon give 5x, and Dungeon Bosses (only Pokémon, not trainer bosses) give 20x. [[Battle Frontier]] Pokémon give a variable number of Gems that increases with progression. Every 80 stages the number goes up by 1.
+
+Gems can also be bought by exchanging Plates mined from the [[Underground]], at a rate of 100 gems per Plate of the same type.
 
 ## Upgrades
 
-The gems allows you to increase the damage effectivity of all your types from the base multiple to +1x as indicated in the table below:
+Spent Gems boost the Attack of Pokémon matching their type based on the table below.
 
-Effectivity | Base Multiplier | Maxed multiplier {.no-data-tables}
+Effectiveness | Base Multiplier | Maxed multiplier {.no-data-tables}
 :--- | :---: | ---:
 Immune | 0.0x | 1.0x
 Not very | 0.5x | 1.5x
 Neutral | 1.0x | 2.0x
 Very | 2.0x | 3.0x
-*Note: It is recommended to start improving immune*
+*Note: It is recommended to start improving immune, or whichever category most types fall into based on type matchups.*
 
 This +1x is divided in 10 upgrade levels of +0.1x with increasing price:
 
@@ -32,6 +36,3 @@ Level | Gems Price {.no-data-tables}
 10 | 5,000
 **Total** | **27,500**
 
-## Helpful Tips
-
-The Gems you get from defeating a Pokémon depend on the type(s) that Pokémon has. Wild Pokémon on routes give 1 Gem per type, dungeon encounters (both wild Pokémon and trainers) give 3, gym Pokémon give 5, and dungeon bosses (only Pokémon, not trainer bosses) give 20. Battle Frontier Pokémon give gems which number increases as the player progresses further (every 80 stages the number goes up by 1). Pokémon with just one type give twice as many gems.
