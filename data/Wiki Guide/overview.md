@@ -16,19 +16,19 @@
 ---
 
 ### Basic table: {#tables}
-
+Empty cells can be inserted by leaving a space between column separators `|`.  Empty cells on the end of a row need a closing separator or the cell won't inherit the table's formatting.
 Title | center-aligned | right-aligned
 :--- | :---: | ---:
 Row | lorem | ipsum
-1 | 2 | 3
-4 | 500 | 600
+1 |  | 3
+4 | 500 | |
 
 ```
 Title | center-aligned | right-aligned
 :--- | :---: | ---:
 Row | lorem | ipsum
-1 | 2 | 3
-4 | 500 | 600
+1 |  | 3
+4 | 500 | |
 ```
 
 ---
