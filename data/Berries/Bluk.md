@@ -25,7 +25,7 @@ Bluk has a chance of mutating when [[Berries/Chesto]] and [[Berries/Leppa]] are 
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Leppa.png\|32px]] [[Berries/Leppa]]    | `Planted First` |||
+| [[File:Leppa.png\|32px]] [[Berries/Leppa]]    | `Planted First` | | |
 | [[File:Chesto.png\|32px]] [[Berries/Chesto]]  | 00:00:40      | 00:00:26                              | 00:00:17                                 |
 
 #### Mutations

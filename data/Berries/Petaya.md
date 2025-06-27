@@ -83,7 +83,7 @@ In total 1,006 (or 1,258 counting the optional 2 last berries) Freeze Mulches ar
 All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times
 | Berry | Planting Time with No Modifier | Planting Time with Mulch or Sprayduck | Planting Time with  Mulch & Sprayduck |
 |:---:|:---:|:---:|:---:|
-| [[File:Haban.png\|32px]] [[Berries/Haban]] | `Planted First` |||
+| [[File:Haban.png\|32px]] [[Berries/Haban]] | `Planted First` | | |
 | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | 20:00:00 | 14:00:00 | 10:00:00 |
 | [[File:Yache.png\|32px]] [[Berries/Yache]] | 12:00:00 | 08:00:00 | 05:20:00 |
 | [[File:Shuca.png\|32px]] [[Berries/Shuca]] | 11:03:35 |	07:22:24 |	04:54:56 |
@@ -114,7 +114,7 @@ When [[Berries/Wacan]] dies, harvest and replant [[Berries/Chilan]], [[Berries/T
 All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times
 | Berry | Planting Time with No Modifier|  Planting Time with Mulch | Planting Time with Mulch & Sprayduck|
 |:---:|:---:|:---:|:---:|
-| [[File:Chilan.png\|32px]] [[Berries/Chilan]] | `Planted First` |||
+| [[File:Chilan.png\|32px]] [[Berries/Chilan]] | `Planted First` | | |
 | [[File:Tanga.png\|32px]] [[Berries/Tanga]] | 01:03:35 | 00:42:24 | 00:28:16 |
 | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | 00:33:35 |  00:22:24 | 00:14:56 |
 

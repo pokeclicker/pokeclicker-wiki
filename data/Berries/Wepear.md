@@ -25,7 +25,7 @@ Wepear has a chance of mutating when [[Berries/Rawst]] and [[Berries/Oran]] are 
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Oran.png\|32px]] [[Berries/Oran]]  | `Planted First` |||
+| [[File:Oran.png\|32px]] [[Berries/Oran]]  | `Planted First` | | |
 | [[File:Rawst.png\|32px]] [[Berries/Rawst]]    | 00:01:20      | 00:00:53                              | 00:00:35                                 |
 
 ### Acquisition

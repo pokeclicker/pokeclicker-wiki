@@ -25,7 +25,7 @@ Pomeg has a chance of mutating when [[Berries/Mago]] and [[Berries/Iapapa]] are 
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Iapapa.png\|32px]] [[Berries/Iapapa]]  | `Planted First` |||
+| [[File:Iapapa.png\|32px]] [[Berries/Iapapa]]  | `Planted First` | | |
 | [[File:Mago.png\|32px]] [[Berries/Mago]]      | 00:06:10      | 00:04:07                              | 00:02:44                                 |
 
 #### Mutations

@@ -27,7 +27,7 @@ Lum has a chance of mutating when all Generation 1 Berries (#1 Cheri to #8 Sitru
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Sitrus.png\|32px]] [[Berries/Sitrus]]  | `Planted First` |||
+| [[File:Sitrus.png\|32px]] [[Berries/Sitrus]]  | `Planted First` | | |
 | [[File:Oran.png\|32px]] [[Berries/Oran]]      | 00:05:00      | 00:03:20                              | 00:02:13                                 |
 | [[File:Leppa.png\|32px]] [[Berries/Leppa]]    | 00:04:00      | 00:02:40                              | 00:01:46                                 |
 | [[File:Aspear.png\|32px]] [[Berries/Aspear]]  | 00:02:00      | 00:01:20                              | 00:00:53                                 |

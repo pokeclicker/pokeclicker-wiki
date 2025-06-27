@@ -28,6 +28,6 @@ Alternatively, you can use [[Berries/Kebia]] to get better mutation chances. Be 
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Salac.png\|32px]] [[Berries/Salac]]    | `Planted First` |||
+| [[File:Salac.png\|32px]] [[Berries/Salac]]    | `Planted First` | | |
 | [[File:Petaya.png\|32px]] [[Berries/Petaya]]  | 24:00:00      | 16:00:00                              | 10:40:00                              |
 If you use Kebia, plant it anytime after Petaya.

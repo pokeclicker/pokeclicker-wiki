@@ -25,7 +25,7 @@ Magost has a chance of mutating when [[Berries/Pecha]], [[Berries/Nanab]], and [
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Mago.png\|32px]] [[Berries/Mago]]      | `Planted First` |||
+| [[File:Mago.png\|32px]] [[Berries/Mago]]      | `Planted First` | | |
 | [[File:Nanab.png\|32px]] [[Berries/Nanab]]    | 00:04:10      | 00:02:47                              | 00:01:51                                |
 | [[File:Pecha.png\|32px]] [[Berries/Pecha]]    | 00:01:00      | 00:00:40                              | 00:00:26                                 |
 
