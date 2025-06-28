@@ -1,33 +1,50 @@
-The **Underground** is a special location in [[Regions/Kanto]] where players can obtain various treasures. These include:
+Jump to:
+* [Mines](#mine)
+* [Discovery Time](#discovery)
+* [Tools](#tool)
+* [Trading](#trade)
+* [Helpers](#!Underground_Helpers)
+* [Levelling](#level)
+* [Upgrades](#upgrade)
+
+The **Underground** is a special location in [[Regions/Kanto]] where players can mine for various treasures. These include:
 - Items that can be sold for [[Diamonds]]
 - Plates that can be sold for [[Gems]]
 - Shards, which are used for various trades
 - Fossil and Fossil Pieces, which can be revived into new Pokémon
-- Evolution Stones
-- Special Items such as [Mega Stones](/#!Mega%20Pokémon/) or [[Items/Palaeontologist_Token]].
+- Evolution Stones for evolving certain Pokémon
+- Special Items such as [Mega Stones](/#!Mega%20Pokémon/) or [[Items/Palaeontologist_Token]]
 
-The Underground is unlocked upon buying the [[Key Items]] Explorer Kit on [[Towns/Cinnabar Island]] for 5,000 Quest Points [[File:questPoint.svg\|20px]].
+The Underground is unlocked upon buying the [Explorer Kit](#!Key_Items) in [[Towns/Cinnabar Island]] for 5,000 Quest Points [[File:questPoint.svg\|20px]].
 
 Once you've obtained the Explorer Kit, you can enter the Underground by:
 - Clicking its location on the map on [[Routes/Kanto Route 14]]
-- Using the [U] Shortcut or opening it via a dedicated tab on the main page. *(You can toggle these options in the settings.)*
+- Using the [U] Shortcut
+- Opening it via a dedicated tab on the main page. *(You can toggle these options in the settings.)*
 
-[[Underground Helpers]] are a form of automation that assist with item collection in the Underground.
-There are three [[Oak Items]] that provide beneficial effects while exploring the Underground.
+[[Underground Helpers]] are a form of automation that assist with item collection in the Underground.  There are three [[Oak Items]] that provide beneficial effects while exploring the Underground - [[Oak Items/Cell Battery]], [[Oak Items/Treasure Scanner]] and [[Oak Items/Explosive Charge]].
 
-## Mines
+## Mines{#mine}
 
 The Underground features six different mine types, each corresponding to a specific treasure type—except for Special Items, which are handled differently. Additionally, there is a Random Mine that offers a mix of items from the other mine types.
+
+- Random Mine: Contains all possible items except those from a Special mine
+- Diamond Mine: Contains only treasures sellable for [[Diamonds]]
+- Gem Plate Mine: Contains only gem plate treasures sellable for gems
+- Shard Mine: Contains only shard treasures
+- Fossil Mine: Contains only Fossils and fossil pieces
+- Evolution Item Mine: Contains only Evolution items
+
 Players have two options when starting a new mine:
+- if "Find mine" is On, the game automatically searches for the same type of mine as the one just cleared. *This does not skip the discovery time.*
+- Select a mine: Any of the six mine types may be chosen.  Random never has any discovery time, while the others do.
 
-- Search for a specific mine: Select a desired treasure type.
-- Automatically find a mine of the last completed type. *This does not skip the discovery time.*
+#### Special Mines{#special}
+When the player - not a helper- discovers a mine, there is a 4% chance for it to become a Special Mine.  Special Mines contain exactly one item which can be an eligible [Mega Stones](/#!Mega%20Pokémon/) or other items such as [[Items/Palaeontologist Token]].  It's possible to get back-to-back Special Mines, though rare.  Helpers have their normal percentage chance to keep items dug up from Special Mines if they collect it.
 
-When the player - not a helper- is searching for a mine, there is a 4% chance for it to become a Special Mine
+### Discovery Time{#discovery}
 
-### Discovery Time
-
-The time required to discover a new mine depends on several factors, primarily the Underground Level.
+The time required to discover a new mine depends on several factors, primarily the Underground Level.  While waiting for a mine to be found, "Find mine" can be used again to change to a different type but this will reset the discovery time.
 
 - Searching for a non-random mine:
 	- Base discovery time: 15 minutes
@@ -54,7 +71,7 @@ Maximum:
 - Increases at levels: 6, 12, 18, 24, 30
 - Maximum: 8.
 
-## Tools
+## Tools{#tool}
 
 There are four different tools available for use in the mines. Each tool serves a distinct purpose and operates independently of the others.
 
@@ -71,11 +88,13 @@ Each tool has an individual durability gauge that determines how many times it c
 | [[File:Bomb.png]] Bomb | Mines 2 layers on each of 10 random tiles (including cleared). The number of tiles can be increased by equipping the [[Oak_Items/Explosive_Charge]] Oak Item. | 20 seconds | 2% | 18% |
 | [[File:Survey.png]] Survey| Indicates a 9x9 grid where at least one tile contains an item. The grid shrinks by two tiles in each direction every 15 levels. | 900 seconds | 100% | 100% |
 
+## Helpers
+[[Underground Helpers]] can be hired from the Helpers tab in the Underground interface.  They do not charge for their services, but instead keep a percentage of the items they find, with the rest going into the player's Treasures.  Each of the five Helpers has a thematically linked favorite mine and performance statistics.
 
-## Trading
+## Trading{#trade}
 You can trade treasures within the same category —such as Plates, Fossils, or Shards— with each other at an exchange rate of 3:1.  Example: 3 Draco Plates can be traded for 1 Pixie Plate, 3 Dome Fossils for 1 Old Amber, etc. Diamond treasures cannot be traded, only sold for [[Diamonds]].  Plates can also be echanged for [[Gems]], at the rate of 1 plate per 100 Gems of the same type only.  To trade, open the Underground window, go to the Treasures tab, and click on the item to be exchanged.
 
-## Experience and Leveling
+## Experience and Leveling{#level}
 
 Both the player and the Underground Helper (if hired) gain experience while mining.
 
@@ -86,7 +105,7 @@ Both the player and the Underground Helper (if hired) gain experience while mini
 
 $$\text{TotalExp}(\text{level}) = \left\lceil 2000 \cdot \left(1.15^{\text{level}} - 1 \right) \right\rceil$$
 
-### Upgrades to the Underground
+### Upgrades to the Underground{#upgrade}
 
 As your Underground Level increases, several gameplay elements improve. The system starts at Level 0 and evolves through progression up to Level 60, beyond which no further upgrades are applied.
 Upgradeable Stats
