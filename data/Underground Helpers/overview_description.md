@@ -1,13 +1,11 @@
-Underground Helpers are people that can be hired to work on your [[Underground]].
-All helpers are available from the start and don't need unlocking.
-Once hired, an Underground Helper will continue working until they are fired.
+Underground Helpers are people that can be hired to work on your [[Underground]]. All helpers are available from the start and don't need unlocking. Once hired, an Underground Helper will continue working until they are fired.
 
 ## Usage
-Helpers perform actions at set time intervals and become more efficient as they level up. Each helper comes equipped with their own tools, so their actions are independent of the player's tool durability. Helpers can be configured to automatically sell all treasures they find—this applies only to Diamon Treasures and Plates.
+Helpers perform actions at set time intervals and become more efficient as they level up. Each helper comes equipped with their own tools, so their actions are independent of the player's tool durability. Helpers can be configured to automatically sell all treasures they find—this applies only to [Diamond Treasures](#!Diamonds) and Plates.  Helpers are affected by passive Underground related Oak Items, namely [[Oak Items/Explosive Charge]] and [[Oak Items/Treasure Scanner]].  If a Helper keeps a reward multiplied by Treasure Scanner, they will keep all copies.  While Helpers are free to use, they keep a percentage of all items they mine up as payment instead.  This only happens if they clear the last tile covering an item.
 
-## Stats 
-Underground Helpers have four main stats that improve as they level up:
-Stat | Description | Base Value | Bonus per Level | Max Value |
+## Stats
+Underground Helpers have four main stats that improve as they level up.  While there is no maximum level for Helpers, they stop improving at Lv. 50.
+Stat | Description | Base Value | Level Up | Maxed |
 :--- | :--- | :--- | :--- | :---
 Smart tool use | The chance a helper will use the correct use for any given situation | 50% | +2.5% | 100%|
 Reward retention | When a helper digs up a treasure there is a chance they will keep the item for themself. | 60% | -1% | 10% |
@@ -17,19 +15,21 @@ Discover Chance | The chance a helper finds their favorite mine when searching |
 Each helper's level directly enhances these stats.
 Stats improve individually and per helper.
 
-### Favorite Mine 
-Although all helpers begin with the same base stats, each one has a favorite mine type.
+### Favorite Mine
+Although all helpers begin with the same base stats, each one has a favorite mine type.  Favorite mines can only be discovered when the Helper collects the last treasure of the previous level.  If the setting is disabled, the helper will simply discover a random mine.  The
 
-If the "Favor mine type" setting is enabled: 
-- After completing a mine, the helper will attempt to find their favorite mine. 
+If the "Look for favorite" setting is enabled:
+- After completing a mine, the helper will attempt to find their favorite mine.
 - If unsuccessful, they will find one of the six other mine types at random.
+- If successful, there will be a delay based on the player's mining level equal to 15 minutes -30 seconds per player level beyond 20.  At player Lv.50 or above favorite mines are discovered instantly.
+- Helpers can never discover [Special mines](#!Underground/#special).
 
-If the setting is disabled, the helper will simply discover a random mine.
+
 
 ### Experience
 Helpers gain experience alongside the player:
 - Digging up a treasure will grant 25 Experience.
-- Completing a mine will grant an additional 100 experience. 
+- Completing a mine will grant an additional 100 experience.
 - The non-active party (player or helper) receives 25% of the XP gained by the active one. Hiring a helper does not reduce the experience earned by the player.
 
 $$\text{TotalXP}(\text{level}) = \left\lfloor \sum_{i=0}^{\text{level} - 1} \left( i + 300 \cdot 2^{\frac{i}{7}} \right) \right\rfloor$$
