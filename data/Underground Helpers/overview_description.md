@@ -16,7 +16,7 @@ Each helper's level directly enhances these stats.
 Stats improve individually and per helper.
 
 ### Favorite Mine
-Although all helpers begin with the same base stats, each one has a favorite mine type.  Favorite mines can only be discovered when the Helper collects the last treasure of the previous level.  If the setting is disabled, the helper will simply discover a random mine.  The
+Although all helpers begin with the same base stats, each one has a favorite mine type.  Favorite mines can only be discovered when the Helper collects the last treasure of the previous level.  If the setting is disabled, the helper will simply discover a random mine.  The chance for successfully finding the Helper's favorite mine type increases with their level, up to a guaranteed 100% at Lv. 50.
 
 If the "Look for favorite" setting is enabled:
 - After completing a mine, the helper will attempt to find their favorite mine.
