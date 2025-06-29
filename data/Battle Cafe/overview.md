@@ -46,66 +46,122 @@ Outlined below are all of the possible combinations of Battle Café settings and
 **Sweet Type**  | **Time**  | **Spin Duration** | **Direction**     | **Pokémon**
 :---:           | :---:     | :---:     | :---:             | :---:
 Strawberry      | Day       | 1-4       | Clockwise         | [[Pokemon/Alcremie (Strawberry Vanilla)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Strawberry Ruby Cream)]]
-^^              | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Strawberry Caramel)]]
-^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Strawberry Ruby Swirl)]]
+^^              | ^^        | ^^ | ^^ |
+^^              | ^^        | 5 + | Clockwise | [[Pokemon/Alcremie (Strawberry Caramel)]]
+^^              | ^^        | ^^ | ^^ |
+^^              | ^^        | ^^ | Counterclockwise  | [[Pokemon/Alcremie (Strawberry Ruby Swirl)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | Dusk      | 11+       | Counterclockwise  | [[Pokemon/Alcremie (Strawberry Rainbow)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | Night     | 1-4       | Clockwise         | [[Pokemon/Alcremie (Strawberry Matcha)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Strawberry Salted)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Strawberry Lemon)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Strawberry Mint)]]
 Love            | Day       | 1-4       | Clockwise         | [[Pokemon/Alcremie (Love Vanilla)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Love Ruby Cream)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Love Caramel)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Love Ruby Swirl)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | Dusk      | 11+       | Counterclockwise  | [[Pokemon/Alcremie (Love Rainbow)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | Night     | 1-4       | Clockwise         | [[Pokemon/Alcremie (Love Matcha)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Love Salted)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Love Lemon)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Love Mint)]]
 Berry           | Day       | 1-4       | Clockwise         | [[Pokemon/Alcremie (Berry Vanilla)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Berry Ruby Cream)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Berry Caramel)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Berry Ruby Swirl)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | Dusk      | 11+       | Counterclockwise  | [[Pokemon/Alcremie (Berry Rainbow)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | Night     | 1-4       | Clockwise         | [[Pokemon/Alcremie (Berry Matcha)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Berry Salted)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Berry Lemon)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Berry Mint)]]
 Clover          | Day       | 1-4       | Clockwise         | [[Pokemon/Alcremie (Clover Vanilla)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Clover Ruby Cream)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Clover Caramel)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Clover Ruby Swirl)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | Dusk      | 11+       | Counterclockwise  | [[Pokemon/Alcremie (Clover Rainbow)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | Night     | 1-4       | Clockwise         | [[Pokemon/Alcremie (Clover Matcha)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Clover Salted)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Clover Lemon)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Clover Mint)]]
 Flower          | Day       | 1-4       | Clockwise         | [[Pokemon/Alcremie (Flower Vanilla)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Flower Ruby Cream)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Flower Caramel)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Flower Ruby Swirl)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | Dusk      | 11+       | Counterclockwise  | [[Pokemon/Alcremie (Flower Rainbow)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | Night     | 1-4       | Clockwise         | [[Pokemon/Alcremie (Flower Matcha)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Flower Salted)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Flower Lemon)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Flower Mint)]]
 Star            | Day       | 1-4       | Clockwise         | [[Pokemon/Alcremie (Star Vanilla)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Star Ruby Cream)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Star Caramel)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Star Ruby Swirl)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | Dusk      | 11+       | Counterclockwise  | [[Pokemon/Alcremie (Star Rainbow)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | Night     | 1-4       | Clockwise         | [[Pokemon/Alcremie (Star Matcha)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Star Salted)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Star Lemon)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Star Mint)]]
 Ribbon          | Day       | 1-4       | Clockwise         | [[Pokemon/Alcremie (Ribbon Vanilla)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Ribbon Ruby Cream)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Ribbon Caramel)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Ribbon Ruby Swirl)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | Dusk      | 11+       | Counterclockwise  | [[Pokemon/Alcremie (Ribbon Rainbow)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | Night     | 1-4       | Clockwise         | [[Pokemon/Alcremie (Ribbon Matcha)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Ribbon Salted)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | 5+        | Clockwise         | [[Pokemon/Alcremie (Ribbon Lemon)]]
+^^              | ^^        | ^^ | ^^ |
 ^^              | ^^        | ^^        | Counterclockwise  | [[Pokemon/Alcremie (Ribbon Mint)]]
 Any             | Any       | 3600      | Any               | [[Pokemon/Milcery (Cheesy)]]
