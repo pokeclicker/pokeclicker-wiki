@@ -1,0 +1,1 @@
+This Berry contains a substance that generates heat. It can even heat up a chilly heart. Growing these Berries will promote Egg hatching.
