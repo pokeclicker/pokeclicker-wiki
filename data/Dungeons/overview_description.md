@@ -122,9 +122,9 @@ Highest Region Reached	| Debuffed Region(s) {.no-data-tables}
 Kanto | N/A
 Johto | N/A
 Hoenn | N/A
-Sinnoh | Kanto, Sevii123 (except Ruby Path)
+Sinnoh | Kanto, Sevii123 (except [[Dungeons/Ruby Path]])
 Unova | Johto
-Kalos | Hoenn, Orre1, Sevii4567 + Ruby Path
+Kalos | Hoenn (except [[Dungeons/Near Space]]), Orre1, Sevii4567 + Ruby Path
 Alola | Sinnoh
 Galar | Unova, Orre2
 
