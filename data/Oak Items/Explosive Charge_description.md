@@ -1,1 +1,1 @@
-While equipped, the Explosive Charge increases the number of tiles the Bomb tool can target, up to ten extra based on its level.  This works for both the player and any Underground Helpers currently mining Treasures.
+While equipped, the Explosive Charge increases the number of tiles the [[Underground]]'s Bomb tool can target, up to ten extra based on its level.  This works for both the player and any [[Underground Helpers]] currently mining treasures.
