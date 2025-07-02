@@ -55,7 +55,30 @@
                 <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.__proto__.constructor.name + ': ' + $data.buttonText, 
                 attr: { href: `#!Gyms/${$data.town}` }"></a>
             <!-- /ko -->
-            <!-- ko ifnot: $data.__proto__.constructor.name == "Gym" -->
+            <!-- ko if: $data.__proto__.constructor.name == "MoveToDungeon" -->
+                <a class="badge text-bg-secondary" href="#!" data-bind="text: GameConstants.camelCaseToString($data.__proto__.constructor.name.replace('MoveTo', '') + ':' + $data.text()), 
+                attr: { href: `#!Dungeons/${$data.text()}` }"></a>
+            <!-- /ko -->
+            <!-- ko if: $data.__proto__.constructor.name == "TemporaryBattle" -->
+                <a class="badge text-bg-secondary" href="#!" data-bind="text: GameConstants.camelCaseToString($data.__proto__.constructor.name) + ': ' + $data.text(), 
+                attr: { href: `#!Temporary_Battles/${$data.name}` }"></a>
+            <!-- /ko -->
+            <!-- ko if: $data.__proto__.constructor.name == "MoveToTown" -->
+                <span class="badge text-bg-secondary" data-bind="text: GameConstants.camelCaseToString($data.__proto__.constructor.name.replace('Town', '') + ':' + $data.text())"></span>
+            <!-- /ko -->
+            <!-- ko if: $data.__proto__.constructor.name == "BattleFrontierTownContent" -->
+                <a class="badge text-bg-secondary" href="#!" data-bind="text: GameConstants.camelCaseToString($data.__proto__.constructor.name.replace('TownContent', '')), 
+                attr: { href: `#!Battle_Frontier` }"></a>
+            <!-- /ko -->
+            <!-- ko if: $data.__proto__.constructor.name == "DreamOrbTownContent" -->
+                <a class="badge text-bg-secondary" href="#!" data-bind="text: GameConstants.camelCaseToString($data.__proto__.constructor.name.replace('TownContent', '')), 
+                attr: { href: `#!Dream_Orbs` }"></a>
+            <!-- /ko -->
+            <!-- ko if: $data.__proto__.constructor.name == "BattleCafe" -->
+                <a class="badge text-bg-secondary" href="#!" data-bind="text: GameConstants.camelCaseToString($data.__proto__.constructor.name), 
+                attr: { href: `#!Battle_Cafe` }"></a>
+            <!-- /ko -->
+            <!-- ko ifnot: ["Gym", "MoveToDungeon", "TemporaryBattle", "MoveToTown", "BattleFrontierTownContent", "DreamOrbTownContent", "BattleCafe"].includes($data.__proto__.constructor.name) -->
                 <span class="badge text-bg-secondary" data-bind="text: GameConstants.camelCaseToString($data.__proto__.constructor.name.replace(/(MoveTo|TownContent|Temporary)/, ''))"></span>
             <!-- /ko -->
         </div>
