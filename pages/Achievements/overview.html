@@ -44,7 +44,7 @@
             <th>Bonus</th>
         </tr>
     </thead>
-    <tbody data-bind="foreach: AchievementHandler.achievementList.filter(a => a.achievable())">
+    <tbody data-bind="foreach: AchievementHandler.achievementList.filter(a => a.achievable() && a.category.name != 'secret')">
         <tr class="align-middle">
             <td data-bind="text: $index() + 1"></td>
             <td data-bind="text: name"></td>
