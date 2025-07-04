@@ -73,11 +73,14 @@ Maximum:
 
 ## Tools{#tool}
 
-There are four different tools available for use in the mines. Each tool serves a distinct purpose and operates independently of the others.
+There are five different tools available for use in the mines. Each tool serves a distinct purpose and operates independently of the others.
+
+### Discharge Battery
+The Battery is a special tool that charges based on actions taken in the Mine.  Each second that a tool is used by a player or Helper, the Battery will gain one charge.  Discharging the Battery removes a large number of tiles in the mine based on a randomly chosen pattern determined by the Cell Battery's level when used.  Equipping the [[Oak Item/Cell Battery]] cuts the number of charges needed from 60 to 30.
 
 ### Durability
 
-Each tool has an individual durability gauge that determines how many times it can be used before needing to recharge. Tools consume durability at different rates depending on their power or area of effect. Tools regenerate durability over time, and the repair rate improves as your Underground Level increases. When your Underground Level reaches 20, the repair rate becomes 0 seconds, they can be used without limits.
+The Chisel, Hammer, Bomb and Survey tools each have an individual durability gauge that determines how many times it can be used before needing to recharge. Tools consume durability at different rates depending on their power or area of effect. They regenerate durability over time, and the repair rate improves as your Underground Level increases. When your Underground Level reaches 20, the repair rate becomes 0 seconds for Chisel, Hammer and Bomb so they can be used without limits.  Survey and Discharge always have recharge time, regardless of level.
 
 
 ### Tool Overview
