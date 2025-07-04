@@ -11,7 +11,9 @@
         ko with: (() => {
             const categories = AchievementHandler.getAchievementCategories().filter(c => (GameConstants.Region[c.name] || 0) <= GameConstants.MAX_AVAILABLE_REGION);
             const globalIndex = categories.findIndex(c => c.name == 'global');
-            categories.unshift(categories.splice(globalIndex, 1)[0]);
+            categories.unshift(...categories.splice(globalIndex, 1));
+            const secretIndex = categories.findIndex(c => c.name == 'secret');
+            categories.push(...categories.splice(secretIndex, 1));
             return categories;
         })()
     -->
