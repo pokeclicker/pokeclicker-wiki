@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain [[Pokémon/Omanyte]]
+It can be exchanged for [[Pokémon/Omanyte]] at the Cinnabar Lab in [[Towns/Cinnabar Island]].
