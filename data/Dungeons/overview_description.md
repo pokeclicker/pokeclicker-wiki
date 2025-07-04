@@ -106,7 +106,7 @@ Mimics are Pokémon encounters that look identical to loot chests, but when open
 Mimic Exclusive:
 @[[Pokemon/Snorlax (Snowman)]], @[[Pokemon/Pikachu (Partner Cap)]], @[[Pokemon/Pinkan Pikachu]], @[[Pokemon/Spiky-eared Pichu]], @[[Pokemon/Flowering Celebi]], @[[Pokemon/Darmanitan (Zen)]], @[[Pokemon/Galarian Darmanitan (Zen)]]
 
-### Loot multiplication
+### Loot multiplication{#bonusLoot}
 
 Each time a chest is picked, there is a chance of getting the looted item multiple times. The odds depend on the loot tier, and increase by 50% when [[Items/Dowsing Machine]] is equipped. That translates to this table:
 
