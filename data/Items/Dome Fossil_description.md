@@ -1,1 +1,1 @@
-1 can be exchanged for [[Pokémon/Kabuto]] or 10 for [[Pokémon/Kabutops]]   at the Cinnabar Lab in [[Towns/Cinnabar Island]].
+1 can be exchanged for [[Pokémon/Kabuto]] or 10 for [[Pokémon/Kabutops]] at the Cinnabar Lab in [[Towns/Cinnabar Island]].
