@@ -1,14 +1,15 @@
 ### Can be purchased in the following towns:
 @[[Towns/Mauville City]]
 ## Leveling Strategy
-The most efficient way to gain experience for the Sprinklotad is to equip the fully-leveled Sprayduck and surround 4 Kasib berries with Cheri berries in the following way. Keep replanting Cheri as they wither while either shoveling or harvesting extra Kasib that may sprout.
+Each mulch last the same amount of time so its cheapest to buy only [[Items/Boost Mulch]] to get to level 5 . Each cost only 50 [[File:farmPoint.svg\|25px]] for a total of 59,100 [[File:farmPoint.svg\|25px]] to get to level 5, cheaper then if using other mulches. Having more then 1 farm plots mulched at the same time does increase the speed at which the Sprinklotad gains levels so evenly distribute the mulch over all 25 plots to reduce the time it takes to level it up.
 
-**Farm**
-::: table-mutations
-| :----: | :----: | :----: | :----: | :----: |
-| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
-| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Kasib.png\|32px]] [[Berries/Kasib]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Kasib.png\|32px]] [[Berries/Kasib]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
-| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
-| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Kasib.png\|32px]] [[Berries/Kasib]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Kasib.png\|32px]] [[Berries/Kasib]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
-| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
-:::
+Level | Number of Boost Mulches needed | Price (assuming you only buy at base price) |
+:---: | :---: | :---:
+1 | 80 | 4,000 [[File:farmPoint.svg\|25px]]
+2 | 72 | 3,600 [[File:farmPoint.svg\|25px]]
+3 | 194 | 9,700 [[File:farmPoint.svg\|25px]]
+4 | 295 | 14,750 [[File:farmPoint.svg\|25px]]
+5 | 541 | 27,050 [[File:farmPoint.svg\|25px]]
+Total|1182| 59,100 [[File:farmPoint.svg\|25px]]
+
+Number of mulches is rounded per level so the final total is greater then the number needed if you level the Sprinklotad from 0 to 5 in one sitting which is 1179 instead.
