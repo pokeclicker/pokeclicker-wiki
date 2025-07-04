@@ -19,6 +19,13 @@ Name | Item Cost
 :---: | :---: | :---: | :---:
 [[File:Ground_Memory_Silvally.png\|25px]] [[Items/Ground Memory]] | 200,000 [[File:farmPoint.svg\|25px]] |
 
+#### Held Items
+
+Name | Item Cost
+:---: | :---: | :---: | :---:
+[[File:Gracidea.png\|25px]] [[Items/Gracidea]] | 200,000 [[File:farmPoint.svg\|25px]] |
+
+
 #### Farm Items
 Farm Items purchasable at the [[Berry Masters]].
 
