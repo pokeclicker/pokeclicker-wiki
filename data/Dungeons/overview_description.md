@@ -108,7 +108,7 @@ Mimic Exclusive:
 
 ### Loot multiplication{#bonusLoot}
 
-Each time a chest is picked, there is a chance of getting the looted item multiple times. The odds depend on the loot tier, and increase by 50% when [[Items/Dowsing Machine]] is equipped. That translates to this table:
+Each time a chest is picked, there is a chance of getting the looted item multiple times. The odds depend on the loot tier, and increase by 50% when [[Items/Dowsing Machine]] is equipped.  The final bonus amount of items looted and chance of triggering depends on both the region of the dungeon and the tier of the looted item.
 
 Tier | Base Chance | With Dowsing Machine
 --- | --- | ---
