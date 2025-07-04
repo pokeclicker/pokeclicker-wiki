@@ -1,1 +1,1 @@
-It can be exchanged for [[Pokémon/Omanyte]] at the Cinnabar Lab in [[Towns/Cinnabar Island]].
+1 can be exchanged for [[Pokémon/Omanyte]] or 10 [[Pokémon/Omastar]] for  at the Cinnabar Lab in [[Towns/Cinnabar Island]].
