@@ -77,11 +77,6 @@ Number of Clears | Flash layout {.no-data-tables}
 
 When a number of chests equal to a third of the dungeon's size rounded down are opened (for example, 2 chests in a 6x6 dungeon), all chest tiles are revealed. When a number of chests equal to half the dungeon's size rounded up are opened, the entire dungeon is revealed. However, each chest opened will also increase the HP of all encounters in the dungeon by 20%.
 
-### Dowsing Machine
-
-The [[Items/Dowsing Machine]] Battle Item gives a chance of multiplying loot from Dungeons while active. The bonus amount of items looted and chance of triggering depends on both the region of the dungeon and the tier of the looted item. Dowsing Machines are very inexpensive and should always be active while looting chests, if available.
-
-
 ### Tier
 
 Dungeon chest loot is classified as belonging to a specific Tier of loot in a Dungeon. The Tier of a loot-able item indicates the Rarity of obtaining that item from a Chest.
@@ -105,11 +100,38 @@ Tier | 0 clears | 100 clears | 250 clears | 500 clears | Debuffed {.no-data-tabl
 
 **Example 2:** Mt. Moon has Greatball, Small Restore and Star Piece as 3 of its 5 lootable items from Dungeon chests. All 3 items are in the Mythic tier, but the Greatball Has Weight 2 while the Small Restore and Star Piece have the base weight of 1. This means the Greatball will be twice as likely to be dropped as the other 2 items. In other words, on average when an item looted from Mt. Moon is from the Mythic Tier, 50% of the time it will be a Greatball, 25% of the time it will be a Small Restore, 25% of the time it will be a Star Piece.
 
-#### Mimics{#mimic}
+### Mimics{#mimic}
 Mimics are Pokémon encounters that look identical to loot chests, but when opened result in a fight instead.  Mimics can be captured like any other wild Pokémon and some species are exclusively found as chest mimcs.  Mimics will **not** be displayed on the Dungeon location summary card until encountered at least once.
 
 Mimic Exclusive:
 @[[Pokemon/Snorlax (Snowman)]], @[[Pokemon/Pikachu (Partner Cap)]], @[[Pokemon/Pinkan Pikachu]], @[[Pokemon/Spiky-eared Pichu]], @[[Pokemon/Flowering Celebi]], @[[Pokemon/Darmanitan (Zen)]], @[[Pokemon/Galarian Darmanitan (Zen)]]
+
+### Loot multiplication
+
+Each time a chest is picked, there is a chance of getting the looted item multiple times. The odds depend on the loot tier, and increase by 50% when [[Items/Dowsing Machine]] is equipped. That translates to this table:
+
+Tier | Base Chance | With Dowsing Machine
+--- | --- | ---
+|Common | 41.7% | 62.5%
+|Rare | 33.3% | 50%
+|Epic | 25% | 37.5%
+|Legendary | 16.7% | 25%
+|Mythic | 8.3% | 12.5%
+
+The number of items one obtains depends on both the Tier of said loot-able item and the Region of the Dungeon the player is in. The Common Tier yields more items, while the Mythic Tier yields fewer. On the other hand, the higher the Region, the more items will be obtained. The formula is:
+
+**Item Yield** = BaseAmount * (1 + Max(1, Round(Max(Tier, 2) / 8 * (Region + 1))))
+
+The **Tier** variable takes a value from 4 (Common) to 0 (Mythic) and **Region** takes a value from 0 (Kanto) to the highest available Region, 7 (Galar).
+**BaseAmount** is how many of the item is to be yielded before multiplication, usually 1. This translates to the following table:
+
+Tier | Kanto Yield | Johto Yield | Hoenn Yield | Sinnoh Yield | Unova Yield | Kalos Yield | Alola Yield | Galar Yield
+--- | --- | --- | --- | --- | --- | --- | --- | --- |
+|Common |2 Items |2 Items |3 Items |3 Items |4 Items |4 Items |5 Items |5 Items
+|Rare |2 Items |2 Items |2 Items |3 Items |3 Items |3 Items |4 Items |4 Items
+|Epic |2 Items |2 Items |2 Items |2 Items |2 Items |3 Items |3 Items |3 Items
+|Legendary |2 Items |2 Items |2 Items |2 Items |2 Items |3 Items |3 Items |3 Items
+|Mythic |2 Items |2 Items |2 Items |2 Items |2 Items |3 Items |3 Items |3 Items
 
 ### Dungeon Loot Regional Debuff{#debuff}
 
