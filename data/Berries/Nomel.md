@@ -7,19 +7,26 @@ Nomel has a chance of mutating when [[Berries/Pinap]] is touching an empty plot.
 **Base Formation**
 ::: table-mutations
 | :----: | :----: |
-| {.mutation} | {.mutation} | |
+|[[File:Wepear.png\|32px]] [[Berries/Wepear]]| {.mutation} | |
 | {.mutation} | [[File:Pinap.png\|32px]] [[Berries/Pinap]] | |
 :::
 
 **Optimized Formation**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| {.mutation} | {.mutation} | {.mutation} | {.mutation} | {.mutation} | |
+| [[File:Wepear.png\|32px]] [[Berries/Wepear]] | {.mutation} | {.mutation} | [[File:Wepear.png\|32px]] [[Berries/Wepear]] | {.mutation} | |
 | {.mutation} | [[File:Pinap.png\|32px]] [[Berries/Pinap]] | {.mutation} | {.mutation} | [[File:Pinap.png\|32px]] [[Berries/Pinap]] | |
 | {.mutation} | {.mutation} | {.mutation} | {.mutation} | {.mutation} | |
-| {.mutation} | {.mutation} | {.mutation} | {.mutation} | {.mutation} | |
+| [[File:Wepear.png\|32px]] [[Berries/Wepear]] | {.mutation} | {.mutation} |[[File:Wepear.png\|32px]] [[Berries/Wepear]]| {.mutation} | |
 | {.mutation} | [[File:Pinap.png\|32px]] [[Berries/Pinap]] | {.mutation} | {.mutation} | [[File:Pinap.png\|32px]] [[Berries/Pinap]] | |
 :::
+
+**Timing Table**
+All planting times refer to the "Until Ripe" value of the first Berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Wepear.png\|32px]] [[Berries/Wepear]]       | `Planted First` | | |
+| [[File:Pinap.png\|32px]] [[Berries/Pinap]]    | 00:04:00      | 00:02:40                              | 00:01:46                                |
 
 #### Mutations
 Nomel Berries can mutate into the following Berries.
