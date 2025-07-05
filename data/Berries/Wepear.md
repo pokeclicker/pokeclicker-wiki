@@ -28,6 +28,13 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 | [[File:Oran.png\|32px]] [[Berries/Oran]]  | `Planted First` | | |
 | [[File:Rawst.png\|32px]] [[Berries/Rawst]]    | 00:01:20      | 00:00:53                              | 00:00:35                                 |
 
+#### Mutations
+Wepear Berries can mutate into the following Berries.
+
+| Used In                                       | Other Requirements |
+| :---:                                         | :---: |
+| [[File:Nomel.png\|32px]] [[Berries/Nomel]]    |  [[File:Pinap.png\|32px]] [[Berries/Pinap]] |
+
 ### Acquisition
 Wepear Berries can be obtained from the following dungeons.
 
