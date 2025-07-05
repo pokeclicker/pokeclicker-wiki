@@ -34,7 +34,7 @@ Pinap Berries can mutate into the following Berries.
 | Used In                                       | Other Requirements |
 | :---:                                         | :---: |
 | [[File:Qualot.png\|32px]] [[Berries/Qualot]]  | [[File:Mago.png\|32px]] [[Berries/Mago]] |
-| [[File:Nomel.png\|32px]] [[Berries/Nomel]]    | `N/A` |
+| [[File:Nomel.png\|32px]] [[Berries/Nomel]]    |  [[File:Wepear.png\|32px]] [[Berries/Wepear]] |
 | [[File:Wacan.png\|32px]] [[Berries/Wacan]]    | [[File:Iapapa.png\|32px]] [[Berries/Iapapa]] [[File:Qualot.png\|32px]] [[Berries/Qualot]] [[File:Grepa.png\|32px]] [[Berries/Grepa]] |
 
 ### Acquisition
