@@ -84,7 +84,7 @@ Beyond 50 EVs, Pokémon will still gain EVs at the same rate, but will see dimin
 #### EV Attack Bonus at certain benchmarks
 
 Effort Value | Pokémon Damage Multiplier
-:--- | ---:
+:--- | :---
 50 | 1.5x
 802 | 2x
 40,121 | 3x
