@@ -8,9 +8,9 @@ Jaboca can be obtained by having at least one empty plot and at least 600 points
 
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | |
-| [[File:Durin.png\|32px]] [[Berries/Durin]] | {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] | {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] | |
+| [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | {.mutation} | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | |
 | [[File:Durin.png\|32px]] [[Berries/Durin]] | {.mutation}| {.mutation}| {.mutation}| [[File:Durin.png\|32px]] [[Berries/Durin]] | |
-| [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | |
+| [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | {.mutation} | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | |
 | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | [[File:Durin.png\|32px]] [[Berries/Durin]] | |
 
 :::
