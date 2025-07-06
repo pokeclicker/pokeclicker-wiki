@@ -8,9 +8,9 @@ Micle can be obtained by having at least one empty plot and at least 600 points 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | |
-| [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | {.mutation} | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | {.mutation} | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | |
+| [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | {.mutation} | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | |
 | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | {.mutation} | {.mutation} | {.mutation} | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | |
-| [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | |
+| [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | {.mutation} | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | |
 | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | |
 :::
 
