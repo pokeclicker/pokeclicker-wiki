@@ -7,8 +7,8 @@ Rowap can be obtained by having at least one empty plot and at least 600 points 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Belue.png\|32px]] [[Berries/Belue]] | [[File:Belue.png\|32px]] [[Berries/Belue]] | [[File:Belue.png\|32px]] [[Berries/Belue]] | [[File:Belue.png\|32px]] [[Berries/Belue]] | [[File:Belue.png\|32px]] [[Berries/Belue]] | |
-| [[File:Belue.png\|32px]] [[Berries/Belue]] | {.mutation} | [[File:Belue.png\|32px]] [[Berries/Belue]] | {.mutation} | [[File:Belue.png\|32px]] [[Berries/Belue]] | |
+| [[File:Belue.png\|32px]] [[Berries/Belue]] | [[File:Belue.png\|32px]] [[Berries/Belue]] | {.mutation} | [[File:Belue.png\|32px]] [[Berries/Belue]] | [[File:Belue.png\|32px]] [[Berries/Belue]] | |
 | [[File:Belue.png\|32px]] [[Berries/Belue]] | {.mutation} | {.mutation} | {.mutation} | [[File:Belue.png\|32px]] [[Berries/Belue]] | |
-| [[File:Belue.png\|32px]] [[Berries/Belue]] | [[File:Belue.png\|32px]] [[Berries/Belue]] | [[File:Belue.png\|32px]] [[Berries/Belue]] | [[File:Belue.png\|32px]] [[Berries/Belue]] | [[File:Belue.png\|32px]] [[Berries/Belue]] | |
+| [[File:Belue.png\|32px]] [[Berries/Belue]] | [[File:Belue.png\|32px]] [[Berries/Belue]] | {.mutation} | [[File:Belue.png\|32px]] [[Berries/Belue]] | [[File:Belue.png\|32px]] [[Berries/Belue]] | |
 | [[File:Belue.png\|32px]] [[Berries/Belue]] | [[File:Belue.png\|32px]] [[Berries/Belue]] | [[File:Belue.png\|32px]] [[Berries/Belue]] | [[File:Belue.png\|32px]] [[Berries/Belue]] | [[File:Belue.png\|32px]] [[Berries/Belue]] | |
 :::
