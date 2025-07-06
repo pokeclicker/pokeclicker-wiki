@@ -10,9 +10,9 @@ Custap can be obtained by having at least one empty plot and at least 600 points
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | |
-| [[File:Watmel.png\|32px]] [[Berries/Watmel]] | {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | |
+| [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | |
 | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | {.mutation} | {.mutation} | {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | |
-| [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | |
+| [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | |
 | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | |
 :::
 
