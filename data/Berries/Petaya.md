@@ -12,6 +12,15 @@ You can fill your farm in the following way to obtain Petaya berries. Note that 
 | [[File:Occa.png\|32px]] [[Berries/Occa]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Chilan.png\|32px]] [[Berries/Chilan]] | |
 :::
 
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Kasib.png\|32px]] [[Berries/Kasib]] | {.mutation} | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | |
+| [[File:Shuca.png\|32px]] [[Berries/Shuca]] | {.mutation}  | {.mutation} | {.mutation} | {.mutation}| |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Coba.png\|32px]] [[Berries/Coba]]| [[File:Roseli.png\|32px]] [[Berries/Roseli]]| [[File:Payapa.png\|32px]] [[Berries/Payapa]] |[[File:Chilan.png\|32px]] [[Berries/Chilan]] | |
+| [[File:Colbur.png\|32px]] [[Berries/Colbur]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Charti.png\|32px]] [[Berries/Charti]] | [[File:Yache.png\|32px]] [[Berries/Yache]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | |
+| [[File:Occa.png\|32px]] [[Berries/Occa]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Tanga.png\|32px]] [[Berries/Tanga]] | |
+:::
+
 ### External Timers
 Please note that these timers are from the moment Haban is planted, so, for example, 2 hours 40 minutes **after** planting Haban and Babiri, you should plant Yache. These are **not** time until Haban is ripe. For those, please refer to the **[Timing Table](#timing-table)** section lower in the page.
 
