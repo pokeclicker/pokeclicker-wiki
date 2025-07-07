@@ -12,6 +12,7 @@ You can fill your farm in the following way to obtain Petaya berries. Note that 
 | [[File:Occa.png\|32px]] [[Berries/Occa]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Chilan.png\|32px]] [[Berries/Chilan]] | |
 :::
 
+
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Kasib.png\|32px]] [[Berries/Kasib]] | {.mutation} | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | |
@@ -19,6 +20,16 @@ You can fill your farm in the following way to obtain Petaya berries. Note that 
 | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Coba.png\|32px]] [[Berries/Coba]]| [[File:Roseli.png\|32px]] [[Berries/Roseli]]| [[File:Payapa.png\|32px]] [[Berries/Payapa]] |[[File:Chilan.png\|32px]] [[Berries/Chilan]] | |
 | [[File:Colbur.png\|32px]] [[Berries/Colbur]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Charti.png\|32px]] [[Berries/Charti]] | [[File:Yache.png\|32px]] [[Berries/Yache]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | |
 | [[File:Occa.png\|32px]] [[Berries/Occa]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Tanga.png\|32px]] [[Berries/Tanga]] | |
+:::
+
+
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Occa.png\|32px]] [[Berries/Occa]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Tanga.png\|32px]] [[Berries/Tanga]] | [[File:Yache.png\|32px]] [[Berries/Yache]] | [[File:Kasib.png\|32px]] [[Berries/Kasib]] | |
+| [[File:Colbur.png\|32px]] [[Berries/Colbur]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]]  | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Coba.png\|32px]] [[Berries/Coba]]| |
+| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]]| {.mutation}| {.mutation} |[[File:Chilan.png\|32px]] [[Berries/Chilan]] | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Payapa.png\|32px]] [[Berries/Payapa]] | [[File:Shuca.png\|32px]] [[Berries/Shuca]] | |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Charti.png\|32px]] [[Berries/Charti]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
 :::
 
 ### External Timers
