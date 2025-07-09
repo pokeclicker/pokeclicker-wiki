@@ -1,0 +1,1 @@
+Rare Hold Items drop chance can be increased by using the [[Items/Dowsing Machine]], in addition a Shiny Encounter will guarantee drop on defeat.
