@@ -82,13 +82,12 @@ The Battery is a special tool that charges based on actions taken in the Mine.  
 
 The Chisel, Hammer, Bomb and Survey tools each have an individual durability gauge that determines how many times it can be used before needing to recharge. Tools consume durability at different rates depending on their power or area of effect. They regenerate durability over time, and the repair rate improves as your Underground Level increases. When your Underground Level reaches 20, the repair rate becomes 0 seconds for Chisel, Hammer and Bomb so they can be used without limits.  Survey and Discharge always have recharge time, regardless of level.
 
-
 ### Tool Overview
 | Tool | Action | Base Repair Rate | Repair amount per Repair Rate | Damage per Use |
 |---|---|---|---|---|
 | [[File:Chisel.png]] Chisel | Mines 2 layers on the selected spot. | 20 seconds | 2% | 2% |
 | [[File:Hammer.png]] Hammer | Mines 1 layer on all 9 tiles in a 3x3 grid. | 20 seconds | 2% | 6% |
-| [[File:Bomb.png]] Bomb | Mines 2 layers on each of 10 random tiles (including cleared). The number of tiles can be increased by equipping the [[Oak_Items/Explosive_Charge]] Oak Item. | 20 seconds | 2% | 18% |
+| [[File:Bomb.png]] Bomb | Mines 2 layers on each of 10 random tiles (including cleared). The number of tiles can be increased by equipping the [[Oak_Items/Explosive_Charge]] Oak Item. Items collected by the Bomb have a 87.5% chance of being destroyed with no EXP gain. | 20 seconds | 2% | 18% |
 | [[File:Survey.png]] Survey| Indicates a 9x9 grid where at least one tile contains an item. The grid shrinks by two tiles in each direction every 15 levels. | 900 seconds | 100% | 100% |
 
 ## Helpers
