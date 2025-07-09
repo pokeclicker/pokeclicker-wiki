@@ -5,6 +5,14 @@ Click the [Download] button next to your respective platform and follow the inst
 
 For other platforms and Linux distros see below.
 
+#### Mac
+
+There is no native client for Mac but it is available via Homebrew:
+
+```
+brew tap pokeclicker/tap
+brew install pokeclicker-desktop
+```
 
 #### Non-Debian-based Linux distros
 
