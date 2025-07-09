@@ -57,7 +57,7 @@ Additional Breeding Queue slots can be obtained by progressing to the next regio
 | Alola| 96|
 | Galar| 128|
 
-# Farm Strategies
+# Farm Strategies{#farmStrats}
 
 The farm can be utilized to increase the egg steps yielded by Pokémon through the use of [[Berries/Chople]] berries. However, as Chople berries surrounded by at least three other Chople berries can mutate into [[Berries/Chilan]] berries, specfic strategies must be employed to best plant Chople berries in order to increase egg steps. Below are several strategies that can be used depending on which berries are readily accessible, accompanied by a short description of each strategy's pros and cons as well as a corresponding planting diagram.
 

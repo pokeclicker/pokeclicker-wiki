@@ -297,19 +297,6 @@ You can find the formation and timings on the [[Berries/Persim]] page.
 This is a very active strategy, but this setup should provide a little over 3.58 mutations on average including time waiting for growth.
 This strategy is also the fastest, but needs at least about 4 and a half hours of active growth and mutation time to complete.
 
-## Sprinklotad Leveling Strategy{#sprinklotad}
-The most efficient way to gain experience for the [[Oak Items/Sprinklotad]] is to equip the fully-leveled Sprayduck and surround 4 Kasib berries with Cheri berries in the following way. Keep replanting Cheri as they wither while either shoveling or harvesting extra Kasib that may sprout.
-
-**Farm**
-::: table-mutations
-| :----: | :----: | :----: | :----: | :----: |
-| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
-| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Kasib.png\|32px]] [[Berries/Kasib]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Kasib.png\|32px]] [[Berries/Kasib]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
-| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
-| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Kasib.png\|32px]] [[Berries/Kasib]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Kasib.png\|32px]] [[Berries/Kasib]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
-| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
-:::
-
 ## Other Setups
 
 ### Colbur + Cheri (a.k.a. Colbur Nonsense){#nonsense}

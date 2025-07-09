@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-Nomel has a chance of mutating when [[Berries/Pinap]] is touching an empty plot. You can fill your farm in the following way to obtain Nomel Berries. Purple squares indicate where mutations can occur.
+Nomel has a chance of mutating when [[Berries/Pinap]] and [[Berries/Wepear]] are touching an empty plot. You can fill your farm in the following way to obtain Nomel Berries. Purple squares indicate where mutations can occur.
 
 **Base Formation**
 ::: table-mutations

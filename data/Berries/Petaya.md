@@ -1,7 +1,7 @@
 ## Mutation Strategy
 ### Possible Planting Formations
 
-You can fill your farm in the following way to obtain Petaya berries. Note that the [[Berries/Occa]], [[Berries/Kebia]] and [[Berries/Colbur]] can overtake other plants, so they are placed around a [[Berries/Babiri]] to prevent this. [[Berries/Kebia]] and [[Berries/Payapa]] increase mutation chance and are placed to affect the highest amount of mutation plots. [[Berries/Babiri]] decreases mutation chance and [[Berries/Rindo]] expands to open plots, so they are not placed near mutation plots. [[Berries/Wacan]], [[Berries/Yache]] and [[Berries/Haban]] all affect growth times and are placed in the corner with shorter growth time berries to limit their impact and make the timings easier. Using [[Items/Surprise Mulch]], a fully leveled up [[Oak Items/Squirtbottle]], and following this layout, you have roughly an 90.2% chance (60.5% chance without [[Oak Items/Squirtbottle]]) of acquiring a Petaya before the first berry needs to be replanted. Purple squares indicate where mutations can occur.
+You can fill your farm in the following ways to obtain Petaya berries. Note that the [[Berries/Occa]], [[Berries/Kebia]] and [[Berries/Colbur]] can overtake other plants, so they are placed around a [[Berries/Babiri]] to prevent this. [[Berries/Kebia]] and [[Berries/Payapa]] increase mutation chance and are placed to affect the highest amount of mutation plots. [[Berries/Babiri]] decreases mutation chance and [[Berries/Rindo]] expands to open plots, so they are not placed near mutation plots. [[Berries/Wacan]], [[Berries/Yache]] and [[Berries/Haban]] all affect growth times and are placed in the corner with shorter growth time berries to limit their impact and make the timings easier. Using [[Items/Surprise Mulch]], a fully leveled up [[Oak Items/Squirtbottle]], and following the first layout, you have roughly an 90.2% chance (60.5% chance without [[Oak Items/Squirtbottle]]) of acquiring a Petaya before the first berry needs to be replanted. Purple squares indicate where mutations can occur.
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -10,6 +10,26 @@ You can fill your farm in the following way to obtain Petaya berries. Note that 
 | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Coba.png\|32px]] [[Berries/Coba]]| [[File:Kebia.png\|32px]] [[Berries/Kebia]]| {.mutation} |[[File:Haban.png\|32px]] [[Berries/Haban]] | |
 | [[File:Colbur.png\|32px]] [[Berries/Colbur]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Charti.png\|32px]] [[Berries/Charti]] | {.mutation} | [[File:Tanga.png\|32px]] [[Berries/Tanga]] | |
 | [[File:Occa.png\|32px]] [[Berries/Occa]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Chilan.png\|32px]] [[Berries/Chilan]] | |
+:::
+
+
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Kasib.png\|32px]] [[Berries/Kasib]] | {.mutation} | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | |
+| [[File:Shuca.png\|32px]] [[Berries/Shuca]] | {.mutation}  | {.mutation} | {.mutation} | {.mutation}| |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Coba.png\|32px]] [[Berries/Coba]]| [[File:Roseli.png\|32px]] [[Berries/Roseli]]| [[File:Payapa.png\|32px]] [[Berries/Payapa]] |[[File:Chilan.png\|32px]] [[Berries/Chilan]] | |
+| [[File:Colbur.png\|32px]] [[Berries/Colbur]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Charti.png\|32px]] [[Berries/Charti]] | [[File:Yache.png\|32px]] [[Berries/Yache]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | |
+| [[File:Occa.png\|32px]] [[Berries/Occa]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Tanga.png\|32px]] [[Berries/Tanga]] | |
+:::
+
+
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Occa.png\|32px]] [[Berries/Occa]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Tanga.png\|32px]] [[Berries/Tanga]] | [[File:Yache.png\|32px]] [[Berries/Yache]] | [[File:Kasib.png\|32px]] [[Berries/Kasib]] | |
+| [[File:Colbur.png\|32px]] [[Berries/Colbur]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]]  | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Coba.png\|32px]] [[Berries/Coba]]| |
+| [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]]| {.mutation}| {.mutation} |[[File:Chilan.png\|32px]] [[Berries/Chilan]] | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Payapa.png\|32px]] [[Berries/Payapa]] | [[File:Shuca.png\|32px]] [[Berries/Shuca]] | |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Charti.png\|32px]] [[Berries/Charti]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
 :::
 
 ### External Timers

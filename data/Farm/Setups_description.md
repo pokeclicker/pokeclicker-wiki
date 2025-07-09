@@ -1,12 +1,12 @@
 #### Jump to a section
 
 * [Colbur Nonsense](#nonsense) - Earn Farm Points quickly
-* [Egg Steps](#!Hatchery) - Hatch eggs faster
+* [Egg Steps](#!Hatchery#farmStrats) - Hatch eggs faster
 * [EV Setup](#EV) - Get more [Effort Values](#!Pokérus) when capturing pokemon
 * [Growth Aura](#growth) - Make berries mature faster
 * [Harvest Aura](#harvest) - Increase berry yield when harvesting
 * [Infinite Farm](#infinite) - Passive auras that last for years
-* [Levelling Spinklotad](#sprinklotad) - Quickly level up the [[Oak Items/Sprinklotad]]
+* [Levelling Spinklotad](#!Oak Items/Sprinklotad) - Quickly level up the [[Oak Items/Sprinklotad]]
 * [Levelling Squirtbottle](#squirtbottle) - Quickly level up the [[Oak Items/Squirtbottle]]
 * [Lost Gen5 Berries](#enigma) - Reobtain specific Gen5 berries using Enigma
 * [Roaming Pokémon](#roamers) - Boost the odds for roaming Pokémon encounters

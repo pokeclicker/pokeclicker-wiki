@@ -1,6 +1,7 @@
 Rare Hold items are Items that Pokémon can drop when **defeated**. The chance of getting them depends on the place (route or dungeon) and the specific item.
 
 The base chance to drop a held item is **1/512** (this doesn't apply to all).
+Rare Hold Items drop chance can be increased by using the [[Items/Dowsing Machine]], in addition a Shiny Encounter will guarantee drop on defeat.
 
 Circumstances | Multiplier
 :---|---:

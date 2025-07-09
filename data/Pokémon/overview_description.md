@@ -1,4 +1,4 @@
-Pokémon are your partners in this adventure and your main source of power. Currently the game has **1,399** different Pokémon forms. Most of them based on main games, with 33 coming from side games, 53 coming from anime and films, and 18 custom forms.
+Pokémon are your partners in this adventure and your main source of attack. Currently the game has **1,399** different Pokémon forms. Most of them based on main games, with 33 coming from side games, 53 coming from anime and films, and 18 custom forms.
 
 ## Statistics
 
@@ -34,6 +34,7 @@ The **Attack bonus** can be increased using 2 different [[Vitamins]]: [[Items/Pr
 * **Calcium** gives 1% base attack as attack bonus. *In our example, Metapod will have 5.2 attack bonus after 1 Calcium and 7 attack bonus after 10 Calcium. While Pidgeot will have 29.12 attack bonus after 1 Calcium and 39.2 after 10 Calcium.*
 
 ### Breeding Efficiency (BE)
+
 A Pokémon with a high base attack and a low number of egg steps will have a high Breeding Efficiency stat, which is calculated with the following formula:
 
 $BE = \frac{Attack Bonus}{Egg Cycles} * EV Bonus * Shadow Status * Held Item Bonus$
@@ -59,12 +60,14 @@ There is a hard cap of 120 egg cycles, equaling 4,800 egg steps, after all facto
 There are exceptions to this rule:
 
 * Although [[Mega Pokémon]] are technically evolutions, they share the same egg cycle value as their counterpart.
-* [[Pokémon/Elf Munchlax]] acts as a Baby Pokémon of [[Pokémon/Santa Snorlax]], in regard of its egg cycle value, but is not.
+* [[Pokémon/Elf Munchlax]] acts as a Baby Pokémon of [[Pokémon/Santa Snorlax]] in regard of its egg cycle value, but it is not an actual baby Pokémon.
 
 ### Native Region
+
 Native Region doesn't necessarily refer to when the Pokémon is available but rather the Region the game considers it for Pokédex completion and Regional Debuff calculations.
 
 ## Other Pokémon Lists
+
 - [[Alternate Pokémon Forms]] page lists all alternate forms available in the game, including Regional forms, and the corresponding base Pokémon.
 - [[Mega Pokémon]] page has details about which Pokémon can Mega Evolve and the requirements necessary to do so.
 - [[Baby Pokémon]] page has a list of all Baby Pokémon available in the game and the Region needed to acquire them.
@@ -73,5 +76,3 @@ Native Region doesn't necessarily refer to when the Pokémon is available but ra
 - [[Shadow Pokémon]] page has the list of all currently available Shadow Pokémon.
 
 ## Pokémon List
-**WARNING**
-This list includes all Pokémon that are in the code, but some of them **are not** currently **obtainable**.
