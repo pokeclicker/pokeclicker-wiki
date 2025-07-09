@@ -7,7 +7,7 @@ For other platforms and Linux distros see below.
 
 #### Mac
 
-There is no native client for Mac however it is available via Homebrew:
+There is no native client for Mac however it is available via [Homebrew](https://brew.sh/):
 
 `brew tap pokeclicker/tap`
 `brew install pokeclicker-desktop`
