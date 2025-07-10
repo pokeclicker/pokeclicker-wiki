@@ -35,8 +35,7 @@ Helpers gain experience alongside the player:
 $$\text{TotalXP}(\text{level}) = \left\lfloor \sum_{i=0}^{\text{level} - 1} \left( i + 300 \cdot 2^{\frac{i}{7}} \right) \right\rfloor$$
 
 ### Energy Restore
-
-You can spend resources to boost a helper's work speed using Energy Restores:
+Consumable Energy Restores can boost an Expert Helper's working speed.  In the Experts tab of the [[Underground]], each Expert has icons at the bottom of their panel representing the three types of Energy Restores.  If one or more are toggled on, they will use the highest value Restore available once for each work cycle.  If they run out of a Restore, Experts will use the next best available option that is toggled on for them.  The currently active Restore is shown next to the Helper's icon.
 
 Restore | Percentage | Price | Efficiency
 :--- | :--- | :--- | :--- |
