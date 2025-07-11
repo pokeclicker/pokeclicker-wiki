@@ -1,8 +1,12 @@
 ## Mutation Strategy
 ### Possible Planting Formations
 
-You can fill your farm in the following ways to obtain Petaya berries. Note that the [[Berries/Occa]], [[Berries/Kebia]] and [[Berries/Colbur]] can overtake other plants, so they are placed around a [[Berries/Babiri]] to prevent this. [[Berries/Kebia]] and [[Berries/Payapa]] increase mutation chance and are placed to affect the highest amount of mutation plots. [[Berries/Babiri]] decreases mutation chance and [[Berries/Rindo]] expands to open plots, so they are not placed near mutation plots. [[Berries/Wacan]], [[Berries/Yache]] and [[Berries/Haban]] all affect growth times and are placed in the corner with shorter growth time berries to limit their impact and make the timings easier. Using [[Items/Surprise Mulch]], a fully leveled up [[Oak Items/Squirtbottle]], and following the first layout, you have roughly an 90.2% chance (60.5% chance without [[Oak Items/Squirtbottle]]) of acquiring a Petaya before the first berry needs to be replanted. Purple squares indicate where mutations can occur.
+You can fill your farm in the following ways to obtain Petaya berries. Note that the [[Berries/Occa]], [[Berries/Kebia]] and [[Berries/Colbur]] can overtake other plants, so they are placed around a [[Berries/Babiri]] to prevent this. [[Berries/Kebia]] and [[Berries/Payapa]] increase mutation chance and are placed to affect the highest amount of mutation plots. [[Berries/Babiri]] decreases mutation chance and [[Berries/Rindo]] expands to open plots, so they are not placed near mutation plots. [[Berries/Wacan]], [[Berries/Yache]] and [[Berries/Haban]] all affect growth times and are placed in the corner with shorter growth time berries to limit their impact and make the timings easier. Using [[Items/Surprise Mulch]], a fully leveled up [[Oak Items/Squirtbottle]], and following the first layout, you have roughly an 90.2% chance (60.5% chance without [[Oak Items/Squirtbottle]]) of acquiring a Petaya before the first berry needs to be replanted. Purple squares indicate where mutations can occur and Surprise Mulch should be placed.
 
+:::collapsed Classic 4 Petaya - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+:::
+This version has plots with 0.0049% x2, 0.0078 x3, and 0.006% x2 mutation chance, with Squirtbottle Lv.5 and Surprise Mulch.  Only requires one of each berry, but has a worse overall chance of mutation and two undesirable spawn locations on the edge of the farm.
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Kasib.png\|32px]] [[Berries/Kasib]] | {.mutation} | [[File:Payapa.png\|32px]] [[Berries/Payapa]] | {.mutation} | [[File:Yache.png\|32px]] [[Berries/Yache]] | |
@@ -12,6 +16,13 @@ You can fill your farm in the following ways to obtain Petaya berries. Note that
 | [[File:Occa.png\|32px]] [[Berries/Occa]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Chilan.png\|32px]] [[Berries/Chilan]] | |
 :::
 
+:::collapsed Reverse L Petaya - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0OCwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NDIsImFnZSI6ODY0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDIsImFnZSI6ODY0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDIsImFnZSI6ODY0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDMsImFnZSI6NzkyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ0LCJhZ2UiOjM5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUzLCJhZ2UiOjUwNDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ1LCJhZ2UiOjY4NDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUyLCJhZ2UiOjE0NDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUwLCJhZ2UiOjU0MDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0NywiYWdlIjo3NTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MCwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OSwiYWdlIjoxNzI4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzYsImFnZSI6NDM5MjAsIm11bGNoIjotMX0seyJiZXJyeSI6MzksImFnZSI6NTc2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzcsImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0NiwiYWdlIjo3MjAwLCJtdWxjaCI6LTF9XX19fQ
+:::
+
+This variant has 0.006% x2 plots, 0.0125% x2 plots, and one 0.02% mutation chance with Surprise Mulch & Squirtbottle Lv.5.  Has higher odds than Classic 4, but can potentially get more starter Petayas than the Two Spot though in less central locations.
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -22,6 +33,13 @@ You can fill your farm in the following ways to obtain Petaya berries. Note that
 | [[File:Occa.png\|32px]] [[Berries/Occa]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Tanga.png\|32px]] [[Berries/Tanga]] | |
 :::
 
+:::collapsed Two Spot Petaya - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjozNiwiYWdlIjo0MzkyMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDYsImFnZSI6NzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MCwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OCwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MCwiYWdlIjo1NDAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ5LCJhZ2UiOjE3MjgwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0NCwiYWdlIjozOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjUyLCJhZ2UiOjE0NDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0NSwiYWdlIjo2ODQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MywiYWdlIjo3OTIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOSwiYWdlIjo1NzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0NywiYWdlIjo3NTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX1dfX19
+:::
+
+This variant for Petaya mutation has only two possible mutation plots, but a 0.0319% in the central plot and 0.0078% in the other with Squirtbottle Lv.5 and with less Surprise Mulch needed.  This makes it very likely to get Petaya in the middle of the farm for maximum possible [[Berries/Wacan]], [[Berries/Passho]] + [[Berries/Lum]] boosts before first harvest.
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -31,6 +49,8 @@ You can fill your farm in the following ways to obtain Petaya berries. Note that
 | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Payapa.png\|32px]] [[Berries/Payapa]] | [[File:Shuca.png\|32px]] [[Berries/Shuca]] | |
 | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Rindo.png\|32px]] [[Berries/Rindo]] | [[File:Charti.png\|32px]] [[Berries/Charti]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
 :::
+
+----
 
 ### External Timers
 Please note that these timers are from the moment Haban is planted, so, for example, 2 hours 40 minutes **after** planting Haban and Babiri, you should plant Yache. These are **not** time until Haban is ripe. For those, please refer to the **[Timing Table](#timing-table)** section lower in the page.
@@ -72,7 +92,7 @@ Before you start this process, you need to be prepared to spend around 11 hours 
 * Remember to check the [critical information](#critical-info) section once the setup is fully ripe!
 
 ### Petaya with Freeze Mulch (easy mode)
-Mutating a Petaya with Freeze Mulch makes the entire thing incredibly easy.  What you need to do is plant all the berries simultaneously, as seen in the mutation formation, and then simply apply the appropriate amount of Freeze Mulch to the berry seeds, such that when the freeze mulch runs out the berry would start growing as if you had just planted it according to the timing table.  Below is a table for how much Freeze Mulch each berry needs for the timings to be correct.  Kasib and Kebia have such a short growth time (5 and 10 minutes without Sprayduck) that it's probably worth just planting them when the rest of the berries are nearly ripe, hence the optional.
+Mutating a Petaya with Freeze Mulch makes the entire thing incredibly easy.  What you need to do is plant all the berries simultaneously, as seen in the mutation formation, and then simply apply the appropriate amount of [[Items/Freeze Mulch]] to the berry seeds, such that when the freeze mulch runs out the berry would start growing as if you had just planted it according to the timing table.  Below is a table for how much Freeze Mulch each berry needs for the timings to be correct.  Kasib and Kebia have such a short growth time (5 and 10 minutes without Sprayduck) that it's probably worth just planting them when the rest of the berries are nearly ripe, hence the optional.
 
 **Note: This table assumes you have given Haban 128 Boost Mulch and Babiri 52 Boost Mulch, and maxed [[Oak Items/Sprayduck]] is equipped.**
 
@@ -123,8 +143,8 @@ All planting times use the time-to-ripe remaining of the first planted berry for
 | [[File:Kasib.png\|32px]] [[Berries/Kasib]] | 00:05:00	 | 00:03:20  |	00:02:13 |
 
 ### Critical information for when all berries have ripened {#critical-info}
-After all 18 berries are ripe, the requirements for Petaya to spawn have been fully met. At this point, immediately switch out your [[Oak Items/Sprayduck]] for the [[Oak Items/Squirtbottle]], if possible, otherwise another Oak Item if not. It is highly recommended that you make a save here so you don't have to go through the whole setup again in case nothing mutates. Petaya can spawn on any of the seven open plots in your farm. The seven empty plots should all be permanently applied with surprise mulch. Note that even though the [[Berries/Kebia]] has the ability to overtake other berries, it can only do so at the taller or later stages, so you will be able to let the mutation keep going if you want to mutate multiple Petaya before the [[Berries/Wacan]] withers. Specifically, you have 6 hours from time of mutation to remove the [[Berries/Kebia]] before it threatens to take over your newly mutated Petaya unless it mutates on one of the two edge plots.
-If you intend to use [[Items/Freeze Mulch]] to make the setup live longer, you must **never** freeze [[Berries/Babiri]], [[Berries/Kebia]] and [[Berries/Payapa]] since this mulch gets rid of auras. Freezing Babiri would remove its protection causing the nearby parasites to mutate berries into themselves, ruining the setup. Freezing Kebia and Payapa would remove their mutation chance up aura while leaving their ability to parasite intact since that's not considered an aura. As for the rest of the berries, those can be frozen without causing any issues.
+Once all 18 required berries are ripe, the conditions for Petaya to spawn have been fully met. At this point, immediately switch out your [[Oak Items/Sprayduck]] for the [[Oak Items/Squirtbottle]], if possible, otherwise another Oak Item if not. It is highly recommended that you make a save here so you don't have to go through the whole setup again in case nothing mutates. Petaya can spawn on any of the open plots in your farm. All empty plots should have Surprise Mulch applied to them until a Petaya is obtained. Note that even though the [[Berries/Kebia]] has the ability to overtake other berries, it can only do so at the taller or later stages, so you will be able to let the mutation keep going if you want to mutate multiple Petaya before the [[Berries/Wacan]] withers. Specifically, you have 6 hours from time of mutation to remove the [[Berries/Kebia]] before it threatens to take over your newly mutated Petaya unless it mutates on one of the two edge plots.
+If you intend to use [[Items/Freeze Mulch]] to make the setup live longer, you must **never** freeze [[Berries/Babiri]], [[Berries/Kebia]] and [[Berries/Payapa]] since this mulch gets rid of auras. Freezing Babiri would remove its protection causing the nearby parasites to mutate berries into themselves, ruining the setup. Freezing Kebia and Payapa would remove their mutation chance up aura while leaving their ability to parasitize intact since that's not considered an aura. As for the rest of the berries, those can be frozen without causing any issues.
 
 ### What to do if Petaya doesn't spawn before other berries start dying
 The berry that will die first is [[Berries/Wacan]] — it will die around 1 hours 25 mins after it ripens. This ''should'' be enough for you to get a Petaya to spawn. If the [[Berries/Wacan]] dies before mutation, you will have to replant [[Berries/Chilan]], [[Berries/Tanga]], and [[Berries/Wacan]]. If you start within 38 minutes of [[Berries/Wacan]] dying (1 hour 15 minutes with boost mulch), you ''should'' be able to get one more full [[Berries/Wacan]] cycle before the [[Berries/Coba]] dies and you have to start over. The ability to do this increases overall chance of mutation to 99% or 84.4% without [[Oak Items/Squirtbottle]].
