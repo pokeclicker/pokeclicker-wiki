@@ -94,7 +94,7 @@ The Chisel, Hammer, Bomb and Survey tools each have an individual durability gau
 [[Underground Helpers]] can be hired from the Helpers tab in the Underground interface.  They do not charge for their services, but instead keep a percentage of the items they find, with the rest going into the player's Treasures.  Each of the five Helpers has a thematically linked favorite mine and performance statistics.
 
 ## Trading{#trade}
-You can trade treasures within the same category —such as Plates, Fossils, or Shards— with each other at an exchange rate of 3:1.  Example: 3 Draco Plates can be traded for 1 Pixie Plate, 3 Dome Fossils for 1 Old Amber, etc. Diamond treasures cannot be traded, only sold for [[Diamonds]].  Plates can also be echanged for [[Gems]], at the rate of 1 plate per 100 Gems of the same type only.  To trade, open the Underground window, go to the Treasures tab, and click on the item to be exchanged.
+You can trade treasures within the same category —such as Plates, Fossils, or Shards— with each other at an exchange rate of 3:1.  Example: 3 Draco Plates can be traded for 1 Pixie Plate, 3 Dome Fossils for 1 Old Amber, etc. Diamond treasures cannot be traded, only sold for [[Diamonds]].  Plates can also be exchanged for [[Gems]], at the rate of 1 plate per 100 Gems of the same type only.  To trade, open the Underground window, go to the Treasures tab, and click on the item to be exchanged.
 
 ## Experience and Leveling{#level}
 
