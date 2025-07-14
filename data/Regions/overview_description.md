@@ -61,6 +61,7 @@ Maximum Vitamins per Pokémon: 30**
 Alola is the seventh region and currently has 104 new Pokémon to catch, breed and hatch. Alola dungeons are the first dungeons with two floors. Finally, clearing Alola unlocks [[Quest Lines/Magikarp Jump]] as its whole new sub region.
 
 **Non-native Pokémon retain 70% damage
+Magikarp forms retain 100% damage in Magikarp Jump
 Breeding Queue in the hatchery: 96
 Maximum Vitamins per Pokémon: 35**
 
