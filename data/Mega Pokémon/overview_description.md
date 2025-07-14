@@ -3,4 +3,4 @@ To evolve a Pokémon into its Mega form you need three things:
 2. Raise the attack of the Pokémon to 500 times its base attack value.
 3. Purchase a [[Items/Key Stone]] evolution item from [[Towns/Shalour City]] or [[Towns/A Tree Maybe]].
 
-When the above conditions are met the Pokémon can be evolved by selecting the Key Stone in the Evolution Items menu.
+When the above conditions are met the Pokémon can be evolved by selecting the Key Stone in the Evolution Items menu.  Mega Stones can only be acquired for Pokémon the player has already caught.
