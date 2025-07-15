@@ -80,7 +80,7 @@ The Battery is a special tool that charges based on actions taken in the Mine.  
 
 ### Durability
 
-The Chisel, Hammer, Bomb and Survey tools each have an individual durability gauge that determines how many times it can be used before needing to recharge. Tools consume durability at different rates depending on their power or area of effect. They regenerate durability over time, and the repair rate improves as your Underground Level increases. When your Underground Level reaches a certain point the repair rate becomes 0 seconds for Chisel (Lv.22), Hammer(Lv.23) and Bomb(Lv.24) so they can be used without limits.  Survey and Discharge always have recharge time, regardless of level.
+The Chisel, Hammer, Bomb and Survey tools each have an individual durability gauge that determines how many times it can be used before needing to recharge. Tools consume durability at different rates depending on their power or area of effect. They regenerate durability over time, and the repair rate improves as your Underground Level increases. When your Underground Level reaches a certain point the repair rate becomes 0 seconds for Chisel (Lv.22), Hammer(Lv.23) and Bomb(Lv.24). In practice, all three become infinite 1 level earlier due to recharging faster than the player can click.  Survey and Discharge always have recharge time regardless of level.
 
 ### Tool Overview
 | Tool | Action | Base Repair Rate | Repair amount per Repair Rate | Damage per Use | Infinite Use
