@@ -11,6 +11,11 @@ You can use Boost Mulch to speed up berry growth. If you are ready to harvest th
 Below is the base setup to give a massive aura boost to a central berry on the farm. The [[Berries/Petaya]] is only being used as an example in this case.
 While Wacan is used here, it can be swapped out for Passho to gain more berries per harvest.  [[Items/Boost Mulch]] is optional but will reduce the growth time by a further 50%.
 
+:::collapsed Wacan Only - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM4LCJhZ2UiOjM2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6MH0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM4LCJhZ2UiOjM2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX1dfX19
+:::
 _**Growth Aura Received: 8.16x**_
 _**Growth Aura + Boost Mulch: 12.24x**_
 ::: table-mutations
@@ -25,6 +30,11 @@ _**Growth Aura + Boost Mulch: 12.24x**_
 ### Wacan + 4 Lum
 This is the ideal single berry setup, with the target berry in the central plot receiving the maximum possible Growth Aura boost of 10.33x. [[Items/Boost Mulch]] is optional but will reduce the growth time by a further 50%.
 
+:::collapsed Wacan + 4 Lum - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM4LCJhZ2UiOjM2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjowfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM4LCJhZ2UiOjM2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9XX19fQ==
+:::
 _**Growth Aura Received: 10.33x**_
 _**Growth Aura + Boost Mulch: 15.5x**_
 ::: table-mutations
@@ -39,6 +49,11 @@ _**Growth Aura + Boost Mulch: 15.5x**_
 ### Wacan + 2-3 Lum
 Even if the berry you're trying to affect with an aura isn't in the exact center, it is still significantly faster to add Lum berries to setups. [[Items/Boost Mulch]] is optional but will reduce the growth time by a further 50%.
 
+:::collapsed Wacan + 3 Lum - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM4LCJhZ2UiOjM2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjowfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM4LCJhZ2UiOjM2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX1dfX19
+:::
 _**Growth Aura Received: 10.03x**_
 _**Growth Aura + Boost Mulch: 15.05x**_
 ::: table-mutations
@@ -50,6 +65,11 @@ _**Growth Aura + Boost Mulch: 15.05x**_
 | | [[File:Lum.png\|32px]] [[Berries/Lum]] | | | | |
 :::
 
+:::collapsed Wacan + 2 Lum - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM4LCJhZ2UiOjM2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6MH0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM4LCJhZ2UiOjM2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfV19fX0=
+:::
 _**Growth Aura Received: 9.46x**_
 _**Growth Aura + Boost Mulch: 14.19x**_
 ::: table-mutations
@@ -71,6 +91,11 @@ The setup gives you 6 plots at 4.83x harvest rate, and 4 plots at 2.86x harvest 
 
 - Example: Using this setup, growing and harvesting 10 [[Berries/Aguav]] berries while all the Passho berries are ripe will yield 684 Aguav berries (1,372 with Rich Mulch) per harvesting cycle. In comparison, growing and harvesting 25 Aguav berries without any Passho berries would yield 425 Aguav berries (850 with Rich mulch) per harvesting cycle. Using Farmhand Jessie with the [[Oak Items/Sprayduck]] equipped to repeatedly harvest Aguav berries every 4 minutes would yield 40,356 berries (80,948 with Rich Mulch) for the duration of the Passho berries' ripe phase.
 
+:::collapsed 3 Passho Lines - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6MX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoxfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6MX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjF9LHsiYmVycnkiOjM3LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM3LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM3LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM3LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM3LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoxfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6MX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoxfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6MX0seyJiZXJyeSI6MzcsImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzcsImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzcsImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzcsImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzcsImFnZSI6NDMyMDAsIm11bGNoIjotMX1dfX19
+:::
 _**Harvest Aura Bonuses: 6 Plots: 4.83x - 4 Plots: 2.86x**_
 _**Harvest Aura + Rich Mulch: 6 Plots: 9.66x - 4 Plots: 5.72x**_
 ::: table-mutations
@@ -89,6 +114,12 @@ This setup will yield slightly fewer berries per harvesting cycle, in exchange f
 
 You can also simply replace a Passho in one of the corners with a 2nd Petaya. When the first Petaya's wither time is getting close to the growth time of a Petaya minus the wither time of a Passho (10 hours with just Sprayduck equipped, ~6 hours 40 minutes if you use [[Items/Boost Mulch]] on the 2nd Petaya as well as having the Sprayduck equipped).
 When timed correctly, you can harvest the near-death Petaya and replace it with another Passho Berry to keep this formation up indefinitely.
+
+:::collapsed 3 Passho Lines + Petaya - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo2NCwiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzcsImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzcsImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzcsImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzcsImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoxfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6MX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoxfSx7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6MX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoxfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6MX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjF9LHsiYmVycnkiOjM3LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM3LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM3LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM3LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM3LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9XX19fQ==
+:::
 _**Harvest Aura Bonuses: 5 Plots: 4.83x - 3 Plots: 2.86x - 1 Plot: 3.71x - 1 Plot: 2.2x**_
 _**Harvest Aura + Rich Mulch: 5 Plots: 9.66x - 3 Plots: 5.72x - 1 Plot: 7.42x - 1 Plot: 4.4x**_
 
@@ -114,6 +145,11 @@ Since it takes some time for the Passho berries to grow, first calculate the act
 Make sure to apply [[Items/Rich Mulch]] before harvesting the Gen 5 berries!
 Using this strategy will yield 32 (28 cumulative) Gen 5 berries harvested per cycle.
 
+:::collapsed Growth Aura Setup - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM4LCJhZ2UiOjM2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM4LCJhZ2UiOjM2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6MH0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6MH0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM4LCJhZ2UiOjM2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM4LCJhZ2UiOjM2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6MH0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6MH0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM4LCJhZ2UiOjM2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzgsImFnZSI6MzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM4LCJhZ2UiOjM2MDAsIm11bGNoIjotMX1dfX19
+:::
 _**Growth Aura Bonus: 8.14x**_
 _**Harvest Aura + Sprayduck + Boost Mulch Bonus: 18.4x**_
 
@@ -126,6 +162,11 @@ _**Harvest Aura + Sprayduck + Boost Mulch Bonus: 18.4x**_
 | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | |
 :::
 
+:::collapsed Harvest Aura Setup - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6MX0seyJiZXJyeSI6MzcsImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjF9LHsiYmVycnkiOjM3LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM3LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM3LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM3LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM3LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM3LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjM3LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoxfSx7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6MX0seyJiZXJyeSI6MzcsImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzcsImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzcsImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzcsImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzcsImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzcsImFnZSI6NDMyMDAsIm11bGNoIjotMX1dfX19
+:::
 _**Harvest Aura Bonus: 8.14x**_
 _**Harvest Aura + Rich Mulch Bonus: 16.28x**_
 
@@ -141,6 +182,11 @@ _**Harvest Aura + Rich Mulch Bonus: 16.28x**_
 ## EV Yield Setups{#EV}
 [EV](#!Pokérus "Pokérus") yield is affected by the Rowap berry. The setup below increases the yield of EVs gained in all applicable situations.  It stacks with other EV bonuses, including [[Items/Blue Flute]] and [[Items/Repeat Ball]].
 
+:::collapsed Rowap+Lum - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfV19fX0=
+:::
 _**EV Gain Bonus: 2.54x**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -155,6 +201,11 @@ _**EV Gain Bonus: 2.54x**_
 
 The Petaya variant has slightly less EV yield but will last for up to five days vs. Rowap's normal lifespan of less than six hours. For an even longer uptime, use the [Infinite Farm](#infinite) setup.
 
+:::collapsed Rowap+Lum+Petaya - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NCwiYWdlIjo0MzIwMDAsIm11bGNoIjotMX1dfX19
+:::
 _**EV Gain Bonus: 2.43x**_
 
 ::: table-mutations
@@ -175,6 +226,11 @@ Using 2 Lum berries surrounded by 13 Roseli berries, and then filling the remain
 
 - _Note: Do not use this setup with [[Berries/Occa]], [[Berries/Colbur]], or [[Berries/Kebia]] or [[Berries/Enigma]] berries due to their nature of overtaking other berries. See "Parasite Berries" below for those setups. Using this exact setup with [Berries/Chople] may cause it to mutate into [Berries/Chilan], but moving one of the rows of Chople to the very bottom eliminates any risk of mutation with no downside._
 
+:::collapsed Roseli + Lum + Attracting Berry - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjV9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjo1fSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjV9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjo1fSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjV9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjo1fSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX1dfX19
+:::
 _**Attract Aura: 3.54x,
 Encounter Chance per 1.5s: 1.77%**_
 ::: table-mutations
@@ -190,6 +246,11 @@ Encounter Chance per 1.5s: 1.77%**_
 For a significantly longer uptime than the above setup to attract a wandering Pokémon - perhaps if you're looking for a specific Pokémon or group of Pokémon to turn shiny for example - replace a Roseli berry with a Petaya berry.
 This doesn't decrease the encounter chance per second significantly, but it does make this setup viable for several days instead of several hours.  [[Items/Gooey Mulch]] is optional but increases the capture rate and odds of attracting rare Wanderers.
 
+:::collapsed Roseli + Lum + Petaya + Attracting Berry - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjV9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjo1fSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjV9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjo1fSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjV9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjo1fSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjQsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9XX19fQ==
+:::
 _**Attract Aura: 3.21x,
 Encounter Chance per 1.5s: 1.61%**_
 ::: table-mutations
@@ -207,6 +268,11 @@ These setups will work for all Parasite berries, namely [[Berries/Occa]], [[Berr
 #### Roseli + Lum + Babiri + Attracting Berry
 Using one [[Berries/Lum]] berry surrounded by eight [[Berries/Roseli]] berries, with each side being protected by a [[Berries/Babiri]], and then filling the remainder of open farm spots with the parasite berry is the most effective way of attracting wandering Pokémon to the farm.  Parasite setups also work for attracting wanderers to [[Berries/Enigma]] without any risk of mutations.  [[Items/Gooey Mulch]] is optional but increases the capture rate and chance for rare wanderers.
 
+:::collapsed Roseli + Lum + Babiri + Attracting Berry - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjV9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjo1fSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjV9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjo1fSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjV9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjV9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjo1fSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUzLCJhZ2UiOjUwNDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUzLCJhZ2UiOjUwNDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjo1fSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX1dfX19
+:::
 _**Attract Aura: 2.18x,
 Encounter Chance per 1.5s: 1.48%**_
 ::: table-mutations
@@ -222,6 +288,11 @@ Encounter Chance per 1.5s: 1.48%**_
 For a significantly longer uptime than the above setup to attract a wandering Pokémon - perhaps if you're looking for a specific Pokémon or group of Pokémon to turn shiny for example - replace a Roseli berry with a Petaya berry.
 This doesn't decrease the encounter chance per second significantly, but it does make this setup viable for several days instead of several hours. [[Items/Gooey Mulch]] is optional but increases the capture rate and chance for rare wanderers.
 
+:::collapsed Roseli + Lum + Babiri + Petaya + Attracting Berry - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjV9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjo1fSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjV9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjo1fSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjV9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjV9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjo1fSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUzLCJhZ2UiOjUwNDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUzLCJhZ2UiOjUwNDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjo1fSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6NX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjQsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9XX19fQ==
+:::
 _**Attract Aura: 1.97x,
 Encounter Chance per 1.5s: 1.38%**_
 ::: table-mutations
@@ -238,6 +309,11 @@ Shoveled your only copy of a Gen 5 berry by accident? You can use [[Berries/Enig
 Here is the setup you need to mutate a Petaya berry if you shovel your only one by accident.
 - _Note: Don't forget to equip the [[Oak Items/Squirtbottle]], and use [[Items/Surprise Mulch]] as this is a mutation. Purple squares indicate where mutations can occur._
 
+:::collapsed Enigma Setup - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo2OCwiYWdlIjo2MDQ4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjY4LCJhZ2UiOjYwNDgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NjgsImFnZSI6NjA0ODAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo2OCwiYWdlIjo2MDQ4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn1dfX19
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Payapa.png\|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\|32px]] [[Berries/Payapa]] {.mutation} | [[File:Payapa.png\|32px]] [[Berries/Payapa]] {.mutation} | |
@@ -250,6 +326,11 @@ Here is the setup you need to mutate a Petaya berry if you shovel your only one 
 ## Roaming Pokémon Setup{#roamers}
 Trying to attract a roaming Pokémon? The [[Berries/Jaboca]] berry can help boost your roaming encounter chances, and Lum can help boost those odds further.
 
+:::collapsed Roaming Pokémon Setup - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1NywiYWdlIjo2Njk2MCwibXVsY2giOi0xfV19fX0=
+:::
 _**Roaming Pokémon Chance: 2.54x**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -267,7 +348,11 @@ Here are a few highly efficient strategies on how to level up the [[Oak Items/Sq
 If you want to be able to gain experience more passively, then the best strategy is with Occa and Kebia berries. Colbur works for this as well, but takes longer enough to grow that it isn't as useful. This strategy will likely let you level up your Squirtbottle from 0 to 5 without having to set it up again unless you get unlucky with a full takeover.
 - _Note: When using this strategy, make sure to plant the berries so that they ripen at the same time, so planting Kebia Berries when Occa has 10 minutes left till ripen; to lower the chance of full takeover._
 
-**Farm**
+:::collapsed Berry Wars Setup - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjozNiwiYWdlIjo0MzkyMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNiwiYWdlIjo0MzkyMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNiwiYWdlIjo0MzkyMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNiwiYWdlIjo0MzkyMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNiwiYWdlIjo0MzkyMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNiwiYWdlIjo0MzkyMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNiwiYWdlIjo0MzkyMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNiwiYWdlIjo0MzkyMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNiwiYWdlIjo0MzkyMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNiwiYWdlIjo0MzkyMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNiwiYWdlIjo0MzkyMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNiwiYWdlIjo0MzkyMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNiwiYWdlIjo0MzkyMCwibXVsY2giOi0xfV19fX0=
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Occa.png\|32px]] [[Berries/Occa]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Occa.png\|32px]] [[Berries/Occa]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Occa.png\|32px]] [[Berries/Occa]] | |
@@ -281,7 +366,11 @@ If you want to be able to gain experience more passively, then the best strategy
 If you only have Kebia berries and neither of the other two, you can use Kebia and Sitrus at the same time in the following formation.
 - _Note: This will need to be set up every 20 minutes since both berries take 10 minutes to ripen, but you don't need to check on it more often than that._
 
-**Farm**
+:::collapsed Sitrus + Kebia - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo3LCJhZ2UiOjEyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NywiYWdlIjoxMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjcsImFnZSI6MTIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo3LCJhZ2UiOjEyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NywiYWdlIjoxMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjcsImFnZSI6MTIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo3LCJhZ2UiOjEyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDIsImFnZSI6ODY0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NywiYWdlIjoxMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjcsImFnZSI6MTIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo3LCJhZ2UiOjEyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NywiYWdlIjoxMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjcsImFnZSI6MTIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo3LCJhZ2UiOjEyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NywiYWdlIjoxMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQyLCJhZ2UiOjg2NDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjcsImFnZSI6MTIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo3LCJhZ2UiOjEyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NywiYWdlIjoxMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjcsImFnZSI6MTIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo3LCJhZ2UiOjEyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NywiYWdlIjoxMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjcsImFnZSI6MTIwMCwibXVsY2giOi0xfV19fX0=
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | |
@@ -304,7 +393,11 @@ This setup's objective is to earn the maximum number of Farm Points per second. 
 
 Purple spots are where the player is meant to harvest the berry and replace with more Cheri. Note that if a Colbur overtakes a Cheri at a stage different from Berry (ripe), it's highly recommended to shovel it and plant another Cheri there. Also, it's recommended to equip [[Oak Items/Squirtbottle]] as it increases mutation chance.
 
-**Farm**
+:::collapsed Colbur Nonsense - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjQsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjAsImFnZSI6NjAsIm11bGNoIjotMX0seyJiZXJyeSI6MCwiYWdlIjo2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ1LCJhZ2UiOjY4NDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ1LCJhZ2UiOjY4NDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjAsImFnZSI6NjAsIm11bGNoIjotMX0seyJiZXJyeSI6NTAsImFnZSI6NTQwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MCwiYWdlIjo2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjAsImFnZSI6NjAsIm11bGNoIjotMX0seyJiZXJyeSI6MCwiYWdlIjo2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjAsImFnZSI6NjAsIm11bGNoIjotMX0seyJiZXJyeSI6MCwiYWdlIjo2MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MCwiYWdlIjo1NDAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUwLCJhZ2UiOjU0MDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjAsImFnZSI6NjAsIm11bGNoIjotMX0seyJiZXJyeSI6MCwiYWdlIjo2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjAsImFnZSI6NjAsIm11bGNoIjotMX0seyJiZXJyeSI6MCwiYWdlIjo2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6LTF9XX19fQ==
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | |
@@ -319,6 +412,11 @@ This Farm setup boosts Egg Steps, EV Gain or Shiny Chance while lasting a very l
 
 Replace the [[Berries/Rowap]] with [[Berries/Chople]] or [[Berries/Starf]] depending on what aura boost is desired.
 
+:::collapsed Infinite Farm - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6NDksImFnZSI6MTcyODAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ5LCJhZ2UiOjE3MjgwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OSwiYWdlIjoxNzI4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OSwiYWdlIjoxNzI4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjQsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ5LCJhZ2UiOjE3MjgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ5LCJhZ2UiOjE3MjgwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OSwiYWdlIjoxNzI4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDksImFnZSI6MTcyODAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfV19fX0=
+:::
 **Egg Step Bonus with Chople: 2.03x
 or EV Bonus with Rowap: 1.70x
 or Shiny Chance Bonus with Starf: 1.70x**
