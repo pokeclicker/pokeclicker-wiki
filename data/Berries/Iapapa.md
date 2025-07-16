@@ -12,6 +12,13 @@ Iapapa has a chance of mutating by surrounding an empty plot with at least 25, b
 :::
 
 **Optimized Formation**
+
+:::collapsed Iapapa Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NCwiYWdlIjoyNDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NCwiYWdlIjoyNDAsIm11bGNoIjotMX0seyJiZXJyeSI6NCwiYWdlIjoyNDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NCwiYWdlIjoyNDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NCwiYWdlIjoyNDAsIm11bGNoIjotMX0seyJiZXJyeSI6NCwiYWdlIjoyNDAsIm11bGNoIjotMX1dfX19
+:::
+
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | |
