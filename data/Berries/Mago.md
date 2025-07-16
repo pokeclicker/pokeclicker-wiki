@@ -12,6 +12,13 @@ Mago has a chance of mutating by surrounding an empty plot with at least 25, but
 :::
 
 **Optimized Formation**
+
+:::collapsed Mago Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MiwiYWdlIjoxMjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyLCJhZ2UiOjEyMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyLCJhZ2UiOjEyMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyLCJhZ2UiOjEyMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MiwiYWdlIjoxMjAsIm11bGNoIjotMX0seyJiZXJyeSI6MiwiYWdlIjoxMjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MiwiYWdlIjoxMjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyLCJhZ2UiOjEyMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyLCJhZ2UiOjEyMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyLCJhZ2UiOjEyMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MiwiYWdlIjoxMjAsIm11bGNoIjotMX0seyJiZXJyeSI6MiwiYWdlIjoxMjAsIm11bGNoIjotMX1dfX19
+:::
+
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | {.mutation} | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | |
