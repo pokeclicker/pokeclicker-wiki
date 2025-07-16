@@ -48,6 +48,7 @@ eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6
 | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.freeze} | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.freeze} | |
 | [[File:Pecha.png\|32px]] [[Berries/Pecha]] {.freeze} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] {.freeze} | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] {.freeze} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] {.freeze} | |
 :::
+* (**Note**: This formation may also yield [[File:Nanab.png\|32px]] [[Berries/Nanab]] Berries.)
 
 **Timing Table**
 All planting times refer to the "Until Ripe" value of the first Berry planted.
