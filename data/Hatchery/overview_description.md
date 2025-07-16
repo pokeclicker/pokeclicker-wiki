@@ -107,6 +107,11 @@ Legend:
 
 The easiest strategy for planting Chople berries is to leave empty rows separating each row of Chople berries. This is easy to do and requires no additional berries, but is also less efficient than other more complex strategies.
 
+:::collapsed Chople + Empty Rows - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9XX19fQ==
+:::
 **Egg Step Bonus: 1.56x**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -121,6 +126,11 @@ The easiest strategy for planting Chople berries is to leave empty rows separati
 
 A slightly more complex strategy for planting Chople berries is to plant berries that decrease decay rates ([[Berries/Yache]] or [[Berries/Haban]]) between each of the rows of Chople berries as it results in longer wither times for Chople berries.
 
+:::collapsed Chople + Yache - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MCwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MCwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MCwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MCwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MCwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MCwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MCwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MCwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MCwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MCwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfV19fX0=
+:::
 **Egg Step Bonus: 1.56x**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -131,6 +141,11 @@ A slightly more complex strategy for planting Chople berries is to plant berries
 | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
 :::
 
+:::collapsed Chople + Haban - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OSwiYWdlIjoxNzI4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDksImFnZSI6MTcyODAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ5LCJhZ2UiOjE3MjgwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OSwiYWdlIjoxNzI4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDksImFnZSI6MTcyODAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ5LCJhZ2UiOjE3MjgwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OSwiYWdlIjoxNzI4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDksImFnZSI6MTcyODAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ5LCJhZ2UiOjE3MjgwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OSwiYWdlIjoxNzI4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX1dfX19
+:::
 **Egg Step Bonus: 1.56x**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -146,6 +161,11 @@ A slightly more complex strategy for planting Chople berries is to plant berries
 
 A strategy that is easier in many respects than Chople + Yache/Haban is Chople + [[Berries/Petaya]]. Petaya is one of the final berries to unlock, and it is one of the most challenging to do so, so it might not be the most accessible option. However, the aura effect of Petaya berries "freeze" the timers of ripe berries on the farm, locking them at infinity so long as the Petaya plant is ripe. This is an incredibly powerful effect as Petaya berries remain ripe for 4 days (no modifiers). Thus, this strategy provides a very stable setup for three rows of Chople berries for much longer than using two empty rows.
 
+:::collapsed Chople + Petaya - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6NjQsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX1dfX19
+:::
 **Egg Step Bonus: 1.56x**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -160,6 +180,11 @@ A strategy that is easier in many respects than Chople + Yache/Haban is Chople +
 
 Another somewhat easy strategy is Chople + [[Berries/Babiri]]. Ripe Babiri berries prevent mutations in the berries they are near. Thus, once they are unlocked four strategically placed Babiri berries can allow for a more full farm of Chople berries.
 
+:::collapsed Chople + Babiri - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX1dfX19
+:::
 **Egg Step Bonus: 1.86x**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -174,6 +199,11 @@ Another somewhat easy strategy is Chople + [[Berries/Babiri]]. Ripe Babiri berri
 
 Another somewhat easy strategy is Chople + [[Berries/Lum]]. Ripe Lum berries boost the auras of the berries they are near (max of one boost for each nearby berry). Thus, once they are unlocked four strategically placed Lum berries can allow for a farm of Chople berries with increased boosts.
 
+:::collapsed Chople + Lum - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfV19fX0=
+:::
 **Egg Step Bonus: 2.43x**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -188,6 +218,11 @@ Another somewhat easy strategy is Chople + [[Berries/Lum]]. Ripe Lum berries boo
 
 Combines Chople + Lum with a Petaya for a longer duration boost.
 
+:::collapsed Chople + Lum + Petaya - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY0LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9XX19fQ==
+:::
 **Egg Step Bonus: 2.43x**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -210,6 +245,11 @@ All planting times use the time-to-ripe remaining of the first planted berry for
 
 This strategy combines Chople + Babiri and Chople + Petaya, utilizing the effects of each berry for a farm with one fewer Chople, but far more longevity. A Petaya berry and strategically placed Babiri berries prolong the ripe times and prevent mutations of all ripe berries on the farm.
 
+:::collapsed Chople + Babiri + Petaya - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY0LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9XX19fQ==
+:::
 **Egg Step Bonus: 1.81x**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -232,6 +272,11 @@ All planting times use the time-to-ripe remaining of the first planted berry for
 
 This strategy combines Chople + Babiri and Chople + Lum, utilizing the effects of each berry for a farm with fewer Choples, but a far greater boost. Moving the Babiris and Lums like this lets us replace one Babiri while still avoiding any mutation risk.
 
+:::collapsed Chople + Babiri + Lum - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfV19fX0=
+:::
 **Egg Step Bonus: 2.90x**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -254,6 +299,11 @@ All planting times use the time-to-ripe remaining of the first planted berry for
 
 This strategy adds a Petaya berry to Chople + Babiri + Lum for a farm with one fewer Chople, but far more longevity.
 
+:::collapsed Chople + Babiri + Petaya + Lum - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY0LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX1dfX19
+:::
 **Egg Step Bonus: 2.73x**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -279,6 +329,11 @@ All planting times use the time-to-ripe remaining of the first planted berry for
 ### Infinite Farm
 The combination of [[Berries/Haban]] and [[Berries/Lum]] in this formation make the [[Berries/Petaya]] live for approximately 3.5 years once the setup fully ripens. While not as efficient as other setups, it works for those who want to forget about the Farm. The placement of Choples in the Infinite setup means there's no chance of [[Berries/Chilan]] mutating.
 
+:::collapsed Infinite Farm w/ Chople - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OSwiYWdlIjoxNzI4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDksImFnZSI6MTcyODAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ5LCJhZ2UiOjE3MjgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OSwiYWdlIjoxNzI4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjQsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ5LCJhZ2UiOjE3MjgwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OSwiYWdlIjoxNzI4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDksImFnZSI6MTcyODAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ5LCJhZ2UiOjE3MjgwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfV19fX0=
+:::
 **Egg Step Bonus: 2.03x**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
