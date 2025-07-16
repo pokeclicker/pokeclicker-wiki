@@ -69,6 +69,11 @@ Full Strategy | MESBM | MSBM | BD (hours) | MRT (hours) | U% | MESBM w/ U% | MSB
 ### Starf Planting Formation
 Planting Starf Berries can increase the Shiny Rate of all Pokémon encounters, including hatched eggs. Below is a Planting Table of the most efficient setup to use only Starf Berries.
 
+:::collapsed Starf Only - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX1dfX19
+:::
 _**Shiny Bonus: 1.45x**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -82,6 +87,11 @@ _**Shiny Bonus: 1.45x**_
 ### Starf + Chople Planting Formation
 Planting Starf and Chople Berries together increases the Shiny Rate and Egg Steps Gained at the same time. Below is a planting table of the most efficient setup.
 
+:::collapsed Starf + Chople - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX1dfX19
+:::
 _**Shiny Bonus: 1.16x
 Egg Step Bonus: 1.56x**_
 ::: table-mutations
@@ -96,6 +106,11 @@ Egg Step Bonus: 1.56x**_
 ### Starf + Chople + Petaya Planting Formation
 Combines Starf + Chople with a Petaya for a less efficient setup but with much more longevity.
 
+:::collapsed Starf + Chople + Petaya - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY0LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX1dfX19
+:::
 _**Shiny Bonus: 1.14x
 Egg Step Bonus: 1.56x**_
 ::: table-mutations
@@ -118,6 +133,11 @@ Chople | 19 hours 59 mins 59 secs until ripe | 13 hours 19 mins 59 secs until ri
 ### Starf + Lum Planting Formation
 Planting Starf Berries near at least one Lum Berry increases the Shiny Rate of all Pokémon encounters including hatched eggs more than solely using Starf berries. Below is a Planting Table of the most efficient setup.
 
+:::collapsed Starf + Lum - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfV19fX0=
+:::
 _**Shiny Bonus: 2.54x**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -131,6 +151,11 @@ _**Shiny Bonus: 2.54x**_
 ### Starf + Lum + Petaya Planting Formation
 Combines Starf + Lum with a Petaya for a slightly less efficient setup with much more longevity.
 
+:::collapsed Starf + Lum + Petaya - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjQsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfV19fX0=
+:::
 _**Shiny Bonus: 2.43x**_
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -152,6 +177,11 @@ Lum | 11 hours 59 mins 59 secs until ripe | 7 hours 59 mins 59 secs until ripe |
 ### Starf + Lum + Chople Planting Formation
 Combines Starf + Lum and Starf + Chople for massive improvements in Shinies hatched over time. Below is a planting table of the most efficient setup.
 
+:::collapsed Starf + Lum + Chople - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfV19fX0=
+:::
 _**Egg Step Bonus: 2.43x
 Shiny Bonus: 1.31x**_
 ::: table-mutations
@@ -174,6 +204,11 @@ Lum | 1 hour until ripe | 40 mins until ripe | 26 mins 40 secs until ripe
 ### Starf + Lum + Chople + Petaya Planting Formation
 Takes Chople + Lum + Petaya and adds Starf berries in the open spaces for a boost to Shiny Rate as well as egg steps.
 
+:::collapsed Starf + Lum + Chople + Petaya - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjQsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfV19fX0=
+:::
 _**Egg Step Bonus: 2.43x
 Shiny Bonus: 1.25x**_
 ::: table-mutations
@@ -193,3 +228,31 @@ Starf | - | - | -
 Petaya | - | - | -
 Chople | 19 hours 59 mins 59 secs until ripe | 13 hours 19 mins 59 secs until ripe | 8 hours 53 mins 19 secs until ripe
 Lum | 11 hours 59 mins 59 secs until ripe | 7 hours 59 mins 59 secs until ripe | 5 hours 19 mins 59 secs until ripe
+
+### Infinite Farm
+The combination of [[Berries/Haban]] and [[Berries/Lum]] in this formation make the [[Berries/Petaya]] live for approximately 3.5 years once the setup fully ripens. While not as efficient as other setups, it works for those who want to forget about the Farm.
+
+:::collapsed Infinite Farm w/ Starf - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ5LCJhZ2UiOjE3MjgwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OSwiYWdlIjoxNzI4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDksImFnZSI6MTcyODAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OSwiYWdlIjoxNzI4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjQsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ5LCJhZ2UiOjE3MjgwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDksImFnZSI6MTcyODAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ5LCJhZ2UiOjE3MjgwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OSwiYWdlIjoxNzI4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NywiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY3LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfV19fX0=
+:::
+**Shiny Bonus: 1.70x**
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Starf.png\|32px]] [[Berries/Starf]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Starf.png\|32px]] [[Berries/Starf]] | [[File:Starf.png\|32px]] [[Berries/Starf]] | [[File:Starf.png\|32px]] [[Berries/Starf]] | |
+| [[File:Starf.png\|32px]] [[Berries/Starf]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | |
+| [[File:Starf.png\|32px]] [[Berries/Starf]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Starf.png\|32px]] [[Berries/Starf]] | |
+| [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Starf.png\|32px]] [[Berries/Starf]] | |
+| [[File:Starf.png\|32px]] [[Berries/Starf]] | [[File:Starf.png\|32px]] [[Berries/Starf]] | [[File:Starf.png\|32px]] [[Berries/Starf]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Starf.png\|32px]] [[Berries/Starf]] | |
+:::
+
+#### Timing Table
+
+All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times.
+| Berry | Planting Time with No Modifier | Planting Time with Mulch/Sprayduck | Planting Time with  Mulch+Sprayduck|
+|---|---|---|---|
+| [[Berries/Petaya]] | - | - | - |
+| [[Berries/Haban]] | - | - | - |
+| [[Berries/Starf]] | - | - | - |
+| [[Berries/Lum]] | 11 hours 59 minutes 59 seconds until ripe | 7 hours 59 mins 59 secs until ripe | 5 hours 19 mins 59 secs until ripe|
