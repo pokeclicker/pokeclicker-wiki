@@ -27,6 +27,7 @@ eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6
 | {.mutation} | [[File:Aguav.png\|32px]] [[Berries/Aguav]] | {.mutation} | {.mutation} | [[File:Aguav.png\|32px]] [[Berries/Aguav]] | |
 | [[File:Figy.png\|32px]] [[Berries/Figy]] | [[File:Wiki.png\|32px]] [[Berries/Wiki]] | {.mutation} | [[File:Figy.png\|32px]] [[Berries/Figy]] | [[File:Wiki.png\|32px]] [[Berries/Wiki]] | |
 :::
+* (**Note**: This formation may also yield [[File:Grepa.png\|32px]] [[Berries/Grepa]] Berries.)
 
 **Timing Table**
 All planting times refer to the "Until Ripe" value of the first Berry planted.
