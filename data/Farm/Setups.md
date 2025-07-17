@@ -1,4 +1,4 @@
-Farming Setups are specific arrangements of berries that combine [Auras](#!Berries#aura) of various Berries together.  There are many useful setups for [Breeding Pokemon faster](#!Hatchery),  [Increasing Shiny Chance](#!Shiny_Chance), accelerating berry growth, or harvesting a lot of berries to trade to [[Berry Masters]] for their [[Daily Deals]].
+Farming Setups are specific arrangements of berries that combine [Auras](#!Berries#aura) of various Berries together.  There are many useful setups for [Breeding Pokemon faster](#!Hatchery),  [Increasing Shiny Chance](#!Shiny_Chance), [Increasing EV Yield](#!Pokérus), accelerating berry growth, or harvesting a lot of berries to trade to [[Berry Masters]] for their [[Daily Deals]].
 
 > _Aura Received is multiplicative from all eligible auras affecting a berry. If a Berry receives the aura from four aura berries each at 1.3x aura output, that Berry receives 1.3^4 = 2.8561, or ~2.86x as an aura multiplier. If a Berry receives auras from 3 berries, two at 1.3x and one at 1.2x, the berry receives 1.3^2 * 1.2x = 2.028, or ~2.03x aura output.  Not all Berry auras stack, such as Lum._
 
@@ -179,43 +179,6 @@ _**Harvest Aura + Rich Mulch Bonus: 16.28x**_
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 :::
 
-## EV Yield Setups{#EV}
-[EV](#!Pokérus "Pokérus") yield is affected by the Rowap berry. The setup below increases the yield of EVs gained in all applicable situations.  It stacks with other EV bonuses, including [[Items/Blue Flute]] and [[Items/Repeat Ball]].
-
-:::collapsed Rowap + Lum - Farm Simulator Code
-Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
-
-eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfV19fX0=
-:::
-_**EV Gain Bonus: 2.54x**_
-::: table-mutations
-| :----: | :----: | :----: | :----: | :----: |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-:::
-
-### Rowap + Lum + Petaya
-
-The Petaya variant has slightly less EV yield but will last for up to five days vs. Rowap's normal lifespan of less than six hours. For an even longer uptime, use the [Infinite Farm](#infinite) setup.
-
-:::collapsed Rowap + Lum + Petaya - Farm Simulator Code
-Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
-
-eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NCwiYWdlIjo0MzIwMDAsIm11bGNoIjotMX1dfX19
-:::
-_**EV Gain Bonus: 2.43x**_
-
-::: table-mutations
-| :----: | :----: | :----: | :----: | :----: |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | |
-:::
 
 ## Wandering Pokémon Setups{#wanderers}
 [[Wandering Pokémon]] are attracted to ripe berries. For the maximum chance of attracting a desired wandering Pokémon, use one of the setups below.
@@ -410,7 +373,7 @@ eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11
 ### Infinite Farm{#infinite}
 This Farm setup boosts Egg Steps, EV Gain or Shiny Chance while lasting a very long time. The combination of [[Berries/Haban]] and [[Berries/Lum]] in this formation make the [[Berries/Petaya]] live for approximately 3.5 years once the setup fully ripens. While not as efficient as other setups, it works for those who want to forget about the Farm while still getting a benefit from it.
 
-Replace the [[Berries/Rowap]] with [[Berries/Chople]] or [[Berries/Starf]] depending on what aura boost is desired.
+Place [[Berries/Rowap]], [[Berries/Chople]] or [[Berries/Starf]] on the empty plots depending on what aura boost is desired.
 
 :::collapsed Infinite Farm - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
@@ -422,9 +385,9 @@ or EV Bonus with Rowap: 1.70x
 or Shiny Chance Bonus with Starf: 1.70x**
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
+| | [[File:Lum.png\|32px]] [[Berries/Lum]] | | | | |
+| | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | |
+| | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | | |
+| [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | | |
+| | | | [[File:Lum.png\|32px]] [[Berries/Lum]] | | |
 :::
