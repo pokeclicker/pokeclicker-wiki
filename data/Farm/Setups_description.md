@@ -2,7 +2,6 @@
 
 * [Colbur Nonsense](#nonsense) - Earn Farm Points quickly
 * [Egg Steps](#!Hatchery#farmStrats) - Hatch eggs faster
-* [EV Setup](#EV) - Get more [Effort Values](#!Pokérus) when capturing pokemon
 * [Growth Aura](#growth) - Make berries mature faster
 * [Harvest Aura](#harvest) - Increase berry yield when harvesting
 * [Infinite Farm](#infinite) - Passive auras that last for years
