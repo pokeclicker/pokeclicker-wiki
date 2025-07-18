@@ -1,4 +1,4 @@
-The **Pokémon Day Care** is a location in [[Kanto]] where [[Eggs]] and [[Fossils]] can be bred. Additionally, obtained [[Pokémon]] that have reached level 100 can be bred to receive an Attack bonus equal to 25% of its Base Attack.  The Pokémon Day Care is unlocked upon clearing [[Routes/Kanto Route 3]].
+The **Pokémon Day Care** is a location in [[Kanto]] where [[Eggs]] can be bred. Additionally, obtained [[Pokémon]] that have reached level 100 can be bred to receive an Attack bonus equal to 25% of its Base Attack.  The Pokémon Day Care is unlocked upon clearing [[Routes/Kanto Route 3]].
 
 One quest that can appear involves hatching a random amount of Eggs. These can be either purchased from [[Shops]], or from breeding level 100 Pokémon.
 
@@ -6,9 +6,9 @@ One quest that can appear involves hatching a random amount of Eggs. These can b
 
 As soon as [[Routes/Kanto Route 3]] is cleared, the Pokémon Day Care can be accessed by clicking on its location on the map on Route 3. Additionally, the Hatchery tab becomes available on the main page.
 
-There are three different types of hatch-able resources in Pokéclicker: obtained Pokémon Eggs, Fossils, and already obtained level 100 Pokémon. Pokémon Eggs are typically purchased in Shops and Fossils are typically mined from the [[Underground]]. The Egg/Fossil/Obtained Pokémon that can be bred each have their own distinct tab in the Pokémon Day Care modal.
+There are two different types of hatch-able resources in Pokéclicker: obtained Pokémon Eggs and already obtained level 100 Pokémon. Pokémon Eggs are typically purchased in Shops. The Egg Obtained Pokémon that can be bred each have their own distinct tab in the Pokémon Day Care modal.
 
-Clicking on the desired Egg/Fossil/Level 100 Pokémon will result in it being added to the Hatchery. The Hatchery only has 4 slots, one available from the start and 3 need that need to be unlocked:
+Clicking on the desired Egg/Level 100 Pokémon will result in it being added to the Hatchery. The Hatchery only has 4 slots, one available from the start and 3 need that need to be unlocked:
 
 | Slot | Cost |
 |---|---|
@@ -17,11 +17,11 @@ Clicking on the desired Egg/Fossil/Level 100 Pokémon will result in it being ad
 | 3 | 1,500 [[File:questPoint.svg\|25px]] |
 | 4 | 2,000 [[File:questPoint.svg\|25px]] |
 
-Later, the player can acquire Breeding Queue slots which are unlocked in each new Region (See Upgrades Below). The Breeding Queue automatically adds queued Pokémon to the Hatchery if there is space. If there is a Pokémon in the queue, Eggs/Fossils that are ready to hatch will do so and be replaced by the queued Pokémon.
+Later, the player can acquire Breeding Queue slots which are unlocked in each new Region (See Upgrades Below). The Breeding Queue automatically adds queued Pokémon to the Hatchery if there is space. If there is a Pokémon in the queue, Eggs that are ready to hatch will do so and be replaced by the queued Pokémon.
 
 Each Pokémon has a certain number of Egg Steps required before it can hatch from an Egg. Consult [[Pokémon]] for egg steps for all Pokémon. Egg Steps are gained through defeating Pokémon. [[Routes]], [[Gyms]], and [[Dungeons]] all yield different numbers of Egg Steps per Pokémon defeated, although the Egg Steps yielded generally scales with the difficulty of the Route, Gym, or Dungeon.
 
-When an Egg/Fossil in the Hatchery has obtained the required number of Egg Steps, as indicated by the green progress bar on each Egg/Fossil, it will be ready to hatch. Clicking on the image of the Egg/Fossil with hatch it, giving the player one of that Pokémon.
+When an Egg in the Hatchery has obtained the required number of Egg Steps, as indicated by the green progress bar on each Egg it will be ready to hatch. Clicking on the image of the Egg with hatch it, giving the player one of that Pokémon.
 
 Baby Pokémon are Pokémon obtained exclusively through Breeding the evolved stage of that Pokémon. The first time a Baby Pokémon is hatched the player will obtain both the original evolved stage, and the baby stage of that Pokémon.
 
