@@ -16,7 +16,7 @@ Only Pokémon that fulfill the below conditions are capable of contracting the v
 
 ## Pokérus Status
 
-There are 4 states of Pokérus as described below.
+There are 4 states of Pokérus.  Uninfected do not have the PKRS tag.  Pokemon that have contracted Pokérus but are still in the [[Hatchery]] are Infected.  Pokémon that have left the Hatchery and have less than 50 EVs are considered Contagious. Pokémon that fulfill all the above conditions but have gained 50 or more EVs are considered Resistant.
 
 State | Name | Description
 :--- | :--- | ---:
@@ -73,11 +73,20 @@ Example 2: Catching a **Shiny Roaming Pokémon** yields:
 Example 3: Catching a **Shiny Roaming Pokémon** with a **Repeatball** yields:
 **0.1 (Catching)  \* 5 (Shiny) \* 5 (Repeatball) \* 50 (Roaming) = 125 EVs**
 
+#### Break Points for non-caught Pokémon
+For Pokémon that cannot be caught - shop purchases, [Alcremie Spins](#!Battle_Cafe), and item evolutions, combining [[Berries/Rowap]] setups, equipping [[Items/Power Bracer]] and activating [[Items/Blue Flute]] gives the greatest possible yield for the fewest purchases / spins / items to reach Resistant.  Achievement % scales Blue Flute's effectiveness; the percentages in the table below are the minimum required.
+
+For 50EV | Rowap + Lum | Rowap + Lum + Petaya
+:--- | :---: | :---:
+10x | 0.00% | 38.60%
+9x | 361.34% | 609.56 %
+8x | 1044.01% | *1323.25%* *
+\* Not currently possible.
+
+
 ### EV Damage Multiplier
 
 EVs increase the amount of damage that a Pokémon does. EVs multiply the damage done by a Pokémon. If your Pokémon has fewer than 50 EVs, a Pokémon's EV Damage Multiplier increases by 0.01 per EV, and consequently a Pokémon gains 1% extra damage per EV for the first 50 EVs.
-
-Pokemon that have: contracted Pokérus, have left the hatchery after contracting Pokérus *(i.e., not Infected)*, and have gained less than 50 EVs are considered Contagious. However, Pokémon that fulfill all the above conditions but have gained 50 or more EVs are considered Resistant. See Pokérus States for more information on Pokérus States
 
 Beyond 50 EVs, Pokémon will still gain EVs at the same rate, but will see diminishing returns with respect to the EV Damage Multiplier bonus gained per EV gained. There is no limit to this multiplier.
 
@@ -102,7 +111,7 @@ EV Damage Multiplier = 1 + (EV / 100)
 EV Damage Multiplier = EV^(log(1.5)/log(50))
 
 ## EV Yield Setups{#Farm}
-[EV](#!Pokérus "Pokérus") yield is affected by the Rowap berry. The setup below increases the yield of EVs gained in all applicable situations.  It stacks with other EV bonuses, including [[Items/Blue Flute]] and [[Items/Repeat Ball]].
+[EV](#!Pokérus "Pokérus") yield is affected by the Rowap berry's Aura when grown on the [[Farm]]. The setup below increases the yield of EVs gained in all applicable situations.  It stacks with other EV bonuses, including [[Items/Blue Flute]] and [[Items/Repeat Ball]].
 
 :::collapsed Rowap + Lum - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
