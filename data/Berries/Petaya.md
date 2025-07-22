@@ -59,8 +59,8 @@ Please note that these timers are from the moment Haban is planted, so, for exam
 
 |Berry | Time | Boost Mulch Needed|
 |---|---|---|
-| [[Berries/Haban]] | --- | 128|
-| [[Berries/Babiri]] | --- | 52|
+| [[Berries/Haban]] | --- | 128 (64 with maxed Sprintlotad) |
+| [[Berries/Babiri]] | --- | 52 (26 with maxed Sprinkloted) |
 | [[Berries/Yache]] | 02:40:00 | --- |
 | [[Berries/Shuca]] | 03:17:36 | ---|
 | [[Berries/Charti]] | 03:37:36 | ---|
