@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-Magost has a chance of mutating when [[Berries/Pecha]], [[Berries/Nanab]], and [[Berries/Mago]] are touching an empty plot. You can fill your farm in the following way to obtain Magost Berries. Purple squares indicate where mutations can occur.
+Magost has a chance of mutating when [[Berries/Pecha]], [[Berries/Nanab]], and [[Berries/Mago]] are touching an empty plot. You can fill your farm in the following way to obtain Magost Berries. Purple squares indicate where mutations can occur.  [[Items/Freeze Mulch]] can be used on the Pecha Berries, or simply replant them if they die before getting the mutation.
 
 **Base Formation**
 ::: table-mutations
@@ -12,6 +12,11 @@ Magost has a chance of mutating when [[Berries/Pecha]], [[Berries/Nanab]], and [
 :::
 
 **Optimized Formation**
+:::collapsed  Magost Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MiwiYWdlIjoxMjAsIm11bGNoIjo0fSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjIsImFnZSI6MTIwLCJtdWxjaCI6NH0seyJiZXJyeSI6MTEsImFnZSI6NTAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE2LCJhZ2UiOjc0MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MTEsImFnZSI6NTAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE2LCJhZ2UiOjc0MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyLCJhZ2UiOjEyMCwibXVsY2giOjR9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MiwiYWdlIjoxMjAsIm11bGNoIjo0fSx7ImJlcnJ5IjoxMSwiYWdlIjo1MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTYsImFnZSI6NzQwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxMSwiYWdlIjo1MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTYsImFnZSI6NzQwLCJtdWxjaCI6LTF9XX19fQ==
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | {.mutation} | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | |
