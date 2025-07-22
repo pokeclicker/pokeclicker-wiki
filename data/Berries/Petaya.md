@@ -96,30 +96,33 @@ Before you start this process, you need to be prepared to spend around 11 hours 
 ### Petaya with Freeze Mulch (easy mode)
 Mutating a Petaya with Freeze Mulch makes the entire thing incredibly easy.  What you need to do is plant all the berries simultaneously, as seen in the mutation formation, and then simply apply the appropriate amount of [[Items/Freeze Mulch]] to the berry seeds, such that when the freeze mulch runs out the berry would start growing as if you had just planted it according to the timing table.  Below is a table for how much Freeze Mulch each berry needs for the timings to be correct.  Kasib and Kebia have such a short growth time (5 and 10 minutes without Sprayduck) that it's probably worth just planting them when the rest of the berries are nearly ripe, hence the optional.
 
-**Note: This table assumes you have given Haban 128 Boost Mulch and Babiri 52 Boost Mulch, and maxed [[Oak Items/Sprayduck]] is equipped.**
+**Note: these amounts can be halved if equipping a maxed [[Oak Items/Sprinklotad]].**
+**Note: This table assumes you have given Haban 128 Boost Mulch (64 with Sprinklotad) and Babiri 52 (26) Boost Mulch, and maxed [[Oak Items/Sprayduck]] is equipped.**
 
-| Berry | Freeze Mulch Needed | Time Displayed |
+| Berry | Freeze Mulch Needed | With Sprinklotad | Time Displayed |
 |---|---|---|
-| [[Berries/Haban]] | 0 | --|
-| [[Berries/Babiri]] | 0 | --|
-| [[Berries/Yache]] | 32 | 02:40:00 |
-| [[Berries/Shuca]] | 39 | 03:15:00 |
-| [[Berries/Charti]] | 43 | 03:35:00 |
-| [[Berries/Chople]] | 47 | 03:55:00 |
-| [[Berries/Payapa]] | 51 | 04:15:00 |
-| [[Berries/Rindo]] | 63 | 05:15:00 |
-| [[Berries/Colbur]] | 67 | 05:35:00 |
-| [[Berries/Roseli]] | 71 | 05:55:00 |
-| [[Berries/Occa]] | 78 | 06:30:00 |
-| [[Berries/Passho]] | 79 | 06:35:00 |
-| [[Berries/Coba]] | 83 | 06:55:00 |
-| [[Berries/Chilan]] | 111 | 09:15:00 |
-| [[Berries/Tanga]] | 119 | 09:55:00 |
-| [[Berries/Wacan]] | 123 | 10:15:00 |
-| [[Berries/Kebia]] | 126 (optional) | 10:30:00 |
-| [[Berries/Kasib]] | 126 (optional) | 10:30:00 |
+| [[Berries/Haban]] | 0 | 0 | --|
+| [[Berries/Babiri]] | 0 | 0 | --|
+| [[Berries/Yache]] | 32 | 16 | 02:40:00 |
+| [[Berries/Shuca]] | 39 | 19 | 03:15:00 |
+| [[Berries/Charti]] | 43 | 22 | 03:35:00 |
+| [[Berries/Chople]] | 47 | 24 | 03:55:00 |
+| [[Berries/Payapa]] | 51 | 26 | 04:15:00 |
+| [[Berries/Rindo]] | 63 | 32 | 05:15:00 |
+| [[Berries/Colbur]] | 67 | 34 | 05:35:00 |
+| [[Berries/Roseli]] | 71 | 36 | 05:55:00 |
+| [[Berries/Occa]] | 78 | 39 | 06:30:00 |
+| [[Berries/Passho]] | 79 | 40 | 06:35:00 |
+| [[Berries/Coba]] | 83 | 42 | 06:55:00 |
+| [[Berries/Chilan]] | 111 | 56 | 09:15:00 |
+| [[Berries/Tanga]] | 119 | 60 | 09:55:00 |
+| [[Berries/Wacan]] | 123 | 62 | 10:15:00 |
+| [[Berries/Kebia]] | 126 (optional) | 63 (optional) | 10:30:00 |
+| [[Berries/Kasib]] | 126 (optional) | 63 (optional) | 10:30:00 |
 
-In total 1,006 (or 1,258 counting the optional 2 last berries) Freeze Mulches are needed to use this method. Remember to check the [critical information](#critical-info) section once the setup is fully ripe!
+In total 1,006 (or 1,258 counting the optional 2 last berries) Freeze Mulches are needed to use this method.
+If using a maxed [[Oak Items/Sprinklotad]], this can be narrowed down to 508 (or 634 counting the optional 2 last berries) Freeze Mulches.
+Remember to check the [critical information](#critical-info) section once the setup is fully ripe!
 
 ### Timing Table {#timing-table}
 All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times
