@@ -12,6 +12,12 @@ Rabuta has a chance of mutating when a Taller or later stage [[Berries/Aspear]] 
 :::
 
 **Optimized Formation**
+
+:::collapsed Rabuta Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOjJ9LHsiYmVycnkiOjQsImFnZSI6MjQwLCJtdWxjaCI6Mn0seyJiZXJyeSI6NCwiYWdlIjoyNDAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOjJ9LHsiYmVycnkiOjQsImFnZSI6MjQwLCJtdWxjaCI6Mn0seyJiZXJyeSI6NCwiYWdlIjoyNDAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NCwiYWdlIjoyNDAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOjJ9LHsiYmVycnkiOjE3LCJhZ2UiOjcwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOjJ9LHsiYmVycnkiOjQsImFnZSI6MjQwLCJtdWxjaCI6Mn0seyJiZXJyeSI6NCwiYWdlIjoyNDAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOjJ9LHsiYmVycnkiOjQsImFnZSI6MjQwLCJtdWxjaCI6Mn0seyJiZXJyeSI6NCwiYWdlIjoyNDAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOjJ9LHsiYmVycnkiOjQsImFnZSI6MjQwLCJtdWxjaCI6Mn0seyJiZXJyeSI6NCwiYWdlIjoyNDAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOjJ9LHsiYmVycnkiOjQsImFnZSI6MjQwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MTcsImFnZSI6NzAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQsImFnZSI6MjQwLCJtdWxjaCI6Mn0seyJiZXJyeSI6NCwiYWdlIjoyNDAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX1dfX19
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Aspear.png\|32px]] [[Berries/Aspear]] {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] {.mutation} | |
