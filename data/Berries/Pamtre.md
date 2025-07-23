@@ -14,6 +14,12 @@ Pamtre has a chance of mutating when a Taller or later stage [[Berries/Cornn]] i
 :::
 
 **Optimized Formation**
+
+:::collapsed  Pamtre Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOjJ9LHsiYmVycnkiOjI2LCJhZ2UiOjE4MDAwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MjYsImFnZSI6MTgwMDAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOjJ9LHsiYmVycnkiOjI2LCJhZ2UiOjE4MDAwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MjYsImFnZSI6MTgwMDAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOjJ9LHsiYmVycnkiOjI2LCJhZ2UiOjE4MDAwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MjYsImFnZSI6MTgwMDAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNiwiYWdlIjoxODAwMCwibXVsY2giOi0xfV19fX0=
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Cornn.png\|32px]] [[Berries/Cornn]] | [[File:Cornn.png\|32px]] [[Berries/Cornn]] | [[File:Cornn.png\|32px]] [[Berries/Cornn]] | [[File:Cornn.png\|32px]] [[Berries/Cornn]] | [[File:Cornn.png\|32px]] [[Berries/Cornn]] | |
