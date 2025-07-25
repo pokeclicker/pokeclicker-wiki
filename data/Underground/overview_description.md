@@ -63,7 +63,7 @@ Each mine contains a number of treasures that scale with your Underground Level.
 
 Minimum:
 - Starts at 1
-- Increases at levels: 3, 9, 6, 15, 21, 27
+- Increases at levels: 3, 9, 15, 21, 27
 - Maximum minimum: 6
 
 Maximum:
@@ -124,7 +124,7 @@ Below are key milestones where major upgrades are unlocked. At these levels, spe
 | Level | Total Experience Needed | Non-Survey Tool Repair Rate | Minimum Treasures | Maximum Treasures | Mine Discovery Time | Survey Size |
 |---|---|---|---|---|---|---|
 | 0 | 0 | 2% every 20s | 1 | 3 | 15m 00s | 9x9 |
-| 24 | 55,251 | **Infinite** | 4 | 6 | 15m 00s | 7x7 |
+| 24 | 55,251 | **Infinite** | 5 | 7 | 13m 00s | 7x7 |
 | 27 | 85,071 | Infinite | **6** | 7 | 11m 30s | 7x7 |
 | 30 | 130,424 | Infinite | 6 | **8** | 10m 00s | 5x5 |
 | 50 | 2,165,315 | Infinite | 6 | 8 | **00m 00s** | 3x3 |
