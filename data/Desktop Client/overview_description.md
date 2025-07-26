@@ -6,4 +6,4 @@ Features:
 - Auto download updates
 - Discord rich presence (customizable)
 - Better performance and less resource intensive
-- Access to 3 exclusive Pokémon, including [[Pokemon/Handout Happiny]], [[Pokemon/Charity Chansey]], and [[Pokemon/Blessing Blissey]]
+- Access to 3 exclusive Pokémon: [[Pokemon/Handout Happiny]], [[Pokemon/Charity Chansey]], and [[Pokemon/Blessing Blissey]]
