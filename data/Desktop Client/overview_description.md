@@ -6,4 +6,4 @@ Features:
 - Auto download updates
 - Discord rich presence (customizable)
 - Better performance and less resource intensive
-- Access to 3 exclusive Pokémon
+- Access to 3 exclusive Pokémon, including [[https://wiki.pokeclicker.com/#!Pok%C3%A9mon/Handout%20Happiny]], [[https://wiki.pokeclicker.com/#!Pok%C3%A9mon/Charity_Chansey]], and [[https://wiki.pokeclicker.com/#!Pok%C3%A9mon/Blessing_Blissey]]
