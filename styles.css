@@ -494,3 +494,7 @@ td.tight {
 .breadcrumb-no-divider::before {
   content: '' !important;
 }
+
+button.form-select::after {
+  content: none;
+}

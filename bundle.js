@@ -79276,6 +79276,7 @@ const selectedPlotIndex = ko.observable(12);
 const selectedPlot = ko.pureComputed(() => App.game.farming.plotList[selectedPlotIndex()]);
 const plotLabelsEnabled = ko.observable(false);
 const importSaveDataText = ko.observable('');
+const berrySearch = ko.observable('');
 
 const getImage = (plot) => {
     if (plot.berry === BerryType.None) {
@@ -79560,11 +79561,21 @@ const showPlotContextMenu = (event, plotIndex) => {
     }).data('plot-index', plotIndex).show();
 };
 
+const berryList = ko.pureComputed(() => {
+    const searchVal = berrySearch()?.toLowerCase();
+    const berries = GameHelper.enumSelectOption(BerryType);
+    if (!berrySearch) {
+        return berries;
+    }
+    return berries.filter((berry) => berry.name.toLowerCase().includes(searchVal));
+});
+
 module.exports = {
     selectedPlot,
     selectedPlotIndex,
     plotLabelsEnabled,
     importSaveDataText,
+    berrySearch,
     getImage,
     setPlotBerry,
     setPlotStage,
@@ -79588,6 +79599,7 @@ module.exports = {
     importFromText,
     importFromFile,
     showPlotContextMenu,
+    berryList,
 }
 
 },{}],523:[function(require,module,exports){
