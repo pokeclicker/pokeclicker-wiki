@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Kee Berries. Purple squares indicate where mutations can occur.
+Kee has a chance of mutating when [[Berries/Liechi]] and [[Berries/Ganlon]] are touching an empty plot. You can fill your farm in the following way to obtain Kee Berries. Purple squares indicate where mutations can occur.
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
