@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-You can fill your farm in the following way to obtain Maranga Berries. Purple squares indicate where mutations can occur.
+Maranga has a chance of mutating when [[Berries/Salac]] and [[Berries/Petaya]] are touching an empty plot. You can fill your farm in the following way to obtain Maranga Berries. Purple squares indicate where mutations can occur.
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
