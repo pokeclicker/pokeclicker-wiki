@@ -2,8 +2,8 @@
 
 ### Possible Planting Formations {#planting}
 
-Passho has a chance of mutating when [[Berries/Chesto]], [[Berries/Oran]], [[Berries/Kelpsy]], and [[Berries/Coba]] are touching an empty plot. You can fill your farm in the following way to obtain Passho Berries. Purple squares indicate where mutations can occur.
-**WARNING:** When a Passho berry is not surrounded by at least one other berry, there is a chance it may mutate into a [[Berries/Yache]]. On obtaining your first Passho berry, plant a berry ([[Berries/Kasib]] is a good choice) around it to avoid it unintentionally mutating and then needing to reobtain it.
+Passho has a chance of mutating when [[Berries/Chesto]], [[Berries/Oran]], [[Berries/Kelpsy]], and [[Berries/Coba]] are touching an empty plot. You can fill your farm in the following way to obtain Passho Berries. Purple squares indicate where mutations can occur.  Use [[Items/Freeze Mulch]] on the Chesto and Oran to avoid having to replant them while waiting for the mutation.
+**WARNING:** When a Passho berry is not surrounded by at least one other berry, there is a chance it may mutate into a [[Berries/Yache]]. On obtaining your first Passho berry, plant a berry (preferably one that lives at least six hours) next to it to avoid unintentionally mutating the Passho and then needing to reobtain it.
 
 **Base Formation**
 ::: table-mutations
@@ -13,12 +13,17 @@ Passho has a chance of mutating when [[Berries/Chesto]], [[Berries/Oran]], [[Ber
 :::
 
 **Optimized Formation**
+:::collapsed  Passho Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjoxLCJhZ2UiOjgwLCJtdWxjaCI6NH0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjYsImFnZSI6NjAwLCJtdWxjaCI6NH0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjEsImFnZSI6ODAsIm11bGNoIjo0fSx7ImJlcnJ5IjoyMSwiYWdlIjoxMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NDQsImFnZSI6Mzk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjIxLCJhZ2UiOjEyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6NiwiYWdlIjo2MDAsIm11bGNoIjo0fSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MSwiYWdlIjo4MCwibXVsY2giOjR9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo2LCJhZ2UiOjYwMCwibXVsY2giOjR9LHsiYmVycnkiOjQ0LCJhZ2UiOjM5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyMSwiYWdlIjoxMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NDQsImFnZSI6Mzk2MDAsIm11bGNoIjotMX1dfX19
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | [[File:Oran.png\|32px]] [[Berries/Oran]] | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | |
+| [[File:Chesto.png\|32px]] [[Berries/Chesto]] {.freeze} | {.mutation} | [[File:Oran.png\|32px]] [[Berries/Oran]] {.freeze} | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] {.freeze} | |
 | [[File:Kelpsy.png\|32px]] [[Berries/Kelpsy]] | {.mutation} | [[File:Coba.png\|32px]] [[Berries/Coba]] | {.mutation} | [[File:Kelpsy.png\|32px]] [[Berries/Kelpsy]] | |
 | | {.mutation} | | {.mutation} | | |
-| [[File:Oran.png\|32px]] [[Berries/Oran]] | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | [[File:Oran.png\|32px]] [[Berries/Oran]] | |
+| [[File:Oran.png\|32px]] [[Berries/Oran]] {.freeze} | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] {.freeze} | {.mutation} | [[File:Oran.png\|32px]] [[Berries/Oran]] {.freeze} | |
 | [[File:Coba.png\|32px]] [[Berries/Coba]] | {.mutation} | [[File:Kelpsy.png\|32px]] [[Berries/Kelpsy]] | {.mutation} | [[File:Coba.png\|32px]] [[Berries/Coba]] | |
 :::
 
