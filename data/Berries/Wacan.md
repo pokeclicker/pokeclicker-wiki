@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-Wacan has a chance of mutating when [[Berries/Pinap]], [[Berries/Iapapa]], [[Berries/Qualot]], and [[Berries/Grepa]] are touching an empty plot. You can fill your farm in the following way to obtain Wacan Berries. Purple squares indicate where mutations can occur.
+Wacan has a chance of mutating when [[Berries/Pinap]], [[Berries/Iapapa]], [[Berries/Qualot]], and [[Berries/Grepa]] are touching an empty plot. You can fill your farm in the following way to obtain Wacan Berries. Purple squares indicate where mutations can occur.  Use [[Items/Freeze Mulch]] on the Pinap, Iapapa and possibly Qualot if it gets low, to avoid having to replant them while waiting for mutation.
 
 **Base Formation**
 ::: table-mutations
@@ -12,12 +12,17 @@ Wacan has a chance of mutating when [[Berries/Pinap]], [[Berries/Iapapa]], [[Ber
 :::
 
 **Optimized Formation**
+:::collapsed  Wacan Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjoxMywiYWdlIjo0ODAsIm11bGNoIjo0fSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MTgsImFnZSI6NzYwLCJtdWxjaCI6NH0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjEzLCJhZ2UiOjQ4MCwibXVsY2giOjR9LHsiYmVycnkiOjIyLCJhZ2UiOjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjI0LCJhZ2UiOjE0NDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyMiwiYWdlIjo5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6MTgsImFnZSI6NzYwLCJtdWxjaCI6NH0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjEzLCJhZ2UiOjQ4MCwibXVsY2giOjR9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxOCwiYWdlIjo3NjAsIm11bGNoIjo0fSx7ImJlcnJ5IjoyNCwiYWdlIjoxNDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MjIsImFnZSI6OTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MjQsImFnZSI6MTQ0MDAsIm11bGNoIjotMX1dfX19
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Pinap.png\|32px]] [[Berries/Pinap]] | {.mutation} | [[File:Iapapa.png\|32px]] [[Berries/Iapapa]] | {.mutation} | [[File:Pinap.png\|32px]] [[Berries/Pinap]] | |
+| [[File:Pinap.png\|32px]] [[Berries/Pinap]] {.freeze} | {.mutation} | [[File:Iapapa.png\|32px]] [[Berries/Iapapa]] {.freeze} | {.mutation} | [[File:Pinap.png\|32px]] [[Berries/Pinap]] {.freeze} | |
 | [[File:Qualot.png\|32px]] [[Berries/Qualot]] | {.mutation} | [[File:Grepa.png\|32px]] [[Berries/Grepa]] | {.mutation} | [[File:Qualot.png\|32px]] [[Berries/Qualot]] | |
 | | {.mutation} | | {.mutation} | | |
-| [[File:Iapapa.png\|32px]] [[Berries/Iapapa]] | {.mutation} | [[File:Pinap.png\|32px]] [[Berries/Pinap]] | {.mutation} | [[File:Iapapa.png\|32px]] [[Berries/Iapapa]] | |
+| [[File:Iapapa.png\|32px]] [[Berries/Iapapa]] {.freeze} | {.mutation} | [[File:Pinap.png\|32px]] [[Berries/Pinap]] {.freeze} | {.mutation} | [[File:Iapapa.png\|32px]] [[Berries/Iapapa]] {.freeze} | |
 | [[File:Grepa.png\|32px]] [[Berries/Grepa]] | {.mutation} | [[File:Qualot.png\|32px]] [[Berries/Qualot]] | {.mutation} | [[File:Grepa.png\|32px]] [[Berries/Grepa]] | |
 :::
 
