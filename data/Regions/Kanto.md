@@ -29,7 +29,7 @@ The following is a list of Pokémon obtainable in Kanto and Sevii Islands (both 
 |[[Towns/Celadon City]]| [[File:pokemon/108.png\|25px]] [[Pokémon/Lickitung]]|[[File:questPoint.svg\|20px]] 1,000|
 |[[Towns/Tanoby Ruins]]| [[File:pokemon/85.01.png\|25px]] [[Pokémon/Pinkan Dodrio]]|[[File:questPoint.svg\|20px]] 50,000|
 
-There are also some extra shopmons after completing [[Quest Lines/Team Rocket's Pinkan Theme Park]] Quest Line. These Pokémon can be purchased at Officer Jenny's Pinkan Trade Shop located in [[Towns/Pinkan Pokémon Reserve]] in Sevii Islands 4567.
+There are also some extra shopmons after completing [[Quest Lines/Team Rocket's Pinkan Theme Park]] Quest Line. These Pokémon can be purchased at Officer Jenny's Pinkan Trade Shop located in [[Towns/Pinkan Pokémon Reserve]] in Sevii Islands 4567.Also, there may or may not be a Route 4 Pokemon Center somewhere to be found.
 
 ### Eggs
 All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries/Passho]], and [[Berries/Rindo]] berries.
