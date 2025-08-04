@@ -44,7 +44,7 @@ EVs gained | Slow EVs | Catching Method
 0.2 | 0.02 | Base [Wanderer Pokémon](#!Wandering_Pokémon)
 1 | 0.1 | Evolution Item
 1 | 0.1 | Shop Bought / [Dream Orb Pokémon](#!Dream_Orbs)
-1 | 0.1 | [[Safari Pokémon]]
+1 | 0.1 | [Safari Pokémon](#!Safari)
 1 | 0.1 | Color & Berry-Specific Wanderer Pokémon
 
 #### EV yield modifiers
