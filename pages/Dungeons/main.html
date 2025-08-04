@@ -8,23 +8,44 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="text-center" colspan="2">
-                            <img class="w-100" data-bind="attr: {src: `images/${Wiki.pageName()}.png`}"/>
-                        </td>
-                    </tr>
                     <!-- ko with: Object.values(TownList).find(town => town.dungeon === $data) -->
-                        <!-- ko with: Wiki.gameHelper.getLocationOverlaySVG(Wiki.pageName(), $data.region, $data.subRegion), as: 'filePath' -->
-                        <tr data-bind="with: Wiki.gameHelper.overlaySVG(), as: 'overlaySVG'">
-                            <td colspan="2">
-                                <div id="map-container">
-                                    <div id="map-overlay" data-bind="html: overlaySVG"></div>
-                                    <img class="w-100" width="1600" data-bind="attr: {
-                                        src:`images/${filePath}.png`
-                                    }" />
+                        <!-- ko let: { image: ko.observable('map') } -->
+                        <tr>
+                            <td class="text-center p-0" colspan="2">
+                                <div class="btn-group btn-group-sm w-100" role="group">
+                                    <input type="radio" class="btn-check" name="image" id="btnmap" autocomplete="off" checked>
+                                    <label class="btn btn-primary rounded-0" for="btnmap" data-bind="click: () => { image('map'); return true; },
+                                        tooltip: {
+                                            title: 'Dungeon location marked on the below map with a pink overlay.',
+                                            trigger: 'hover',
+                                            placement: 'top',
+                                        }">Map Location</label>
+                                    <input type="radio" class="btn-check" name="image" id="btndungeon" autocomplete="off">
+                                    <label class="btn btn-primary rounded-0" for="btndungeon" data-bind="click: () => { image('dungeon'); return true; }">Dungeon</label>
                                 </div>
                             </td>
                         </tr>
+                        <!-- ko if: image() == 'map' -->
+                            <!-- ko with: Wiki.gameHelper.getLocationOverlaySVG(Wiki.pageName(), $data.region, $data.subRegion), as: 'filePath' -->
+                            <tr data-bind="with: Wiki.gameHelper.overlaySVG(), as: 'overlaySVG'">
+                                <td colspan="2">
+                                    <div id="map-container">
+                                        <div id="map-overlay" data-bind="html: overlaySVG"></div>
+                                        <img class="w-100" width="1600" data-bind="attr: {
+                                            src:`images/${filePath}.png`
+                                        }" />
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- /ko -->
+                        <!-- /ko -->
+                        <!-- ko if: image() == 'dungeon' -->
+                        <tr>
+                            <td colspan="2">
+                                <img class="w-100" data-bind="attr: {src: `images/${Wiki.pageName()}.png`}"/>
+                            </td>
+                        </tr>    
+                        <!-- /ko -->
                         <!-- /ko -->
                     <tr>
                         <td>Region</td>
@@ -37,7 +58,7 @@
                         <td data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name"></td>
                     </tr>
                     <tr>
-                        <td>Environment</td>
+                        <td>Environment(s)</td>
                         <td data-bind="foreach: MapHelper.getEnvironments($data.name, $data.region)">
                             <a href="#!" data-bind="text: `${GameConstants.camelCaseToString($data)}`, attr: { href: `#!Environments/${GameConstants.camelCaseToString($data)}` }"></a><br />
                         </td>
