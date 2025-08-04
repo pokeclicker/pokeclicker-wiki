@@ -33,21 +33,23 @@ EVs are a damage multiplying stat for each individual Pokémon that can be seen 
 
 ### Gaining EVs (Methods)
 
-Different methods of catching a Pokémon will yield different amounts of EVs. If the Slow EVs Challenge Mode is activated, you will gain  the same amount of EVs, but require 10x as many EVs to yield the same bonus. In some instances, the yield of EVs is further modified by an external factor (see below tables for specific information).
+Different methods of catching a Pokémon will yield different amounts of EVs. If the Slow EVs [Challenge Mode](#!Challenge_Modes) is activated, 10x as many captures will be needed to yield the same bonus. In some instances, the yield of EVs is further modified by an external factor (see below tables for specific information).
 
 #### EV yield
 
+Find the base rate below:
 EVs gained | Slow EVs | Catching Method
 :--- | :---: | ---:
-0.1 | 0.01 | Wild Pokémon
-0.2 | 0.02 | Base Wanderer Pokémon
+0.1 | 0.01 | Wild Route / Dungeon Pokémon
+0.2 | 0.02 | Base [Wanderer Pokémon](#!Wandering_Pokémon)
 1 | 0.1 | Evolution Item
-1 | 0.1 | Shop Bought / Dream Orb Pokémon
-1 | 0.1 | Safari Zone Pokémon
-1 | 0.1 | Wanderer Pokémon
+1 | 0.1 | Shop Bought / [Dream Orb Pokémon](#!Dream_Orbs)
+1 | 0.1 | [[Safari Pokémon]]
+1 | 0.1 | Color & Berry-Specific Wanderer Pokémon
 
 #### EV yield modifiers
 
+Use all that apply, multiplied together and by the base rate from the table above:
 EV modifier | Method
 :--- | ---:
 2x | Pokémon is captured as a Shadow Pokémon
@@ -58,22 +60,23 @@ EV modifier | Method
 50x | Pokémon is encountered and captured as a Roaming Pokemon
 [See Below](#Farm) | [[File:Rowap.png\|40px]] [[Berries/Rowap]] Berry Aura
 Variable  (0.02 * (1 + AchievementBonus)) | [[File:Blue_Flute.png\|40px]] [[Items/Blue Flute]]
-1.5x | [[File:Macho_Brace.png\|40px]]  [[Items/Macho_Brace]] Held Item
-2x | [[File:Power_Bracer.png\|40px]]  [[Items/Power_Bracer]] Held Item
+1.5x | [[File:Macho_Brace.png\|40px]]  Pokémon is holding a [[Items/Macho_Brace]]
+2x | [[File:Power_Bracer.png\|40px]]  Pokémon is holding a [[Items/Power_Bracer]]
 5x | [[File:Repeatball.png\|40px]] [[Items/Repeat Ball]]
 
 #### Examples
 
-Example 1: Catching a **Shiny Dungeon Pokémon** with a **Repeatball** yields:
-**0.1 (Catching) \* 3 (Dungeon Pokémon) \* 5 (Shiny) \* 5 (Repeatball) = 7.5**
+Example 1: Catching a **Dungeon Pokémon** with a **Repeatball** yields:
+**0.1 (Catching) \* 3 (Dungeon Pokémon) \* 5 (Repeatball) = 1.5 EVs**
 
-Example 2: Catching a **Shiny Roaming Pokémon** yields:
-**0.1 (Catching) \* 5 (Shiny) \* 50 (Roaming) = 25 EVs**
-
-Example 3: Catching a **Shiny Roaming Pokémon** with a **Repeatball** yields:
+Example 2: Catching a **Shiny Roaming Pokémon** with a **Repeatball** yields:
 **0.1 (Catching)  \* 5 (Shiny) \* 5 (Repeatball) \* 50 (Roaming) = 125 EVs**
 
+Example 3: Catching a **Shadow Pokémon** during a **Dungeon Boss Encounter** with a Duskball when holding a **Power Bracer** yields:
+**0.1 (Catching) \* 2 (Shadow Pokémon) \*10 (Dungeon Boss)  \*2 (Power Bracer) = 4 EVs**
+
 #### Break Points for non-caught Pokémon
+
 For Pokémon that cannot be caught - shop purchases, [Alcremie Spins](#!Battle_Cafe), and item evolutions, combining [[Berries/Rowap]] setups, equipping [[Items/Power Bracer]] and activating [[Items/Blue Flute]] gives the greatest possible yield for the fewest purchases / spins / items to reach Resistant.  Achievement % scales Blue Flute's effectiveness; the percentages in the table below are the minimum required.
 
 For 50EV | Rowap + Lum | Rowap + Lum + Petaya
