@@ -7,6 +7,11 @@ Starf can be obtained by capturing a shiny Wandering Pokémon while at least 1 p
 #### Roseli Setup
 You can fill your farm in the following way to have a chance to obtain Starf berries without any additional berries. Note that the setup omits a 24th Roseli, as that would allow [[Berries/Custap]] berries to mutate, and omits a 23rd Roseli as that would allow [[Berries/Lansat]] Berries to mutate if [[Pokémon/Dialga]] has been caught. Purple squares indicate where Starf can spawn upon successfully capturing a shiny.
 
+:::collapsed Roseli Setup - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfV19fX0=
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
@@ -19,6 +24,12 @@ You can fill your farm in the following way to have a chance to obtain Starf ber
 #### Roseli + Lum Setup
 You can fill your farm in the following way to have the best chance to obtain Starf berries. Purple squares indicate where Starf can spawn upon successfully capturing a shiny.
 
+**Optimized Formation**
+:::collapsed Roseli + Lum Setup - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTMsImFnZSI6NTA0MDAsIm11bGNoIjotMX1dfX19
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
