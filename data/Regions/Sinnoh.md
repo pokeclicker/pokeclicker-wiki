@@ -54,6 +54,8 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 |[[File:Dragon_egg.png\|25px]] [[Items/Dragon Egg]] | [[File:pokemon/443.png\|25px]] [[Pokémon/Gible]] |
 
 ### Baby Pokémon
+
+[[Baby Pokémon]] has a complete list of species obtainable by breeding.
 |Baby|Adult|
 |---|---|
 | [[File:pokemon/438.png\|25px]] [[Pokémon/Bonsly]] | [[File:pokemon/185.png\|25px]] [[Pokémon/Sudowoodo]] |
