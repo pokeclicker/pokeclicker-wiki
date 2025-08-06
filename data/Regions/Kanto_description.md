@@ -1,2 +1,2 @@
 ---:  |
- **[Johto →](#!Johto)** |
+ **[Johto →](#!Regions/Johto)** |
