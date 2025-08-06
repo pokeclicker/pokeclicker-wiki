@@ -42,7 +42,6 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 | [[File:pokemon/173.png\|25px]] [[Pokémon/Cleffa]] | [[File:pokemon/35.png\|25px]] [[Pokémon/Clefairy]]|
 | [[File:pokemon/174.png\|25px]] [[Pokémon/Igglybuff]] | [[File:pokemon/39.png\|25px]] [[Pokémon/Jigglypuff]]|
 | [[File:pokemon/238.png\|25px]] [[Pokémon/Smoochum]] | [[File:pokemon/124.png\|25px]] [[Pokémon/Jynx]]|
-| [[File:pokemon/236.png\|25px]] [[Pokémon/Tyrogue]]\* | [[File:pokemon/107.png\|25px]] [[Pokémon/Hitmonchan]] or [[File:pokemon/106.png\|25px]] [[Pokémon/Hitmonlee]]|
 | [[File:pokemon/239.png\|25px]] [[Pokémon/Elekid]]\* | [[File:pokemon/125.png\|25px]] [[Pokémon/Electabuzz]]|
 | [[File:pokemon/240.png\|25px]] [[Pokémon/Magby]]\* | [[File:pokemon/126.png\|25px]] [[Pokémon/Magmar]]|
 
