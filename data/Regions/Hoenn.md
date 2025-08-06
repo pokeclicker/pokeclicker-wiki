@@ -42,6 +42,7 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 |Baby|Adult|
 |---|---|
 | [[File:pokemon/298.png\|25px]] [[Pokémon/Azurill]] | [[File:pokemon/183.png\|25px]] [[Pokémon/Marill]]|
+| [[File:pokemon/360.png\|25px]] [[Pokémon/Wynaut]] | [[File:pokemon/202.png\|25px]] [[Pokémon/Wobbuffet]]|
 
 ### Weather-dependent Pokémon
 |Pokémon | Required Weather | Location |
