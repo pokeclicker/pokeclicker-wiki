@@ -74,13 +74,13 @@ Munchlax can also be obtained as a Wanderer by using [[Berries/Chilan]] berries.
 
 ### Level-dependent Pokémon
 **Note:** Level-dependant Pokémon evolve at or above the level specified excluding level 100. Pokémon at level 100 must be bred and retrained to the correct level.
-|Pokémon | Evolution | Required Level | Required Location |
+|Pokémon | Evolution | Required Level |
 |---|---|---|---|
-| [[File:pokemon/190.png\|25px]] [[Pokémon/Aipom]] | [[File:pokemon/424.png\|25px]] [[Pokémon/Ambipom]] | 32 | Any |
-| [[File:pokemon/108.png\|25px]] [[Pokémon/Lickitung]] | [[File:pokemon/463.png\|25px]] [[Pokémon/Lickilicky]] | 33 | Any |
-| [[File:pokemon/114.png\|25px]] [[Pokémon/Tangela]] | [[File:pokemon/465.png\|25px]] [[Pokémon/Tangrowth]] | 33 | Any |
-| [[File:pokemon/193.png\|25px]] [[Pokémon/Yanma]] | [[File:pokemon/469.png\|25px]] [[Pokémon/Yanmega]] | 33 | Any |
-| [[File:pokemon/221.png\|25px]] [[Pokémon/Piloswine]] | [[File:pokemon/473.png\|25px]] [[Pokémon/Mamoswine]] | 53 | Any |
+| [[File:pokemon/190.png\|25px]] [[Pokémon/Aipom]] | [[File:pokemon/424.png\|25px]] [[Pokémon/Ambipom]] | 32 |
+| [[File:pokemon/108.png\|25px]] [[Pokémon/Lickitung]] | [[File:pokemon/463.png\|25px]] [[Pokémon/Lickilicky]] | 33 |
+| [[File:pokemon/114.png\|25px]] [[Pokémon/Tangela]] | [[File:pokemon/465.png\|25px]] [[Pokémon/Tangrowth]] | 33 |
+| [[File:pokemon/193.png\|25px]] [[Pokémon/Yanma]] | [[File:pokemon/469.png\|25px]] [[Pokémon/Yanmega]] | 33 |
+| [[File:pokemon/221.png\|25px]] [[Pokémon/Piloswine]] | [[File:pokemon/473.png\|25px]] [[Pokémon/Mamoswine]] | 53 |
 
 ### Environment-dependent Pokémon
 **Note:** Environment-dependant Pokémon evolve at or above the level specified (excluding level 100) when leveled at a location that matches the environment specified. Pokémon at level 100 must be bred and then retrained to the correct level (level 20, or for Burmy level 1) while being inside the right location.
