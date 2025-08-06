@@ -35,6 +35,7 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 
 ### Baby Pokémon
 
+[[Baby Pokémon]] has a complete list of species obtainable by breeding.
 |Baby|Adult|
 |---|---|
 | [[File:pokemon/172.png\|25px]] [[Pokémon/Pichu]] | [[File:pokemon/25.png\|25px]] [[Pokémon/Pikachu]]|
