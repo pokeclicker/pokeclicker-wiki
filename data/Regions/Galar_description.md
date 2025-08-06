@@ -1,2 +1,2 @@
 :--- | ---:
-[**← Galar**](#!Regions/Galar) | **[Hisui →](#!Regions/Hisui)**
+[**← Alola**](#!Regions/Alola) | **[Hisui →](#!Regions/Hisui)**
