@@ -15,6 +15,37 @@ You can fill your farm in the following way to obtain Enigma Berries. Purple squ
 |  |  |  | South Hint |  | |
 :::
 
+### Enigma Nonsense
+For a more efficient method with a forced center Enigma Berry, you can instead op to surround the farm with [[File:Babiri.png\|32px]] [[Berries/Babiri]] and [[File:Kebia.png\|32px]] [[Berries/Kebia]] berries in the following formation. The [[File:Petaya.png\|32px]] [[Berries/Petaya]] Berry is optional for longer mutation period. Planting times are based on the [[File:Babiri.png\|32px]] [[Berries/Babiri]] or [[File:Petaya.png\|32px]] [[Berries/Petaya]] Berry's remaining time if the [[File:Petaya.png\|32px]] [[Berries/Petaya]] is used. You can add [[File:Wacan.png\|32px]] [[Berries/Wacan]] Berries on the corners for the [[File:Babiri.png\|32px]] [[Berries/Babiri]] Berries.
+- Disclaimer: [[File:Petaya.png\|32px]] [[Berries/Petaya]] is not needed for this setup.
+
+:::collapsed Enigma Nonsense - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6NjQsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQyLCJhZ2UiOjg2NDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6NDIsImFnZSI6ODY0MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQyLCJhZ2UiOjg2NDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9XX19fQ
+:::
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Lum.png\|32px]] [[Berries/Lum]] |  | | |
+| [[File:Petaya.png\|32px]] [[Berries/Petaya]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | North Hint | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | |
+| | West Hint | {.mutation} | East Hint | | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | South Hint | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | | |
+| | | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | | |
+:::
+
+### Timing Table {#timing-table}
+All planting times use the time-to-ripe remaining of the first planted berry for subsequent planting times
+| Berry | Planting Time with No Modifier | Planting Time with Mulch or Sprayduck | Planting Time with  Mulch & Sprayduck |
+|:---:|:---:|:---:|:---:|
+| [[File:Petaya.png\|32px]] [[Berries/Petaya]] | `Planted First` | | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | 20:00:00 | 14:00:00 | 10:00:00 |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]] |  07:00:00 |	4:45:00 |	03:30:00 |
+| North, West, East, and South Hint Berries |  `Growth Duration` |	|	|
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]] |  00:10:00 |	00:07:30 |	00:05:00 |
+
+### Important notes
+Once the Enigma Berry Mutates, you have a six hour window to harvest or shovel the [[File:Kebia.png\|32px]] [[Berries/Kebia]] Berries.
+
 ## Possible Hints
 Due to inconvenience, some berries cannot be selected as hints. Any Gen 3 or 4 berry can be selected, except the following:
 
