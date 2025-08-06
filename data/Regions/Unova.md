@@ -42,6 +42,7 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 |[[File:Dragon_egg.png\|25px]] [[Items/Dragon Egg]] | [[File:pokemon/633.png\|25px]] [[Pokémon/Deino]] |
 
 ### Baby Pokémon
+
 [[Baby Pokémon]] has a complete list of species obtainable by breeding.
 |Baby|Adult|
 |---|---|
