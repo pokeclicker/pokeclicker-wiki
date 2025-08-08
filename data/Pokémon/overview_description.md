@@ -33,7 +33,7 @@ The **Attack bonus** can be increased using 2 different [[Vitamins]]: [[Items/Pr
 * **Protein** gives +1 attack bonus. *In our example, Metapod will have 6 attack bonus after using 1 Protein and 15 attack bonus after using 10 Proteins. While Pidgeot (with 112 base attack) will have 29 attack bonus after 1 Protein and 38 after 10 Proteins.*
 * **Calcium** gives 1% base attack as attack bonus. *In our example, Metapod will have 5.2 attack bonus after 1 Calcium and 7 attack bonus after 10 Calcium. While Pidgeot will have 29.12 attack bonus after 1 Calcium and 39.2 after 10 Calcium.*
 
-### Breeding Efficiency (BE)
+### Breeding Efficiency (BE){#BE}
 
 A Pokémon with a high base attack and a low number of egg steps will have a high Breeding Efficiency stat, which is calculated with the following formula:
 
