@@ -32,15 +32,15 @@ Breeding Pokémon also offers the highest shiny odds in the game (alongside [[Wa
 [[Hatchery Helpers]] are unlock-able and purchasable [[Items]] that allow the player to automate the hatchery.
 
 # Efficiency
+There are several key aspects to consider when breeding Pokémon; specific goals - such as beating a current roadblock to progress, overall gains, and party type balance.  [Breeding Efficiency](#!Pokémon#BE) (BE) is the ratio between a Pokémon's Attack gain per breeding cycle, divided by its Egg Steps.  The higher the number, the better that Pokémon is at gaining Attack.
 
-There are 3 key aspects to consider when breeding Pokémon towards a specific goal.
+* Breeding anything is better than having the [[Hatchery]] idle at any time
+* The Breeding Efficiency of Pokémon includes the number of [[Vitamins]] used on that Pokémon and [Effort Values](#!Pokérus#EV) it has earned
+* The [Region](#!Regions) that Pokémon is native to influences its usefulness due to the [Regional Debuff](#!Pokémon#debuff)
+* Concentrate on type advantageous Pokémon to overcome tough fights
+* Consider the overall effect on the party's attack type balance
 
-#The 'Breeding Efficiency' of that Pokémon (includes the number of vitamins used on that Pokémon)
-#The [[Region]] that Pokémon is found in the Pokédex
-#The type of Pokémon you should breed to accomplish that goal
-#The overall effect on the party's attack type balance
-
-For example, let's say I am trying to defeat Champion Wallace in Hoenn. While the Pokémon with the highest Breeding Efficiency overall is Gyarados, when accounting for the 30% damage debuff for a Kanto Pokémon in the Hoenn region it is merely the 11th most efficient Pokémon to breed. Therefore breeding Azurill, the most efficient Pokémon to breed in Hoenn, will be slightly more efficient overall to defeat Wallace. Furthermore, breeding some of the Hoenn Grass type Pokémon (e.g. Tropius, Breloom, Shroomish, Roselia, etc.) that are only slightly less efficient than Azurill is made up for by their type advantage over Wallace's primarily water type Pokémon. In conclusion, if trying to breed towards a goal focus on high breeding efficiency Pokémon that are from the region you are trying to beat with a type advantage against whatever Pokémon you are struggling to defeat.  A type balanced approach when not trying to overcome a specific problem fight has better long-term outcomes, making your party able to meet many challenges.
+Example: Attempting to defeat Champion Wallace in Hoenn. While the Pokémon with the highest Breeding Efficiency overall is Gyarados, when accounting for the 30% damage debuff for a Kanto Pokémon in the Hoenn region it is merely the 11th most efficient Pokémon to breed. Therefore breeding Azurill, the most efficient Pokémon to breed in Hoenn, will be slightly more efficient overall to defeat Wallace. Furthermore, breeding some of the Hoenn Grass type Pokémon (e.g. Tropius, Breloom, Shroomish, Roselia, etc.) that are only slightly less efficient than Azurill is made up for by their type advantage over Wallace's primarily water type Pokémon. If trying to breed towards a goal focus on high breeding efficiency Pokémon that are from the region you are trying to beat with a type advantage against whatever Pokémon you are struggling to defeat.  A type balanced approach when not trying to overcome a specific problem fight has better long-term outcomes, making your party able to meet many challenges.
 
 # Upgrades
 
