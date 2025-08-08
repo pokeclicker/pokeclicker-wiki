@@ -8,7 +8,10 @@ By giving [[Items/Protein]] to obtained Pokémon the amount of added damage per 
 A feature in Kanto is the [[Towns/Safari Zone]], where the player can freely move and catch Pokémon with the support of throwing rocks increase the capture chance and feeding bait to decrease the fleeing chance of encountered Pokémon.
 
 **Non-native Pokémon retain 20% damage
-Maximum Vitamins per Pokémon: 5**
+Maximum Vitamins per Pokémon: 5
+Sub-Regions:**
+* [Sevii Islands 123](#!Towns/One_Island) after defeating Blaine at [[Gyms/Cinnabar Island]] and doing the [[Quest Lines/Bill's Errand]] quest
+* [Sevii Islands 4567](#!Towns/Four_Island) after becoming the Hoenn Champion and doing the [[Quest Lines/Celio's Errand]] quest
 
 #### [[Regions/Johto]]
 Johto is the second region where the player can catch another 100 unique Pokémon. The newly introduced feature in this region is the breeding queue.
@@ -30,7 +33,10 @@ In the Battle Frontier the player can take a challenge and win great prizes, inc
 
 **Non-native Pokémon retain 30% damage
 Breeding Queue in the hatchery: 8
-Maximum Vitamins per Pokémon: 15**
+Maximum Vitamins per Pokémon: 15
+Sub-Regions:**
+* [Orre1](#!Towns/Outskirt_Stand) after becoming the Hoenn Champion and doing the [[#!Quest_Lines/Shadows in the Desert]] quest
+* [Orre2](#!Towns/Gateon_Port) after becoming the Unova Champion and doing the [[#!Quest_Lines/Gale of Darkness]] quest
 
 #### [[Regions/Sinnoh]]
 Sinnoh is the fourth region and 107 unique Pokémon are waiting to be caught. The player will encounter some Pokémon that only evolve when they are in a certain area. One should pay attention to the hints from the local people.
@@ -63,14 +69,19 @@ Alola is the seventh region and currently has 104 new Pokémon to catch, breed a
 **Non-native Pokémon retain 70% damage
 Magikarp forms retain 100% damage in Magikarp Jump
 Breeding Queue in the hatchery: 96
-Maximum Vitamins per Pokémon: 35**
+Maximum Vitamins per Pokémon: 35
+Sub-Regions:**
+* [Magikarp Jump](#!Towns/Hoppy_Town) after becoming the Alola Champion and doing the [[#!Quest_Lines/Magikarp Jump]] quest
 
 #### [[Regions/Galar]]
 Galar is the eighth region and currently has 108 new Pokémon to catch, breed and hatch. Galar gyms and dungeons are quite tough and its postgame is tougher, but they offer great rewards as well. It introduces the [[Battle Cafe]] that when you select a sweet, spin duration and direction depending on the time you will be awarded with an Alcremie form.
 
 **Non-native Pokémon retain 80% damage
 Breeding Queue in the hatchery: 128
-Maximum Vitamins per Pokémon: 40**
+Maximum Vitamins per Pokémon: 40
+Sub-Regions:**
+* [Crown Tundra](#!Towns/Crown_Tundra_Station) after becoming the Galar Champion and doing the [[#!Quest Lines/The Crown of Galar]] quest
+* [Isle of Armor](#!Towns/Master_Dojo) after becoming the Galar Champion and doing the [[#!Quest_Lines/The Birds of the Dyna Tree]] quest
 
 #### [[Regions/Hisui]] (In Development)
 Hisui is the ninth region and currently has 26 new Pokémon to catch, breed and hatch. Hisui is under development and is not currently available.
