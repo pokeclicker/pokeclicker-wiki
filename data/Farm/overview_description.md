@@ -1,25 +1,22 @@
 The Farm is a location unlocked in [[Regions/Kanto]] where [[Berries]] can be planted. Harvesting them yields [[Farm Points]] and more of the same type of Berry. Occasionally, mutations can occur when Berries are planted in certain configurations. The Farm is unlocked upon reaching [[Routes/Kanto Route 11]] and obtaining the Wailmer Pail.
 
-Two Quests can appear involving the usage of the Farm: gain a certain number of [[Farm Points]] or harvest specific berries. These will award [[Quest Points]].
+Two [Quests](#!Quest_Points) can appear involving the usage of the Farm: gain a certain number of [[File:farmPoint.svg|25px]][[Farm Points]] or harvest specific berries. These will award [[File:questPoint.svg|25px]][[Quest Points]].
 
 ## Usage
 
 _For a breakdown of harvest yields, flavors, and mutation configurations for the various types of Berries, consult the [[Berries]] specific pages._
 
-The eight Gen 1 Berries are dropped by defeated Pokémon on routes. They can be planted by selecting the desired type in the left-hand column and clicking on plots in the field on the right. Alternatively, the "Plant All" button can be clicked to plant the selected Berry in every empty plot.
+The eight Gen 1 [[Berries]] are dropped by defeated Pokémon on routes. They can be planted by selecting the desired type in the left-hand column and clicking on plots in the field on the right. Alternatively, the "Plant All" button can be clicked to plant the selected Berry in every empty plot.
 
 Depending on the type of Berry planted, different lengths of time must pass before they can be harvested. Individual plots can be clicked to be harvested, or the "Harvest All" button may be pressed to harvest every plot ready for harvesting.
 
-When Berry plants become ripe, they will die after a set period of time if not harvested. When this happens, only 1/2 of the harvest is obtained. There is also a chance they will replant themselves, spawning a plant of the same berry in that plot. The Replant Rate can be augmented by using the Sprinklotad Oak Item.
+When Berry plants become ripe, they will die after a set period of time if not harvested. When this happens, only 1/2 of the harvest is obtained. There is also a chance they will replant themselves, spawning a plant of the same berry in that plot. The Replant Rate can be augmented by using the [[Items/Sprinklotad]] Oak Item.
 
-Berries can be obtained by planting obtained Berries in special configurations. The Kanto Berry Master in [[Towns/Cerulean City]] gives hints as to these configurations. The chance for mutations to occur can be augmented by the Squirtbottle Oak Item.
-
-The farm can also produce helpful effects (external auras) such as increasing egg steps for faster breeding and better shiny chance. It can also attract specific Pokémon which are referred to as [[Wandering Pokémon]].
+New types of Berries can be obtained by planting others in special configurations. The Kanto Berry Master in [[Towns/Cerulean City]] gives hints as to these combinations. The farm can also produce helpful effects (external [Auras](#!Berries#aura)) such as increasing egg steps for faster breeding and better shiny chance. It can also attract specific Pokémon which are referred to as [[Wandering Pokémon]].
 
 ### Farm Items
 
-Mulch and Berry Shovel can be bought in [[Towns/Goldenrod City]], [[Towns/Mauville City]], [[Towns/Hearthome City]]. Mulches can be applied to Berry plants to speed up growth (Boost Mulch), increase harvest yield (Rich Mulch), increase mutation chance (Surprise Mulch), or all the above with a slightly reduced boost for all three (Amaze Mulch). Berry Shovels can be used to clear occupied plots.
-
+Farming supplies can be bought from [[Berry Masters]] in [[Towns/Goldenrod City]], [[Towns/Mauville City]], [[Towns/Hearthome City]] and [[Towns/Driftveil City]], in exchange for [[Farm Points]]. Mulches can be applied to Berry plants to speed up growth ([[Items/Boost Mulch]]), increase harvest yield ([[Items/Rich Mulch]]), increase mutation chance ([[Items/Surprise Mulch]]), or all the above with a slightly reduced boost for all three ([[Items/Amaze Mulch]]). [[Items/Berry Shovel]] can be used to clear occupied plots of partially grown, unwanted Berries, while [[Items/Mulch Shovel]] will remove Mulches only from a plot.
 
 
 | Name | Price | Description |
@@ -39,26 +36,22 @@ Mulch and Berry Shovel can be bought in [[Towns/Goldenrod City]], [[Towns/Mauvil
 
 _Note: if you have not yet unlocked all the plots on the farm and need to mutate berries #9 Persim through #25 Grepa, please use the [Walkthrough](https://docs.google.com/document/d/1TE5cAKSlA7TAliA001_mIiO1odZ6e4yUEMre0GBW1to/edit?usp=sharing)  link for an optimized planting formation to mutate those berries within the limited available farm plots._
 
-Mutating Berries is a fairly simple process - plant berries in the correct setup and at the proper timings, wait for berries to be ripe, and then hope that RNG favors you. Generally speaking, for a mutation to occur the berries required for a mutation to occur must all be ripe on the farm simultaneously. Thus, on each individual berry page, you will find an Optimized Planting Formation to maximize your chances of a mutation occurring, as well as a Timing Chart, to help you plant berries at the correct times such that all berries will become ripe simultaneously.
+Mutating Berries is a fairly simple process - plant berries in the correct setup and at the proper timings, wait for berries to be ripe, and then hope that RNG favors you. Mutations can happen in one of two ways; the most common method is for berries to mutate by growing near required berries, while a less common mutation is when berries mutate by evolving in the proper conditions.
 
-There are a few exceptions to these general rules, the [[Kasib]] and [[Starf]] berries, that each play by their own respective rules as explained on their individual Berry pages.
+Mutation chance varies wildly between different berries.  For a standard mutation to occur, all the required berries must be ripe on the farm simultaneously. When this is true, the game will check each eligible empty plot once a second to see if a mutation happens. Individual berry pages have Optimized Planting Formations to maximize the chances of a mutation occurring, as well as a Timing Chart to help plant berries at the correct times, such that all of them will become ripe simultaneously.  Mutation chance can be increased by using the Oak Item [[Items/Squirtbottle]] and/or consumable [[Items/Surprise Mulch]].
 
-Each berry has it's own individual mutation chance for whether or not it will mutate when the conditions are correct. A Berries' Mutation chance can be increased by using the Squirtbottle and Surprise Mulch items. When attempting to mutate a berry, there are a few things to be aware of. We'll use mutating Persim as an example, not involving the Squirtbottle or Surprise Mulch
+There are a few exceptions to these general mutation rules, such as the [[Berries/Kasib]] and [[Berries/Starf]] Berries, that are explained on their individual Berry pages.
 
-_Example: Persim has a mutation rate of 2%. This means each second the required berries (Oran and Pecha) are ripe on the farm in the proper locations to cause a mutation to occur, you have a 2% chance of mutating a Persim. That 2% mutation is calculated per plot. Following the above linked Walkthrough's planting formation for Persim, where there are 5 possible plots for Persim to mutate on, that means that each second the game calculates whether the 2% chance occurred 5 separate times. The Pecha berry will only remain ripe for 1 minute, thus if both Pecha berries become ripe at the same time as Oran, each plot will calculate to see if a mutation will occur 60 times, or in other words, you have 300 chances to see if you get lucky with the 2% mutation before the Pecha withers and must be replanted._
-
-Mutations can happen in one of two ways - the most common method is for berries to mutate by growing near required berries, while a less common mutation is when berries mutate by evolving in the proper conditions.
+_Example: Persim has a mutation rate of 2%. This means each second the required berries (Oran and Pecha) are ripe on the Farm in the proper locations to cause a mutation to occur, there is a 2% chance of mutating a Persim, per plot. Following the Optimized Planting Formation for Persim, there are at least 5 possible plots for Persim to mutate on, that means that each second the game calculates whether the 2% chance occurred 5 separate times. The Pecha berry will only remain ripe for 1 minute, thus if both Pecha berries become ripe at the same time as Oran, each plot will calculate to see if a mutation will occur 60 times, or in other words, there are 300 chances with a 2% mutation before the Pechas wither and must be replanted and a 99.77% chance of getting at least one Persim before that happens._
 
 ### Growth Mutations
 
-Berries that mutate by growing near required berries must have the required berries planted such that every required berry is touching at least the corner of a plot for mutation to be possible on that plot. Mutations can never occur where there is already a berry growing.
+Berries that mutate by growing near required berries must have the required berries planted such that every required berry is touching at least the corner of a plot for mutation to be possible on that plot. Growth mutations do not occur where there is already a berry growing.
 
 ### Evolution Mutations
 
-Berries that mutate by evolving will replace an existing ripe berry with the mutated berry or by reaching a specific flavor profile
-
-_Note: Depending on the Flavor profile required for the Berry to evolve, an evolution mutation may occur while the berries are still in the Taller or Bloom growth stages, rather than only when Ripe._
+Berries that mutate by evolving will replace an existing berry with the mutated berry or by reaching a specific flavor profile.  Some of these are called parasite berries, because they take over other berries to duplicate themselves. Depending on the Flavor profile required for the Berry to evolve, an evolution mutation may occur while the berries are still in the Taller or Bloom growth stages, rather than only when Ripe.
 
 ## Setups
 
-The different berry auras can stack and be used to get bonuses in the main game. To check them, go to the [[Farm/Setups]], [[Hatchery]], and [[Shiny Chance]] pages.
+The different Berry [Auras](#!Berries#aura) can stack and be used to get bonuses in the main game. To check them, go to the [[Farm/Setups]], [[Hatchery]], [[Shiny Chance]] and [Effort Values](#!Pokérus#Farm) pages.
