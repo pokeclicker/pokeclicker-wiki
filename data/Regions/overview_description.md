@@ -80,8 +80,8 @@ Galar is the eighth region and currently has 108 new Pokémon to catch, breed an
 Breeding Queue in the hatchery: 128
 Maximum Vitamins per Pokémon: 40
 Sub-Regions:**
-* [Crown Tundra](#!Towns/Crown_Tundra_Station) after becoming the Galar Champion and doing the [[#!Quest Lines/The Crown of Galar]] quest
-* [Isle of Armor](#!Towns/Master_Dojo) after becoming the Galar Champion and doing the [[#!Quest_Lines/The Birds of the Dyna Tree]] quest
+* [Crown Tundra](#!Towns/Crown_Tundra_Station) after becoming the Galar Champion
+* [Isle of Armor](#!Towns/Master_Dojo) after becoming the Galar Champion
 
 #### [[Regions/Hisui]] (In Development)
 Hisui is the ninth region and currently has 26 new Pokémon to catch, breed and hatch. Hisui is under development and is not currently available.
