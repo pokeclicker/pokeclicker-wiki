@@ -1,6 +1,7 @@
-## Acquisition
-Letting any berry wither after unlocking any Gen 4 or 5 berry (so, any ID above [[Berries/Occa]] and including Occa itself) has a 5% chance of spawning a Kasib berry in its place, as long as there are no [[Berries/Colbur]] berries in the [[Farm]]. A good strategy is to plant a field of [[Berries/Cheri]] and wait for them to wither:
-
+## Mutation Strategy {#mutation}
+### Possible Planting Formations {#planting}
+Kasib is a special mutation.  Letting any berry wither after unlocking any Gen 4 or Gen 5 berry (any [ID #37](#!Berries/Occa) or higher) has a 5% chance of spawning a Kasib berry in its place, as long as there are no [[Berries/Colbur]] berries in the [[Farm]]. A good strategy is to plant a field of [[Berries/Cheri]] and wait for them to wither, while using
+[[Oak_Items/Sprayduck]] to speed turnover, replanting constantly until a Kasib mutates.  Due to a very high mutation chance [[Items/Surprise Mulch]] is generally not needed; a field of 25 Cheri has a ~72% chance of success.
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | |
