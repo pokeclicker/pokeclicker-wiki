@@ -44,10 +44,10 @@ An evolution mutation can occur while the berries are still in the Taller or Blo
 ### Setups{#setup}
 
 Thanks to certain Berries having helpful auras, it's possible to use them to achieve different goals. These Setups can be found in:
-- [[Hatchery]]: Setups related to Egg Step gain.
-- [[Shiny Chance]]: Setups related to increasing Shiny Chance.
+- [[Hatchery]]: Setups related to Egg Step gain
+- [[Shiny Chance]]: Setups related to increasing Shiny Chance
 - [[Pokérus]]: Setups related to increasing EV Yield
-- [[Farm/Setups]]: Setups not contained in the previous two pages, like EV gain, or formations to speed up experience gain for the Farm Oak Items.
+- [[Farm/Setups]]: Setups not contained in the previous two pages
 
 ## List of Available Berries{#list}
 
