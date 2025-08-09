@@ -1,9 +1,34 @@
-## Acquisition
-The Shuca berry can be acquired by equipping the [[Oak Items/Sprinklotad]] while there is a [[Berries/Watmel]] berry at Taller stage or later on the farm. The Watmel berry will then have a chance to mutate into a Shuca berry.
+### Possible Planting Formations {#planting}
+
+The Shuca berry can be acquired by equipping the [[File:Sprinklotad.png\|32px]][[Oak Items/Sprinklotad]] while there is a [[Berries/Watmel]] berry at Taller stage or later on the farm. The Watmel berry will then have a chance to mutate into a Shuca berry.
+
+**Base Formation**
+::: table-mutations
+| :----: |
+[[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation}| |
+:::
+
+**Optimized Formation**
+:::collapsed Shuca Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjozMiwiYWdlIjozMzEyMCwibXVsY2giOjJ9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTIwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzIsImFnZSI6MzMxMjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMiwiYWdlIjozMzEyMCwibXVsY2giOjJ9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTIwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzIsImFnZSI6MzMxMjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMiwiYWdlIjozMzEyMCwibXVsY2giOjJ9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTIwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzIsImFnZSI6MzMxMjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMiwiYWdlIjozMzEyMCwibXVsY2giOjJ9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTIwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzIsImFnZSI6MzMxMjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMiwiYWdlIjozMzEyMCwibXVsY2giOjJ9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTIwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzIsImFnZSI6MzMxMjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMiwiYWdlIjozMzEyMCwibXVsY2giOjJ9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTIwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzIsImFnZSI6MzMxMjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMiwiYWdlIjozMzEyMCwibXVsY2giOjJ9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTIwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzIsImFnZSI6MzMxMjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMiwiYWdlIjozMzEyMCwibXVsY2giOjJ9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTIwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzIsImFnZSI6MzMxMjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMiwiYWdlIjozMzEyMCwibXVsY2giOjJ9XX19fQ==
+:::
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+[[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | |
+[[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | |
+[[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | |
+[[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | |
+[[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] {.mutation} | |
+:::
+
+### Acquisition
 
 If the "No Oak Items" challenge is on, Shuca can be bought from the [Johto Berry Master](#!Berry_Masters) for 10,000 Farm Points after unlocking [[Berries/Watmel]].
 
 #### Mutations
+
 Shuca Berries can be used to mutate the following Berries.
 
 | Used In                                       | Other Requirements |
