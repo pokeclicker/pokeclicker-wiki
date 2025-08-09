@@ -22,17 +22,14 @@ eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVs
 [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | |
 [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | |
 [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | |
-
 :::
-## Acquisition
 
+### Acquisition
 
-
-If the "No Oak Items" challenge is on, the Chople berry can be bought from the [Johto Berry Master](#!Berry_Masters) for 10,000 Farm Points after unlocking [[Berries/Spelon]].
-
-
+If the "No Oak Items" [challenge](#!Challenge_Modes) is on, the Chople berry can be bought from the [Johto Berry Master](#!Berry_Masters) for 10,000 Farm Points after unlocking [[Berries/Spelon]].
 
 #### Mutations
+
 Chople Berries can be used to mutate the following Berries.
 
 | Used In                                       | Other Requirements |
