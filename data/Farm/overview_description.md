@@ -30,28 +30,14 @@ Farming supplies can be bought from [[Berry Masters]] in [[Towns/Goldenrod City]
 |[[File:Berry_Shovel.png\|32px]]  [[Items/Berry Shovel]] | 300 [[File:currency/farmPoint.svg\|24px]]  | Clears an occupied plot instantly. Harvestable plots that are shoveled are harvested and not cleared. |
 |[[File:Mulch_Shovel.png\|32px]]  [[Items/Mulch Shovel]] | 300 [[File:currency/farmPoint.svg\|24px]]  | Removes Mulch from a plot in the Farm. |
 
-
-
 ## Mutating Berries
 
-_Note: if you have not yet unlocked all the plots on the farm and need to mutate berries #9 Persim through #25 Grepa, please use the [Walkthrough](https://docs.google.com/document/d/1TE5cAKSlA7TAliA001_mIiO1odZ6e4yUEMre0GBW1to/edit?usp=sharing)  link for an optimized planting formation to mutate those berries within the limited available farm plots._
+New berry species can be obtained by [mutation](#!Berries#mutation) by planting specific formations on the Farm.  Mutation is explained on the [[Berries]] page.
 
-Mutating Berries is a fairly simple process - plant berries in the correct setup and at the proper timings, wait for berries to be ripe, and then hope that RNG favors you. Mutations can happen in one of two ways; the most common method is for berries to mutate by growing near required berries, while a less common mutation is when berries mutate by evolving in the proper conditions.
+## Farm Setups
 
-Mutation chance varies wildly between different berries.  For a standard mutation to occur, all the required berries must be ripe on the farm simultaneously. When this is true, the game will check each eligible empty plot once a second to see if a mutation happens. Individual berry pages have Optimized Planting Formations to maximize the chances of a mutation occurring, as well as a Timing Chart to help plant berries at the correct times, such that all of them will become ripe simultaneously.  Mutation chance can be increased by using the Oak Item [[Items/Squirtbottle]] and/or consumable [[Items/Surprise Mulch]].
-
-There are a few exceptions to these general mutation rules, such as the [[Berries/Kasib]] and [[Berries/Starf]] Berries, that are explained on their individual Berry pages.
-
-_Example: Persim has a mutation rate of 2%. This means each second the required berries (Oran and Pecha) are ripe on the Farm in the proper locations to cause a mutation to occur, there is a 2% chance of mutating a Persim, per plot. Following the Optimized Planting Formation for Persim, there are at least 5 possible plots for Persim to mutate on, that means that each second the game calculates whether the 2% chance occurred 5 separate times. The Pecha berry will only remain ripe for 1 minute, thus if both Pecha berries become ripe at the same time as Oran, each plot will calculate to see if a mutation will occur 60 times, or in other words, there are 300 chances with a 2% mutation before the Pechas wither and must be replanted and a 99.77% chance of getting at least one Persim before that happens._
-
-### Growth Mutations
-
-Berries that mutate by growing near required berries must have the required berries planted such that every required berry is touching at least the corner of a plot for mutation to be possible on that plot. Growth mutations do not occur where there is already a berry growing.
-
-### Evolution Mutations
-
-Berries that mutate by evolving will replace an existing berry with the mutated berry or by reaching a specific flavor profile.  Some of these are called parasite berries, because they take over other berries to duplicate themselves. Depending on the Flavor profile required for the Berry to evolve, an evolution mutation may occur while the berries are still in the Taller or Bloom growth stages, rather than only when Ripe.
-
-## Setups
-
-The different Berry [Auras](#!Berries#aura) can stack and be used to get bonuses in the main game. To check them, go to the [[Farm/Setups]], [[Hatchery]], [[Shiny Chance]] and [Effort Values](#!Pokérus#Farm) pages.
+Thanks to certain Berries having helpful auras, it's possible to use them to achieve different goals. These Setups can be found in:
+- [[Hatchery]]: Setups related to Egg Step gain
+- [[Shiny Chance]]: Setups related to increasing Shiny Chance
+- [[Pokérus]]: Setups related to increasing EV Yield
+- [[Farm/Setups]]: Setups not contained in the previous two pages
