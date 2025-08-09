@@ -1,4 +1,5 @@
 ## Mutation Strategy
+### Possible Planting Formations {#planting}
 
 Yache can be mutated from a Taller or later stage Passho berry with no berries in adjacent plots. The mutation will cause Passho to change into a Yache and thus doesn't use an empty plot to trigger the mutation. You can fill your farm in the following way to obtain Yache Berries. Purple squares indicate where mutations can occur.
 
