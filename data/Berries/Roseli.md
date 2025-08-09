@@ -5,6 +5,11 @@
 Roseli has a chance of mutating when [[Berries/Mago]], [[Berries/Magost]], [[Berries/Nanab]], and [[Berries/Watmel]] are touching an empty plot. You can fill your farm in the following way to obtain Roseli Berries. Purple squares indicate where mutations can occur.
 **WARNING:** Trying to mutate Roseli while having the [[Oak Items/Sprinklotad]] equipped may result in your Watmel mutating into Shuca.
 
+:::collapsed Roseli Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjoxNiwiYWdlIjo3NDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjI3LCJhZ2UiOjI4ODAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNiwiYWdlIjo3NDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTEsImFnZSI6NTAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMiwiYWdlIjozMzEyMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MTEsImFnZSI6NTAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6MjcsImFnZSI6Mjg4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjE2LCJhZ2UiOjc0MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MjcsImFnZSI6Mjg4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzIsImFnZSI6MzMxMjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjExLCJhZ2UiOjUwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzIsImFnZSI6MzMxMjAsIm11bGNoIjotMX1dfX19`
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Mago.png\|32px]] [[Berries/Mago]] | {.mutation} | [[File:Magost.png\|32px]] [[Berries/Magost]] | {.mutation} | [[File:Mago.png\|32px]] [[Berries/Mago]] | |
