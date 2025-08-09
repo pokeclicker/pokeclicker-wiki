@@ -20,6 +20,12 @@ Rindo has a chance of mutating by surrounding an empty plot with at least 10, bu
 
 **Optimized Formation**
 *(**Note**: This formation may also yield [[File:Grepa.png\|32px]] [[Berries/Grepa]] Berries.)*
+
+:::collapsed  - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjoxNCwiYWdlIjo3MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNCwiYWdlIjo3MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNCwiYWdlIjo3MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNCwiYWdlIjo3MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX1dfX19
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Figy.png\|32px]] [[Berries/Figy]] | {.mutation} | {.mutation} | [[File:Figy.png\|32px]] [[Berries/Figy]] | {.mutation} | |
@@ -29,12 +35,18 @@ Rindo has a chance of mutating by surrounding an empty plot with at least 10, bu
 | {.mutation} | [[File:Aguav.png\|32px]] [[Berries/Aguav]] | {.mutation} | {.mutation} | [[File:Aguav.png\|32px]] [[Berries/Aguav]] | |
 :::
 
+Use [[File:Freeze_Mulch.png\|32px]][[Items/Freeze Mulch]] on the Cheris to avoid having to replant them while waiting for mutation.
+:::collapsed  - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6NH0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6NH0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6NH0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6NH0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX1dfX19
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | |
+| [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.freeze} | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.freeze} | {.mutation} | |
 | {.mutation} | [[File:Aguav.png\|32px]] [[Berries/Aguav]] | {.mutation} | {.mutation} | [[File:Aguav.png\|32px]] [[Berries/Aguav]] | |
 | {.mutation} | {.mutation}| {.mutation}| {.mutation} | {.mutation} | |
-| [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | |
+| [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.freeze} | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.freeze} | {.mutation} | |
 | {.mutation} | [[File:Aguav.png\|32px]] [[Berries/Aguav]] | {.mutation} | {.mutation} | [[File:Aguav.png\|32px]] [[Berries/Aguav]] | |
 :::
 
