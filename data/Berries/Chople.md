@@ -1,8 +1,36 @@
+### Possible Planting Formations {#planting}
+
+The Chople berry can be acquired by equipping the [[File:Magma_Stone.png\|32px]][[Oak Items/Magma Stone]] while there is a [[Berries/Spelon]] at Taller stage or later on the field. The Spelon will then have a chance to mutate into Chople.
+
+**Base Formation**
+::: table-mutations
+| :----: |
+[[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation}| |
+:::
+
+**Optimized Formation**
+
+:::collapsed Spelon Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVsY2giOjJ9LHsiYmVycnkiOjMwLCJhZ2UiOjMwOTYwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzAsImFnZSI6MzA5NjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVsY2giOjJ9LHsiYmVycnkiOjMwLCJhZ2UiOjMwOTYwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzAsImFnZSI6MzA5NjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVsY2giOjJ9LHsiYmVycnkiOjMwLCJhZ2UiOjMwOTYwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzAsImFnZSI6MzA5NjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVsY2giOjJ9LHsiYmVycnkiOjMwLCJhZ2UiOjMwOTYwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzAsImFnZSI6MzA5NjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVsY2giOjJ9LHsiYmVycnkiOjMwLCJhZ2UiOjMwOTYwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzAsImFnZSI6MzA5NjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVsY2giOjJ9LHsiYmVycnkiOjMwLCJhZ2UiOjMwOTYwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzAsImFnZSI6MzA5NjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVsY2giOjJ9LHsiYmVycnkiOjMwLCJhZ2UiOjMwOTYwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzAsImFnZSI6MzA5NjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVsY2giOjJ9LHsiYmVycnkiOjMwLCJhZ2UiOjMwOTYwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzAsImFnZSI6MzA5NjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVsY2giOjJ9XX19fQ==
+:::
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+[[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | |
+[[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | |
+[[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | |
+[[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | |
+[[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | |
+
+:::
 ## Acquisition
 
-The Chople berry can be acquired by equipping the [[Oak Items/Magma Stone]] while there is a [[Berries/Spelon]] at Taller stage or later on the field. The Spelon will then have a chance to mutate into Chople.
+
 
 If the "No Oak Items" challenge is on, the Chople berry can be bought from the [Johto Berry Master](#!Berry_Masters) for 10,000 Farm Points after unlocking [[Berries/Spelon]].
+
+
 
 #### Mutations
 Chople Berries can be used to mutate the following Berries.
