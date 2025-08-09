@@ -5,6 +5,14 @@
 Roseli has a chance of mutating when [[Berries/Mago]], [[Berries/Magost]], [[Berries/Nanab]], and [[Berries/Watmel]] are touching an empty plot. You can fill your farm in the following way to obtain Roseli Berries. Purple squares indicate where mutations can occur.
 **WARNING:** Trying to mutate Roseli while having the [[Oak Items/Sprinklotad]] equipped may result in your Watmel mutating into Shuca.
 
+**Base Formation**
+::: table-mutations
+| :----: | :----: | :----: |
+| [[File:Mago.png\|32px]] [[Berries/Mago]] | {.mutation} | [[File:Magost.png\|32px]] [[Berries/Magost]] | |
+| [[File:Nanab.png\|32px]] [[Berries/Nanab]] | {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | |
+:::
+
+**Optimized Formation**
 :::collapsed Roseli Mutation - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
 
