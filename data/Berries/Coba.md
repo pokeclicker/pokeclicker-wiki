@@ -1,9 +1,15 @@
-## Acquisition
+## Mutation Strategy
+### Possible Planting Formations {#planting}
 
 Coba is obtained by surrounding an empty plot with between 10 and 15 points of Dry flavor, between 15 and 20 points of Bitter flavor, and 0 points of all other flavors.
 
 Two possible farming setups are listed below.
+:::collapsed  WA Coba Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
 
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjoxNSwiYWdlIjo3MjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNSwiYWdlIjo3MjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNSwiYWdlIjo3MjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNSwiYWdlIjo3MjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX1dfX19
+:::
+If Wiki Berries are available, this is the better option of the two.
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Wiki.png\|32px]] [[Berries/Wiki]] | {.mutation} | {.mutation} | [[File:Wiki.png\|32px]] [[Berries/Wiki]] | {.mutation} | |
@@ -19,12 +25,18 @@ Two possible farming setups are listed below.
 |[[File:Wiki.png\|32px]] [[Berries/Wiki]] 	| `Planted First` | | |
 |[[File:Aguav.png\|32px]] [[Berries/Aguav]] |	00:05:50 | 00:03:53 |	00:02:35   |
 
+:::collapsed  CA Coba Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjoxLCJhZ2UiOjgwLCJtdWxjaCI6NH0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxLCJhZ2UiOjgwLCJtdWxjaCI6NH0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxLCJhZ2UiOjgwLCJtdWxjaCI6NH0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxLCJhZ2UiOjgwLCJtdWxjaCI6NH0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNywiYWdlIjo3MDAsIm11bGNoIjotMX1dfX19
+:::
+Does not require Wiki, but [[Freeze Mulch]] will be needed or the Chestos will die quickly.
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-|[[File:Chesto.png\|32px]] [[Berries/Chesto]]|{.mutation}|{.mutation}|[[File:Chesto.png\|32px]] [[Berries/Chesto]]|{.mutation}| |
+|[[File:Chesto.png\|32px]] [[Berries/Chesto]] {.freeze}|{.mutation}|{.mutation}|[[File:Chesto.png\|32px]] [[Berries/Chesto]]{.freeze}|{.mutation}| |
 |{.mutation}|[[File:Aguav.png\|32px]] [[Berries/Aguav]]|{.mutation}|{.mutation}|[[File:Aguav.png\|32px]] [[Berries/Aguav]]| |
 |{.mutation}|{.mutation}|{.mutation}|{.mutation}|{.mutation}| |
-|[[File:Chesto.png\|32px]] [[Berries/Chesto]]|{.mutation}|{.mutation}|[[File:Chesto.png\|32px]] [[Berries/Chesto]]|{.mutation}| |
+|[[File:Chesto.png\|32px]] [[Berries/Chesto]]{.freeze}|{.mutation}|{.mutation}|[[File:Chesto.png\|32px]] [[Berries/Chesto]]{.freeze}|{.mutation}| |
 |{.mutation}|[[File:Aguav.png\|32px]] [[Berries/Aguav]]|{.mutation}|{.mutation}|[[File:Aguav.png\|32px]] [[Berries/Aguav]]| |
 :::
 
