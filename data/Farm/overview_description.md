@@ -16,7 +16,7 @@ New types of Berries can be obtained by planting others in special configuration
 
 ### Locking Plots
 
-Farm plots can be locked or unlocked by interacting with the Padlock button in the Farm modal, holding down Shift and clicking on plots, or with the Lock All, Unlock All and Flip actions from the dropdown or buttons in the Farm module window.  Flip reverses the locked/unlocked status of all plots.  Locked plots cannot be harvested, mulched, or shovelled.  They can still [mutate](#!Berries#mutation) - including being overtaken by parasite berries - wither, and have [[Wandering Pokémon]] collected from them.  Farm Hands cannot harvest or plant in locked plots, but will still manage Wanderers if hired to do so.
+Farm plots can be locked or unlocked by interacting with the Padlock button in the Farm modal, holding down Shift and clicking on plots, or with the Lock All, Unlock All and Flip actions from the dropdown or buttons in the Farm module window.  Flip reverses the locked/unlocked status of all plots.  Locked plots cannot be harvested, mulched, or shovelled.  They can still [mutate](#!Berries#mutation) - including being overtaken by parasite berries - wither, and have [[Wandering Pokémon]] collected from them.  [[Farm Hands]] cannot harvest or plant in locked plots, but will still manage Wanderers if hired to do so.
 
 ### Farm Hands
 Farm Hands are helpers that can be hired to perform Farming tasks from the Farm Hands tab of the main Farm window.  See [[Farm Hands]] for a full explanation of their mechanics.  Most of the time Farm Hands are a net negative in terms of [[Farm Points]] income, outside of certain setups.
