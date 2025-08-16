@@ -14,6 +14,13 @@ When Berry plants become ripe, they will die after a set period of time if not h
 
 New types of Berries can be obtained by planting others in special configurations. The Kanto Berry Master in [[Towns/Cerulean City]] gives hints as to these combinations. The farm can also produce helpful effects (external [Auras](#!Berries#aura)) such as increasing egg steps for faster breeding and better shiny chance. It can also attract specific Pokémon which are referred to as [[Wandering Pokémon]].
 
+### Locking Plots
+
+Farm plots can be locked or unlocked by interacting with the Padlock button in the Farm modal, holding down Shift and clicking on plots, or with the Lock All, Unlock All and Flip actions from the dropdown or buttons in the Farm module window.  Flip reverses the locked/unlocked status of all plots.  Locked plots cannot be harvested, mulched, or shovelled.  They can still [mutate](#!Berries#mutation) - including being overtaken by parasite berries - wither, and have [[Wandering Pokémon]] collected from them.  Farm Hands cannot harvest or plant in locked plots, but will still manage Wanderers if hired to do so.
+
+### Farm Hands
+Farm Hands are helpers that can be hired to perform Farming tasks from the Farm Hands tab of the main Farm window.  See [[Farm Hands]] for a full explanation of their mechanics.  Most of the time Farm Hands are a net negative in terms of [[Farm Points]] income, outside of certain setups.
+
 ### Farm Items
 
 Farming supplies can be bought from [[Berry Masters]] in [[Towns/Goldenrod City]], [[Towns/Mauville City]], [[Towns/Hearthome City]] and [[Towns/Driftveil City]], in exchange for [[Farm Points]]. Mulches can be applied to Berry plants to speed up growth ([[Items/Boost Mulch]]), increase harvest yield ([[Items/Rich Mulch]]), increase mutation chance ([[Items/Surprise Mulch]]), or all the above with a slightly reduced boost for all three ([[Items/Amaze Mulch]]). [[Items/Berry Shovel]] can be used to clear occupied plots of partially grown, unwanted Berries, while [[Items/Mulch Shovel]] will remove Mulches only from a plot.
