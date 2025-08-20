@@ -51,6 +51,9 @@ const requirementHints = (requirement, includeMarkdown = true) => {
                 case SpecialEventRequirement:
                     hint = `The ${includeMarkdown ? `[[Events/${req.specialEventName}]]` : req.specialEventName} event must be active.`;
                     break;
+                case DayOfWeekRequirement:
+                    hint = `Appears every ${GameConstants.DayOfWeek[req.DayOfWeekNum]}.`;
+                    break;
                 case DevelopmentRequirement:
                     hint = 'Not currently available.'
                     break;
