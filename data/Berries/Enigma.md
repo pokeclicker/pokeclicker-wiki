@@ -39,7 +39,6 @@ All planting times use the time-to-ripe remaining of the first planted berry for
 |:---:|:---:|:---:|:---:|
 | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | `Planted First` | | |
 | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | 20:00:00 | 14:00:00 | 10:00:00 |
-| [[File:Roseli.png\|32px]] [[Berries/Roseli]] |  07:00:00 |	4:45:00 |	03:30:00 |
 | North, West, East, and South Hint Berries |  `Growth Duration` |	|	|
 | [[File:Kebia.png\|32px]] [[Berries/Kebia]] |  00:10:00 |	00:07:30 |	00:05:00 |
 
