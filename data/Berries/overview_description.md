@@ -25,7 +25,7 @@ Mutation chance varies wildly between different berries.  For a standard mutatio
 
 Individual berry pages have Optimized Planting Formations to maximize the chances of a mutation occurring, as well as a Timing Chart to help plant berries at the correct times, such that all of them will become ripe simultaneously.  Mutation chance can be increased by using the Oak Item [[Items/Squirtbottle]] and/or consumable [[Items/Surprise Mulch]].
 
-The Kanto Berry Master in [[Towns/Cerulean City]] will give a hint daily for berries the player hasn't yet acquired.  This will cause green dots to appear on Farm plots after setting up the parent plants, showing they are eligible to create a known mutation.
+The Kanto Berry Master in [[Towns/Cerulean City]] will give a hint daily for berries the player hasn't yet acquired.  Green dots appear on Farm plots after setting up the parent plants, showing they are eligible to create a known mutation.
 
 _If you have not yet unlocked all the plots on the Farm and need to mutate berries #9 Persim through #25 Grepa, please use the [Walkthrough](https://docs.google.com/document/d/1TE5cAKSlA7TAliA001_mIiO1odZ6e4yUEMre0GBW1to/edit?usp=sharing)  link for an optimized planting formation to mutate those berries within the limited available farm plots._
 
