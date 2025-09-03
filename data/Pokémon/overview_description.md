@@ -1,4 +1,4 @@
-Pokémon are your partners in this adventure and your main source of attack. Currently the game has **1,399** different Pokémon forms. Most of them based on main games, with 33 coming from side games, 53 coming from anime and films, and 18 custom forms.
+Pokémon are your partners in this adventure and your main source of attack. Currently the game has **1,402** different Pokémon forms. Most of them based on main games, with 33 coming from side games, 53 coming from anime and films, and 18 custom forms.
 
 ## Statistics
 
@@ -29,7 +29,7 @@ This is **always** calculated using the base attack, not the current attack.
 The **base** Attack bonus is **25%** of the base attack.
 *Example: Metapod, that has 20 base attack, will have an attack bonus of 5. After 1 hatch its total attack will be 25, after 2 hatches it will be 30 and after 10 hatches it will be 70.*
 
-The **Attack bonus** can be increased using 2 different [[Vitamins]]: [[Items/Protein]] and [[Items/Calcium]]:
+The **Attack bonus** can be increased using 2 different [[Vitamins]]:
 * **Protein** gives +1 attack bonus. *In our example, Metapod will have 6 attack bonus after using 1 Protein and 15 attack bonus after using 10 Proteins. While Pidgeot (with 112 base attack) will have 29 attack bonus after 1 Protein and 38 after 10 Proteins.*
 * **Calcium** gives 1% base attack as attack bonus. *In our example, Metapod will have 5.2 attack bonus after 1 Calcium and 7 attack bonus after 10 Calcium. While Pidgeot will have 29.12 attack bonus after 1 Calcium and 39.2 after 10 Calcium.*
 
@@ -50,6 +50,8 @@ The table in this page shows only Base BE, in other words, the stat without Vita
 Egg Steps is the value that determines how long it will take for an egg to hatch.
 Routes give a different number of egg steps depending on their difficulty.
 Egg steps are grouped in egg cycles (1 egg cycle = 40 egg steps).
+
+Egg Steps can be reduced by using [[Items/Carbos]].
 
 The egg cycle value for each species begins with the canonical value, with alternate forms using the same value as the base form, and it's subject to a few modifiers:
 
