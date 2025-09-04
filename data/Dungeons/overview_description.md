@@ -2,7 +2,7 @@
 * [Timer](#time)
 * [Size & Layout](#size)
 * [Visibility (Flash)](#flash)
-* [[Dungeon Guides]]
+* [Dungeon Guides](#guide)
 * [Loot Chests](#chest)
 * [Mimics](#mimic)
 * [Regional Debuff](#debuff)
@@ -70,7 +70,7 @@ Number of Clears | Flash layout {.no-data-tables}
 **250** | 1 tile in each direction
 **400** | 2 tiles top, 2 bottom, 2 left, 2 right and 1 in diagonal
 
-### Dungeon Guides
+### Dungeon Guides{#guide}
 [[Dungeon Guides]] are helpers that can be hired for an additional fee on top of the normal Dungeon price to explore Dungeons automatically.  They vary in speed, exploration pattern and success rate.
 
 ## Chests{#chest}
@@ -104,7 +104,7 @@ Tier | 0 clears | 100 clears | 250 clears | 500 clears | Debuffed {.no-data-tabl
 Mimics are Pokémon encounters that look identical to loot chests, but when opened result in a fight instead.  Mimics can be captured like any other wild Pokémon and some species are exclusively found as chest mimcs.  Mimics will **not** be displayed on the Dungeon location summary card until encountered at least once.
 
 Mimic Exclusive:
-@[[Pokemon/Snorlax (Snowman)]], @[[Pokemon/Pikachu (Partner Cap)]], @[[Pokemon/Pinkan Pikachu]], @[[Pokemon/Spiky-eared Pichu]], @[[Pokemon/Flowering Celebi]], @[[Pokemon/Darmanitan (Zen)]], @[[Pokemon/Galarian Darmanitan (Zen)]]
+@[[Pokemon/Pikachu (Partner Cap)]] @[[Pokemon/Pinkan Pikachu]] @[[Pokemon/Snorlax (Snowman)]] @[[Pokemon/Spiky-eared Pichu]] @[[Pokemon/Flowering Celebi]], @[[Pokemon/Darmanitan (Zen)]] @[[Pokemon/Galarian Darmanitan (Zen)]]
 
 ### Loot multiplication{#bonusLoot}
 
