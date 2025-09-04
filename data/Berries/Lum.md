@@ -14,7 +14,7 @@ Lum has a chance of mutating when all Generation 1 Berries (#1 Cheri to #8 Sitru
 :::
 
 **Optimized Formation**
-Each plot has a 0.15% (0.375% with Lv.5 [[Items/Squirtbottle]]) chance for mutating Lum, and a 3.75% to 5% for the other six possible mutations (5.63% to 7.5% with Lv. 5 Squirtbottle).
+Each plot has a 0.15% (0.375% with Lv.5 [[Oak Items/Squirtbottle]]) chance for mutating Lum, and a 3.75% to 5% for the other six possible mutations (5.63% to 7.5% with Lv. 5 Squirtbottle).
 :::collapsed Lum Mutation - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
 
