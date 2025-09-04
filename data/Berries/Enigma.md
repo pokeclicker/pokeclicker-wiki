@@ -16,7 +16,7 @@ You can fill your farm in the following way to obtain Enigma Berries. Purple squ
 :::
 
 ### Enigma Nonsense
-For a more efficient method with a forced center Enigma Berry, you can instead op to surround the farm with [[File:Babiri.png\|32px]] [[Berries/Babiri]] and [[File:Kebia.png\|32px]] [[Berries/Kebia]] berries in the following formation. The [[File:Petaya.png\|32px]] [[Berries/Petaya]] Berry is optional for longer mutation period. Planting times are based on the [[File:Babiri.png\|32px]] [[Berries/Babiri]] or [[File:Petaya.png\|32px]] [[Berries/Petaya]] Berry's remaining time if the [[File:Petaya.png\|32px]] [[Berries/Petaya]] is used. You can add [[File:Wacan.png\|32px]] [[Berries/Wacan]] Berries on the corners for the [[File:Babiri.png\|32px]] [[Berries/Babiri]] Berries.
+For a more efficient method with a forced center Enigma Berry, you can instead opt to surround the farm with [[File:Babiri.png\|32px]] [[Berries/Babiri]] and [[File:Kebia.png\|32px]] [[Berries/Kebia]] berries in the following formation. The [[File:Petaya.png\|32px]] [[Berries/Petaya]] Berry is optional for longer mutation period. Planting times are based on the [[File:Babiri.png\|32px]] [[Berries/Babiri]] or [[File:Petaya.png\|32px]] [[Berries/Petaya]] Berry's remaining time if the [[File:Petaya.png\|32px]] [[Berries/Petaya]] is used. You can add [[File:Wacan.png\|32px]] [[Berries/Wacan]] Berries on the corners for the [[File:Babiri.png\|32px]] [[Berries/Babiri]] Berries.
 * Disclaimer: [[File:Petaya.png\|32px]] [[Berries/Petaya]] is optional for this setup.
 
 :::collapsed Enigma Nonsense - Farm Simulator Code
