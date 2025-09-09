@@ -4,7 +4,7 @@ One quest that can appear involves hatching a random amount of Eggs. These can b
 
 # Usage
 
-As soon as [[Routes/Kanto Route 3]] is cleared, the Pokémon Day Care can be accessed by clicking on its location on the map on Route 3. Additionally, the Hatchery tab becomes available on the main page.
+As soon as [[Routes/Kanto Route 3]] is cleared, the Pokémon Day Care can be accessed by clicking on its location on the map on Route 5. Additionally, the Hatchery tab becomes available on the main page.
 
 There are two different types of hatch-able resources in Pokéclicker: obtained Pokémon Eggs and already obtained level 100 Pokémon. Pokémon Eggs are typically purchased in Shops. The Egg Obtained Pokémon that can be bred each have their own distinct tab in the Pokémon Day Care modal.
 
