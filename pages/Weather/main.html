@@ -127,7 +127,7 @@
                 <tr>
                     <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[GameConstants.getDungeonRegion($data.name)])"></td>
                     <td>
-                        <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Routes/${$data.name}` }"></a>
+                        <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Dungeons/${$data.name}` }"></a>
                     </td>
                     <td data-bind="foreach: $data.enemyList.concat($data.bossList).filter(e => e.options?.requirement).flatMap(encounter => {
                                 const weatherReq = encounter.options.requirement instanceof MultiRequirement 
