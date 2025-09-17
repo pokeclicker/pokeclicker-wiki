@@ -1,5 +1,5 @@
 <!-- ko if: Wiki.pageName() -->
-<!-- ko let: { weather: Weather.weatherConditions[WeatherType[Wiki.pageName().replace(/ /g,"_")]] } -->
+<!-- ko let: { weather: Weather.weatherConditions[WeatherType[Wiki.pageName()?.replace(/ /g,"_")]] } -->
 
 <!-- ko ifnot: weather -->
 <h3>Weather not found...</h3>
