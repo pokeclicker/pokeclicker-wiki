@@ -288,6 +288,11 @@ const searchOptions = [
     type: 'Weather',
     page: '',
   },
+  ...Object.values(Weather.weatherConditions).map(w => ({
+    display: `${GameConstants.humanifyString(WeatherType[w.type])} Weather`,
+    type: 'Weather',
+    page: WeatherType[w.type],
+  })),
   // Oak Itens
   {
     display: 'Oak Items',
