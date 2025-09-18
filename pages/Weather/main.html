@@ -77,8 +77,8 @@
             </thead>
             <tbody data-bind="foreach: routes">         
                     <tr>
-                        <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region])"></td>
-                        <td>
+                        <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region]), attr: { 'data-order': $data.region }"></td>
+                        <td data-bind="attr: { 'data-order': $index }">
                             <a class="text-decoration-none" href="#!" data-bind="text: $data.routeName, attr: { href: `#!Routes/${$data.routeName}` }"></a>
                         </td>
                         <td data-bind="foreach: $data.pokemon.special.flatMap(specialEncounter => {
@@ -125,8 +125,8 @@
             </thead>
             <tbody data-bind="foreach: dungeons">
                 <tr>
-                    <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[GameConstants.getDungeonRegion($data.name)])"></td>
-                    <td>
+                    <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[GameConstants.getDungeonRegion($data.name)]), attr: {'data-order': GameConstants.getDungeonRegion($data.name)}"></td>
+                    <td data-bind="attr: { 'data-order': $index }">
                         <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Dungeons/${$data.name}` }"></a>
                     </td>
                     <td data-bind="foreach: $data.enemyList.concat($data.bossList).filter(e => e.options?.requirement).flatMap(encounter => {
