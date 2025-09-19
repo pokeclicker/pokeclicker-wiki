@@ -87,7 +87,7 @@ The Chisel, Hammer, Bomb and Survey tools each have an individual durability gau
 |---|---|---|---|---|---|
 | [[File:Chisel.png]] Chisel | Mines 2 layers on the selected spot. | 20 seconds | 2% | 2% | Lv.22 |
 | [[File:Hammer.png]] Hammer | Mines 1 layer on all 9 tiles in a 3x3 grid. | 20 seconds | 2% | 6% | Lv.23 |
-| [[File:Bomb.png]] Bomb | Mines 2 layers on each of 10 random tiles (including cleared). The number of tiles can be increased by equipping the [[Oak_Items/Explosive_Charge]] Oak Item. Items collected by the Bomb have a 87.5% chance of being destroyed. Destroyed items will still give EXP. | 20 seconds | 2% | 18% | Lv.24 |
+| [[File:Bomb.png]] Bomb | Mines 2 layers on each of 10 random tiles (including cleared). The number of tiles can be increased by equipping the [[Oak_Items/Explosive_Charge]] Oak Item. Items collected by the Bomb have a 87.5% chance of being destroyed with no EXP gain. | 20 seconds | 2% | 18% | Lv.24 |
 | [[File:Survey.png]] Survey| Indicates a 9x9 grid where at least one tile contains an item. The grid shrinks by two tiles in each direction every 15 levels. | 900 seconds | 100% | 100% | Never |
 | [[File:Cell_Battery.png\|40px]] Discharge| Clears a large number of tiles with a randomly selected pattern based on [[Oak Item/Cell Battery]]'s level. | 30sec / 60sec | None | 100% | Never |
 
