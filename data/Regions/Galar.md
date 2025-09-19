@@ -31,7 +31,7 @@ For the evolution to happen, you must equip the Held Item to the corresponding P
 |[[Towns/Stow-on-Side]] | [[File:pokemon/883.png\|25px]] [[Pokémon/Arctovish]] | [[File:Fossilized Fish.png\|20px]] 1 [[Items/Fossilized Fish]], [[File:Fossilized Dino.png\|20px]] 1 [[Items/Fossilized Dino]],   [[File:questPoint.svg\|20px]] 25,000 |
 |[[Towns/Glimwood Tangle]] | [[File:pokemon/893.01.png\|25px]] [[Pokémon/Zarude (Dada)]] | [[File:questPoint.svg\|20px]] 500,000 |
 
-Zarude (Dada) requires [[Quest Line/Secrets of the Jungle]] Quest Line to be completed to become available for purchase.
+Zarude (Dada) requires [[Quest Lines/Secrets of the Jungle]] Quest Line to be completed to become available for purchase.
 
 ### Eggs
 All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries/Passho]], and [[Berries/Rindo]] berries.
