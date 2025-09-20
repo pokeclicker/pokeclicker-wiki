@@ -114,7 +114,7 @@ This value can then be further modified by Egg Steps multipliers, for example, u
 
 :::collapsed Catch Rate Table
 
-Depending on the Base Catch Rate of the Pokémon found in the Safari Zone and whether you use Magic Ball or not, the best combination of Bait/Rock for your Safari Level is laid out on the table below. The most difficult to catch Pokémon you should throw Nanab [[File:Nanab.png\|32px]] and but as it gets easier to catch them, swap to Razz [[File:Razz.png\|32px]].
+Depending on the Base Catch Rate of the Pokémon found in the Safari Zone and whether you use Magic Ball or not, the best combination of Bait/Rock for your Safari Level is laid out on the table below. For the most difficult to catch Pokémon you should throw Nanab [[File:Nanab.png\|32px]], and as it gets easier to catch them, swap to Razz [[File:Razz.png\|32px]].
 
 |**Base Catch Rate** | **No Magic Ball** | **LvL 5 Magic Ball** {.no-data-tables}
 | --- | --- | --- |
