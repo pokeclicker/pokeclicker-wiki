@@ -112,6 +112,50 @@ $Egg Steps = 1 + \lfloor\frac{SafariLevel}{10}\rfloor$
 
 This value can then be further modified by Egg Steps multipliers, for example, using the Farm setups shown in [[Hatchery]] page or equipping [[Oak Items/Magma Stone]].
 
+:::collapsed Catch Rate Table
+|**Base Catch Rate** | **No Magic Ball** | **LvL 5 Magic Ball** {.no-data-tables}
+| --- | --- | --- |
+| 3 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 5 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 6 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 10 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 15 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 20 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 25 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 30 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 35 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 45 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 50 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 55 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 60 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | LvL 1-39 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] |
+| 65 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | LvL 1-36 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 37-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] |
+| 70 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | LvL 1-34 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 35-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] |
+| 75 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | LvL 1-31 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 32-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] |
+| 80 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | LvL 1-29 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 30-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] |
+| 90 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | LvL 1-24 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 25-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] |
+| 100 | Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | LvL 1-20 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 21-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] |
+| 120 | LvL 1-39 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] | LvL 1-13 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 14-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] |
+| 125 | LvL 1-36 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 37-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] | LvL 1-11 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 12-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] |
+| 127 | LvL 1-35 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 36-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] | LvL 1-11 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 12-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] |
+| 130 | LvL 1-34 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 35-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] | LvL 1-10 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 11-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] |
+| 140 | LvL 1-29 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 30-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] | LvL 1-6 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 7-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] |
+| 145 | LvL 1-27 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 28-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] | LvL 1-5 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 6-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] |
+| 150 | LvL 1-24 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 25-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] | LvL 1-4 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 5-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] |
+| 155 | LvL 1-22 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 23-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] | LvL 1-2 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 3-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] |
+| 160 | LvL 1-20 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 21-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] | LvL 1 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 2-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] |
+| 170 | LvL 1-16 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 17-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] | Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] |
+| 180 | LvL 1-13 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 14-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] | LvL 1-39 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]], Lvl 40 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 190 | LvL 1-10 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 11-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] | LvL 1-37 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]], Lvl 38-40 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 200 | LvL 1-6 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 7-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] | LvL 1-36 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]], Lvl 37-40 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 205 | LvL 1-5 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 6-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] | LvL 1-35 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]], Lvl 36-40 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 220 | LvL 1 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]], LvL 2-40 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] | LvL 1-33 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]], Lvl 34-40 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 225 | Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] | LvL 1-33 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]], Lvl 34-40 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 235 | Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]] | LvL 1-31 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]], Lvl 32-40 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+| 255 | LvL 1-37 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]], Lvl 38-40 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] | LvL 1-28 Razz [[Berries/Razz]] Rock [[Items/Rock_Cruncher]], Lvl 29-40 Nanab [[Berries/Nanab]] Rock [[Items/Rock_Cruncher]] |
+
+
+:::
+
 ### Animation Speed Up Tiers
 Every 10 Safari Levels, the animation will speed up by the following values:
 
