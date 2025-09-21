@@ -37,9 +37,9 @@ _Example: Persim has a mutation rate of 2%. This means each second the required 
 
 ### Evolution Mutations{#evolve}
 
-Berries that mutate by evolving will **replace** an existing berry with the newly mutated berry.  Evolutions can be triggered by meeting the berry's conditional requirement, which might involve equipping certain [[Oak Items]], a specific [[Farm]] state, or a certain nearby host plant.  Some of these are called parasite berries, because they take over other berries to duplicate themselves indiscriminately.  Parasite berries have "It has a tendency to overtake nearby plants" in their BerryDex descriptions.
+Berries that mutate by evolving will **replace** an existing berry with the newly mutated berry.  Evolutions can be triggered by meeting the berry's conditional requirement, which might involve equipping certain [[Oak Items]], a specific [[Farm]] state, or a certain nearby host plant.  Some of these are called parasite berries, because they take over other berries to duplicate themselves indiscriminately.  Parasite berries have "It has a tendency to overtake nearby plants" in their BerryDex descriptions, and can only trigger on a different species than their own.
 
-An evolution mutation can occur while the berries are still in the Taller or Bloom growth stages, rather than only when Ripe the way growth mutations do.  For mutations involving flavor requirements, all berries emit flavor points beginning at the Taller stage (berries have 0.5x flavor in the Taller stage, 0.75x flavor in the Bloom stage, and 1x flavor in the Berry stage).
+All evolution mutations can only occur while the berries are in the Taller or older growth stages, rather than only when Ripe the way growth mutations do.  For mutations involving flavor requirements, all berries emit flavor points beginning at the Taller stage (berries have 0.5x flavor in the Taller stage, 0.75x flavor in the Bloom stage, and 1x flavor in the Berry stage).
 
 ### Setups{#setup}
 
