@@ -26,10 +26,10 @@
             </li>
             <!-- /ko -->
             <!-- ko ifnot: $data.quests -->
-            <!-- ko if: $data.defaultDescription === 'Generic Quest Description. This should be overriden.'-->
+            <!-- ko if: $data.defaultDescription === 'Generic Quest Description. This should be overriden.' || Wiki.pageName() == 'How blu mouse?'-->
             <li class="list-group-item" data-bind="text: $data.description"></li>
             <!-- /ko -->
-            <!-- ko ifnot: $data.defaultDescription === 'Generic Quest Description. This should be overriden.'-->
+            <!-- ko ifnot: $data.defaultDescription === 'Generic Quest Description. This should be overriden.' || Wiki.pageName() == 'How blu mouse?'-->
             <li class="list-group-item">
                 <span data-bind="text: $data.description"></span>
                 <ul>
