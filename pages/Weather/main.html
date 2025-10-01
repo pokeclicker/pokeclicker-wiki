@@ -56,10 +56,7 @@
 </div>
 
 <!-- ROUTE POKEMON -->
-<!-- ko let: { routes: Routes.regionRoutes.filter(route => route.region <= GameConstants.MAX_AVAILABLE_REGION &&
-                route.pokemon.special.some(s => 
-                    (s.req instanceof WeatherRequirement && s.req.weather.includes(weather.type)) ||
-                    (s.req instanceof MultiRequirement && s.req.requirements.find(r => r instanceof WeatherRequirement)?.weather.includes(weather.type))))}
+<!-- ko let: { routes: Wiki.filterHelper.filterRoutes({ filterBy: { encounterRequirement: new WeatherRequirement([weather.type]) }, filterEncounters: true }) }
 -->
           
     <!-- ko if: routes.length > 0 -->
@@ -81,20 +78,17 @@
                         <td data-bind="attr: { 'data-order': $index }">
                             <a class="text-decoration-none" href="#!" data-bind="text: $data.routeName, attr: { href: `#!Routes/${$data.routeName}` }"></a>
                         </td>
-                        <td data-bind="foreach: $data.pokemon.special.flatMap(specialEncounter => {
-                                    const weatherReq = specialEncounter.req instanceof MultiRequirement 
-                                        ? specialEncounter.req.requirements.find(r => r instanceof WeatherRequirement)?.weather
-                                        : specialEncounter.req.weather;
-                                    return weatherReq?.includes(weather.type) ? [{ pokemon: specialEncounter.pokemon, weather: weatherReq }] : [];
-                                }).sort((a, b) => a.weather.length - b.weather.length)">
-                                <!--ko foreach: $data.pokemon -->
-                                    <span class="me-1" style="display:inline-block">
-                                        <img width="30px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data].id + '.png'}"/> 
-                                        <a href="#!" data-bind="text: $data, attr: {href: `#!Pokemon/${$data}`}, style: { fontWeight: $parent.weather.length == 1 ? `bold` : ``}"></a>
-                                    </span>
-                                <!--/ko-->
+                        <td data-bind="foreach: $data.pokemon.special.map(s => ({ 
+                                    ...s, 
+                                    weather: Wiki.filterHelper.findRequirementOfType(s.req, WeatherRequirement).weather
+                                })).sort((a, b) => a.weather.length - b.weather.length)">
+                            <!--ko foreach: $data.pokemon -->
+                                <span class="me-1" style="display:inline-block">
+                                    <img width="30px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data].id + '.png'}"/> 
+                                    <a href="#!" data-bind="text: $data, attr: {href: `#!Pokemon/${$data}`}, style: { fontWeight: $parent.weather.length == 1 ? `bold` : ``}"></a>
+                                </span>
+                            <!--/ko-->
                         </td>
-
                     </tr>     
             </tbody>
         </table>
@@ -103,10 +97,7 @@
 <!--/ko-->
 
 <!-- DUNGEON POKEMON -->
-<!-- ko let: { dungeons: Object.values(dungeonList).filter(dungeon => GameConstants.getDungeonRegion(dungeon.name) <= GameConstants.MAX_AVAILABLE_REGION &&
-                    dungeon.enemyList.concat(dungeon.bossList).flatMap(e => e.options?.requirement).some(e => 
-                        (e instanceof WeatherRequirement && e.weather.includes(weather.type)) ||  
-                        (e instanceof MultiRequirement && e.requirements.find(r => r instanceof WeatherRequirement)?.weather.includes(weather.type))))}
+<!-- ko let: { dungeons: Wiki.filterHelper.filterDungeons({ filterBy: { encounterRequirement: new WeatherRequirement([weather.type]) }, filterEncounters: true })}
 -->
     
     <!-- ko if: dungeons.length > 0 -->
@@ -129,15 +120,13 @@
                     <td data-bind="attr: { 'data-order': $index }">
                         <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Dungeons/${$data.name}` }"></a>
                     </td>
-                    <td data-bind="foreach: $data.enemyList.concat($data.bossList).filter(e => e.options?.requirement).flatMap(encounter => {
-                                const weatherReq = encounter.options.requirement instanceof MultiRequirement 
-                                    ? encounter.options.requirement.requirements.find(r => r instanceof WeatherRequirement)?.weather
-                                    : encounter.options.requirement.weather;                                                            
-                                return weatherReq?.includes(weather.type) ? [{ pokemon: encounter.name, weather: weatherReq }] : []; 
-                            }).sort((a, b) => a.weather.length - b.weather.length)">
+                    <td data-bind="foreach: Wiki.dungeons.getAllDungeonEncounters($data).map(e => ({
+                            ...e,
+                            weather: Wiki.filterHelper.findRequirementOfType(e.options.requirement, WeatherRequirement).weather
+                        })).sort((a, b) => a.weather.length - b.weather.length)">
                             <span class="me-1" style="display:inline-block">
-                                <img width="30px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.pokemon].id + '.png'}"/> 
-                                <a href="#!" data-bind="text: $data.pokemon, attr: {href: `#!Pokemon/${$data.pokemon}`}, style: { fontWeight: $data.weather.length == 1 ? `bold` : ``}"></a>
+                                <img width="30px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/> 
+                                <a href="#!" data-bind="text: $data.name, attr: {href: `#!Pokemon/${$data.name}`}, style: { fontWeight: $data.weather.length == 1 ? `bold` : ``}"></a>
                             </span>
                     </td>
                 </tr>
@@ -152,7 +141,7 @@
 
 <!-- POKEMON EVOLUTIONS -->
 <!--ko let: { pokemonEvos: pokemonList.filter(p => p.evolutions).flatMap(p => p.evolutions).filter(e => 
-                    e.restrictions.find(r => r instanceof WeatherRequirement && r.weather.includes(weather.type)))}
+                    e.restrictions.find(r => Wiki.filterHelper.matchesRequirement(r, new WeatherRequirement([weather.type]))))}
 -->
     <!--ko if: pokemonEvos.length > 0 -->
     <h3>Pokémon Evolutions Affected by Weather</h3>
