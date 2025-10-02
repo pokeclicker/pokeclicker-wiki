@@ -1,0 +1,71 @@
+<p>Today is <b><span data-bind="text: GameConstants.DayOfWeek[GameHelper.getToday().getDay()]"></span></b>.</p>
+
+<h3>Route Encounters</h3>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover" data-order="[[ 3, &quot;asc&quot; ]]">
+        <thead>
+            <tr>
+                <th>Region</th>
+                <th>Route</th>
+                <th>Pokémon</th>
+                <th>Day of Week</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: {data: Wiki.filterHelper.filterRoutes({ filterBy: { encounterRequirement: new DayOfWeekRequirement() }, filterEncounters: true }), as:'route'}">
+            <!--ko foreach: $data.pokemon.special -->
+            <tr data-bind="css: { 'table-secondary': $data.req.DayOfWeekNum % 2 }, style: { fontWeight: $data.req.DayOfWeekNum == GameHelper.getToday().getDay() ? 'bold' : ''}">
+                <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[route.region]), attr: { 'data-order': route.region }"></td>      
+                <td data-bind="attr: { 'data-order': $parentContext.index }">
+                    <a class="text-decoration-none" href="#!" data-bind="text: route.routeName, attr: { href: `#!Routes/${route.routeName}` }"></a>
+                </td>
+                <td>
+                    <!--ko foreach: $data.pokemon -->
+                        <span class="me-1" style="display:inline-block">
+                            <img width="30px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data].id + '.png'}"/> 
+                            <a href="#!" data-bind="text: $data, attr: {href: `#!Pokemon/${$data}`}"></a>
+                        </span>
+                    <!--/ko-->
+                </td>
+                <td data-bind="text: GameConstants.DayOfWeek[$data.req.DayOfWeekNum], attr: {'data-order': $data.req.DayOfWeekNum}"></td>           
+            </tr>
+            <!--/ko-->
+        </tbody>
+    </table>
+</div>
+
+<br/>
+
+<h3>Dungeon Encounters</h3>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover" data-order="[[ 3, &quot;asc&quot; ]]">
+        <thead>
+            <tr>
+                <th>Region</th>
+                <th>Dungeon</th>
+                <th>Pokémon</th>
+                <th>Day of Week</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: {data: Wiki.filterHelper.filterDungeons({ filterBy: { encounterRequirement: new DayOfWeekRequirement() }, filterEncounters: true }), as: 'dungeon'}">
+            <!--ko foreach: Object.entries(Object.groupBy(Wiki.dungeons.getAllDungeonEncounters(dungeon), ({options}) => Wiki.filterHelper.findRequirementOfType(options.requirement, DayOfWeekRequirement)?.DayOfWeekNum)) -->
+            <!--ko let: { dayOfWeek: $data[0], pokemons: $data[1] }-->
+            <tr data-bind="css: { 'table-secondary': dayOfWeek % 2 }, style: { fontWeight: dayOfWeek == GameHelper.getToday().getDay() ? 'bold' : ''}">
+                <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[GameConstants.getDungeonRegion(dungeon.name)]),  attr: {'data-order': GameConstants.getDungeonRegion(dungeon.name) }"></td>
+                <td>
+                    <a class="text-decoration-none" href="#!" data-bind="text: dungeon.name, attr: { href: `#!Dungeons/${dungeon.name}` }"></a>
+                </td>
+                <td>
+                    <!--ko foreach: pokemons -->
+                        <span class="me-1" style="display:inline-block">
+                            <img width="30px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/> 
+                            <a href="#!" data-bind="text: $data.name, attr: {href: `#!Pokemon/${$data.name}`}"></a>
+                        </span>
+                    <!--/ko-->
+                </td>
+                <td data-bind="text: GameConstants.DayOfWeek[dayOfWeek], attr: {'data-order': dayOfWeek}"></td>           
+            </tr>
+            <!--/ko-->
+            <!--/ko-->
+        </tbody>
+    </table>
+</div>

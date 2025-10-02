@@ -1,0 +1,1 @@
+Mimics are Pokémon encounters in [[Dungeons]] that may appear when opening a loot chest. Mimics will **not** be displayed on the Dungeon location summary card until encountered at least once.

@@ -476,6 +476,30 @@ const searchOptions = [
     type: 'Game Updates',
     page: '',
   },
+  // Encounters
+  {
+    display: 'Encounters',
+    type: 'Encounters',
+    page: '',
+  },
+  // Mimics
+  {
+    display: 'Mimics',
+    type: 'Mimics',
+    page: '',
+  },
+    // Day of Week Pokémon
+  {
+    display: 'Day of Week Pokémon',
+    type: 'Day of Week Pokémon',
+    page: '',
+  },
+    // Ultra Beasts
+  {
+    display: 'Ultra Beasts',
+    type: 'Ultra Beasts',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {

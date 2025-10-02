@@ -1,0 +1,70 @@
+<h3>Route Encounters</h3>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-striped" data-order="[]">
+        <thead>
+            <tr>
+                <th>Region</th>
+                <th>Route</th>
+                <th>Pokémon</th>
+                <th>Requirements</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: {data: Wiki.filterHelper.filterRoutes({ filterBy: { pokemonFilter: (pokemon) => GameConstants.UltraBeastType[pokemon] != undefined }, filterEncounters: true }), as:'route'}">
+            <!--ko foreach: $data.pokemon.special -->
+            <tr>
+                <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[route.region]), attr: { 'data-order': route.region }"></td>      
+                <td data-bind="attr: { 'data-order': $index }">
+                    <a class="text-decoration-none" href="#!" data-bind="text: route.routeName, attr: { href: `#!Routes/${route.routeName}` }"></a>
+                </td>
+                <td>
+                    <span class="me-1" style="display:inline-block">
+                        <img width="30px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.pokemon].id + '.png'}"/> 
+                        <a href="#!" data-bind="text: $data.pokemon, attr: {href: `#!Pokemon/${$data.pokemon}`}"></a>
+                    </span>
+                </td>
+                <td>
+                    <!--ko foreach: Wiki.gameHelper.requirementHints($data.req, false) -->
+                    <span data-bind="text: $data"></span><br/>
+                    <!--/ko-->
+                </td>
+            </tr>
+            <!--/ko-->
+        </tbody>
+    </table>
+</div>
+
+<br/>
+<h3>Dungeon Encounters</h3>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-striped" data-order="[]">
+        <thead>
+            <tr>
+                <th>Region</th>
+                <th>Dungeon</th>
+                <th>Pokémon</th>
+                <th>Requirements</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: {data: Wiki.filterHelper.filterDungeons({ filterBy: { pokemonFilter: (pokemon) => GameConstants.UltraBeastType[pokemon] != undefined }, filterEncounters: true }), as:'dungeon'}">
+            <!--ko foreach: Wiki.dungeons.getAllDungeonEncounters(dungeon) -->
+            <tr>
+                <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[GameConstants.getDungeonRegion(dungeon.name)]), attr: {'data-order': GameConstants.getDungeonRegion(dungeon.name)}"></td>
+                <td data-bind="attr: { 'data-order': $index }">
+                    <a class="text-decoration-none" href="#!" data-bind="text: dungeon.name, attr: { href: `#!Dungeons/${dungeon.name}` }"></a>
+                </td>
+                <td>
+                        <span class="me-1" style="display:inline-block">
+                            <img width="30px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/> 
+                            <a href="#!" data-bind="text: $data.name, attr: {href: `#!Pokemon/${$data.name}`}"></a>
+                        </span>
+                </td>
+                <td>
+                    <!--ko foreach: Wiki.gameHelper.requirementHints($data.options?.requirement, false) -->
+                    <span data-bind="text: $data"></span><br/>
+                    <!--/ko-->
+                </td>
+            </tr>
+            <!--/ko-->
+        </tbody>
+    </table>
+</div>
