@@ -29,7 +29,7 @@ class DungeonFilterHelper {
     filterEncounters(encounters, isMimic = false, lootTable = {}) {
         if (isMimic) {
             const mimicsAsLoot = encounters.length > 0 ? Object.values(lootTable).flat().filter(loot => encounters.includes(loot.loot)) : [];
-            return mimicsAsLoot.filter(DungeonFilterHelper.combineFilters(this.encounterConditions))
+            return mimicsAsLoot.filter(DungeonFilterHelper.combineFilters(this.encounterConditions)).map(m => m.loot);
         }
 
         return encounters.filter(DungeonFilterHelper.combineFilters(this.encounterConditions))
