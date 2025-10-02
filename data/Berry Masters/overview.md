@@ -48,7 +48,7 @@ See [[Daily Deals]] for currently available trades.  Visit [PokéClicker Compani
 | [[Pokemon/Pinkan Electabuzz]] | 1 | x80-100 [[Berries/Pinkan]] Berries |
 
 ### Goldenrod City - Johto
-Best source of bulk specialty [[Pokéballs]].
+Best source of bulk specialty [[Poké Balls]].
 | Trade Type | Quantity | Requests |
 | :--- | :---: | :--- |
 | Battle Item | 3 - 7 | x30-70 Gen1 Berries, x10-30 Gen2 Berries |

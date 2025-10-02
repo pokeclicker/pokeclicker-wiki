@@ -75,7 +75,7 @@ Example 2: Catching a **Shiny Roaming Pokémon** with a **Repeatball** yields:
 Example 3: Catching a **Shadow Pokémon** during a **Dungeon Boss Encounter** with a Duskball when holding a **Power Bracer** yields:
 **0.1 (Catching) \* 2 (Shadow Pokémon) \*10 (Dungeon Boss)  \*2 (Power Bracer) = 4 EVs**
 
-#### Break Points for non-caught Pokémon
+#### Break Points for non-caught Pokémon{#breakpoints}
 
 For Pokémon that cannot be caught - shop purchases, [Alcremie Spins](#!Battle_Cafe), and item evolutions, combining [[Berries/Rowap]] setups, equipping [[Items/Power Bracer]] and activating [[Items/Blue Flute]] gives the greatest possible yield for the fewest purchases / spins / items to reach Resistant.  Achievement % scales Blue Flute's effectiveness; the percentages in the table below are the minimum required.
 

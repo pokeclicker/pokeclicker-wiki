@@ -1,0 +1,1 @@
+Unlocks upon completing the quest line [[Quest Lines/Destiny Deoxys]].
