@@ -358,6 +358,34 @@ const getDungeonShadowPokemon = (dungeon) => {
     return shadows;
 };
 
+const getAllDungeonEncounters = (dungeon) => {
+    const mimicsAsLoot = dungeon.mimicList.length > 0 ? Object.values(dungeon.lootTable).flat().filter(loot => dungeon.mimicList.includes(loot.loot)) : [];
+
+    return [].concat(
+                dungeon.enemyList,
+                dungeon.bossList,
+                mimicsAsLoot
+            ).map(e => normalizeDungeonEncounter(e));
+}
+
+const normalizeDungeonEncounter = (encounter) => {
+    if (typeof encounter === 'string') {
+        return {
+            name: encounter
+        };
+    }
+
+    return {
+        ...encounter,
+        name: encounter.name || encounter.pokemon || encounter.loot,
+        options: {
+            ...encounter.options,
+            requirement: encounter.options?.requirement || encounter.requirement
+        }
+    };
+}
+
+
 module.exports = {
     getDungeonLoot,
     getDungeonLootChances,
@@ -366,4 +394,5 @@ module.exports = {
     getTableClearCounts,
     itemTypeCategories,
     getDungeonShadowPokemon,
+    getAllDungeonEncounters,
 };

@@ -1,0 +1,1 @@
+Ultra Beast encounters are unlocked in [[Region/Alola]] during the [[Quest Lines/Ultra Beast Hunt]] quest line. Ultra Beasts must be caught with a [[Items/Beast Ball]]. 

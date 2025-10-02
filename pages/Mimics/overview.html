@@ -1,0 +1,42 @@
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-striped" data-order="[]">
+        <thead>
+            <tr>
+                <th>Region</th>
+                <th>Dungeon</th>
+                <th class="tight">Chest</th>
+                <th>Mimic Pokémon</th>
+                <th>Exclusively found as a Mimic encounter</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: {data: Object.values(dungeonList).filter(dungeon => GameConstants.getDungeonRegion(dungeon.name) <= GameConstants.MAX_AVAILABLE_REGION &&
+                    dungeon.mimicList.length > 0 ), as:'dungeon'}">
+            <!--ko let: { lootTable: Object.entries(dungeon.lootTable) }-->
+            <!--ko foreach: { data: dungeon.mimicList, as: 'mimic' } -->
+            <tr>
+                <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[GameConstants.getDungeonRegion(dungeon.name)]),  attr: {'data-order': GameConstants.getDungeonRegion(dungeon.name) }"></td>
+                <td>
+                    <a class="text-decoration-none" href="#!" data-bind="text: dungeon.name, attr: { href: `#!Dungeons/${dungeon.name}` }"></a>
+                </td>
+                <!--ko let: {tier: lootTable.find(([tier, loot]) => loot.some(l => l.loot === mimic))[0]}-->
+                <td class="tight text-center" data-bind="attr: { 'data-order': tier }">
+                    <img width="36px" data-bind="attr: { alt: tier, src: `./pokeclicker/docs/assets/images/dungeons/chest-${tier}.png` }" />
+                </td>
+                <!--/ko-->
+                <td>
+                    <span class="me-1" style="display:inline-block">
+                        <img width="30px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[mimic].id + '.png'}"/> 
+                        <a href="#!" data-bind="text: mimic, attr: {href: `#!Pokemon/${mimic}`}"></a>
+                    </span>
+                </td>
+                <td>
+                    <!--ko if: Object.entries(PokemonLocations.getPokemonLocations(mimic)).every(([locType, locs]) => locType == PokemonLocationType.DungeonChest || locs.length === 0)-->
+                        ✔️
+                    <!--/ko-->
+                </td>
+            </tr>
+            <!--/ko-->
+            <!--/ko-->
+        </tbody>
+    </table>
+</div>

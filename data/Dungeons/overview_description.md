@@ -101,10 +101,9 @@ Tier | 0 clears | 100 clears | 250 clears | 500 clears | Debuffed {.no-data-tabl
 **Example 2:** Mt. Moon has Greatball, Small Restore and Star Piece as 3 of its 5 lootable items from Dungeon chests. All 3 items are in the Mythic tier, but the Greatball Has Weight 2 while the Small Restore and Star Piece have the base weight of 1. This means the Greatball will be twice as likely to be dropped as the other 2 items. In other words, on average when an item looted from Mt. Moon is from the Mythic Tier, 50% of the time it will be a Greatball, 25% of the time it will be a Small Restore, 25% of the time it will be a Star Piece.
 
 ### Mimics{#mimic}
-Mimics are Pokémon encounters that look identical to loot chests, but when opened result in a fight instead.  Mimics can be captured like any other wild Pokémon and some species are exclusively found as chest mimcs.  Mimics will **not** be displayed on the Dungeon location summary card until encountered at least once.
+Mimics are Pokémon encounters that look identical to loot chests, but when opened result in a fight instead.  Mimics can be captured like any other wild Pokémon and some species are exclusively found as chest mimics.  Mimics will **not** be displayed on the Dungeon location summary card until encountered at least once.
 
-Mimic Exclusive:
-@[[Pokemon/Pikachu (Partner Cap)]] @[[Pokemon/Pinkan Pikachu]] @[[Pokemon/Snorlax (Snowman)]] @[[Pokemon/Spiky-eared Pichu]] @[[Pokemon/Flowering Celebi]], @[[Pokemon/Darmanitan (Zen)]] @[[Pokemon/Galarian Darmanitan (Zen)]]
+- [List of Mimic Pokémon](#!Mimics)
 
 ### Loot multiplication{#bonusLoot}
 

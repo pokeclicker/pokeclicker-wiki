@@ -288,6 +288,11 @@ const searchOptions = [
     type: 'Weather',
     page: '',
   },
+  ...Object.values(Weather.weatherConditions).map(w => ({
+    display: `${GameConstants.humanifyString(WeatherType[w.type])} Weather`,
+    type: 'Weather',
+    page: WeatherType[w.type],
+  })),
   // Oak Itens
   {
     display: 'Oak Items',
@@ -469,6 +474,30 @@ const searchOptions = [
   {
     display: 'Game Updates',
     type: 'Game Updates',
+    page: '',
+  },
+  // Encounters
+  {
+    display: 'Encounters',
+    type: 'Encounters',
+    page: '',
+  },
+  // Mimics
+  {
+    display: 'Mimics',
+    type: 'Mimics',
+    page: '',
+  },
+    // Day of Week Pokémon
+  {
+    display: 'Day of Week Pokémon',
+    type: 'Day of Week Pokémon',
+    page: '',
+  },
+    // Ultra Beasts
+  {
+    display: 'Ultra Beasts',
+    type: 'Ultra Beasts',
     page: '',
   },
 ];

@@ -1,0 +1,1 @@
+Day of Week Pokémon only appear in locations on certain days of the week, based on the player's local time.
