@@ -199,7 +199,7 @@ _**Harvest Aura + Rich Mulch Bonus: 16.28x**_
 #### Roseli + Lum + Attracting Berry
 Using 2 Lum berries surrounded by 13 Roseli berries, and then filling the remainder of open farm spots with an attracting berry (a berry that attracts a particular species of wandering Pokémon) is the most effective way of attracting wandering Pokémon to the farm.  [[Items/Gooey Mulch]] can be used on the attracting berries  for increased odds of rare wanderers and boosted capture chance.
 
-- _Note: Do not use this setup with [[Berries/Occa]], [[Berries/Colbur]], or [[Berries/Kebia]] or [[Berries/Enigma]] berries due to their nature of overtaking other berries. See "Parasite Berries" below for those setups. Using this exact setup with [Berries/Chople] may cause it to mutate into [Berries/Chilan], but moving one of the rows of Chople to the very bottom eliminates any risk of mutation with no downside._
+- _Note: Do not use this setup with [[Berries/Occa]], [[Berries/Colbur]], or [[Berries/Kebia]] or [[Berries/Enigma]] berries due to their nature of overtaking other berries. See "Parasite Berries" below for those setups. Using this exact setup with [[Berries/Chople]] may cause it to mutate into [[Berries/Chilan]], but moving one of the rows of Chople to the very bottom eliminates any risk of mutation with no downside._
 
 :::collapsed Roseli + Lum + Attracting Berry - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
