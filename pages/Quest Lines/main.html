@@ -12,10 +12,10 @@
             <li class="list-group-item">
                 <span data-bind="text: $data.description"></span>
                 <ul data-bind="foreach: $data.quests">
-                    <!-- ko if: $data.defaultDescription === 'Generic Quest Description. This should be overriden.'-->
+                    <!-- ko if: $data.defaultDescription === 'Generic Quest Description. This should be overriden.'|| $data.defaultDescription === $data.description-->
                     <li data-bind="text: $data.description"></li>
                     <!-- /ko -->
-                    <!-- ko ifnot: $data.defaultDescription === 'Generic Quest Description. This should be overriden.'-->
+                    <!-- ko ifnot: $data.defaultDescription === 'Generic Quest Description. This should be overriden.'|| $data.defaultDescription === $data.description-->
                     <li data-bind="text: $data.description"></li>
                     <ul>
                         <li data-bind="text: $data.defaultDescription"></li>
@@ -26,10 +26,10 @@
             </li>
             <!-- /ko -->
             <!-- ko ifnot: $data.quests -->
-            <!-- ko if: $data.defaultDescription === 'Generic Quest Description. This should be overriden.' || Wiki.pageName() == 'How blu mouse?'-->
+            <!-- ko if: $data.defaultDescription === 'Generic Quest Description. This should be overriden.'|| $data.defaultDescription === $data.description || Wiki.pageName() == 'How blu mouse?'-->
             <li class="list-group-item" data-bind="text: $data.description"></li>
             <!-- /ko -->
-            <!-- ko ifnot: $data.defaultDescription === 'Generic Quest Description. This should be overriden.' || Wiki.pageName() == 'How blu mouse?'-->
+            <!-- ko ifnot: $data.defaultDescription === 'Generic Quest Description. This should be overriden.'|| $data.defaultDescription === $data.description || Wiki.pageName() == 'How blu mouse?'-->
             <li class="list-group-item">
                 <span data-bind="text: $data.description"></span>
                 <ul>
