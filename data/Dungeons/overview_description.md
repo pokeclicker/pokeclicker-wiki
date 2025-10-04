@@ -1,34 +1,75 @@
 #### Jump to:
-* [Timer](#time)
+* [Dungeon Basics](#basics)
+	* [Controls](#navigation)
+	* [Dungeon Tiles](#tiles)
+	* [Encounters](#encounters)
+		* [Mimics](#mimic)
+	* [Timer](#time)
+	* [Multiple Clears](#clearing)
 * [Size & Layout](#size)
 * [Visibility (Flash)](#flash)
-* [Dungeon Guides](#guide)
 * [Loot Chests](#chest)
-* [Mimics](#mimic)
 * [Regional Debuff](#debuff)
 * [Dungeon List](#list)
+#### See Also:
+* [[Dungeon Guides]]
+* [[Dungeon Tokens]]
 
-Dungeons include forests, caves, buildings, and other places that are accessible by spending [[Dungeon Tokens]], in which wild Pokémon and/or Trainers are encountered. Apart from the entrance fee, they differ from routes in that only 60 seconds are given to find and defeat a "Boss Pokémon" or "Boss Trainer", after which the dungeon is considered cleared.  There are [[Achievements]] for 10, 100, 250 and 500 clears of every Dungeon.  [[Dungeon Guides]] can be used to automatically explore dungeons for a fee.
+## Dungeon Basics{#basics}
 
-## Dungeon Basics
-Clearing Dungeons requires active play. To enter a dungeon, select it on the Town Map and either click "Start" or press the Spacebar on the keyboard. Dungeons can be navigated either by clicking on the dungeon tiles or by using the arrow keys or **WASD** keys. Only unexplored tiles adjacent to explored tiles can be accessed. Moving to unexplored tiles in dungeons can reveal one of 6 things:
+Dungeons are locations where you can encounter wild Pokémon and Trainers and loot items from chests. Dungeons cost [[Dungeon Tokens]] [[File:dungeonToken.svg|18px]] to enter. Once inside, you have a time limit to explore. To **clear** a dungeon, you must find and defeat the Dungeon Boss within the time limit.
 
-1. **Empty tiles** - You can simply move onto next tile without having to do anything.
-2. **A Wild Pokémon**- Just like routes, these are Pokémon you can defeat and catch. Some Pokémon can only be found in specific dungeons.
-3. **Dungeon boss** - This Pokémon must be defeated to clear the dungeon. It has more HP than normal encounters in any dungeon. You can either click "Start Bossfight" or press the Spacebar to start the fight.
-4. **Ladder** - Allows the player to progress to the next floor and also adds 10 seconds to the timer. You can either click "Go to next floor" or press Spacebar. This tile can only be encountered from Alola onwards.
-5. **A chest**- Many Items can be collected from chests by either clicking on them or by pressing the Spacebar. They may also contain Pokémon which are known as **Mimics**. Some of them are even exclusive Pokémon that can only be encountered in this way.
-6. **A trainer**- Trainers are found on tiles and have teams of Pokémon that must all be defeated to progress. Wild Pokémon are almost always ~4 times more likely to appear on an enemy tile than a trainer, but in some dungeons this weighting is different. Defeating trainers yields the following rewards:
-	- Dungeon Trainers reward 4% of the dungeon cost as Dungeon Tokens [[File:dungeonToken.svg|18px]] and 50% of the dungeon cost as Pokédollars whenever they are defeated.
-	- Dungeon Trainer Bosses reward 10% of the dungeon cost as Dungeon Tokens [[File:dungeonToken.svg|18px]]  and 100% of the dungeon cost as Pokédollars whenever they are defeated.
+Dungeons become available in the game after you purchase a [Dungeon Ticket](#!Key_Items) in [[Town/Viridian City]].
 
-Note: Amulet Coin and other items that grant increased amounts of Pokédollars **do not** affect the amount of money that you receive from Dungeon Trainers or Dungeon Trainer Bosses.
+#### Controls{#navigation}
 
-### EVs
-Dungeon Pokémon captures get higher base [Effort Value](#!Pokérus/#EV) yields in Dungeons.  Standard Dungeon Pokémon have a multiplier of 3x, Mimics and Dungeon Bosses 10x.  These stack with all the other multipliers that affect EVs.
+- **To enter a dungeon**, select the dungeon on the Town Map and click "Start" or press Spacebar. You must be able to pay the Dungeon Token cost.
+- **To move to a dungeon tile,** click on the dungeon tile or use the arrow keys or WASD keys. You can only move to adjacent tiles.
+- Dungeon tiles with interactions will have a button prompt. **To interact**, click on the button or press Spacebar.
 
-### Timer{#time}
-When a Dungeon is entered a timer starts with 60 seconds by default.  This can be increased by having the [[Items/Time Flute]] active.  A ten second bonus is also given for finding and using the stairs to a lower level, if available.  The Dungeon timer is not paused by opening other menus so prepare relevant Battle and Oak Items before beginning.  Saving and exiting the game will forfeit the current Dungeon run, including any remaining clear attempts from [[Dungeon Guides]].
+On the dungeon overview, you can click the [[File:encountersInfo/encountersInfo.png|24px]] icon to see what loot can be found in the dungeon.
+
+#### Dungeon Tiles{#tiles}
+
+ Icon {.col-1}| Tile {.col-2}| Description {.no-data-tables}
+|:-------:|:-------:|------|
+|&nbsp; {.bg-dark .opacity-75}    | **Unexplored**   | Dark grey tiles are unexplored. Move onto the tile to uncover it. |
+|&nbsp;  | **Explored**   | An empty, explored tile. |
+|&nbsp; { .bg-danger}   | **Regular Enemy**| Red tiles indicate wild Pokémon or Trainer encounters. |
+| [[File:dungeons/boss.svg\|30px]] {.bg-dark .align-middle} | **Dungeon Boss** | Like regular enemies, the Dungeon Boss can be wild Pokémon or a Trainer, but they will have more HP than a regular enemy. The dungeon boss must be defeated to clear the dungeon. After defeating them, you will automatically exit the dungeon. |
+| [[File:chest-common.png\|40px]] {.bg-dark .align-middle} | **Chest** | Contains loot of various rarities or Mimic encounters. Opening a chest will increase the enemy HP of encounters in the dungeon. Opening enough chests will reveal unexplored portions of the dungeon map. |
+| [[File:dungeons/ladder.png\|40px]] {.bg-dark .align-middle } | **Ladder** | Allows the player to progress to the next floor of a multi-floor dungeon. Adds 10 seconds to the timer. (Only available in dungeons from Alola onwards) |
+
+#### Encounters{#encounters}
+Encounters can have different weights, making some enemies and bosses more likely to appear than others.
+
+**Wild Pokémon** can be captured, and a successful capture will also reward you Dungeon Tokens.
+- Pokémon captured in dungeons provide higher base [Effort Value](#!Pokérus/#EV) yields. These modifiers stack with any other multipliers that affect EVs.
+- Dungeons encounters benefit from a +15% catch rate when using a [[Items/Dusk Ball]].
+
+**Mimics**{#mimic} are wild Pokémon are hiding as chests, and opening a chest with a Mimic will result in a battle. Mimics will **not** be displayed on the Dungeon location summary card until encountered at least once. Some Pokémon are exclusive to Mimic encounters.
+
+- Mimic Exclusives: @[[Pokemon/Pikachu (Partner Cap)]] @[[Pokemon/Pinkan Pikachu]] @[[Pokemon/Snorlax (Snowman)]] @[[Pokemon/Spiky-eared Pichu]] @[[Pokemon/Flowering Celebi]] @[[Pokemon/Darmanitan (Zen)]] @[[Pokemon/Galarian Darmanitan (Zen)]]
+
+**Trainers** will award you with Dungeon Tokens [[File:dungeonToken.svg|18px]] and Pokédollars [[File:money.svg|18px]] once defeated. Amulet Coin and other items that grant increased amounts of Pokédollars **do not** affect the amount of money that you receive from Dungeon Trainers.
+- Defeating non-boss Trainers rewards 4% of the dungeon cost as Dungeon Tokens and 50% of the dungeon cost as Pokédollars.
+- Defeating boss Trainers rewards 10% of the dungeon cost as Dungeon Tokens and 100% of the dungeon cost as Pokédollars.
+
+#### Timer{#time}
+
+Dungeons timers are **60 seconds** by default. If the timer expires before you defeat the Dungeon Boss, you are forced to exit the dungeon. The timer does not pause when opening menus and you cannot save dungeon progress. Exiting the game while in a dungeon will forfeit the run.
+
+Ways to increase the timer:
+- Having the [[Items/Time Flute]] active
+- Using a ladder in a multi-floor dungeon (adds 10 seconds)
+
+#### Multiple Clears{#clearing}
+- Clearing a dungeon 10 times will allow you to **hire [[Dungeon Guides]]** to automatically explore the dungeon for you (for a fee).
+- Clearing a dungeon 10, 100, 250 and 500 times will **award an [achievement](#!Achievements)**.
+- Clearing a dungeon 10, 100, 1000, etc. times (any amount that is a power of ten) will **shrink the dungeon size by 1 permanently**.
+- Clearing a dungeon 100, 250, and 400 times will **increase your [Flash Ability](#flash)** for that dungeon, allowing you to see the contents of unexplored tiles.
+
+---
 
 ### Size & Layout{#size}
 
@@ -70,9 +111,6 @@ Number of Clears | Flash layout {.no-data-tables}
 **250** | 1 tile in each direction
 **400** | 2 tiles top, 2 bottom, 2 left, 2 right and 1 in diagonal
 
-### Dungeon Guides{#guide}
-[[Dungeon Guides]] are helpers that can be hired for an additional fee on top of the normal Dungeon price to explore Dungeons automatically.  They vary in speed, exploration pattern and success rate.
-
 ## Chests{#chest}
 
 When a number of chests equal to a third of the dungeon's size rounded down are opened (for example, 2 chests in a 6x6 dungeon), all chest tiles are revealed. When a number of chests equal to half the dungeon's size rounded up are opened, the entire dungeon is revealed. However, each chest opened will also increase the HP of all encounters in the dungeon by 20%.
@@ -99,12 +137,6 @@ Tier | 0 clears | 100 clears | 250 clears | 500 clears | Debuffed {.no-data-tabl
 **Example 1:** Mt. Moon has XClick and Greatball as 2 of its 5 lootable items from Dungeon chests. The XClick is in the **Common** Tier while the Greatball has the **Mythic** Tier. This means that the XClick is much more likely to drop from a chest than a Greatball.
 
 **Example 2:** Mt. Moon has Greatball, Small Restore and Star Piece as 3 of its 5 lootable items from Dungeon chests. All 3 items are in the Mythic tier, but the Greatball Has Weight 2 while the Small Restore and Star Piece have the base weight of 1. This means the Greatball will be twice as likely to be dropped as the other 2 items. In other words, on average when an item looted from Mt. Moon is from the Mythic Tier, 50% of the time it will be a Greatball, 25% of the time it will be a Small Restore, 25% of the time it will be a Star Piece.
-
-### Mimics{#mimic}
-Mimics are Pokémon encounters that look identical to loot chests, but when opened result in a fight instead.  Mimics can be captured like any other wild Pokémon and some species are exclusively found as chest mimcs.  Mimics will **not** be displayed on the Dungeon location summary card until encountered at least once.
-
-Mimic Exclusive:
-@[[Pokemon/Pikachu (Partner Cap)]] @[[Pokemon/Pinkan Pikachu]] @[[Pokemon/Snorlax (Snowman)]] @[[Pokemon/Spiky-eared Pichu]] @[[Pokemon/Flowering Celebi]], @[[Pokemon/Darmanitan (Zen)]] @[[Pokemon/Galarian Darmanitan (Zen)]]
 
 ### Loot multiplication{#bonusLoot}
 
