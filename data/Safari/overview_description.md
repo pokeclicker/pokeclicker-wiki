@@ -112,6 +112,53 @@ $Egg Steps = 1 + \lfloor\frac{SafariLevel}{10}\rfloor$
 
 This value can then be further modified by Egg Steps multipliers, for example, using the Farm setups shown in [[Hatchery]] page or equipping [[Oak Items/Magma Stone]].
 
+:::collapsed Catch Rate Table
+
+Depending on the Base Catch Rate of the Pokémon found in the Safari Zone and whether you use Magic Ball or not, the best combination of Bait/Rock for your Safari Level is laid out on the table below. For the most difficult to catch Pokémon you should throw Nanab [[File:Nanab.png\|32px]], and as it gets easier to catch them, swap to Razz [[File:Razz.png\|32px]].
+
+|**Base Catch Rate** | **No Magic Ball** | **LvL 5 Magic Ball** {.no-data-tables}
+| --- | --- | --- |
+| 3 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 5 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 6 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 10 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 15 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 20 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 25 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 30 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 35 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 45 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 50 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 55 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 60 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-39 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 65 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-36 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 37-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 70 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-34 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 35-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 75 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-31 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 32-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 80 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-29 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 30-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 90 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-24 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 25-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 100 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-20 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 21-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 120 | LvL 1-39 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-13 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 14-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 125 | LvL 1-36 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 37-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-11 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 12-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 127 | LvL 1-35 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 36-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-11 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 12-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 130 | LvL 1-34 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 35-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-10 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 11-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 140 | LvL 1-29 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 30-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-6 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 7-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 145 | LvL 1-27 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 28-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-5 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 6-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 150 | LvL 1-24 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 25-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-4 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 5-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 155 | LvL 1-22 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 23-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-2 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 3-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 160 | LvL 1-20 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 21-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 2-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 170 | LvL 1-16 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 17-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 180 | LvL 1-13 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 14-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-39 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 190 | LvL 1-10 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 11-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-37 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 38-40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 200 | LvL 1-6 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 7-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-36 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 37-40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 205 | LvL 1-5 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 6-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-35 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 36-40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 220 | LvL 1 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 2-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-33 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 34-40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 225 | Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-33 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 34-40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 235 | Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-31 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 32-40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+| 255 | LvL 1-37 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 38-40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-28 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 29-40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+
+:::
+
+
 ### Animation Speed Up Tiers
 Every 10 Safari Levels, the animation will speed up by the following values:
 

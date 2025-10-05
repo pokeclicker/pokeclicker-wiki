@@ -4,7 +4,7 @@ One quest that can appear involves hatching a random amount of Eggs. These can b
 
 # Usage
 
-As soon as [[Routes/Kanto Route 3]] is cleared, the Pokémon Day Care can be accessed by clicking on its location on the map on Route 3. Additionally, the Hatchery tab becomes available on the main page.
+As soon as [[Routes/Kanto Route 3]] is cleared, the Pokémon Day Care can be accessed by clicking on its location on the map on Route 5. Additionally, the Hatchery tab becomes available on the main page.
 
 There are two different types of hatch-able resources in Pokéclicker: obtained Pokémon Eggs and already obtained level 100 Pokémon. Pokémon Eggs are typically purchased in Shops. The Egg Obtained Pokémon that can be bred each have their own distinct tab in the Pokémon Day Care modal.
 
@@ -19,7 +19,7 @@ Clicking on the desired Egg/Level 100 Pokémon will result in it being added to 
 
 Later, the player can acquire Breeding Queue slots which are unlocked in each new Region (See Upgrades Below). The Breeding Queue automatically adds queued Pokémon to the Hatchery if there is space. If there is a Pokémon in the queue, Eggs that are ready to hatch will do so and be replaced by the queued Pokémon.
 
-Each Pokémon has a certain number of Egg Steps required before it can hatch from an Egg. Consult [[Pokémon]] for egg steps for all Pokémon. Egg Steps are gained through defeating Pokémon. [[Routes]], [[Gyms]], and [[Dungeons]] all yield different numbers of Egg Steps per Pokémon defeated, although the Egg Steps yielded generally scales with the difficulty of the Route, Gym, or Dungeon.
+Each Pokémon has a certain number of Egg Steps required before it can hatch from an Egg. Consult [[Pokémon]] for egg steps for all Pokémon. Egg Steps are gained through defeating Pokémon. [[Routes]], [[Gyms]], and [[Dungeons]] all yield different numbers of Egg Steps per Pokémon defeated, although the Egg Steps yielded generally scales with the difficulty of the Route, Gym, or Dungeon, or the current stage in the [[Battle Frontier]].  The Oak Item [[Oak Items/Magma Stone]] will increase the number of steps gained, making eggs hatch faster.
 
 When an Egg in the Hatchery has obtained the required number of Egg Steps, as indicated by the green progress bar on each Egg it will be ready to hatch. Clicking on the image of the Egg with hatch it, giving the player one of that Pokémon.
 

@@ -21,10 +21,10 @@ The following is a list of Pokémon obtainable in Alola which cannot be found on
 |---|---|---|---|
 |[[Towns/Aether Paradise]] | Akala Island | [[File:pokemon/772.png\|25px]] [[Pokémon/Type: Null]]|[[File:questPoint.svg\|20px]] 114,000|
 |[[Towns/Altar of the Sunne and Moone]] | Poni Island | [[File:pokemon/803.png\|25px]] [[Pokémon/Poipole]]|[[File:questPoint.svg\|20px]] 90,000|
-|[[Towns/Hoppy Town]] | Magikarp Jump | [[File:pokemon/129.23.png\|25px]] [[Pokémon/Magikarp Brown Stripes]]|[[File:Water_Gem.png\|20px]] 1,500,000 Water Gems|
+|[[Towns/Hoppy Town]] | Magikarp Jump | [[File:pokemon/129.23.png\|25px]] [[Pokémon/Magikarp Brown Stripes]]|[[File:gems/Water Gem.png\|20px]] 1,500,000 Water Gems|
 
 [[Towns/Aether Foundation]] also has some extra Shopmons, namely the Silvally forms, after completing [[Quest Lines/Typing some Memories]] Quest Line.
-Also, you should probably check that Magikarp's Eye.
+Also, you should probably keep an *eye* out for a secret shop.
 
 ### Eggs
 All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries/Passho]], and [[Berries/Rindo]] berries.

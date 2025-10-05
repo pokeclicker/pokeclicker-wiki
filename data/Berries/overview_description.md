@@ -25,7 +25,7 @@ Mutation chance varies wildly between different berries.  For a standard mutatio
 
 Individual berry pages have Optimized Planting Formations to maximize the chances of a mutation occurring, as well as a Timing Chart to help plant berries at the correct times, such that all of them will become ripe simultaneously.  Mutation chance can be increased by using the Oak Item [[Items/Squirtbottle]] and/or consumable [[Items/Surprise Mulch]].
 
-The Kanto Berry Master in [[Towns/Cerulean City]] will give a hint daily for berries the player hasn't yet acquired.  This will cause green dots to appear on Farm plots after setting up the parent plants, showing they are eligible to create a known mutation.
+The Kanto Berry Master in [[Towns/Cerulean City]] will give a hint daily for berries the player hasn't yet acquired.  Green dots appear on Farm plots after setting up the parent plants, showing they are eligible to create a known mutation.
 
 _If you have not yet unlocked all the plots on the Farm and need to mutate berries #9 Persim through #25 Grepa, please use the [Walkthrough](https://docs.google.com/document/d/1TE5cAKSlA7TAliA001_mIiO1odZ6e4yUEMre0GBW1to/edit?usp=sharing)  link for an optimized planting formation to mutate those berries within the limited available farm plots._
 
@@ -37,9 +37,9 @@ _Example: Persim has a mutation rate of 2%. This means each second the required 
 
 ### Evolution Mutations{#evolve}
 
-Berries that mutate by evolving will **replace** an existing berry with the newly mutated berry.  Evolutions can be triggered by meeting the berry's conditional requirement, which might involve equipping certain [[Oak Items]], a specific [[Farm]] state, or a certain nearby host plant.  Some of these are called parasite berries, because they take over other berries to duplicate themselves indiscriminately.  Parasite berries have "It has a tendency to overtake nearby plants" in their BerryDex descriptions.
+Berries that mutate by evolving will **replace** an existing berry with the newly mutated berry.  Evolutions can be triggered by meeting the berry's conditional requirement, which might involve equipping certain [[Oak Items]], a specific [[Farm]] state, or a certain nearby host plant.  Some of these are called parasite berries, because they take over other berries to duplicate themselves indiscriminately.  Parasite berries have "It has a tendency to overtake nearby plants" in their BerryDex descriptions, and can only trigger on a different species than their own.
 
-An evolution mutation can occur while the berries are still in the Taller or Bloom growth stages, rather than only when Ripe the way growth mutations do.  For mutations involving flavor requirements, all berries emit flavor points beginning at the Taller stage (berries have 0.5x flavor in the Taller stage, 0.75x flavor in the Bloom stage, and 1x flavor in the Berry stage).
+All evolution mutations can only occur while the berries are in the Taller or older growth stages, rather than only when Ripe the way growth mutations do.  For mutations involving flavor requirements, all berries emit flavor points beginning at the Taller stage (berries have 0.5x flavor in the Taller stage, 0.75x flavor in the Bloom stage, and 1x flavor in the Berry stage).
 
 ### Setups{#setup}
 

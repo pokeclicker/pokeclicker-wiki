@@ -42,6 +42,6 @@ Iapapa Berries can be obtained from the following dungeons.
 | Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
 | [[Dungeons/Berry Forest]]	        | Kanto (Sevii Islands 123) | Epic  	|
-| [[Dungeons/Pattern Bush]]	        | Kanto (evii Islands 4567) | Epic  	|
+| [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567) | Epic  	|
 | [[Dungeons/Radio Tower]]	        | Johto | Epic  	|
 | [[Dungeons/Lostlorn Forest]]      | Unova | Common  	|

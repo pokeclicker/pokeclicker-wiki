@@ -1,2 +1,0 @@
-## Usage
-Clicking on "Allowed Plots" opens a dropdown that allows you to select which specific plots the Farm Hand works on, where green is a space where they are allowed to work. Selecting the "Berry Planting" dropdown will allow the player to pick a specific Berry to plant in those specific plots. Clicking the "Harvest" checkbox will allow that Farm Hand to harvest from those specific plots.

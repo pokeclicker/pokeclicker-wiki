@@ -75,7 +75,7 @@ Example 2: Catching a **Shiny Roaming Pokémon** with a **Repeatball** yields:
 Example 3: Catching a **Shadow Pokémon** during a **Dungeon Boss Encounter** with a Duskball when holding a **Power Bracer** yields:
 **0.1 (Catching) \* 2 (Shadow Pokémon) \*10 (Dungeon Boss)  \*2 (Power Bracer) = 4 EVs**
 
-#### Break Points for non-caught Pokémon
+#### Break Points for non-caught Pokémon{#breakpoints}
 
 For Pokémon that cannot be caught - shop purchases, [Alcremie Spins](#!Battle_Cafe), and item evolutions, combining [[Berries/Rowap]] setups, equipping [[Items/Power Bracer]] and activating [[Items/Blue Flute]] gives the greatest possible yield for the fewest purchases / spins / items to reach Resistant.  Achievement % scales Blue Flute's effectiveness; the percentages in the table below are the minimum required.
 
@@ -131,6 +131,14 @@ _**EV Gain Bonus: 2.54x**_
 | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
 :::
 
+**Timing Table**
+All planting times refer to the "Until Ripe" value of the first Berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Rowap.png\|32px]] [[Berries/Rowap]]      | `Planted First` | | |
+| [[File:Lum.png\|32px]] [[Berries/Lum]]  | 01:00:00      | 00:40:00                              | 00:26:40                              |
+
+
 ### Rowap + Lum + Petaya
 
 The Petaya variant has slightly less EV yield but will last for up to five days vs. Rowap's normal lifespan of less than six hours. For an even longer uptime, use the [Infinite Farm](#infinite) setup.
@@ -149,6 +157,16 @@ _**EV Gain Bonus: 2.43x**_
 | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
 | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
 | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | |
+:::
+
+**Timing Table**
+All planting times refer to the "Until Ripe" value of the first Berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Petaya.png\|32px]] [[Berries/Petaya]]      | `Planted First` | | |
+| [[File:Rowap.png\|32px]] [[Berries/Rowap]]  | 05:54:00      | 03:55:59                              | 02:37:18                              |
+| [[File:Lum.png\|32px]] [[Berries/Lum]]      | 01:00:00      | 00:40:00                              | 00:26:40                                |
+
 
 ### Infinite Farm{#infinite}
 The combination of [[Berries/Haban]] and [[Berries/Lum]] in this formation make the [[Berries/Petaya]] live for approximately 3.5 years once the setup fully ripens. While not as efficient as other setups, it works for those who want to forget about the Farm while still getting a benefit from it.
@@ -167,3 +185,11 @@ Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
 | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
 | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
 :::
+**Timing Table**
+All planting times refer to the "Until Ripe" value of the first Berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Haban.png\|32px]] [[Berries/Haban]]      | `Planted First` | |
+| [[File:Petaya.png\|32px]] [[Berries/Petaya]]      | `Planted First` | | |
+| [[File:Rowap.png\|32px]] [[Berries/Rowap]]  | 05:54:00      | 03:55:59                              | 02:37:18                              |
+| [[File:Lum.png\|32px]] [[Berries/Lum]]      | 01:00:00      | 00:40:00                              | 00:26:40                                |

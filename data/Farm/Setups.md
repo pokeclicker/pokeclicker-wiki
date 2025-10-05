@@ -80,6 +80,12 @@ _**Growth Aura + Boost Mulch: 14.19x**_
 | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]]{.boost} | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | | |
 | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | | | |
 :::
+**Timing Table**
+All planting times refer to the "Until Ripe" value of the first Berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Lum.png\|32px]] [[Berries/Lum]]      | `Planted First` | |
+| [[File:Wacan.png\|32px]] [[Berries/Wacan]]  | 00:30:00      | 00:20:00                              | 00:13:20                              |
 
 ## Harvest Aura Setups{#harvest}
 These setups are the most efficient setups for harvesting the greatest amount of berries.
@@ -131,6 +137,12 @@ _**Harvest Aura + Rich Mulch: 5 Plots: 9.66x - 3 Plots: 5.72x - 1 Plot: 7.42x - 
 | [[File:Aguav.png\|32px]] [[Berries/Aguav]]{.rich} | [[File:Aguav.png\|32px]] [[Berries/Aguav]]{.rich} | [[File:Aguav.png\|32px]] [[Berries/Aguav]]{.rich} | [[File:Aguav.png\|32px]] [[Berries/Aguav]]{.rich} | [[File:Aguav.png\|32px]] [[Berries/Aguav]]{.rich} | |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 :::
+**Timing Table**
+All planting times refer to the "Until Ripe" value of the first Berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Petaya.png\|32px]] [[Berries/Petaya]]      | `Planted First` | | |
+| [[File:Passho.png\|32px]] [[Berries/Passho]]  | 06:00:00      | 03:59:59                              | 02:39:58                              |
 
 ## Growth and Harvest Aura Setup (Wacan + Passho Handoff){#handoff}
 Combining the Wacan and Passho setups is incredibly useful when trying to quickly grow and harvest multiple Gen 5 berries that have a base 0.5 berry harvest yield, such as Starf or Petaya. This two-part setup, going from the Wacan formation to the following Passho formation, is the most efficient way to harvest more of these berries in the shortest amount of time.
@@ -187,7 +199,7 @@ _**Harvest Aura + Rich Mulch Bonus: 16.28x**_
 #### Roseli + Lum + Attracting Berry
 Using 2 Lum berries surrounded by 13 Roseli berries, and then filling the remainder of open farm spots with an attracting berry (a berry that attracts a particular species of wandering Pokémon) is the most effective way of attracting wandering Pokémon to the farm.  [[Items/Gooey Mulch]] can be used on the attracting berries  for increased odds of rare wanderers and boosted capture chance.
 
-- _Note: Do not use this setup with [[Berries/Occa]], [[Berries/Colbur]], or [[Berries/Kebia]] or [[Berries/Enigma]] berries due to their nature of overtaking other berries. See "Parasite Berries" below for those setups. Using this exact setup with [Berries/Chople] may cause it to mutate into [Berries/Chilan], but moving one of the rows of Chople to the very bottom eliminates any risk of mutation with no downside._
+- _Note: Do not use this setup with [[Berries/Occa]], [[Berries/Colbur]], or [[Berries/Kebia]] or [[Berries/Enigma]] berries due to their nature of overtaking other berries. See "Parasite Berries" below for those setups. Using this exact setup with [[Berries/Chople]] may cause it to mutate into [[Berries/Chilan]], but moving one of the rows of Chople to the very bottom eliminates any risk of mutation with no downside._
 
 :::collapsed Roseli + Lum + Attracting Berry - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
@@ -204,6 +216,12 @@ Encounter Chance per 1.5s: 1.77%**_
 | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
 | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
 :::
+**Timing Table**
+All planting times refer to the "Until Ripe" value of the first Berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]]      | `Planted First` | | |
+| [[File:Lum.png\|32px]] [[Berries/Lum]]      | 01:00:00      | 00:40:00                              | 00:26:40                                |
 
 #### Roseli + Lum + Petaya + Attracting Berry
 For a significantly longer uptime than the above setup to attract a wandering Pokémon - perhaps if you're looking for a specific Pokémon or group of Pokémon to turn shiny for example - replace a Roseli berry with a Petaya berry.
@@ -224,6 +242,13 @@ Encounter Chance per 1.5s: 1.61%**_
 | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
 | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | |
 :::
+**Timing Table**
+All planting times refer to the "Until Ripe" value of the first Berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Petaya.png\|32px]] [[Berries/Petaya]]      | `Planted First` | | |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]]  | 07:00:00      | 04:39:58                              | 03:06:38                              |
+| [[File:Lum.png\|32px]] [[Berries/Lum]]      | 01:00:00      | 00:40:00                              | 00:26:40                                |
 
 ### Parasite Berries
 These setups will work for all Parasite berries, namely [[Berries/Occa]], [[Berries/Kebia]] and [[Berries/Colbur]], plus [[Berries/Enigma]].  While Enigma is not a true parasite berry, it has the unique ability to mutate Roselis and so requires the same protection.
@@ -246,6 +271,13 @@ Encounter Chance per 1.5s: 1.48%**_
 | [[File:Kebia.png\|32px]] [[Berries/Kebia]]{.gooey} | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
 | [[File:Kebia.png\|32px]] [[Berries/Kebia]]{.gooey} | [[File:Kebia.png\|32px]] [[Berries/Kebia]]{.gooey} | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
 :::
+**Timing Table**
+All planting times refer to the "Until Ripe" value of the first Berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]]      | `Planted First` | | |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]]  | 07:00:00      | 04:39:58                              | 03:06:38                              |
+| [[File:Lum.png\|32px]] [[Berries/Lum]]      | 01:00:00      | 00:40:00                              | 00:26:40                                |
 
 #### Roseli + Lum + Babiri + Petaya + Attracting Berry
 For a significantly longer uptime than the above setup to attract a wandering Pokémon - perhaps if you're looking for a specific Pokémon or group of Pokémon to turn shiny for example - replace a Roseli berry with a Petaya berry.
@@ -266,6 +298,14 @@ Encounter Chance per 1.5s: 1.38%**_
 | [[File:Kebia.png\|32px]] [[Berries/Kebia]]{.gooey} | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | |
 | [[File:Kebia.png\|32px]] [[Berries/Kebia]]{.gooey} | [[File:Kebia.png\|32px]] [[Berries/Kebia]]{.gooey} | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Roseli.png\|32px]] [[Berries/Roseli]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | |
 :::
+**Timing Table**
+All planting times refer to the "Until Ripe" value of the first Berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Petaya.png\|32px]] [[Berries/Petaya]]      | `Planted First` | | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]]      | 18:00:00      | 11:59:56                              | 07:59:54                              |
+| [[File:Roseli.png\|32px]] [[Berries/Roseli]]  | 07:00:00      | 04:39:58                              | 03:06:38                              |
+| [[File:Lum.png\|32px]] [[Berries/Lum]]      | 01:00:00      | 00:40:00                              | 00:26:40                                |
 
 ## Regaining Lost Gen 5 Berries{#enigma}
 Shoveled your only copy of a Gen 5 berry by accident? You can use [[Berries/Enigma]] berries to mutate another rather than having to go through the original mutation process.
@@ -303,6 +343,12 @@ _**Roaming Pokémon Chance: 2.54x**_
 | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | |
 | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]] | |
 :::
+**Timing Table**
+All planting times refer to the "Until Ripe" value of the first Berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Jaboca.png\|32px]] [[Berries/Jaboca]]      | `Planted First` | | |
+| [[File:Lum.png\|32px]] [[Berries/Lum]]      | 01:00:00      | 00:40:00                              | 00:26:40                                |
 
 ## Squirtbottle Leveling Strategies{#squirtbottle}
 Here are a few highly efficient strategies on how to level up the [[Oak Items/Squirtbottle]] based on which berries you have unlocked.
@@ -324,6 +370,12 @@ Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
 | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Occa.png\|32px]] [[Berries/Occa]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Occa.png\|32px]] [[Berries/Occa]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | |
 | [[File:Occa.png\|32px]] [[Berries/Occa]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Occa.png\|32px]] [[Berries/Occa]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Occa.png\|32px]] [[Berries/Occa]] | |
 :::
+**Timing Table**
+All planting times refer to the "Until Ripe" value of the first Berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Occa.png\|32px]] [[Berries/Occa]]      | `Planted First` | | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]]  | 00:10:00      | 00:06:40                              | 00:04:27                              |
 
 ### Sitrus/Kebia Planting Formation
 If you only have Kebia berries and neither of the other two, you can use Kebia and Sitrus at the same time in the following formation.
@@ -342,6 +394,12 @@ Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
 | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | |
 | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]] | |
 :::
+**Timing Table**
+All planting times refer to the "Until Ripe" value of the first Berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Occa.png\|32px]] [[Berries/Occa]]      | `Planted First` | | |
+| [[File:Sitrus.png\|32px]] [[Berries/Sitrus]]  | 00:10:00      | 00:06:40                              | 00:04:27                              |
 
 ### Persim Planting Formation
 Another common strategy involves mutating [[Berries/Persim]] berries if you haven't unlocked Occa, Kebia, or Colbur yet.
@@ -369,6 +427,14 @@ Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Colbur.png\|32px]] [[Berries/Colbur]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Colbur.png\|32px]] [[Berries/Colbur]] | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | |
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.mutation} | |
 :::
+**Timing Table**
+All planting times refer to the "Until Ripe" value of the first Berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Petaya.png\|32px]] [[Berries/Petaya]]      | `Planted First` | | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]]  | 18:00:00      | 11:59:56                              | 07:59:54                              |
+| [[File:Payapa.png\|32px]] [[Berries/Payapa]]      | 09:30:00      | 06:19:58                              | 04:13:17                                |
+| [[File:Colbur.png\|32px]] [[Berries/Colbur]]      | 07:30:00      | 04:59:58                              | 03:19:58                                |
 
 ### Infinite Farm{#infinite}
 This Farm setup boosts Egg Steps, EV Gain or Shiny Chance while lasting a very long time. The combination of [[Berries/Haban]] and [[Berries/Lum]] in this formation make the [[Berries/Petaya]] live for approximately 3.5 years once the setup fully ripens. While not as efficient as other setups, it works for those who want to forget about the Farm while still getting a benefit from it.
@@ -391,3 +457,11 @@ or Shiny Chance Bonus with Starf: 1.70x**
 | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | | |
 | | | | [[File:Lum.png\|32px]] [[Berries/Lum]] | | |
 :::
+
+**Timing Table**
+All planting times refer to the "Until Ripe" value of the first Berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Haban.png\|32px]] [[Berries/Haban]]      | `Planted First` | |
+| [[File:Petaya.png\|32px]] [[Berries/Petaya]]      | `Planted First` | | |
+| [[File:Lum.png\|32px]] [[Berries/Lum]]      | 01:00:00      | 00:40:00                              | 00:26:40                                |

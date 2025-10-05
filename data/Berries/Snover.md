@@ -35,5 +35,23 @@ Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
 | {.mutation} | {.mutation}| {.mutation} | {.mutation} | {.mutation} | |
 :::
 
+
+This version has the highest mutation chance and guarantees center growth.  The [[Items/Freeze Mulch]] is **not** optional; this setup will never make a Snover Berry without it.
+
+:::collapsed Snover Nonsense w/ Freeze Mulch- Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjo0fSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOjR9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjo0fSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQyLCJhZ2UiOjg2NDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOjR9LHsiYmVycnkiOjQyLCJhZ2UiOjg2NDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9XX19fQ==`
+:::
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]]{.freeze} | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]]{.freeze}  | {.mutation} | [[File:Babiri.png\|32px]] [[Berries/Babiri]]{.freeze}  | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]]{.freeze} | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | |
+:::
+
+
 #### Uses
 Snover can be used to purchase Pokémon at [[Towns/Secret Berry Shop]].

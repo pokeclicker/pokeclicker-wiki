@@ -1,4 +1,4 @@
-Shiny Pokémon can be obtained in a number of different ways, each with their own odds. As of version 0.9.3, the only ways to augment the chances of encountering shinies are to equip the [[Oak Items/Shiny Charm]], using the [[Items/White Flute]], or growing [[Berries/Starf]] Berries in the [[Farm]] (at full ripeness, each Starf berry gives a ×1.015 boost).
+Shiny Pokémon can be obtained in a number of different ways, each with their own odds. As of version 0.9.3, the only ways to augment the chances of encountering shinies are to equip the [[Oak Items/Shiny Charm]], using the [[Items/White Flute]], or growing [[Berries/Starf]] Berries in the [[Farm]] (at full ripeness, each Starf berry gives a ×1.015 boost).  Breeding is one of the best options, making [[Oak Items/Magma Stone]] and [[Berries/Chople]] indirectly boost shiny chance by making eggs hatch faster.
 
 ## Odds
 Location/Method | Chance (no Shiny Charm) | Chance (Lv 5 Shiny Charm) | Chance (Lv 5 Shiny Charm and full Starf Farm)
