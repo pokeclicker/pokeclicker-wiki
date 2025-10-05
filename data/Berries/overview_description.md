@@ -1,54 +1,84 @@
 #### Jump to:
-* [Auras](#aura)
-* [Berry List](#list)
+* [Berry Stats and Properties](#stats)
 * [Mutations](#mutation)
-* [Related Items](#item)
-* [Setups](#setup)
-* [Wanderers](#wanderer)
+    * [Types of Mutations](#mutationtypes)
+    * [Tips for Mutation](#mutationtips)
+* [Berry List](#list)
+* [Auras](#aura)
+* [Using and Trading Berries](#trades)
+    * [Berry Masters](#berrymaster)
+    * [Battle Café](#battlecafe)
+    * [Trades for Pokémon](#pokemontrades)
+#### See also:
+* [[Farm]]
+* [[Farm Points]]
 
-The first eight berries are dropped by wild pokemon or looted from chests in [[Dungeons]]. Berries can then be grown in the [[Farm]] to earn [[Farm Points]] and multiply, used to attract [[Wandering Pokémon]], or provide special bonuses via [auras](#aura).  Collected berries can be traded for specialty [[Poké Balls]], [[Vitamins]], and other Evolution Items at [[Berry Masters]] shops and spent to evolve [[Pokemon/Milcery]] into Alcremies at the [[Battle Cafe]].  While common berries drop as loot from wild Pokémon, but most require setting up specific layouts on the Farm and getting a lucky [mutation](#mutation) to a new species.
+Berries are dropped from wild Pokémon, Dungeon Chests, and can be grown and mutated in the [[Farm]]. Berries can be used to [trade](#trades) for items and Pokémon. Berry plants also be used for their [auras](#aura) or to attract [[Wandering Pokémon]].
 
-## Features
-### Related Items{#item}
+Berry plants grow in four stages (Sprout → Taller → Bloom → Ripe). If left unharvested, they will wither after a certain amount of time. For the basics of growing berries, see the [Farm](#!Farm#growing) page.
 
-The [[Oak Items/Sprayduck]], [[Oak Items/Squirtbottle]], and [[Oak Items/Sprinklotad]] are all [[Oak Items]] that speed up or otherwise improve the process of growing berries.  Mulches ([[Items/Amaze Mulch]], [[Items/Boost Mulch]], [[Items/Freeze Mulch]], [[Items/Gooey Mulch]] [[Items/Rich Mulch]] or [[Items/Surprise Mulch]]) can be applied to berries for various effects, increasing yield, affecting growth or attracting more rare Wanderers.  [[Items/Berry Shovel]] will remove and destroy any planted berry.
+For detailed information on growing each Berry, ways to acquire them, and Wanderers they attract, see the Berry's [individual page](#list).
 
-### Wanderers{#wanderer}
+----
 
-Farms with at least one ripe Berry can attract [[Wandering Pokémon]]. Some Berries can attract rare Pokémon and can thus be used strategically to complete the Pokédex. Wandering Pokémon can also be shiny, capturing shiny Wandering Pokémon when the Farm has at least one empty plot is the condition for a Starf Berry to spawn on the Farm (in one of the empty plots).
+## Berry Stats and Properties {#stats}
+The stats for Berry plants can be modified by various items and auras. Such effects are usually multiplicative.
+
+| Stat/Property {.col-1}| Description {.col-3}| Things That Can Affect It {.col-3}|
+| ---- | ---- | ---- |
+| **Color** | The Berry's color. Some Wanderers are only attracted to certain color Berries. | |
+| **Flavors** | The Berry's flavors. A common mutation requirement. | Berries begin to have flavors at the Taller stage of growth. They have 50% of their flavor points at the Taller stage, 75% at Bloom, and full flavor points at Ripe. |
+| **Growth Time** | How long it takes for a Berry plant to reach the Ripe stage. | _**Speeds up Growth Time:** Sprayduck, Boost or Amaze [Mulch](#!Farm#farmtools), [[Berries/Wacan]] Auras_{.d-block .fst-normal} _**Stops Growth Time:** Freeze Mulch_{.d-block .fst-normal} |
+| **Wither Time** | How long it takes for a ripe Berry plant to wither. | _**Slows down Wither Time:** [[Berries/Yache]] and [[Berries/Haban]] Auras_{.d-block .fst-normal} _**Speeds up Wither Time:** Sprayduck, Boost or Amaze Mulch, [[Berries/Kasib]] Auras_{.d-block .fst-normal} _**Pauses Wither Time:** Freeze Mulch, [[Berries/Petaya]] Aura_{.d-block .fst-normal} |
+| **Exp** | Amount of Farm EXP gained per harvest. Used to level [[Oak Items/Sprayduck]]. | |
+| **Harvest Amount** | Amount of Berries gained per harvest. Berry plants will always yield at least 1 berry, even if the Harvest Amount is less than 1, but multiplying boosts will use the actual value.* | _**Increases Harvest:** Rich or Amaze Mulch, [[Berries/Passho]] Auras_{.d-block .fst-normal} _**Decreases Harvest:** [[Berries/Tanga]] Auras_{.d-block .fst-normal} |
+| **Replant Chance** | Chance of replanting itself if the Berry withers |  _**Increases Replant Chance:** Rich or Amaze Mulch, [[Berries/Shuca]] Auras_{.d-block .fst-normal}  _**Decreases Replant Chance:** [[Berries/Charti]] Auras_{.d-block .fst-normal} |
+| **Mutation Chance** | Chance for a plot to mutate into this Berry, when mutation conditions are met | _**Increases Mutation Chance:** [[Oak Items/Sprinklotad]], Rich or Amaze Mulch, [[Berries/Kebia]] and [[Berries/Payapa]] Auras_{.d-block .fst-normal} _**Decreases Mutation Chance:** [[Berries/Babiri]] Auras_{.d-block .fst-normal} |
+| **Farm Points per Harvest** | Farm points awarded per harvest. Also affects how much FP is earned per Wanderer. | |
+| **Aura** | [Aura](#aura) emitted that can have various gameplay effects | _**Stops Aura**: Freeze Mulch_{.d-block .fst-normal} _**Boosts Aura effects**: [[Berries/Lum]] Aura (does not stack)_{.d-block .fst-normal} |
+**e.g. Liechi with a Harvest Amount of .5 will yield 1 berry when harvested. When Rich Mulch is applied (x2 harvest multiplier), it will still only yield 1 berry. When Rich Mulch and 8 Passho auras are present (x16.32 harvest multiplier), it will yield 8 berries.*
+
+----
 
 ## Mutations{#mutation}
 
- Every berry that isn't a wild Pokémon drop can generated through **mutation**, though many of the early mutations also appear in later regions as [dungeon loot](#!Dungeons#chest).  Each new berry requires specific conditions to mutate, usually two or more fully mature berries adjacent to an empty plot. Adjacencies are checked orthogonally (north, south, east, west) and diagonally (NE, SE, NW, SW).  The second and rarer case is when berries mutate by evolving in the proper conditions. There are also some Berries with unique generation such as the [[Berries/Kasib]] and [[Berries/Starf]] Berries, that are explained on their individual Berry pages.
+Except for the first 8 Berries, [[Berries/Kasib]], and [[Berries/Starf]], all other Berries can be acquired via mutation.
 
-Mutation chance varies wildly between different berries.  For a standard mutation to occur, all the required berries must be ripe on the farm simultaneously. When this is true, the game will check each eligible empty plot once a second to see if a mutation happens. If the conditions for multiple mutations are met simultaneously for a given farm plot, the mutation triggered will be selected at random, with weighted distribution based on mutation chance.
+Each Berry has special conditions for mutating and a different chance of mutating. Mutation has a chance of happening **once per second** for every Farm plot where conditions are met. A plot may meet the mutation conditions for multiple Berries, in which case, any of those mutations can occur. For mutations that involve adjacency, plots are considered adjacent if they are touching from any direction (i.e. orthogonally or diagonally).
 
-Individual berry pages have Optimized Planting Formations to maximize the chances of a mutation occurring, as well as a Timing Chart to help plant berries at the correct times, such that all of them will become ripe simultaneously.  Mutation chance can be increased by using the Oak Item [[Items/Squirtbottle]] and/or consumable [[Items/Surprise Mulch]].
+When a mutation is possible on a farm plot, it is marked by a green dot.
 
-The Kanto Berry Master in [[Towns/Cerulean City]] will give a hint daily for berries the player hasn't yet acquired.  Green dots appear on Farm plots after setting up the parent plants, showing they are eligible to create a known mutation.
+#### Basic Example
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| |{.mutation}|{.mutation}| | |
+| |[[File:Pecha.png\|32px]] [[Berries/Pecha]] |[[File:Oran.png\|32px]] [[Berries/Oran]] | | |
+| |{.mutation}|{.mutation}| | |
+:::
 
-_If you have not yet unlocked all the plots on the Farm and need to mutate berries #9 Persim through #25 Grepa, please use the [Walkthrough](https://docs.google.com/document/d/1TE5cAKSlA7TAliA001_mIiO1odZ6e4yUEMre0GBW1to/edit?usp=sharing)  link for an optimized planting formation to mutate those berries within the limited available farm plots._
+Persim has a mutation rate of 2% when ripe Oran and Pecha plants are adjacent to an empty plot. The purple highlighted plots show where mutation is possible. Each second, each highlighted plot independently has a 2% chance of spawning a Persim. Over one minute, there are a total of 240 checks for mutation in this setup (4 possible plots, 60 checks per plot), with a 2% chance of successfully mutating in each check. Thus, there is a 99% chance at least one Persim will mutate in one of the 4 plots after one minute.
 
-### Growth Mutations{#growth}
+#### Types of Mutation {#mutationtypes}
+- **Growth Mutations** are mutations that occur **on empty plots that are adjacent to the required Berry plants**. These mutations do not occur before the required Berries are ripe, and these mutations cannot spawn on an occupied plot. Growth mutations are the most common type of mutation.
+    - **Overgrow Berries** are Berries that have a chance of planting a new Berry plant of the same type in an adjacent empty plot. They are described as "having a tendency to expand into nearby plots." This is considered a type of mutation and is affected by the same mutation boosts. Overgrow Berries must be at the ripe stage before they can mutate adjacent plots.
+        - *Overgrow Berries: [[Berries/Rindo]], [[Berries/Pamtre]]*
+- **Evolution Mutations** are mutations that **replace an existing Berry plant with a mutated Berry**. Evolution mutations can mutate any Berry plants at the Taller, Bloom, or Ripe stage.
+    - **Parasite Berries** are Berries that mutate adjacent plants into the same Berry type as itself. They are described as "having a tendency to take over other plants." This is considered a type of mutation and is affected by the same mutation boosts. Parasite Berries must be at the ripe stage before they can mutate adjacent plants.
+        - *Parasite Berries: [[Berries/Occa]], [[Berries/Kebia]], [[Berries/Colbur]]*
+    - The [[Berries/Enigma]] Berry can mutate certain adjacent plants into another type of Berry Plant. The mutated Berry must already be unlocked for this mutation to occur.
+- **Field Mutations** are mutations that occur **on empty plots when the required Berry plants exist across the entire Farm**. Field mutations can occur on any empty plot in the Farm.
 
-Most Berries mutate by appearing in an empty plot that has all the required berries fully grown in one or more adjacent plots. Growth mutations do not occur where there is already a berry growing.  These are the simplest type of mutation and make up the majority of mutated Berry types.
+#### Tips for Mutation {#mutationtips}
+Individual berry pages have optimized planting formations to maximize the chances of a mutation occurring, as well as timing charts to help plant Berries at the correct times, such that all of them will become ripe simultaneously. Mutation chance can be increased by using [[Items/Squirtbottle]] and [[Items/Surprise Mulch]].
 
-_Example: Persim has a mutation rate of 2%. This means each second the required berries (Oran and Pecha) are ripe on the Farm in the proper locations to cause a mutation to occur, there is a 2% chance of mutating a Persim, per plot. Following the Optimized Planting Formation for Persim, there are at least 5 possible plots for Persim to mutate on, that means that each second the game calculates whether the 2% chance occurred 5 separate times. The Pecha berry will only remain ripe for 1 minute, thus if both Pecha berries become ripe at the same time as Oran, each plot will calculate to see if a mutation will occur 60 times, or in other words, there are 300 chances with a 2% mutation before the Pechas wither and must be replanted and a 99.77% chance of getting at least one Persim before that happens._
+The Kanto Berry Master in [[Towns/Cerulean City]] gives daily hints for Berries you haven't yet acquired.
 
-### Evolution Mutations{#evolve}
+Other tools and guides:
+- [[Farm Simulator]]: Wiki tool for simulating various Farm conditions such as Berry growth, auras, and mutations.
+- [Walkthrough for unlocking #9 Persim to #25 Grepa](https://docs.google.com/document/d/1TE5cAKSlA7TAliA001_mIiO1odZ6e4yUEMre0GBW1to/edit?usp=sharing)  (external link): If you have not yet unlocked all the plots on the Farm, this guide will provide optimized planting formations to mutate those berries within the limited available farm plots.
 
-Berries that mutate by evolving will **replace** an existing berry with the newly mutated berry.  Evolutions can be triggered by meeting the berry's conditional requirement, which might involve equipping certain [[Oak Items]], a specific [[Farm]] state, or a certain nearby host plant.  Some of these are called parasite berries, because they take over other berries to duplicate themselves indiscriminately.  Parasite berries have "It has a tendency to overtake nearby plants" in their BerryDex descriptions, and can only trigger on a different species than their own.
-
-All evolution mutations can only occur while the berries are in the Taller or older growth stages, rather than only when Ripe the way growth mutations do.  For mutations involving flavor requirements, all berries emit flavor points beginning at the Taller stage (berries have 0.5x flavor in the Taller stage, 0.75x flavor in the Bloom stage, and 1x flavor in the Berry stage).
-
-### Setups{#setup}
-
-Thanks to certain Berries having helpful auras, it's possible to use them to achieve different goals. These Setups can be found in:
-- [[Hatchery]]: Setups related to Egg Step gain
-- [[Shiny Chance]]: Setups related to increasing Shiny Chance
-- [[Pokérus]]: Setups related to increasing EV Yield
-- [[Farm/Setups]]: Setups not contained in the previous two pages
+---
 
 ## List of Available Berries{#list}
 
-Note that FP stands for [[Farm Points]].
+*Note: FP stands for [[Farm Points]].*
