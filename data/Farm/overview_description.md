@@ -15,7 +15,7 @@
 * [[Farm Points]]
 * [[Farm/Setups]]
 
-In the Farm, you can grow different types of [[Berries]], which can be traded for useful items and unique Pokémon and earn you [[Farm Points]] [[File:farmPoint.svg|25px]]. Berry plants also attract Wandering Pokémon, create helpful auras, and more.
+In the Farm, you can grow different types of [[Berries]], which can be [traded](#!Berries#trades) for useful items and unique Pokémon and earn you [[Farm Points]] [[File:farmPoint.svg|25px]]. Berry plants also attract Wandering Pokémon, create helpful auras, and more.
 
 The Farm is unlocked after reaching [[Routes/Kanto Route 11]] and obtaining the [Wailmer Pail](#!Key_Items).
 
@@ -39,6 +39,10 @@ If left unharvested, ripe Berry plants will eventually **wither**, dropping half
 *→ See: [Mutations](#!Berries/#mutations)*
 
 Berries planted in certain configurations can mutate into new Berry species. The Kanto Berry Master in [[Towns/Cerulean City]] gives hints for how to mutate new Berries.
+
+#### Other tools and guides:
+- [[Farm Simulator]]: Wiki tool for simulating various Farm conditions such as Berry growth, auras, and mutations.
+- [Walkthrough for unlocking #9 Persim to #25 Grepa](https://docs.google.com/document/d/1TE5cAKSlA7TAliA001_mIiO1odZ6e4yUEMre0GBW1to/edit?usp=sharing)  (external link): If you have not yet unlocked all the plots on the Farm, this guide will provide optimized planting formations to mutate those berries within the limited available farm plots.
 
 ---
 
@@ -92,7 +96,7 @@ Mulch and Shovels can be bought from [[Berry Masters]] in exchange for [[Farm Po
 |[[File:Gooey_Mulch.png\|32px]]  [[Items/Gooey Mulch]] | 100 [[File:currency/farmPoint.svg\|24px]]  | Improves the catch rate of wandering Pokémon on mulched plot by 10%. Also increases the weights of berry or color specific wandering Pokémon, making them more likely to appear.  |
 |[[File:Berry_Shovel.png\|32px]]  [[Items/Berry Shovel]] | 300 [[File:currency/farmPoint.svg\|24px]]  | Clears a Berry plant of any stage from a plot instantly. (Note: If the Berry plant is at the ripe stage, it will be harvested and the shovel will not be consumed.) |
 |[[File:Mulch_Shovel.png\|32px]]  [[Items/Mulch Shovel]] | 300 [[File:currency/farmPoint.svg\|24px]]  | Removes Mulch from a plot, regardless of how much time remains. |
-&nbsp;
+
 #### Oak Items {#farmoak}
 | Name| Affects | Level 0 | Level 1 | Level 2 | Level 3 | Level 4 | Level 5 |
 |:-------- | :-------- |:-------- | :-------- |:-------- | :-------- | :-------- | :-------- |
