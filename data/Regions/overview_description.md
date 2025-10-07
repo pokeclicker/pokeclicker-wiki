@@ -2,7 +2,8 @@
 * [Region Mechanics](#mechanics)
     * [Docks (Moving from Region to Region)](#docks)
     * [Unlocking New Regions](#unlock)
-    * [Regional Debuff](#debuff)
+    * [Regional Debuff (Challenge Mode)](#debuff)
+    * [Dungeon Debuff](#dungeondebuff)
 * [Available Regions](#availableregions)
 * [Regions In Development](#devregions)
 * [Region Statistics](#regionstats)
@@ -25,7 +26,7 @@ Unlocking new regions requires defeating the region's League Champion and, if th
 - Your Pokémon can use 5 more [[Vitamins]].
 - You gain more [[Hatchery]] queue slots.
 
-#### Regional Debuff{#debuff}
+#### Regional Debuff (Challenge Mode){#debuff}
 The Regional Debuff is one of two recommended [[Challenge Modes]] for all players.
 
 [[Pokémon]] that are not native to a region receive a damage debuff when battling in that region. The regional debuff cuts Pokémon's attack by 100%, reduced by 10% per region visited. This **debuff percentage** is the same amount for all non-native Pokémon and is strictly based on your highest-reached region, not the region you are currently in nor the native region of the Pokémon.
@@ -36,6 +37,12 @@ This means:
 - **After unlocking Sinnoh,** the damage reduction becomes 60%. **After unlocking Unova,** it becomes 50%, and so on.
 
 As new regions are reached, the regional debuff decreases and this penalty becomes less notable.
+
+#### Dungeon Debuff {#dungeondebuff}
+*→ See: [Dungeons/Regional Debuff](#!Dungeons#debuff)*
+
+Dungeons in regions that are 3 or more regions below your highest region receive a debuff to Epic, Legendary, and Mythic loot drop rates.
+
 
 ---
 
