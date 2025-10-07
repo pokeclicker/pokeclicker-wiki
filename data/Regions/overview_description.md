@@ -1,4 +1,37 @@
-Regions are areas in the world of Pokémon. Each new region introduces a new set of [[Routes]], [[Towns]], [[Gyms]] and [[Pokémon]]. Pokémon that are not native to a region get a damage debuff, but with each new region entered, this debuff decreases by 10%. Furthermore, some region offer unique gameplay elements.
+#### Jump to:
+* [Region Mechanics](#mechanics)
+    * [Docks (Moving from Region to Region)](#docks)
+    * [Regional Debuff](#debuff)
+    * [Unlocking New Regions](#unlock)
+* [Available Regions](#availableregions)
+* [Regions In Development](#devregions)
+* [Region Statistics](#regionstats)
+
+Regions are areas in the world of Pokémon. Each new region introduces a new set of [[Routes]], [[Towns]], [[Gyms]] and [[Pokémon]] and many introduce unique gameplay elements.
+
+---
+
+## Region Mechanics{#mechanics}
+
+#### Docks (Moving from Region to Region) {#docks}
+To visit another region, you must first unlock the **dock** in the region that you are in. When you move to a new region, as you will **not** be able to revisit past regions until reaching a dock in the new region.
+
+Docks in subregions are located in the first town you visit and are automatically unlocked.
+
+#### Unlocking New Regions {#unlock}
+Unlocking new regions requires defeating the region's League Champion and, if the Pokédex [Challenge Mode](#!Challenge_Modes) is enabled, catching all the Pokémon in the region's Pokédex. Once you become Champion, all missing regional Pokémon will automatically show up in your Pokédex. *Note: Only certain Pokémon may count toward the regional Pokédex. It does not necessarily include all Pokémon that can be acquired in a region.*
+
+
+#### Regional Debuff{#debuff}
+The Regional Debuff is one of two recommended [[Challenge Modes]] for all players.
+
+[[Pokémon]] that are not native to a region receive a damage debuff. The regional debuff cuts Pokémon's attack by 100% when outside of their Native Region, reduced by 10% per region visited. This effectively means non-native Kanto Pokémon have only 20% of their Attack when battling in Johto. Kanto and Johto Pokémon will have 30% Attack when fighting in Hoenn, 40% in Sinnoh, etc.
+
+This penalty becomes less and less notable as new regions are reached, as the regional debuff decreases and the player has access to more and more Pokémon.
+
+---
+
+## Available Regions {#availableregions}
 
 #### [[Regions/Kanto]]
 Kanto is the first region and introduces the player to the core gameplay features. There are 151 unique Pokémon to catch and breed. Step by step the player gets introduced to the mechanics of breeding and hatching Pokémon, digging up items in the Underground, growing [[Berries]] on the [[Farm]], finishing Quests, the usage of [[Oak Items]], [[Gems]], and Achievements.
@@ -83,19 +116,17 @@ Sub-Regions:**
 * [Crown Tundra](#!Towns/Crown_Tundra_Station) after becoming the Galar Champion
 * [Isle of Armor](#!Towns/Master_Dojo) after becoming the Galar Champion
 
-#### [[Regions/Hisui]] (In Development)
-Hisui is the ninth region and currently has 26 new Pokémon to catch, breed and hatch. Hisui is under development and is not currently available.
+---
 
-**Non-native Pokémon retain 90% damage
-Breeding Queue in the hatchery: 160
-Maximum Vitamins per Pokémon: 45**
+## Regions In Development {#devregions}
 
-#### [[Regions/Paldea]] (In Development)
-Paldea is the tenth region and currently has 106 new Pokémon to catch, breed and hatch. Paldea is under development and is not currently available.
+#### [[Regions/Hisui]]
+Hisui is the ninth region and will have 26 new Pokémon to catch, breed and hatch. Hisui is under development and is not currently available.
 
-**Non-native Pokémon retain 100% damage
-Breeding Queue in the hatchery: 192
-Maximum Vitamins per Pokémon: 50**
+#### [[Regions/Paldea]]
+Paldea is the tenth region and will have 106 new Pokémon to catch, breed and hatch. Paldea is under development and is not currently available.
 
-## Region Statistics
+---
+
+## Region Statistics {#regionstats}
 **Note:** Clicking any row will open a more detailed page of the relevant Region highlighted.
