@@ -7,7 +7,6 @@
 	* [Timer](#time)
 	* [Multiple Clears](#clearing)
 * [Map Size and Layout](#size)
-	* [Tiles Per Floor](#tilesPerFloor)
 	* [Flash Ability](#flash)
 * [Chests](#chest)
 	* [Loot Odds](#tiers)
@@ -36,9 +35,9 @@ On the dungeon overview, you can click the [[File:encountersInfo/encountersInfo.
 
  Icon {.col-1}| Tile {.col-2}| Description {.no-data-tables}
 |:-------:|:-------:|------|
-|  {.bg-dark .opacity-75}    | **Unexplored**   | Dark grey tiles are unexplored. Move onto the tile to uncover it. |
-|   | **Explored**   | An empty, explored tile. |
-|  { .bg-danger}   | **Regular Enemy**| Red tiles indicate wild Pokémon or Trainer encounters. |
+|&nbsp; {.bg-dark .opacity-75}    | **Unexplored**   | Dark grey tiles are unexplored. Move onto the tile to uncover it. |
+|&nbsp;  | **Explored**   | An empty, explored tile. |
+|&nbsp; { .bg-danger}   | **Regular Enemy**| Red tiles indicate wild Pokémon or Trainer encounters. |
 | [[File:dungeons/boss.svg\|30px]] {.bg-dark .align-middle} | **Dungeon Boss** | Like regular enemies, the Dungeon Boss can be wild Pokémon or a Trainer, but they will have more HP than a regular enemy. The dungeon boss must be defeated to clear the dungeon. After defeating them, you will automatically exit the dungeon. |
 | [[File:chest-common.png\|40px]] {.bg-dark .align-middle} | **Chest** | Contains loot of various rarities or Mimic encounters. Opening a chest will increase the enemy HP of encounters in the dungeon. Opening enough chests will reveal unexplored portions of the dungeon map. |
 | [[File:dungeons/ladder.png\|40px]] {.bg-dark .align-middle } | **Ladder** | Allows the player to progress to the next floor of a multi-floor dungeon. Adds 10 seconds to the timer. (Only available in dungeons from Alola onwards) |
@@ -47,7 +46,7 @@ On the dungeon overview, you can click the [[File:encountersInfo/encountersInfo.
 Encounters can have different weights, making some enemies and bosses more likely to appear than others.
 
 **Wild Pokémon** can be captured, and a successful capture will also reward you Dungeon Tokens.
-- Pokémon captured in dungeons provide higher base [Effort Value](#!Pokérus/#EV) yields. These modifiers stack with any other multipliers that affect EVs.
+- Pokémon captured in dungeons provide higher base [Effort Value](#!Pokérus/#EV) yields. These modifiers stack with other multipliers that affect EVs.
 - Dungeons encounters benefit from a +15% catch rate when using a [[Items/Dusk Ball]].
 
 **Mimics**{#mimic} are wild Pokémon are hiding as chests, and opening a chest with a Mimic will result in a battle. Mimics will **not** be displayed on the Dungeon location summary card until encountered at least once. Some Pokémon are exclusive to Mimic encounters.
@@ -81,52 +80,48 @@ A dungeon's dimensions will **shrink** by 1 when the number of clears reaches a 
 
 ***Example:** A base Alola dungeon has a 10x10 first floor and 5x5 second floor. After clearing it 10 times, it will become a single-floor 10x10 dungeon. After clearing it 100 times, it will become a 9x9 dungeon.*
 
-#### Tiles Per Floor{#tilesPerFloor}
+Floor Size | Empty Tiles | Regular Enemies Tiles | Boss Tiles | Chests | Reveal Chest Tiles | Reveal All Map Tiles
+:--- | :---: | :---: | :---: | :---: | :--- |  :--- |
+**5x5** | 6 | 13 | 1 | 5 | After 1 chest opened | After 2 chests opened |
+**6x6** | 14 | 15 | 1 | 6 | After 2 chests opened | After 3 chests opened |
+**7x7** | 24| 17 | 1 | 7 | After 2 chests opened | After 4 chests opened |
+**8x8** | 36 | 19 | 1 |8 | After 2 chests opened | After 4 chests opened |
+**9x9** | 50 | 21 | 1 | 9 | After 3 chests opened | After 4 chests opened |
+**10x10** | 66 | 23 | 1 | 10 | After 3 chests opened | After 5 chests opened |
 
+::: collapsed Show Map Formulas
 For an $n\times n$ dungeon floor, the number of tiles will be:
 - **Empty*** = $(n + 1)(n - 4)$
 - **Chests** = $n$
 - **Regular Enemies** = $2 * n + 3$
 - **Boss Encounters** = $1$
+Regarding map reveals:
+- When $DungeonSize/3$ chests are opened, rounded down (e.g. 2 chests in a 6x6 dungeon), all chest tiles are revealed on the map.
+- When $DungeonSize/2$ chests are opened, rounded up, the entire dungeon is revealed.
 
 **Including the entrance tile*
 
-Floor Size | Empty Tiles | Chests | Regular Enemies | Bosses {.no-data-tables}
-:--- | :---: | :---: | :---: | :---:
-**5x5** | 6 | 5 | 13 | 1
-**6x6** | 14 | 6 | 15 | 1
-**7x7** | 24| 7 | 17 | 1
-**8x8** | 36 | 8 | 19 | 1
-**9x9** | 50 | 9 | 21 | 1
-**10x10** | 66 | 10 | 23 | 1
-
+:::
+&nbsp;
 #### Flash Ability{#flash}
 
-After clearing a dungeon 100 times, you gain the Flash ability, which reveals the contents of adjacent tiles before you explore them. At 250 and 400 clears, your ability improves, revealing even more tiles.
-
-Number of Clears | Tiles Revealed with Flash {.no-data-tables}
-:--- | :---
-**100 clears** | 1 tile top, 1 bottom, 1 left, 1 right
-**250 clears** | 1 tile in each direction
-**400 clears** | 2 tiles top, 2 bottom, 2 left, 2 right, 1 diagonally
+After clearing a dungeon enough times, you gain the Flash ability, which reveals the contents of adjacent tiles before you explore them.
+- At **100 clears**, you reveal 1 tile top, 1 bottom, 1 left, 1 right.
+- At **250 clears**, you reveal 1 tile in each direction.
+- At **400 clears**, you reveal 2 tiles top, 2 bottom, 2 left, 2 right, 1 diagonally.
 
 ----
 
 ## Chests{#chest}
 
-Chests come in **Common, Rare, Epic, Legendary** and **Mythic** tiers. Dungeon loot always belongs to a specific tier (i.e you can only find Rare-tier loot in a Rare-tier chest). Some chests contain [Mimic](#mimic) encounters.
-
-Opening chests will grant you the loot inside, but it will also increase all enemies' HP by 20%. Opening enough chests will also reveal parts of the map.
-- When $DungeonSize/3$ chests are opened, rounded down (e.g. 2 chests in a 6x6 dungeon), all chest tiles are revealed on the map.
-- When $DungeonSize/2$ chests are opened, rounded up, the entire dungeon is revealed.
-
+Chests come in **Common, Rare, Epic, Legendary** and **Mythic** tiers. Dungeon loot always belongs to a specific tier (i.e you can only find Rare-tier loot in a Rare-tier chest). Some chests contain [Mimic](#mimic) encounters. Opening chests will grant you the loot inside, but it will also increase all enemies' HP by 20%. Opening enough chests will also [reveal](#size) parts of the map.
 
 #### Loot Odds{#tiers}
-The chance of a specific loot appearing is affected by **tier, weight, number of dungeon clears**, and any **[regional debuff](#debuff)**. Each [dungeon page](#list) lists the odds of obtaining a specific loot.
+The chance of a specific loot appearing is affected by **tier, weight, the number of dungeon clears**, and any **[regional debuff](#debuff)**. Each [dungeon page](#list) lists the odds of obtaining a specific loot.
 
-The chances to encounter Rare or higher-tier chests increases with every clear, while the chance to encounter Common chests decreases up until the player reaches 500 clears. *Note: While individual dungeon pages show loot percentages at thresholds of 0/100/250/500 clears, it doesn't mean that the chance **only** increases at these specific number of clears!*
+The chances to encounter Rare or higher-tier chests increases with every clear, while the chance to encounter Common chests decreases up until the player reaches 500 clears. *Note: While charts show loot percentages at thresholds of 0/100/250/500 clears, it doesn't mean that the chance **only** increases at these specific number of clears.*
 
-The following chart shows the base chance of encountering chests of a certain tier. Dungeons that lack chests in a particular tier have the remaining odds from the non-present tier(s) distributed proportionally among the present tiers.
+Dungeons that lack chests in a particular tier have the remaining odds from the non-present tier(s) distributed proportionally among the present tiers.
 
 Tier | 0 clears | 100 clears | 250 clears | 500 clears | Debuffed {.no-data-tables}
 :--- | --- | --- | --- | --- | ---
@@ -139,7 +134,7 @@ Tier | 0 clears | 100 clears | 250 clears | 500 clears | Debuffed {.no-data-tabl
 ***Example:** [[Dungeons/Mt. Moon]] has Great Ball, Small Restore and Star Piece as 3 of its 5 lootable items from Dungeon chests. All 3 items are in the Mythic tier, but the Great Ball has a weight of 2, while the Small Restore and Star Piece have a weight of 1. This means the Great Ball is twice as likely to be dropped as the other 2 items. In other words, on average when looting a Mythic-tier chest from Mt. Moon, 50% of the time it will be a Great Ball, 25% of the time it will be a Small Restore, 25% of the time it will be a Star Piece.*
 
 #### Regional Debuff{#debuff}
-When you reach a region that is 3 regions *beyond* a dungeon's region, all Epic, Legendary, and Mythic loot in that dungeon receives a dramatically diminished drop rate. The first time this happens is upon reaching Sinnoh—all Kanto dungeons become debuffed.
+Dungeons in regions that are **3 or more regions below your highest region** receive a debuff to Epic, Legendary, and Mythic loot drop rates. The first time this happens is upon reaching Sinnoh—all Kanto dungeons become debuffed.
 
 **Note:** Items and mimics that cannot be obtained in a non-debuffed location are excluded from debuffs. Certain subregions and dungeons that are unlocked later may be excluded from debuffs until a further region.
 
@@ -156,7 +151,9 @@ Highest Region Reached	| Debuffed Region(s) {.no-data-tables}
 
 #### Bonus Loot{#bonusLoot}
 
-Each time a chest is opened, there is a chance to get multiple loot items. The chance of occuring depends on the loot tier and can be increased by 50% by having a [[Items/Dowsing Machine]] active. The amount of bonus loot depends on the region and tier (where Common-tier loot and later regions have higher multipliers).
+Each time a chest is opened, there is a chance to get multiple loot items. The chance of occuring depends on the loot tier and can be increased by 50% by having a [[Items/Dowsing Machine]] active. The amount of bonus loot depends on the region and tier (Common-tier chests and higher regions yield more loot).
+
+:::collapsed Show Loot Yield Percentages and Charts
 
 Tier | Base Chance of Bonus Loot | With Dowsing Machine | Total Loot Gained (Varies by Region)
 --- | --- | --- | ---
@@ -174,7 +171,6 @@ The formulas for calculating bonus loot is as follows:
 
 $Tier$ is a value from 4 (Common) to 0 (Mythic) and $Region$ is a value from 0 (Kanto) to 7 (Galar).
 
-:::collapsed Show Loot Yield By Region Chart
 Tier | Kanto Yield | Johto Yield | Hoenn Yield | Sinnoh Yield | Unova Yield | Kalos Yield | Alola Yield | Galar Yield
 --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |Common |2 Items |2 Items |3 Items |3 Items |4 Items |4 Items |5 Items |5 Items
@@ -183,7 +179,6 @@ Tier | Kanto Yield | Johto Yield | Hoenn Yield | Sinnoh Yield | Unova Yield | Ka
 |Legendary |2 Items |2 Items |2 Items |2 Items |2 Items |3 Items |3 Items |3 Items
 |Mythic |2 Items |2 Items |2 Items |2 Items |2 Items |3 Items |3 Items |3 Items
 :::
-&nbsp;&nbsp;
 
 ---
 ## Dungeon Locations{#list}
