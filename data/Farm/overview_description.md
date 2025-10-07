@@ -25,7 +25,7 @@ The Farm is unlocked after reaching [[Routes/Kanto Route 11]] and obtaining the 
 *See also: [[Berries]]. For a breakdown of harvest yields, flavors, and mutation configurations, visit each Berry's individual page. In-game, this information can be found in the Berrydex Tab.*
 
 #### Acquiring Berries
-The first eight Gen 1 Berries are dropped by wild Pokémon. More Berries can be found in dungeon chests and later regions, but most Berries will be unlocked via [mutation](!#Berries#mutation).
+The first eight Gen 1 Berries are dropped by wild Pokémon. More Berries can be found in dungeon chests and later regions, but most Berries will be unlocked via [mutation](#!Berries#mutation).
 
 #### Planting Berries
 Plant berries by selecting the desired berry in the left-hand column and clicking on plots in the field on the right. Alternatively, **Plant All**{.btn .btn-dark .btn-sm .disabled} can be clicked to plant the selected Berry in every empty plot. Different Berries have different growth times, which can be modified by mulch, auras, and [[Oak Items/Sprayduck]]. Berry plants grow in **four stages** (Sprout → Taller → Bloom → Ripe).
@@ -36,7 +36,7 @@ Once ripe, Berry plants can be harvested by clicking on them. Different Berry ty
 If left unharvested, ripe Berry plants will eventually **wither**, dropping half of the expected Berries. There is also a chance they will **replant** themselves, spawning a plant of the same berry in that plot. Farm Points are not gained when Berries wither or get replanted. Replant rates can be modified by mulch or auras.
 
 #### Mutating Berries
-*→ See: [Mutations](#!Berries/#mutations)*
+*→ See: [Mutations](#!Berries#mutation)*
 
 Berries planted in certain configurations can mutate into new Berry species. The Kanto Berry Master in [[Towns/Cerulean City]] gives hints for how to mutate new Berries.
 
