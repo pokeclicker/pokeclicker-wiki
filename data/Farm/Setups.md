@@ -1,6 +1,10 @@
-Farming Setups are specific arrangements of berries that combine [Auras](#!Berries#aura) of various Berries together.  There are many useful setups for [Breeding Pokemon faster](#!Hatchery),  [Increasing Shiny Chance](#!Shiny_Chance), [Increasing EV Yield](#!Pokérus), accelerating berry growth, or harvesting a lot of berries to trade to [[Berry Masters]] for their [[Daily Deals]].
+Farm Setups are specific arrangements of berries that maximize the use of [Berry Auras](#!Berries#aura).
 
-> _Aura Received is multiplicative from all eligible auras affecting a berry. If a Berry receives the aura from four aura berries each at 1.3x aura output, that Berry receives 1.3^4 = 2.8561, or ~2.86x as an aura multiplier. If a Berry receives auras from 3 berries, two at 1.3x and one at 1.2x, the berry receives 1.3^2 * 1.2x = 2.028, or ~2.03x aura output.  Not all Berry auras stack, such as Lum._
+*If you are looking for how to mutate and unlock Berries, see [[Berries]].*
+
+_When hovering over a Berry in-game, you can see the Auras Received. Auras are generally multiplicative. If a Berry receives the aura from four other berries each at 1.3x aura output, that Berry receives 1.3^4 = 2.8561, or ~2.86x aura multiplier. If a Berry receives auras from 3 berries, two at 1.3x and one at 1.2x, the berry receives 1.3^2 * 1.2x = 2.028, or ~2.03x aura multiplier.  Not all Berry auras stack, such as Lum._
+
+----
 
 ## Growth Aura Setups{#growth}
 You can use Boost Mulch to speed up berry growth. If you are ready to harvest the boosted berry use Rich Mulch for maximum harvesting gain.
