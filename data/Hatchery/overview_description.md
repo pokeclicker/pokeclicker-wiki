@@ -1,52 +1,60 @@
-The **Pokémon Day Care** is a location in [[Kanto]] where [[Eggs]] can be bred. Additionally, obtained [[Pokémon]] that have reached level 100 can be bred to receive an Attack bonus equal to 25% of its Base Attack.  The Pokémon Day Care is unlocked upon clearing [[Routes/Kanto Route 3]].
+#### Jump to:
+* [Hatchery Basics](#basics)
+    * [How to Use](#howto)
+    * [Gaining Egg Steps](#eggstepgain)
+    * [Hatchery Slots and Queue](#slotsqueue)
+    * [Exclusive Pokémon](#exclusives)
+    * [Hatching Shiny Pokémon](#shinypokemon)
+* [Tips for Breeding](#tips)
+    * [Breeding Efficiency](#breedingefficiency)
+    * [Egg Step Multipliers](#eggstepsmult)
+    * [What to Breed](#whattobreed)
+* [Farm Setups for Breeding](#farmStrats)
 
-One quest that can appear involves hatching a random amount of Eggs. These can be either purchased from [[Shops]], or from breeding level 100 Pokémon.
+#### See also:
+* [[Hatchery Helpers]]
 
-# Usage
 
-As soon as [[Routes/Kanto Route 3]] is cleared, the Pokémon Day Care can be accessed by clicking on its location on the map on Route 5. Additionally, the Hatchery tab becomes available on the main page.
+In the Hatchery, you can hatch [[Eggs]] and breed [[Pokémon]] that have reached level 100. Breeding is the primary way of increasing a Pokémon's attack stat.
 
-There are two different types of hatch-able resources in Pokéclicker: obtained Pokémon Eggs and already obtained level 100 Pokémon. Pokémon Eggs are typically purchased in Shops. The Egg Obtained Pokémon that can be bred each have their own distinct tab in the Pokémon Day Care modal.
+The Hatchery is unlocked upon clearing [[Routes/Kanto Route 3]].
 
-Clicking on the desired Egg/Level 100 Pokémon will result in it being added to the Hatchery. The Hatchery only has 4 slots, one available from the start and 3 need that need to be unlocked:
+----
 
+## Hatchery Basics {#basics}
+
+#### How to Use {#howto}
+Only eggs and Pokémon that are Level 100 can be bred in the Hatchery. In the Hatchery modal, click on the Pokémon to breed it or add it to the queue. To hatch an egg, go to the Egg tab. Each Pokémon has a required amount of egg steps before it can hatch. When enough steps have been completed, click on its egg to hatch it.
+
+Every time a Pokémon is bred, its **attack** increases by its **attack bonus** amount. The efficiency of a Pokémon's attack gain can be [modified](#breedingefficiency).
+
+While a Pokémon is in the Hatchery (including the queue), its attack **does not** count toward your battles.
+
+[[Hatchery Helpers]] are helpers that automate adding Pokémon to the Hatchery for a fee.
+
+#### Gaining Egg Steps {#eggstepgain}
+Steps are gained by:
+- Defeating Pokémon in [[Routes]], [[Gyms]], [[Dungeons]], and [[Battle Frontier]]
+- Walking in the [[Safari]]
+
+Generally, the amount of steps you receive scales with the difficulty of the location. There are ways to [increase egg step gains](#eggstepsmult).
+
+#### Hatchery Slots and Queue {#slotsqueue}
+The Hatchery has a maximum of 4 slots. The first one is free, and subsquent ones must be purchased with [[Quest Points]].
+
+Starting from Johto, you have a Hatchery queue, which allows you to queue Pokémon and eggs to be hatched. Every time a new [region](#!Regions) is unlocked, your Hatchery queue expands in size.
+
+::: collapsed Hatchery Slots Costs
+Hatchery Slot Cost
 | Slot | Cost |
 |---|---|
 | 1 | 0 [[File:questPoint.svg\|25px]] |
 | 2 | 1,000 [[File:questPoint.svg\|25px]] |
 | 3 | 1,500 [[File:questPoint.svg\|25px]] |
 | 4 | 2,000 [[File:questPoint.svg\|25px]] |
+:::
 
-Later, the player can acquire Breeding Queue slots which are unlocked in each new Region (See Upgrades Below). The Breeding Queue automatically adds queued Pokémon to the Hatchery if there is space. If there is a Pokémon in the queue, Eggs that are ready to hatch will do so and be replaced by the queued Pokémon.
-
-Each Pokémon has a certain number of Egg Steps required before it can hatch from an Egg. Consult [[Pokémon]] for egg steps for all Pokémon. Egg Steps are gained through defeating Pokémon. [[Routes]], [[Gyms]], and [[Dungeons]] all yield different numbers of Egg Steps per Pokémon defeated, although the Egg Steps yielded generally scales with the difficulty of the Route, Gym, or Dungeon, or the current stage in the [[Battle Frontier]].  The Oak Item [[Oak Items/Magma Stone]] will increase the number of steps gained, making eggs hatch faster.
-
-When an Egg in the Hatchery has obtained the required number of Egg Steps, as indicated by the green progress bar on each Egg it will be ready to hatch. Clicking on the image of the Egg with hatch it, giving the player one of that Pokémon.
-
-Baby Pokémon are Pokémon obtained exclusively through Breeding the evolved stage of that Pokémon. The first time a Baby Pokémon is hatched the player will obtain both the original evolved stage, and the baby stage of that Pokémon.
-
-The 25% increase to a Pokémon's Base Attack through breeding can be increased through the use of [[Items/Protein]]. Proteins increase the Attack bonus from Breeding by 1 for each Protein used on an individual Pokémon. Consult [[Items/Protein]] for further information on Breeding Efficiency using Proteins.
-
-Breeding Pokémon also offers the highest shiny odds in the game (alongside [[Wandering Pokémon]] and [[Shop Pokémon]]) at 1/1024. Consult [[Shiny Chance]] for further information on Shiny Odds using the Hatchery. Hatching a shiny Pokémon will grant it 5 times the usual attack gain. Note that this bonus does not apply to every hatch of existing shiny pokemon. In other words, if you breed a shiny Pokémon, it will only receive the bonus if it hatches shiny again.
-
-[[Hatchery Helpers]] are unlock-able and purchasable [[Items]] that allow the player to automate the hatchery.
-
-# Efficiency
-There are several key aspects to consider when breeding Pokémon; specific goals - such as beating a current roadblock to progress, overall gains, and party type balance.  [Breeding Efficiency](#!Pokémon#BE) (BE) is the ratio between a Pokémon's Attack gain per breeding cycle, divided by its Egg Steps.  The higher the number, the better that Pokémon is at gaining Attack.
-
-* Breeding anything is better than having the [[Hatchery]] idle at any time
-* The Breeding Efficiency of Pokémon includes the number of [[Vitamins]] used on that Pokémon and [Effort Values](#!Pokérus#EV) it has earned
-* The [Region](#!Regions) that Pokémon is native to influences its usefulness due to the [Regional Debuff](#!Pokémon#debuff)
-* Concentrate on type advantageous Pokémon to overcome tough fights
-* Consider the overall effect on the party's attack type balance
-
-Example: Attempting to defeat Champion Wallace in Hoenn. While the Pokémon with the highest Breeding Efficiency overall is Gyarados, when accounting for the 30% damage debuff for a Kanto Pokémon in the Hoenn region it is merely the 11th most efficient Pokémon to breed. Therefore breeding Azurill, the most efficient Pokémon to breed in Hoenn, will be slightly more efficient overall to defeat Wallace. Furthermore, breeding some of the Hoenn Grass type Pokémon (e.g. Tropius, Breloom, Shroomish, Roselia, etc.) that are only slightly less efficient than Azurill is made up for by their type advantage over Wallace's primarily water type Pokémon. If trying to breed towards a goal focus on high breeding efficiency Pokémon that are from the region you are trying to beat with a type advantage against whatever Pokémon you are struggling to defeat.  A type balanced approach when not trying to overcome a specific problem fight has better long-term outcomes, making your party able to meet many challenges.
-
-# Upgrades
-
-Additional Breeding Queue slots can be obtained by progressing to the next region.
-
-## Hatchery Queue Slots
+::: collapsed Hatchery Queue Size Per Region
 | Region | Number of Breeding Queue Slots |
 |---|---|
 | Kanto | 0|
@@ -57,52 +65,68 @@ Additional Breeding Queue slots can be obtained by progressing to the next regio
 | Kalos | 64|
 | Alola| 96|
 | Galar| 128|
+:::
+# {.m-3}
 
-# Farm Strategies{#farmStrats}
+#### Exclusive Pokémon {#exclusives}
+[[Baby Pokémon]] are exclusively unlocked through breeding the evolved stage of that Pokémon. When a Baby Pokémon hatches, the player will obtain both the original evolved stage and the baby stage of that Pokémon.
 
-The farm can be utilized to increase the egg steps yielded by Pokémon through the use of [[Berries/Chople]] berries. However, as Chople berries surrounded by at least three other Chople berries can mutate into [[Berries/Chilan]] berries, specfic strategies must be employed to best plant Chople berries in order to increase egg steps. Below are several strategies that can be used depending on which berries are readily accessible, accompanied by a short description of each strategy's pros and cons as well as a corresponding planting diagram.
+Some Pokémon can only be unlocked by hatching it from an [egg](#!Eggs).
 
-Note: Any Strategy that used Petaya will have a slightly different timing table. Once Petaya ripens it resets the timers of all other berries and sets them to infinity. Thus, other berries can be planted so that they ripen before Petaya, and should be timed so that Petaya ripens just before they wither.
+#### Hatching Shiny Pokémon {#shinypokemon}
+Breeding Pokémon offers the highest [shiny odds](#!Shiny_Chance) in the game (alongside [[Wandering Pokémon]] and [[Shop Pokémon]]) at **1/1024**.
 
-## Optimal Strategies Rank Table
+A hatch resulting in a shiny Pokémon will grant the Pokémon **5 times the usual attack gain**. Note that the existing shiny status of a Pokémon does not matter. If you breed an already-shiny Pokémon, it will only receive the bonus if it hatches as a shiny again.
 
-|Berry Strategy | Efficiency Ranking |
-|---|---|
-|Chople + Babiri + Petaya + Lum| 1|
-|Chople + Lum + Petaya|2|
-|Chople + Babiri + Lum|3|
-|Chople + Lum|4|
-|Chople + Petaya|5|
-|Chople + Babiri|6|
-| 	Chople + Babiri + Petaya|7|
-|Chople|8|
-|Chople + Yache |8|
-|Chople + Haban|8|
+---
 
-## Expanded Rate Table Calculations
-All calculations for Rank Table done [here](https://docs.google.com/spreadsheets/d/1kyQIpahGezv8tYYeQDoZMHjw6cVyGr7FD4MlXgbPr68/edit?usp=sharing).
+## Tips for Breeding {#tips}
+#### Breeding Efficiency (BE) {#breedingefficiency}
+*For a breakdown of stats and what affects them, see [Pokémon](#!Pokémon#stats).*
 
-Legend:
-*MESBM - Max Egg Steps Boost Multiplier
-*BD - Buff Duration (hours)
-*MRT - Max Replant Time (hours)
-*U% - Uptime%
-*MESBM w/ U% - Max Egg Steps Boost Multiplier w/ Uptime% factored in
-*ER - Efficiency Rank where 1 = Best
+A useful stat is a Pokémon's [Breeding Efficiency](#!Pokémon#stats) (BE), which is the amount of attack the Pokémon gains per 40 egg steps. It is a ratio of its attack bonus to its egg steps, in addition to any attack modifiers it has from [EV Bonus](#!Pokérus), [Shadow](#!Shadow_Pokémon) states, and attack-increasing held items. Attack bonus and egg steps can be modified using [[Vitamins]].
+
+In other words, a Pokémon with higher breeding efficiency gains more attack comparatively for the amount of time it takes to hatch them.
+
+#### Egg Step Multipliers {#eggstepsmult}
+[[Oak Items/Magma Stone]], [Berry Auras](#farmStrats), and [[Items/Red Flute]] can boost the number of steps gained, and such effects are multiplicative.
 
 
-| Full Strategy | MESBM | BD (hours) | MRT (hours) | U% | MESBM w/ U%| ER|
+#### What to Breed {#whattobreed}
+Deciding what Pokémon is most useful to breed depends on your current goals.
+* Breeding anything is better than having the Hatchery idle, as it will always increase your overall attack.
+* If you wish to do more damage in a specific [Region](#!Regions), breeding Pokémon native to that region may be more efficient as they are not affected by the [Regional Debuff](#Regions#debuff). *A setting in the Hatchery allows you to calculate BE that takes regional debuffs into account.*
+* If you wish to do more damage to a specific type, especially for tough gyms or quest line battles, breed Pokémon of an advantageous type with high BE to overcome those battles.
+* If you wish to breed for long-term outcomes to meet any kind of battle, breed Pokémon with high BE in a variety of types, so that your damage output is stable against many types matchups.
+
+---
+
+## Farm Setups for Breeding {#farmStrats}
+
+The [[Farm]] can be utilized to increase egg steps gained through the use of [[Berries/Chople]] berries. However, specific layouts must be used to prevent Chople berries from mutating into [[Berries/Chilan]], which can occur when a Chople is surrounded by three or more other Choples.
+
+Below are several strategies that can be used depending on which berries are readily accessible, accompanied by each strategy's pros and cons and  plantings diagram.
+
+*Note: Any strategy that used Petaya will have a slightly different timing table. Once Petaya ripens it resets the timers of all other berries and sets them to infinity. Thus, other berries can be planted so that they ripen before Petaya, and should be timed so that Petaya ripens just before they wither.*
+
+#### Setups Ordered by Efficiency
+
+| Setup |  Avg. Egg Steps Multiplier* | Max Egg Steps Multiplier | Buff Duration| Max Replant Time | Uptime |
 |---|---|---|---|---|---|---|
-| [[Berries/Chople]]| 1.56x | 10 hours | 10 hours | 50% | 1.28x | 8 |
-| [[Berries/Chople]] + [[Berries/Yache]]| 1.56x | 14.29 hours | 14.29 hours | 50% | 1.28x | 8|
-| [[Berries/Chople]] + [[Berries/Haban]]| 1.56x | 20 hours | 20 hours | 50% | 1.28x | 8|
-| [[Berries/Chople]] + [[Berries/Petaya]]| 1.56x | 4 days 10 hours | 24 hours | 81.54% | 1.46x | 5|
-| [[Berries/Chople]] + [[Berries/Lum]]| 2.43x | 10 hours | 10 hours | 50% | 1.72x | 4|
-| [[Berries/Chople]] + [[Berries/Lum]] + [[Berries/Petaya]]| 2.43x | 4 days 10 hours | 24 hours | 81.54% | 2.17x | 2|
-| [[Berries/Chople]] + [[Berries/Babiri]] + [[Berries/Petaya]]| 1.81x | 4 days 10 hours | 24 hours | 81.54% | 1.66x | 7|
-| [[Berries/Chople]] + [[Berries/Babiri]]| 1.86x | 10 hours | 18 hours |35.71% | 1.31x | 6|
-| [[Berries/Chople]] + [[Berries/Babiri]] + [[Berries/Lum]]| 2.90x | 10 hours | 18 hours | 35.71% | 1.68 | 3|
-| [[Berries/Chople]] + [[Berries/Babiri]] + [[Berries/Petaya]] + [[Berries/Lum]]| 2.73x | 4 days 10 hours | 24 hours | 81.54% | 2.41x | 1|
+| [[Berries/Chople]] + [[Berries/Babiri]] + [[Berries/Petaya]] + [[Berries/Lum]]|  2.41x | 2.73x | 4 days 10 hours | 24 hours | 81.54% |
+| [[Berries/Chople]] + [[Berries/Lum]] + [[Berries/Petaya]]| 2.16x | 2.43x | 4 days 10 hours | 24 hours | 81.54% |
+| [[Berries/Chople]] + [[Berries/Babiri]] + [[Berries/Lum]]| 1.95x | 2.90x | 10 hours | 18 hours | 35.71% |
+| [[Berries/Chople]] + [[Berries/Lum]]| 1.71x | 2.43x | 10 hours | 10 hours | 50% |
+| [[Berries/Chople]] + [[Berries/Petaya]]| 1.45x |1.56x | 4 days 10 hours | 24 hours | 81.54% |
+| [[Berries/Chople]] + [[Berries/Babiri]]| 1.43x | 1.86x | 10 hours | 18 hours |35.71% |
+| [[Berries/Chople]] + [[Berries/Babiri]] + [[Berries/Petaya]]| 1.42x | 1.81x | 4 days 10 hours | 24 hours | 81.54% |
+| [[Berries/Chople]] + [[Berries/Haban]]| 1.28x | 1.56x | 20 hours | 20 hours | 50% |
+| [[Berries/Chople]] + [[Berries/Yache]]| 1.28x | 1.56x | 14.29 hours | 14.29 hours | 50% |
+| [[Berries/Chople]]| 1.28x | 1.56x | 10 hours | 10 hours | 50% |
+**Takes Uptime into account*
+***Note:** All calculations for Rank Table done [here](https://docs.google.com/spreadsheets/d/1kyQIpahGezv8tYYeQDoZMHjw6cVyGr7FD4MlXgbPr68/edit?usp=sharing) (external link).*
+
+
 
 ## Chople + Empty Rows
 
