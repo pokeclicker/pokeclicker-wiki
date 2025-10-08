@@ -1,120 +1,144 @@
 ## Spreading Pokérus
 
-Spreading Pokérus can only occur in the [Pokémon Day Care](#!Hatchery). Currently, only a Pokémon that fulfill the below conditions are capable of spreading the virus:
+Spreading Pokérus can only occur in the [[Hatchery]].
 
-**Spreader requirements**
+Only Pokémon that fulfill the below conditions are capable of **spreading the virus:**
 1. Infected with Pokérus, state is **Contagious** or **Resistant**
 2. Not ready to hatch
 3. Being bred manually *(i.e., a hatchery helper is not assisting with its egg)*
 
-Only Pokémon that fulfill the below conditions are capable of contracting the virus:
-
-**Contraction requirements**
+Only Pokémon that fulfill the below conditions are capable of **contracting the virus:**
 1. Not ready to hatch
 2. Share at least one type with a Pokémon that fulfills the "Spreader Requisites"
 3. Being bred manually *(i.e., a hatchery helper is not assisting with its egg)*
 
-## Pokérus Status
+----
 
-There are 4 states of Pokérus.  Uninfected do not have the PKRS tag.  Pokemon that have contracted Pokérus but are still in the [[Hatchery]] are Infected.  Pokémon that have left the Hatchery and have less than 50 EVs are considered Contagious. Pokémon that fulfill all the above conditions but have gained 50 or more EVs are considered Resistant.
+## Pokérus Status {#pokerusstatus}
 
-State | Name | Description
-:--- | :--- | ---:
-None | None | Base State. Pokémon can contract Pokérus. Pokémon cannot gain EVs.
-[[File:Infected.png]] | Infected | Pokémon has contracted Pokérus, but has yet to hatch once after contracting the virus. Pokémon cannot gain EVs.
-[[File:Contagious.png]] | Contagious | Pokémon has contracted Pokérus, and is capable of spreading the virus. Pokémon can gain EVs.
-[[File:Resistant.png]] | Resistant | Pokémon has contracted Pokérus, and is capable of spreading the virus. Pokémon can gain EVs, and has also accumulated 50 or more EVs.
+There are 4 states of Pokérus.  Uninfected Pokémon do not have any PKRS tag.
 
-There is a known bug that Pokémon infected via typed eggs will remain Infected upon hatching, rather than becoming Contagious. Breeding the Pokémon the usual way will cause the Pokémon to correctly become Contagious.
+| Tag | State | Description | Able to Gain EVs | Able to Spread Pokérus |
+| :--- | :--- | :--- | :--- | :--- |
+None | **None** | Base State. Pokémon can contract Pokérus. | No | No
+[[File:Infected.png]] | **Infected** | Pokémon has contracted Pokérus, but has yet to hatch once after contracting the virus. | No | No
+[[File:Contagious.png]] | **Contagious** | Pokémon has contracted Pokérus, and is capable of spreading the virus. | **Yes** | **Yes**
+[[File:Resistant.png]] | **Resistant** | Pokémon has contracted Pokérus, and is capable of spreading the virus. Pokémon has accumulated 50 or more EVs. | **Yes** | **Yes**
+*There is a known bug that Pokémon infected via typed eggs will remain Infected upon hatching, rather than becoming Contagious. Breeding the Pokémon the usual way will cause the Pokémon to correctly become Contagious.*
+
+#### Resistant Pokémon {#resistant}
+When a Pokémon gains **50 EVs**, it becomes resistant. The number of resistant Pokémon in your party counts toward [[Click Attack]] and certain [[Achievements]]. Resistant Pokémon continue to gain EVs at the same rate, but their EV bonus will increase much slower.
+
+----
 
 ## Effort Values (EVs){#EV}
 
-EVs are a damage multiplying stat for each individual Pokémon that can be seen in the Pokédex page for that Pokémon and by using the Display Value setting in the Hatchery. EVs for a Pokémon can currently only be increased by obtaining that Pokémon again after it has caught the Pokérus. You can gain EVs for a Pokémon by: catching it on a Route, Dungeon, or Safari, obtaining it as a Wandering Pokemon, or by evolving it using Evolution Items. Breeding a Pokémon does not count towards gaining EVs. EV gain is further affected by the [[Berries/Rowap]] Berry Aura, Blue Flute, and other factors listed below.  Using a [Farm Setup](#!Farm/Setups) for EV boosting can give up to 2.5x more Effort Values.
+Effort Values (EVs) are a damage multiplying stat for each individual Pokémon. These numbers can be seen on a Pokémon's stat page.
+- **EVs** is how many Effort Values they have.
+- **EV bonus** is the damage multiplier applied to their attack.
 
-### Gaining EVs (Methods)
+#### EV Bonus (Damage Multiplier) {#evbonus}
+For the first 50 EVs, every 1 EV increases the Pokémon's EV bonus by 0.01, thus increasing their damage by 1%.
 
-Different methods of catching a Pokémon will yield different amounts of EVs. If the Slow EVs [Challenge Mode](#!Challenge_Modes) is activated, 10x as many captures will be needed to yield the same bonus. In some instances, the yield of EVs is further modified by an external factor (see below tables for specific information).
+$EVBonus = 1 + \frac{EffortValues}{100}$
 
-#### EV yield
+After 50 EVs, the Pokémon will continue to increase their EV bonus, but at a diminished rate, based on the formula below. There is no upper limit to this multiplier.
 
-Find the base rate below:
-EVs gained | Slow EVs | Catching Method
-:--- | :---: | ---:
-0.1 | 0.01 | Wild Route / Dungeon Pokémon
-0.2 | 0.02 | Base [Wanderer Pokémon](#!Wandering_Pokémon)
-1 | 0.1 | Evolution Item
-1 | 0.1 | Shop Bought / [Dream Orb Pokémon](#!Dream_Orbs)
-1 | 0.1 | [Safari Pokémon](#!Safari)
-1 | 0.1 | Color & Berry-Specific Wanderer Pokémon
+$EVBonus = EffortValues^{0.103645891}$
 
-#### EV yield modifiers
-
-Use all that apply, multiplied together and by the base rate from the table above:
-EV modifier | Method
-:--- | ---:
-2x | Pokémon is captured as a Shadow Pokémon
-3x | Pokémon is encountered and captured as a Dungeon Pokémon (not a Boss or Mimic)
-5x | Pokémon is captured as a Shiny
-10x | Pokémon is encountered and captured as a Dungeon Boss Pokémon
-10x | Pokémon is encountered and captured as a Mimic
-50x | Pokémon is encountered and captured as a Roaming Pokemon
-[See Below](#Farm) | [[File:Rowap.png\|40px]] [[Berries/Rowap]] Berry Aura
-Variable  (0.02 * (1 + AchievementBonus)) | [[File:Blue_Flute.png\|40px]] [[Items/Blue Flute]]
-1.5x | [[File:Macho_Brace.png\|40px]]  Pokémon is holding a [[Items/Macho_Brace]]
-2x | [[File:Power_Bracer.png\|40px]]  Pokémon is holding a [[Items/Power_Bracer]]
-5x | [[File:Repeatball.png\|40px]] [[Items/Repeat Ball]]
-
-#### Examples
-
-Example 1: Catching a **Dungeon Pokémon** with a **Repeatball** yields:
-**0.1 (Catching) \* 3 (Dungeon Pokémon) \* 5 (Repeatball) = 1.5 EVs**
-
-Example 2: Catching a **Shiny Roaming Pokémon** with a **Repeatball** yields:
-**0.1 (Catching)  \* 5 (Shiny) \* 5 (Repeatball) \* 50 (Roaming) = 125 EVs**
-
-Example 3: Catching a **Shadow Pokémon** during a **Dungeon Boss Encounter** with a Duskball when holding a **Power Bracer** yields:
-**0.1 (Catching) \* 2 (Shadow Pokémon) \*10 (Dungeon Boss)  \*2 (Power Bracer) = 4 EVs**
-
-#### Break Points for non-caught Pokémon{#breakpoints}
-
-For Pokémon that cannot be caught - shop purchases, [Alcremie Spins](#!Battle_Cafe), and item evolutions, combining [[Berries/Rowap]] setups, equipping [[Items/Power Bracer]] and activating [[Items/Blue Flute]] gives the greatest possible yield for the fewest purchases / spins / items to reach Resistant.  Achievement % scales Blue Flute's effectiveness; the percentages in the table below are the minimum required.
-
-For 50EV | Rowap + Lum | Rowap + Lum + Petaya
-:--- | :---: | :---:
-10x | 0.00% | 38.60%
-9x | 361.34% | 609.56 %
-8x | 1044.01% | *1323.25%* *
-\* Not currently possible.
-
-
-### EV Damage Multiplier
-
-EVs increase the amount of damage that a Pokémon does. EVs multiply the damage done by a Pokémon. If your Pokémon has fewer than 50 EVs, a Pokémon's EV Damage Multiplier increases by 0.01 per EV, and consequently a Pokémon gains 1% extra damage per EV for the first 50 EVs.
-
-Beyond 50 EVs, Pokémon will still gain EVs at the same rate, but will see diminishing returns with respect to the EV Damage Multiplier bonus gained per EV gained. There is no limit to this multiplier.
-
-#### EV Attack Bonus at certain benchmarks
-
-Effort Value | Pokémon Damage Multiplier
+| EV Bonus (Damage Multiplier) | EVs required |
 :--- | :---
-50 | 1.5x
-802 | 2x
-40,121 | 3x
-643,300 | 4x
-5,540,000 | 5x
-3.2E7 | 6x
-1.4E8 | 7x
+1.5x | 50 |
+2x | 802 |
+3x | 40,121 |
+4x | 643,300 |
+5x | 5,540,000 |
+6x | 3.2E7 |
+7x | 1.4E8 |
 
-#### EV Formulas
+---
 
-**When a Pokémon has fewer than 50 EVs:**
-EV Damage Multiplier = 1 + (EV / 100)
+## How to Gain EVs {#evgains}
 
-**When a Pokémon has greater than 50 EVs:**
-EV Damage Multiplier = EV^(log(1.5)/log(50))
+Only Pokémon with Pokérus can gain EVs. They gain EVs after you obtain the Pokémon again via catching, shop purchases, trades, or evolution items.
 
-## EV Yield Setups{#Farm}
-[EV](#!Pokérus "Pokérus") yield is affected by the Rowap berry's Aura when grown on the [[Farm]]. The setup below increases the yield of EVs gained in all applicable situations.  It stacks with other EV bonuses, including [[Items/Blue Flute]] and [[Items/Repeat Ball]].
+Things that **do not** increase EVs:
+- Breeding a Pokémon in the Hatchery
+- Hatching a Pokémon from an Egg
+- Obtaining a Pokémon again when the Pokémon is not in the Contagious or Resistant [Pokérus state](#pokerusstatus)
+
+
+#### Base EV Yield (Per Capture Method) {#evbase}
+EV yields differ based on how the Pokémon is obtained.
+
+| Method {.col-1}| EVs Yielded {.col-1}|
+| :--- | :---: |
+| Catching a Pokémon on a Route | 0.1 |
+| Catching a Base [[Wandering Pokémon]] | 0.2 |
+| Catching a Pokémon in a Regular Dungeon Encounter | 0.3 |
+| Catching a Pokémon in a Mimic or Dungeon Boss Encounter | 1 |
+| Using an Evolution Item | 1 |
+| Purchasing or trading at a Shop, Opening a [Dream Orb](#!Dream_Orbs), Spinning [[Battle Café]] | 1 |
+| Catching a Pokémon in the [[Safari]] | 1 |
+| Catching a Color or Berry-Specific [[Wandering Pokémon]] | 1 |
+| Catching a Pokémon in a [Roaming](#!Roaming_Pokémon) Encounter | 5 |
+# {.mt-3}
+
+#### EV Yield Modifiers {#evmodifiers}
+EV yields can also be modified by items, auras, and Pokémon states. If the Slow EVs [Challenge Mode](#!Challenge_Modes) is activated, all EV gains are divided by 10. Modifiers are multiplicative for all that apply.
+
+| Modifier {.col-1}| EV Yield Multiplier {.col-1}|
+| :--- | :--- |
+| Slow EV Challenge | 0.1x |
+| Pokémon is holding a [[File:Macho_Brace.png\|24px]] [[Items/Macho Brace]] | 1.5x |
+| Pokémon is holding a [[File:Power_Bracer.png\|24px]] [[Items/Power Bracer]] | 2x |
+| Pokémon is captured as a [[Shadow Pokémon]]* | 2x |
+| Pokémon is captured as a [Shiny](#!Shiny_Chance)* | 5x |
+| Pokémon is captured with a [[File:Repeatball.png\|24px]] [[Items/Repeat Ball]] | 5x |
+| [[File:Rowap.png\|24px]] [[Berries/Rowap]] Berry Aura| Variable ([See Below](#Farm)) |
+| [[File:Blue_Flute.png\|24px]] [[Items/Blue Flute]] | Variable based on Flute bonus (`1.02 + .02(AchievementBonus)`) |
+**The newly obtained Pokémon must be a Shadow or Shiny form. Simply owning a Shadow or Shiny Pokémon does not affect multipliers.*
+
+**Examples of EV Yields:**
+- Catching a Dungeon Pokémon with a Repeat Ball yields:
+    - **0.3 EVs** (Dungeon Pokémon) **× 5** (Repeat Ball) = **1.5 EVs**
+- Catching a Shiny Roaming Pokémon with a Repeat Ball yields:
+    - **5** (Roamer) **× 5** (Shiny)  **× 5** (Repeat Ball) = **125 EVs**
+- Catching a Shadow Pokémon during a Dungeon Boss Encounter when the Pokémon is holding a Power Bracer yields:
+    - **1 EVs** (Dungeon Boss) **× 2** (Shadow Pokémon) **× 2** (Power Bracer) = **4 EVs**
+
+#### Tips for Gaining EVs {#evtips}
+
+##### Route Pokémon
+Pokémon that appear on routes are generally the easiest Pokémon to gain EVs for, due to the frequency of their encounters. Without any EV modifiers, Pokémon will become resistant after 500 route captures.
+
+##### Rare Encounters
+For catchable Pokémon, using Repeat Ball, Power Bracer, and a Rowap setup combined can provide ~25x EV gain per catch. Due to the time effort of obtaining Repeat Balls and setting up the Farm, you may want to prioritize such methods for only difficult to catch Pokémon.
+
+##### Shop/Trade/Evolution-Only Pokémon
+For Pokémon that can only be acquired through purchases, trades, and item evolutions, you may wish to maximize your EV yield multiplier in order to resist your Pokémon with the least amount of purchases/trades/evolutions possible.
+
+The table below shows how many Pokémon are required in order to resist these Pokémon using various combinations of modifiers, assuming a base EV gain of 1. Since the Blue Flute's effectiveness scales with your Achievement Bonus, the percentages in the setups show the minimum Achievement Bonus required to reach that multiplier.
+
+*Note: AB stands for Achievement Bonus. Your Achievement Bonus can be checked in your Achievement Tracker. The Farm setups referenced are based on  [these specific setups](#Farm).*
+| Modifiers | Required Purchases/Trades/Evolutions/Etc. Needed to Resist |
+| :--- | :--- | :--- |
+| No Modifiers |  50 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + [[File:Rowap.png\|24px]]  Rowap/Lum/Petaya Setup |  11 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + [[File:Rowap.png\|24px]]  Rowap/Lum/Petaya Setup + [[File:Blue_Flute.png\|24px]] Blue Flute (38.60% AB or more) | 10 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + [[File:Rowap.png\|24px]]  Rowap/Lum Setup | 10 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + [[File:Rowap.png\|24px]]  Rowap/Lum/Petaya Setup + [[File:Blue_Flute.png\|24px]] Blue Flute (609.56% AB or more) | 9 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + [[File:Rowap.png\|24px]]  Rowap/Lum Setup + [[File:Blue_Flute.png\|24px]] Blue Flute (361.34% AB or more) | 9 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + [[File:Rowap.png\|24px]]  Rowap/Lum Setup + [[File:Blue_Flute.png\|24px]] Blue Flute (1044.01% AB or more) | 8 |
+# {.mt-3}
+
+##### Friend Safari
+Pokémon that currently cannot gain EVs anywhere else can be caught in the [[Towns/Friend Safari]]. This is the only repeatable way to obtain these Pokémon.
+
+----
+
+## Farm Setups for EV Yields {#Farm}
+The [[Farm]] can be used to increase EV yields. Each ripe [[Berries/Rowap]] plant multiplies EV yields by **1.015x** or **1.04545x** (when boosted by [[Berries/Lum]]). This effect stacks with every Rowap Plant, as well as with other [EV Modifiers](#evmodifiers).
 
 :::collapsed Rowap + Lum - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
