@@ -35,9 +35,9 @@ On the dungeon overview, you can click the [[File:encountersInfo/encountersInfo.
 
  Icon {.col-1}| Tile {.col-2}| Description {.no-data-tables}
 |:-------:|:-------:|------|
-|&nbsp; {.bg-dark .opacity-75}    | **Unexplored**   | Dark grey tiles are unexplored. Move onto the tile to uncover it. |
-|&nbsp;  | **Explored**   | An empty, explored tile. |
-|&nbsp; { .bg-danger}   | **Regular Enemy**| Red tiles indicate wild Pokémon or Trainer encounters. |
+|  {.bg-dark .opacity-75}    | **Unexplored**   | Dark grey tiles are unexplored. Move onto the tile to uncover it. |
+|   | **Explored**   | An empty, explored tile. |
+|  { .bg-danger}   | **Regular Enemy**| Red tiles indicate wild Pokémon or Trainer encounters. |
 | [[File:dungeons/boss.svg\|30px]] {.bg-dark .align-middle} | **Dungeon Boss** | Like regular enemies, the Dungeon Boss can be wild Pokémon or a Trainer, but they will have more HP than a regular enemy. The dungeon boss must be defeated to clear the dungeon. After defeating them, you will automatically exit the dungeon. |
 | [[File:chest-common.png\|40px]] {.bg-dark .align-middle} | **Chest** | Contains loot of various rarities or Mimic encounters. Opening a chest will increase the enemy HP of encounters in the dungeon. Opening enough chests will reveal unexplored portions of the dungeon map. |
 | [[File:dungeons/ladder.png\|40px]] {.bg-dark .align-middle } | **Ladder** | Allows the player to progress to the next floor of a multi-floor dungeon. Adds 10 seconds to the timer. (Only available in dungeons from Alola onwards) |
@@ -82,11 +82,11 @@ A dungeon's dimensions will **shrink** by 1 when the number of clears reaches a 
 
 Floor Size | Empty Tiles | Regular Enemies Tiles | Boss Tiles | Chests | Reveal Chest Tiles | Reveal All Map Tiles
 :--- | :---: | :---: | :---: | :---: | :--- |  :--- |
-**5x5** | 6 | 13 | 1 | 5 | After 1 chest opened | After 2 chests opened |
+**5x5** | 6 | 13 | 1 | 5 | After 1 chest opened | After 3 chests opened |
 **6x6** | 14 | 15 | 1 | 6 | After 2 chests opened | After 3 chests opened |
 **7x7** | 24| 17 | 1 | 7 | After 2 chests opened | After 4 chests opened |
 **8x8** | 36 | 19 | 1 |8 | After 2 chests opened | After 4 chests opened |
-**9x9** | 50 | 21 | 1 | 9 | After 3 chests opened | After 4 chests opened |
+**9x9** | 50 | 21 | 1 | 9 | After 3 chests opened | After 5 chests opened |
 **10x10** | 66 | 23 | 1 | 10 | After 3 chests opened | After 5 chests opened |
 
 ::: collapsed Show Map Formulas
@@ -102,7 +102,7 @@ Regarding map reveals:
 **Including the entrance tile*
 
 :::
-&nbsp;
+
 #### Flash Ability{#flash}
 
 After clearing a dungeon enough times, you gain the Flash ability, which reveals the contents of adjacent tiles before you explore them.
