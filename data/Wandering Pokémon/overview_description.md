@@ -1,32 +1,41 @@
-A Farm with at least one fully ripe [Berry](#!Berries) has a small chance to attract Wandering Pokémon that stay on the field until captured by the player or [[Farm Hands]]. The Wandering Pokémon must be interacted with to have a chance of catching it.  Some Wanderers are attracted to all Berries, while others are picky and will only appear on specific ones.  Certain Berries attract rare Pokémon that can be used strategically to complete a region's Pokédex.
+#### Jump to:
+* [Attracting Wanderers](#attracting)
+* [Catching Wanderers](#catching)
+* [Lists of Wandering Pokémon](#lists)
 
-#### Attracting
-The only requirement for getting a Wanderer is a fully mature Berry plant.   The base chance to encounter a Wandering Pokémon is 1/2000 every 1.5 seconds for each fully ripe Berry on the Farm. Which Wandering Pokémon is attracted is based on Berry type and the farthest region you have progressed to, with all valid options having an equal chance to be encountered.  If [[Items/Gooey Mulch]] is present on the plot, any berry or color specific Wanderers have their weighted chances doubled.
+Ripe [Berry](#!Berries) plants on the [[Farm]] have a chance to attract Wandering Pokémon (or Wanderers).
 
-Wandering Pokémon also have a Base 1/1024 chance to be shiny. Catching a shiny Wandering Pokémon when there is at least one open plot on the Farm plants a [[Berries/Starf]] Berry in that open plot.  This is affected by all the [[Shiny Chance]] boosting options.
+## Attracting Wanderers {#attracting}
+Only Berry plants at the ripe stage attract Wanderers. Each ripe Berry has a base chance of **1/2000 every 1.5 seconds** to attract a Wandering Pokémon.
 
-[[Berries/Roseli]] Berries have an Attract Aura that can multiplicatively increase this chance for all currently grown Berries on the Farm. The formula is:
+* [[Berries/Roseli]] auras increase the chance of Wanderers appearing for *all* Berries on the Farm. (See [Wandering Pokémon Farm Setups](#!Farm/Setups#wanderers))
 
-$$ \text{Encounter Chance} = \frac{(\text{Attract Aura} \times \text{Ripe Berries})}{2000}$$
 
-* [Roseli Farm Setups to attract Wanderers](#!Farm/Setups#wanderers)
+Some Pokémon are attracted to all Berries, while others are picky and will only appear on specific Berry types or specific Berry colors. Any Pokémon that *can* appear has an equal base chance to appear.
+* Applying [[Items/Gooey Mulch]] **doubles** the chance that a Berry-specific or color-specific Wanderer will appear (Note: It does not increase the chance of attracting wanderers, only the kind of Pokémon that appears). Gooey Mulch also increases the catch rate.
 
-#### Catching
-Catch attempts by the player or a Farm Hand set to Manage Wanderers will use the player's Poké Ball Filters. Interacting with Wandering Pokémon always awards Farm Points and catching additionally awards Dungeon Tokens. Wanderers will vanish five minutes after their Berry plant is harvested, during which they will fade flash.  Otherwise they will stay as long as their host Berry lives.
+The base chance for the Wandering Pokémon to be **shiny** is 1/1024. Catching a shiny Wanderer when there is at least one open plot on the Farm plants a [[Berries/Starf]] Berry in that open plot. This chance is affected by anything that affect [[Shiny Chance]].
 
-The Farm Point quantity depends on the farm points value and the growth time of the berry the Pokémon is attracted to. The exact formula is :
+## Catching Wanderers {#catching}
+To interact with a Wanderer, click on them. If your catch filters are setup to catch this Pokémon, you will attempt to catch the Pokémon (A spinning Poké Ball indicator will appear when using the main Farm window, but there is no such indicator in the small Farm module). Interacting with a Wanderer earns you [[Farm Points]], whether you catch it or not. Successfully capturing one will also earn you Dungeon Tokens.
+
+If the Berry is harvested or withers, the Wanderer will flee after a five minutes. Otherwise, they will stay as long as their host Berry lives.
+
+The amount of Farm Points awarded depends on the Farm Point harvest value and the growth time of the berry the Pokémon is attracted to. The amount of Dungeon Tokens awarded affected by the highest region the player stepped in and the native region of the Wandering Pokémon.
+
+::: collapsed Wanderer Reward Formulas
+
+Amount of [[Farm Points]]:
+
 $$ \text{Wanderer Farm Points} =  \frac{\text{Berry Farm Points}}{ 4 + \frac{\text{Berry Growth Time}} { 1800}} $$
 
-The Number of Dungeon Tokens equals that of a route in the highest region the player stepped in. Which route is based on the the native region of the wandering Pokémon : the higher the region the Pokémon is native to, the higher the route.
-
-The route is chosen using the following formula.
+Amount of [[Dungeon Tokens]] (DT) is based on the DT awarded on a random route in the highest region the player has unlocked, and is affected by any other multipliers that apply to DT:
 
 $$ \text{route} = \text{random route from}   ⌊\Bigg( (\text{totalroutes}-1) \times \frac{\text{pokemon region}}{\text{highest region}+2} \Bigg)⌋  \text{to}   ⌊\Bigg( (\text{totalroutes}-1) \times \frac{\text{pokemon region}+2}{\text{highest region}+2} \Bigg)⌋ $$
 
-Dungeon Tokens are obtained via the following formula.
-
-$$ \text{Dungeon Tokens} = \max\Bigg( 1, 6 \times (\frac{\text{route} \times 2}{\frac{2.8}{1 + \frac{\text{region}}{3}}})^{1.08}\Bigg) \times \text{Achievement Bonus} $$
-
+:::
+&nbsp;
+## Lists of Wandering Pokémon {#lists}
 ### Exclusive
 The following Pokémon can **only** be obtained from Wandering encounters:
 @[[Pokemon/Shuckle (Corked)]] @[[Pokemon/Detective Pikachu]] @[[Pokemon/Burmy (No Coat)]] @[[Pokemon/Snover (Berry)]] @[[Pokemon/Flabébé (Yellow)]] @[[Pokemon/Flabébé (Blue)]] @[[Pokemon/Oricorio (Pa'u)]] @[[Pokemon/Exposed Applin]] @[[Pokemon/Morpeko (Hangry)]]
