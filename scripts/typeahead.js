@@ -142,10 +142,16 @@ const searchOptions = [
     type: 'Quest Lines',
     page: q.name,
   })),
-  // Battle Cafe
+  // Battle Café
   {
     display: 'Battle Café',
-    type: 'Battle Cafe',
+    type: 'Battle Café',
+    page: '',
+  },
+  // Battle Café
+  {
+    display: 'Battle Café',
+    type: 'Battle Café',
     page: '',
   },
   // Vitamins
