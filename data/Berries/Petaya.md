@@ -120,8 +120,8 @@ Mutating a Petaya with Freeze Mulch makes the entire thing incredibly easy.  Wha
 | [[Berries/Kebia]] | 126 (optional) | 63 (optional) | 10:30:00 |
 | [[Berries/Kasib]] | 126 (optional) | 63 (optional) | 10:30:00 |
 
-In total 1,006 (or 1636 counting the optional 2 last berries) Freeze Mulches are needed to use this method.
-If using a maxed [[Oak Items/Sprinklotad]], this can be narrowed down to 508 (or 820 counting the optional 2 last berries) Freeze Mulches.
+In total 1,006 (or 1258 counting the optional 2 last berries using the classic four Petaya setup, 1636 using the two spot Petaya setup) Freeze Mulches are needed to use this method.
+If using a maxed [[Oak Items/Sprinklotad]], this can be narrowed down to 508 (or 634 counting the optional 2 last berries using the classic four Petaya setup, 820 using the two spot Petaya setup) Freeze Mulches.
 Remember to check the [critical information](#critical-info) section once the setup is fully ripe!
 
 ### Timing Table {#timing-table}
