@@ -19,39 +19,40 @@ Item prices increase with repeat purchases and decrease by harvesting Berries on
 
 #### Consumable Farming Tools
 | Name {.col-2}| Base Price {.col-1}| Description {.col-5}| Available Locations {.col-1}|
-|:-------- | :--------: |:--------| :--------|
-|[[File:Boost_Mulch.png\|32px]]  [[Items/Boost Mulch]]  | 50 [[File:currency/farmPoint.svg\|24px]] | Increases Berry growth rate by 50% when applied to a plot occupied by a Berry plant. | @[[Towns/Goldenrod City]] @[[Towns/Mauville City]] @[[Towns/Hearthome City]] @[[Towns/Driftveil City]]
-|[[File:Rich_Mulch.png\|32px]]  [[Items/Rich Mulch]]  | 100 [[File:currency/farmPoint.svg\|24px]] | Doubles the amount of berries gained from harvesting a ripe Berry plant. Can be applied immediately prior to harvesting a plant to gain the full doubling boost. Doubles replant chance if berry withers while mulched.  | @[[Towns/Goldenrod City]] @[[Towns/Mauville City]] @[[Towns/Hearthome City]] @[[Towns/Driftveil City]]
-|[[File:Surprise_Mulch.png\|32px]]  [[Items/Surprise Mulch]] | 150 [[File:currency/farmPoint.svg\|24px]]  | Increases the chance of Berry mutations by 50% on any plot it is applied to (can be an empty or occupied plot). | @[[Towns/Goldenrod City]] @[[Towns/Mauville City]] @[[Towns/Hearthome City]] @[[Towns/Driftveil City]]
-|[[File:Amaze_Mulch.png\|32px]]  [[Items/Amaze Mulch]] | 200 [[File:currency/farmPoint.svg\|24px]]  | Increases the growth and mutation rates by 25% and the harvest rate and replant chance  by 50%.  | @[[Towns/Goldenrod City]] @[[Towns/Mauville City]] @[[Towns/Hearthome City]] @[[Towns/Driftveil City]]
-|[[File:Freeze_Mulch.png\|32px]]  [[Items/Freeze Mulch]] | 350 [[File:currency/farmPoint.svg\|24px]]  | Pauses Berry growth and auras. (Note: Does not prevent mutations) | @[[Towns/Goldenrod City]] @[[Towns/Mauville City]] @[[Towns/Hearthome City]] @[[Towns/Driftveil City]] @[[Towns/Pinkan Pokémon Reserve]] @[[Towns/Secret Berry Shop]]
-|[[File:Gooey_Mulch.png\|32px]]  [[Items/Gooey Mulch]] | 100 [[File:currency/farmPoint.svg\|24px]]  | Improves the catch rate of wandering Pokémon on mulched plot by 10%. Also increases the weights of berry or color specific wandering Pokémon, making them more likely to appear.  | @[[Towns/Driftveil City]] @[[Towns/Pinkan Pokémon Reserve]] @[[Towns/Secret Berry Shop]]
-|[[File:Berry_Shovel.png\|32px]]  [[Items/Berry Shovel]] | 300 [[File:currency/farmPoint.svg\|24px]]  | Clears a Berry plant of any stage from a plot instantly. (Note: If the Berry plant is at the ripe stage, it will be harvested and the shovel will not be consumed.) | @[[Towns/Goldenrod City]] @[[Towns/Mauville City]] @[[Towns/Hearthome City]] @[[Towns/Driftveil City]] @[[Towns/Pinkan Pokémon Reserve]] @[[Towns/Secret Berry Shop]]
-|[[File:Mulch_Shovel.png\|32px]]  [[Items/Mulch Shovel]] | 300 [[File:currency/farmPoint.svg\|24px]]  | Removes Mulch from a plot, regardless of how much time remains. | @[[Towns/Goldenrod City]] @[[Towns/Mauville City]] @[[Towns/Hearthome City]] @[[Towns/Driftveil City]] @[[Towns/Pinkan Pokémon Reserve]] @[[Towns/Secret Berry Shop]]
+|:-------- | :-------- |:--------| :--------|
+|[[File:Boost_Mulch.png\|32px]]  [[Items/Boost Mulch]]  | [[File:currency/farmPoint.svg\|24px]]  50 | Increases Berry growth rate by 50% when applied to a plot occupied by a Berry plant. | @[[Towns/Goldenrod City]] @[[Towns/Mauville City]] @[[Towns/Hearthome City]] @[[Towns/Driftveil City]]
+|[[File:Rich_Mulch.png\|32px]]  [[Items/Rich Mulch]]  | [[File:currency/farmPoint.svg\|24px]]  100 | Doubles the amount of berries gained from harvesting a ripe Berry plant. Can be applied immediately prior to harvesting a plant to gain the full doubling boost. Doubles replant chance if berry withers while mulched.  | @[[Towns/Goldenrod City]] @[[Towns/Mauville City]] @[[Towns/Hearthome City]] @[[Towns/Driftveil City]]
+|[[File:Surprise_Mulch.png\|32px]]  [[Items/Surprise Mulch]] | [[File:currency/farmPoint.svg\|24px]]  150 | Increases the chance of Berry mutations by 50% on any plot it is applied to (can be an empty or occupied plot). | @[[Towns/Goldenrod City]] @[[Towns/Mauville City]] @[[Towns/Hearthome City]] @[[Towns/Driftveil City]]
+|[[File:Amaze_Mulch.png\|32px]]  [[Items/Amaze Mulch]] | [[File:currency/farmPoint.svg\|24px]] 200 | Increases the growth and mutation rates by 25% and the harvest rate and replant chance  by 50%.  | @[[Towns/Goldenrod City]] @[[Towns/Mauville City]] @[[Towns/Hearthome City]] @[[Towns/Driftveil City]]
+|[[File:Freeze_Mulch.png\|32px]]  [[Items/Freeze Mulch]] | [[File:currency/farmPoint.svg\|24px]] 350 | Pauses Berry growth and auras. (Note: Does not prevent mutations) | @[[Towns/Goldenrod City]] @[[Towns/Mauville City]] @[[Towns/Hearthome City]] @[[Towns/Driftveil City]] @[[Towns/Pinkan Pokémon Reserve]] @[[Towns/Secret Berry Shop]]
+|[[File:Gooey_Mulch.png\|32px]]  [[Items/Gooey Mulch]] | [[File:currency/farmPoint.svg\|24px]]  100| Improves the catch rate of wandering Pokémon on mulched plot by 10%. Also increases the weights of berry or color specific wandering Pokémon, making them more likely to appear.  | @[[Towns/Driftveil City]] @[[Towns/Pinkan Pokémon Reserve]] @[[Towns/Secret Berry Shop]]
+|[[File:Berry_Shovel.png\|32px]]  [[Items/Berry Shovel]] | [[File:currency/farmPoint.svg\|24px]]  300 | Clears a Berry plant of any stage from a plot instantly. (Note: If the Berry plant is at the ripe stage, it will be harvested and the shovel will not be consumed.) | @[[Towns/Goldenrod City]] @[[Towns/Mauville City]] @[[Towns/Hearthome City]] @[[Towns/Driftveil City]] @[[Towns/Pinkan Pokémon Reserve]] @[[Towns/Secret Berry Shop]]
+|[[File:Mulch_Shovel.png\|32px]]  [[Items/Mulch Shovel]] | [[File:currency/farmPoint.svg\|24px]] 300 | Removes Mulch from a plot, regardless of how much time remains. | @[[Towns/Goldenrod City]] @[[Towns/Mauville City]] @[[Towns/Hearthome City]] @[[Towns/Driftveil City]] @[[Towns/Pinkan Pokémon Reserve]] @[[Towns/Secret Berry Shop]]
 
 #### Oak Items {.mt-3}
 | Name {.col-2}| Base Price {.col-1}| Description {.col-5}| Available Locations {.col-1}|
-|:-------- | :--------: |:--------| :--------|
-| [[File:Squirtbottle.png\|32px]] [[Oak Items/Squirtbottle]] | 5,000 [[File:currency/farmPoint.svg\|24px]]  | One-time purchase. Equip to increase Berry mutations. | @[[Towns/Goldenrod City]] |
-| [[File:Sprinklotad.png\|32px]] [[Oak Items/Sprinklotad]] | 10,000 [[File:currency/farmPoint.svg\|24px]]  | One-time purchase. Equip to increase duration of mulch. | @[[Towns/Mauville City]] |
+|:-------- | :-------- |:--------| :--------|
+| [[File:Squirtbottle.png\|32px]] [[Oak Items/Squirtbottle]] | [[File:currency/farmPoint.svg\|24px]] 5,000 | One-time purchase. Equip to increase Berry mutations. | @[[Towns/Goldenrod City]] |
+| [[File:Sprinklotad.png\|32px]] [[Oak Items/Sprinklotad]] | [[File:currency/farmPoint.svg\|24px]] 10,000 | One-time purchase. Equip to increase duration of mulch. | @[[Towns/Mauville City]] |
 
 #### Helpers {.mt-3}
 | Name {.col-2}| Base Price {.col-1}| Description {.col-5}| Available Locations {.col-1}|
-|:-------- | :--------: |:--------| :--------|
-| [[File:trainer-85.png\|25px]] [[Items/Farm Hand Bailey]] | 5,000 [[File:currency/farmPoint.svg\|24px]]  | One-time purchase. | @[[Towns/Goldenrod City]] |
-| [[File:trainer-10.png\|25px]] [[Items/Farm Hand Kerry]] | 10,000 [[File:currency/farmPoint.svg\|24px]]  | One-time purchase. | @[[Towns/Mauville City]] |
-| [[File:trainer-55.png\|25px]] [[Items/Farm Hand Riley]] | 10,000 [[File:currency/farmPoint.svg\|24px]]  | One-time purchase. | @[[Towns/Hearthome City]] |
-| [[File:trainer-14.png\|25px]] [[Items/Hatchery Helper Cameron]] | 10,000 [[File:currency/farmPoint.svg\|24px]]  | One-time purchase. | @[[Towns/Mauville City]] |
+|:-------- | :-------- |:--------| :--------|
+| [[File:trainer-85.png\|25px]] [[Items/Farm Hand Bailey]] | [[File:currency/farmPoint.svg\|24px]] 5,000 | One-time purchase. | @[[Towns/Goldenrod City]] |
+| [[File:trainer-10.png\|25px]] [[Items/Farm Hand Kerry]] | [[File:currency/farmPoint.svg\|24px]] 10,000 | One-time purchase. | @[[Towns/Mauville City]] |
+| [[File:trainer-55.png\|25px]] [[Items/Farm Hand Riley]] | [[File:currency/farmPoint.svg\|24px]] 10,000 | One-time purchase. | @[[Towns/Hearthome City]] |
+| [[File:trainer-14.png\|25px]] [[Items/Hatchery Helper Cameron]] | [[File:currency/farmPoint.svg\|24px]] 10,000 | One-time purchase. | @[[Towns/Mauville City]] |
 
 #### Berries (Oak Item Challenge) {.mt-3}
 These Berries can only be purchased if you have the Oak Item Challenge enabled, as these berries typically require Oak Items to mutate.
 
 | Name {.col-2}| Base Price {.col-1}| Description {.col-5}| Available Locations {.col-1}|
-|:-------- | :--------: |:--------| :--------|
-| [[File:items/berry/Chople.png\|25px]] [[Berries/Chople]] | 10,000 [[File:currency/farmPoint.svg\|24px]]  | One-time purchase. Requires Spelon unlocked. | @[[Towns/Goldenrod City]] |
-| [[File:items/berry/Kebia.png\|25px]] [[Berries/Kebia]] | 10,000 [[File:currency/farmPoint.svg\|24px]]  | One-time purchase. Requires Pamtre unlocked. | @[[Towns/Goldenrod City]] |
-| [[File:items/berry/Shuca.png\|25px]] [[Berries/Shuca]] | 10,000 [[File:currency/farmPoint.svg\|24px]]  | One-time purchase. Requires Watmel unlocked. | @[[Towns/Goldenrod City]] |
-| [[File:items/berry/Charti.png\|25px]] [[Berries/Charti]] | 10,000 [[File:currency/farmPoint.svg\|24px]]  | One-time purchase. Requires Cornn unlocked. | @[[Towns/Goldenrod City]] |
+|:-------- | :-------- |:--------| :--------|
+| [[File:items/berry/Chople.png\|25px]] [[Berries/Chople]] | [[File:currency/farmPoint.svg\|24px]] 10,000 | One-time purchase. Requires Spelon unlocked. | @[[Towns/Goldenrod City]] |
+| [[File:items/berry/Kebia.png\|25px]] [[Berries/Kebia]] | [[File:currency/farmPoint.svg\|24px]] 10,000 | One-time purchase. Requires Pamtre unlocked. | @[[Towns/Goldenrod City]] |
+| [[File:items/berry/Shuca.png\|25px]] [[Berries/Shuca]] | [[File:currency/farmPoint.svg\|24px]] 10,000 | One-time purchase. Requires Watmel unlocked. | @[[Towns/Goldenrod City]] |
+| [[File:items/berry/Charti.png\|25px]] [[Berries/Charti]] | [[File:currency/farmPoint.svg\|24px]] 10,000 | One-time purchase. Requires Cornn unlocked. | @[[Towns/Goldenrod City]] |
+
 
 ---
 
