@@ -63,8 +63,7 @@ Some Berry plants emit special auras at Taller or later stages that can affect g
 ----
 
 ## Farm Plots{#plots}
-The Farm starts with one free plot. More farm plots can be purchased using Berries and Farm Points, up to a total of 25 plots.
-
+The Farm starts with one free plot. More farm plots can be purchased using Berries and Farm Points, up to a total of 25 plots (requires **51,250 [[File:farmPoint.svg\|25px]]** total).
 
 #### Cost of Farm Plots
 |:---:|:---:|:---:|:---:|:---:|
