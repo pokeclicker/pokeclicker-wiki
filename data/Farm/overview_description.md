@@ -1,8 +1,6 @@
 #### Jump to:
 * [Growing Berries](#growing)
 * [Uses for Berry Plants](#berryuses)
-    * [Attracting Wandering Pokémon](#wanderers)
-    * [Berry Auras](#auras)
 * [Farm Plots](#plots)
 * [Farming Items](#farmitems)
     * [Consumable Tools](#farmtools)
@@ -15,7 +13,7 @@
 * [[Farm Points]]
 * [[Farm/Setups]]
 
-In the Farm, you can grow different types of [[Berries]], which can be [traded](#!Berries#trades) for useful items and unique Pokémon and earn you [[Farm Points]] [[File:farmPoint.svg|25px]]. Berry plants also attract Wandering Pokémon, create helpful auras, and more.
+In the Farm, you can grow different types of [[Berries]], which can be [traded](#!Berries#trades) for useful items and unique Pokémon and earn you [[Farm Points]] [[File:farmPoint.svg|25px]]. Berry plants also attract [[Wandering Pokémon]], create helpful [Auras](#!Berries/#aura), and more.
 
 The Farm is unlocked after reaching [[Routes/Kanto Route 11]] and obtaining the [Wailmer Pail](#!Key_Items).
 
@@ -27,39 +25,23 @@ The Farm is unlocked after reaching [[Routes/Kanto Route 11]] and obtaining the 
 #### Acquiring Berries
 The first eight Gen 1 Berries are dropped by wild Pokémon. More Berries can be found in dungeon chests and later regions, but most Berries will be unlocked via mutation.
 
-#### Planting Berries
-Plant berries by selecting the desired berry in the left-hand column and clicking on plots in the field on the right. Different Berries have different growth times, which can be [modified](#!Berries#stats). Berry plants grow in **four stages** (Sprout → Taller → Bloom → Ripe).
+#### Planting and Harvesting
+1. Plant berries by selecting the desired berry in the left-hand column and clicking on plots in the field on the right. Berry plants grow in **four stages** (Sprout → Taller → Bloom → Ripe).
+2. Once ripe, Berry plants can be harvested by clicking on them. Harvesting berries will also earn you [[Farm Points]] (the amount of berries does not affect Farm Point gain). Berry plants will always yield at least 1 Berry, even if their harvest amount is less than 1.
+3. If left unharvested, ripe Berry plants will eventually **wither**, dropping half of the expected Berries.
+4. If it withers, Berry plants have a chance to **replant** themselves, spawning a plant of the same Berry in that plot. Farm Points are not gained when Berries wither or get replanted.
 
-#### Harvesting Berries
-Once ripe, Berry plants can be harvested by clicking on them. Different Berry types yield different harvest amounts, which can be [modified](#!Berries#stats). Harvesting berries will also earn you [[Farm Points]] (the amount of berries does not affect Farm Point gain). Berry plants will always yield at least 1 Berry, even if their harvest amount is less than 1.
-
-If left unharvested, ripe Berry plants will eventually **wither**, dropping half of the expected Berries. There is also a chance they will **replant** themselves, spawning a plant of the same berry in that plot. Farm Points are not gained when Berries wither or get replanted. Replant rates can be [modified](#!Berries#stats).
+Growth time, harvest amounts, wither time, and replant rates can be [modified](#!Berries#stats).
 
 #### Mutating Berries
 *→ See: [Mutations](#!Berries#mutations)*
 
-Berries planted in certain configurations can mutate into new Berry species. The Kanto Berry Master in [[Towns/Cerulean City]] gives hints for how to mutate new Berries.
+Berries planted in certain configurations can mutate into new Berry species.
 
 #### Other tools and guides:
 - [[Farm Simulator]]: Wiki tool for simulating various Farm conditions such as Berry growth, auras, and mutations.
 - [Walkthrough for unlocking #9 Persim to #25 Grepa](https://docs.google.com/document/d/1TE5cAKSlA7TAliA001_mIiO1odZ6e4yUEMre0GBW1to/edit?usp=sharing)  (external link): If you have not yet unlocked all the plots on the Farm, this guide will provide optimized planting formations to mutate those berries within the limited available farm plots.
 - [[Farm/Setups]]: Useful Farm Setups using Berry auras to increase harvest, egg steps, shiny chances, and more.
-
----
-
-## Uses for Berry Plants {#berryuses}
-Berry plants can be used for more than just acquiring more Berries and Farm Points.
-
-#### Attracting Wandering Pokémon{#wanderers}
-*→ See: [Wandering Pokémon](#!Wandering_Pokémon)*
-
-Ripe Berry plants can attract wild Wandering Pokémon that you can capture. Interacting with a Wanderer earns you Farm Points, whether you catch it or not. Successfully capturing one will also earn you Dungeon Tokens.
-
-#### Berry Auras{#auras}
-*→ See: [Auras](#!Berries/#aura)*
-
-Some Berry plants emit special auras at Taller or later stages that can affect gameplay and other plants. Aura effects are shown when hovering over the Berry plant or affected plots.
-
 ----
 
 ## Farm Plots{#plots}
