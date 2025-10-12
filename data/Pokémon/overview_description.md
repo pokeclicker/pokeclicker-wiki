@@ -20,6 +20,7 @@ Pokémon are your partners in this adventure and your main source of attack. Cur
 - **Base attack:** Used to calculate attack bonus. This value cannot be changed.
 - **Attack (or Current Attack):** Scales linearly from Level 0 to Level 100. The Pokémon's attack at Level 100 is their maximum attack.
     - Breed Pokémon in the [[Hatchery]] to increase their maximum attack.
+    - Attack is affected by [EV Bonus](#!Pokérus#EV), [Shadow](#!Shadow_Pokémon) states, and attack-increasing held items.
 - **Attack Bonus:** The amount of attack that a Pokémon gains each time it is bred.
     - The base attack bonus is **25% of the base attack**. Current attack never affects attack bonus.
     - Attack bonus can be increased using [[Items/Protein]] and [[Items/Calcium]], at the cost of increasing egg steps.
