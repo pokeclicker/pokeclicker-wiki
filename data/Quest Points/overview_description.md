@@ -1,13 +1,54 @@
-Quest Points [[File:questPoint.svg|25px]] are the green currency earned by completing Quests.
-Quest Points can be obtained by accepting Quests in the Quests module and then completing the assigned task.
-The Player gets 1 quest slot after completing the Tutorial. After that at level 5, 10, and 15, the 2nd, 3rd and 4th quest slot will open.
-Each time you complete a quest, the experience added to your Quest Level follows this formula:
+###### Currency: [[File:money.svg|18px]] [[Pokédollars]] • [[File:dungeonToken.svg|18px]] [[Dungeon Tokens]] • [[File:questPoint.svg|18px]] **Quest Points** • [[File:farmPoint.svg|18px]] [[Farm Points]] • [[File:diamond.svg|18px]]  [[Diamonds]] • [[File:battlePoint.svg|18px]] [[Battle Points]] {.alert .alert-light}
 
-$QuestExperience=100 + \frac{QPReward}{10}$
+#### Jump to:
+* [Quests](#quests)
+* [Uses](#uses)
+
+Quest Points are green currency earned by completing regular Quests in the Quest module.
 
 ---
 
-## Uses
+## Quests {#quests}
+*For multi-step story quests, see [[Quest Lines]]. Quest Lines do not award Quest Points.*
+
+The quest module displays 10 quests that you can work toward. Completing all the quests on the list awards bonus Quest Points. You can work on multiple quests at the same time, limited by your quest slots. You gain additional quest slots at Quest Level 5, 10, and 15.
+
+Refreshing the quest list costs Pokédollars. You gain a free refresh daily and upon leveling your Quest Level.
+
+#### Quest Experience and Level
+Each time you complete a quest, you gain Quest experience according to this formula:
+
+$QuestExperience=100 + \frac{QPReward}{10}$ {.overflow-auto .text-center}
+
+Obtaining [[Items/Medichamite]] requires completing quests at Quest Level 16 or higher.
+
+#### Types of Quests
+Quest Points are awarded based on the type of quest, with a random 0.9x-1.1x variation to rewards.
+Types of Quests | Description
+--- | ---
+Defeat Pokémon on [[Routes]] | Defeat 100-500 Pokémon on an unlocked Route
+Defeat [[Dungeons]] | Defeat an unlocked Dungeon 5-20 times
+Defeat [[Gyms]] | Defeat an unlocked Gym 5-20 times
+Capture or Hatch Pokémon | Capture or Hatch 50-250 Pokémon
+Capture or Hatch Pokémon of Type | Catch or Hatch 50-250 Pokémon of a certain Type
+Capture or Hatch a [Shiny](!#Shiny_Chance) | Catch or Hatch 1 Shiny Pokémon
+Catch [[Shadow Pokémon]] | Catch 1-5 Shadow Pokémon
+Hatch Eggs | Breed Pokémon in the [[Hatchery]] (amount varies based on highest region)
+Gain Currency | Gain [[Pokédollars]], [[Dungeon Tokens]], or [[Farm Points]] (amount varies based on highest region)
+Gain [[Gems]] | Gain 200-600 Gems
+Use [[Poké Balls]] | Use 100-500 Poké Balls, Great Balls, or Ultra Balls
+Equip the [[Items/Magic Ball]] and Capture Pokémon | Catch 100-500 Pokémon while equipping Magic Ball
+Equip [[Items/EXP Share]] and Defeat Pokémon | Defeat 100-500 Pokémon while equipping EXP Share
+Equip [[Items/Amulet Coin]] and Earn Pokédollars | Earn bonus Pokédollars 100-500 times while equipping Amulet Coin
+Harvest Berries | Harvest Berries at the [[Farm]] (amount varies based on Berry growth time)
+Mine Items | Collect 3-15 items from the [[Underground]] Mines
+Mine Layers | Clear 1-3 layers in the Underground
+Clear [[Battle Frontier]] Stages | Clear 50-200 stages in the Battle Frontier
+
+
+---
+
+## Uses {#uses}
 Quest Points can be used to purchase the following:
 
 #### Key Items
