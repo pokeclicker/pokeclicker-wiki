@@ -1,4 +1,3 @@
-
 ----
 
 ## Berry Auras {#aura}
@@ -38,24 +37,11 @@ Aura | Effect | Range of Effect | Notes | Berries that Emit Aura
 #### Berry Masters {#berrymaster}
 *→ See: [[Berry Masters]]*
 
-In addition to selling farming supplies, Berry Masters have a rotating selection of Berry trades for useful items. To see what they'll have in stock and price forecasts, consult the [[Daily Deals]] page or the [PokéClicker Companion](https://companion.pokeclicker.com/#!Forecast/Berry/PinkanPok%C3%A9monReserve).
+In addition to selling farming supplies, Berry Masters have a rotating selection of Berry trades for useful items and Pokémon. To see what they'll have in stock and price forecasts, consult the [[Daily Deals]] page or the [PokéClicker Companion](https://companion.pokeclicker.com/#!Forecast/Berry/PinkanPok%C3%A9monReserve).
+
+Berry Masters will only ever request berries with a Growth Time of under 24 hours.
 
 #### Battle Café {#battlecafe}
 *→ See: [Battle Café](#!Battle_Cafe)*
 
 At the Battle Café in Galar, you can spin [[Pokemon/Milcery]] with Berries to have them evolve into various forms of **Alcremie**. This is the only way to acquire Alcremies.
-
-#### Trades for Pokémon {#pokemontrades}
-Most Pokémon listed below can only be acquired via Berry trades.
-
-| Region | Shop | Pokémon | Requests |
-| :--- | :--- | :--- | :--- |
-| Kanto - Sevii 4567 | [[Towns/Pinkan Pokémon Reserve]] | [[Pokemon/Pinkan Oddish]] | x20-40 [[Berries/Pinkan]] Berries |
-| Kanto - Sevii 4567 | [[Towns/Pinkan Pokémon Reserve]]| [[Pokemon/Pinkan Geodude]] | x20-40 [[Berries/Pinkan]] Berries |
-| Kanto - Sevii 4567 | [[Towns/Pinkan Pokémon Reserve]]| [[Pokemon/Pinkan Arbok]] | x40-60 [[Berries/Pinkan]] Berries |
-| Kanto - Sevii 4567 | [[Towns/Pinkan Pokémon Reserve]]| [[Pokemon/Pinkan Poliwhirl]] | x40-60 [[Berries/Pinkan]] Berries |
-| Kanto - Sevii 4567 | [[Towns/Pinkan Pokémon Reserve]]| [[Pokemon/Pinkan Weezing]] | x80-100 [[Berries/Pinkan]] Berries |
-| Kanto - Sevii 4567 | [[Towns/Pinkan Pokémon Reserve]]| [[Pokemon/Pinkan Scyther]]* | x80-100 [[Berries/Pinkan]] Berries |
-| Kanto - Sevii 4567 | [[Towns/Pinkan Pokémon Reserve]]| [[Pokemon/Pinkan Electabuzz]] | x80-100 [[Berries/Pinkan]] Berries |
-| Sinnoh | [[Towns/Secret Berry Shop]] | [[Pokemon/Grotle (Acorn)]] | x80-100 [[Berries/Snover]] Berries |
-**Can also be obtained as a [[Wandering Pokémon]]*
