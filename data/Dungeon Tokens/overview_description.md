@@ -1,8 +1,8 @@
 ###### Currency: [[File:money.svg|18px]] [[Pokédollars]] • [[File:dungeonToken.svg|18px]] **Dungeon Tokens** • [[File:questPoint.svg|18px]] [[Quest Points]] • [[File:farmPoint.svg|18px]] [[Farm Points]] • [[File:diamond.svg|18px]]  [[Diamonds]] • [[File:battlePoint.svg|18px]] [[Battle Points]] {.alert .alert-light}
 
 #### Jump to:
-* [Uses](#uses)
 * [Optimal Farming Routes](#optimalroutes)
+* [Uses](#uses)
 
 Dungeon Tokens (DT) are blue currency earned when a Pokémon is caught. The amount is based on region and route difficulty.
 
@@ -28,16 +28,6 @@ $\text{Average Dungeon Token Per Second} = \large \frac{\text{Dungeon Tokens} \t
 | ----- | ----- |
 | [Achievement](#!Achievements) Bonus % | Variable |
 | [[File:items/battleItem/Token_collector.png\|24px]] [[Items/Token Collector]] | 1.5x |
-
----
-
-## Uses {#uses}
-#### General
-* Entering [[Dungeons]]. For a list of dungeons and their fees, see [here](#!Dungeons#list).
-* Hatching costs for Hatchery Helpers [[Hatchery_Helpers/Parker]] and [[Hatchery_Helpers/Dakota]].
-
-#### Purchases
-See the bottom of this page.
 
 ---
 
