@@ -1,11 +1,17 @@
 #### Jump To:
 * [Stats](#stats)
+* [States](#status)
+    * [Shiny](#shiny)
+    * [Shadow](#shadow)
+* [Alternate Forms](#altforms)
 * [Lists of Pokémon](#listsofpokemon)
 #### See Also:
 * [Pokérus/EVs](#!Pokérus)
 * [[Hatchery]]
 
 Pokémon are your partners in this adventure and your main source of attack. Currently the game has **1,402** different Pokémon forms. Most of them based on main games, with 33 coming from side games, 53 coming from anime and films, and 18 custom forms.
+
+----
 
 ## Stats {#stats}
 
@@ -41,8 +47,6 @@ The formula for a Pokémon’s base attack is loosely derived from Pokemon Go’
 * This value is floored.
 * This formula means that HP and attack values are more significant than defense or speed.
 :::
-# {.mt-3}
-
 ::: collapsed Formulas for Base Egg Steps
 The egg cycle value for each species begins with the canonical value, with alternate forms using the same value as the base form, and it's subject to a few modifiers:
 
@@ -60,13 +64,39 @@ There are exceptions to this rule:
 
 ----
 
-## Lists of Pokémon {#listsofpokemon}
+## States {#states}
+Pokémon can have various states that apply to the base Pokémon. They are not considered alternate forms.
 
-- [[Alternate Pokémon Forms]]: Alternate forms available in the game, including Regional forms, and the corresponding base Pokémon.
-- [[Mega Pokémon]]: Pokémon that can Mega Evolve and the requirements necessary to do so.
+#### Shiny {#shiny}
+*→ See: [[Shiny Chance]]*
+
+Pokémon can be encountered or hatched in a shiny form. Shiny Pokémon in your party do not have any stat differences, but catching a Pokémon in a shiny encounter provides more EV gains and hatches that result in a shiny Pokémon provide more attack gains.
+
+The number of Shiny Pokémon you own contributes toward [[Click Attack]] and various [[Achievements]].
+
+#### Shadow {#shadow}
+*→ See: [[Shadow Pokémon]]*
+
+Shadow Pokémon can be encountered and caught in Orre. Shadow Pokémon and their purified forms have modifiers to their attack stat.
+
+The number of purified Shadow Pokémon you own contributes toward [[Click Attack]] and various [[Achievements]].
+
+---
+
+## Alternate Forms {#altforms}
+*→ See: [[Alternate Pokémon Forms]], [[Mega Pokémon]]*
+
+To complete the Pokédex, you only need to capture **one form** of a particular Pokémon.
+
+For example, capturing [[Pokémon/Bulbasaur]] OR [[Pokémon/Spooky Bulbasaur]] OR [[Pokémon/Bulbasaur (Clone)]] will count as **[[Pokémon/Bulbasaur]]** for Pokédex completion.
+
+This applies to Pokédex achievements as well. For example, a shiny [[Pokémon/Mega Charizard X]] will count as a shiny [[Pokémon/Charizard]] when working toward the Kanto Shiny Pokédex achievements.
+
+----
+
+## Other Lists of Pokémon {#listsofpokemon}
+
 - [[Baby Pokémon]]: Baby Pokémon and the Region needed to acquire them.
-- [[Wandering Pokémon]]: Pokémon that can wander onto the Farm.
 - [[Roaming Pokémon]]: Rare Pokémon that can appear in any route of any given Region.
-- [[Shadow Pokémon]]: A form of Pokémon available in the Orre sub-region.
 
 ### Full List
