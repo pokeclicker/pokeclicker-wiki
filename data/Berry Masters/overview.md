@@ -53,7 +53,11 @@ These Berries can only be purchased if you have the Oak Item Challenge enabled, 
 | [[File:items/berry/Shuca.png\|25px]] [[Berries/Shuca]] | [[File:currency/farmPoint.svg\|24px]] 10,000 | One-time purchase. Requires Watmel unlocked. | @[[Towns/Goldenrod City]] |
 | [[File:items/berry/Charti.png\|25px]] [[Berries/Charti]] | [[File:currency/farmPoint.svg\|24px]] 10,000 | One-time purchase. Requires Cornn unlocked. | @[[Towns/Goldenrod City]] |
 
+#### Other {.mt-3}
 
+| Name {.col-2}| Base Price {.col-1}| Description {.col-5}| Available Locations {.col-1}|
+|:-------- | :-------- |:--------| :--------|
+[[File:Gracidea.png\|25px]] [[Items/Gracidea]] | [[File:farmPoint.svg\|25px]] 200,000  | Held Item. Raises the attack of Shaymin by 50%. Required to evolve [[Pokémon/Shaymin (Land)]] into [[Pokémon/Shaymin (Sky)]] | @[[Towns/Hearthome City]] |
 ---
 
 ## Berry Trades {#trades}
