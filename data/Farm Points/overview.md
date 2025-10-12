@@ -1,3 +1,4 @@
+
 ---
 
 ## Uses {#uses}
@@ -21,5 +22,3 @@ Name {.col-1}| Base Price{.col-1}| Description/Notes {.col-3}| Region {.col-1}|
 :--- | :--- | :--- | :---
 [[File:Ground_Memory_Silvally.png\|25px]] [[Items/Ground Memory]] | [[File:farmPoint.svg\|25px]] 200,000 | Required for [[#!Quest Lines/Typing some Memories]] Quest Line | Alola |
 [[File:Masterball.png\|25px]] [[Items/Master Ball]] | [[File:farmPoint.svg\|25px]] 3,000-300,000 | Price increases permanently with each purchase. Sold in each region's Pokémon League. | All
-
----
