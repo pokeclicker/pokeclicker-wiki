@@ -6,9 +6,7 @@
 * [Berry List](#list)
 * [Auras](#aura)
 * [Using and Trading Berries](#trades)
-    * [Berry Masters](#berrymaster)
-    * [Battle Café](#battlecafe)
-    * [Trades for Pokémon](#pokemontrades)
+
 #### See also:
 * [[Farm]]
 * [[Farm Points]]
