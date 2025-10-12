@@ -20,7 +20,7 @@ To visit another region, you must first unlock the **dock** in the region that y
 Docks in subregions are located in the first town you visit and are automatically unlocked.
 
 #### Unlocking New Regions {#unlock}
-Unlocking new regions requires defeating the region's League Champion and, if the Pokédex [Challenge Mode](#!Challenge_Modes) is enabled, catching all the Pokémon in the region's Pokédex. Once you become Champion, all missing regional Pokémon will automatically show up in your Pokédex. *Note: Only certain Pokémon may count toward the regional Pokédex. It does not necessarily include all Pokémon that can be acquired in a region.*
+Unlocking new regions requires defeating the region's League Champion and, if the Pokédex [Challenge Mode](#!Challenge_Modes) is enabled, catching all the Pokémon in the region's Pokédex. Once you become Champion, all missing regional Pokémon will automatically show up in your Pokédex.
 
 **With every region unlocked:**
 - Your Pokémon can use 5 more [[Vitamins]].
