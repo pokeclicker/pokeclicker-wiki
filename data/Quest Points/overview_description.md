@@ -117,7 +117,7 @@ Pokémon | Cost | Description/Notes | Region |
 [[File:Dracovish.png\|25px]] [[Pokémon/Dracovish]] | [[File:questPoint.svg\|25px]] 25,000 | Also requires [[File:Fossilized Drake.png\|25px]] Fossilized Drake and [[File:Fossilized Fish.png\|25px]] Fossilized Fish. Only repeatable way to obtain Dracovish. | Galar |
 [[File:Arctozolt.png\|25px]] [[Pokémon/Arctozolt]] | [[File:questPoint.svg\|25px]] 25,000 | Also requires [[File:Fossilized Dino.png\|25px]] Fossilized Dino and [[File:Fossilized Bird.png\|25px]] Fossilized Bird. Only repeatable way to obtain Arctozolt. | Galar |
 [[File:Arctovish.png\|25px]] [[Pokémon/Arctovish]] | [[File:questPoint.svg\|25px]] 25,000 | Also requires [[File:Fossilized Dino.png\|25px]] Fossilized Dino and [[File:Fossilized Fish.png\|25px]] Fossilized Fish. Only repeatable way to obtain Arctovish. | Galar |
-[[File:Zarude (Dada).png\|25px]] [[Pokémon/Zarude (Dada)]] | [[File:questPoint.svg\|25px]] 500,000 | Only repeatable way to obtain Zarude (Dada). | Alola |
+[[File:Zarude (Dada).png\|25px]] [[Pokémon/Zarude (Dada)]] | [[File:questPoint.svg\|25px]] 500,000 | Only repeatable way to obtain Zarude (Dada). | Galar |
 
 
 ---
