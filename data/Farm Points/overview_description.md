@@ -1,8 +1,8 @@
 ###### Currency: [[File:money.svg|18px]] [[Pokédollars]] • [[File:dungeonToken.svg|18px]] [[Dungeon Tokens]] • [[File:questPoint.svg|18px]] [[Quest Points]] • [[File:farmPoint.svg|18px]] **Farm Points** • [[File:diamond.svg|18px]]  [[Diamonds]] • [[File:battlePoint.svg|18px]] [[Battle Points]] {.alert .alert-light}
 #### Jump to:
-* [Uses](#uses)
 * [Tips for Earning Farm Points](#tips)
 * [Berry Farm Point Table](#berryfp)
+* [Uses](#uses)
 
 #### See also:
 * [[Berry Masters]]
@@ -11,29 +11,6 @@ Farm Points are currency gained by harvesting [[Berries]] on the [[Farm]]. Diffe
 
 Farm Points are gained per harvest. The number of berries harvested (or increasing the number harvested) does not affect Farm Point gain.
 
-
----
-
-## Uses {#uses}
-* Unlocking [Farm Plots](#!Farm#plots).
-* Paying the wages of [[Farm Hands]].
-* Upgrading Oak Items [[File:Squirtbottle.png\|24px]] [[Oak_Items/Squirtbottle]] and [[File:Sprinklotad.png\|24px]] [[Oak_Items/Sprinklotad]] to Level 5.
-
-
-#### Berry Masters
-*For a full list of items purchasable at Berry Masters, see the [Items For Sale](#!Berry_Masters#itemsforsale) section.*
-
-#### Shopmon
-Name {.col-1}| Base Price{.col-1}| Description/Notes {.col-3}| Region {.col-1}|
-:--- | :--- | :--- | :---
-[[File:Furfrou (Matron).png\|25px]] [[Pokemon/Furfrou (Matron)]] |  [[File:farmPoint.svg\|25px]] 1,500,000 | | Kalos
-
-#### Other Items {.mt-3}
-
-Name {.col-1}| Base Price{.col-1}| Description/Notes {.col-3}| Region {.col-1}|
-:--- | :--- | :--- | :---
-[[File:Ground_Memory_Silvally.png\|25px]] [[Items/Ground Memory]] | [[File:farmPoint.svg\|25px]] 200,000 | Required for [[#!Quest Lines/Typing some Memories]] Quest Line | Alola |
-[[File:Masterball.png\|25px]] [[Items/Master Ball]] | [[File:farmPoint.svg\|25px]] 3,000-300,000 | Price increases permanently with each purchase. Sold in each region's Pokémon League. | All
 
 ---
 
