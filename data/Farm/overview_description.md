@@ -1,6 +1,5 @@
 #### Jump to:
 * [Growing Berries](#growing)
-* [Uses for Berry Plants](#berryuses)
 * [Farm Plots](#plots)
 * [Farming Items](#farmitems)
     * [Consumable Tools](#farmtools)
