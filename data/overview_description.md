@@ -14,7 +14,7 @@
 ::::::::: table-auto {.row .row-cols-1 .row-cols-md-3 .row-cols-lg-3 .gy-3}
 
 :::::: table-auto {.col}
-#### [[File:boat.png|24px]] Locations {.text-bg-dark .d-flex .justify-content-center .align-items-center .gap-2 .p-2}
+#### [[File:boat.png|24px]] Locations {.text-bg-dark   .border .border-secondary .d-flex .justify-content-center .align-items-center .gap-2 .p-2}
 ::: table-auto {.p-3}
 
 ##### • [[Regions]] {.fw-bold}
@@ -38,7 +38,7 @@
 
 
 :::::: table-auto {.col}
-#### [[File:items/pokeball/Pokeball.png|24px]] Pokémon {.text-bg-dark .d-flex .justify-content-center .align-items-center .gap-2 .p-2}
+#### [[File:items/pokeball/Pokeball.png|24px]] Pokémon {.text-bg-dark .border .border-secondary .d-flex .justify-content-center .align-items-center .gap-2 .p-2}
 ::: table-auto {.p-3}
 
 ##### • [[Pokémon]] {.fw-bold}
@@ -60,7 +60,7 @@
 
 
 :::::: table-auto {.col}
-#### [[File:items/heldItems/Lucky_Punch.png|24px]] Mechanics {.text-bg-dark .d-flex .justify-content-center .align-items-center .gap-2 .p-2}
+#### [[File:items/heldItems/Lucky_Punch.png|24px]] Mechanics {.text-bg-dark  .border .border-secondary .d-flex .justify-content-center .align-items-center .gap-2 .p-2}
 ::: table-auto {.p-3}
 
 ##### • Battling {.fw-bold}
@@ -87,7 +87,7 @@
 
 
 :::::: table-auto {.col}
-#### [[File:items/farm/Rich_Mulch.png|24px]] Farm {.text-bg-dark .d-flex .justify-content-center .align-items-center .gap-2 .p-2}
+#### [[File:items/farm/Rich_Mulch.png|24px]] Farm {.text-bg-dark  .border .border-secondary .d-flex .justify-content-center .align-items-center .gap-2 .p-2}
 ::: table-auto {.p-3}
 
 ##### • [[Farm]] {.fw-bold}
@@ -109,7 +109,7 @@
 
 
 :::::: table-auto {.col}
-#### [[File:dungeons/chest-mythic.png|24px]] Items {.text-bg-dark .d-flex .justify-content-center .align-items-center .gap-2 .p-2}
+#### [[File:dungeons/chest-mythic.png|24px]] Items {.text-bg-dark  .border .border-secondary .d-flex .justify-content-center .align-items-center .gap-2 .p-2}
 ::: table-auto {.p-3}
 
 ##### • [All Items](#!Items) {.fw-bold}
@@ -131,7 +131,7 @@
 
 
 :::::: table-auto {.col}
-#### [[File:currency/money.svg|24px]] Currency {.text-bg-dark .d-flex .justify-content-center .align-items-center .gap-2 .p-2}
+#### [[File:currency/money.svg|24px]] Currency {.text-bg-dark  .border .border-secondary .d-flex .justify-content-center .align-items-center .gap-2 .p-2}
 ::: table-auto {.p-3}
 
 ##### • [[Pokédollars]] {.fw-bold}
@@ -178,7 +178,7 @@
 
 :::::::::
 
-&nbsp;
-&nbsp;
+
+
 
 ------
