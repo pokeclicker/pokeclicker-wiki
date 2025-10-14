@@ -1,6 +1,6 @@
 #### Jump To:
 * [Stats](#stats)
-* [States](#status)
+* [States](#states)
     * [Shiny](#shiny)
     * [Shadow](#shadow)
 * [Alternate Forms](#altforms)
