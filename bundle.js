@@ -79437,7 +79437,7 @@ const getStageTimes = (calcTotalLifeTime = false) => {
         stages.forEach((stage, idx) => {
             const prevStageTime = idx == 0 ? 0 : App.game.farming.berryData[selectedPlot().berry].growthTime[idx - 1];
             const growthTime = App.game.farming.berryData[selectedPlot().berry].growthTime[idx] - prevStageTime;
-            dummyPlot._age(growthTime);
+            dummyPlot._age(App.game.farming.berryData[selectedPlot().berry].growthTime[idx]);
             const growthMultiplier = App.game.farming.getGrowthMultiplier() * dummyPlot.getGrowthMultiplier();
 
             if (growthMultiplier == 0 || (petayaEffect && stage.stage == 'Wither')) {
@@ -79896,7 +79896,7 @@ const getOakItemBonus = (oakItem, level) => {
         case OakItemType.Blaze_Cassette:
             return `x${bonus} Hatching Speed`;
         case OakItemType.Cell_Battery:
-            return `Tier ${bonus} Discharge Patterns`;
+            return `${bonus} Charges Needed to Discharge`;
         case OakItemType.Squirtbottle:
             return `x${bonus} Mutation Rate`;
         case OakItemType.Sprinklotad:
@@ -79951,6 +79951,7 @@ module.exports = {
     getOakItemBonus,
     getOakItemUpgradeReq,
 };
+
 },{}],526:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
