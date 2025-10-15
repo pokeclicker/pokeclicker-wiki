@@ -99,5 +99,6 @@ This applies to Pokédex achievements as well. For example, a shiny [[Pokémon/M
 
 - [[Baby Pokémon]]: Baby Pokémon and the Region needed to acquire them.
 - [[Roaming Pokémon]]: Rare Pokémon that can appear in any route of any given Region.
+- [[Fossil Pokémon]]: Fossil Pokémon obtained by mining in the Underground and reviving them in labs.
 
 ### Full List
