@@ -22,7 +22,14 @@ $QuestExperience=100 + \frac{QPReward}{10}$ {.overflow-auto .text-center}
 
 Obtaining [[Items/Medichamite]] requires completing quests at Quest Level 16 or higher.
 
-#### Types of Quests
+#### Tips and Guides
+###### Catch-Type Quests
+- [[Catch Type Quests]] lists the best locations to farm each type of Pokémon.
+###### Gems
+- Individual [[Gem]] pages list where to best farm each Gem type.
+- Plates can be sold quickly for gems and will count toward Quest completion.
+
+#### List of Possible Quests
 Quest Points are awarded based on the type of quest, with a random 0.9x-1.1x variation to rewards.
 Types of Quests | Description
 --- | ---
@@ -30,8 +37,8 @@ Defeat Pokémon on [[Routes]] | Defeat 100-500 Pokémon on an unlocked Route
 Defeat [[Dungeons]] | Defeat an unlocked Dungeon 5-20 times
 Defeat [[Gyms]] | Defeat an unlocked Gym 5-20 times
 Capture or Hatch Pokémon | Capture or Hatch 50-250 Pokémon
-Capture or Hatch Pokémon of Type | Capture or Hatch 50-250 Pokémon of a certain Type
-Capture or Hatch a [Shiny](!#Shiny_Chance) | Capture or Hatch 1 Shiny Pokémon
+Capture or Hatch Pokémon of Type | Catch or Hatch 50-250 Pokémon of a certain Type
+Capture or Hatch a [Shiny](!#Shiny_Chance) | Catch or Hatch 1 Shiny Pokémon
 Catch [[Shadow Pokémon]] | Catch 1-5 Shadow Pokémon
 Hatch Eggs | Breed Pokémon in the [[Hatchery]] (amount varies based on highest region)
 Gain Currency | Gain [[Pokédollars]], [[Dungeon Tokens]], or [[Farm Points]] (amount varies based on highest region)
