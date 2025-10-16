@@ -26,7 +26,7 @@ Obtaining [[Items/Medichamite]] requires completing quests at Quest Level 16 or 
 ###### Catch-Type Quests
 - [[Catch Type Quests]] lists the best locations to farm each type of Pokémon.
 ###### Gems
-- Individual [[Gem]] pages list where to best farm each Gem type.
+- Individual [Gem](#!Gems) pages list where to best farm each Gem type.
 - Plates can be sold quickly for gems and will count toward Quest completion.
 
 #### List of Possible Quests
@@ -44,9 +44,9 @@ Hatch Eggs | Breed Pokémon in the [[Hatchery]] (amount varies based on highest 
 Gain Currency | Gain [[Pokédollars]], [[Dungeon Tokens]], or [[Farm Points]] (amount varies based on highest region)
 Gain [[Gems]] | Gain 200-600 Gems
 Use [[Poké Balls]] | Use 100-500 Poké Balls, Great Balls, or Ultra Balls
-Equip the [[Items/Magic Ball]] and Capture Pokémon | Catch 100-500 Pokémon while equipping Magic Ball
-Equip [[Items/EXP Share]] and Defeat Pokémon | Defeat 100-500 Pokémon while equipping EXP Share
-Equip [[Items/Amulet Coin]] and Earn Pokédollars | Earn bonus Pokédollars 100-500 times while equipping Amulet Coin
+Equip the [[Oak Items/Magic Ball]] and Capture Pokémon | Catch 100-500 Pokémon while equipping Magic Ball
+Equip [[Oak Items/EXP Share]] and Defeat Pokémon | Defeat 100-500 Pokémon while equipping EXP Share
+Equip [[Oak Items/Amulet Coin]] and Earn Pokédollars | Earn bonus Pokédollars 100-500 times while equipping Amulet Coin
 Harvest Berries | Harvest Berries at the [[Farm]] (amount varies based on Berry growth time)
 Mine Items | Collect 3-15 items from the [[Underground]] Mines
 Mine Layers | Clear 1-3 layers in the Underground
