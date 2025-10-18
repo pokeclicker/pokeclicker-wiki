@@ -5,11 +5,7 @@ Some berries have special auras that can affect gameplay or other plots on the f
 
 Berry plants can begin emitting auras at the Taller stage, but some auras are only available on fully Ripe plants. Most auras that affect other plots on the farm only affect adjacent plots (i.e. the surrounding 8 plots) and can stack. Exceptions are noted below.
 
-#### Useful Farm Setups Using Auras
-- [[Hatchery]]: Setups related to Egg Step gain
-- [[Shiny Chance]]: Setups related to increasing Shiny Chance
-- [[Pokérus]]: Setups related to increasing EV Yield
-- [[Farm/Setups]]: Setups not contained in the previous two pages
+For useful Farm Setups using auras, see [[Farm/Setups]].
 
 #### List of Auras
 Aura | Effect | Range of Effect | Notes | Berries that Emit Aura
