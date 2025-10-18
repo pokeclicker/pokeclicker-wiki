@@ -257,7 +257,6 @@ Item Name | Number Required | Necessary to Obtain | Cost
 ##### Shopmon
 Item Name | Number Required | Necessary to Obtain | Cost
 :---: | :---: | :---: | :---:
-|[[File:Skorupi.png\|25px]] | 1 | [[File:pokemon/451.png\|30px]] Skorupi | 6,750 [[File:questPoint.svg\|25px]]
 |[[File:Combee.png\|25px]] | 1 | [[File:pokemon/415.png\|30px]] Combee | 6,750 [[File:questPoint.svg\|25px]]
 |[[File:Burmy (Plant).png\|25px]] | 1 | [[File:pokemon/412.png\|30px]] Burmy | 6,750 [[File:questPoint.svg\|25px]]
 |[[File:Cherubi.png\|25px]] | 1 | [[File:pokemon/420.png\|30px]] Cherubi | 6,750 [[File:questPoint.svg\|25px]]
