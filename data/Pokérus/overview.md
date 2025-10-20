@@ -44,7 +44,7 @@ $EVBonus = 1 + \frac{EffortValues}{100}$ {.overflow-auto .text-center}
 
 **After 50 EVs,** the Pokémon will continue to increase their EV bonus, but at a diminished rate, based on the formula below. There is no upper limit to this multiplier.
 
-$EVBonus = EffortValues^{0.103645891}$ {.overflow-auto .text-center}
+$EVBonus = EffortValues^{log_{50}1.5}\approx EffortValues^{0.103645891}$ {.overflow-auto .text-center}
 
 | EV Bonus (Damage Multiplier) {.col-1}| EVs required {.col-1}|
 :--- | :---
