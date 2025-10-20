@@ -53,8 +53,8 @@ $EVBonus = EffortValues^{log_{50}1.5}\approx EffortValues^{0.103645891}$ {.overf
 3x | 40,121 |
 4x | 643,300 |
 5x | 5,540,000 |
-6x | 3.2E7 |
-7x | 1.4E8 |
+6x | 32.19E6 |
+7x | 142.5E6 |
 
 ---
 
