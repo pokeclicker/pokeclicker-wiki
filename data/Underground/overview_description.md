@@ -28,12 +28,12 @@ Once you've obtained the Explorer Kit, you can enter the Underground by:
 
 The Underground features six different mine types, each corresponding to a specific treasure type—except for Special Items, which are handled differently. Additionally, there is a Random Mine that offers a mix of items from the other mine types.
 
-- Random Mine: Contains all possible items except those from a Special mine
-- Diamond Mine: Contains only treasures sellable for [[Diamonds]]
-- Gem Plate Mine: Contains only gem plate treasures sellable for gems
-- Shard Mine: Contains only shard treasures
-- Fossil Mine: Contains only Fossils and fossil pieces
-- Evolution Item Mine: Contains only Evolution items
+- Chaos Cavern: Contains all possible items except those from a Special mine
+- Treasure Trove: Contains only treasures sellable for [[Diamonds]]
+- Arceus' Forge: Contains only gem plate treasures sellable for gems
+- Fractured Quarry: Contains only shard treasures
+- Ancient Excavation: Contains only Fossils and fossil pieces
+- Evolution Nexus: Contains only Evolution items
 
 Players have two options when starting a new mine:
 - if "Find mine" is On, the game automatically searches for the same type of mine as the one just cleared. *This does not skip the discovery time.*
