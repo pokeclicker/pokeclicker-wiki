@@ -30,7 +30,7 @@ $\text{New Reduced Price} =  \large\frac{\text{Item Price}}{1.00045}${.overflow-
 ## Types of Shops {#shoptypes}
 #### Poké Marts
 
-Sells items for currency. Stocks consumables such as Poké Balls and evolution items, in additon to other regional items.
+Sells items for currency. Stocks consumables such as Poké Balls and evolution items, in addition to other regional items.
 
 - A shortcut to an **Explorers Poké Mart** is unlocked after beating the Johto Champion that sells Poké Balls, battle items, and restores.
 - Poké Marts at Pokémon Leagues sell [[Items/Master Ball]] and [[Items/Vitamins]].
@@ -49,14 +49,9 @@ Trades for shards and Quest Points. They are mostly an alternate way to obtain e
 Trades Fossil Pokémon for fossil items. There are Fossil Traders in [[Towns/Cinnabar Island]], [[Towns/Rustboro City]], [[Towns/Oreburgh City]], [[Towns/Nacrene City]], [[Towns/Ambrette Town]], and [[Towns/Stow-on-Side]].
 
 #### Gem Traders
-Trades for [[Gems]].
+*→ See: [Gems/Gem Trades](#!Gems#trades)*
 
-- The Gem Masters in [[Towns/Fallarbor Town]] and [[Towns/Undella Town]] trade [[Flutes]].
-- The Stone Salesman in [[Towns/Fallarbor Town]] and Stone Emporium in [[Towns/Lumiose City]] trade [Mega Stones](#!Mega_Pokémon).
-- Deoxys Replica trades [[Pokémon/Deoxys (Clone)]].
-- The Furfrou Gem Trader in [[Towns/Parfum Palace]] trades [[Pokémon/Furfrou (La Reine)]].
-- [[Towns/Hoppy Town]] trades [[Pokémon/Magikarp Brown Stripes]].
-- The Memory Replicator in [[Town/Aether Foundation]] trades alternate forms of [[Pokémon/Silvally (Normal)]].
+Trades [[Flutes]], [Mega Stones](#!Mega_Pokémon), and exclusive Pokémon for Gems.
 
 #### Other Shops
 There are many other regional shops and traders, some more hidden than others. A full list of shops is below.
