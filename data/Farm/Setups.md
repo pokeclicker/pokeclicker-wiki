@@ -1,4 +1,3 @@
-
 ---- {#growth}
 
 ###### [Back to Top](#) {.text-end}
@@ -44,7 +43,7 @@ _**Growth Aura + Boost Mulch: 15.5x**_
 | | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | | |
 | | | [[File:Lum.png\|32px]] [[Berries/Lum]] | | | |
 :::
-&nbsp;
+
 ### Off-center Setups
 Even if the berry you're trying to affect with an aura isn't in the exact center, it is still significantly faster to add Lum berries to setups.
 
@@ -119,7 +118,7 @@ _**Harvest Aura + Rich Mulch: 9.66x (6 Plots), 5.72x (4 Plots)**_
 | [[File:Aguav.png\|32px]] [[Berries/Aguav]]{.rich} | [[File:Aguav.png\|32px]] [[Berries/Aguav]]{.rich} | [[File:Aguav.png\|32px]] [[Berries/Aguav]]{.rich} | [[File:Aguav.png\|32px]] [[Berries/Aguav]]{.rich} | [[File:Aguav.png\|32px]] [[Berries/Aguav]]{.rich} | |
 | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | [[File:Passho.png\|32px]] [[Berries/Passho]] | |
 :::
-&nbsp;
+
 ### Passho + Petaya
 This setup will yield slightly fewer berries per harvesting cycle, in exchange for vastly increased Passho ripeness time.
 
@@ -182,7 +181,7 @@ _**Harvest Aura + Sprayduck + Boost Mulch Bonus: 18.4x**_
 | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Starf.png\|32px]] [[Berries/Starf]]{.boost} | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Starf.png\|32px]] [[Berries/Starf]]{.boost} | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | |
 | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | [[File:Wacan.png\|32px]] [[Berries/Wacan]] | |
 :::
-&nbsp;
+
 ### Passho Phase
 :::collapsed Harvest Aura Setup - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
@@ -280,7 +279,7 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 | [[File:Roseli.png\|32px]] [[Berries/Roseli]]  | 07:00:00      | 04:39:58                              | 03:06:38                              |
 | [[File:Lum.png\|32px]] [[Berries/Lum]]      | 01:00:00      | 00:40:00                              | 00:26:40                                |
 
-&nbsp;
+
 ### Parasite Berries {#wanderersparasite}
 
 These setups will work for all Parasite berries, namely [[Berries/Occa]], [[Berries/Kebia]] and [[Berries/Colbur]], plus [[Berries/Enigma]].  While Enigma is not a true parasite berry, it has the unique ability to mutate Roselis and so requires the same protection.
@@ -387,7 +386,7 @@ For a detailed breakdown of the efficiency of different setups, including uptime
 **Takes Uptime into account*
 ***Note:** All calculations for Rank Table done [here](https://docs.google.com/spreadsheets/d/1kyQIpahGezv8tYYeQDoZMHjw6cVyGr7FD4MlXgbPr68/edit?usp=sharing) (external link).*
 :::
-&nbsp;
+
 ### Chople + Lum
 The easiest strategy for planting Chople berries in alternate rows. Add [[Berries/Lum]] in between to boost the Chople.
 
@@ -434,7 +433,7 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 | [[File:Chople.png\|32px]] [[Berries/Chople]] | 19:59:59 | 13:19:59| 8:53:19 |
 | [[File:Lum.png\|32px]] [[Berries/Lum]] | 11:59:59 | 07:59:59 | 05:19:59 |
 
-&nbsp;
+
 #### Chople + Lum + Yache/Haban
 If Petaya is not yet unlocked, planting [[Berries/Yache]] or [[Berries/Haban]], which have auras that decrease decay rate, will also extend Chople's lifespan.
 
@@ -469,32 +468,38 @@ Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
 |[[File:Haban.png\|32px]] [[Berries/Haban]] |[[File:Lum.png\|32px]] [[Berries/Lum]]  |[[File:Haban.png\|32px]] [[Berries/Haban]] |[[File:Lum.png\|32px]] [[Berries/Lum]]  |[[File:Haban.png\|32px]] [[Berries/Haban]] | |
 | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
 :::
-&nbsp;
-### Chople + Babiri + Lum (+ Petaya)
-This strategy uses [[Berries/Babiri]]'s aura to prevent mutation. For a longer uptime, replace the center Chople with a [[Berries/Petaya]].
 
-The Petaya version of the setup is the **most efficient** setup when taking uptime into account.
+### Chople + Babiri + Lum + Petaya
+This strategy uses [[Berries/Babiri]]'s aura to prevent mutation and [[Berries/Petaya]] for a longer uptime, and is the most efficient Egg Step setup when taking uptime into account.
 
-:::collapsed Chople + Babiri + Lum - Farm Simulator Code
-Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
-
-`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfV19fX0=`
-:::
+The free plot can be used for any other berry e.g. another [[Berries/Chople]] for more egg steps, a [[Berries/Haban]] for a longer lifespan or a [[Berries/Starf]] for a higher shiny aura.
 
 :::collapsed Chople + Babiri + Petaya + Lum - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
 
-`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjY0LCJhZ2UiOjQzMjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX1dfX19`
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NCwiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE5LCJhZ2UiOjQzMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9XX19fQ==`
 :::
 
-***(18 Chople, no Petaya) Egg Step Bonus: 2.90x***
-***(17 Chople, using Petaya) Egg Step Bonus: 2.73x***
+:::collapsed Chople + Babiri + Petaya + Lum + Haban - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NCwiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDksImFnZSI6MTcyODAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX1dfX19`
+:::
+
+:::collapsed Chople + Babiri + Petaya + Lum + Starf - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NCwiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjcsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX1dfX19`
+:::
+***(18 Chople) Egg Step Bonus: 2.90x***
+***(17 Chople, and 1 Starf) Egg Step Bonus: 2.73x, Shiny Bonus: 1.05x***
+
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | |
-| [[File:Chople.png\|32px]] [[Berries/Chople]]|[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Babiri.png\|32px]] [[Berries/Babiri]] |[[File:Chople.png\|32px]] [[Berries/Chople]] | |
-| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[Berries/Chople]] or  [[Berries/Petaya]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
-|[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Lum.png\|32px]] [[Berries/Lum]] |[[File:Babiri.png\|32px]] [[Berries/Babiri]] |[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Lum.png\|32px]] [[Berries/Lum]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Petaya.png\|32px]] [[Berries/Petaya]]| |[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+|[[File:Lum.png\|32px]] [[Berries/Lum]] |[[File:Chople.png\|32px]] [[Berries/Chople]] |[[File:Babiri.png\|32px]] [[Berries/Babiri]] |[[File:Lum.png\|32px]] [[Berries/Lum]] |[[File:Chople.png\|32px]] [[Berries/Chople]] | |
 | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
 :::
 
@@ -584,7 +589,7 @@ Full Strategy | MESBM | MSBM | BD (hours) | MRT (hours) | U% | MESBM w/ U% | MSB
 [[Berries/Starf]] + [[Berries/Lum]] + [[Berries/Chople]] + [[Berries/Petaya]] | 2.43x | 1.25x | 4 days 10 hours | 24 hours | 81.82% | 2.17x | 1.2x | 1
 
 :::
-&nbsp;
+
 ### Starf + Lum + Chople (+ Petaya)
 Takes [Chople + Lum](#eggsteps) setup and adds Starf berries in the open spaces for a boost to Shiny Rate as well as egg steps. The Petaya version is the **most efficient** setup when taking uptime into account.
 
@@ -619,7 +624,7 @@ Berry | Planting Time with No Modifier | Planting Time with Mulch/Sprayduck | Pl
 [[File:Chople.png\|32px]] [[Berries/Chople]] | 19:59:59 (using Petaya), 10:00:00 (no Petaya) | 13:19:59 (using Petaya), 06:40:00 (no Petaya) | 08:53:19 (using Petaya), 04:26:40 (no Petaya) |
 [[File:Lum.png\|32px]] [[Berries/Lum]] | 11:59:59 (using Petaya), 01:00:00 (no Petaya) | 07:59:59 (using Petaya), 00:40:00 (no Petaya)  | 5:19:59 (using Petaya), 00:26:40 (no Petaya) |
 
-&nbsp;
+
 ### Starf + Lum (+ Petaya)
 Using 4 Lum and filling the remaining spots with Starf provides the highest global Shiny Chance multiplier. Due to the higher base shiny chance for hatched Pokémon, this is overall less efficient than an egg step-focused Chople setup.
 
@@ -729,7 +734,7 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
 | [[File:Occa.png\|32px]] [[Berries/Occa]]      | `Planted First` | | |
 | [[File:Kebia.png\|32px]] [[Berries/Kebia]]  | 00:10:00      | 00:06:40                              | 00:04:27                              |
-&nbsp;
+
 ### Sitrus + Kebia
 If you only have Kebia berries and neither of the other two, you can use Kebia and Sitrus at the same time in the following formation. This will need to be set up every 20 minutes since both berries take 10 minutes to ripen, but you don't need to check on it more often than that.
 
@@ -752,7 +757,7 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
 | [[File:Occa.png\|32px]] [[Berries/Occa]]      | `Planted First` | | |
 | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]]  | 00:10:00      | 00:06:40                              | 00:04:27                              |
-&nbsp;
+
 ### Mutating Persim (Active Strategy)
 If you do not have Occa, Kebia, or Colbur, you can mutate [[File:Persim.png|24px]] [[Berries/Persim]], using the formation and timings in its berry page. This is a very active strategy, but this setup should provide a little over 3.58 mutations on average including time waiting for growth. This strategy is also the fastest, but needs at least about 4 and a half hours of active growth and mutation time to complete.
 
