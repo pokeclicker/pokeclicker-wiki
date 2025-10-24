@@ -471,6 +471,12 @@ const searchOptions = [
     type: 'Game Updates',
     page: '',
   },
+  // EV Calculator
+  {
+    display: 'EV Calculator',
+    type: 'EV Calculator',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
