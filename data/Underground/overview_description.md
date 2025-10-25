@@ -76,7 +76,7 @@ Maximum:
 There are five different tools available for use in the mines. Each tool serves a distinct purpose and operates independently of the others.
 
 ### Discharge Battery
-The Battery is a special tool that charges based on actions taken in the Mine.  Each second that a tool is used by a player or Helper, the Battery will gain one charge.  Discharging the Battery removes a large number of tiles in the mine based on a randomly chosen pattern determined by the Cell Battery's level when used.  Equipping the [[Oak Item/Cell Battery]] cuts the number of charges needed from 60 to 30.
+The Battery is a special tool that charges based on actions taken in the Mine.  Each second that a tool is used by a player or Helper, the Battery will gain one charge.  Discharging the Battery removes a large number of tiles in the mine based on a randomly chosen pattern determined by the Cell Battery's level when used.  Equipping the [[Oak Items/Cell Battery]] cuts the number of charges needed from 60 to 30.
 
 ### Durability
 
