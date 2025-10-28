@@ -1,9 +1,3 @@
----
-
-## Uses {#uses}
-#### General
-* Unlocking [Farm Plots](#!Farm#plots).
-* Paying the wages of [[Farm Hands]].
 * Upgrading Oak Items [[File:Squirtbottle.png\|24px]] [[Oak_Items/Squirtbottle]] and [[File:Sprinklotad.png\|24px]] [[Oak_Items/Sprinklotad]] to Level 5.
 
 
