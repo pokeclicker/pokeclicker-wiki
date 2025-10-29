@@ -91,7 +91,7 @@ Farm Hands are helpers that can be hired to perform Farming tasks. They can be a
 #### Locking Plots from Interaction {#lockplots}
 Farm plots can be locked from interaction to prevent things like unwanted harvesting. Locked plots cannot be planted on, harvested, mulched, or shovelled. Berries on locked plots can still wither, mutate, be over taken by parasite berries, and have Wanderers collected from them. [[Farm Hands]] cannot harvest or plant in locked plots, but will still manage Wanderers if hired to do so.
 
-To lock a plot, click **[[File:farm/plotSafeLock.svg|18px]]**{.btn .btn-dark .btn-sm .disabled} and then click on a plot _or_ hold Shift and click on a plot.
+To lock a plot, click **[[File:farm/plotSafeLock.svg|18px]]**{.btn .btn-primary .btn-sm} and then click on a plot _or_ hold Shift and click on a plot.
 
-**Lock All**{.btn .btn-dark .btn-sm .disabled} locks all plots, **Unlock All**{.btn .btn-dark .btn-sm  .disabled} unlocks all plots, and **Flip**{.btn .btn-dark .btn-sm .disabled} reverses the locked/unlocked status of all plots.
+**All**{.btn .btn-primary .btn-sm} locks all plots, **None**{.btn .btn-primary .btn-sm} unlocks all plots, and **Flip**{.btn .btn-primary .btn-sm} reverses the locked/unlocked status of all plots.
 
