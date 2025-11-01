@@ -37,8 +37,8 @@ $$\text{TotalXP}(\text{level}) = \left\lfloor \sum_{i=0}^{\text{level} - 1} \lef
 ### Energy Restore
 Consumable Energy Restores can boost an Expert Helper's working speed.  In the Experts tab of the [[Underground]], each Expert has icons at the bottom of their panel representing the three types of Energy Restores.  If one or more are toggled on, they will use the highest value Restore available once for each work cycle.  If they run out of a Restore, Experts will use the next best available option that is toggled on for them.  The currently active Restore is shown next to the Helper's icon.
 
-Restore | Percentage | Price | Efficiency
+Restore | Percentage | Base Price | Efficiency
 :--- | :--- | :--- | :--- |
 [[Items/Small Restore]] | 25% | 30,000 [[File:money.svg\|16px]] | 1,200 [[File:money.svg\|16px]] per 1%
-[[Items/Medium Restore]] | 50% | 100,000 [[File:money.svg\|16px]] | 2,000 [[File:money.svg\|16px]] per 1%
-[[Items/Large Restore]] | 75% | 400,000 [[File:money.svg\|16px]] | 5,333 [[File:money.svg\|16px]] per 1%
+[[Items/Medium Restore]] | 50% | 75,000 [[File:money.svg\|16px]] | 1,500 [[File:money.svg\|16px]] per 1%
+[[Items/Large Restore]] | 75% | 200,000 [[File:money.svg\|16px]] | 2,666 [[File:money.svg\|16px]] per 1%

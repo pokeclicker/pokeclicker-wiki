@@ -1,4 +1,7 @@
-## Exclusive Pokémon
+
+-----
+
+## Exclusive Pokémon {#exclusives}
 
 The following is a list of Pokémon obtainable in Kanto and Sevii Islands (both 123 and 4567) which cannot be found on Routes, in Dungeons, or through level-based evolutions of Pokémon caught in the region.
 

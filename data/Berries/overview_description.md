@@ -6,9 +6,7 @@
 * [Berry List](#list)
 * [Auras](#aura)
 * [Using and Trading Berries](#trades)
-    * [Berry Masters](#berrymaster)
-    * [Battle Café](#battlecafe)
-    * [Trades for Pokémon](#pokemontrades)
+
 #### See also:
 * [[Farm]]
 * [[Farm Points]]
@@ -48,34 +46,42 @@ Each Berry has special conditions for mutating and a different chance of mutatin
 
 When a mutation is possible on a farm plot, it is marked by a green dot.
 
-#### Basic Example
+
+::: collapsed Basic Mutation Example
+
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | |{.mutation}|{.mutation}| | |
 | |[[File:Pecha.png\|32px]] [[Berries/Pecha]] |[[File:Oran.png\|32px]] [[Berries/Oran]] | | |
 | |{.mutation}|{.mutation}| | |
-:::
 
 Persim has a mutation rate of 2% when ripe Oran and Pecha plants are adjacent to an empty plot. The purple highlighted plots show where mutation is possible. Each second, each highlighted plot independently has a 2% chance of spawning a Persim. Over one minute, there are a total of 240 checks for mutation in this setup (4 possible plots, 60 checks per plot), with a 2% chance of successfully mutating in each check. Thus, there is a 99% chance at least one Persim will mutate in one of the 4 plots after one minute.
+:::
 
 #### Types of Mutation {#mutationtypes}
 - **Growth Mutations** are mutations that occur **on empty plots that are adjacent to the required Berry plants**. These mutations do not occur before the required Berries are ripe, and these mutations cannot spawn on an occupied plot. Growth mutations are the most common type of mutation.
-    - **Overgrow Berries** are Berries that have a chance of planting a new Berry plant of the same type in an adjacent empty plot. They are described as "having a tendency to expand into nearby plots." This is considered a type of mutation and is affected by the same mutation boosts. Overgrow Berries must be at the ripe stage before they can mutate adjacent plots.
-        - *Overgrow Berries: [[Berries/Rindo]], [[Berries/Pamtre]]*
 - **Evolution Mutations** are mutations that **replace an existing Berry plant with a mutated Berry**. Evolution mutations can mutate any Berry plants at the Taller, Bloom, or Ripe stage.
-    - **Parasite Berries** are Berries that mutate adjacent plants into the same Berry type as itself. They are described as "having a tendency to take over other plants." This is considered a type of mutation and is affected by the same mutation boosts. Parasite Berries must be at the ripe stage before they can mutate adjacent plants.
-        - *Parasite Berries: [[Berries/Occa]], [[Berries/Kebia]], [[Berries/Colbur]]*
-    - The [[Berries/Enigma]] Berry can mutate certain adjacent plants into another type of Berry Plant. The mutated Berry must already be unlocked for this mutation to occur.
 - **Field Mutations** are mutations that occur **on empty plots when the required Berry plants exist across the entire Farm**. Field mutations can occur on any empty plot in the Farm.
 
 #### Tips for Mutation {#mutationtips}
-Individual berry pages have optimized planting formations to maximize the chances of a mutation occurring, as well as timing charts to help plant Berries at the correct times, such that all of them will become ripe simultaneously. Mutation chance can be increased by using [[Items/Squirtbottle]] and [[Items/Surprise Mulch]].
-
-The Kanto Berry Master in [[Towns/Cerulean City]] gives daily hints for Berries you haven't yet acquired.
-
-Other tools and guides:
-- [[Farm Simulator]]: Wiki tool for simulating various Farm conditions such as Berry growth, auras, and mutations.
+##### Berry Guides
+- Individual Berry pages have optimized planting formations to maximize the chances of mutating each Berry, as well as timing charts to help plant at the correct times.
+- The Kanto Berry Master in [[Towns/Cerulean City]] gives daily hints for Berries you haven't yet acquired.
 - [Walkthrough for unlocking #9 Persim to #25 Grepa](https://docs.google.com/document/d/1TE5cAKSlA7TAliA001_mIiO1odZ6e4yUEMre0GBW1to/edit?usp=sharing)  (external link): If you have not yet unlocked all the plots on the Farm, this guide will provide optimized planting formations to mutate those berries within the limited available farm plots.
+
+##### Preventing Unwanted Mutations
+- A **fully grown [[Berries/Babiri]]** will prevent mutations in adjacent plots. This is the only way to prevent mutations, if a mutation could otherwise occur.
+- Freeze Mulch does **not** prevent mutations.
+- Be aware of Berry types that can easily mutate or cause mutations:
+    - [[Berries/Occa]], [[Berries/Kebia]], [[Berries/Colbur]], and [[Berries/Enigma]] can mutate adjacent berries when ripe.
+    - [[Berries/Rindo]] and [[Berries/Pamtre]] can mutate adjacent empty plots when ripe.
+    - [[Berries/Spelon]], [[Berries/Pamtre]], [[Berries/Watmel]], and [[Berries/Cornn]] can mutate into different berries when certain Oak Items are equipped.
+    - [[Berries/Passho]] can mutate when it is not adjacent to any berry.
+
+
+##### Tools
+- [[Farm Simulator]]: Wiki tool for simulating various Farm conditions such as Berry growth, auras, and mutations.
+
 
 ---
 
