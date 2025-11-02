@@ -148,12 +148,6 @@ const searchOptions = [
     type: 'Battle Café',
     page: '',
   },
-  // Battle Café
-  {
-    display: 'Battle Café',
-    type: 'Battle Café',
-    page: '',
-  },
   // Vitamins
   {
     display: 'Vitamins',
