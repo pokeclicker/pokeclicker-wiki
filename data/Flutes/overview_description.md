@@ -14,7 +14,7 @@ The bonus of each Flute is determined by your [achievement bonus](#!Achievements
 
 $Flute Bonus = \large 0.02 * (1 + \frac{\text{Achievement Bonus \%}}{100} )${.overflow-auto .text-center}
 
-Currently, with the maximum achievement bonus of 1100%, Flutes can provide a maximum of 1.2x multiplier for their associated effects.
+Currently, with the maximum achievement bonus of 1100%, Flutes can provide a maximum of 1.24x multiplier for their associated effects.
 
 #### Attack Bonus
 Each active flute also provides a static **+0.5% attack boost** to the 3 types associated with the Flute. If all 6 Flutes are active, then all types gain a +0.5% attack boost.
