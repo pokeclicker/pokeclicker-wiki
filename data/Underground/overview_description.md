@@ -78,6 +78,24 @@ There are five different tools available for use in the mines. Each tool serves 
 ### Discharge Battery
 The Battery is a special tool that charges based on actions taken in the Mine.  Each second that a tool is used by a player or Helper, the Battery will gain one charge.  Discharging the Battery removes a large number of tiles in the mine based on a randomly chosen pattern determined by the Cell Battery's level when used.  Equipping the [[Oak Items/Cell Battery]] cuts the number of charges needed from 60 to 30.
 
+#### Patterns
+All possible discharge patterns and their odds of occurrence based on Cell Battery's level.
+Tier | Name | Weight | Lv.0 | Lv.1 | Lv.2 | Lv.3 | Lv.4 | Lv.5
+:---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---:
+0 | Eruption | 1 | 100% | 37% | 8.8% | 3.8% | 2.3% | 1.2%
+1 | Hydro Cannon | 1.7 |  | 63% | 15.0% | 6.5% | 4.0% | 2.0%
+2 | Dragon Breath | 3.4 |  |  | 25.4% | 11.1% | 6.8% | 3.4%
+2 | Leaf Tornado | 3.4 |  |  | 25.4% | 11.1% | 6.8% | 3.4%
+2 | Overdrive | 3.4 |  |  | 25.4% | 11.1% | 6.8% | 3.4%
+3 | 10m Volt Thunderbolt | 5.1 |  |  |  | 18.8% | 11.5% | 5.8%
+3 | Draco Meteor | 5.1 |  |  |  | 18.8% | 11.5% | 5.8%
+3 | Heart Stamp | 5.1 |  |  |  | 18.8% | 11.5% | 5.8%
+4 | Pokéball | 6.8 |  |  |  |  | 19.5% | 9.8%
+4 | Surf | 6.8 |  |  |  |  | 19.5% | 9.8%
+5 | Explosion | 8.5 |  |  |  |  |  | 16.6%
+5 | Fleur Cannon | 8.5 |  |  |  |  |  | 16.6%
+5 | Hyper Beam | 8.5 |  |  |  |  |  | 16.6%
+
 ### Durability
 
 The Chisel, Hammer, Bomb and Survey tools each have an individual durability gauge that determines how many times it can be used before needing to recharge. Tools consume durability at different rates depending on their power or area of effect. They regenerate durability over time, and the repair rate improves as your Underground Level increases. When your Underground Level reaches a certain point the repair rate becomes 0 seconds for Chisel (Lv.22), Hammer(Lv.23) and Bomb(Lv.24). In practice, all three become infinite 1 level earlier due to recharging faster than the player can click.  Survey and Discharge always have recharge time regardless of level.
