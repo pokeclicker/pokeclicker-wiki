@@ -5,7 +5,7 @@
 
 Battle Points are the red currency earned from the [[Battle Frontier]].
 
-Defeating higher stages of the Battle Frontier awards more Battle Points. A calculator is available on the [[Battle Frontier page]].
+Defeating higher stages of the Battle Frontier awards more Battle Points. A calculator is available on the [[Battle Frontier]] page.
 
 ::: collapsed Battle Point Earnings Formula
 $$ \text{Battle Points} =\text{Stage Beaten} \times \text{Battle Multiplier} $$
