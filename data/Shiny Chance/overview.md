@@ -18,16 +18,16 @@ There are some benefits when encountering or obtaining a **new or duplicate** sh
 ---
 
 ## Shiny Odds Per Location/Capture Method {#odds}
-Location/Method | Base Chance | Chance (Lv 5 Shiny Charm) | Chance (Lv 5 Shiny Charm, optimal shiny odds farm, and maximum White Flute bonus)
+Location/Method | Base Chance | Chance (Lv 5 Shiny Charm) | Chance (Lv 5 Shiny Charm, optimal shiny odds farm)
 :--- | :--- | :--- | :---
-Route Encounter | 1/8192 | 1/4096 | 1/1344
-[Dungeon](#!Dungeons) Encounter | 1/4096 | 1/2048 | 1/672
-Evolution Item/Level Up Evolutions | 1/2048 | 1/1024 | 1/336
-Safari Zone Encounter  | 1/1024 | 1/512 | 1/168
-Hatching in the [[Hatchery]] | 1/1024 | 1/512 | 1/168
-Quest or [Battle Frontier](#!Battle_Frontier) Reward | 1/1024 | 1/512 | 1/168
-Purchasing or trading from a Shop | 1/1024 | 1/512 | 1/168
-[[Wandering Pokémon]] Encounter | 1/1024 | 1/512 | 1/168
+Route Encounter | 1/8192 | 1/4096 | 1/1611
+[Dungeon](#!Dungeons) Encounter | 1/4096 | 1/2048 | 1/805
+Evolution Item/Level Up Evolutions | 1/2048 | 1/1024 | 1/403
+Safari Zone Encounter  | 1/1024 | 1/512 | 1/201
+Hatching in the [[Hatchery]] | 1/1024 | 1/512 | 1/201
+Quest or [Battle Frontier](#!Battle_Frontier) Reward | 1/1024 | 1/512 | 1/201
+Purchasing or trading from a Shop | 1/1024 | 1/512 | 1/201
+[[Wandering Pokémon]] Encounter | 1/1024 | 1/512 | 1/201
 OOOSHINY code | 1 / 1 | 1 / 1 | 1 / 1
 # {.mt-3}
 
