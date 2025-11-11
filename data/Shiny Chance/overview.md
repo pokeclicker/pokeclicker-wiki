@@ -36,8 +36,8 @@ OOOSHINY code | 1 / 1 | 1 / 1 | 1 / 1
 | Modifer | Shiny Chance Multiplier |
 | ---- | ---- |
 | [[File:Shiny_Charm.png\|24px]] [[Oak Items/Shiny Charm]] | `1.5x-2x` (Based on item level) |
-| [[File:Starf.png\|24px]] [[Berries/Starf]] Berry Aura | `1.015x` per ripe plant. (See [Farm Setups for Shiny Chance](#!Farm/Setups#shiny) for how to obtain up to `2.54x` across the Farm). |
-| [[File:items/fluteItem/White_Flute.png\|24px]] [[Items/White Flute]] |  Variable based on Flute bonus `[1.02 + .02 * AchievementBonus]x`. Current maximum of `1.2x`. |
+| [[File:Starf.png\|24px]] [[Berries/Starf]] Berry Aura | `1.015x` per ripe plant. (See [Farm Setups for Shiny Chance](#!Farm/Setups#shiny) for how to obtain up to `2.543x` across the Farm). |
+| [[File:items/fluteItem/White_Flute.png\|24px]] [[Items/White Flute]] |  Variable based on Flute bonus `[1.02 + .02 * AchievementBonus]x`. Current maximum of `1.24x`. |
 
 ----
 ## Tips for Obtaining Shiny Pokémon {#tips}
