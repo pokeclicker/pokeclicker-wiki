@@ -1,4 +1,3 @@
-
 ---
 
 ## Exclusive Pokémon {#exclusives}
