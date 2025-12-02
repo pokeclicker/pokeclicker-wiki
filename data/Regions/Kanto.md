@@ -41,11 +41,11 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 |[[File:Linking_cord.png\|25px]] [[Items/Linking Cord]]|4| [[File:pokemon/65.png\|25px]] [[Pokémon/Alakazam]], [[File:pokemon/68.png\|25px]] [[Pokémon/Machamp]], [[File:pokemon/76.png\|25px]] [[Pokémon/Golem]], [[File:pokemon/94.png\|25px]] [[Pokémon/Gengar]]|
 
 ### Roamers
-|Pokémon|Requirement|Subregion|
+|Requirement|Subregion|Pokémon|
 |---|---|---|
-| [[File:pokemon/151.png\|25px]] [[Pokémon/Mew]]|None|Kanto|
-| [[File:pokemon/12.03.png\|25px]] [[Pokémon/Pink Butterfree]]|Become Orange League Champion|Sevii Islands|
-| [[File:pokemon/12.04.png\|25px]] [[Pokémon/Ash's Butterfree]]|Become Orange League Champion|Sevii Islands|
+| None | Kanto | [[File:pokemon/151.png\|25px]] [[Pokémon/Mew]] |
+| Become Orange League Champion | Sevii Islands | [[File:pokemon/12.03.png\|25px]] [[Pokémon/Pink Butterfree]] |
+| Become Orange League Champion| Sevii Islands | [[File:pokemon/12.04.png\|25px]] [[Pokémon/Ash's Butterfree]] |
 
 **Note:** The Butterfree can roam in both Sevii Islands 123 and 4567.
 
