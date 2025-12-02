@@ -72,3 +72,5 @@ Togepi can also be obtained as a Wanderer using [[Berries/Roseli]] berries.
 |Berry|Pokémon|
 |---|---|
 | [[File:Tanga.png\|32px]] [[Berries/Tanga]] | [[File:pokemon/213.01.png\|25px]] [[Pokémon/Shuckle (Corked)]]
+
+`Time wuz here!`
