@@ -102,7 +102,7 @@ Bolded Pokémon can *only* acquire EVs via this method.
 | [[File:pokemon/607.png\|25px]] [[Pokémon/Litwick]] |Saturday | Melemele Island | [[Dungeons/Hau'oli Cemetery]]|
 | [[File:pokemon/610.png\|25px]] [[Pokémon/Axew]] |Saturday| Ula'ula Island | [[Routes/Mount Hokulani]]|
 | [[File:pokemon/655.png\|25px]] **[[Pokémon/Delphox]]** |**Saturday**| **Poni Island** | [[Routes/Ancient Poni Path]]|
-| [[File:pokemon/5.png\|25px]] [[Pokémon/Charmander]] |Sunday| Melemele Island | [[Routes/Alola Route 3]]|
+| [[File:pokemon/4.png\|25px]] [[Pokémon/Charmander]] |Sunday| Melemele Island | [[Routes/Alola Route 3]]|
 | [[File:pokemon/155.png\|25px]] [[Pokémon/Cyndaquil]] |Sunday | Melemele Island | [[Routes/Alola Route 3]]|
 | [[File:pokemon/280.png\|25px]] [[Pokémon/Ralts]] |Sunday| Akala Island | [[Routes/Alola Route 6]]|
 | [[File:pokemon/574.png\|25px]] [[Pokémon/Gothita]] |Sunday| Akala Island | [[Routes/Alola Route 6]]|
