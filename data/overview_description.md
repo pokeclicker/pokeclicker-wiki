@@ -1,6 +1,6 @@
 
 ::: text-center
-# Welcome to the PokéClicker Wiki!
+# Welcome to the PokéClicker Wick!
 
 ----------
 
