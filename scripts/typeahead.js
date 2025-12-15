@@ -485,6 +485,7 @@ const searchOptions = [
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
+  a.sort = a.display.replace(/.*-\s/, '').replace(/\(.*\)/, '');
   const duplicates = searchOptions.filter(b => b.display == a.display);
   if (duplicates.length > 1) {
     duplicates.forEach(d => d.display = `${d.display} (${d.type})`);
@@ -504,16 +505,70 @@ searchOptions.forEach(a => {
 function escapeRegExp(text) {
   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&').replace(/[eé]/g, '[eé]');
 }
-// This is the function which figures out the results to show
-var substringMatcher = (searchData) => {
-  return (query, cb) => {
-    // regex used to determine if a string contains the substring `q`
+
+function levenshtein(a, b) {
+  if (a === b) return 0;
+  if (!a.length) return b.length;
+  if (!b.length) return a.length;
+  const aLen = a.length;
+  const bLen = b.length;
+  let prev = new Array(bLen + 1);
+  let cur = new Array(bLen + 1);
+  for (let j = 0; j <= bLen; j++) prev[j] = j;
+  for (let i = 1; i <= aLen; i++) {
+    cur[0] = i;
+    const ai = a.charAt(i - 1);
+    for (let j = 1; j <= bLen; j++) {
+      const cost = ai === b.charAt(j - 1) ? 0 : 1;
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost);
+    }
+    const tmp = prev; prev = cur; cur = tmp;
+  }
+  return prev[bLen];
+}
+
+const substringMatcher = (searchData) => {
+  return (query, cb, fuzzy = false) => {
+    if (!query || query.length === 0) return cb ? cb([]) : [];
+
     const substrRegex = new RegExp(escapeRegExp(query), 'i');
 
-    // iterate through the pool of strings and for any string that matches the regex
-    const results = searchData.filter(d => substrRegex.test(d.redirect || d.display));
+    if (!fuzzy) {
+      const results = searchData.filter(d => substrRegex.test(d.redirect || d.display));
+      const sortedResults = results.sort((a, b) => a.sort.search(substrRegex) - b.sort.search(substrRegex) || a.sort.length - b.sort.length || a.display.length - b.display.length);
+      return cb ? cb(sortedResults) : sortedResults;
+    }
 
-    cb(results.sort((a, b) => a.display.search(substrRegex) - b.display.search(substrRegex) || a.display.length - b.display.length));
+    // fuzzy mode: compute a distance and pick the best matches
+    const qLower = query.toLowerCase();
+    // Scale match based on length of query
+    const maxDist = Math.max(1, Math.ceil(qLower.length * 0.25));
+
+    const matches = [];
+    for (let item of searchData) {
+      const target = (item.redirect || item.display).toLowerCase() || '';
+
+      if (target.indexOf(qLower) !== -1) {
+        matches.push({ item: item, dist: 0, pos: target.indexOf(qLower) });
+        continue;
+      }
+
+      let best = levenshtein(qLower, target);
+
+      const tokens = target.split(/[\s\-()→:/]+/).filter(Boolean);
+      for (let token of tokens) {
+        const dist = levenshtein(qLower, token);
+        if (dist < best) best = dist;
+      }
+
+      if (best <= maxDist) {
+        const pos = target.indexOf(tokens.find(tok => levenshtein(qLower, tok) === best) || '');
+        matches.push({ item: item, dist: best, pos: pos === -1 ? target.length : pos });
+      }
+    }
+
+    const sortedResults = matches.sort((a, b) => a.dist - b.dist || a.pos - b.pos || a.item.sort.length - b.item.sort.length || a.item.display.length - b.item.display.length).map(m => m.item);
+    return cb ? cb(sortedResults) : sortedResults;
   };
 };
 
@@ -551,4 +606,5 @@ $('#search').bind('typeahead:autocomplete', (ev, suggestion) => {
 
 module.exports = { 
   searchOptions,
+  searchViaKeyword: substringMatcher(searchOptions),
 };

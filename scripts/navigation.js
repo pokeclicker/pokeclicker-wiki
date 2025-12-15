@@ -184,6 +184,14 @@ $(document).ready(() => {
       applyDatatables();
     }
   });
+
+  // Search for pages
+  document.getElementById('search').addEventListener('keyup', ({key, target}) => {
+    if (key === 'Enter') {
+      gotoPage('Search', target.value);
+      target.value = '';
+    }
+  });
 });
 
 // clickable table rows - handle middle clicking
