@@ -1,65 +1,97 @@
-The Farm is a location in Kanto where Berries can be planted. Harvesting them yields Farming Points and more of the same type of Berry. Occasionally, mutations can occur when Berries are planted in certain configurations. The Farm is unlocked upon reaching Kanto Route 14 and obtaining the Wailmer pail.
+#### Jump to:
+* [Growing Berries](#growing)
+* [Farm Plots](#plots)
+* [Farming Items](#farmitems)
+    * [Consumable Tools](#farmtools)
+    * [Oak Items](#farmoak)
+* [Other Farm Controls](#farmcontrols)
+    * [Farm Hands](#farmhands)
+    * [Locking Plots from Interaction](#lockplots)
+#### See also:
+* [[Berries]]
+* [[Farm Points]]
+* [[Farm/Setups]]
 
-Two Quests can appear involving the usage of the Farm, asking for get Farm Points or harvesting specific berries for QP
+In the Farm, you can grow different types of [[Berries]], which can be [traded](#!Berries#trades) for useful items and unique Pokémon and earn you [[Farm Points]] [[File:farmPoint.svg|25px]]. Berry plants also attract [[Wandering Pokémon]], create helpful [Auras](#!Berries/#aura), and more.
 
-## Usage
+The Farm is unlocked after reaching [[Routes/Kanto Route 11]] and obtaining the [Wailmer Pail](#!Key_Items).
 
-_For a breakdown of harvest yields, flavors, and mutation configurations for the various types of Berries, consult the [[Berries]] specific pages._
+----
 
-Before completing Kanto, the Farm can be accessed by clicking on its location on the map between Routes 14 and Route 15. Upon reaching Johto, it becomes available in the Shortcuts dropdown modal.
+## Growing Berries {#growing}
+*See also: [[Berries]]. For a breakdown of harvest yields, flavors, and mutation configurations, visit each Berry's individual page. In-game, this information can be found in the Berrydex Tab.*
 
-The eight Gen 1 Berries are dropped by defeated Pokémon on routes. They can be planted by selecting the desired type in the left-hand column and clicking on plots in the field on the right. Alternatively, the "Plant All" button can be clicked to plant the selected Berry in every empty plot.
+#### Acquiring Berries
+The first eight Gen 1 Berries are dropped by wild Pokémon. More Berries can be found in dungeon chests and later regions, but most Berries will be unlocked via mutation.
 
-Depending on the type of Berry planted, different lengths of time must pass before they can be harvested. Individual plots can be clicked to be harvested, or the "Harvest All" button may be pressed to harvest every plot ready for harvesting.
+#### Planting and Harvesting
+1. Plant berries by selecting the desired berry in the left-hand column and clicking on plots in the field on the right. Berry plants grow in **four stages** (Sprout → Taller → Bloom → Ripe).
+2. Once ripe, Berry plants can be harvested by clicking on them. Harvesting berries will also earn you [[Farm Points]] (the amount of berries does not affect Farm Point gain). Berry plants will always yield at least 1 Berry, even if their harvest amount is less than 1.
+3. If left unharvested, ripe Berry plants will eventually **wither**, dropping half of the expected Berries.
+4. If it withers, Berry plants have a chance to **replant** themselves, spawning a plant of the same Berry in that plot. Farm Points are not gained when Berries wither or get replanted.
 
-When Berry plants become ripe, they will die after a set period of time if not harvested. When this happens, only 1/2 of the harvest is obtained. There is also a chance they will replant themselves, spawning a plant of the same berry in that plot. The Replant Rate can be augmented by using the Sprinklotad Oak Item.
+Growth time, harvest amounts, wither time, and replant rates can be [modified](#!Berries#stats).
 
-Berries can be obtained by planting obtained Berries in special configurations. The Kanto Berry Master in Cerulean City gives hints as to these configurations. The chance for mutations to occur can be augmented by the Squirtbottle Oak Item.
+#### Mutating Berries
+*→ See: [Mutations](#!Berries#mutation)*
 
-The farm can also produce helpful effects (external auras) such as increasing egg steps for faster breeding and better shiny chance. It can also attract specific Pokémon which are referred to as [[Wandering Pokémon]].
+Berries planted in certain configurations can mutate into new Berry species.
 
-### Farm Items
+#### Other tools and guides:
+- [[Farm Simulator]]: Wiki tool for simulating various Farm conditions such as Berry growth, auras, and mutations.
+- [Walkthrough for unlocking #9 Persim to #25 Grepa](https://docs.google.com/document/d/1TE5cAKSlA7TAliA001_mIiO1odZ6e4yUEMre0GBW1to/edit?usp=sharing)  (external link): If you have not yet unlocked all the plots on the Farm, this guide will provide optimized planting formations to mutate those berries within the limited available farm plots.
+- [[Farm/Setups]]: Useful Farm Setups using Berry auras to increase harvest, egg steps, shiny chances, and more.
+----
 
-Mulch and Berry Shovel can be bought in Goldenrod City, Mauville City, Hearthome City. Mulches can be applied to Berry plants to speed up growth (Boost Mulch), increase harvest yield (Rich Mulch), increase mutation chance (Surprise Mulch), or all the above with a slightly reduced boost for all three (Amaze Mulch). Berry Shovels can be used to clear occupied plots.
+## Farm Plots{#plots}
+The Farm starts with one free plot. More farm plots can be purchased using Berries and Farm Points, up to a total of 25 plots (requires **51,250 [[File:farmPoint.svg\|25px]]** total).
+
+#### Cost of Farm Plots
+|:---:|:---:|:---:|:---:|:---:|
+| **220 [[File:Kelpsy.png\|24px]][[Berries/Kelpsy]]**{.d-block} **4840 [[File:farmPoint.svg\|18px]]**{.d-block}| **170 [[File:Mago.png\|24px]][[Berries/Mago]]**{.d-block} **2890 [[File:farmPoint.svg\|18px]]**{.d-block} | **90 [[File:Persim.png\|24px]][[Berries/Persim]]**{.d-block} **810 [[File:farmPoint.svg\|18px]]**{.d-block} | **130 [[File:Wepear.png\|24px]][[Berries/Wepear]]**{.d-block} **1690 [[File:farmPoint.svg\|18px]]**{.d-block} | **230 [[File:Qualot.png\|24px]][[Berries/Qualot]]**{.d-block} **5290 [[File:farmPoint.svg\|18px]]**{.d-block} |
+| **160 [[File:Wiki.png\|24px]][[Berries/Wiki]]**{.d-block} **2560 [[File:farmPoint.svg\|18px]]**{.d-block} | **50 [[File:Aspear.png\|24px]][[Berries/Aspear]]**{.d-block} **250 [[File:farmPoint.svg\|18px]]**{.d-block} | **10 [[File:Cheri.png\|24px]][[Berries/Cheri]]**{.d-block} **10 [[File:farmPoint.svg\|18px]]**{.d-block} | **60 [[File:Leppa.png\|24px]][[Berries/Leppa]]**{.d-block} **360 [[File:farmPoint.svg\|18px]]**{.d-block} | **180 [[File:Aguav.png\|24px]][[Berries/Aguav]]**{.d-block} **3240 [[File:farmPoint.svg\|18px]]**{.d-block} |
+| **120 [[File:Nanab.png\|24px]][[Berries/Nanab]]**{.d-block} **1440 [[File:farmPoint.svg\|18px]]**{.d-block} | **40 [[File:Rawst.png\|24px]][[Berries/Rawst]]**{.d-block} **160 [[File:farmPoint.svg\|18px]]**{.d-block} | Free! | **20 [[File:Chesto.png\|24px]][[Berries/Chesto]]**{.d-block} **40 [[File:farmPoint.svg\|18px]]**{.d-block} | **100 [[File:Razz.png\|24px]][[Berries/Razz]]**{.d-block} **1000 [[File:farmPoint.svg\|18px]]**{.d-block} |
+| **210 [[File:Pomeg.png\|24px]][[Berries/Pomeg]]**{.d-block} **4410 [[File:farmPoint.svg\|18px]]**{.d-block} | **80 [[File:Sitrus.png\|24px]][[Berries/Sitrus]]**{.d-block} **640 [[File:farmPoint.svg\|18px]]**{.d-block} | **30 [[File:Pecha.png\|24px]][[Berries/Pecha]]**{.d-block} **90 [[File:farmPoint.svg\|18px]]**{.d-block} | **70 [[File:Oran.png\|24px]][[Berries/Oran]]**{.d-block} **490 [[File:farmPoint.svg\|18px]]**{.d-block} | **140 [[File:Pinap.png\|24px]][[Berries/Pinap]]**{.d-block} **1960 [[File:farmPoint.svg\|18px]]**{.d-block} |
+| **250 [[File:Grepa.png\|24px]][[Berries/Grepa]]**{.d-block} **6250 [[File:farmPoint.svg\|18px]]**{.d-block} | **150 [[File:Figy.png\|24px]][[Berries/Figy]]**{.d-block} **2250 [[File:farmPoint.svg\|18px]]**{.d-block} | **110 [[File:Bluk.png\|24px]][[Berries/Bluk]]**{.d-block} **1210 [[File:farmPoint.svg\|18px]]**{.d-block} | **190 [[File:Iapapa.png\|24px]][[Berries/Iapapa]]**{.d-block} **3610 [[File:farmPoint.svg\|18px]]**{.d-block} | **240 [[File:Hondew.png\|24px]][[Berries/Hondew]]**{.d-block} **5760 [[File:farmPoint.svg\|18px]]**{.d-block} |
+
+----
+
+## Farming Items {#farmitems}
+
+#### Consumable Tools {#farmtools}
+Mulch and Shovels can be bought from [[Berry Masters]]. Mulches can be applied to plots for various boosts, while Shovels are used to clear occupied plots of unwanted Berries or mulch.
+
+| Name {.col-1}| Description {.col-5}|
+|:-------- | :-------- |
+|[[File:Boost_Mulch.png\|32px]]  [[Items/Boost Mulch]]  | Increases Berry growth rate by 50% when applied to a plot occupied by a Berry plant. |
+|[[File:Rich_Mulch.png\|32px]]  [[Items/Rich Mulch]]  |  Doubles the amount of berries gained from harvesting a ripe Berry plant. Can be applied immediately prior to harvesting a plant to gain the full doubling boost. Doubles replant chance if berry withers while mulched.  |
+|[[File:Surprise_Mulch.png\|32px]]  [[Items/Surprise Mulch]] | Increases the chance of Berry mutations by 50% on any plot (empty or occupied) it is applied to. |
+|[[File:Amaze_Mulch.png\|32px]]  [[Items/Amaze Mulch]] | Increases the growth and mutation rates by 25% and the harvest rate and replant chance  by 50%.  |
+|[[File:Freeze_Mulch.png\|32px]]  [[Items/Freeze Mulch]] |  Pauses Berry growth and auras. (Note: Does not prevent mutations from occuring.) |
+|[[File:Gooey_Mulch.png\|32px]]  [[Items/Gooey Mulch]] |  Improves the catch rate of wandering Pokémon on mulched plot by 10%. Also increases the weights of berry or color specific wandering Pokémon, making them more likely to appear.  |
+|[[File:Berry_Shovel.png\|32px]]  [[Items/Berry Shovel]] | Clears a Berry plant of any stage from a plot instantly. (Note: If the Berry plant is at the ripe stage, it will be harvested and the shovel will not be consumed.) |
+|[[File:Mulch_Shovel.png\|32px]]  [[Items/Mulch Shovel]] | Removes Mulch from a plot, regardless of how much time remains. |
 
 
+#### Oak Items {#farmoak .mt-3}
+| Name| Affects | Level 0 | Level 1 | Level 2 | Level 3 | Level 4 | Level 5 |
+|:-------- | :-------- |:-------- | :-------- |:-------- | :-------- | :-------- | :-------- |
+| [[File:Sprayduck.png\|32px]] [[Oak Items/Sprayduck]] | Berry Growth | x1.25 | x1.3 | x1.35 | x1.4 | x1.45 | x1.5  |
+| [[File:Squirtbottle.png\|32px]] [[Oak Items/Squirtbottle]] | Chance of Mutation | x1.25 | x1.5 | x1.75 | x2 | x2.25 | x2.5 |
+| [[File:Sprinklotad.png\|32px]] [[Oak Items/Sprinklotad]] | Mulch Duration | x1.25 | x1.4 | x1.55 | x1.7 | x1.85 | x2 |
 
-| Name | Price | Description |
-|:--------: | :--------: |:--------:|
-|[[File:Boost_Mulch.png\|32px]]  Boost Mulch | 50 [[File:currency/farmPoint.svg\|24px]] | Increases Berry growth rate by 50% when applied to a plot occupied by a Berry plant. |
-|[[File:Rich_Mulch.png\|32px]]  Rich Mulch | 100 [[File:currency/farmPoint.svg\|24px]] | Doubles the amount of berries gained from harvesting a ripe Berry plant. Can be applied immediately prior to harvesting a plant to gain the full doubling boost. Doubles replant chance if berry withers while mulched.  |
-|[[File:Surprise_Mulch.png\|32px]]  Surprise Mulch | 150 [[File:currency/farmPoint.svg\|24px]]  | Increases the chance of Berry mutations by 50% on any (can be empty or occupied) plot it is applied to. |
-|[[File:Amaze_Mulch.png\|32px]]  Amaze Mulch | 200 [[File:currency/farmPoint.svg\|24px]]  | Increases the growth and mutation rates by 25% and the harvest rate and replant chance  by 50%.  |
-|[[File:Freeze_Mulch.png\|32px]]  Freeze Mulch | 350 [[File:currency/farmPoint.svg\|24px]]  | Pauses Berry growth and auras. This includes the Colbur berry blocking Kasib berries from mutating, but not parasitic effects since those are strictly a mutation.  |
-|[[File:Berry_Shovel.png\|32px]]  Berry Shovel | 300 [[File:currency/farmPoint.svg\|24px]]  | Clears an occupied plot instantly. Harvestable plots that are shoveled are harvested and not cleared. |
-|[[File:Mulch_Shovel.png\|32px]]  Mulch Shovel | 300 [[File:currency/farmPoint.svg\|24px]]  | Removes Mulch from a plot in the Farm. |
+----
 
+## Other Farm Controls {#farmcontrols}
+#### Farm Hands {#farmhands}
+*→ See: [[Farm Hands]]*
 
+Farm Hands are helpers that can be hired to perform Farming tasks. They can be accessed from the Farm Hands tab of the main Farm window. The first Farm Hand is unlocked after acquiring at least 8 berries.
 
-## Mutating Berries
+#### Locking Plots from Interaction {#lockplots}
+Farm plots can be locked from interaction to prevent things like unwanted harvesting. Locked plots cannot be planted on, harvested, mulched, or shovelled. Berries on locked plots can still wither, mutate, be over taken by parasite berries, and have Wanderers collected from them. [[Farm Hands]] cannot harvest or plant in locked plots, but will still manage Wanderers if hired to do so.
 
-_Note: if you have not yet unlocked all the plots on the farm and need to mutate berries #9 Persim through #25 Grepa, please use the [Walkthrough](https://docs.google.com/document/d/1TE5cAKSlA7TAliA001_mIiO1odZ6e4yUEMre0GBW1to/edit?usp=sharing)  link for an optimized planting formation to mutate those berries within the limited available farm plots._
+To lock a plot, click **[[File:farm/plotSafeLock.svg|18px]]**{.btn .btn-primary .btn-sm} and then click on a plot _or_ hold Shift and click on a plot.
 
-Mutating Berries is a fairly simple process - plant berries in the correct setup and at the proper timings, wait for berries to be ripe, and then hope that RNG favors you. Generally speaking, for a mutation to occur the berries required for a mutation to occur must all be ripe on the farm simultaneously. Thus, on each individual berry page, you will find an Optimized Planting Formation to maximize your chances of a mutation occurring, as well as a Timing Chart, to help you plant berries at the correct times such that all berries will become ripe simultaneously.
+**All**{.btn .btn-primary .btn-sm} locks all plots, **None**{.btn .btn-primary .btn-sm} unlocks all plots, and **Flip**{.btn .btn-primary .btn-sm} reverses the locked/unlocked status of all plots.
 
-There are a few exceptions to these general rules, the Kasib and Starf berries, that each play by their own respective rules as explained on their individual Berry pages.
-
-Each berry has it's own individual mutation chance for whether or not it will mutate when the conditions are correct. A Berries' Mutation chance can be increased by using the Squirtbottle and Surprise Mulch items. When attempting to mutate a berry, there are a few things to be aware of. We'll use mutating Persim as an example, not involving the Squirtbottle or Surprise Mulch
-
-_Example: Persim has a mutation rate of 2%. This means each second the required berries (Oran and Pecha) are ripe on the farm in the proper locations to cause a mutation to occur, you have a 2% chance of mutating a Persim. That 2% mutation is calculated per plot. Following the above linked Walkthrough's planting formation for Persim, where there are 5 possible plots for Persim to mutate on, that means that each second the game calculates whether the 2% chance occurred 5 separate times. The Pecha berry will only remain ripe for 1 minute, thus if both Pecha berries become ripe at the same time as Oran, each plot will calculate to see if a mutation will occur 60 times, or in other words, you have 300 chances to see if you get lucky with the 2% mutation before the Pecha withers and must be replanted._
-
-Mutations can happen in one of two ways - the most common method is for berries to mutate by growing near required berries, while a less common mutation is when berries mutate by evolving in the proper conditions.
-
-### Growth Mutations
-
-Berries that mutate by growing near required berries must have the required berries planted such that every required berry is touching at least the corner of a plot for mutation to be possible on that plot. Mutations can never occur where there is already a berry growing.
-
-### Evolution Mutations
-
-Berries that mutate by evolving will replace an existing ripe berry with the mutated berry or by reaching a specific flavor profile
-
-_Note: Depending on the Flavor profile required for the Berry to evolve, an evolution mutation may occur while the berries are still in the Taller or Bloom growth stages, rather than only when Ripe._
-
-## Setups
-
-The different berry auras can stack and be used to get bonuses in the main game. To check them, go to the [[Farm/Setups]] page.

@@ -1,0 +1,109 @@
+<!-- ko let: {
+    pokemonCount: pokemonList.filter(p => p.nativeRegion <= GameConstants.MAX_AVAILABLE_REGION && Object.keys(PokemonLocations.getPokemonLocations(p.name)).length > 0).length,
+    shadowCount: new Set(Wiki.pokemon.getAllAvailableShadowPokemon().map(p => p.pokemon)).size,
+    maxAchievementBonus: AchievementHandler.getAchievementCategories().filter(c => (GameConstants.Region[c.name] || 0) <= GameConstants.MAX_AVAILABLE_REGION).reduce((sum, c) => sum += c.achievementBonus, 0),
+    rockyHelmetBonusList: App.game.oakItems.itemList[OakItemType.Rocky_Helmet].bonusList.map((b, i) => ({ level: i, bonus: b })),
+} -->
+
+<!--<h3>Maximum Click Attack</h3>
+<p>
+    The current maximum click attack is:
+    <ko class="fw-bold" data-bind="text: (() => {
+        const pokemonBonus = Math.pow(1 + pokemonCount + pokemonCount + pokemonCount + shadowCount, 1.4);
+        const achievementBonus = 1 + maxAchievementBonus / 100;
+        const fluteBonus = 1 + 2 * (1 + maxAchievementBonus / 100) / 100;
+        const rockyHelmetBonus = rockyHelmetBonusList[rockyHelmetBonusList.length - 1].bonus;
+        return Math.floor(pokemonBonus * achievementBonus * fluteBonus * 1.5 * rockyHelmetBonus).toLocaleString();
+    })()"></ko>
+</p>-->
+<!-- ko let: {
+    uniquePokemon: ko.observable(pokemonCount),
+    uniqueShinies: ko.observable(pokemonCount),
+    resistantPokemon: ko.observable(pokemonCount),
+    purifiedPokemon: ko.observable(shadowCount),
+    achievementBonus: ko.observable(maxAchievementBonus),
+    xClick: ko.observable(true),
+    blackFlute: ko.observable(true),
+    rockyHelmetBonus: ko.observable(rockyHelmetBonusList[rockyHelmetBonusList.length - 1].bonus),
+} -->
+<h3>Click Attack Calculator</h3>
+<div class="col col-lg-6">
+    <table class="table table table-bordered mb-1">
+        <tbody>
+            <tr class="align-middle">
+                <td>Unique Pokémon</td>
+                <td>
+                    <input type="number" class="form-control form-control-sm" min="0" data-bind="textInput: uniquePokemon" autocomplete="off" />
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <td>Unique Shiny Pokémon</td>
+                <td>
+                    <input type="number" class="form-control form-control-sm" min="0" data-bind="textInput: uniqueShinies" autocomplete="off" />
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <td>Resistant Pokémon</td>
+                <td>
+                    <input type="number" class="form-control form-control-sm" min="0" data-bind="textInput: resistantPokemon" autocomplete="off" />
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <td>Purified Pokémon</td>
+                <td>
+                    <input type="number" class="form-control form-control-sm" min="0" data-bind="textInput: purifiedPokemon" autocomplete="off" />
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <td>Achievement Bonus</td>
+                <td>
+                    <input type="number" class="form-control form-control-sm" min="0" data-bind="textInput: achievementBonus" autocomplete="off" />
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <td>xClick</td>
+                <td>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" data-bind="checked: xClick" autocomplete="off">
+                    </div>
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <td>Black Flute</td>
+                <td>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" data-bind="checked: blackFlute" autocomplete="off">
+                    </div>
+                </td>
+            </tr>
+            <tr class="align-middle">
+                <td>Rocky Helmet</td>
+                <td>
+                    <select class="form-select form-select-sm" data-bind="
+                        options: [{ bonus: 1 }, ...rockyHelmetBonusList],
+                        optionsText: (item) => {
+                            return item.bonus == 1 ? 'Not Equipped' : `Level ${item.level}`;
+                        },
+                        optionsValue: 'bonus',
+                        value: rockyHelmetBonus" autocomplete="off"></select>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="table-dark align-middle">
+                <td class="fw-bold">Click Attack</td>
+                <td data-bind="text: (() => {
+                    const pokemonBonus = Math.pow(1 + +uniquePokemon() + +uniqueShinies() + +resistantPokemon() + +purifiedPokemon(), 1.4);
+                    const achieveBonus = 1 + +achievementBonus() / 100;
+                    const xClickBonus = xClick() ? 1.5 : 1;
+                    const fluteBonus = blackFlute() ? 1 + 2 * (1 + achievementBonus() / 100) / 100 : 1;
+                    return Math.floor(pokemonBonus * achieveBonus * fluteBonus * xClickBonus * rockyHelmetBonus()).toLocaleString();
+                })()"></td>
+            </tr>
+        </tfoot>
+    </table>
+    <span class="small">* The Achievement Bonus % displayed in-game is rounded so the calculated Click Attack value displayed above may slightly differ from what you see in-game.</span>
+</div>
+<!-- /ko -->
+
+<!-- /ko -->

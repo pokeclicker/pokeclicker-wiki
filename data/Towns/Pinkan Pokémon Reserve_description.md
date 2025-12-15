@@ -1,0 +1,1 @@
+Pinkan Pokémon Reserve only carries a few basic [[Farm]] items and mostly exclusive Pokémon.  [PokéClicker Companion](https://companion.pokeclicker.com/#!Forecast/Berry/PinkanPok%C3%A9monReserve) has price forecasts.

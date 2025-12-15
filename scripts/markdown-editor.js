@@ -3,6 +3,12 @@ const { md } = require('./markdown-renderer');
 const getContent = (editor) => editor.value().split('\n').map(l => l.trimEnd()).join('\n');
 const getOriginalContent = (editor) => editor._rendered.value.split('\n').map(l => l.trimEnd()).join('\n');
 
+// list of discord ids banned from editing the wiki
+const banList = [
+  '516241570853552129', // primorollins (repeatedly editing a page after being told to stop)
+  '1320473652361433161' // the_spectrumyt_70106 (making unwanted page edits, not in discord to tell to stop)
+];
+
 const saveChanges = (editor, filename, btn) => {
   const content = getContent(editor);
   const originalContent = getOriginalContent(editor);
@@ -12,6 +18,10 @@ const saveChanges = (editor, filename, btn) => {
     Wiki.alert('No file changes detected..', 'warning', 3e3);
     btn.classList.remove('disabled');
     btn.innerText = 'Save Changes';
+    return;
+  }
+
+  if (banList.includes(Wiki.discord.ID())) {
     return;
   }
 

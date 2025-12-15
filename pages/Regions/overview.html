@@ -11,8 +11,12 @@
             </tr>
         </thead>
         <tbody data-bind="foreach: GameHelper.enumStrings(GameConstants.Region).filter(r => !['none', 'final'].includes(r))">
-            <tr class="text-nowrap clickable" data-bind="click: () => { Wiki.gotoPage('Regions', GameConstants.camelCaseToString($data)); return false; }">
-                <td data-bind="text: GameConstants.camelCaseToString($data), attr: { 'data-order': $data.region }"></td>
+            <tr class="text-nowrap clickable" data-bind="
+                click: (_, e) => { return Wiki.gotoPageClick(e, 'Regions', GameConstants.camelCaseToString($data)); },
+                attr: { 'data-href': `#!Regions/${GameConstants.camelCaseToString($data)}` }">
+                <td data-bind="attr: { 'data-order': $data.region }">
+                    <a class="text-decoration-none" href="#!" data-bind="text: GameConstants.camelCaseToString($data), attr: { href: `#!Regions/${GameConstants.camelCaseToString($data)}` }"></a>
+                </td>
                 <td data-bind="text: SubRegions.list[GameConstants.Region[$data]].length - 1"></td>
                 <td data-bind="text: Object.values(TownList).filter(t => t.region == GameConstants.Region[$data]).length"></td>
                 <td data-bind="text: Routes.getRoutesByRegion(GameConstants.Region[$data]).length"></td>

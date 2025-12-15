@@ -9,15 +9,25 @@
         </thead>
         <tbody>
             <!-- ko foreach: Object.values(ItemList) -->
-            <tr class="clickable" data-bind="click: () => { const page = Wiki.items.getItemCategoryAndPageFromObject($data); Wiki.gotoPage(page.category, page.page); return false; }">
-                <td data-bind="text: $data.displayName"></td>
+            <!-- ko let: { page: Wiki.items.getItemCategoryAndPageFromObject($data) } -->
+            <tr class="clickable align-middle" data-bind="
+                click: (_, e) => { return Wiki.gotoPageClick(e, page.category, page.page); },
+                attr: { 'data-href': `#!${page.category}/${page.page}` }">
+                <td>
+                    <a class="text-decoration-none" href="#!" data-bind="text: $data.displayName, attr: { href: `#!${page.category}/${page.page}` }"></a>
+                </td>
                 <td data-bind="html: GameConstants.camelCaseToString($data.constructor.name)"></td>
                 <td data-bind="html: $data.description"></td>          
             </tr>
             <!-- /ko -->
+            <!-- /ko -->
             <!-- ko foreach: UndergroundItems.list.filter((ui) => !Object.values(ItemList).some((i) => i.displayName == ui.displayName)) -->
-            <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Items', $data.displayName); return false; }">
-                <td data-bind="text: $data.displayName"></td>
+            <tr class="clickable" data-bind="
+                click: (_, e) => { return Wiki.gotoPageClick(e, 'Items', $data.displayName); },
+                attr: { 'data-href': `#!Items/${$data.displayName}` }">
+                <td>
+                    <a class="text-decoration-none" href="#!" data-bind="text: $data.displayName, attr: { href: `#!Items/${$data.displayName}` }"></a>
+                </td>
                 <td data-bind="html: GameConstants.camelCaseToString($data.constructor.name)"></td>
                 <td>An item found in the underground</td>
             </tr>

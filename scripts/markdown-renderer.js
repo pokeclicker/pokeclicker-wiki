@@ -11,7 +11,7 @@ const md = new markdownit({
   .use(require('markdown-it-attrs'), {
     leftDelimiter: '{',
     rightDelimiter: '}',
-    allowedAttributes: ['id', 'class'],
+    allowedAttributes: ['id', 'class', 'data-sort', 'data-order'],
   })
   .use(require('markdown-it-mathjax3'))
   .use(require('markdown-it-container'), 'text-center')
@@ -33,7 +33,7 @@ const md = new markdownit({
         const startCollapsed = m[0].startsWith('collapsed');
         // opening tag
         return `
-        <div class="accordion accordion-flush">
+        <div class="accordion">
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button class="accordion-button ${startCollapsed ? 'collapsed' : ''}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${randID}" aria-expanded="true">
@@ -45,7 +45,7 @@ const md = new markdownit({
   
       } else {
         // closing tag
-        return `</div></div></div>\n`;
+        return `</div></div></div></div>\n`;
       }
     }
   })

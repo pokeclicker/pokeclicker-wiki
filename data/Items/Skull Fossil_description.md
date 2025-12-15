@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain [[Pokémon/Cranidos]]
+1 can be exchanged for [[Pokémon/Cranidos]] or 10 for [[Pokémon/Rampardos]] at the Oreburgh Mining Museum in [[Towns/Oreburgh City]].

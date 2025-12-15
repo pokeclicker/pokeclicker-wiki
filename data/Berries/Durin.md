@@ -13,6 +13,12 @@ Durin has a chance of mutating when a Taller or later stage [[Berries/Rabuta]] i
 :::
 
 **Optimized Formation**
+
+:::collapsed Durin Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOjJ9LHsiYmVycnkiOjI4LCJhZ2UiOjI0NDgwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MjgsImFnZSI6MjQ0ODAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOjJ9LHsiYmVycnkiOjI4LCJhZ2UiOjI0NDgwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MjgsImFnZSI6MjQ0ODAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOjJ9LHsiYmVycnkiOjI4LCJhZ2UiOjI0NDgwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MjgsImFnZSI6MjQ0ODAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyOCwiYWdlIjoyNDQ4MCwibXVsY2giOi0xfV19fX0=`
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Rabuta.png\|32px]] [[Berries/Rabuta]] | [[File:Rabuta.png\|32px]] [[Berries/Rabuta]] | [[File:Rabuta.png\|32px]] [[Berries/Rabuta]] | [[File:Rabuta.png\|32px]] [[Berries/Rabuta]] | [[File:Rabuta.png\|32px]] [[Berries/Rabuta]] | |

@@ -64,7 +64,7 @@ const battleCafeToHumanReadableString = (battleCafeLocation) => {
     const splitCamelCase = GameConstants.camelCaseToString(spinEnum).replace('3600', ' 3600');
     const commaSeperated = splitCamelCase.replaceAll(' ', ', ');
     const relativeSeconds = commaSeperated.replace('Above5', '5 or more').replace('Above10', '11 or more').replace('Below5', 'Less than 5');
-    const spinWording = relativeSeconds.replace('At5', 'Dusk, Any').replace('Any', 'Any direction');
+    const spinWording = relativeSeconds.replace('At5', 'Dusk, Counterclockwise').replace('Any', 'Any direction');
     return `${sweetString} - ${spinWording} seconds`;
 };
 
@@ -73,9 +73,19 @@ const getAvailablePokemon = () => {
         p.id >= 0 &&
         Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION] &&
         p.nativeRegion <= GameConstants.MAX_AVAILABLE_REGION &&
-        Object.keys(PokemonHelper.getPokemonLocations(p.name)).length
+        Object.keys(PokemonLocations.getPokemonLocations(p.name)).length
     );
 }
+
+const getRouteRoamingChance = (region, subRegion, routeNumber) => {
+    const group = RoamingPokemonList.findGroup(region, subRegion);
+    const regionRoutes = Routes.getRoutesByRegion(region).filter(r => RoamingPokemonList.findGroup(region, r.subRegion || 0) == group);
+    const routeIndex = regionRoutes.indexOf(Routes.getRoute(region, routeNumber));
+    const maxRoute = regionRoutes.length - 1;
+    const max = GameConstants.ROAMING_MAX_CHANCE;
+    const min = GameConstants.ROAMING_MIN_CHANCE;
+    return Math.floor((max + ((min - max) * (maxRoute - routeIndex) / (maxRoute))));
+};
 
 module.exports = {
     getBreedingAttackBonus,
@@ -85,4 +95,5 @@ module.exports = {
     getAvailablePokemon,
     getAllAvailableShadowPokemon,
     battleCafeToHumanReadableString,
+    getRouteRoamingChance,
 }

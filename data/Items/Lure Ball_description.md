@@ -1,1 +1,1 @@
->Increased catch rate on fished Pokémon
+>Increased catch rate on fished Pokémon.  One of the rotating [[Daily Deals]] trades offered by [[Towns/Driftveil City]]'s [Berry Master](#!Berry_Masters).

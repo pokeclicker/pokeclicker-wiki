@@ -12,6 +12,12 @@ Aguav has a chance of mutating by surrounding an empty plot with at least 25, bu
 :::
 
 **Optimized Formation**
+:::collapsed Aguav Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MywiYWdlIjoxNjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozLCJhZ2UiOjE2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjozLCJhZ2UiOjE2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjozLCJhZ2UiOjE2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MywiYWdlIjoxNjAsIm11bGNoIjotMX0seyJiZXJyeSI6MywiYWdlIjoxNjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MywiYWdlIjoxNjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozLCJhZ2UiOjE2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjozLCJhZ2UiOjE2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjozLCJhZ2UiOjE2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MywiYWdlIjoxNjAsIm11bGNoIjotMX0seyJiZXJyeSI6MywiYWdlIjoxNjAsIm11bGNoIjotMX1dfX19`
+:::
+
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | {.mutation} | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | {.mutation} | {.mutation} | [[File:Rawst.png\|32px]] [[Berries/Rawst]] | |
@@ -35,11 +41,10 @@ Aguav Berries can mutate into the following Berries.
 ### Acquisition
 Aguav Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Pattern Bush]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Pinkan Mountain]]      | Common	| `N/A`         |
-| [[Dungeons/Radio Tower]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Flower Paradise]]      | Common  	| `N/A`         |
-| [[Dungeons/Chargestone Cave]]     | Common	| `N/A`         |
-| [[Dungeons/Pokémon Village]]      | Common  	| `N/A`         |
+| [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567) | Epic  	|
+| [[Dungeons/Radio Tower]]	        | Johto | Epic  	|
+| [[Dungeons/Flower Paradise]]      | Sinnoh | Common  	|
+| [[Dungeons/Chargestone Cave]]     | Unova | Common	|
+| [[Dungeons/Pokémon Village]]      | Kalos | Common  	|

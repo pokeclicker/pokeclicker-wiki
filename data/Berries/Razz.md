@@ -12,6 +12,12 @@ Razz has a chance of mutating when [[Berries/Cheri]] and [[Berries/Leppa]] are t
 :::
 
 **Optimized Formation**
+:::collapsed  Razz Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MCwiYWdlIjo2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjUsImFnZSI6NDgwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NSwiYWdlIjo0ODAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MCwiYWdlIjo2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjUsImFnZSI6NDgwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NSwiYWdlIjo0ODAsIm11bGNoIjotMX1dfX19`
+:::
+
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | |
@@ -25,7 +31,7 @@ Razz has a chance of mutating when [[Berries/Cheri]] and [[Berries/Leppa]] are t
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Leppa.png\|32px]] [[Berries/Leppa]]    | `Planted First` |||
+| [[File:Leppa.png\|32px]] [[Berries/Leppa]]    | `Planted First` | | |
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]]    | 00:00:30      | 00:00:20                              | 00:00:13                                 |
 
 #### Mutations
@@ -39,12 +45,12 @@ Razz Berries can mutate into the following Berries.
 ### Acquisition
 Razz Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Berry Forest]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Pattern Bush]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Radio Tower]]	        | Epic  	| `N/A`         |
-| [[Dungeons/New Mauville]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Eterna Forest]]        | Common	| `N/A`         |
-| [[Dungeons/Wayward Cave]]         | Common	| `N/A`         |
-| [[Dungeons/Dragonspiral Tower]]   | Common	| `N/A`         |
+| [[Dungeons/Berry Forest]]	        | Kanto (Sevii Islands 123) | Epic  	|
+| [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567) | Epic  	|
+| [[Dungeons/Radio Tower]]	        | Johto | Epic  	|
+| [[Dungeons/New Mauville]]	        | Hoenn | Epic  	|
+| [[Dungeons/Eterna Forest]]        | Sinnoh | Common	|
+| [[Dungeons/Wayward Cave]]         | Sinnoh | Common	|
+| [[Dungeons/Dragonspiral Tower]]   | Unova | Common	|

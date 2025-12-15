@@ -1,1 +1,1 @@
-Located East of [[Routes/Bond Bridge]].
+Located west of [[Routes/Bond Bridge]].

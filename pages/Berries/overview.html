@@ -7,23 +7,32 @@
                 <th>Color</th>
                 <th>Exp</th>
                 <th>Harvest Amount</th>
-                <th>Farm Points</th>
+                <th>FP per Harvest</th>
+                <th>FP per Wanderer</th>
                 <th>Growth Time</th>
             </tr>
         </thead>
         <tbody data-bind="foreach: App.game.farming.berryData">
-            <tr class="clickable align-middle" data-bind="click: () => { Wiki.gotoPage('Berries', BerryType[$data.type]); return false; }">
+            <tr class="clickable align-middle" data-bind="
+                click: (_, e) => { return Wiki.gotoPageClick(e, 'Berries', BerryType[$data.type]); },
+                attr: { 'data-href': `#!Berries/${BerryType[$data.type]}` }">
                 <td>
                     <knockout data-bind="text: `#${($data.type + 1).toString().padStart(2, 0)}`"></knockout>
                     <img height="30px" data-bind="attr: {src: './pokeclicker/docs/' + FarmController.getBerryImage($data.type)}"/>
                 </td>
-                <td data-bind="text: BerryType[$data.type]"></td>
+                <td>
+                    <a class="text-decoration-none" href="#!" data-bind="text: BerryType[$data.type], attr: { href: `#!Berries/${BerryType[$data.type]}` }"></a>
+                </td>
                 <td data-bind="text: BerryColor[$data.color]"></td>
                 <td data-bind="text: $data.exp"></td>
                 <td data-bind="text: $data.harvestAmount"></td>
                 <td data-bind="attr: { 'data-sort': $data.farmValue }">
                     <img src="./images/farmPoint.svg" width="18px"/>
                     <ko data-bind="text: $data.farmValue.toLocaleString()"></ko>
+                </td>
+                <td>
+                    <img src="./images/farmPoint.svg" width="18px"/>
+                    <ko data-bind="text: (Math.floor($data.farmValue / (4 + $data.growthTime[PlotStage.Bloom] / 1800))).toLocaleString()"></ko>
                 </td>
                 <td data-bind="attr: { 'data-sort': $data.growthTime[3] }, html: `${GameConstants.formatSecondsToTime($data.growthTime[3]).replace(/<\/br>/g, ' ')} to Ripe<br/>${GameConstants.formatSecondsToTime($data.growthTime[4] - $data.growthTime[3]).replace(/<\/br>/g, ' ')} to Death`"></td>
             </tr>

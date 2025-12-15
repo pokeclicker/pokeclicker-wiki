@@ -12,6 +12,12 @@ Wiki has a chance of mutating by surrounding an empty plot with at least 25, but
 :::
 
 **Optimized Formation**
+:::collapsed Wiki Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MSwiYWdlIjo4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjEsImFnZSI6ODAsIm11bGNoIjotMX0seyJiZXJyeSI6MSwiYWdlIjo4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxLCJhZ2UiOjgwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxLCJhZ2UiOjgwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjEsImFnZSI6ODAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MSwiYWdlIjo4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjEsImFnZSI6ODAsIm11bGNoIjotMX0seyJiZXJyeSI6MSwiYWdlIjo4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxLCJhZ2UiOjgwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxLCJhZ2UiOjgwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjEsImFnZSI6ODAsIm11bGNoIjotMX1dfX19`
+:::
+
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | |
@@ -34,9 +40,9 @@ Wiki Berries can mutate into the following Berries.
 ### Acquisition
 Wiki Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Diglett's Cave]]       | Mythic	| `N/A`         |
-| [[Dungeons/Pattern Bush]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Radio Tower]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Pokémon Village]]      | Common  	| `N/A`         |
+| [[Dungeons/Diglett's Cave]]       | Kanto | Mythic	|
+| [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567) | Epic  	|
+| [[Dungeons/Radio Tower]]	        | Johto | Epic  	|
+| [[Dungeons/Pokémon Village]]      | Kalos | Common  	|

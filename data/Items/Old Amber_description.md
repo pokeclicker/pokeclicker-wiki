@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain Aerodactyl
+Can be exchanged for [[Pokémon/Aerodactyl]] at the Cinnabar Lab in [[Towns/Cinnabar Island]].

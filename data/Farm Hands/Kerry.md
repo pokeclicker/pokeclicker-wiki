@@ -1,1 +1,1 @@
-*Purchased at the Hoenn Berry Master in @[[Towns/Mauville City]] for 100,000 Farm Points.*
+*Purchased at the Hoenn [Berry Master](#!Berry_Masters) in @[[Towns/Mauville City]] for 100,000 Farm Points.*

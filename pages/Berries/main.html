@@ -5,6 +5,16 @@
     <!-- ko if: BerryType[Wiki.pageName()] >= 0 -->
     <div data-bind="with: App.game.farming.berryData[BerryType[Wiki.pageName()]]">
         <div class="float-lg-end col-lg-3 m-2">
+            <div class="d-flex justify-content-between mb-1" data-bind="using: BerryType[Wiki.pageName()]">
+                <div data-bind="with: App.game.farming.berryData[$data - 1]">
+                    <button class="btn btn-link btn-sm" type="button" style="text-decoration: none;"
+                        data-bind="text: `← ${BerryType[$data.type]}`, click: () => Wiki.gotoPage('Berries', BerryType[$data.type])"></button>
+                </div>
+                <div data-bind="with: BerryType[$data + 1]">
+                    <button class="btn btn-link btn-sm" type="button" style="text-decoration: none;"
+                        data-bind="text: `${$data} →`, click: () => Wiki.gotoPage('Berries', $data)"></button>
+                </div>
+            </div>
             <table class="table table-hover table-striped table-bordered">
                 <thead>
                     <tr>
@@ -44,14 +54,21 @@
                     <!-- ko if: Wiki.farm.getPrimaryMutation($data.type) -->
                     <tr>
                         <td>Mutation Chance</td>
-                        <td data-bind="text: (Wiki.farm.getPrimaryMutation($data.type)._mutationChance * 100) + '%'"></td>
+                        <td data-bind="text: parseFloat((Wiki.farm.getPrimaryMutation($data.type)._mutationChance * 100).toFixed(4).toString()) + '%'"></td>
                     </tr>
                     <!-- /ko -->
                     <tr>
-                        <td>Farm Points</td>
+                        <td>FP per Harvest</td>
                         <td>
                             <img src="./images/farmPoint.svg" width="18px"/>
                             <ko data-bind="text: $data.farmValue.toLocaleString()"></ko>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>FP per Wanderer</td>
+                        <td>
+                            <img src="./images/farmPoint.svg" width="18px"/>
+                            <ko data-bind="text: (Math.floor($data.farmValue / (4 + $data.growthTime[PlotStage.Bloom] / 1800))).toLocaleString()"></ko>
                         </td>
                     </tr>
                     <tr>

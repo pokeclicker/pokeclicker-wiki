@@ -1,6 +1,6 @@
-Diamonds [[File:diamond.svg|25px]] are currency that can be obtained in the [[Underground]] by selling certain items. They have uses both in and out of the [[Underground]].
+###### Currency: [[File:money.svg|18px]] [[Pokédollars]] • [[File:dungeonToken.svg|18px]] [[Dungeon Tokens]] • [[File:questPoint.svg|18px]] [[Quest Points]] • [[File:farmPoint.svg|18px]] [[Farm Points]] • [[File:diamond.svg|18px]]  **Diamonds** • [[File:battlePoint.svg|18px]] [[Battle Points]] {.alert .alert-secondary}
 
----
+#### Jump to:
+* [Uses](#uses)
 
-## Acquisition
-To maximize Diamond gain, study the [[Daily_Deals]] in the Underground and trade upwards to get items that are worth more. Heart Scales can usually be sold immediately since there is nothing more valuable (as of 0.5.7). An exception to this rule is doing [[Daily Deal Chains]] to obtain large quantities of items that will eventually sell for even more Diamonds.
+Diamonds [[File:diamond.svg|25px]] are a currency that can be obtained by selling Treasure Items. Treasure items can be found in the [[Underground]], dropped by wild Pokémon, and in [[Dungeons]].

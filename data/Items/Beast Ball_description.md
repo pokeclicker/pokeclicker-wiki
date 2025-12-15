@@ -1,1 +1,1 @@
->Can only be used on Ultra Beasts
+>Can only be used on Ultra Beasts. Ultra Beasts can only be caught using this ball.

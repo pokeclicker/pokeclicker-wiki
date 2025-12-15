@@ -14,6 +14,12 @@ Watmel has a chance of mutating when a Taller or later stage [[Berries/Magost]] 
 :::
 
 **Optimized Formation**
+
+:::collapsed  Watmel Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOjJ9LHsiYmVycnkiOjI3LCJhZ2UiOjI4ODAwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MjcsImFnZSI6Mjg4MDAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOjJ9LHsiYmVycnkiOjI3LCJhZ2UiOjI4ODAwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MjcsImFnZSI6Mjg4MDAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOjJ9LHsiYmVycnkiOjI3LCJhZ2UiOjI4ODAwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MjcsImFnZSI6Mjg4MDAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfV19fX0=`
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Magost.png\|32px]] [[Berries/Magost]] | [[File:Magost.png\|32px]] [[Berries/Magost]] | [[File:Magost.png\|32px]] [[Berries/Magost]] | [[File:Magost.png\|32px]] [[Berries/Magost]] | [[File:Magost.png\|32px]] [[Berries/Magost]] | |
@@ -36,6 +42,6 @@ Watmel Berries can mutate into the following Berries.
 ### Acquisition
 Watmel Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Pinkan Mountain]]      | Epic	    | `N/A`         |
+| [[Dungeons/Pinkan Mountain]]      | Kanto (Sevii Islands 4567) | Epic	    |

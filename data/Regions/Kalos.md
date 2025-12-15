@@ -1,4 +1,7 @@
-## Exclusive Pokémon
+
+---
+
+## Exclusive Pokémon {#exclusives}
 
 The following is a list of Pokémon obtainable in Kalos which cannot be found on Routes, in Dungeons, or through level-based evolutions of Pokémon caught in the region.
 
@@ -22,6 +25,7 @@ The following is a list of Pokémon obtainable in Kalos which cannot be found on
 
 ### Shopmons
 While Kalos has no mandatory Shopmons, there are some optional Pokémon available for purchase at [[Towns/Parfum Palace]] and [[Towns/Lumiose City]].
+Also, there may or may not be a Disguised Shop somewhere.
 
 ### Eggs
 All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries/Passho]], and [[Berries/Rindo]] berries.

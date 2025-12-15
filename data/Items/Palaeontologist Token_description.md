@@ -1,0 +1,2 @@
+### Acquisition
+Can be dug from a Special mine in the [Underground](#!Underground#special). Special mines have a 4% chance of happening when a player (not a helper) searches for a new mine. It can then be exchanged for [[Pokémon/Pikachu (Palaeontologist)]] or 750 Diamonds [[File:diamond.svg|25px]] at the Palaeontologist shop in [[Towns/Cinnabar Island]].

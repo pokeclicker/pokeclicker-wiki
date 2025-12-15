@@ -1,0 +1,1 @@
+The "Mystery Gift" NPC will offer you Magearna (Original Color) for completing all regional **Shiny Master** achievements from Kanto through Galar.

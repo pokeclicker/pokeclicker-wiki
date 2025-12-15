@@ -14101,18 +14101,75 @@ module.exports = function (opts) {
 
 const patternsConfig = require('./patterns.js');
 
+/**
+ * @typedef {import('markdown-it')} MarkdownIt
+ *
+ * @typedef {import('markdown-it/lib/rules_core/state_core.mjs').default} StateCore
+ *
+ * @typedef {import('markdown-it/lib/token.mjs').default} Token
+ *
+ * @typedef {import('markdown-it/lib/token.mjs').Nesting} Nesting
+ *
+ * @typedef {Object} Options
+ * @property {!string} leftDelimiter left delimiter, default is `{`(left curly bracket)
+ * @property {!string} rightDelimiter right delimiter, default is `}`(right curly bracket)
+ * @property {AllowedAttribute[]} allowedAttributes empty means no limit
+ *
+ * @typedef {string|RegExp} AllowedAttribute rule of allowed attribute
+ *
+ * @typedef {[string, string]} AttributePair
+ *
+ * @typedef {[number, number]} SourceLineInfo
+ *
+ * @typedef {Object} CurlyAttrsPattern
+ * @property {string} name
+ * @property {DetectingRule[]} tests
+ * @property {(tokens: Token[], i: number, j?: number) => void} transform
+ *
+ * @typedef {Object} MatchedResult
+ * @property {boolean} match true means matched
+ * @property {number?} j postion index number of Array<{@link Token}>
+ *
+ * @typedef {(str: string) => boolean} DetectingStrRule
+ *
+ * @typedef {Object} DetectingRule rule for testing {@link Token}'s properties
+ * @property {number=} shift offset index number of Array<{@link Token}>
+ * @property {number=} position fixed index number of Array<{@link Token}>
+ * @property {(string | DetectingStrRule)=} type
+ * @property {(string | DetectingStrRule)=} tag
+ * @property {DetectingRule[]=} children
+ * @property {(string | DetectingStrRule)=} content
+ * @property {(string | DetectingStrRule)=} markup
+ * @property {(string | DetectingStrRule)=} info
+ * @property {Nesting=} nesting
+ * @property {number=} level
+ * @property {boolean=} block
+ * @property {boolean=} hidden
+ * @property {AttributePair[]=} attrs
+ * @property {SourceLineInfo[]=} map
+ * @property {any=} meta
+ */
+
+/** @type {Options} */
 const defaultOptions = {
   leftDelimiter: '{',
   rightDelimiter: '}',
   allowedAttributes: []
 };
 
+/**
+ * @param {MarkdownIt} md
+ * @param {Options=} options_
+ */
 module.exports = function attributes(md, options_) {
   let options = Object.assign({}, defaultOptions);
   options = Object.assign(options, options_);
 
   const patterns = patternsConfig(options);
 
+  /**
+   * @param {StateCore} state
+   */
   function curlyAttrs(state) {
     const tokens = state.tokens;
 
@@ -14126,10 +14183,16 @@ module.exports = function attributes(md, options_) {
           return res.match;
         });
         if (match) {
-          pattern.transform(tokens, i, j);
-          if (pattern.name === 'inline attributes' || pattern.name === 'inline nesting 0') {
-            // retry, may be several inline attributes
-            p--;
+          try {
+            pattern.transform(tokens, i, j);
+            if (pattern.name === 'inline attributes' || pattern.name === 'inline nesting 0') {
+              // retry, may be several inline attributes
+              p--;
+            }
+          } catch (error) {
+            // eslint-disable-next-line no-console
+            console.error(`markdown-it-attrs: Error in pattern '${pattern.name}': ${error.message}`);
+            console.error(error.stack);
           }
         }
       }
@@ -14142,12 +14205,13 @@ module.exports = function attributes(md, options_) {
 /**
  * Test if t matches token stream.
  *
- * @param {array} tokens
+ * @param {Token[]} tokens
  * @param {number} i
- * @param {object} t Test to match.
- * @return {object} { match: true|false, j: null|number }
+ * @param {DetectingRule} t
+ * @returns {MatchedResult}
  */
 function test(tokens, i, t) {
+  /** @type {MatchedResult} */
   const res = {
     match: false,
     j: null  // position of child
@@ -14177,7 +14241,9 @@ function test(tokens, i, t) {
         return res;
       }
       let match;
+      /** @type {DetectingRule[]} */
       const childTests = t.children;
+      /** @type {Token[]} */
       const children = token.children;
       if (childTests.every(tt => tt.position !== undefined)) {
         // positions instead of shifts, do not loop all children
@@ -14240,14 +14306,19 @@ function isArrayOfFunctions(arr) {
 /**
  * Get n item of array. Supports negative n, where -1 is last
  * element in array.
- * @param {array} arr
+ * @param {Token[]} arr
  * @param {number} n
+ * @returns {Token=}
  */
 function get(arr, n) {
   return n >= 0 ? arr[n] : arr[arr.length + n];
 }
 
-// get last element of array, safe - returns {} if not found
+/**
+ * get last element of array, safe - returns {} if not found
+ * @param {DetectingRule[]} arr
+ * @returns {DetectingRule}
+ */
 function last(arr) {
   return arr.slice(-1)[0] || {};
 }
@@ -14261,6 +14332,10 @@ function last(arr) {
 
 const utils = require('./utils.js');
 
+/**
+ * @param {import('.').Options} options
+ * @returns {import('.').CurlyAttrsPattern[]}
+ */
 module.exports = options => {
   const __hr = new RegExp('^ {0,3}[-*_]{3,} ?'
                           + utils.escapeRegExp(options.leftDelimiter)
@@ -14313,6 +14388,9 @@ module.exports = options => {
           ]
         }
       ],
+      /**
+       * @param {!number} j
+       */
       transform: (tokens, i, j) => {
         const token = tokens[i].children[j];
         const endChar = token.content.indexOf(options.rightDelimiter);
@@ -14360,6 +14438,142 @@ module.exports = options => {
       }
     }, {
       /**
+       * | A | B |
+       * | -- | -- |
+       * | 1 | 2 |
+       *
+       * | C | D |
+       * | -- | -- |
+       *
+       * only `| A | B |` sets the colsnum metadata
+       */
+      name: 'tables thead metadata',
+      tests: [
+        {
+          shift: 0,
+          type: 'tr_close',
+        }, {
+          shift: 1,
+          type: 'thead_close'
+        }, {
+          shift: 2,
+          type: 'tbody_open'
+        }
+      ],
+      transform: (tokens, i) => {
+        const tr = utils.getMatchingOpeningToken(tokens, i);
+        const th = tokens[i - 1];
+        let colsnum = 0;
+        let n = i;
+        while (--n) {
+          if (tokens[n] === tr) {
+            tokens[n - 1].meta = Object.assign({}, tokens[n + 2].meta, { colsnum });
+            break;
+          }
+          colsnum += (tokens[n].level === th.level && tokens[n].type === th.type) >> 0;
+        }
+        tokens[i + 2].meta = Object.assign({}, tokens[i + 2].meta, { colsnum });
+      }
+    }, {
+      /**
+       * | A | B | C | D |
+       * | -- | -- | -- | -- |
+       * | 1 | 11 | 111 | 1111 {rowspan=3} |
+       * | 2 {colspan=2 rowspan=2} | 22 | 222 | 2222 |
+       * | 3 | 33 | 333 | 3333 |
+       */
+      name: 'tables tbody calculate',
+      tests: [
+        {
+          shift: 0,
+          type: 'tbody_close',
+          hidden: false
+        }
+      ],
+      /**
+       * @param {number} i index of the tbody ending
+       */
+      transform: (tokens, i) => {
+        /** index of the tbody beginning */
+        let idx = i - 2;
+        while (idx > 0 && 'tbody_open' !== tokens[--idx].type);
+
+        const calc = tokens[idx].meta.colsnum >> 0;
+        if (calc < 2) { return; }
+
+        const level = tokens[i].level + 2;
+        for (let n = idx; n < i; n++) {
+          if (tokens[n].level > level) { continue; }
+
+          const token = tokens[n];
+          const rows = token.hidden ? 0 : token.attrGet('rowspan') >> 0;
+          const cols = token.hidden ? 0 : token.attrGet('colspan') >> 0;
+
+          if (rows > 1) {
+            let colsnum = calc - (cols > 0 ? cols : 1);
+            for (let k = n, num = rows; k < i, num > 1; k++) {
+              if ('tr_open' == tokens[k].type) {
+                tokens[k].meta = Object.assign({}, tokens[k].meta);
+                if (tokens[k].meta && tokens[k].meta.colsnum) {
+                  colsnum -= 1;
+                }
+                tokens[k].meta.colsnum = colsnum;
+                num--;
+              }
+            }
+          }
+
+          if ('tr_open' == token.type && token.meta && token.meta.colsnum) {
+            const max = token.meta.colsnum;
+            for (let k = n, num = 0; k < i; k++) {
+              if ('td_open' == tokens[k].type) {
+                num += 1;
+              } else if ('tr_close' == tokens[k].type) {
+                break;
+              }
+              num > max && (tokens[k].hidden || hidden(tokens[k]));
+            }
+          }
+
+          if (cols > 1) {
+            /** @type {number[]} index of one row's children */
+            const one = [];
+            /** last index of the row's children */
+            let end = n + 3;
+            /** number of the row's children */
+            let num = calc;
+
+            for (let k = n; k > idx; k--) {
+              if ('tr_open' == tokens[k].type) {
+                num = tokens[k].meta && tokens[k].meta.colsnum || num;
+                break;
+              } else if ('td_open' === tokens[k].type) {
+                one.unshift(k);
+              }
+            }
+
+            for (let k = n + 2; k < i; k++) {
+              if ('tr_close' == tokens[k].type) {
+                end = k;
+                break;
+              } else if ('td_open' == tokens[k].type) {
+                one.push(k);
+              }
+            }
+
+            const off = one.indexOf(n);
+            let real = num - off;
+            real = real > cols ? cols : real;
+            cols > real && token.attrSet('colspan', real + '');
+
+            for (let k = one.slice(num + 1 - calc - real)[0]; k < end; k++) {
+              tokens[k].hidden || hidden(tokens[k]);
+            }
+          }
+        }
+      }
+    }, {
+      /**
        * *emphasis*{.with attrs=1}
        */
       name: 'inline attributes',
@@ -14379,6 +14593,9 @@ module.exports = options => {
           ]
         }
       ],
+      /**
+       * @param {!number} j
+       */
       transform: (tokens, i, j) => {
         const token = tokens[i].children[j];
         const content = token.content;
@@ -14412,6 +14629,9 @@ module.exports = options => {
           ]
         }
       ],
+      /**
+       * @param {!number} j
+       */
       transform: (tokens, i, j) => {
         const token = tokens[i].children[j];
         const content = token.content;
@@ -14482,6 +14702,9 @@ module.exports = options => {
           ]
         }
       ],
+      /**
+       * @param {!number} j
+       */
       transform: (tokens, i, j) => {
         const token = tokens[i].children[j];
         const content = token.content;
@@ -14513,6 +14736,9 @@ module.exports = options => {
           ]
         }
       ],
+      /**
+       * @param {!number} j
+       */
       transform: (tokens, i, j) => {
         const token = tokens[i].children[j];
         const attrs = utils.getAttrs(token.content, 0, options);
@@ -14574,12 +14800,15 @@ module.exports = options => {
           ]
         }
       ],
+      /**
+       * @param {!number} j
+       */
       transform: (tokens, i, j) => {
         const token = tokens[i].children[j];
         const content = token.content;
         const attrs = utils.getAttrs(content, content.lastIndexOf(options.leftDelimiter), options);
         let ii = i + 1;
-        while (tokens[ii + 1] && tokens[ii + 1].nesting === -1) { ii++; }
+        do if (tokens[ii] && tokens[ii].nesting === -1) { break; } while (ii++ < tokens.length);
         const openingToken = utils.getMatchingOpeningToken(tokens, ii);
         utils.addAttrs(attrs, openingToken);
         const trimmed = content.slice(0, content.lastIndexOf(options.leftDelimiter));
@@ -14595,12 +14824,36 @@ function last(arr) {
   return arr.slice(-1)[0];
 }
 
+/**
+ * Hidden table's cells and them inline children,
+ * specially cast inline's content as empty
+ * to prevent that escapes the table's box model
+ * @see https://github.com/markdown-it/markdown-it/issues/639
+ * @param {import('.').Token} token
+ */
+function hidden(token) {
+  token.hidden = true;
+  token.children && token.children.forEach(t => (
+    t.content = '',
+    hidden(t),
+    undefined
+  ));
+}
+
 },{"./utils.js":98}],98:[function(require,module,exports){
+/**
+ * @typedef {import('.').Token} Token
+ * @typedef {import('.').Options} Options
+ * @typedef {import('.').AttributePair} AttributePair
+ * @typedef {import('.').AllowedAttribute} AllowedAttribute
+ * @typedef {import('.').DetectingStrRule} DetectingStrRule
+ */
 /**
  * parse {.class #id key=val} strings
  * @param {string} str: string to parse
- * @param {int} start: where to start parsing (including {)
- * @returns {2d array}: [['key', 'val'], ['class', 'red']]
+ * @param {number} start: where to start parsing (including {)
+ * @param {Options} options
+ * @returns {AttributePair[]}: [['key', 'val'], ['class', 'red']]
  */
 exports.getAttrs = function (str, start, options) {
   // not tab, line feed, form feed, space, solidus, greater than sign, quotation mark, apostrophe and equals sign
@@ -14693,6 +14946,9 @@ exports.getAttrs = function (str, start, options) {
     return attrs.filter(function (attrPair) {
       const attr = attrPair[0];
 
+      /**
+       * @param {AllowedAttribute} allowedAttribute
+       */
       function isAllowedAttribute (allowedAttribute) {
         return (attr === allowedAttribute
           || (allowedAttribute instanceof RegExp && allowedAttribute.test(attr))
@@ -14709,8 +14965,8 @@ exports.getAttrs = function (str, start, options) {
 
 /**
  * add attributes from [['key', 'val']] list
- * @param {array} attrs: [['key', 'val']]
- * @param {token} token: which token to add attributes
+ * @param {AttributePair[]} attrs: [['key', 'val']]
+ * @param {Token} token: which token to add attributes
  * @returns token
  */
 exports.addAttrs = function (attrs, token) {
@@ -14734,8 +14990,9 @@ exports.addAttrs = function (attrs, token) {
  * end: 'asdf {.a}'
  * only: '{.a}'
  *
- * @param {string} where to expect {} curly. start, end or only.
- * @return {function(string)} Function which testes if string has curly.
+ * @param {'start'|'end'|'only'} where to expect {} curly. start, end or only.
+ * @param {Options} options
+ * @return {DetectingStrRule} Function which testes if string has curly.
  */
 exports.hasDelimiters = function (where, options) {
 
@@ -14754,6 +15011,9 @@ exports.hasDelimiters = function (where, options) {
       return false;
     }
 
+    /**
+     * @param {string} curly
+     */
     function validCurlyLength (curly) {
       const isClass = curly.charAt(options.leftDelimiter.length) === '.';
       const isId = curly.charAt(options.leftDelimiter.length) === '#';
@@ -14802,6 +15062,8 @@ exports.hasDelimiters = function (where, options) {
 
 /**
  * Removes last curly from string.
+ * @param {string} str
+ * @param {Options} options
  */
 exports.removeDelimiter = function (str, options) {
   const start = escapeRegExp(options.leftDelimiter);
@@ -14829,6 +15091,8 @@ exports.escapeRegExp = escapeRegExp;
 
 /**
  * find corresponding opening block
+ * @param {Token[]} tokens
+ * @param {number} i
  */
 exports.getMatchingOpeningToken = function (tokens, i) {
   if (tokens[i].type === 'softbreak') {
@@ -14864,10 +15128,18 @@ const HTML_REPLACEMENTS = {
   '"': '&quot;'
 };
 
+/**
+ * @param {string} ch
+ * @returns {string}
+ */
 function replaceUnsafeChar(ch) {
   return HTML_REPLACEMENTS[ch];
 }
 
+/**
+ * @param {string} str
+ * @returns {string}
+ */
 exports.escapeHtml = function (str) {
   if (HTML_ESCAPE_TEST_RE.test(str)) {
     return str.replace(HTML_ESCAPE_REPLACE_RE, replaceUnsafeChar);
@@ -77045,14 +77317,16 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":1,"call-bind":6,"call-bind/callBound":5,"for-each":62,"gopd":66,"has-tostringtag/shams":70}],502:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
-  "version": "0.10.19",
+  "version": "0.10.25",
   "description": "PokéClicker repository",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development gulp",
-    "test": "npm run ts-test && npm run eslint && npm run stylelint && npm run vitest",
-    "ts-test": "gulp scripts",
+    "build": "cross-env NODE_ENV=development gulp build",
+    "test": "npm-run-all --continue-on-error test-scripts eslint stylelint",
+    "test-scripts": "gulp scripts && npm run vitest-nocoverage",
     "vitest": "vitest --run",
+    "vitest-nocoverage": "vitest --run --coverage false",
     "eslint": "eslint --ext ts ./src/scripts ./src/modules",
     "eslint-fix": "eslint --ext ts --fix ./src/scripts ./src/modules",
     "stylelint": "stylelint \"./src/**/*.less\" --cache",
@@ -77069,7 +77343,7 @@ module.exports={
   },
   "babel": {
     "presets": [
-      "env"
+      "@babel/preset-env"
     ]
   },
   "author": "RedSparr0w",
@@ -77079,40 +77353,37 @@ module.exports={
   },
   "homepage": "https://github.com/pokeclicker/pokeclicker#readme",
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
     "@types/bootstrap": "^4.3.1",
     "@types/bootstrap-notify": "^3.1.34",
-    "@types/gtag.js": "0.0.4",
     "@types/intro.js": "^2.4.7",
     "@types/jquery": "^3.5.16",
     "@types/knockout": "^3.4.66",
     "@types/sortablejs": "^1.10.5",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",
-    "@vitest/coverage-c8": "^0.29.8",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0",
+    "@vitest/coverage-v8": "^3.1.3",
     "bootstrap-notify": "^3.1.3",
-    "browser-sync": "^2.28.3",
+    "browser-sync": "^3.0.2",
     "cross-env": "^7.0.2",
     "del": "^5.1.0",
     "es6-promise": "^4.2.8",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.22.1",
-    "gh-pages": "^4.0.0",
+    "gh-pages": "^6.1.1",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-changed": "^4.0.2",
     "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.0",
-    "gulp-connect": "^5.7.0",
     "gulp-ejs": "^5.1.0",
     "gulp-file-include": "^2.2.2",
     "gulp-filter": "^6.0.0",
-    "gulp-html-import": "^0.0.2",
-    "gulp-less": "^4.0.1",
-    "gulp-minify-css": "^1.2.1",
-    "gulp-minify-html": "^1.0.4",
+    "gulp-less": "^5.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.0.0",
@@ -77121,23 +77392,22 @@ module.exports={
     "gulp-stream-to-promise": "^0.1.0",
     "gulp-strip-debug": "^3.0.0",
     "gulp-typescript": "^5.0.1",
-    "gulp-util": "^3.0.7",
     "husky": "^4.3.8",
-    "natives": "^1.1.6",
+    "jsdom": "^25.0.0",
+    "npm-run-all2": "^6.2.0",
     "postcss-less": "^6.0.0",
     "stylelint": "^15.10.1",
     "stylelint-config-standard-less": "^1.0.0",
     "ts-loader": "^8.0.4",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5",
-    "vitest": "^0.29.8",
+    "vitest": "^3.1.3",
     "webpack": "^5.76.0",
     "webpack-cli": "^5.0.1",
-    "webpack-stream": "^6.1.0"
+    "webpack-stream": "^7.0.0"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
-    "eslint": "^7.4.0",
     "i18next": "^21.9.2",
     "i18next-browser-languagedetector": "^6.1.5",
     "i18next-chained-backend": "^3.1.0",
@@ -77147,6 +77417,9 @@ module.exports={
     "knockout": "^3.5.1",
     "popper.js": "^1.16.0",
     "sortablejs": "^1.10.2"
+  },
+  "overrides": {
+    "clean-css": ">=5.3.1"
   }
 }
 
@@ -77167,6 +77440,15 @@ function PokemonSummary(params) {
 ko.components.register('pokemon-summary', {
   viewModel: PokemonSummary,
   template: { fromUrl: 'pokemon-summary' },
+});
+
+function GenericDeal(params) {
+  this.model = params.model;
+}
+
+ko.components.register('generic-deal-item', {
+  viewModel: GenericDeal,
+  template: { fromUrl: 'generic-deal-item' },
 });
 
 },{}],504:[function(require,module,exports){
@@ -77322,8 +77604,11 @@ themes.options.sort((a, b) => (a.text).localeCompare(b.text));
 // Suppress game notifications
 Notifier.notify = () => {};
 
-// Ensure weather never satisfies requirements so they are always shown
-Weather.currentWeather = () => -1;
+// Ensure requirements are never satisfied so they are always shown
+Requirement.prototype.isCompleted = () => false;
+
+// Not sure why but this was causing an error on load after the v0.10.22 update
+SortModules = () => {};
 
 // Custom binds as these aren't loaded
 player = new Player();
@@ -77370,11 +77655,12 @@ BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 AchievementHandler.initialize(multiplier, new Challenges());
 
-DailyDeal.generateDeals(5, now);
 BerryDeal.generateDeals(now);
-GemDeal.generateDeals();
+GemDeals.generateDeals();
 ShardDeal.generateDeals();
+GenericDeal.generateDeals();
 SafariPokemonList.generateSafariLists(); // This needs to be after anything that generates shopmon due to Friend Safari calcs
+Weather.generateWeather(now);
 
 // Farm Simulator
 App.game.farming.plotList.forEach((p) => p.isUnlocked = true); // All plots unlocked
@@ -77438,7 +77724,7 @@ const requirementHints = (requirement, includeMarkdown = true) => {
             let hint = req.hint();
             switch (req.constructor) {
                 case RouteKillRequirement:
-                    const routeName = Routes.getName(req.route, req.region, true);
+                    const routeName = Routes.getName(req.route, req.region, false);
                     hint = `Defeat ${req.requiredValue} or more Pokémon on ${includeMarkdown ? `[[Routes/${routeName}]]` : routeName}.`;
                     break;
                 case ClearDungeonRequirement:
@@ -77449,17 +77735,19 @@ const requirementHints = (requirement, includeMarkdown = true) => {
                     break;
                 case QuestLineStepCompletedRequirement:
                     if (typeof req.questIndex === 'function') {
-                        hint = req.option == GameConstants.AchievementOption.equal
+                        hint = req.option == GameConstants.AchievementOption.equal || req.option == GameConstants.AchievementOption.more
                             ? `Progress in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
                             : `Have not progessed to a certain step in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
                     } else {
-                        hint = req.option == GameConstants.AchievementOption.equal
+                        hint = req.option == GameConstants.AchievementOption.equal || req.option == GameConstants.AchievementOption.more
                             ? `Complete step ${req.questIndex + 1} in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
                             : `Have not completed step ${req.questIndex + 1} in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
                     }
                     break;
                 case QuestLineCompletedRequirement:
-                    hint = `Complete the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
+                    hint = req.option >= GameConstants.AchievementOption.equal
+                        ? `Complete the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
+                        : `No longer appears after completing the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
                     break;
                 case GymBadgeRequirement:
                     hint = req.option == GameConstants.AchievementOption.more
@@ -77472,13 +77760,26 @@ const requirementHints = (requirement, includeMarkdown = true) => {
                 case SpecialEventRequirement:
                     hint = `The ${includeMarkdown ? `[[Events/${req.specialEventName}]]` : req.specialEventName} event must be active.`;
                     break;
+                case DayOfWeekRequirement:
+                    hint = `Appears every ${GameConstants.DayOfWeek[req.DayOfWeekNum]}.`;
+                    break;
                 case DevelopmentRequirement:
                     hint = 'Not currently available.'
                     break;
+                case PokemonDefeatedSelectNRequirement:
+                    hint = null;
+                    break;
             }
-            hints.push(hint);
+
+            if (hint?.length) {
+                hints.push(hint);
+            }
         }
     });
+
+    if (requirement.some((req) => req instanceof PokemonDefeatedSelectNRequirement)) { // show last
+        hints.push('Has a chance to appear here; randomly changes locations after being defeated.');
+    }
 
     return hints;
 };
@@ -77489,59 +77790,71 @@ const getEvolutionHints = (evoData) => {
     }
 
     const hints = [];
-    const restrictions = evoData.restrictions;
+    const restrictions = evoData.restrictions.filter(r => {
+        // Filter Everstone from restrictions so it doesn't show up in hints
+        if (r.itemName == 'Everstone') {
+            return false;
+        }
+        return true;
+    });
     const listFormatter = new Intl.ListFormat('en', { type: 'disjunction' });
 
     let hint = '';
     // Base Evo type (Level or Stone)
     if (isLevelEvolution(evoData)) {
         const levelReq = getRequirementFromRestrictions(restrictions, 'PokemonLevelRequirement');
-        hint = levelReq.requiredValue == 1 ? `Hatch ${levelReq.pokemon}` : `${levelReq.pokemon} must reach level ${levelReq.requiredValue}`;
+        hint = levelReq.requiredValue == 1 ? `Hatch or feed a Rare Candy to ${levelReq.pokemon}` : `${levelReq.pokemon} must reach level ${levelReq.requiredValue}`;
     } else if (isStoneEvolution(evoData)) {
         const stone = ItemList[GameConstants.StoneType[evoData.stone]]._displayName;
         hint = `Requires using ${GameHelper.anOrA(stone)} ${stone}`;
     }
 
     // Additional restrictions
-    if (isDungeonRestrictedEvolution(evoData)) {
+    if (isDungeonRestrictedEvolution(restrictions)) {
         const dungeonReq = getRequirementFromRestrictions(restrictions, 'InDungeonRequirement');
         hint += ` in the ${dungeonReq.dungeon} dungeon`;
     }
 
-    if (isTimeRestrictedEvolution(evoData)) {
+    if (isTimeRestrictedEvolution(restrictions)) {
         const timeReq = getRequirementFromRestrictions(restrictions, 'DayCyclePartRequirement');
         hint += ` while the time is ${listFormatter.format(timeReq.dayCycleParts.map((t) => DayCyclePart[t]))}`;
     }
 
-    if (isEnvironmentRestrictedEvolution(evoData)) {
+    if (isEnvironmentRestrictedEvolution(restrictions)) {
         const envReq = getRequirementFromRestrictions(restrictions, 'InEnvironmentRequirement');
-        hint += ` in ${GameHelper.anOrA(envReq.environment)} ${envReq.environment} environment`;
+        hint += ` in ${GameHelper.anOrA(envReq.environment)} ${GameConstants.camelCaseToString(envReq.environment)} environment`;
     }
 
-    if (isQuestLineRestrictedEvolution(evoData)) {
-        const questReq = getRequirementFromRestrictions(restrictions, 'QuestLineRequirement');
+    if (isQuestLineRestrictedEvolution(restrictions)) {
+        const questReq = getRequirementFromRestrictions(restrictions, 'QuestLineCompletedRequirement');
         hint += ` after completing the ${questReq.questLineName} quest line`;
     };
 
-    if (isInRegionRestrictedEvolution(evoData)) {
+    if (isInRegionRestrictedEvolution(restrictions)) {
         const inRegionReq = getRequirementFromRestrictions(restrictions, 'InRegionRequirement');
         hint += ` in the ${listFormatter.format(inRegionReq.regions.map(r => getRegionName(r)))} region`;
     }
 
-    if (isWeatherRestrictedEvolution(evoData)) {
+    if (isWeatherRestrictedEvolution(restrictions)) {
         const weatherReq = getRequirementFromRestrictions(restrictions, 'WeatherRequirement');
-        hint += ` during ${listFormatter.format(weatherReq.weather.map(w => WeatherType[w]))} weather`;
+        hint += ` during ${listFormatter.format(weatherReq.weather.map(w => GameConstants.humanifyString(WeatherType[w])))} weather`;
     }
 
-    if (isHeldItemRestrictedEvolution(evoData)) {
+    if (isHeldItemRestrictedEvolution(restrictions)) {
         const itemReq = getRequirementFromRestrictions(restrictions, 'HoldingItemRequirement');
         hint += ` while holding ${GameHelper.anOrA(itemReq.itemName)} ${GameConstants.humanifyString(itemReq.itemName)}`;
     }
 
-    if (isMegaEvolution(evoData)) {
+    if (isMegaEvolution(restrictions)) {
         const megaReq = getRequirementFromRestrictions(restrictions, 'MegaEvolveRequirement');
         const requiredAttack = pokemonMap[megaReq.name].attack * GameConstants.MEGA_REQUIRED_ATTACK_MULTIPLIER;
         hint += ` after obtaining ${GameConstants.humanifyString(GameConstants.MegaStoneType[megaReq.megaStone])} and ${megaReq.name} has ${requiredAttack.toLocaleString()} or more attack`;
+    }
+
+    if (isRequiredAttackEvolution(restrictions)) {
+        const req = getRequirementFromRestrictions(restrictions, 'PokemonAttackRequirement');
+        const requiredAttack = pokemonMap[req.pokemon].attack * req.requiredValue;
+        hint += ` when it has ${requiredAttack.toLocaleString()} or more attack`;
     }
 
     if (hint.length) {
@@ -77570,37 +77883,41 @@ const isStoneEvolution = (evoData) => {
     return evoData.trigger == EvoTrigger.STONE;
 };
 
-const isDungeonRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['InDungeonRequirement']);
+const isDungeonRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['InDungeonRequirement']);
 };
 
-const isTimeRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['DayCyclePartRequirement']);
+const isTimeRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['DayCyclePartRequirement']);
 };
 
-const isEnvironmentRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['InEnvironmentRequirement']);
+const isEnvironmentRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['InEnvironmentRequirement']);
 };
 
-const isQuestLineRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['QuestLineRequirement']);
+const isQuestLineRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['QuestLineCompletedRequirement']);
 }
 
-const isInRegionRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['InRegionRequirement']);
+const isInRegionRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['InRegionRequirement']);
 };
 
-const isWeatherRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['WeatherRequirement']);
+const isWeatherRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['WeatherRequirement']);
 };
 
-const isHeldItemRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['HoldingItemRequirement']);
+const isHeldItemRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['HoldingItemRequirement']);
 };
 
-const isMegaEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['MegaEvolveRequirement']);
+const isMegaEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['MegaEvolveRequirement']);
 };
+
+const isRequiredAttackEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['PokemonAttackRequirement']);
+}
 
 const hasEvoRestrictions = (restrictions, requirements) => {
     return requirements.every(req => restrictions.some(res => res.constructor.name == req));
@@ -77701,6 +78018,15 @@ const setMapLocation = (selector) => {
     }
 }
 
+const getSafariSpriteId = (safariEncounter) => {
+    const pokemon = PokemonHelper.getPokemonByName(safariEncounter.name);
+    switch (safariEncounter.sprite) {
+        case 'base' : return Math.floor(pokemon.id);
+        case 'self' : return pokemon.id;
+        default : return PokemonHelper.getPokemonByName(safariEncounter.sprite).id;
+    }
+}
+
 module.exports = {
     requirementHints,
     getEvolutionHints,
@@ -77708,6 +78034,7 @@ module.exports = {
     getLocationOverlaySVG,
     getRouteOverlaySVG,
     overlaySVG,
+    getSafariSpriteId,
 }
 
 },{}],508:[function(require,module,exports){
@@ -77733,15 +78060,22 @@ window.Wiki = {
   shopMon: require('./pages/shopMon'),
   dungeonTokens: require('./pages/dungeonTokens'),
   oakItems: require('./pages/oakItems'),
+  gems: require('./pages/gems'),
   getDealChains: require('./pages/dealChains').getDealChains,
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":502,"./components":503,"./datatables":504,"./discord":505,"./game":506,"./gameHelper":507,"./markdown-renderer":514,"./navigation":515,"./notifications":516,"./pages/dealChains":517,"./pages/dreamOrbs":518,"./pages/dungeonTokens":519,"./pages/dungeons":520,"./pages/farm":521,"./pages/farmSimulator":522,"./pages/items":523,"./pages/oakItems":524,"./pages/pokemon":525,"./pages/shopMon":526,"./typeahead":528}],509:[function(require,module,exports){
+},{"../pokeclicker/package.json":502,"./components":503,"./datatables":504,"./discord":505,"./game":506,"./gameHelper":507,"./markdown-renderer":514,"./navigation":515,"./notifications":516,"./pages/dealChains":517,"./pages/dreamOrbs":518,"./pages/dungeonTokens":519,"./pages/dungeons":520,"./pages/farm":521,"./pages/farmSimulator":522,"./pages/gems":523,"./pages/items":524,"./pages/oakItems":525,"./pages/pokemon":526,"./pages/shopMon":527,"./typeahead":529}],509:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const getContent = (editor) => editor.value().split('\n').map(l => l.trimEnd()).join('\n');
 const getOriginalContent = (editor) => editor._rendered.value.split('\n').map(l => l.trimEnd()).join('\n');
+
+// list of discord ids banned from editing the wiki
+const banList = [
+  '516241570853552129', // primorollins (repeatedly editing a page after being told to stop)
+  '1320473652361433161' // the_spectrumyt_70106 (making unwanted page edits, not in discord to tell to stop)
+];
 
 const saveChanges = (editor, filename, btn) => {
   const content = getContent(editor);
@@ -77752,6 +78086,10 @@ const saveChanges = (editor, filename, btn) => {
     Wiki.alert('No file changes detected..', 'warning', 3e3);
     btn.classList.remove('disabled');
     btn.innerText = 'Save Changes';
+    return;
+  }
+
+  if (banList.includes(Wiki.discord.ID())) {
     return;
   }
 
@@ -77945,7 +78283,7 @@ const md = new markdownit({
   .use(require('markdown-it-attrs'), {
     leftDelimiter: '{',
     rightDelimiter: '}',
-    allowedAttributes: ['id', 'class'],
+    allowedAttributes: ['id', 'class', 'data-sort', 'data-order'],
   })
   .use(require('markdown-it-mathjax3'))
   .use(require('markdown-it-container'), 'text-center')
@@ -77967,7 +78305,7 @@ const md = new markdownit({
         const startCollapsed = m[0].startsWith('collapsed');
         // opening tag
         return `
-        <div class="accordion accordion-flush">
+        <div class="accordion">
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button class="accordion-button ${startCollapsed ? 'collapsed' : ''}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${randID}" aria-expanded="true">
@@ -78040,6 +78378,23 @@ const gotoPage = (type, name, other, noHistory) => {
   window.location.hash = hash;
 };
 
+const gotoPageClick = (event, type, name, other) => {
+  if (event.ctrlKey) { // don't navigate when holding CTRL key
+    return true;
+  }
+  gotoPage(type, name, other);
+  return false;
+}
+
+scrollToId = (id) => {
+  const el = document.getElementById(id);
+  if (el) {
+    const navEl = document.getElementById('nav-bar');
+    const y = (el?.getBoundingClientRect()?.top || 0) - (navEl?.scrollHeight || 0)
+    scrollBy(0, y);
+  }
+}
+
 // When the hash changes, we will load the new page
 // This also allows us to go forwards and back in history
 onhashchange = (event) => {
@@ -78050,15 +78405,13 @@ onhashchange = (event) => {
     // Change the url back to the current page
     location.hash = event.oldURL.replace(/.*#!/, '#!');
     // Scroll to the element they wanted to view
-    const el = document.getElementById(event.newURL.replace(/.*#/, ''));
-    if (el) {
-      const navEl = document.getElementById('nav-bar');
-      const y = (el?.getBoundingClientRect()?.top || 0) - (navEl?.scrollHeight || 0)
-      scrollBy(0, y);
-    }
+    scrollToId(event.newURL.replace(/.*#/, ''));
     return;
   }
-  let [ type, name, other ] = event.newURL.replace(/.*#!/, '').split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
+  
+  const [match, path, _scrollElem] = (/.*#!([^#]*)#?(.*)/).exec(event.newURL) ?? [];
+  const scrollElem = _scrollElem?.endsWith('/') ? _scrollElem.slice(0,-1) : _scrollElem
+  let [ type, name, other ] = path.split('/').map(i => decodeURI(i || '').replace(/_/g, ' '));
   if (type == 'loading') {
     return;
   }
@@ -78095,6 +78448,7 @@ onhashchange = (event) => {
   $.get(page, (data) => {
     pageElement.html(data);
     applyBindings(true);
+    scrollToId(scrollElem)
   }).fail(() => {
     pageType('Page not found');
     pageName('');
@@ -78111,6 +78465,7 @@ onhashchange = (event) => {
       pageElementCustom.html(`<textarea id="custom-edit">${data}</textarea>`);
     } else {
       pageElementCustom.html(md.render(data));
+      scrollToId(scrollElem)
     }
   }).fail(() => {
     if (other == 'edit') {
@@ -78134,6 +78489,7 @@ onhashchange = (event) => {
       pageElementCustomDescription.html(`<textarea id="custom-edit-desc">${data}</textarea>`);
     } else {
       pageElementCustomDescription.html(md.render(data));
+      scrollToId(scrollElem)
     }
   }).fail(() => {
     if (other == 'edit') {
@@ -78176,6 +78532,28 @@ $(document).ready(() => {
   });
 });
 
+// clickable table rows - handle middle clicking
+$(document).on('mousedown', 'tr.clickable', (e) => {
+  // disable the auto scroll toggle from middle clicking
+  if (e.button == 1 && $(e.currentTarget).data('href')) {
+    e.preventDefault();
+    return false;
+  }
+});
+
+$(document).on('mouseup', 'tr.clickable', (e) => {
+  if (e.target.tagName == 'A') {
+    return true;
+  }
+
+  if (e.button == 1 || (e.button == 0 && e.ctrlKey)) {
+    const href = $(e.currentTarget).data('href');
+    if (href) {
+      window.open(href, '_blank');
+    }
+  }
+});
+
 // Save any settings the user has set before they leave
 window.onbeforeunload = () => {
   Settings.saveDefault();
@@ -78185,9 +78563,10 @@ module.exports = {
     pageType,
     pageName,
     gotoPage,
+    gotoPageClick,
 };
 
-},{"./datatables":504,"./markdown-editor":509,"./markdown-renderer":514,"./redirections":527}],516:[function(require,module,exports){
+},{"./datatables":504,"./markdown-editor":509,"./markdown-renderer":514,"./redirections":528}],516:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -78459,7 +78838,7 @@ const highestRoute = (region, weather) => {
         const GBMB = (DT* (catchChanceAV+.15))/(2);
         const UB = (DT* (catchChanceAV+.1))/(1.75)
         const UBMB = (DT* (catchChanceAV+.2))/(1.75);
-        routeArr.push( [Routes.getRoute(region,route.number).routeName, DT.toLocaleString(), +(PB). toFixed(2), +(PBMB). toFixed(2), +(GB). toFixed(2), +(GBMB). toFixed(2), +(UB). toFixed(2), +(UBMB). toFixed(2)] );
+        routeArr.push([Routes.getRoute(region,route.number).routeName, DT.toLocaleString(), +(PB).toFixed(2), +(PBMB).toFixed(2), +(GB).toFixed(2), +(GBMB).toFixed(2), +(UB).toFixed(2), +(UBMB).toFixed(2)])
     })
 
     var highestPB = routeArr.reduce((max, dt) => {
@@ -78896,16 +79275,11 @@ module.exports = {
 };
 
 },{}],522:[function(require,module,exports){
-const selectedPlot = ko.observable(undefined);
-const selectedPlotIndex = ko.observable(undefined);
+const selectedPlotIndex = ko.observable(12);
+const selectedPlot = ko.pureComputed(() => App.game.farming.plotList[selectedPlotIndex()]);
 const plotLabelsEnabled = ko.observable(false);
-
-const selectPlot = (plotIndex) => {
-    selectedPlot(App.game.farming.plotList[plotIndex]);
-    selectedPlotIndex(plotIndex);
-    $('#plotList > .plot > .plot-content').removeClass('selected');
-    $(`#plotList > .plot:eq(${plotIndex}) > .plot-content`).addClass('selected');
-};
+const importSaveDataText = ko.observable('');
+const berrySearch = ko.observable('');
 
 const getImage = (plot) => {
     if (plot.berry === BerryType.None) {
@@ -79113,49 +79487,52 @@ const clearAllPlots = () => {
 
 const exportFarm = () => {
     const data = {
-        plots: App.game.farming.plotList.map((plot) => {
-            return {
-                berry: plot.berry,
-                age: plot.age,
-                mulch: plot.mulch,
-            };
-        }),
-        oakItems: {},
+        save: {
+            farming: {
+                plotList: App.game.farming.plotList.map((plot) => {
+                    return {
+                        berry: plot.berry,
+                        age: plot.age,
+                        mulch: plot.mulch,
+                    };
+                })
+            }
+        }
     };
-
-    [OakItemType.Sprayduck, OakItemType.Squirtbottle].forEach((t) => {
-        const oakItem = App.game.oakItems.itemList[t];
-        data.oakItems[t] = {
-            level: oakItem.level,
-            active: oakItem.isActive,
-        };
-    });
 
     prompt('Save the below text to restore the farm to this state.', btoa(JSON.stringify(data)));
 };
 
-const importFarmPrompt = () => {
-    const input = prompt();
-    if (input) {
-        importFarm(input);
+const importFarm = (saveData) => {
+    const plotList = saveData.save?.farming?.plotList ?? saveData.plots; // saveData.plots = old export format
+    if (!plotList) {
+        console.error('Invalid import format');
+        return;
     }
+
+    App.game.farming.plotList.forEach((plot, idx) => {
+        plot._berry(plotList[idx].berry);
+        plot._age(plotList[idx].age);
+        plot._mulch(plotList[idx].mulch);
+    });
 };
 
-const importFarm = (str) => {
-    const data = JSON.parse(atob(str));
-    App.game.farming.plotList.forEach((plot, idx) => {
-        plot._berry(data.plots[idx].berry);
-        plot._age(data.plots[idx].age);
-        plot._mulch(data.plots[idx].mulch);
-    });
-    Object.keys(data.oakItems).forEach((key) => {
-        const oakItem = App.game.oakItems.itemList[key];
-        if (oakItem) {
-            oakItem.level = data.oakItems[key].level;
-            oakItem.isActive = data.oakItems[key].active;
-        }
-    });
+const importFromText = () => {
+    const saveData = JSON.parse(atob(importSaveDataText()));
+    importFarm(saveData);
+    importSaveDataText('');
+    $('#loadFromTextModal').modal('hide');
 };
+
+const importFromFile = (file) => {
+    fileReader.readAsText(file);
+};
+
+const fileReader = new FileReader();
+fileReader.addEventListener('load', () => {
+    const saveData = JSON.parse(atob(fileReader.result));
+    importFarm(saveData);
+});
 
 let contextMenuSetup = false;
 let copiedPlot = { berry: BerryType.None, age: 0, mulch: MulchType.None };
@@ -79187,10 +79564,21 @@ const showPlotContextMenu = (event, plotIndex) => {
     }).data('plot-index', plotIndex).show();
 };
 
+const berryList = ko.pureComputed(() => {
+    const searchVal = berrySearch()?.toLowerCase();
+    const berries = GameHelper.enumSelectOption(BerryType);
+    if (!berrySearch) {
+        return berries;
+    }
+    return berries.filter((berry) => berry.name.toLowerCase().includes(searchVal));
+});
+
 module.exports = {
     selectedPlot,
+    selectedPlotIndex,
     plotLabelsEnabled,
-    selectPlot,
+    importSaveDataText,
+    berrySearch,
     getImage,
     setPlotBerry,
     setPlotStage,
@@ -79211,11 +79599,178 @@ module.exports = {
     getReceivedAuras,
     clearAllPlots,
     exportFarm,
-    importFarmPrompt,
+    importFromText,
+    importFromFile,
     showPlotContextMenu,
+    berryList,
 }
 
 },{}],523:[function(require,module,exports){
+// routeAvgHp copied from PokemonFactory.generateWildPokemon
+const routeAvgHp = (region, route) => {
+    const poke = [...new Set(Object.values(Routes.getRoute(region, route).pokemon).flat().map(p => p.pokemon ?? p).flat())];
+    const total = poke.map(p => pokemonMap[p].base.hitpoints).reduce((s, a) => s + a, 0);
+    return total / poke.length;
+};
+
+const getStandardEncounters = (route) => {
+    return Object.values(route.pokemon).flat().filter((p) => typeof p === 'string');
+}
+
+const maxRouteHp = (regionRoutes, routeName) => {
+    const route = regionRoutes.find((r) => r.routeName === routeName);
+    const allMons = getStandardEncounters(route);
+    const maxHpStat = Math.max(...allMons.map((p) => PokemonHelper.getPokemonByName(p).hitpoints));
+    return Math.round(PokemonFactory.routeHealth(route.number, route.region) * (0.9 + (maxHpStat / routeAvgHp(route.region, route.number)) / 10));
+}
+
+const maxGymHp = (gymName) => {
+    return Math.max(...GymList[gymName].pokemons.map((p) => p.maxHealth));
+}
+
+const gemsPerPokemon = (pokemonName, gemType) => {
+    const pokemon = PokemonHelper.getPokemonByName(pokemonName);
+    const targetType = PokemonType[gemType];
+    if (pokemon.type2 === PokemonType.None) {
+        return pokemon.type1 === targetType ? 2 : 0;
+    } else {
+        return (pokemon.type1 === targetType || pokemon.type2 === targetType) ? 1 : 0;
+    }
+}
+
+const gemsPerGymEncounter = (gymName, gemType) => {
+    const gym = GymList[gymName];
+    const totalMons = gym.pokemons.length;
+    const totalGemsOfType = gym.pokemons.reduce((acc, p) => acc + 5 * gemsPerPokemon(p.name, gemType), 0);
+    return totalGemsOfType / totalMons;
+}
+
+const gemsPerRouteEncounter = (route, gemType) => {
+    const allMons = getStandardEncounters(route);
+    const totalMons = allMons.length;
+    const totalGemsOfType = allMons.reduce((acc, p) => acc + gemsPerPokemon(p, gemType), 0);
+    return totalGemsOfType / totalMons;
+}
+
+const gemGymsPerFlute = (fluteType) => {
+    const gemTypes = ItemList[fluteType]?.gemTypes || [];
+    const validGyms = [];
+
+    for (const name of Object.keys(GymList)) {
+        const region = GameConstants.getGymRegion(name);
+        if (region > GameConstants.MAX_AVAILABLE_REGION && region < GameConstants.Region.final) {
+            continue;
+        }
+
+        const gems = gemTypes.map(type => ({ type, amount: gemsPerGymEncounter(name, type) || 0 }));
+        const totalGems = gems.reduce((sum, gem) => sum + gem.amount, 0);
+
+        if (totalGems <= 0) {
+            continue;
+        }
+
+        const displayName = GymList[name].pokemons.some(p => p.requirements.length > 0) ? `${name}*` : name;
+        validGyms.push({ displayName, name, gems, totalGems });
+    }
+
+    return validGyms.sort((a, b) => b.totalGems - a.totalGems);
+}
+
+const bestGemsPerRegion = (region, gemType) => {
+    const regionRoutes = Routes.regionRoutes.filter((r) => r.region == region);
+    const allRouteGems = regionRoutes.map((route) => ({
+        battleType: "Route",
+        name: route.routeName,
+        gemsPerEncounter: gemsPerRouteEncounter(route, gemType),
+    }));
+
+    const regionGyms = GameConstants.RegionGyms[region].filter((g) => !g.includes('Trial'));
+    const allGymGems = regionGyms.map((gym) => ({
+        battleType: "Gym",
+        name: gym,
+        gemsPerEncounter: gemsPerGymEncounter(gym, gemType),
+    }));
+
+    return allRouteGems.concat(allGymGems)
+        .filter((battle) => battle.gemsPerEncounter > 0)
+        .sort((a, b) => b.gemsPerEncounter - a.gemsPerEncounter)
+        .splice(0, 2)
+        .map((gemData) => {
+            gemData.maxHealth = gemData.battleType === "Route" ? maxRouteHp(regionRoutes, gemData.name) : maxGymHp(gemData.name);
+            return gemData;
+        });
+}
+
+const bestCaptureRoutesPerRegion = (region, type) => {
+    const regionRoutes = Routes.regionRoutes.filter((r) => r.region == region);
+    const currentWeather = Weather.regionalWeather[region]();
+    const today = GameHelper.today().getDay();
+    const allRegionRoutesTypeCatchChance = regionRoutes.map((route) => {
+        const normalEncounters = getStandardEncounters(route);
+        const specialEncounters = route.pokemon.special.flatMap((special) => {
+            if (special.req instanceof OneFromManyRequirement || special.req instanceof SpecialEventRandomRequirement) {
+                // OneFromMany is Santa Jynx only
+                return [];
+            }
+            if (special.req instanceof WeatherRequirement) {
+                return special.req.weather.includes(currentWeather) ? special.pokemon : [];
+            }
+            if (special.req instanceof DayOfWeekRequirement) {
+                return special.req.DayOfWeekNum === today ? special.pokemon : [];
+            }
+            if (special.req instanceof MultiRequirement) {
+                // This might not cover all permutations of requirements
+                if (special.req.requirements.find((req) => req instanceof SpecialEventRequirement)) return [];
+                const weatherReq = special.req.requirements.find((req) => req instanceof WeatherRequirement);
+                if (weatherReq) return weatherReq.weather.includes(currentWeather) ? special.pokemon : [];
+                const dayReq = special.req.requirements.find((req) => req instanceof DayOfWeekRequirement);
+                if (dayReq) return dayReq.DayOfWeekNum === today ? special.pokemon : [];
+            }
+            return special.pokemon
+        });
+
+        const allEncounters = normalEncounters.concat(specialEncounters);
+        const typeCatchChances = allEncounters.map((p) => {
+            const pokemon = PokemonHelper.getPokemonByName(p);
+            return (pokemon.type1 === type || pokemon.type2 === type) ? PokemonFactory.catchRateHelper(pokemon.catchRate, true) : 0;
+        });
+        return {
+            route: route,
+            catchChances: typeCatchChances,
+        };
+    });
+
+    const allRoutesWithType = allRegionRoutesTypeCatchChance.filter((route) => route.catchChances.some((chance) => chance > 0));
+    const allRoutesWithCatchBonuses = allRoutesWithType.map((route) => {
+        const encounters = route.catchChances.length;
+        return {
+            route: route.route,
+            pokeball: route.catchChances.reduce((a, b) => a + b, 0) / encounters,
+            ultraball: route.catchChances.map((chance) => chance > 0 ? chance + 10 : chance).reduce((a, b) => a + b, 0) / encounters,
+            ultraballMagicBall: route.catchChances.map((chance) => chance > 0 ? chance + 20 : chance).reduce((a, b) => a + b, 0) / encounters,
+        }
+    });
+    return allRoutesWithCatchBonuses
+        .sort((a, b) => b.ultraballMagicBall - a.ultraballMagicBall)
+        .splice(0, 2)
+        .map((route) => {
+            return {
+                ...route,
+                weather: currentWeather,
+                today: today,
+                maxHealth: maxRouteHp(regionRoutes, route.route.routeName),
+            }
+        });
+}
+
+
+module.exports = {
+    bestGemsPerRegion,
+    bestCaptureRoutesPerRegion,
+    gemGymsPerFlute
+}
+
+},{}],524:[function(require,module,exports){
 const getItemName =  (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
@@ -79298,6 +79853,20 @@ const getItemCategoryAndPageFromObject = (item) => {
     }
 };
 
+const getTownsWithTradesForItem = (itemName) => {
+    return Object.values(TownList).filter(t => t.content.some(c => {
+        if (c instanceof ShardTraderShop && ShardDeal.list[c.location]?.().some(d => d.item.itemType.name == itemName)) {
+            return true;
+        }
+
+        if (c instanceof GenericTraderShop && GenericDeal.list[c.traderID]?.().some(d => d._profits.some(p => p.item?.name == itemName))) {
+            return true;
+        }
+
+        return false;
+    }));
+};
+
 module.exports = {
     getItemName,
     getItemImage,
@@ -79305,9 +79874,10 @@ module.exports = {
     getItemCategoryAndPageFromTypeAndId,
     getItemPageFromObject,
     getItemCategoryAndPageFromObject,
+    getTownsWithTradesForItem,
 };
 
-},{}],524:[function(require,module,exports){
+},{}],525:[function(require,module,exports){
 const getOakItemBonus = (oakItem, level) => {
     const bonus = oakItem.bonusList[level];
     switch (oakItem.name) {
@@ -79326,11 +79896,11 @@ const getOakItemBonus = (oakItem, level) => {
         case OakItemType.Blaze_Cassette:
             return `x${bonus} Hatching Speed`;
         case OakItemType.Cell_Battery:
-            return `x${bonus} Energy Regeneration`;
+            return `${bonus} Charges Needed to Discharge`;
         case OakItemType.Squirtbottle:
             return `x${bonus} Mutation Rate`;
         case OakItemType.Sprinklotad:
-            return `x${bonus} Replant Rate`;
+            return `x${bonus} Mulch Duration`;
         case OakItemType.Explosive_Charge:
             return `${bonus} Tiles Damaged`;
         case OakItemType.Treasure_Scanner:
@@ -79363,11 +79933,11 @@ const getOakItemUpgradeReqText = (oakItemType, val) => {
         case OakItemType.Blaze_Cassette:
             return `Hatch ${val} Eggs`;
         case OakItemType.Cell_Battery:
-            return `Mine ${val} items in the Underground`;
+            return `Use Discharge ${val} times`;
         case OakItemType.Squirtbottle:
             return `Trigger ${val} berry mutations`;
         case OakItemType.Sprinklotad:
-            return `Trigger ${val} berry replants`;
+            return `Have mulch active for a total of ${val} minutes.`;
         case OakItemType.Explosive_Charge:
             return `Dig deeper ${val} times`;
         case OakItemType.Treasure_Scanner:
@@ -79381,7 +79951,8 @@ module.exports = {
     getOakItemBonus,
     getOakItemUpgradeReq,
 };
-},{}],525:[function(require,module,exports){
+
+},{}],526:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -79448,7 +80019,7 @@ const battleCafeToHumanReadableString = (battleCafeLocation) => {
     const splitCamelCase = GameConstants.camelCaseToString(spinEnum).replace('3600', ' 3600');
     const commaSeperated = splitCamelCase.replaceAll(' ', ', ');
     const relativeSeconds = commaSeperated.replace('Above5', '5 or more').replace('Above10', '11 or more').replace('Below5', 'Less than 5');
-    const spinWording = relativeSeconds.replace('At5', 'Dusk, Any').replace('Any', 'Any direction');
+    const spinWording = relativeSeconds.replace('At5', 'Dusk, Counterclockwise').replace('Any', 'Any direction');
     return `${sweetString} - ${spinWording} seconds`;
 };
 
@@ -79457,9 +80028,19 @@ const getAvailablePokemon = () => {
         p.id >= 0 &&
         Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION] &&
         p.nativeRegion <= GameConstants.MAX_AVAILABLE_REGION &&
-        Object.keys(PokemonHelper.getPokemonLocations(p.name)).length
+        Object.keys(PokemonLocations.getPokemonLocations(p.name)).length
     );
 }
+
+const getRouteRoamingChance = (region, subRegion, routeNumber) => {
+    const group = RoamingPokemonList.findGroup(region, subRegion);
+    const regionRoutes = Routes.getRoutesByRegion(region).filter(r => RoamingPokemonList.findGroup(region, r.subRegion || 0) == group);
+    const routeIndex = regionRoutes.indexOf(Routes.getRoute(region, routeNumber));
+    const maxRoute = regionRoutes.length - 1;
+    const max = GameConstants.ROAMING_MAX_CHANCE;
+    const min = GameConstants.ROAMING_MIN_CHANCE;
+    return Math.floor((max + ((min - max) * (maxRoute - routeIndex) / (maxRoute))));
+};
 
 module.exports = {
     getBreedingAttackBonus,
@@ -79469,11 +80050,12 @@ module.exports = {
     getAvailablePokemon,
     getAllAvailableShadowPokemon,
     battleCafeToHumanReadableString,
+    getRouteRoamingChance,
 }
 
-},{}],526:[function(require,module,exports){
-function getShopMons(currency) {
-    var towns = Object.values(TownList).filter(t => t.region < GameConstants.Region.final);
+},{}],527:[function(require,module,exports){
+function getShopItemsByCurrencyAndFilter(currency, itemFilter) {
+    var towns = Object.values(TownList).filter(t => t.region <= GameConstants.MAX_AVAILABLE_REGION);
     var filteredTowns = [];
     var filteredShops = [];
     
@@ -79487,7 +80069,7 @@ function getShopMons(currency) {
     }
     
     for (var k = 0; k < filteredTowns.length; k++){
-        var test1 = filteredTowns[k].items.filter((c) => c.currency == currency && c instanceof PokemonItem)
+        var test1 = filteredTowns[k].items.filter((c) => c.currency == currency && itemFilter(c))
         if (test1.length > 0) {
             test1.forEach(function(s) {
                 filteredShops = [...filteredShops, [filteredTowns[k], s]];
@@ -79497,10 +80079,27 @@ function getShopMons(currency) {
     return filteredShops;
 }
 
+function getShopMons(currency) {
+    return getShopItemsByCurrencyAndFilter(currency, (x => x instanceof PokemonItem));
+}
+
+function getShopItems(currency) {
+    return getShopItemsByCurrencyAndFilter(currency, (x => !(x instanceof PokemonItem)));
+}
+
+function getUniqueItems(currency) {
+    const commonItems = pokeMartShop.items.map(x => x.name); // Items available at Explorers Poké Mart
+    commonItems.push('Masterball', 'Protein', 'Calcium', 'Carbos', 'Wonder_Chest', 'Miracle_Chest'); // Available at every League shop
+
+    return getShopItemsByCurrencyAndFilter(currency, (x => !(x instanceof PokemonItem || commonItems.includes(x.name))));
+}
+
 module.exports = {
-    getShopMons
+    getShopMons,
+    getShopItems,
+    getUniqueItems,
 };
-},{}],527:[function(require,module,exports){
+},{}],528:[function(require,module,exports){
 const redirections = [
     ({type, name}) => {
         if (type === 'Pokemon') {
@@ -79552,9 +80151,42 @@ module.exports = {
     redirections
 };
 
-},{}],528:[function(require,module,exports){
+},{}],529:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 const { getAvailablePokemon } = require('./pages/pokemon');
+
+const excludedItemTypes = [
+  'PokemonItem',
+  'BerryItem',
+  'BuyKeyItem',
+  'BuyOakItem',
+];
+
+// Load gyms and handle duplicate leader names
+const gymEntries = Object.entries(GymList).filter(([key, gym]) => GameConstants.getGymRegion(gym) <= GameConstants.MAX_AVAILABLE_REGION).map(([key, gym]) => ({
+  display: gym.leaderName,
+  type: 'Gyms',
+  page: key,
+}));
+
+const duplicateGymDisplayNames = new Set(gymEntries.filter((entry, idx, list) => {
+  return list.findLastIndex(innerEntry => innerEntry.display === entry.display) !== idx;
+}).map(entry => entry.display));
+
+if (duplicateGymDisplayNames.size) {
+  for (let entry of gymEntries) {
+    if (duplicateGymDisplayNames.has(entry.display)) {
+      const gymInstance = GymList[entry.page];
+
+      // Elite check mirrors AchievementHandler.initialize
+      const elite = entry.page.includes('Elite') || entry.page.includes('Champion') || entry.page.includes('Supreme');
+
+      const gymName = gymInstance.displayName ?? `${entry.page}${!elite ? ' Gym' : ''}`;
+
+      entry.display = `${entry.display} (${gymName})`;
+    }
+  }
+}
 
 const searchOptions = [
   {
@@ -79615,6 +80247,11 @@ const searchOptions = [
     type: 'Gems',
     page: t,
   })),
+  ...GameHelper.enumStrings(PokemonType).filter(t => t != 'None').map(t => ({
+    display: `${t} Catch Type Quests`,
+    type: 'Catch Type Quests',
+    page: t,
+  })),
   // Berries
   {
     display: 'Berries',
@@ -79638,7 +80275,7 @@ const searchOptions = [
     type: 'Items',
     page: '',
   },
-  ...Object.values(ItemList).filter(i => !(i instanceof PokemonItem)).map(i => ({
+  ...Object.values(ItemList).filter(i => !excludedItemTypes.includes(i.constructor.name)).map(i => ({
     display: i.displayName,
     type: 'Items',
     page: i.displayName,
@@ -79676,6 +80313,7 @@ const searchOptions = [
     display: 'Hatchery',
     type: 'Hatchery',
     page: '',
+    redirects: ['Daycare'],
   },
   // Hatchery Helpers
   {
@@ -79739,11 +80377,7 @@ const searchOptions = [
     type: 'Gyms',
     page: '',
   },
-  ...Object.entries(GymList).filter(([key, gym]) => GameConstants.getGymRegion(gym) <= GameConstants.MAX_AVAILABLE_REGION).map(([key, gym]) => ({
-    display: gym.leaderName,
-    type: 'Gyms',
-    page: key,
-  })),
+  ...gymEntries,
   // Routes
   {
     display: 'Routes',
@@ -79760,6 +80394,7 @@ const searchOptions = [
     display: 'Farm',
     type: 'Farm',
     page: '',
+    redirects: ['Mutating Berries', 'Mutation'],
   },
   {
     display: 'Farm Simulator',
@@ -79787,6 +80422,7 @@ const searchOptions = [
     display: 'Pokérus',
     type: 'Pokérus',
     page: '',
+    redirects: ['EVs', 'Effort Values', 'Infected', 'Contagious', 'Resistant'],
   },
   // Dream Orbs
   {
@@ -79805,12 +80441,6 @@ const searchOptions = [
     display: 'Daily Deals',
     type: 'Daily Deals',
     page: '',
-  },
-  // Deal Chains
-  {
-    display: 'Daily Deal Chains',
-    type: 'Daily Deal Chains',
-    page: ''
   },
   // Weather
   {
@@ -79900,7 +80530,7 @@ const searchOptions = [
   {
     display: 'Diamonds',
     type: 'Diamonds',
-    page: '',
+    page: '',   
   },
   {
     display: 'Battle Points',
@@ -79942,6 +80572,65 @@ const searchOptions = [
     type: 'Poké Balls',
     page: '',
   },
+  // Dungeon Guides
+  {
+    display: 'Dungeon Guides',
+    type: 'Dungeon Guides',
+    page: '',
+  },
+  ...DungeonGuides.list.map(g => ({
+    display: g.name,
+    type: 'Dungeon Guides',
+    page: g.name,
+  })),
+  // Click Attack
+  {
+    display: 'Click Attack',
+    type: 'Click Attack',
+    page: '',
+  },
+  // Environments
+  {
+    display: 'Environments',
+    type: 'Environments',
+    page: '',
+  },
+  ...Object.keys(GameConstants.Environments).map(env => ({
+    display: `${GameConstants.camelCaseToString(env)} (Environment)`,
+    type: 'Environments',
+    page: `${GameConstants.camelCaseToString(env)}`,
+  })),
+  // Desktop Client
+  {
+    display: 'Desktop Client',
+    type: 'Desktop Client',
+    page: '',
+  },
+  // Underground
+  {
+    display: 'Underground',
+    type: 'Underground',
+    page: '',
+    redirects: ['Mine', 'Mining'],
+  },
+  // Underground Helpers
+  {
+    display: 'Underground Helpers',
+    type: 'Underground Helpers',
+    page: '',
+  },
+  // Berry Masters
+  {
+    display: 'Berry Masters',
+    type: 'Berry Masters',
+    page: '',
+  },
+  // Game Updates
+  {
+    display: 'Game Updates',
+    type: 'Game Updates',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
@@ -79950,6 +80639,12 @@ searchOptions.forEach(a => {
     duplicates.forEach(d => d.display = `${d.display} (${d.type})`);
   }
 })
+// Redirects
+searchOptions.forEach(a => {
+  a.redirects?.forEach(r => {
+    searchOptions.push({ ...a, redirect: r });
+  });
+});
 
 /*
     AUTO FILL FOR SEARCH BAR
@@ -79965,7 +80660,7 @@ var substringMatcher = (searchData) => {
     const substrRegex = new RegExp(escapeRegExp(query), 'i');
 
     // iterate through the pool of strings and for any string that matches the regex
-    const results = searchData.filter(d => substrRegex.test(d.display));
+    const results = searchData.filter(d => substrRegex.test(d.redirect || d.display));
 
     cb(results.sort((a, b) => a.display.search(substrRegex) - b.display.search(substrRegex) || a.display.length - b.display.length));
   };
@@ -79991,7 +80686,8 @@ $('#search').typeahead({
   templates: {
     notFound: '<a class="dropdown-item disabled">No results found...</a>',
     suggestion: (suggestion) => {
-      return `<a href="#!${suggestion.type}/${suggestion.page}">${suggestion.display}</a>`;
+      const display = suggestion.redirect ? `${suggestion.redirect} → ${suggestion.display}` : suggestion.display;
+      return `<a href="#!${suggestion.type}/${suggestion.page}">${display}</a>`;
     },
   },
 });
@@ -80006,4 +80702,4 @@ module.exports = {
   searchOptions,
 };
 
-},{"./navigation":515,"./pages/pokemon":525}]},{},[508]);
+},{"./navigation":515,"./pages/pokemon":526}]},{},[508]);

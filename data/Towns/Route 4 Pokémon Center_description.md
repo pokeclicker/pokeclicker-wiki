@@ -1,0 +1,1 @@
+This is the first place to catch [[Pokémon/Magikarp]] but does not provide EVs.

@@ -1,25 +1,87 @@
-Quest Points [[File:questPoint.svg|25px]] are the green currency earned by completing Quests.
-Quest Points can be obtained by completing Quests.
-The Player gets 1 quest slot after completing the Tutorial. After that at level 5, 10, and 15, the 2nd, 3rd and 4th quest slot will open.
-Each time you complete a quest, the experience added to your Quest Level follows this formula:
+###### Currency: [[File:money.svg|18px]] [[Pokédollars]] • [[File:dungeonToken.svg|18px]] [[Dungeon Tokens]] • [[File:questPoint.svg|18px]] **Quest Points** • [[File:farmPoint.svg|18px]] [[Farm Points]] • [[File:diamond.svg|18px]]  [[Diamonds]] • [[File:battlePoint.svg|18px]] [[Battle Points]] {.alert .alert-secondary}
 
-$QuestExperience=100 + \frac{QPReward}{100}$
+#### Jump to:
+* [Quests](#quests)
+* [Uses](#uses)
+
+Quest Points are green currency earned by completing regular Quests in the Quest module.
 
 ---
 
-## Uses
-Quest Points can be used to purchase the following:
+## Quests {#quests}
+*For multi-step story quests, see [[Quest Lines]]. Quest Lines do not award Quest Points.*
+
+The quest module displays 10 quests that you can work toward. Completing all the quests on the list awards bonus Quest Points. You can work on multiple quests at the same time, limited by your quest slots. You gain additional quest slots at Quest Level 5, 10, and 15.
+
+Refreshing the quest list costs Pokédollars. You gain a free refresh daily and upon leveling your Quest Level.
+
+#### Quest Experience and Level
+Each time you complete a quest, you gain Quest experience according to this formula:
+
+$QuestExperience=100 + \frac{QPReward}{10}$ {.overflow-auto .text-center}
+
+Obtaining [[Items/Medichamite]] requires completing quests at Quest Level 16 or higher.
+
+#### Tips and Guides
+###### Catch-Type Quests
+- [[Catch Type Quests]] lists the best locations to farm each type of Pokémon.
+###### Gems
+- Individual [Gem](#!Gems) pages list where to best farm each Gem type.
+- Plates can be sold quickly for gems and will count toward Quest completion.
+
+#### List of Possible Quests
+Quest Points are awarded based on the type of quest, with a random 0.9x-1.1x variation to rewards.
+Types of Quests | Description
+--- | ---
+Defeat Pokémon on [[Routes]] | Defeat 100-500 Pokémon on an unlocked Route
+Defeat [[Dungeons]] | Defeat an unlocked Dungeon 5-20 times
+Defeat [[Gyms]] | Defeat an unlocked Gym 5-20 times
+Capture or Hatch Pokémon | Capture or Hatch 50-250 Pokémon
+Capture or Hatch Pokémon of Type | Catch or Hatch 50-250 Pokémon of a certain Type
+Capture or Hatch a [Shiny](!#Shiny_Chance) | Catch or Hatch 1 Shiny Pokémon
+Catch [[Shadow Pokémon]] | Catch 1-5 Shadow Pokémon
+Hatch Eggs | Breed Pokémon in the [[Hatchery]] (amount varies based on highest region)
+Gain Currency | Gain [[Pokédollars]], [[Dungeon Tokens]], or [[Farm Points]] (amount varies based on highest region)
+Gain [[Gems]] | Gain 200-600 Gems
+Use [[Poké Balls]] | Use 100-500 Poké Balls, Great Balls, or Ultra Balls
+Equip the [[Oak Items/Magic Ball]] and Capture Pokémon | Catch 100-500 Pokémon while equipping Magic Ball
+Equip [[Oak Items/EXP Share]] and Defeat Pokémon | Defeat 100-500 Pokémon while equipping EXP Share
+Equip [[Oak Items/Amulet Coin]] and Earn Pokédollars | Earn bonus Pokédollars 100-500 times while equipping Amulet Coin
+Harvest Berries | Harvest Berries at the [[Farm]] (amount varies based on Berry growth time)
+Mine Items | Collect 3-15 items from the [[Underground]] Mines
+Mine Layers | Clear 1-3 layers in the Underground
+Clear [[Battle Frontier]] Stages | Clear 50-200 stages in the Battle Frontier
+
+
+---
+
+## Uses {#uses}
+#### General
+* Entering [[Safari]] locations
+* Hatching costs for Hatchery Helpers [[Hatchery_Helpers/Justice]] and [[Hatchery_Helpers/Carey]]
+* Activating events in the [[File:Event_calendar.png\|25px]] [[Items/Event Calendar]]
 
 #### Key Items
-Key | Item Cost
-:---: | :---:
-|[[File:Dungeon_ticket.png\|25px]] [[Items/Dungeon Ticket]] | 100 [[File:questPoint.svg\|25px]]
-|[[File:Explorer_kit.png\|25px]] [[Items/Explorer Kit]] | 5,000 [[File:questPoint.svg\|25px]]
-|[[File:Explosive_Charge.png\|25px]] [[Items/Explosive Charge]] | 5,000 [[File:questPoint.svg\|25px]]
-|[[File:Treasure_Scanner.png\|25px]] [[Items/Treasure Scanner]] | 10,000 [[File:questPoint.svg\|25px]]
+Item | Cost | Description/Notes | Region |
+:--- | :--- | :--- | :--- |
+[[File:Dungeon_ticket.png\|25px]] [[Items/Dungeon Ticket]] | [[File:questPoint.svg\|25px]] 100 | | Kanto |
+[[File:Explorer_kit.png\|25px]] [[Items/Explorer Kit]] | [[File:questPoint.svg\|25px]] 5,000 | | Kanto |
+[[File:Explosive_Charge.png\|25px]] [[Items/Explosive Charge]] | [[File:questPoint.svg\|25px]] 5,000  | | Kanto |
+[[File:Treasure_Scanner.png\|25px]] [[Items/Treasure Scanner]] | [[File:questPoint.svg\|25px]] 10,000  | | Kanto |
+[[File:Event_calendar.png\|25px]] [[Items/Event Calendar]] | [[File:questPoint.svg\|25px]] 100,000 | Allows you activate Events at any time for 24 hours | Galar |
 
-#### Evolution Items
-These Evolution Items cost 2,500 [[File:questPoint.svg\|25px]]
+#### Other {.mt-3}
+Item | Cost | Description/Notes | Region |
+:--- | :--- | :--- | :--- |
+| [[File:Fire_egg.png\|25px]] Typed [[Eggs]] (Fire, Water, etc.) | [[File:questPoint.svg\|25px]] 1,000 | | All |
+| [[File:Mystery_egg.png\|25px]] [[Items/Mystery Egg]] | [[File:questPoint.svg\|25px]] 700 | | All |
+| [[File:Macho_Brace.png\|25px]] [[Items/Macho Brace]] | [[File:questPoint.svg\|25px]] 1,500 | Held item. Increases EV gain. | Sinnoh |
+| [[File:Power_Bracer.png\|25px]] [[Items/Power Bracer]] | [[File:questPoint.svg\|25px]] 2,000  | Held item. Increases EV gain. | Alola |
+| [[File:Grass_Memory_Silvally.png\|25px]] [[Items/Grass Memory]] | [[File:questPoint.svg\|25px]] 125,000 | Required for [[#!Quest Lines/Typing some Memories]] Quest Line | Alola |
+| Evolution Items* | [[File:questPoint.svg\|25px]] 2,500-5,000 | See below. Can also trade with Shard Traders for a reduced QP cost. | Various |
+
+::: collapsed Evolution Item costs
+These Evolution Items cost [[File:questPoint.svg\|25px]] 2,500.
 
 :---: | :---: | :---: | :---:
 |[[File:Fire_stone.png\|25px]] [[Items/Fire Stone]] | [[File:Water_stone.png\|25px]] [[Items/Water Stone]] | [[File:Thunder_stone.png\|25px]] [[Items/Thunder Stone]] | [[File:Leaf_stone.png\|25px]] [[Items/Leaf Stone]]
@@ -30,57 +92,40 @@ These Evolution Items cost 2,500 [[File:questPoint.svg\|25px]]
 |[[File:Protector.png\|25px]] [[Items/Protector]] | [[File:Reaper_cloth.png\|25px]] [[Items/Reaper Cloth]] | [[File:Razor_claw.png\|25px]] [[Items/Razor Claw]] | [[File:Razor_fang.png\|25px]] [[Items/Razor Fang]]
 |[[File:Prism_scale.png\|25px]] [[Items/Prism Scale]] | [[File:Sachet.png\|25px]] [[Items/Sachet]] | [[File:Whipped_dream.png\|25px]] [[Items/Whipped Dream]] | [[File:Ice_stone.png\|25px]] [[Items/Ice Stone]]
 
-These Evolution Items cost 5,000 [[File:questPoint.svg\|25px]]
+These Evolution Items cost [[File:questPoint.svg\|25px]] 5,000.
 
 :---: | :---: |
 |[[File:Tart_apple.png\|25px]] [[Items/Tart Apple]] | [[File:Sweet_apple.png\|25px]] [[Items/Sweet Apple]] | [[File:Cracked_pot.png\|25px]] [[Items/Cracked Pot]] | [[File:Galarica_cuff.png\|25px]] [[Items/Galarica Cuff]]
 | [[File:Galarica_wreath.png\|25px]] [[Items/Galarica Wreath]]
+:::
 
-#### Held Items
-Held items | Cost
-:---: | :---:
-|[[File:Macho_Brace.png\|25px]] [[Items/Macho Brace]] | 1,500 [[File:questPoint.svg\|25px]]
-|[[File:Power_Bracer.png\|25px]] [[Items/Power Bracer]] | 2,000 [[File:questPoint.svg\|25px]]
 
-#### Eggs
-Key Item | Cost
-:---: | :---:
-|[[File:Fire_egg.png\|25px]] [[Items/Fire Egg]] | 1,000 [[File:questPoint.svg\|25px]]
-|[[File:Water_egg.png\|25px]] [[Items/Water Egg]] | 1,000 [[File:questPoint.svg\|25px]]
-|[[File:Grass_egg.png\|25px]] [[Items/Grass Egg]] | 1,000 [[File:questPoint.svg\|25px]]
-|[[File:Electric_egg.png\|25px]] [[Items/Electric Egg]] | 1,000 [[File:questPoint.svg\|25px]]
-|[[File:Fighting_egg.png\|25px]] [[Items/Fighting Egg]] | 1,000 [[File:questPoint.svg\|25px]]
-|[[File:Dragon_egg.png\|25px]] [[Items/Dragon Egg]] | 1,000 [[File:questPoint.svg\|25px]]
-|[[File:Mystery_egg.png\|25px]] [[Items/Mystery Egg]] | 700 [[File:questPoint.svg\|25px]]
+#### Shopmons {.mt-3}
 
-#### Shopmons
-Region | Token | Pokémon | Cost
-:---: | :---: | :---: | :---:
-Kanto | [[File:Eevee.png\|25px]] | [[File:pokemon/133.png\|30px]] Eevee | 4,000 [[File:questPoint.svg\|25px]]
-Kanto | [[File:Porygon.png\|25px]] | [[File:pokemon/137.png\|30px]] Porygon | 2,000 [[File:questPoint.svg\|25px]]
-Kanto | [[File:Jynx.png\|25px]] | [[File:pokemon/124.png\|30px]] Jynx | 2,000 [[File:questPoint.svg\|25px]]
-Kanto | [[File:Mr. Mime.png\|25px]] | [[File:pokemon/122.png\|30px]] Mr. Mime | 1,000 [[File:questPoint.svg\|25px]]
-Kanto | [[File:Lickitung.png\|25px]] | [[File:pokemon/108.png\|30px]] Lickitung | 1,000 [[File:questPoint.svg\|25px]]
-Johto | [[File:Togepi.png\|25px]] | [[File:pokemon/175.png\|30px]] Togepi | 15,000 [[File:questPoint.svg\|25px]]
-Hoenn | [[File:Beldum.png\|25px]] | [[File:pokemon/374.png\|30px]] Beldum | 22,500 [[File:questPoint.svg\|25px]]
-Hoenn | [[File:Pinkan Dodrio.png\|25px]] | [[File:pokemon/85.01.png\|30px]] Pinkan Dodrio* | 50,000 [[File:questPoint.svg\|25px]]
-Sinnoh | [[File:Skorupi.png\|25px]] | [[File:pokemon/451.png\|30px]] Skorupi | 6,750 [[File:questPoint.svg\|25px]]
-Sinnoh | [[File:Combee.png\|25px]] | [[File:pokemon/415.png\|30px]] Combee | 6,750 [[File:questPoint.svg\|25px]]
-Sinnoh | [[File:Burmy (Plant).png\|25px]] | [[File:pokemon/412.png\|30px]] Burmy (Plant) | 6,750 [[File:questPoint.svg\|25px]]
-Sinnoh | [[File:Cherubi.png\|25px]] | [[File:pokemon/420.png\|30px]] Cherubi | 6,750 [[File:questPoint.svg\|25px]]
-Sinnoh | [[File:Spiritomb.png\|25px]] | [[File:pokemon/442.png\|30px]] Spiritomb | 6,750 [[File:questPoint.svg\|25px]]
-Unova | [[File:Zorua.png\|25px]] | [[File:pokemon/570.png\|30px]] Zorua | 50,625 [[File:questPoint.svg\|25px]]
-Unova | [[File:Meloetta (pirouette).png\|25px]] | [[File:pokemon/648.01.png\|30px]] Meloetta (Pirouette) | 200,000 [[File:questPoint.svg\|25px]]
-Kalos | [[File:Furfrou (Dandy).png\|25px]] | [[File:pokemon/676.06.png\|30px]] Furfrou (Dandy) | 250,000 [[File:questPoint.svg\|25px]]
-Alola | [[File:Type Null.png\|25px]] | [[File:pokemon/772.png\|30px]] Type Null | 114,000 [[File:questPoint.svg\|25px]]
-Alola | [[File:Poipole.png\|25px]] | [[File:pokemon/803.png\|30px]] Poipole | 90,000 [[File:questPoint.svg\|25px]]
-Galar | [[File:Dracozolt.png\|25px]] | [[File:pokemon/880.png\|30px]] Dracozolt | 25,000 [[File:questPoint.svg\|25px]] 1x Fossilized Drake [[File:Fossilized Drake.png\|25px]] 1x Fossilized Bird [[File:Fossilized Bird.png\|25px]]
-Galar | [[File:Dracovish.png\|25px]] | [[File:pokemon/882.png\|30px]] Dracovish | 25,000 [[File:questPoint.svg\|25px]] 1x Fossilized Drake [[File:Fossilized Drake.png\|25px]] 1x Fossilized Fish [[File:Fossilized Fish.png\|25px]]
-Galar | [[File:Arctozolt.png\|25px]] | [[File:pokemon/881.png\|30px]] Arctozolt | 25,000 [[File:questPoint.svg\|25px]] 1x Fossilized Bird [[File:Fossilized Bird.png\|25px]] 1x Fossilized Dino [[File:Fossilized Dino.png\|25px]]
-Galar| [[File:Arctovish.png\|25px]] | [[File:pokemon/883.png\|30px]] Arctovish | 25,000 [[File:questPoint.svg\|25px]] 1x Fossilized Fish [[File:Fossilized Fish.png\|25px]] 1x Fossilized Dino [[File:Fossilized Dino.png\|25px]]
-Galar | [[File:Zarude (Dada).png\|25px]] | [[File:pokemon/893.png\|30px]] Zarude (Dada) | 500,000 [[File:questPoint.svg\|25px]]
+Pokémon | Cost | Description/Notes | Region |
+:--- | :--- | :--- | :--- |
+[[File:Eevee.png\|25px]] [[Pokémon/Eevee]] | [[File:questPoint.svg\|25px]] 4,000 | | Kanto |
+[[File:Porygon.png\|25px]] [[Pokémon/Porygon]] | [[File:questPoint.svg\|25px]] 2,000 | Only repeatable way to obtain Porygon. | Kanto |
+[[File:Jynx.png\|25px]] [[Pokémon/Jynx]] | [[File:questPoint.svg\|25px]] 2,000 | | Kanto |
+[[File:Mr. Mime.png\|25px]] [[Pokémon/Mr. Mime]] | [[File:questPoint.svg\|25px]] 1,000 | | Kanto |
+[[File:Lickitung.png\|25px]] [[Pokémon/Lickitung]] | [[File:questPoint.svg\|25px]] 1,000 | | Kanto |
+[[File:Pinkan Dodrio.png\|25px]] [[Pokémon/Pinkan Dodrio]] | [[File:questPoint.svg\|25px]] 50,000 | Only repeatable way to obtain Pinkan Dodrio.  | Kanto - Sevii 4567 |
+[[File:Togepi.png\|25px]] [[Pokémon/Togepi]] | [[File:questPoint.svg\|25px]] 15,000 | | Johto |
+[[File:Beldum.png\|25px]] [[Pokémon/Beldum]] | [[File:questPoint.svg\|25px]] 22,500 | | Hoenn |
+[[File:Combee.png\|25px]] [[Pokémon/Combee]] | [[File:questPoint.svg\|25px]] 6,750 | | Sinnoh |
+[[File:Burmy (Plant).png\|25px]] [[Pokémon/Burmy (Plant)]] | [[File:questPoint.svg\|25px]] 6,750 | | Sinnoh |
+[[File:Cherubi.png\|25px]] [[Pokémon/Cherubi]] | [[File:questPoint.svg\|25px]] 6,750 | | Sinnoh |
+[[File:Zorua.png\|25px]] [[Pokémon/Zorua]] | [[File:questPoint.svg\|25px]] 50,625 | | Unova |
+[[File:Meloetta (Pirouette).png\|25px]] [[Pokémon/ Meloetta (Pirouette)]] | [[File:questPoint.svg\|25px]] 200,000 | Only repeatable way to obtain Meloetta (Pirouette). | Unova |
+[[File:Furfrou (Dandy).png\|25px]] [[Pokémon/Furfrou (Dandy)]] | [[File:questPoint.svg\|25px]] 250,000 | Only repeatable way to obtain Furfrou (Dandy). | Kalos |
+[[File:Type Null.png\|25px]] [[Pokémon/Type: Null]] | [[File:questPoint.svg\|25px]] 114,000 | Only repeatable way to obtain Type: Null. | Alola |
+[[File:Poipole.png\|25px]] [[Pokémon/Poipole]] | [[File:questPoint.svg\|25px]] 90,000 | Only repeatable way to obtain Poipole. | Alola |
+[[File:Dracozolt.png\|25px]] [[Pokémon/Dracozolt]] | [[File:questPoint.svg\|25px]] 25,000 | Also requires [[File:Fossilized Drake.png\|25px]] Fossilized Drake and [[File:Fossilized Bird.png\|25px]] Fossilized Bird. Only repeatable way to obtain Dracozolt. | Galar |
+[[File:Dracovish.png\|25px]] [[Pokémon/Dracovish]] | [[File:questPoint.svg\|25px]] 25,000 | Also requires [[File:Fossilized Drake.png\|25px]] Fossilized Drake and [[File:Fossilized Fish.png\|25px]] Fossilized Fish. Only repeatable way to obtain Dracovish. | Galar |
+[[File:Arctozolt.png\|25px]] [[Pokémon/Arctozolt]] | [[File:questPoint.svg\|25px]] 25,000 | Also requires [[File:Fossilized Dino.png\|25px]] Fossilized Dino and [[File:Fossilized Bird.png\|25px]] Fossilized Bird. Only repeatable way to obtain Arctozolt. | Galar |
+[[File:Arctovish.png\|25px]] [[Pokémon/Arctovish]] | [[File:questPoint.svg\|25px]] 25,000 | Also requires [[File:Fossilized Dino.png\|25px]] Fossilized Dino and [[File:Fossilized Fish.png\|25px]] Fossilized Fish. Only repeatable way to obtain Arctovish. | Galar |
+[[File:Zarude (Dada).png\|25px]] [[Pokémon/Zarude (Dada)]] | [[File:questPoint.svg\|25px]] 500,000 | Only repeatable way to obtain Zarude (Dada). | Galar |
 
-**\*Note**: Pinkan Dodrio is found on the Sevii Islands 4567.
 
 ---
 
@@ -182,7 +227,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Beldum.png\|25px]] | 1 | [[File:pokemon/374.png\|30px]] Beldum | 22,500 [[File:questPoint.svg\|25px]]
 
 #### Sinnoh
-Without using the Underground to mine stones and using typed eggs, 78,250 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 19,950 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 71,500 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 13,200 [[File:questPoint.svg\|25px]] are needed.
 
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -203,7 +248,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 Item Name | Number Required | Necessary to Obtain | Cost
 :---: | :---: | :---: | :---:
 |[[File:Fire_egg.png\|25px]] Fire Egg | 1 | [[File:pokemon/390.png\|25px]] Chimchar | 1,000 [[File:questPoint.svg\|25px]]
-|[[File:Grass_egg.png\|25px]] Grass Egg | 2 | [[File:pokemon/387.png\|25px]] Turtwig | 2,000 [[File:questPoint.svg\|25px]]
+|[[File:Grass_egg.png\|25px]] Grass Egg | 1 | [[File:pokemon/387.png\|25px]] Turtwig | 1,000 [[File:questPoint.svg\|25px]]
 |[[File:Water_egg.png\|25px]] Water Egg | 1 | [[File:pokemon/393.png\|25px]] Piplup | 1,000 [[File:questPoint.svg\|25px]]
 |[[File:Fighting_egg.png\|25px]] Fighting Egg | 1 | [[File:pokemon/447.png\|25px]] Riolu | 1,000 [[File:questPoint.svg\|25px]]
 |[[File:Electric_egg.png\|25px]] Electric Egg | 1 | [[File:pokemon/417.png\|25px]] Pachirisu | 1,000 [[File:questPoint.svg\|25px]]
@@ -212,11 +257,9 @@ Item Name | Number Required | Necessary to Obtain | Cost
 ##### Shopmon
 Item Name | Number Required | Necessary to Obtain | Cost
 :---: | :---: | :---: | :---:
-|[[File:Skorupi.png\|25px]] | 1 | [[File:pokemon/451.png\|30px]] Skorupi | 6,750 [[File:questPoint.svg\|25px]]
 |[[File:Combee.png\|25px]] | 1 | [[File:pokemon/415.png\|30px]] Combee | 6,750 [[File:questPoint.svg\|25px]]
 |[[File:Burmy (Plant).png\|25px]] | 1 | [[File:pokemon/412.png\|30px]] Burmy | 6,750 [[File:questPoint.svg\|25px]]
 |[[File:Cherubi.png\|25px]] | 1 | [[File:pokemon/420.png\|30px]] Cherubi | 6,750 [[File:questPoint.svg\|25px]]
-|[[File:Spiritomb.png\|25px]] | 1 | [[File:pokemon/442.png\|30px]] Spiritomb | 6,750 [[File:questPoint.svg\|25px]]
 
 #### Unova
 Without using the Underground to mine stones and using typed eggs, 98,125 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 19,900 [[File:questPoint.svg\|25px]] are needed.
@@ -257,12 +300,12 @@ Without using the Underground to mine stones and using typed eggs, 18,000 [[File
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
 :---: | :---: | :---: | :---:
-|[[File:Sun_stone.png\|25px]] Sun Stone | 1 | [[File:pokemon/695.png\|25px]] Heliolisk | 2,500 [[File:questPoint.svg\|25px]]
-|[[File:Linking_cord.png\|25px]] Linking Cord | 1 | [[File:pokemon/711.png\|25px]] Gourgeist | 2,500 [[File:questPoint.svg\|25px]]
-|[[File:Dusk_stone.png\|25px]] Dusk Stone | 1 | [[File:pokemon/681.png\|25px]] Aegislash | 2,500 [[File:questPoint.svg\|25px]]
-|[[File:Shiny_stone.png\|25px]] Shiny Stone | 1 **(+4 Optional)** | [[File:pokemon/671.png\|25px]] Florges (Red) [[File:pokemon/671.01.png\|25px]] Florges (Yellow)* [[File:pokemon/671.03.png\|25px]] Florges (Blue)* [[File:pokemon/671.02.png\|25px]] Florges (Orange)* [[File:pokemon/671.04.png\|25px]] Florges (White)* | 2,500 **(+10,000 Optional)** [[File:questPoint.svg\|25px]]
-|[[File:Sachet.png\|25px]] Sachet | 1 | [[File:pokemon/683.png\|25px]] Aromatisse | 2,500 [[File:questPoint.svg\|25px]]
-|[[File:Whipped_dream.png\|25px]] Whipped Dream | 1 | [[File:pokemon/685.png\|25px]] Slurpuff | 2,500 [[File:questPoint.svg\|25px]]
+|[[File:Sun_stone.png\|25px]] Sun Stone | 1 | [[File:pokemon/695.png\|25px]] Heliolisk | 2,500 [[File:questPoint.svg\|25px]] {data-order=2500}
+|[[File:Linking_cord.png\|25px]] Linking Cord | 1 | [[File:pokemon/711.png\|25px]] Gourgeist | 2,500 [[File:questPoint.svg\|25px]] {data-order=2500}
+|[[File:Dusk_stone.png\|25px]] Dusk Stone | 1 | [[File:pokemon/681.png\|25px]] Aegislash | 2,500 [[File:questPoint.svg\|25px]] {data-order=2500}
+|[[File:Shiny_stone.png\|25px]] Shiny Stone | 1 **(+4 Optional)** | [[File:pokemon/671.png\|25px]] Florges (Red) [[File:pokemon/671.01.png\|25px]] Florges (Yellow)* [[File:pokemon/671.03.png\|25px]] Florges (Blue)* [[File:pokemon/671.02.png\|25px]] Florges (Orange)* [[File:pokemon/671.04.png\|25px]] Florges (White)* | 2,500 **(+10,000 Optional)** [[File:questPoint.svg\|25px]] {data-order=2500}
+|[[File:Sachet.png\|25px]] Sachet | 1 | [[File:pokemon/683.png\|25px]] Aromatisse | 2,500 [[File:questPoint.svg\|25px]] {data-order=2500}
+|[[File:Whipped_dream.png\|25px]] Whipped Dream | 1 | [[File:pokemon/685.png\|25px]] Slurpuff | 2,500 [[File:questPoint.svg\|25px]] {data-order=2500}
 **\*Note**: Only one Florges form is required in Kalos.
 
 ##### Eggs

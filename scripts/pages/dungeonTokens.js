@@ -51,7 +51,7 @@ const highestRoute = (region, weather) => {
         const GBMB = (DT* (catchChanceAV+.15))/(2);
         const UB = (DT* (catchChanceAV+.1))/(1.75)
         const UBMB = (DT* (catchChanceAV+.2))/(1.75);
-        routeArr.push( [Routes.getRoute(region,route.number).routeName, DT.toLocaleString(), +(PB). toFixed(2), +(PBMB). toFixed(2), +(GB). toFixed(2), +(GBMB). toFixed(2), +(UB). toFixed(2), +(UBMB). toFixed(2)] );
+        routeArr.push([Routes.getRoute(region,route.number).routeName, DT.toLocaleString(), +(PB).toFixed(2), +(PBMB).toFixed(2), +(GB).toFixed(2), +(GBMB).toFixed(2), +(UB).toFixed(2), +(UBMB).toFixed(2)])
     })
 
     var highestPB = routeArr.reduce((max, dt) => {
