@@ -33,7 +33,7 @@ The first eight Gen 1 Berries are dropped by wild Pokémon. More Berries can be 
 Growth time, harvest amounts, wither time, and replant rates can be [modified](#!Berries#stats).
 
 #### Mutating Berries
-*→ See: [Mutations](#!Berries#mutations)*
+*→ See: [Mutations](#!Berries#mutation)*
 
 Berries planted in certain configurations can mutate into new Berry species.
 

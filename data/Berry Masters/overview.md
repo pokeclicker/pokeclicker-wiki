@@ -36,10 +36,10 @@ Item prices increase with repeat purchases and decrease by harvesting Berries on
 #### Helpers {.mt-3}
 | Name {.col-2}| Base Price {.col-1}| Description {.col-5}| Available Locations {.col-1}|
 |:-------- | :-------- |:--------| :--------|
-| [[File:trainer-85.png\|25px]] [[Items/Farm Hand Bailey]] | [[File:currency/farmPoint.svg\|24px]] 5,000 | One-time purchase. | @[[Towns/Goldenrod City]] |
-| [[File:trainer-10.png\|25px]] [[Items/Farm Hand Kerry]] | [[File:currency/farmPoint.svg\|24px]] 10,000 | One-time purchase. | @[[Towns/Mauville City]] |
-| [[File:trainer-55.png\|25px]] [[Items/Farm Hand Riley]] | [[File:currency/farmPoint.svg\|24px]] 10,000 | One-time purchase. | @[[Towns/Hearthome City]] |
-| [[File:trainer-14.png\|25px]] [[Items/Hatchery Helper Cameron]] | [[File:currency/farmPoint.svg\|24px]] 10,000 | One-time purchase. | @[[Towns/Mauville City]] |
+| [[File:trainer-85.png\|25px]] [[Items/Farm Hand Bailey]] | [[File:currency/farmPoint.svg\|24px]] 50,000 | One-time purchase. | @[[Towns/Goldenrod City]] |
+| [[File:trainer-10.png\|25px]] [[Items/Farm Hand Kerry]] | [[File:currency/farmPoint.svg\|24px]] 100,000 | One-time purchase. | @[[Towns/Mauville City]] |
+| [[File:trainer-14.png\|25px]] [[Items/Hatchery Helper Cameron]] | [[File:currency/farmPoint.svg\|24px]] 100,000 | One-time purchase. | @[[Towns/Mauville City]] |
+| [[File:trainer-55.png\|25px]] [[Items/Farm Hand Riley]] | [[File:currency/farmPoint.svg\|24px]] 200,000 | One-time purchase. | @[[Towns/Hearthome City]] |
 
 #### Berries (Oak Item Challenge) {.mt-3}
 These Berries can only be purchased if you have the Oak Item Challenge enabled, as these berries typically require Oak Items to mutate.

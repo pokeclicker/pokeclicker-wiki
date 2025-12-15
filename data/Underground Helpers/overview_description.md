@@ -32,7 +32,7 @@ Helpers gain experience alongside the player:
 - Completing a mine will grant an additional 100 experience.
 - The non-active party (player or helper) receives 25% of the XP gained by the active one. Hiring a helper does not reduce the experience earned by the player.
 
-$$\text{TotalXP}(\text{level}) = \left\lfloor \sum_{i=0}^{\text{level} - 1} \left( i + 300 \cdot 2^{\frac{i}{7}} \right) \right\rfloor$$
+$$\text{TotalXP}(\text{level}) = \left\lfloor \frac{1}{4} \cdot \sum_{i=0}^{\text{level} - 1} \left\lfloor i + 300 \cdot 2^{\frac{i}{7}} \right\rfloor \right\rfloor$$
 
 ### Energy Restore
 Consumable Energy Restores can boost an Expert Helper's working speed.  In the Experts tab of the [[Underground]], each Expert has icons at the bottom of their panel representing the three types of Energy Restores.  If one or more are toggled on, they will use the highest value Restore available once for each work cycle.  If they run out of a Restore, Experts will use the next best available option that is toggled on for them.  The currently active Restore is shown next to the Helper's icon.
