@@ -1,1 +1,1 @@
-When equipped, the Cell Battery allows for discharging, making more powerful and more unique patterns as it is leveled up. It takes 60 uses of tools in the underground from either the player or a helper to discharge the battery
+When equipped, the Cell Battery decreases the number of charges needed to discharge, up to thirty less as it is leveled up.

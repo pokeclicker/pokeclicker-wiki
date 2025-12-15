@@ -41,7 +41,7 @@ Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
 `eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjozNiwiYWdlIjo0MzkyMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDYsImFnZSI6NzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MCwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OCwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MCwiYWdlIjo1NDAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOCwiYWdlIjozNjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ5LCJhZ2UiOjE3MjgwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0NCwiYWdlIjozOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozNywiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjUyLCJhZ2UiOjE0NDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0NSwiYWdlIjo2ODQwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MywiYWdlIjo3OTIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MywiYWdlIjo1MDQwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozOSwiYWdlIjo1NzYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0NywiYWdlIjo3NTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX1dfX19`
 :::
 
-This variant for Petaya mutation has only two possible mutation plots, but a 0.0319% in the central plot and 0.0078% in the other with Squirtbottle Lv.5 and with less Surprise Mulch needed.  This makes it very likely to get Petaya in the middle of the farm for maximum possible [[Berries/Wacan]], [[Berries/Passho]] + [[Berries/Lum]] boosts before first harvest.
+This variant for Petaya mutation has only two possible mutation plots, but a 0.0319% in the central plot and 0.0078% in the other with Squirtbottle Lv.5 and with less Surprise Mulch needed.  This makes it very likely to get Petaya in the middle of the farm for maximum possible [[Berries/Wacan]], [[Berries/Passho]] + [[Berries/Lum]] boosts before first harvest.  Both mutation plots are vulnerable to [[Berries/Kebia]]'s parasite effect, so the Kebia Berries need to be removed before any Petaya reach the Taller growth stage.
 
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
@@ -59,8 +59,8 @@ Please note that these timers are from the moment Haban is planted, so, for exam
 
 |Berry | Time | Boost Mulch Needed|
 |---|---|---|
-| [[Berries/Haban]] | --- | 128 (64 with maxed Sprintlotad) |
-| [[Berries/Babiri]] | --- | 52 (26 with maxed Sprinkloted) |
+| [[Berries/Haban]] | --- | 128 (64 with maxed Sprinklotad) |
+| [[Berries/Babiri]] | --- | 52 (26 with maxed Sprinklotad) |
 | [[Berries/Yache]] | 02:40:00 | --- |
 | [[Berries/Shuca]] | 03:17:36 | ---|
 | [[Berries/Charti]] | 03:37:36 | ---|
@@ -120,8 +120,8 @@ Mutating a Petaya with Freeze Mulch makes the entire thing incredibly easy.  Wha
 | [[Berries/Kebia]] | 126 (optional) | 63 (optional) | 10:30:00 |
 | [[Berries/Kasib]] | 126 (optional) | 63 (optional) | 10:30:00 |
 
-In total 1,006 (or 1,258 counting the optional 2 last berries) Freeze Mulches are needed to use this method.
-If using a maxed [[Oak Items/Sprinklotad]], this can be narrowed down to 508 (or 634 counting the optional 2 last berries) Freeze Mulches.
+In total 1,006 (or 1258 counting the optional 2 last berries using the classic four Petaya setup, 1636 using the two spot Petaya setup) Freeze Mulches are needed to use this method.
+If using a maxed [[Oak Items/Sprinklotad]], this can be narrowed down to 508 (or 634 counting the optional 2 last berries using the classic four Petaya setup, 820 using the two spot Petaya setup) Freeze Mulches.
 Remember to check the [critical information](#critical-info) section once the setup is fully ripe!
 
 ### Timing Table {#timing-table}

@@ -1,6 +1,3 @@
-#### Hatchery Helpers
-
-|Helper | Cost per hatch | Purchase price | Shop
-|:---: | :---: | :---: | :---:
-|[[Hatchery_Helpers/Parker]] [[File:trainer-13.png\|25px]] | 1,000 [[File:dungeonToken.svg\|25px]] | Unlocks after 1,000 eggs hatched | \-
-|[[Hatchery_Helpers/Dakota]] [[File:trainer-79.png\|25px]] | 10,000 [[File:dungeonToken.svg\|25px]] | 100,000 [[File:dungeonToken.svg\|25px]] | [[Towns/Mahogany Town]]
+#### General {#uses .mt-3}
+* Entering [[Dungeons]]. For a list of dungeons and their fees, see [here](#!Dungeons#list).
+* Hatching costs for Hatchery Helpers [[Hatchery_Helpers/Parker]] and [[Hatchery_Helpers/Dakota]].

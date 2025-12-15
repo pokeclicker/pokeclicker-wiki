@@ -356,7 +356,8 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-shop" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            <img src="./images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }, visible: ItemList[Wiki.pageName()]?.ignoreEV === true"/>
+                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }, visible: !ItemList[Wiki.pageName()]?.ignoreEV"/>
                             Shops
                         </button>
                     </h4>

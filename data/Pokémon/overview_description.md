@@ -1,58 +1,54 @@
+#### Jump To:
+* [Stats](#stats)
+* [States](#states)
+    * [Shiny](#shiny)
+    * [Shadow](#shadow)
+* [Alternate Forms](#altforms)
+* [Lists of Pokémon](#listsofpokemon)
+#### See Also:
+* [Pokérus/EVs](#!Pokérus)
+* [[Hatchery]]
+
 Pokémon are your partners in this adventure and your main source of attack. Currently the game has **1,402** different Pokémon forms. Most of them based on main games, with 33 coming from side games, 53 coming from anime and films, and 18 custom forms.
 
-## Statistics
+----
 
-Pokémon performance is defined by some statistics based on their main games' values as described here:
+## Stats {#stats}
 
-### Base attack
+- **Type:** Affects attack scaling based on its effectiveness against the type(s) of the opponent Pokémon.
+    - For dual-type Pokémon, whichever type is stronger against the opponent will be used to calculate their entire attack value (the weaker type is ignored).
+- **Base attack:** Used to calculate attack bonus. This value cannot be changed.
+- **Attack (or Current Attack):** Scales linearly from Level 0 to Level 100. The Pokémon's attack at Level 100 is their maximum attack.
+    - Breed Pokémon in the [[Hatchery]] to increase their maximum attack.
+    - Attack is affected by [EV Bonus](#!Pokérus#EV), [Shadow](#!Shadow_Pokémon) states, and attack-increasing held items.
+- **Attack Bonus:** The amount of attack that a Pokémon gains each time it is bred.
+    - The base attack bonus is **25% of the base attack**. Current attack never affects attack bonus.
+    - Attack bonus can be increased using [[Items/Protein]] and [[Items/Calcium]], at the cost of increasing egg steps.
+- **EVs and EV Bonus:** Damage multiplying stat. See: [[Pokérus]].
+- **Catch Rate:** Can be increased during encounters with [[Oak Items/Magic Ball]] and [[Poké Balls]].
+- **Egg Steps (or Hatch Steps):** Number of steps required for the Pokémon to hatch when bred. An egg cycle is equivalent to 40 egg steps.
+    - Egg steps can be reduced by using [[Items/Carbos]].
+- **Breeding Efficiency:** The amount of attack the Pokémon gains per egg cycle (i.e. per 40 egg steps).
+    - [[Vitamins]] can greatly affect BE, due to their effects on attack bonus and egg steps.
+    - EV Bonus, [Shadow](#!Shadow_Pokémon) states, and attack-increasing held items are calculated as part of BE.
+    - $BE = \frac{Attack Bonus}{Egg Cycles} * EV Bonus * Shadow Status * Held Item Bonus${.overflow-auto .m-3}
+- **Native Region:** The region used for Pokédex completion and [Regional Debuff](#!Regions#debuff) calculations. It is not necessarily where or when the Pokémon is available.
 
-The formula for a Pokémon’s Base Attack is loosely derived from Pokemon Go’s formula for CP. It can be described through the following equations:
+#### How Base Stats are Calculated
+Pokémon stats are based on statistics in their main games.
 
-Base offense = 2 \* [√(Atk\*SAtack) + √Spe]
-Base defense = 2 \* [√(Def\*SDef) + √Spe]
-Base stamina = 2 \* HP
-Base attack = √(Base Defense \* Base stamina) \* (Base offense/250)
-* When this value is \<10 then 10 is applied instead.
+::: collapsed Formulas for Base Attack
+The formula for a Pokémon’s base attack is loosely derived from Pokemon Go’s formula for Combat Power.
+
+`Base offense = 2 * [√(Atk*SAtack) + √Spe]`
+`Base defense = 2 * [√(Def*SDef) + √Spe]`
+`Base stamina = 2 * HP`
+`Base attack = √(Base Defense * Base stamina) * (Base offense/250)`
+* If this value is \<10,  then 10 is applied instead.
 * This value is floored.
-*This formula means that all Pokémon stats contribute to Pokémon attack, but not in the same amount. HP and attack values are more significant than defense or speed.*
-
-### Attack
-
-When first caught, a Pokémon will, at level 100, have an Attack stat equal to their Base Attack. Beneath level 100, their Attack scales linearly from 0 to their maximum Attack. However, at no point may a Pokémon’s Attack be less than 1.
-
-Total Pokémon attack will increase while breeding according to the attack bonus.
-
-### Attack Bonus
-
-The attack bonus is the extra damage that a Pokémon will get each breeding cycle.
-This is **always** calculated using the base attack, not the current attack.
-The **base** Attack bonus is **25%** of the base attack.
-*Example: Metapod, that has 20 base attack, will have an attack bonus of 5. After 1 hatch its total attack will be 25, after 2 hatches it will be 30 and after 10 hatches it will be 70.*
-
-The **Attack bonus** can be increased using 2 different [[Vitamins]]:
-* **Protein** gives +1 attack bonus. *In our example, Metapod will have 6 attack bonus after using 1 Protein and 15 attack bonus after using 10 Proteins. While Pidgeot (with 112 base attack) will have 29 attack bonus after 1 Protein and 38 after 10 Proteins.*
-* **Calcium** gives 1% base attack as attack bonus. *In our example, Metapod will have 5.2 attack bonus after 1 Calcium and 7 attack bonus after 10 Calcium. While Pidgeot will have 29.12 attack bonus after 1 Calcium and 39.2 after 10 Calcium.*
-
-### Breeding Efficiency (BE){#BE}
-
-A Pokémon with a high base attack and a low number of egg steps will have a high Breeding Efficiency stat, which is calculated with the following formula:
-
-$BE = \frac{Attack Bonus}{Egg Cycles} * EV Bonus * Shadow Status * Held Item Bonus$
-
-*Attack Bonus refers to the same value from the previous section. An Egg Cycle equals to 40 Egg Steps. Also, Held Item Bonus only applies if the Pokémon is holding an item that explicitly raises the attack.*
-
-Since [[Vitamins]] modify the Attack Bonus value, they also affect Breeding Efficiency. Individual Pokémon pages have the best Vitamin distribution to increase this statistic.
-
-The table in this page shows only Base BE, in other words, the stat without Vitamins nor any kind of multiplier (like the ones mentioned in the formula).
-
-### Egg Steps
-
-Egg Steps is the value that determines how long it will take for an egg to hatch.
-Routes give a different number of egg steps depending on their difficulty.
-Egg steps are grouped in egg cycles (1 egg cycle = 40 egg steps).
-
-Egg Steps can be reduced by using [[Items/Carbos]].
-
+* This formula means that HP and attack values are more significant than defense or speed.
+:::
+::: collapsed Formulas for Base Egg Steps
 The egg cycle value for each species begins with the canonical value, with alternate forms using the same value as the base form, and it's subject to a few modifiers:
 
 * An evolved Pokémon’s egg cycle value is 1.5 times the egg cycle value of their pre-evolved form. In the case of third-stage Pokémon, their egg cycle value is 1.5 times the egg cycle value of the second-stage Pokémon.
@@ -63,22 +59,45 @@ There are exceptions to this rule:
 
 * Although [[Mega Pokémon]] are technically evolutions, they share the same egg cycle value as their counterpart.
 * [[Pokémon/Elf Munchlax]] acts as a Baby Pokémon of [[Pokémon/Santa Snorlax]] in regard of its egg cycle value, but it is not an actual baby Pokémon.
+:::
+# {.mt-3}
 
-### Native Region
 
-Native Region doesn't necessarily refer to when the Pokémon is available but rather the Region the game considers it for Pokédex completion and Regional Debuff calculations.
+----
 
-### Regional Debuff{#debuff}
+## States {#states}
+Pokémon can have various states that apply to the base Pokémon. They are not considered alternate forms.
 
-The Regional Debuff is one of two recommended [[Challenge Modes]] for all players.  It cuts Pokémon's attack by 100% when outside of their Native Region, reduced by 10% per region visited.  This effectively means non-native [[Regions/Kanto]] Pokémon have only 20% of their Attack when battling in [[Regions/Johto]]. Kanto and Johto Pokémon will have 30% Attack when fighting in [[Regions/Hoenn]], 40% in [[Regions/Sinnoh]], etc.  This penalty becomes less and less notable as new regions are reached, both due to automatic reduction and the player having access to more and more Pokémon.
+#### Shiny {#shiny}
+*→ See: [[Shiny Chance]]*
 
-## Other Pokémon Lists
+Pokémon can be encountered or hatched in a shiny form. Shiny Pokémon in your party do not have any stat differences, but catching a Pokémon in a shiny encounter provides more EV gains and hatches that result in a shiny Pokémon provide more attack gains.
 
-- [[Alternate Pokémon Forms]] page lists all alternate forms available in the game, including Regional forms, and the corresponding base Pokémon.
-- [[Mega Pokémon]] page has details about which Pokémon can Mega Evolve and the requirements necessary to do so.
-- [[Baby Pokémon]] page has a list of all Baby Pokémon available in the game and the Region needed to acquire them.
-- [[Wandering Pokémon]] page has all available wanderer Pokémon, as in, the Pokémon that can show up in the farm.
-- [[Roaming Pokémon]] page contains information about roaming Pokémon, as in, rare Pokémon that can appear in any route of any given Region.
-- [[Shadow Pokémon]] page has the list of all currently available Shadow Pokémon.
+The number of Shiny Pokémon you own contributes toward [[Click Attack]] and various [[Achievements]].
 
-## Pokémon List
+#### Shadow {#shadow}
+*→ See: [[Shadow Pokémon]]*
+
+Shadow Pokémon can be encountered and caught in Orre. Shadow Pokémon and their purified forms have modifiers to their attack stat.
+
+The number of purified Shadow Pokémon you own contributes toward [[Click Attack]] and various [[Achievements]].
+
+---
+
+## Alternate Forms {#altforms}
+*→ See: [[Alternate Pokémon Forms]], [[Mega Pokémon]]*
+
+To complete the Pokédex, you only need to capture **one form** of a particular Pokémon.
+
+For example, capturing [[Pokémon/Bulbasaur]] OR [[Pokémon/Spooky Bulbasaur]] OR [[Pokémon/Bulbasaur (Clone)]] will count as **[[Pokémon/Bulbasaur]]** for Pokédex completion.
+
+This applies to Pokédex achievements as well. For example, a shiny [[Pokémon/Mega Charizard X]] will count as a shiny [[Pokémon/Charizard]] when working toward the Kanto Shiny Pokédex achievements.
+
+----
+
+## Other Lists of Pokémon {#listsofpokemon}
+
+- [[Baby Pokémon]]: Baby Pokémon and the Region needed to acquire them.
+- [[Roaming Pokémon]]: Rare Pokémon that can appear in any route of any given Region.
+
+### Full List
