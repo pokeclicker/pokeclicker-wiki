@@ -19,6 +19,7 @@ jobs:
         with:
           persist-credentials: true
           fetch-depth: 0
+          submodules: 'recursive'
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -29,6 +30,12 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Ensure git submodules are initialized
+        run: |
+          # Sync and fetch submodules (recursive) so referenced repos are available for build
+          git submodule sync --recursive || true
+          git submodule update --init --recursive --remote
 
       - name: Build bundle
         run: npm run build
