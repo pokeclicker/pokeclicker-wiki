@@ -24,3 +24,12 @@ window.Wiki = {
   getDealChains: require('./pages/dealChains').getDealChains,
   ...require('./navigation'),
 }
+
+// Register a service worker to provide image fallbacks from pokeclicker.com
+// Use a relative URL so this works under GitHub Pages subpaths (e.g. /pokeclicker-wiki/).
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('image-fallback-sw.js').catch((err) => {
+    // Non-fatal; log for debugging only
+    console.error('Service worker registration failed:', err);
+  });
+}

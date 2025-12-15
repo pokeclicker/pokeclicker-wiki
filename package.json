@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node start.js",
-    "build": "browserify scripts/main.js -o bundle.js",
+    "build": "node scripts/generate-image-list.js && browserify scripts/main.js -o bundle.js",
     "watch": "watchify scripts/main.js -o bundle.js",
     "update": "git submodule update --init && git submodule update --remote && node update.js && npm run build",
     "test": "eslint ./scripts"
