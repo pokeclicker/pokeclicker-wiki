@@ -38,7 +38,7 @@ jobs:
           git submodule update --init --recursive --remote
 
       - name: Build bundle
-        run: npm run build
+        run: npm run update
 
       - name: Commit and push bundle.js if changed
         run: |
@@ -47,6 +47,7 @@ jobs:
           # Only commit if bundle.js changed
           if [[ -n "$(git status --porcelain bundle.js)" ]]; then
             git add bundle.js
+            git add index.html
             git commit -m "chore: rebuild bundle.js (auto)" || echo "no commit"
             git push origin HEAD:refs/heads/main
           else
