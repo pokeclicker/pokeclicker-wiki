@@ -33,7 +33,7 @@ The first eight Gen 1 Berries are dropped by wild Pokémon. More Berries can be 
 Growth time, harvest amounts, wither time, and replant rates can be [modified](#!Berries#stats).
 
 #### Mutating Berries
-*→ See: [Mutations](#!Berries#mutations)*
+*→ See: [Mutations](#!Berries#mutation)*
 
 Berries planted in certain configurations can mutate into new Berry species.
 
@@ -48,11 +48,11 @@ The Farm starts with one free plot. More farm plots can be purchased using Berri
 
 #### Cost of Farm Plots
 |:---:|:---:|:---:|:---:|:---:|
-| **220 [[File:Kelpsy.png\|24px]][[Berries/Kelpsy]]**{.d-block} **4840 [[File:farmPoint.svg\|18px]]**{.d-block}| **170 [[File:Mago.png\|24px]][[Berries/Mago]]**{.d-block} **2890 [[File:farmPoint.svg\|18px]]**{.d-block} | **90 [[File:Persim.png\|24px]][[Berries/Persim]]**{.d-block} **810 [[File:farmPoint.svg\|18px]]**{.d-block} | **130 [[File:Wepear.png\|24px]][[Berries/Wepear]]**{.d-block} **1690 [[File:farmPoint.svg\|18px]]**{.d-block} | **180 [[File:Aguav.png\|24px]][[Berries/Aguav]]**{.d-block} **3240 [[File:farmPoint.svg\|18px]]**{.d-block} |
-| **160 [[File:Wiki.png\|24px]][[Berries/Wiki]]**{.d-block} **2560 [[File:farmPoint.svg\|18px]]**{.d-block} | **50 [[File:Aspear.png\|24px]][[Berries/Aspear]]**{.d-block} **250 [[File:farmPoint.svg\|18px]]**{.d-block} | **10 [[File:Cheri.png\|24px]][[Berries/Cheri]]**{.d-block} **10 [[File:farmPoint.svg\|18px]]**{.d-block} | **60 [[File:Leppa.png\|24px]][[Berries/Leppa]]**{.d-block} **360 [[File:farmPoint.svg\|18px]]**{.d-block} | **230 [[File:Qualot.png\|24px]][[Berries/Qualot]]**{.d-block} **5290 [[File:farmPoint.svg\|18px]]**{.d-block} |
+| **220 [[File:Kelpsy.png\|24px]][[Berries/Kelpsy]]**{.d-block} **4840 [[File:farmPoint.svg\|18px]]**{.d-block}| **170 [[File:Mago.png\|24px]][[Berries/Mago]]**{.d-block} **2890 [[File:farmPoint.svg\|18px]]**{.d-block} | **90 [[File:Persim.png\|24px]][[Berries/Persim]]**{.d-block} **810 [[File:farmPoint.svg\|18px]]**{.d-block} | **130 [[File:Wepear.png\|24px]][[Berries/Wepear]]**{.d-block} **1690 [[File:farmPoint.svg\|18px]]**{.d-block} | **230 [[File:Qualot.png\|24px]][[Berries/Qualot]]**{.d-block} **5290 [[File:farmPoint.svg\|18px]]**{.d-block} |
+| **160 [[File:Wiki.png\|24px]][[Berries/Wiki]]**{.d-block} **2560 [[File:farmPoint.svg\|18px]]**{.d-block} | **50 [[File:Aspear.png\|24px]][[Berries/Aspear]]**{.d-block} **250 [[File:farmPoint.svg\|18px]]**{.d-block} | **10 [[File:Cheri.png\|24px]][[Berries/Cheri]]**{.d-block} **10 [[File:farmPoint.svg\|18px]]**{.d-block} | **60 [[File:Leppa.png\|24px]][[Berries/Leppa]]**{.d-block} **360 [[File:farmPoint.svg\|18px]]**{.d-block} | **180 [[File:Aguav.png\|24px]][[Berries/Aguav]]**{.d-block} **3240 [[File:farmPoint.svg\|18px]]**{.d-block} |
 | **120 [[File:Nanab.png\|24px]][[Berries/Nanab]]**{.d-block} **1440 [[File:farmPoint.svg\|18px]]**{.d-block} | **40 [[File:Rawst.png\|24px]][[Berries/Rawst]]**{.d-block} **160 [[File:farmPoint.svg\|18px]]**{.d-block} | Free! | **20 [[File:Chesto.png\|24px]][[Berries/Chesto]]**{.d-block} **40 [[File:farmPoint.svg\|18px]]**{.d-block} | **100 [[File:Razz.png\|24px]][[Berries/Razz]]**{.d-block} **1000 [[File:farmPoint.svg\|18px]]**{.d-block} |
 | **210 [[File:Pomeg.png\|24px]][[Berries/Pomeg]]**{.d-block} **4410 [[File:farmPoint.svg\|18px]]**{.d-block} | **80 [[File:Sitrus.png\|24px]][[Berries/Sitrus]]**{.d-block} **640 [[File:farmPoint.svg\|18px]]**{.d-block} | **30 [[File:Pecha.png\|24px]][[Berries/Pecha]]**{.d-block} **90 [[File:farmPoint.svg\|18px]]**{.d-block} | **70 [[File:Oran.png\|24px]][[Berries/Oran]]**{.d-block} **490 [[File:farmPoint.svg\|18px]]**{.d-block} | **140 [[File:Pinap.png\|24px]][[Berries/Pinap]]**{.d-block} **1960 [[File:farmPoint.svg\|18px]]**{.d-block} |
-| **250 [[File:Grepa.png\|24px]][[Berries/Grepa]]**{.d-block} **6250 [[File:farmPoint.svg\|18px]]**{.d-block} | **150 [[File:Figy.png\|24px]][[Berries/Figy]]**{.d-block} **2250 [[File:farmPoint.svg\|18px]]**{.d-block} | **110 [[File:Bluk.png\|24px]][[Berries/Bluk]]**{.d-block} **1210 [[File:farmPoint.svg\|18px]]**{.d-block} | **190 [[File:Iapapa.png\|24px]][[Berries/Aguav]]**{.d-block} **3610 [[File:farmPoint.svg\|18px]]**{.d-block} | **240 [[File:Hondew.png\|24px]][[Berries/Hondew]]**{.d-block} **5760 [[File:farmPoint.svg\|18px]]**{.d-block} |
+| **250 [[File:Grepa.png\|24px]][[Berries/Grepa]]**{.d-block} **6250 [[File:farmPoint.svg\|18px]]**{.d-block} | **150 [[File:Figy.png\|24px]][[Berries/Figy]]**{.d-block} **2250 [[File:farmPoint.svg\|18px]]**{.d-block} | **110 [[File:Bluk.png\|24px]][[Berries/Bluk]]**{.d-block} **1210 [[File:farmPoint.svg\|18px]]**{.d-block} | **190 [[File:Iapapa.png\|24px]][[Berries/Iapapa]]**{.d-block} **3610 [[File:farmPoint.svg\|18px]]**{.d-block} | **240 [[File:Hondew.png\|24px]][[Berries/Hondew]]**{.d-block} **5760 [[File:farmPoint.svg\|18px]]**{.d-block} |
 
 ----
 
@@ -91,7 +91,7 @@ Farm Hands are helpers that can be hired to perform Farming tasks. They can be a
 #### Locking Plots from Interaction {#lockplots}
 Farm plots can be locked from interaction to prevent things like unwanted harvesting. Locked plots cannot be planted on, harvested, mulched, or shovelled. Berries on locked plots can still wither, mutate, be over taken by parasite berries, and have Wanderers collected from them. [[Farm Hands]] cannot harvest or plant in locked plots, but will still manage Wanderers if hired to do so.
 
-To lock a plot, click **[[File:farm/plotSafeLock.svg|18px]]**{.btn .btn-dark .btn-sm .disabled} and then click on a plot _or_ hold Shift and click on a plot.
+To lock a plot, click **[[File:farm/plotSafeLock.svg|18px]]**{.btn .btn-primary .btn-sm} and then click on a plot _or_ hold Shift and click on a plot.
 
-**Lock All**{.btn .btn-dark .btn-sm .disabled} locks all plots, **Unlock All**{.btn .btn-dark .btn-sm  .disabled} unlocks all plots, and **Flip**{.btn .btn-dark .btn-sm .disabled} reverses the locked/unlocked status of all plots.
+**All**{.btn .btn-primary .btn-sm} locks all plots, **None**{.btn .btn-primary .btn-sm} unlocks all plots, and **Flip**{.btn .btn-primary .btn-sm} reverses the locked/unlocked status of all plots.
 

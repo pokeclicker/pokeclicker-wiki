@@ -76,7 +76,25 @@ Maximum:
 There are five different tools available for use in the mines. Each tool serves a distinct purpose and operates independently of the others.
 
 ### Discharge Battery
-The Battery is a special tool that charges based on actions taken in the Mine.  Each second that a tool is used by a player or Helper, the Battery will gain one charge.  Discharging the Battery removes a large number of tiles in the mine based on a randomly chosen pattern determined by the Cell Battery's level when used.  Equipping the [[Oak Item/Cell Battery]] cuts the number of charges needed from 60 to 30.
+The Battery is a special tool that charges based on actions taken in the Mine.  Each second that a tool is used by a player or Helper, the Battery will gain one charge.  Discharging the Battery removes a large number of tiles in the mine based on a randomly chosen pattern determined by the Cell Battery's level when used.  Equipping the [[Oak Items/Cell Battery]] cuts the number of charges needed from 60 to 30.
+
+#### Patterns
+All possible discharge patterns and their odds of occurrence based on your Underground Level.
+Tier | Name | Weight | Lv 0-4 | Lv.5-9 | Lv.10-14 | Lv.15-19 | Lv.20-29 | Lv.30+
+:---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---:
+0 | Eruption | 1 | 100% | 37% | 8.8% | 3.8% | 2.3% | 1.2%
+1 | Hydro Cannon | 1.7 |  | 63% | 15.0% | 6.5% | 4.0% | 2.0%
+2 | Dragon Breath | 3.4 |  |  | 25.4% | 11.1% | 6.8% | 3.4%
+2 | Leaf Tornado | 3.4 |  |  | 25.4% | 11.1% | 6.8% | 3.4%
+2 | Overdrive | 3.4 |  |  | 25.4% | 11.1% | 6.8% | 3.4%
+3 | 10m Volt Thunderbolt | 5.1 |  |  |  | 18.8% | 11.5% | 5.8%
+3 | Draco Meteor | 5.1 |  |  |  | 18.8% | 11.5% | 5.8%
+3 | Heart Stamp | 5.1 |  |  |  | 18.8% | 11.5% | 5.8%
+4 | Pokéball | 6.8 |  |  |  |  | 19.5% | 9.8%
+4 | Surf | 6.8 |  |  |  |  | 19.5% | 9.8%
+5 | Explosion | 8.5 |  |  |  |  |  | 16.6%
+5 | Fleur Cannon | 8.5 |  |  |  |  |  | 16.6%
+5 | Hyper Beam | 8.5 |  |  |  |  |  | 16.6%
 
 ### Durability
 

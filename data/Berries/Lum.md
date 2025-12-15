@@ -59,11 +59,13 @@ Lum Berries can be obtained from the following dungeons.
 | [[Dungeons/Thrifty Megamart]]     | Alola  | Mythic  	| 100 Clears    |
 
 #### Dropped by
-| :---|
-| [[Pokemon/Mew]] |
-| [[Pokemon/Celebi]] |
-| [[Pokemon/Flowering Celebi]] |
-| [[Pokemon/Grinch Celebi]] |
-| [[Pokemon/Shaymin (Land)]] |
+| Pokémon | Encounter Type | Location
+| :---| :---:  | :---:  |
+|[[File:pokemon/151.png\|32px]] [[Pokemon/Mew]] | Roamer | [[Regions/Kanto]]
+|[[File:pokemon/251.png\|32px]] [[Pokemon/Celebi]] | Dungeon Boss | [[Dungeons/Ilex Forest]]
+|[[File:pokemon/251.01.png\|32px]] [[Pokemon/Flowering Celebi]] | Dungeon Chest | [[Dungeons/Glimwood Tangle]]
+|[[File:pokemon/251.02.png\|32px]] [[Pokemon/Grinch Celebi]] | Dungeon Boss | [[Dungeons/Ilex Forest]]*
+|[[File:pokemon/492.png\|32px]] [[Pokemon/Shaymin (Land)]] | Dungeon Boss | [[Dungeons/Flower Paradise]]
+*Note: Grinch Celebi only appears during the event [[Events/Merry Christmas!]]*
 Base chance of dropping: 1 in 512 (Routes)
 Base chance of dropping: 1 in 85.3 (Dungeon Boss)

@@ -12,7 +12,7 @@ Most items that are purchased with currency (e.g. Pokédollars, Quest Points) in
 
 Exceptions:
 - [[Items/Poké Ball]] never increases in price.
-- [[Items/Master Ball]], [[Items/Vitamins]], and [[Items/Key Stone]] increase in price permanently (up to a cap).
+- [[Items/Master Ball]], [[Vitamins]], and [[Items/Key Stone]] increase in price permanently (up to a cap).
 
 
 :::collapsed Price Change Formulas

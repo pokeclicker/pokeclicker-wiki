@@ -18,16 +18,16 @@ There are some benefits when encountering or obtaining a **new or duplicate** sh
 ---
 
 ## Shiny Odds Per Location/Capture Method {#odds}
-Location/Method | Base Chance | Chance (Lv 5 Shiny Charm) | Chance (Lv 5 Shiny Charm and full Starf Farm)
+Location/Method | Base Chance | Chance (Lv 5 Shiny Charm) | Chance (Lv 5 Shiny Charm, optimal shiny odds farm)
 :--- | :--- | :--- | :---
-Route Encounter | 1/8192 | 1/4096 | 1/2823
-[Dungeon](#!Dungeons) Encounter | 1/4096 | 1/2048 | 1/1412
-Evolution Item/Level Up Evolutions | 1/2048 | 1/1024 | 1/706
-Safari Zone Encounter  | 1/1024 | 1/512 | 1/353
-Hatching in the [[Hatchery]] | 1/1024 | 1/512 | 1/353
-Quest or [Battle Frontier](#!Battle_Frontier) Reward | 1/1024 | 1/512 | 1/353
-Purchasing or trading from a Shop | 1/1024 | 1/512 | 1/353
-[[Wandering Pokémon]] Encounter | 1/1024 | 1/512 | 1/353
+Route Encounter | 1/8192 | 1/4096 | 1/1611
+[Dungeon](#!Dungeons) Encounter | 1/4096 | 1/2048 | 1/805
+Evolution Item/Level Up Evolutions | 1/2048 | 1/1024 | 1/403
+Safari Zone Encounter  | 1/1024 | 1/512 | 1/201
+Hatching in the [[Hatchery]] | 1/1024 | 1/512 | 1/201
+Quest or [Battle Frontier](#!Battle_Frontier) Reward | 1/1024 | 1/512 | 1/201
+Purchasing or trading from a Shop | 1/1024 | 1/512 | 1/201
+[[Wandering Pokémon]] Encounter | 1/1024 | 1/512 | 1/201
 OOOSHINY code | 1 / 1 | 1 / 1 | 1 / 1
 # {.mt-3}
 
@@ -36,8 +36,8 @@ OOOSHINY code | 1 / 1 | 1 / 1 | 1 / 1
 | Modifer | Shiny Chance Multiplier |
 | ---- | ---- |
 | [[File:Shiny_Charm.png\|24px]] [[Oak Items/Shiny Charm]] | `1.5x-2x` (Based on item level) |
-| [[File:Starf.png\|24px]] [[Berries/Starf]] Berry Aura | `1.015x` per ripe plant. (See [Farm Setups for Shiny Chance](#!Farm/Setups#shiny) for how to obtain up to `2.54x` across the Farm). |
-| [[File:items/fluteItem/White_Flute.png\|24px]] [[Items/White Flute]] |  Variable based on Flute bonus `[1.02 + .02 * AchievementBonus]x`. Current maximum of `1.2x`. |
+| [[File:Starf.png\|24px]] [[Berries/Starf]] Berry Aura | `1.015x` per ripe plant. (See [Farm Setups for Shiny Chance](#!Farm/Setups#shiny) for how to obtain up to `2.543x` across the Farm). |
+| [[File:items/fluteItem/White_Flute.png\|24px]] [[Items/White Flute]] |  Variable based on Flute bonus `[1.02 + .02 * AchievementBonus]x`. Current maximum of `1.24x`. |
 
 ----
 ## Tips for Obtaining Shiny Pokémon {#tips}

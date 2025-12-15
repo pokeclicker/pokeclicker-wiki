@@ -96,7 +96,7 @@ EV yields can also be modified by items, auras, and Pokémon states. If the Slow
 | Pokémon is captured as a [Shiny](#!Shiny_Chance)* | `5x` |
 | Pokémon is captured with a [[File:Repeatball.png\|24px]] [[Items/Repeat Ball]] | `5x` |
 | [[File:Rowap.png\|24px]] [[Berries/Rowap]] Berry Aura| `1.015x` per ripe plant. (See [Farm Setups for EV Gains](#!Farm/Setups#evs) for how to obtain up to `2.54x` across the Farm). |
-| [[File:Blue_Flute.png\|24px]] [[Items/Blue Flute]] | Variable based on Flute bonus `[1.02 + .02 * AchievementBonus]x`. Current maximum of `1.2x`. |
+| [[File:Blue_Flute.png\|24px]] [[Items/Blue Flute]] | Variable based on Flute bonus `[1.02 + .02 * AchievementBonus]x`. Current maximum of `1.24x`. |
 **The newly obtained Pokémon must be a Shadow or Shiny form. Simply owning a Shadow or Shiny Pokémon does not affect multipliers.*
 
 **Examples of EV Yields:**
