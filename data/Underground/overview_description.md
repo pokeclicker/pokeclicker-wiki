@@ -28,12 +28,12 @@ Once you've obtained the Explorer Kit, you can enter the Underground by:
 
 The Underground features six different mine types, each corresponding to a specific treasure type—except for Special Items, which are handled differently. Additionally, there is a Random Mine that offers a mix of items from the other mine types.
 
-- Random Mine: Contains all possible items except those from a Special mine
-- Diamond Mine: Contains only treasures sellable for [[Diamonds]]
-- Gem Plate Mine: Contains only gem plate treasures sellable for gems
-- Shard Mine: Contains only shard treasures
-- Fossil Mine: Contains only Fossils and fossil pieces
-- Evolution Item Mine: Contains only Evolution items
+- Chaos Cavern: Contains all possible items except those from a Special mine
+- Treasure Trove: Contains only treasures sellable for [[Diamonds]]
+- Arceus' Forge: Contains only gem plate treasures sellable for gems
+- Fractured Quarry: Contains only shard treasures
+- Ancient Excavation: Contains only Fossils and fossil pieces
+- Evolution Nexus: Contains only Evolution items
 
 Players have two options when starting a new mine:
 - if "Find mine" is On, the game automatically searches for the same type of mine as the one just cleared. *This does not skip the discovery time.*
@@ -76,7 +76,25 @@ Maximum:
 There are five different tools available for use in the mines. Each tool serves a distinct purpose and operates independently of the others.
 
 ### Discharge Battery
-The Battery is a special tool that charges based on actions taken in the Mine.  Each second that a tool is used by a player or Helper, the Battery will gain one charge.  Discharging the Battery removes a large number of tiles in the mine based on a randomly chosen pattern determined by the Cell Battery's level when used.  Equipping the [[Oak Item/Cell Battery]] cuts the number of charges needed from 60 to 30.
+The Battery is a special tool that charges based on actions taken in the Mine.  Each second that a tool is used by a player or Helper, the Battery will gain one charge.  Discharging the Battery removes a large number of tiles in the mine based on a randomly chosen pattern determined by the Cell Battery's level when used.  Equipping the [[Oak Items/Cell Battery]] cuts the number of charges needed from 60 to 30.
+
+#### Patterns
+All possible discharge patterns and their odds of occurrence based on your Underground Level.
+Tier | Name | Weight | Lv 0-4 | Lv.5-9 | Lv.10-14 | Lv.15-19 | Lv.20-29 | Lv.30+
+:---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---:
+0 | Eruption | 1 | 100% | 37% | 8.8% | 3.8% | 2.3% | 1.2%
+1 | Hydro Cannon | 1.7 |  | 63% | 15.0% | 6.5% | 4.0% | 2.0%
+2 | Dragon Breath | 3.4 |  |  | 25.4% | 11.1% | 6.8% | 3.4%
+2 | Leaf Tornado | 3.4 |  |  | 25.4% | 11.1% | 6.8% | 3.4%
+2 | Overdrive | 3.4 |  |  | 25.4% | 11.1% | 6.8% | 3.4%
+3 | 10m Volt Thunderbolt | 5.1 |  |  |  | 18.8% | 11.5% | 5.8%
+3 | Draco Meteor | 5.1 |  |  |  | 18.8% | 11.5% | 5.8%
+3 | Heart Stamp | 5.1 |  |  |  | 18.8% | 11.5% | 5.8%
+4 | Pokéball | 6.8 |  |  |  |  | 19.5% | 9.8%
+4 | Surf | 6.8 |  |  |  |  | 19.5% | 9.8%
+5 | Explosion | 8.5 |  |  |  |  |  | 16.6%
+5 | Fleur Cannon | 8.5 |  |  |  |  |  | 16.6%
+5 | Hyper Beam | 8.5 |  |  |  |  |  | 16.6%
 
 ### Durability
 
@@ -89,7 +107,7 @@ The Chisel, Hammer, Bomb and Survey tools each have an individual durability gau
 | [[File:Hammer.png]] Hammer | Mines 1 layer on all 9 tiles in a 3x3 grid. | 20 seconds | 2% | 6% | Lv.23 |
 | [[File:Bomb.png]] Bomb | Mines 2 layers on each of 10 random tiles (including cleared). The number of tiles can be increased by equipping the [[Oak_Items/Explosive_Charge]] Oak Item. Items collected by the Bomb have a 87.5% chance of being destroyed with no EXP gain. | 20 seconds | 2% | 18% | Lv.24 |
 | [[File:Survey.png]] Survey| Indicates a 9x9 grid where at least one tile contains an item. The grid shrinks by two tiles in each direction every 15 levels. | 900 seconds | 100% | 100% | Never |
-| [[File:Cell_Battery.png\|40px]] Discharge| Clears a large number of tiles with a randomly selected pattern based on [[Oak Item/Cell Battery]]'s level. | 30sec / 60sec | None | 100% | Never |
+| [[File:Cell_Battery.png\|40px]] Discharge| Clears a large number of tiles with a randomly selected pattern based on [[Oak Items/Cell Battery]]'s level. | 30sec / 60sec | None | 100% | Never |
 
 ## Helpers
 [[Underground Helpers]] can be hired from the Helpers tab in the Underground interface.  They do not charge for their services, but instead keep a percentage of the items they find, with the rest going into the player's Treasures.  Each of the five Helpers has a thematically linked favorite mine and performance statistics.

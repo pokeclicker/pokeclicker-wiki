@@ -45,7 +45,7 @@ const md = new markdownit({
   
       } else {
         // closing tag
-        return `</div></div></div>\n`;
+        return `</div></div></div></div>\n`;
       }
     }
   })

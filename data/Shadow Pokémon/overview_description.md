@@ -1,10 +1,20 @@
-Shadow Pokémon are Pokémon with a shadowy aura that can be encountered in Orre, a subregion from [[Regions/Hoenn]]. They can only be encountered as part of a trainer battle and never as a wild encounter. There are a total of **131** Pokémon that can be obtained as shadows.
+Shadow Pokémon are Pokémon with a shadowy aura [[File:status/shadow.svg|24px]] that can be encountered in Orre, a subregion in [[Regions/Hoenn]]. They can only be encountered as part of a trainer battle in [[Dungeons]] and never as a wild encounter.
 
-These Pokémon have a **0.8x** multiplier to its attack. However, they can be purified which will change the multiplier to **1.2x** instead, making Purified Pokémon stronger than a regular one.
+Shadow is a state, like [Shiny](#!Shiny_Chance). A total of **131** Pokémon can be obtained in Shadow form.
 
-To purify a Shadow Pokémon, the player needs to gain Flow. **1 Flow** is gained every **1,000 experience points** the Shadow and Purified Pokémon gain. **Breeding the Pokémon is not required, Flow is gained regardless of the level of the Shadow or Purified Pokémon.** Once enough Flow is acquired, purification can be done in [[Towns/Relic Stone]] in Orre. The Flow that is needed to purify a Shadow Pokémon increases with each purification and it follows this formula:
+Shadow Pokémon can be **purified** at [[Towns/Relic Stone]] in Orre once enough Flow has been acquired.
 
-$Flow = [15 * Purified^2 + 15 * Purified + 1500 * e^{(0.1 * Purified)}]$
+#### Modifiers
+- Shadow Pokémon have a **0.8x** multiplier to its [attack](#!Pokémon#stats).
+- Purified Pokémon have a **1.2x** multiplier to its attack, making Purified Pokémon stronger than a regular one.
+- Catching Shadow Pokémon yield 2x [EVs](#!Pokérus#EV).
+
+#### Flow
+**1 Flow** is gained for every **1,000 experience points** gained by Shadow and Purified Pokémon. Flow is gained regardless of the level of the Shadow or Purified Pokémon, even if they are at level 100. Shadow Pokémon can equip special Held Items that boost experience gain: [[Items/Joy Scent]], [[Items/Vivid Scent]], and [[Items/Excite Scent]].
+
+The Flow needed to purify a Shadow Pokémon **increases with each purification** and follows this formula:
+
+$Flow = [15 * Purified^2 + 15 * Purified + 1500 * e^{(0.1 * Purified)}]${.overflow-auto}
 
 :::collapsed See the Flow table
 N° of Purification | Flow Required
@@ -141,9 +151,5 @@ N° of Purification | Flow Required
 130 | 600,719,837
 131 | 663,875,538
 :::
-
-Shadow Pokémon can also equip special Held Items that boost experience gain called Scents. Currently, there are three Scents in the game: [[Items/Joy Scent]], [[Items/Vivid Scent]], and [[Items/Excite Scent]].
-
-Shadow is a state, like [Shiny](#!Shiny_Chance).  To properly Catch Filter for Shadow pokemon, use a combination of "Shadow: True" and "Caught Shadow: False" to throw balls only at new encounters, or just "Shadow: True" for all.
-
+&nbsp;
 ## List of Shadow Pokémon
