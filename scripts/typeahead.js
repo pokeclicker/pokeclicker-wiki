@@ -539,8 +539,8 @@ const substringMatcher = (searchData) => {
       return cb ? cb(sortedResults) : sortedResults;
     }
 
+    // fuzzy mode: compute a distance and pick the best matches
     const qLower = query.toLowerCase();
-
     // Scale match based on length of query
     const maxDist = Math.max(1, Math.ceil(qLower.length * 0.25));
 
