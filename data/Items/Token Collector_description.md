@@ -1,0 +1,1 @@
+This Battle Item increases the amount of [[Dungeon Tokens]] [[File:dungeonToken.svg|25px]] dropped by Pokémon, including wild route battles, [[Dungeons]] encounters and Dungeon Bosses.  It will not increase Dungeon Token drops from Trainers.  Multiple can be used at once to stack longer durations.

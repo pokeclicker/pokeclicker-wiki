@@ -12,16 +12,18 @@ Cheri Berries can mutate into the following Berries.
 ### Acquisition
 Cheri Berries can drop from any route and can also be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Power Plant]]	        | Common    | `N/A`         |
-| [[Dungeons/Berry Forest]]	        | Common	| `N/A`         |
-| [[Dungeons/Pattern Bush]]	        | Common	| `N/A`         |
-| [[Dungeons/New Mauville]]	        | Common	| `N/A`         |
-| [[Dungeons/Eterna Forest]]	    | Common	| `N/A`         |
-| [[Dungeons/Hall of Origin]]       | Common	| `N/A`         |
-| [[Dungeons/Floccesy Ranch]]	    | Common	| `N/A`         |
-| [[Dungeons/Pikachu Valley]]	    | Common	| `N/A`         |
-| [[Dungeons/Ruins of Conflict]]    | Common	| `N/A`         |
-| [[Dungeons/Ruins of Life]]	    | Common	| `N/A`         |
-| [[Dungeons/Glimwood Tangle]]	    | Common	| `N/A`         |
+| [[Dungeons/Power Plant]]	        | Kanto | Common    |
+| [[Dungeons/Berry Forest]]	        | Kanto (Sevii Islands 123) |Common	|
+| [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567) | Common	|
+| [[Dungeons/New Mauville]]	        | Hoenn | Common	|
+| [[Dungeons/Eterna Forest]]	    | Sinnoh | Common	|
+| [[Dungeons/Hall of Origin]]       | Sinnoh | Common	|
+| [[Dungeons/Floccesy Ranch]]	    | Unova | Common	|
+| [[Dungeons/Pikachu Valley]]	    | Alola | Common	|
+| [[Dungeons/Ruins of Conflict]]    | Alola | Common	|
+| [[Dungeons/Ruins of Life]]	    | Alola | Common	|
+| [[Dungeons/Glimwood Tangle]]	    | Galar (North) | Common	|
+
+Can also obtain 100 Cheri by using FARMINGBOOST code.

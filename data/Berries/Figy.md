@@ -12,6 +12,13 @@ Figy has a chance of mutating by surrounding an empty plot with at least 25, but
 :::
 
 **Optimized Formation**
+
+:::collapsed Figy Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MCwiYWdlIjo2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjAsImFnZSI6NjAsIm11bGNoIjotMX0seyJiZXJyeSI6MCwiYWdlIjo2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjAsImFnZSI6NjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MCwiYWdlIjo2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjAsImFnZSI6NjAsIm11bGNoIjotMX0seyJiZXJyeSI6MCwiYWdlIjo2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjAsImFnZSI6NjAsIm11bGNoIjotMX1dfX19`
+:::
+
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
@@ -34,10 +41,10 @@ Figy Berries can mutate into the following Berries.
 ### Acquisition
 Figy Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Pokémon Mansion]]      | Epic  	| `N/A`         |
-| [[Dungeons/Pattern Bush]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Radio Tower]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Magma Hideout]]        | Common	| `N/A`         |
-| [[Dungeons/Liberty Garden]]       | Common	| `N/A`         |
+| [[Dungeons/Pokémon Mansion]]      | Kanto | Epic  	|
+| [[Dungeons/Pattern Bush]]	        | Kanto (Sevii Islands 4567) | Epic  	|
+| [[Dungeons/Radio Tower]]	        | Johto | Epic  	|
+| [[Dungeons/Magma Hideout]]        | Hoenn | Common	|
+| [[Dungeons/Liberty Garden]]       | Unova | Common	|

@@ -1,0 +1,1 @@
+Pokéballs are items used to catch and store Pokémon.

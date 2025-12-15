@@ -12,6 +12,13 @@ Bluk has a chance of mutating when [[Berries/Chesto]] and [[Berries/Leppa]] are 
 :::
 
 **Optimized Formation**
+
+:::collapsed  Bluk Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjoxLCJhZ2UiOjgwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MSwiYWdlIjo4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjUsImFnZSI6NDgwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NSwiYWdlIjo0ODAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxLCJhZ2UiOjgwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MSwiYWdlIjo4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjUsImFnZSI6NDgwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NSwiYWdlIjo0ODAsIm11bGNoIjotMX1dfX19`
+:::
+
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | {.mutation} | [[File:Chesto.png\|32px]] [[Berries/Chesto]] | {.mutation} | |
@@ -25,8 +32,8 @@ Bluk has a chance of mutating when [[Berries/Chesto]] and [[Berries/Leppa]] are 
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Leppa.png\|32px]] [[Berries/Leppa]]    | `N/A`         | `N/A`                                 | `N/A`                                 |
-| [[File:Chesto.png\|32px]] [[Berries/Chesto]]  | 00:00:40      | 00:00:26                              | `N/A`                                 |
+| [[File:Leppa.png\|32px]] [[Berries/Leppa]]    | `Planted First` | | |
+| [[File:Chesto.png\|32px]] [[Berries/Chesto]]  | 00:00:40      | 00:00:26                              | 00:00:17                                 |
 
 #### Mutations
 Bluk Berries can mutate into the following Berries.
@@ -39,11 +46,11 @@ Bluk Berries can mutate into the following Berries.
 ### Acquisition
 Bluk Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
-| :---:                             | :---:     | :---:         |
-| [[Dungeons/Berry Forest]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Pattern Bush]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Radio Tower]]	        | Epic  	| `N/A`         |
-| [[Dungeons/Seafloor Cavern]]      | Epic  	| `N/A`         |
-| [[Dungeons/Eterna Forest]]        | Common	| `N/A`         |
-| [[Dungeons/Sea Spirit's Den]]     | Common	| `N/A`         |
+| Location	                        |Region              | Tier	    |
+| :---:                             | :---:     |:---:            |
+| [[Dungeons/Berry Forest]]	        | Kanto (Sevii Islands 123)| Epic  	|
+| [[Dungeons/Pattern Bush]]	        | Kanto(Sevii Islands 4567)| Epic  	|
+| [[Dungeons/Radio Tower]]	        | Johto| Epic  	|
+| [[Dungeons/Seafloor Cavern]]      |Hoenn| Epic  	|
+| [[Dungeons/Eterna Forest]]        | Sinnoh| Common	|
+| [[Dungeons/Sea Spirit's Den]]     | Kalos| Common	|

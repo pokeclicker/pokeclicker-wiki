@@ -5,14 +5,19 @@ const checkExist = setInterval(function() {
     }
  }, 100);
 
+const highestRouteCache = {};
+
 const highestRoute = (region, weather) => {
+    const cacheKey = `${region}-${weather}`;
+    const cachedResult = highestRouteCache[cacheKey];
+    if (cachedResult) return cachedResult;
+
     region = region;
     weather = weather;
 
     var routeArr = [];
 
     Routes.getRoutesByRegion(region).map(route => {
-        const routes = Routes.getRoutesByRegion(region).map(r => MapHelper.normalizeRoute(r.number, region, false));
         var pkmon1 = [];
         pkmon1.push(Object.values(route.pokemon).flat());
         route.pokemon.special.forEach((element) => {
@@ -46,7 +51,7 @@ const highestRoute = (region, weather) => {
         const GBMB = (DT* (catchChanceAV+.15))/(2);
         const UB = (DT* (catchChanceAV+.1))/(1.75)
         const UBMB = (DT* (catchChanceAV+.2))/(1.75);
-        routeArr.push( [Routes.getRoute(region,route.number).routeName, DT.toLocaleString(), +(PB). toFixed(2), +(PBMB). toFixed(2), +(GB). toFixed(2), +(GBMB). toFixed(2), +(UB). toFixed(2), +(UBMB). toFixed(2)] );
+        routeArr.push([Routes.getRoute(region,route.number).routeName, DT.toLocaleString(), +(PB).toFixed(2), +(PBMB).toFixed(2), +(GB).toFixed(2), +(GBMB).toFixed(2), +(UB).toFixed(2), +(UBMB).toFixed(2)])
     })
 
     var highestPB = routeArr.reduce((max, dt) => {
@@ -68,7 +73,9 @@ const highestRoute = (region, weather) => {
         return dt[7] > max[7] ? dt : max;
     });
 
-    return( [[highestPB[0], highestPBMB[0], highestGB[0], highestGBMB[0], highestUB[0], highestUBMB[0]],routeArr] );
+    const result = [[highestPB[0], highestPBMB[0], highestGB[0], highestGBMB[0], highestUB[0], highestUBMB[0]], routeArr];
+    highestRouteCache[cacheKey] = result;
+    return result;
 }
 
 const setWeather = (evt, weather) => {
@@ -85,33 +92,7 @@ const setWeather = (evt, weather) => {
     return;
 }
 
-const getShopMons = (currency) => {
-    var towns = Object.values(TownList).filter(t => t.region < GameConstants.Region.final);
-    var filteredTowns = [];
-    var filteredShops = [];
-    
-    for (var j = 0; j < towns.length; j++){
-        var test = towns[j].content.filter((c) => c instanceof Shop && c.items.length > 0);
-        if (test.length > 0) {
-            test.forEach(function(i) {
-                filteredTowns = [...filteredTowns, i];
-            });
-        }
-    }
-    
-    for (var k = 0; k < filteredTowns.length; k++){
-        var test1 = filteredTowns[k].items.filter((c) => c.currency == currency && c instanceof PokemonItem)
-        if (test1.length > 0) {
-            test1.forEach(function(s) {
-                filteredShops = [...filteredShops, [filteredTowns[k], s]];
-            });
-        }
-    }
-    return filteredShops;
-}
-
 module.exports = {
     highestRoute,
     setWeather,
-    getShopMons
 };

@@ -1,1 +1,1 @@
->Increased catch rate on earlier routes
+Increased catch rate on earlier routes, based on furthest location reached.  One of the rotating [[Daily Deals]] trades offered by [[Towns/Driftveil City]]'s [Berry Master](#!Berry_Masters).

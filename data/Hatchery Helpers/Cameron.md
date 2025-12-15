@@ -1,1 +1,1 @@
-*Purchased from Hoenn Berry master for 100,000 Farm Points*
+*Purchased from Hoenn [Berry Master](#!Berry_Masters) for 100,000 Farm Points*

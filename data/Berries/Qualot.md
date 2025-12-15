@@ -13,11 +13,18 @@ Qualot has a chance of mutating by surrounding an empty plot with at least 10, b
 
 ::: table-mutations
 | :----: | :----: |
-| {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
-| [[File:Pecha.png\|32px]] [[Berries/Pecha]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | |
+| {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.freeze} | |
+| [[File:Pecha.png\|32px]] [[Berries/Pecha]] {.freeze} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] {.freeze} | |
 :::
+Due to the short lifespans of Cheri and Pecha, this formation is not recommended without [[Items/Freeze Mulch]].  It also mutates [[Berries/Nanab]] at the same time with a higher % chance than Qualot, making the [[Berries/Mago]]/[[Berries/Pinap]] setup preferable.
 
 **Optimized Formation**
+:::collapsed PM Qualot Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjoxMywiYWdlIjo0ODAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxMywiYWdlIjo0ODAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNiwiYWdlIjo3NDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNiwiYWdlIjo3NDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxMywiYWdlIjo0ODAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxMywiYWdlIjo0ODAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNiwiYWdlIjo3NDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxNiwiYWdlIjo3NDAsIm11bGNoIjotMX1dfX19`
+:::
+
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Pinap.png\|32px]] [[Berries/Pinap]] | {.mutation} | {.mutation} | [[File:Pinap.png\|32px]] [[Berries/Pinap]] | {.mutation} | |
@@ -27,25 +34,32 @@ Qualot has a chance of mutating by surrounding an empty plot with at least 10, b
 | {.mutation} | [[File:Mago.png\|32px]] [[Berries/Mago]] | {.mutation} | {.mutation} | [[File:Mago.png\|32px]] [[Berries/Mago]] | |
 :::
 
+:::collapsed CAP Qualot Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MCwiYWdlIjo2MCwibXVsY2giOjR9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MCwiYWdlIjo2MCwibXVsY2giOjR9LHsiYmVycnkiOjIsImFnZSI6MTIwLCJtdWxjaCI6NH0seyJiZXJyeSI6NCwiYWdlIjoyNDAsIm11bGNoIjo0fSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MiwiYWdlIjoxMjAsIm11bGNoIjo0fSx7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOjR9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MSwiYWdlIjo4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6NH0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6NH0seyJiZXJyeSI6MiwiYWdlIjoxMjAsIm11bGNoIjo0fSx7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOjR9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyLCJhZ2UiOjEyMCwibXVsY2giOjR9LHsiYmVycnkiOjQsImFnZSI6MjQwLCJtdWxjaCI6NH1dfX19`
+:::
+
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
-| {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
-| [[File:Pecha.png\|32px]] [[Berries/Pecha]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | |
+| {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.freeze} | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.freeze} | |
+| [[File:Pecha.png\|32px]] [[Berries/Pecha]] {.freeze} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] {.freeze} | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] {.freeze} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] {.freeze} | |
 | {.mutation} | {.mutation}| {.mutation}| {.mutation} | {.mutation} | |
-| {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | |
-| [[File:Pecha.png\|32px]] [[Berries/Pecha]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | |
+| {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.freeze} | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] {.freeze} | |
+| [[File:Pecha.png\|32px]] [[Berries/Pecha]] {.freeze} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] {.freeze} | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] {.freeze} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] {.freeze} | |
 :::
+* (**Note**: This formation may also yield [[File:Nanab.png\|32px]] [[Berries/Nanab]] Berries.)
 
 **Timing Table**
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Mago.png\|32px]] [[Berries/Mago]]      | `N/A`         | `N/A`                                 | `N/A`                                 |
-| [[File:Pinap.png\|32px]] [[Berries/Pinap]]    | 00:04:00      | 00:02:40                              | `N/A`                                 |
-| `or` ||||
-| [[File:Aspear.png\|32px]] [[Berries/Aspear]]  | `N/A`         | `N/A`                                 | `N/A`                                 |
-| [[File:Pecha.png\|32px]] [[Berries/Pecha]]    | 00:01:00      | 00:00:40                              | `N/A`                                 |
-| [[File:Cheri.png\|32px]] [[Berries/Cheri]]    | 00:00:30      | 00:00:20                              | `N/A`                                 |
+| [[File:Mago.png\|32px]] [[Berries/Mago]]      | `Planted First` | | |
+| [[File:Pinap.png\|32px]] [[Berries/Pinap]]    | 00:04:00      | 00:02:40                              | 00:01:46                                |
+| `or` | | | |
+| [[File:Aspear.png\|32px]] [[Berries/Aspear]]  | `Planted First` | | |
+| [[File:Pecha.png\|32px]] [[Berries/Pecha]]    | 00:01:00      | 00:00:40                              | 00:00:26                                |
+| [[File:Cheri.png\|32px]] [[Berries/Cheri]]    | 00:00:30      | 00:00:20                              | 00:00:13                                 |
 
 #### Mutations
 Qualot Berries can mutate into the following Berries.
@@ -58,6 +72,6 @@ Qualot Berries can mutate into the following Berries.
 ### Acquisition
 Qualot Berries can be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Pinkan Mountain]]      | Epic	| `N/A`         |
+| [[Dungeons/Pinkan Mountain]]      | Kanto (Sevii Islands 4567) | Epic	|

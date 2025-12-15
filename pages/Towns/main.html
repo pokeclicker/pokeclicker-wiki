@@ -31,11 +31,19 @@
                 <!-- /ko -->
                 <tr>
                     <td>Region</td>
-                    <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region])"></td>
+                    <td>
+                        <a href="#!" data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region]), attr: { href: `#!Regions/${GameConstants.camelCaseToString(GameConstants.Region[$data.region])}` }"></a>
+                    </td>
                 </tr>
                 <tr>
                     <td>Sub Region</td>
                     <td data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name"></td>
+                </tr>
+                <tr>
+                    <td>Environment</td>
+                    <td data-bind="foreach: MapHelper.getEnvironments($data.name, $data.region)">
+                        <a href="#!" data-bind="text: GameConstants.camelCaseToString($data), attr: { href: `#!Environments/${GameConstants.camelCaseToString($data)}` }"></a><br />
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -45,7 +53,7 @@
         <div data-bind="foreach: $data.content">
             <!-- ko if: $data.__proto__.constructor.name == "Gym" -->
                 <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.__proto__.constructor.name + ': ' + $data.buttonText, 
-                attr: { href: `#!Gyms/${!$data.buttonText.includes('Elite') && !$data.buttonText.includes('Supreme') && !$data.buttonText.includes('Champion')? Wiki.pageName() : $data.buttonText}` }"></a>
+                attr: { href: `#!Gyms/${$data.town}` }"></a>
             <!-- /ko -->
             <!-- ko ifnot: $data.__proto__.constructor.name == "Gym" -->
                 <span class="badge text-bg-secondary" data-bind="text: GameConstants.camelCaseToString($data.__proto__.constructor.name.replace(/(MoveTo|TownContent|Temporary)/, ''))"></span>
@@ -72,13 +80,24 @@
                         <th>Base Price</th>
                     </thead>
                     <tbody data-bind="foreach: $data.items">
-                        <tr>
-                            <td class="align-middle">
-                                <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.image }" />
-                                <a href="#!" class="text-decoration-none" data-bind="text: $data.displayName,
-                                    attr: { href: `#!${Wiki.items.getItemPageFromObject($data)}` }"></a>
+                        <tr class="align-middle">
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-1">
+                                        <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.image }" />
+                                        <a href="#!" class="text-decoration-none" data-bind="text: $data.displayName,
+                                            attr: { href: `#!${Wiki.items.getItemPageFromObject($data)}` }"></a>
+                                    </div>
+                                    <!-- ko if: $data.visible !== undefined -->
+                                    <ko data-bind="tooltip: {
+                                        title: Wiki.gameHelper.requirementHints($data.visible, false).join('\n'),
+                                        placement: 'bottom',
+                                        trigger: 'hover'
+                                    }">🔒</ko>
+                                    <!-- /ko -->
+                                </div>
                             </td>
-                            <td class="align-middle">
+                            <td>
                                 <img width="18" class="me-1" data-bind="attr: { src: `./images/${GameConstants.Currency[$data.currency]}.svg` }" />
                                 <ko data-bind="text: $data.basePrice.toLocaleString()"></ko>
                             </td>
@@ -132,11 +151,22 @@
                     <th>Price</th>
                 </thead>
                 <tbody data-bind="foreach: ShardDeal.list[$data.location]()">
-                    <tr>
-                        <td class="align-middle">
-                            <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.item.itemType.image }" />
-                            <a href="#!" class="text-decoration-none" data-bind="text: $data.item.itemType.displayName,
-                                attr: { href: `#!${Wiki.items.getItemPageFromObject($data.item.itemType)}` }"></a>
+                    <tr class="align-middle">
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-grow-1">
+                                    <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.item.itemType.image }" />
+                                    <a href="#!" class="text-decoration-none" data-bind="text: $data.item.itemType.displayName,
+                                        attr: { href: `#!${Wiki.items.getItemPageFromObject($data.item.itemType)}` }"></a>
+                                </div>
+                                <!-- ko if: $data.item.itemType.visible !== undefined -->
+                                <ko data-bind="tooltip: {
+                                    title: Wiki.gameHelper.requirementHints($data.item.itemType.visible, false).join('\n'),
+                                    placement: 'bottom',
+                                    trigger: 'hover'
+                                }">🔒</ko>
+                                <!-- /ko -->
+                            </div>
                         </td>
                         <td>
                             <!-- ko foreach: $data.shards -->
@@ -146,7 +176,7 @@
                             </div>
                             <!-- /ko -->
                             <div data-bind="if: $data.questPointCost > 0">
-                                <img class="me-1" width="18" data-bind="attr: { src: './images/questPoint.svg' }" width="18px"/>
+                                <img class="me-1" width="18" data-bind="attr: { src: `./images/${GameConstants.Currency[$data.currencyType]}.svg` }" width="18px"/>
                                 <ko data-bind="text: $data.questPointCost.toLocaleString()"></ko>
                             </div>
                         </td>
@@ -165,18 +195,52 @@
                     <th>Item</th>
                     <th>Price</th>
                 </thead>
-                <tbody data-bind="foreach: GemDeal.list[$data.shop]()">
-                    <tr>
-                        <td class="align-middle">
-                            <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.item.itemType.image }" />
-                            <a href="#!" class="text-decoration-none" data-bind="text: $data.item.itemType.displayName,
-                                attr: { href: `#!${Wiki.items.getItemPageFromObject($data.item.itemType)}` }"></a>
+                <tbody data-bind="foreach: GemDeals.list[$data.shop]()">
+                    <tr class="align-middle">
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-grow-1">
+                                    <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.item.itemType.image }" />
+                                    <a href="#!" class="text-decoration-none" data-bind="text: $data.item.itemType.displayName,
+                                        attr: { href: `#!${Wiki.items.getItemPageFromObject($data.item.itemType)}` }"></a>
+                                </div>
+                                <!-- ko if: $data.item.itemType.visible !== undefined -->
+                                <ko data-bind="tooltip: {
+                                    title: Wiki.gameHelper.requirementHints($data.item.itemType.visible, false).join('\n'),
+                                    placement: 'bottom',
+                                    trigger: 'hover'
+                                }">🔒</ko>
+                                <!-- /ko -->
+                            </div>
                         </td>
                         <td data-bind="foreach: $data.gems">
                             <div>
                                 <img width="24" data-bind="attr: { src: `./images/${PokemonType[$data.gemType]} Gem.png` }" />
                                 <knockout data-bind="text: `${$data.amount.toLocaleString()} x ${PokemonType[$data.gemType]}`"></knockout>
                             </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- /ko -->
+    <!-- ko foreach: $data.content.filter(c => c instanceof GenericTraderShop)  -->
+    <div class="mt-3">
+        <h3 data-bind="text: $data.name"></h3>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <th>Cost</th>
+                    <th>Receive</th>
+                </thead>
+                <tbody data-bind="foreach: GenericDeal.list[$data.traderID]()">
+                    <tr class="align-middle">
+                        <td data-bind="foreach: $data._costs">
+                            <div><generic-deal-item params="model: $data"></generic-deal-item></div>
+                        </td>
+                        <td data-bind="foreach: $data._profits">
+                            <div><generic-deal-item params="model: $data"></generic-deal-item></div>
                         </td>
                     </tr>
                 </tbody>
@@ -195,17 +259,20 @@
                     <th class="text-center">Weight</th>
                     <th class="text-center">Environment</th>
                     <th class="text-center">Requirement</th>
+                    <!-- ko if: $data.region == GameConstants.Region.johto -->
+                    <th class="text-center">Contest Tokens</th>
+                    <!-- /ko -->
                 </tr>
             </thead>
-            <tbody data-bind="foreach: SafariPokemonList.list[$data.region]().filter(p => !p.requireCaught || !p.showUncaught)">
+            <tbody data-bind="foreach: SafariPokemonList.list[$data.region]().filter(p => !($data.region == GameConstants.Region.kalos && p.requirement))">
                 <tr>
-                    <td class="align-middle">
+                    <td class="align-middle text-nowrap">
                         <img width="48px" class="me-1" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
                         <a href="#!" class="text-decoration-none" data-bind="text: $data.name, attr: {href: `#!Pokemon/${$data.name}` }"></a>
                     </td>
                     <td class="align-middle">
                         <div data-bind="style: {
-                            backgroundImage: `url(./pokeclicker/docs/assets/images/dynamic-background/pokemon/${Math.floor(pokemonList.find(p => p.name == $data.name).id).toString().padStart(3, '0')}.png)`,
+                            backgroundImage: `url(./pokeclicker/docs/assets/images/dynamic-background/pokemon/${Wiki.gameHelper.getSafariSpriteId($data).toString().padStart(3, '0')}.png)`,
                             backgroundSize: '192px',
                             height: '48px',
                             width: '48px',
@@ -217,7 +284,13 @@
                     <td class="align-middle">
                         <knockout data-bind="text: $data.environments.map(env => SafariEnvironments[env]).join(', ')"></knockout>
                     </td>
-                    <td class="align-middle" data-bind="text: $data.requireCaught ? 'Must be caught elsewhere first.' : 'N/A'"></td>
+                    <td class="align-middle" data-bind="text: $data.requirement ? Wiki.gameHelper.requirementHints($data.requirement, false) : 'N/A'"></td>
+                    <!-- ko if: $parent.region == GameConstants.Region.johto -->
+                    <td class="align-middle">
+                        <img width="18" class="me-1" data-bind="attr: { src: `./images/contestToken.svg` }" />
+                        <knockout data-bind="text: Math.floor(pokemonMap[$data.name].attack / 5), attr: { 'data-sort': pokemonMap[$data.name].attack }"></knockout> 
+                    </td>
+                    <!-- /ko -->
                 </tr>
             </tbody>
         </table>
@@ -234,7 +307,7 @@
                         <th class="text-center">Requirement</th>
                     </tr>
                 </thead>
-                <tbody data-bind="foreach: pokemonList.filter(p => PokemonHelper.isObtainableAndNotEvable(p.name) && (PokemonHelper.calcNativeRegion(p.name) <= GameConstants.MAX_AVAILABLE_REGION))">
+                <tbody data-bind="foreach: pokemonList.filter(p => PokemonLocations.isObtainableAndNotEvable(p.name) && (PokemonHelper.calcNativeRegion(p.name) <= GameConstants.MAX_AVAILABLE_REGION))">
                     <tr>
                         <td class="align-middle">
                             <img width="48px" class="me-1" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>

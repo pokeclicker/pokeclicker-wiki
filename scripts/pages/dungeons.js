@@ -242,15 +242,16 @@ const getDungeonLoot = (dungeon) => {
 getDungeonLoot.cache = new WeakMap();
 
 const getDungeonLootChancesForItem = (itemName) => {
-    const dungeonsDroppingItem = Object.values(dungeonList).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == itemName)));
+    const item = UndergroundItems.getByName(itemName) ?? ItemList[itemName];
+    const lootName = item.displayName;
+
+    const dungeonsDroppingItem = Object.values(dungeonList).filter((d) => GameConstants.getDungeonRegion(d.name) <= GameConstants.MAX_AVAILABLE_REGION).filter((d) => Object.values(d.lootTable).some((lt) => lt.some((l) => l.loot == itemName || l.loot == lootName)));
     const dungeonsWithLootTables = dungeonsDroppingItem.map(dungeon => (
         {
             dungeonName: dungeon.name,
             lootTable: getDungeonLoot(dungeon)
         }
     ));
-    const item = UndergroundItems.getByName(itemName) ?? ItemList[itemName];
-    const lootName = item.displayName;
 
     // Collate and flatten all item-specific data from each dungeon's loot tables
     const itemData = [];
@@ -357,6 +358,34 @@ const getDungeonShadowPokemon = (dungeon) => {
     return shadows;
 };
 
+const getAllDungeonEncounters = (dungeon) => {
+    const mimicsAsLoot = dungeon.mimicList.length > 0 ? Object.values(dungeon.lootTable).flat().filter(loot => dungeon.mimicList.includes(loot.loot)) : [];
+
+    return [].concat(
+                dungeon.enemyList,
+                dungeon.bossList,
+                mimicsAsLoot
+            ).map(e => normalizeDungeonEncounter(e));
+}
+
+const normalizeDungeonEncounter = (encounter) => {
+    if (typeof encounter === 'string') {
+        return {
+            name: encounter
+        };
+    }
+
+    return {
+        ...encounter,
+        name: encounter.name || encounter.pokemon || encounter.loot,
+        options: {
+            ...encounter.options,
+            requirement: encounter.options?.requirement || encounter.requirement
+        }
+    };
+}
+
+
 module.exports = {
     getDungeonLoot,
     getDungeonLootChances,
@@ -365,4 +394,5 @@ module.exports = {
     getTableClearCounts,
     itemTypeCategories,
     getDungeonShadowPokemon,
+    getAllDungeonEncounters,
 };

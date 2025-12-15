@@ -1,4 +1,7 @@
-## Exclusive Pokémon
+
+---
+
+## Exclusive Pokémon {#exclusives}
 
 The following is a list of Pokémon obtainable in Unova which cannot be found on Routes, in Dungeons, or through level-based evolutions of Pokémon caught in the region.
 
@@ -42,6 +45,8 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 |[[File:Dragon_egg.png\|25px]] [[Items/Dragon Egg]] | [[File:pokemon/633.png\|25px]] [[Pokémon/Deino]] |
 
 ### Baby Pokémon
+
+[[Baby Pokémon]] has a complete list of species obtainable by breeding.
 |Baby|Adult|
 |---|---|
 | [[File:pokemon/636.png\|25px]] [[Pokémon/Larvesta]] | [[File:pokemon/637.png\|25px]] [[Pokémon/Volcarona]] |
@@ -52,3 +57,4 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 | [[File:pokemon/641.png\|25px]] [[Pokémon/Tornadus]] | Unlocks after beating [[Gyms/Opelucid City]]'s Gym |
 | [[File:pokemon/642.png\|25px]] [[Pokémon/Thundurus]] | Unlocks after beating [[Gyms/Opelucid City]]'s Gym |
 | [[File:pokemon/648.png\|25px]] [[Pokémon/Meloetta (Aria)]] | Unlocks after becoming Unova Champion |
+| [[File:pokemon/649.05.png\|25px]] [[Pokémon/Genesect (High-Speed)]] | Unlocks after quest line [[Quest Lines/The Legend Awakened]] complete. |

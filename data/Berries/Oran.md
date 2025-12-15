@@ -11,14 +11,14 @@ Oran Berries can mutate into the following Berries.
 ### Acquisition
 Oran Berries can drop from any route and can also be obtained from the following dungeons.
 
-| Location	                        | Tier	    | Requirement   |
+| Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
-| [[Dungeons/Berry Forest]]         | Common	| `N/A`         |
-| [[Dungeons/Pattern Bush]]         | Common	| `N/A`         |
-| [[Dungeons/Ruins of Alph]]        | Common    | `N/A`         |
-| [[Dungeons/Eterna Forest]]        | Common    | `N/A`         |
-| [[Dungeons/Victory Road Sinnoh]]  | Common    | `N/A`         |
-| [[Dungeons/Frost Cavern]]         | Common    | `N/A`         |
-| [[Dungeons/Trainers' School]]     | Common    | `N/A`         |
-| [[Dungeons/Verdant Cavern]]       | Common    | `N/A`         |
-| [[Dungeons/Dyna Tree Hill]]       | Common    | `N/A`         |
+| [[Dungeons/Berry Forest]]         | Kanto (Sevii Islands 123) | Common	|
+| [[Dungeons/Pattern Bush]]         | Kanto (Sevii Islands 4567) | Common	|
+| [[Dungeons/Ruins of Alph]]        | Johto | Common    |
+| [[Dungeons/Eterna Forest]]        | Sinnoh | Common    |
+| [[Dungeons/Victory Road Sinnoh]]  | Sinnoh | Common    |
+| [[Dungeons/Frost Cavern]]         | Kalos | Common    |
+| [[Dungeons/Trainers' School]]     | Alola | Common    |
+| [[Dungeons/Verdant Cavern]]       | Alola | Common    |
+| [[Dungeons/Dyna Tree Hill]]       | Galar (Crown Tundra) | Common    |

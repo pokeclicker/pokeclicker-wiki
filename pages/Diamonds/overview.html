@@ -42,91 +42,38 @@
 <!-- /ko -->
 <hr>
 <h2>Uses</h2>
-<h3>Mining Upgrades</h3>
-<!-- ko with: GameHelper.enumNumbers(UndergroundUpgrade.Upgrades) -->
-<div class="table-responsive">
-    <table class="table table-bordered table-striped table-hover">
-        <thead>
-            <th>Item</th>
-            <th>Effect/lvl</th>
-            <th>Max Lvl</th>
-            <th>Cost</th>
-            <th>Total Cost</th>
-            <th>Max Effect</th>
-        </thead>
-        <tbody data-bind="foreach: $data">
-            <tr>
-                <td data-bind="text: App.game.underground.getUpgrade($data).displayName"></td>
-                <td>
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Max Energy') -->
-                    +<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Energy
-                    <!-- /ko -->
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('tems') -->
-                    +<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Item
-                    <!-- /ko -->
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('estored') -->
-                    +<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Energy
-                    <!-- /ko -->
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('regen') -->
-                    -<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Second
-                    <!-- /ko -->
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Daily') -->
-                    +<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Deal
-                    <!-- /ko -->
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Bomb') -->
-                    +<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Tiles Cleared
-                    <!-- /ko -->
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Survey Cost') -->
-                    -<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Energy Cost
-                    <!-- /ko -->
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Survey Efficiency') -->
-                    +<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Tile Cleared
-                    <!-- /ko -->
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Larger') -->
-                    +<ko data-bind="text: App.game.underground.getUpgrade($data).bonusList[1]"></ko> Underground Size and Items
-                    <!-- /ko -->
-                </td>
-                <td data-bind="text: App.game.underground.getUpgrade($data).maxLevel"></td>
-                <td data-bind="text: App.game.underground.getUpgrade($data).costList[0].amount.toLocaleString(), attr: { 'data-sort': App.game.underground.getUpgrade($data).costList[0].amount }"></td>
-                <td data-bind="attr: { 'data-sort': Object.values(App.game.underground.getUpgrade($data).costList).flatMap((c) => c.amount).reduce((a, b) => a + b) }">
-                    <img width="18" class="me-1" data-bind="attr: { src: `./images/${GameConstants.Currency[App.game.underground.getUpgrade($data).costList[0].currency]}.svg` }" />
-                    <ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).costList).flatMap((c) => c.amount).reduce((a, b) => a + b).toLocaleString()"></ko>
-                </td>
-                <td>
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Max Energy') -->
-                    +<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Energy
-                    <!-- /ko -->
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('tems') -->
-                    +<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Items
-                    <!-- /ko -->
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('estored') -->
-                    +<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Energy
-                    <!-- /ko -->
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('regen') -->
-                    -<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Seconds
-                    <!-- /ko -->
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Daily') -->
-                    +<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Deals
-                    <!-- /ko -->
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Bomb') -->
-                    +<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Tiles Cleared
-                    <!-- /ko -->
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Survey Cost') -->
-                    -<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Energy Cost
-                    <!-- /ko -->
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Survey Efficiency') -->
-                    +<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Tiles Cleared
-                    <!-- /ko -->
-                    <!-- ko if: App.game.underground.getUpgrade($data).displayName.includes('Larger') -->
-                    +<ko data-bind="text: Object.values(App.game.underground.getUpgrade($data).bonusList).pop()"></ko> Underground Size and Items
-                    <!-- /ko -->
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div class="mt-3">
+    <h4>Shop(s)</h4>
+    <div>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <th>Item</th>
+                    <th>Base Price</th>
+                    <th>Shop</th>
+                    <th>Region</th>
+                </thead>
+                <tbody data-bind="foreach: Wiki.shopMon.getUniqueItems(GameConstants.Currency.diamond)">
+                    <tr>
+                        <td class="align-middle">
+                            <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data[1].image }" />
+                            <a href="#!" class="text-decoration-none" data-bind="text: $data[1].displayName,
+                                attr: { href: `#!Items/${$data[1].displayName}` }"></a>
+                        </td>
+                        <td class="align-middle" data-bind="attr: { 'data-sort': $data[1].basePrice }">
+                            <img width="18" class="me-1" data-bind="attr: { src: `./images/${GameConstants.Currency[$data[1].currency]}.svg` }" />
+                            <ko data-bind="text: $data[1].basePrice.toLocaleString()"></ko>
+                        </td>
+                        <td><a data-bind="text: $data[0].name ?? 'Poké Mart' + ' (' + $data[0].parent.name + ')', attr: { href: `#!Towns/${$data[0].parent.name}` }"></a></td>
+                        <td data-bind="with: GameConstants.camelCaseToString(GameConstants.Region[$data[0].parent.region])"><a data-bind="text: $data, attr: { href: `#!Regions/${$data}` }"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
-<!-- /ko -->
-<h3>Shopmon</h3>
+<br/>
+<h4>Shopmon</h4>
 <div>
     <div class="table-responsive">
         <table class="table table-bordered table-striped table-hover">
@@ -136,19 +83,19 @@
                 <th>Shop</th>
                 <th>Region</th>
             </thead>
-            <tbody data-bind="foreach: Wiki.diamonds.getShopMons(3)">
+            <tbody data-bind="foreach: Wiki.shopMon.getShopMons(GameConstants.Currency.diamond)">
                 <tr>
                     <td class="align-middle">
                         <img width="24" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data[1].image }" />
                         <a href="#!" class="text-decoration-none" data-bind="text: $data[1].displayName,
-                            attr: { href: `#!${$data[1] instanceof PokemonItem ? 'Pokemon' : 'Items'}/${$data[1].displayName}` }"></a>
+                            attr: { href: `#!Pokemon/${$data[1].name}` }"></a>
                     </td>
-                    <td class="align-middle">
+                    <td class="align-middle" data-bind="attr: { 'data-sort': $data[1].basePrice }">
                         <img width="18" class="me-1" data-bind="attr: { src: `./images/${GameConstants.Currency[$data[1].currency]}.svg` }" />
-                        <ko data-bind="text: $data[1].basePrice.toLocaleString(), attr: { 'data-sort': $data[1].basePrice }"></ko>
+                        <ko data-bind="text: $data[1].basePrice.toLocaleString()"></ko>
                     </td>
-                    <td data-bind="text: $data[0].name + ' (' + $data[0].parent.name + ')'"></td>
-                    <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0].parent.region])"></td>
+                    <td><a data-bind="text: $data[0].name + ' (' + $data[0].parent.name + ')', attr: { href: `#!Towns/${$data[0].parent.name}` }"></a></td>
+                    <td data-bind="with: GameConstants.camelCaseToString(GameConstants.Region[$data[0].parent.region])"><a data-bind="text: $data, attr: { href: `#!Regions/${$data}` }"></a></td>
                 </tr>
             </tbody>
         </table>

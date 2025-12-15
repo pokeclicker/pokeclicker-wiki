@@ -15,7 +15,7 @@ const requirementHints = (requirement, includeMarkdown = true) => {
             let hint = req.hint();
             switch (req.constructor) {
                 case RouteKillRequirement:
-                    const routeName = Routes.getName(req.route, req.region, true);
+                    const routeName = Routes.getName(req.route, req.region, false);
                     hint = `Defeat ${req.requiredValue} or more Pokémon on ${includeMarkdown ? `[[Routes/${routeName}]]` : routeName}.`;
                     break;
                 case ClearDungeonRequirement:
@@ -26,17 +26,19 @@ const requirementHints = (requirement, includeMarkdown = true) => {
                     break;
                 case QuestLineStepCompletedRequirement:
                     if (typeof req.questIndex === 'function') {
-                        hint = req.option == GameConstants.AchievementOption.equal
+                        hint = req.option == GameConstants.AchievementOption.equal || req.option == GameConstants.AchievementOption.more
                             ? `Progress in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
                             : `Have not progessed to a certain step in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
                     } else {
-                        hint = req.option == GameConstants.AchievementOption.equal
+                        hint = req.option == GameConstants.AchievementOption.equal || req.option == GameConstants.AchievementOption.more
                             ? `Complete step ${req.questIndex + 1} in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
                             : `Have not completed step ${req.questIndex + 1} in the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
                     }
                     break;
                 case QuestLineCompletedRequirement:
-                    hint = `Complete the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
+                    hint = req.option >= GameConstants.AchievementOption.equal
+                        ? `Complete the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`
+                        : `No longer appears after completing the ${includeMarkdown ? `[[Quest Lines/${req.questLineName}]]` : req.questLineName} quest line.`;
                     break;
                 case GymBadgeRequirement:
                     hint = req.option == GameConstants.AchievementOption.more
@@ -49,13 +51,26 @@ const requirementHints = (requirement, includeMarkdown = true) => {
                 case SpecialEventRequirement:
                     hint = `The ${includeMarkdown ? `[[Events/${req.specialEventName}]]` : req.specialEventName} event must be active.`;
                     break;
+                case DayOfWeekRequirement:
+                    hint = `Appears every ${GameConstants.DayOfWeek[req.DayOfWeekNum]}.`;
+                    break;
                 case DevelopmentRequirement:
                     hint = 'Not currently available.'
                     break;
+                case PokemonDefeatedSelectNRequirement:
+                    hint = null;
+                    break;
             }
-            hints.push(hint);
+
+            if (hint?.length) {
+                hints.push(hint);
+            }
         }
     });
+
+    if (requirement.some((req) => req instanceof PokemonDefeatedSelectNRequirement)) { // show last
+        hints.push('Has a chance to appear here; randomly changes locations after being defeated.');
+    }
 
     return hints;
 };
@@ -66,59 +81,71 @@ const getEvolutionHints = (evoData) => {
     }
 
     const hints = [];
-    const restrictions = evoData.restrictions;
+    const restrictions = evoData.restrictions.filter(r => {
+        // Filter Everstone from restrictions so it doesn't show up in hints
+        if (r.itemName == 'Everstone') {
+            return false;
+        }
+        return true;
+    });
     const listFormatter = new Intl.ListFormat('en', { type: 'disjunction' });
 
     let hint = '';
     // Base Evo type (Level or Stone)
     if (isLevelEvolution(evoData)) {
         const levelReq = getRequirementFromRestrictions(restrictions, 'PokemonLevelRequirement');
-        hint = levelReq.requiredValue == 1 ? `Hatch ${levelReq.pokemon}` : `${levelReq.pokemon} must reach level ${levelReq.requiredValue}`;
+        hint = levelReq.requiredValue == 1 ? `Hatch or feed a Rare Candy to ${levelReq.pokemon}` : `${levelReq.pokemon} must reach level ${levelReq.requiredValue}`;
     } else if (isStoneEvolution(evoData)) {
         const stone = ItemList[GameConstants.StoneType[evoData.stone]]._displayName;
         hint = `Requires using ${GameHelper.anOrA(stone)} ${stone}`;
     }
 
     // Additional restrictions
-    if (isDungeonRestrictedEvolution(evoData)) {
+    if (isDungeonRestrictedEvolution(restrictions)) {
         const dungeonReq = getRequirementFromRestrictions(restrictions, 'InDungeonRequirement');
         hint += ` in the ${dungeonReq.dungeon} dungeon`;
     }
 
-    if (isTimeRestrictedEvolution(evoData)) {
+    if (isTimeRestrictedEvolution(restrictions)) {
         const timeReq = getRequirementFromRestrictions(restrictions, 'DayCyclePartRequirement');
         hint += ` while the time is ${listFormatter.format(timeReq.dayCycleParts.map((t) => DayCyclePart[t]))}`;
     }
 
-    if (isEnvironmentRestrictedEvolution(evoData)) {
+    if (isEnvironmentRestrictedEvolution(restrictions)) {
         const envReq = getRequirementFromRestrictions(restrictions, 'InEnvironmentRequirement');
-        hint += ` in ${GameHelper.anOrA(envReq.environment)} ${envReq.environment} environment`;
+        hint += ` in ${GameHelper.anOrA(envReq.environment)} ${GameConstants.camelCaseToString(envReq.environment)} environment`;
     }
 
-    if (isQuestLineRestrictedEvolution(evoData)) {
-        const questReq = getRequirementFromRestrictions(restrictions, 'QuestLineRequirement');
+    if (isQuestLineRestrictedEvolution(restrictions)) {
+        const questReq = getRequirementFromRestrictions(restrictions, 'QuestLineCompletedRequirement');
         hint += ` after completing the ${questReq.questLineName} quest line`;
     };
 
-    if (isInRegionRestrictedEvolution(evoData)) {
+    if (isInRegionRestrictedEvolution(restrictions)) {
         const inRegionReq = getRequirementFromRestrictions(restrictions, 'InRegionRequirement');
         hint += ` in the ${listFormatter.format(inRegionReq.regions.map(r => getRegionName(r)))} region`;
     }
 
-    if (isWeatherRestrictedEvolution(evoData)) {
+    if (isWeatherRestrictedEvolution(restrictions)) {
         const weatherReq = getRequirementFromRestrictions(restrictions, 'WeatherRequirement');
-        hint += ` during ${listFormatter.format(weatherReq.weather.map(w => WeatherType[w]))} weather`;
+        hint += ` during ${listFormatter.format(weatherReq.weather.map(w => GameConstants.humanifyString(WeatherType[w])))} weather`;
     }
 
-    if (isHeldItemRestrictedEvolution(evoData)) {
+    if (isHeldItemRestrictedEvolution(restrictions)) {
         const itemReq = getRequirementFromRestrictions(restrictions, 'HoldingItemRequirement');
         hint += ` while holding ${GameHelper.anOrA(itemReq.itemName)} ${GameConstants.humanifyString(itemReq.itemName)}`;
     }
 
-    if (isMegaEvolution(evoData)) {
+    if (isMegaEvolution(restrictions)) {
         const megaReq = getRequirementFromRestrictions(restrictions, 'MegaEvolveRequirement');
         const requiredAttack = pokemonMap[megaReq.name].attack * GameConstants.MEGA_REQUIRED_ATTACK_MULTIPLIER;
         hint += ` after obtaining ${GameConstants.humanifyString(GameConstants.MegaStoneType[megaReq.megaStone])} and ${megaReq.name} has ${requiredAttack.toLocaleString()} or more attack`;
+    }
+
+    if (isRequiredAttackEvolution(restrictions)) {
+        const req = getRequirementFromRestrictions(restrictions, 'PokemonAttackRequirement');
+        const requiredAttack = pokemonMap[req.pokemon].attack * req.requiredValue;
+        hint += ` when it has ${requiredAttack.toLocaleString()} or more attack`;
     }
 
     if (hint.length) {
@@ -147,37 +174,41 @@ const isStoneEvolution = (evoData) => {
     return evoData.trigger == EvoTrigger.STONE;
 };
 
-const isDungeonRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['InDungeonRequirement']);
+const isDungeonRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['InDungeonRequirement']);
 };
 
-const isTimeRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['DayCyclePartRequirement']);
+const isTimeRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['DayCyclePartRequirement']);
 };
 
-const isEnvironmentRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['InEnvironmentRequirement']);
+const isEnvironmentRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['InEnvironmentRequirement']);
 };
 
-const isQuestLineRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['QuestLineRequirement']);
+const isQuestLineRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['QuestLineCompletedRequirement']);
 }
 
-const isInRegionRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['InRegionRequirement']);
+const isInRegionRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['InRegionRequirement']);
 };
 
-const isWeatherRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['WeatherRequirement']);
+const isWeatherRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['WeatherRequirement']);
 };
 
-const isHeldItemRestrictedEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['HoldingItemRequirement']);
+const isHeldItemRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['HoldingItemRequirement']);
 };
 
-const isMegaEvolution = (evoData) => {
-    return hasEvoRestrictions(evoData.restrictions, ['MegaEvolveRequirement']);
+const isMegaEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['MegaEvolveRequirement']);
 };
+
+const isRequiredAttackEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['PokemonAttackRequirement']);
+}
 
 const hasEvoRestrictions = (restrictions, requirements) => {
     return requirements.every(req => restrictions.some(res => res.constructor.name == req));
@@ -278,6 +309,15 @@ const setMapLocation = (selector) => {
     }
 }
 
+const getSafariSpriteId = (safariEncounter) => {
+    const pokemon = PokemonHelper.getPokemonByName(safariEncounter.name);
+    switch (safariEncounter.sprite) {
+        case 'base' : return Math.floor(pokemon.id);
+        case 'self' : return pokemon.id;
+        default : return PokemonHelper.getPokemonByName(safariEncounter.sprite).id;
+    }
+}
+
 module.exports = {
     requirementHints,
     getEvolutionHints,
@@ -285,4 +325,5 @@ module.exports = {
     getLocationOverlaySVG,
     getRouteOverlaySVG,
     overlaySVG,
+    getSafariSpriteId,
 }

@@ -8,25 +8,25 @@
                 <th>Route Name</th>
                 <th>Encounters</th>
                 <th>Base HP</th>
+                <th>Level</th>
                 <th>Egg Steps</th>
                 <th>Roamer Chance</th>
             </tr>
         </thead>
         <tbody data-bind="foreach: Routes.regionRoutes.filter((route) => route.region <= GameConstants.MAX_AVAILABLE_REGION)">
-            <tr class="text-nowrap clickable" data-bind="click: () => { Wiki.gotoPage('Routes', $data.routeName); return false; }">
+            <tr class="text-nowrap clickable" data-bind="
+                click: (_, e) => { return Wiki.gotoPageClick(e, 'Routes', $data.routeName); },
+                attr: { 'data-href': `#!Routes/${$data.routeName}` }">
                 <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region]), attr: { 'data-order': $data.region }"></td>
                 <td data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name, attr: { 'data-order': $data.subRegion ?? 0 }"></td>
-                <td data-bind="text: $data.routeName, attr: { 'data-order': $index() }"></td>
+                <td data-bind="attr: { 'data-order': $index() }">
+                    <a class="text-decoration-none" href="#!" data-bind="text: $data.routeName, attr: { href: `#!Routes/${$data.routeName}` }"></a>
+                </td>
                 <td data-bind="text: new Set(Object.values($data.pokemon).flat().map(p => typeof p != 'string' ? p.pokemon.flat() : p).flat()).size"></td>
                 <td data-bind="text: `❤️ ${Math.round(PokemonFactory.routeHealth($data.number, $data.region)).toLocaleString()}`, attr: { 'data-order': PokemonFactory.routeHealth($data.number, $data.region) }"></td>
+                <td data-bind="text: `${Math.round(PokemonFactory.routeLevel($data.number, $data.region)).toLocaleString()}`, attr: { 'data-order': PokemonFactory.routeLevel($data.number, $data.region) }"></td>
                 <td data-bind="text: +Math.sqrt(MapHelper.normalizeRoute($data?.number, $data.region)).toFixed(2)"></td>
-                <td data-bind="text: (() => {
-                    const region = $data.region;
-                    const routes = Routes.getRoutesByRegion($data.region).map(r => MapHelper.normalizeRoute(r.number, region));
-                    const routeNum = MapHelper.normalizeRoute($data?.number, region);
-                    const roamingChance = ((max, min, maxRoute, minRoute) => Math.floor(max + ( (min - max) * (maxRoute - routeNum) / (maxRoute - minRoute))))(GameConstants.ROAMING_MAX_CHANCE, GameConstants.ROAMING_MIN_CHANCE, Math.max(...routes), Math.min(...routes));
-                    return '1/' + roamingChance.toLocaleString();
-                })()"></td>
+                <td data-bind="text: `1/${Wiki.pokemon.getRouteRoamingChance($data.region, $data.subRegion ?? 0, $data.number).toLocaleString()}`"></td>
             </tr>
         </tbody>
     </table>

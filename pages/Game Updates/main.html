@@ -1,0 +1,70 @@
+<div>
+    <!-- ko ifnot: ChangelogItems.find(c => c.version === Wiki.pageName()) -->
+    <h3>Update not found...</h3>
+    <!-- /ko -->
+    <!-- ko with: ChangelogItems.find(c => c.version === Wiki.pageName()) -->
+    <div class="d-flex mb-3">
+        <div>Release Date: <span data-bind="text: $data.description.match(/\-(?=[^-]*$)(.+)<\/code>/)?.[1]?.trim()"></span></div>
+        <div class="ms-auto">
+            <div class="d-flex" style="gap: 20px;" data-bind="with: (() => {
+                const index = ChangelogItems.findIndex(c => c.version === Wiki.pageName());
+                return {
+                    previous: ChangelogItems.find((c, i) => i > index && c.version !== undefined)?.version,
+                    next: ChangelogItems.findLast((c, i) => i < index && c.version !== undefined)?.version,
+                }
+            })()">
+                <!-- ko if: $data.previous -->
+                <a href="#" class="text-decoration-none" data-bind="text: `← ${$data.previous}`, attr: { href: `/#!Game_Updates/${$data.previous}` }"></a>
+                <!-- /ko -->
+                <!-- ko if: $data.next -->
+                <a href="#" class="text-decoration-none" data-bind="text: `${$data.next} →`, attr: { href: `/#!Game_Updates/${$data.next}` }"></a>
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion mb-3">
+        <div class="accordion-item">
+            <h4 class="accordion-header">
+                <button data-bs-target="#sectionCollapse" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                    In-game Changelog
+                </button>
+            </h4>
+            <div id="sectionCollapse" class="accordion-collapse collapse">
+                <div class="accordion-body" data-bind="with: (() => {
+                    const startIndex = ChangelogItems.findIndex(c => c.version === Wiki.pageName()) + 1;
+                    const endIndex = ChangelogItems.findIndex((c, i) => i >= startIndex && c.version !== undefined);
+                    return ChangelogItems.slice(startIndex, endIndex);
+                })()">
+                    <div data-bind="with: $data.filter(c => c.type.label === 'NEW')">
+                    <!-- ko if: $data.length -->
+                        <h4>New</h4>
+                        <ul data-bind="foreach: $data">
+                            <li data-bind="html: $data.description"></li>
+                        </ul>
+                    <!-- /ko -->
+                    </div>
+                    
+                    <div data-bind="with: $data.filter(c => c.type.label === 'CHANGE')">
+                    <!-- ko if: $data.length -->
+                        <h4>Changes</h4>
+                        <ul data-bind="foreach: $data">
+                            <li data-bind="html: $data.description"></li>
+                        </ul>
+                    <!-- /ko -->
+                    </div>
+
+                    <div data-bind="with: $data.filter(c => c.type.label === 'FIXED')">
+                    <!-- ko if: $data.length -->
+                        <h4>Fixed</h4>
+                        <ul data-bind="foreach: $data">
+                            <li data-bind="html: $data.description"></li>
+                        </ul>
+                    <!-- /ko -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>

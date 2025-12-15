@@ -1,0 +1,1 @@
+Viridian City is the second town in the Kanto Region and is home to the Old Man who explains the basics of using the Poké Ball Selector. [Giovanni's Gym](https://wiki.pokeclicker.com/#!Gyms/Viridian%20City) is also located here however, it is only accessible to the player after meeting certain requirements.

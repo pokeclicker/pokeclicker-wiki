@@ -1,4 +1,7 @@
-## Exclusive Pokémon
+
+---
+
+## Exclusive Pokémon {#exclusives}
 
 The following is a list of Pokémon obtainable in Sinnoh which cannot be found on Routes, in Dungeons, or through level-based evolutions of Pokémon caught in the region.
 
@@ -17,6 +20,7 @@ The following is a list of Pokémon obtainable in Sinnoh which cannot be found o
 |[[File:Razor_claw.png\|25px]] [[Items/Razor Claw]]|1 | [[File:pokemon/461.png\|25px]] [[Pokémon/Weavile]]
 |[[File:Razor_fang.png\|25px]] [[Items/Razor Fang]]|1 | [[File:pokemon/472.png\|25px]] [[Pokémon/Gliscor]]|
 |[[File:Dawn_stone.png\|25px]] [[Items/Dawn Stone]]|2 | [[File:pokemon/475.png\|25px]] [[Pokémon/Gallade]], [[File:pokemon/478.png\|25px]] [[Pokémon/Froslass]]
+|[[File:Dusk_stone.png\|25px]] [[Items/Dusk Stone]]|2 | [[File:pokemon/430.png\|25px]] [[Pokémon/Honchkrow]], [[File:pokemon/429.png\|25px]] [[Pokémon/Mismagius]]
 |[[File:Shiny_stone.png\|25px]] [[Items/Shiny Stone]]|2 | [[File:pokemon/468.png\|25px]] [[Pokémon/Togekiss]], [[File:pokemon/407.png\|25px]] [[Pokémon/Roserade]]
 |[[File:Dubious_disc.png\|25px]] [[Items/Dubious Disc]]|1 | [[File:pokemon/474.png\|25px]] [[Pokémon/Porygon-Z]]
 |[[File:Protector.png\|25px]][[Items/Protector]]|1 | [[File:pokemon/464.png\|25px]] [[Pokémon/Rhyperior]]
@@ -33,7 +37,7 @@ For the evolution to happen, you must equip the Held Item to the corresponding P
 ### Shopmons
 |Location|Pokémon|Cost|
 |---|---|---|
-|[[Towns/Solaceon Town]] | [[File:pokemon/442.png\|25px]] [[Pokémon/Spiritomb]]|[[File:questPoint.svg\|20px]] 6,750|
+|[[Towns/Solaceon Town]] | [[File:pokemon/442.png\|25px]] [[Pokémon/Spiritomb]]|[[File:Odd Keystone.png\|20px]] 1 + [[File:diamond.svg\|20px]] 5,000|
 |[[Towns/Pal Park]] | [[File:pokemon/415.png\|25px]] [[Pokémon/Combee]]|[[File:questPoint.svg\|20px]] 6,750|
 |[[Towns/Pal Park]] | [[File:pokemon/412.png\|25px]] [[Pokémon/Burmy (Plant)]]|[[File:questPoint.svg\|20px]] 6,750|
 |[[Towns/Pal Park]] | [[File:pokemon/420.png\|25px]] [[Pokémon/Cherubi]]|[[File:questPoint.svg\|20px]] 6,750|
@@ -53,12 +57,15 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 |[[File:Dragon_egg.png\|25px]] [[Items/Dragon Egg]] | [[File:pokemon/443.png\|25px]] [[Pokémon/Gible]] |
 
 ### Baby Pokémon
+
+[[Baby Pokémon]] has a complete list of species obtainable by breeding.
 |Baby|Adult|
 |---|---|
 | [[File:pokemon/438.png\|25px]] [[Pokémon/Bonsly]] | [[File:pokemon/185.png\|25px]] [[Pokémon/Sudowoodo]] |
 | [[File:pokemon/439.png\|25px]] [[Pokémon/Mime Jr.]] | [[File:pokemon/122.png\|25px]] [[Pokémon/Mr. Mime]] |
-| [[File:pokemon/440.png\|25px]] [[Pokémon/Happiny]] | [[File:pokemon/113.png\|25px]] [[Pokémon/Chansey]] |
+| [[File:pokemon/440.png\|25px]] [[Pokémon/Happiny]] | [[File:pokemon/113.png\|25px]] [[Pokémon/Chansey]]  or  [[File:pokemon/242.png\|25px]] [[Pokémon/Blissey]]|
 | [[File:pokemon/446.png\|25px]] [[Pokémon/Munchlax]] | [[File:pokemon/143.png\|25px]] [[Pokémon/Snorlax]] |
+| [[File:pokemon/458.png\|25px]] [[Pokémon/Mantyke]] | [[File:pokemon/226.png\|25px]] [[Pokémon/Mantine]] |
 | [[File:pokemon/489.png\|25px]] [[Pokémon/Phione]] | [[File:pokemon/490.png\|25px]] [[Pokémon/Manaphy]] |
 
 Munchlax can also be obtained as a Wanderer by using [[Berries/Chilan]] berries.
@@ -66,42 +73,42 @@ Munchlax can also be obtained as a Wanderer by using [[Berries/Chilan]] berries.
 ### Weather-dependent Pokémon
 |Pokémon | Evolution | Required Weather |
 |---|---|---|
-| [[File:pokemon/421.png\|25px]] [[Pokémon/Cherrim (Overcast)]] | [[File:pokemon/421.01.png\|25px]] [[Pokémon/Cherrim (Sunshine)]] | Sunny |
+| [[File:pokemon/421.png\|25px]] [[Pokémon/Cherrim (Overcast)]] | [[File:pokemon/421.01.png\|25px]] [[Pokémon/Cherrim (Sunshine)]] | Harsh Sunlight |
 
 ### Level-dependent Pokémon
 **Note:** Level-dependant Pokémon evolve at or above the level specified excluding level 100. Pokémon at level 100 must be bred and retrained to the correct level.
-|Pokémon | Evolution | Required Level | Required Location |
+|Pokémon | Evolution | Required Level |
 |---|---|---|---|
-| [[File:pokemon/190.png\|25px]] [[Pokémon/Aipom]] | [[File:pokemon/424.png\|25px]] [[Pokémon/Ambipom]] | 32 | Any |
-| [[File:pokemon/108.png\|25px]] [[Pokémon/Lickitung]] | [[File:pokemon/463.png\|25px]] [[Pokémon/Lickilicky]] | 33 | Any |
-| [[File:pokemon/114.png\|25px]] [[Pokémon/Tangela]] | [[File:pokemon/465.png\|25px]] [[Pokémon/Tangrowth]] | 33 | Any |
-| [[File:pokemon/193.png\|25px]] [[Pokémon/Yanma]] | [[File:pokemon/469.png\|25px]] [[Pokémon/Yanmega]] | 33 | Any |
-| [[File:pokemon/221.png\|25px]] [[Pokémon/Piloswine]] | [[File:pokemon/473.png\|25px]] [[Pokémon/Mamoswine]] | 53 | Any |
-
-### Location-dependent Pokémon
-**Note:** Location-dependant Pokémon evolve at or above the level specified (excluding level 100) when leveled at a particular location. Pokémon at level 100 must be bred and retrained to the correct level (level 20), and then leveled at the specified location.
-|Pokémon | Evolution | Required Location |
-|---|---|---|
-| [[File:pokemon/82.png\|25px]] [[Pokémon/Magneton]] | [[File:pokemon/462.png\|25px]] [[Pokémon/Magnezone]] | [[Dungeons/Mt. Coronet North]] or [[Dungeons/Mt. Coronet South]] |
-| [[File:pokemon/133.png\|25px]] [[Pokémon/Eevee]] | [[File:pokemon/470.png\|25px]] [[Pokémon/Leafeon]] | [[Dungeons/Eterna Forest]] |
-| [[File:pokemon/133.png\|25px]] [[Pokémon/Eevee]] | [[File:pokemon/471.png\|25px]] [[Pokémon/Glaceon]] | [[Dungeons/Lake Acuity]] |
-| [[File:pokemon/299.png\|25px]] [[Pokémon/Nosepass]] | [[File:pokemon/476.png\|25px]] [[Pokémon/Probopass]] | [[Dungeons/Mt. Coronet North]] or [[Dungeons/Mt. Coronet South]] |
+| [[File:pokemon/190.png\|25px]] [[Pokémon/Aipom]] | [[File:pokemon/424.png\|25px]] [[Pokémon/Ambipom]] | 32 |
+| [[File:pokemon/108.png\|25px]] [[Pokémon/Lickitung]] | [[File:pokemon/463.png\|25px]] [[Pokémon/Lickilicky]] | 33 |
+| [[File:pokemon/114.png\|25px]] [[Pokémon/Tangela]] | [[File:pokemon/465.png\|25px]] [[Pokémon/Tangrowth]] | 33 |
+| [[File:pokemon/193.png\|25px]] [[Pokémon/Yanma]] | [[File:pokemon/469.png\|25px]] [[Pokémon/Yanmega]] | 33 |
+| [[File:pokemon/221.png\|25px]] [[Pokémon/Piloswine]] | [[File:pokemon/473.png\|25px]] [[Pokémon/Mamoswine]] | 53 |
 
 ### Environment-dependent Pokémon
-**Note:** Environment-dependant Pokémon evolve at or above the level specified (excluding level 100) when leveled at a location that matches the environment specified. Pokémon at level 100 must be bred and then retrained while being inside the right location.
-|Pokémon | Evolution | Required Environment |
-|---|---|---|
-| [[File:pokemon/412.png\|25px]] [[Pokémon/Burmy (Plant)]] | [[File:pokemon/412.01.png\|25px]] [[Pokémon/Burmy (Sand)]] | Cave or Gem Cave |
-| [[File:pokemon/412.png\|25px]] [[Pokémon/Burmy (Plant)]] | [[File:pokemon/412.02.png\|25px]] [[Pokémon/Burmy (Trash)]] | Power Plant, Mansion, or Graveyard |
+**Note:** Environment-dependant Pokémon evolve at or above the level specified (excluding level 100) when leveled at a location that matches the environment specified. Pokémon at level 100 must be bred and then retrained to the correct level (level 20, or for Burmy level 1) while being inside the right location.
+|Pokémon | Evolution | Required Environment | Example Location |
+|---|---|---|---|
+| [[File:pokemon/82.png\|25px]] [[Pokémon/Magneton]] | [[File:pokemon/462.png\|25px]] [[Pokémon/Magnezone]] | [[Environments/Magnetic Field]] | [[Dungeons/Mt. Coronet North]] or [[Dungeons/Mt. Coronet South]] |
+| [[File:pokemon/133.png\|25px]] [[Pokémon/Eevee]] | [[File:pokemon/470.png\|25px]] [[Pokémon/Leafeon]] | [[Environments/Moss Rock]] | [[Dungeons/Eterna Forest]] |
+| [[File:pokemon/133.png\|25px]] [[Pokémon/Eevee]] | [[File:pokemon/471.png\|25px]] [[Pokémon/Glaceon]] | [[Environments/Ice Rock]] | [[Routes/Sinnoh Route 217]] or [[Dungeons/Lake Acuity]] |
+| [[File:pokemon/299.png\|25px]] [[Pokémon/Nosepass]] | [[File:pokemon/476.png\|25px]] [[Pokémon/Probopass]] | [[Environments/Magnetic Field]] | [[Dungeons/Mt. Coronet North]] or [[Dungeons/Mt. Coronet South]] |
+| [[File:pokemon/412.01.png\|25px]] [[Pokémon/Burmy (Sand)]] or [[File:pokemon/412.02.png\|25px]] [[Pokémon/Burmy (Trash)]] | [[File:pokemon/412.png\|25px]] [[Pokémon/Burmy (Plant)]] | [[Environments/Plant Cloak]] | [[Routes/Sinnoh Route 201]]
+| [[File:pokemon/412.png\|25px]] [[Pokémon/Burmy (Plant)]] or [[File:pokemon/412.02.png\|25px]] [[Pokémon/Burmy (Trash)]] | [[File:pokemon/412.01.png\|25px]] [[Pokémon/Burmy (Sand)]] | [[Environments/Sandy Cloak]] | [[Dungeons/Oreburgh Gate]]
+| [[File:pokemon/412.png\|25px]] [[Pokémon/Burmy (Plant)]] or [[File:pokemon/412.01.png\|25px]] [[Pokémon/Burmy (Sand)]] | [[File:pokemon/412.02.png\|25px]] [[Pokémon/Burmy (Trash)]] | [[Environments/Trash Cloak]] | [[Dungeons/Valley Windworks]]
 
 ### Roamers
 |Pokémon|Requirement|
 |---|---|
 | [[File:pokemon/490.png\|25px]] [[Pokémon/Manaphy]]|Unlocks during [[Quest_Lines/Recover the Precious Egg]]|
 | [[File:pokemon/481.png\|25px]] [[Pokémon/Mesprit]]|Unlocks after clearing [[Dungeons/Distortion World]]|
-| [[File:pokemon/488.png\|25px]] [[Pokémon/Cresselia]]|Unlocks after clearing [[Dungeons/Fullmoon Island]]|
+| [[File:pokemon/488.png\|25px]] [[Pokémon/Cresselia]]|Unlocks after clearing [[Dungeons/Fullmoon Island]] and the moon phase is Waning Crescent or New Moon or Waxing Crescent|
+| [[File:pokemon/491.png\|25px]] [[Pokémon/Darkrai]]|Unlocks after clearing [[Dungeons/Newmoon Island]] and the moon phase is First Quarter or Waxing Gibbous or Full Moon or Waning Gibbous or Third Quarter|
 
-**Note:** Manaphy will be awarded to the player after completing [[Quest Lines/Recover the Previous Egg]] Quest Line. It can also be obtained as a Wanderer by using [[Berries/Liechi]] berries.
+**Notes:**
+Manaphy will be awarded to the player after completing [[Quest Lines/Recover the Previous Egg]] Quest Line. It can also be obtained as a Wanderer by using [[Berries/Liechi]] berries.
+Cresselia and Darkrai can be found in their respective dungeons when not roaming.
+
 
 ### Safari ([[Towns/Great Marsh]])
 

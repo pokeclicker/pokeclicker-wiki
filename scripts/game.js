@@ -8,13 +8,25 @@ themes.options.push(new SettingOption('Morph', 'morph'));
 themes.options.push(new SettingOption('Quartz', 'quartz'));
 themes.options.push(new SettingOption('Vapor', 'vapor'));
 themes.options.push(new SettingOption('Zephyr', 'zephyr'));
+
+const now = new Date();
+if (now.getMonth() == 3 && now.getDate() == 1) {
+  themes.options.forEach((t) => {
+  t.value = "sketchy";
+  });
+  themes.set("sketchy");
+  themes.options.push(new SettingOption("Definitely Not Sketchy", "sketchy"));
+}
 themes.options.sort((a, b) => (a.text).localeCompare(b.text));
 
 // Suppress game notifications
 Notifier.notify = () => {};
 
-// Ensure weather never satisfies requirements so they are always shown
-Weather.currentWeather = () => -1;
+// Ensure requirements are never satisfied so they are always shown
+Requirement.prototype.isCompleted = () => false;
+
+// Not sure why but this was causing an error on load after the v0.10.22 update
+SortModules = () => {};
 
 // Custom binds as these aren't loaded
 player = new Player();
@@ -61,12 +73,12 @@ BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 AchievementHandler.initialize(multiplier, new Challenges());
 
-const now = new Date();
-DailyDeal.generateDeals(5, now);
 BerryDeal.generateDeals(now);
-GemDeal.generateDeals();
+GemDeals.generateDeals();
 ShardDeal.generateDeals();
+GenericDeal.generateDeals();
 SafariPokemonList.generateSafariLists(); // This needs to be after anything that generates shopmon due to Friend Safari calcs
+Weather.generateWeather(now);
 
 // Farm Simulator
 App.game.farming.plotList.forEach((p) => p.isUnlocked = true); // All plots unlocked

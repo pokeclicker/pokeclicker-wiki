@@ -1,0 +1,1 @@
+NOTE: This Pokémon does not gain EV when bought in the [[Towns/Route 4 Pokémon Center]].

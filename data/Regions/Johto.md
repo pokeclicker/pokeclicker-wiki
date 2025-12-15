@@ -1,6 +1,35 @@
-## Exclusive Pokémon
+
+---
+
+## Exclusive Pokémon {#exclusives}
 
 The following is a list of Pokémon obtainable in Johto which cannot be found on Routes, in Dungeons, or through level-based evolutions of Pokémon caught in the region.
+
+### Baby Pokémon
+
+[[Baby Pokémon]] has a complete list of species obtainable by breeding.
+|Baby|Adult|
+|---|---|
+| [[File:pokemon/172.png\|25px]] [[Pokémon/Pichu]] | [[File:pokemon/25.png\|25px]] [[Pokémon/Pikachu]] or  [[File:pokemon/26.png\|25px]] [[Pokémon/Raichu]]|
+| [[File:pokemon/173.png\|25px]] [[Pokémon/Cleffa]] | [[File:pokemon/35.png\|25px]] [[Pokémon/Clefairy]] or  [[File:pokemon/36.png\|25px]] [[Pokémon/Clefable]]|
+| [[File:pokemon/174.png\|25px]] [[Pokémon/Igglybuff]] | [[File:pokemon/39.png\|25px]] [[Pokémon/Jigglypuff]] or  [[File:pokemon/40.png\|25px]] [[Pokémon/Wigglytuff]]|
+| [[File:pokemon/236.png\|25px]] [[Pokémon/Tyrogue]]\* | [[File:pokemon/106.png\|25px]] [[Pokémon/Hitmonlee]] or  [[File:pokemon/107.png\|25px]] [[Pokémon/Hitmonchan]]|
+| [[File:pokemon/238.png\|25px]] [[Pokémon/Smoochum]] | [[File:pokemon/124.png\|25px]] [[Pokémon/Jynx]]|
+| [[File:pokemon/239.png\|25px]] [[Pokémon/Elekid]]\* | [[File:pokemon/125.png\|25px]] [[Pokémon/Electabuzz]]|
+| [[File:pokemon/240.png\|25px]] [[Pokémon/Magby]]\* | [[File:pokemon/126.png\|25px]] [[Pokémon/Magmar]]|
+
+\* Tyrogue, Elekid, and Magby can also be found in Fighting, Electric, and Fire Eggs respectively.
+
+### Eggs
+
+All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries/Passho]], and [[Berries/Rindo]] berries.
+*This is not recommended in early game, but is listed here for completeness.*
+
+|Egg|Pokémon|
+|---|---|
+|[[File:Fire_egg.png\|25px]] [[Items/Fire Egg]] | [[File:pokemon/155.png\|25px]] [[Pokémon/Cyndaquil]], [[File:pokemon/218.png\|25px]] [[Pokémon/Slugma]], [[File:pokemon/228.png\|25px]] [[Pokémon/Houndour]]|
+|[[File:Grass_egg.png\|25px]] [[Items/Grass Egg]] | [[File:pokemon/152.png\|25px]] [[Pokémon/Chikorita]], [[File:pokemon/191.png\|25px]] [[Pokémon/Sunkern]]|
+|[[File:Water_egg.png\|25px]] [[Items/Water Egg]] | [[File:pokemon/158.png\|25px]] [[Pokémon/Totodile]]|
 
 ### Item Evolutions
 
@@ -14,42 +43,33 @@ The following is a list of Pokémon obtainable in Johto which cannot be found on
 |[[File:Soothe_bell.png\|25px]] [[Items/Soothe Bell]]|5| [[File:pokemon/169.png\|25px]] [[Pokémon/Crobat]], [[File:pokemon/242.png\|25px]] [[Pokémon/Blissey]], [[File:pokemon/196.png\|25px]] [[Pokémon/Espeon]], [[File:pokemon/197.png\|25px]] [[Pokémon/Umbreon]], [[File:pokemon/176.png\|25px]] [[Pokémon/Togetic]]|
 **Note:** Espeon and Umbreon are time-dependent; daytime (6am - 6pm / 6:00 - 18:00) and nighttime (6pm - 6am / 18:00 - 06:00), respectively.
 
+### Mimics
+Mimic Pokémon are Pokémon that can be encountered by opening a chest inside [[Dungeons]].
+|Dungeon|Requirement|Pokémon|
+|---|---|---|
+|[[Dungeons/Ilex Forest]] | Complete step 8 in the [[Quest Lines/Unfinished Business]] Quest Line | [[File:pokemon/172.01.png\|25px]] [[Pokémon/Spiky-eared Pichu]] |
+
 ### Shopmons
 
 |Location|Pokémon|Cost|
 |---|---|---|
 |[[Towns/Violet City]] | [[File:pokemon/175.png\|25px]] [[Pokémon/Togepi]]|[[File:questPoint.svg\|20px]] 15,000|
+|[[Towns/National Park]] | [[File:pokemon/185.01.png\|25px]] [[Pokémon/Sudowoodo (Golden)]] | [[File:contestToken.svg\|20px]] 2,000|
 
-Can also be obtained as a Wanderer using [[Berries/Roseli]] berries.
+Togepi can also be obtained as a Wanderer using [[Berries/Roseli]] berries.
 
-### Eggs
-
-All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries/Passho]], and [[Berries/Rindo]] berries.
-*This is not recommended in early game, but is listed here for completeness.*
-
-|Egg|Pokémon|
+### Special
+|Requirement|Pokémon|
 |---|---|
-|[[File:Fire_egg.png\|25px]] [[Items/Fire Egg]] | [[File:pokemon/155.png\|25px]] [[Pokémon/Cyndaquil]], [[File:pokemon/218.png\|25px]] [[Pokémon/Slugma]], [[File:pokemon/228.png\|25px]] [[Pokémon/Houndour]]|
-|[[File:Grass_egg.png\|25px]] [[Items/Grass Egg]] | [[File:pokemon/152.png\|25px]] [[Pokémon/Chikorita]], [[File:pokemon/191.png\|25px]] [[Pokémon/Sunkern]]|
-|[[File:Water_egg.png\|25px]] [[Items/Water Egg]] | [[File:pokemon/158.png\|25px]] [[Pokémon/Totodile]]|
-
-### Baby Pokémon
-
-|Baby|Adult|
-|---|---|
-| [[File:pokemon/172.png\|25px]] [[Pokémon/Pichu]] | [[File:pokemon/25.png\|25px]] [[Pokémon/Pikachu]]|
-| [[File:pokemon/173.png\|25px]] [[Pokémon/Cleffa]] | [[File:pokemon/35.png\|25px]] [[Pokémon/Clefairy]]|
-| [[File:pokemon/174.png\|25px]] [[Pokémon/Igglybuff]] | [[File:pokemon/39.png\|25px]] [[Pokémon/Jigglypuff]]|
-| [[File:pokemon/238.png\|25px]] [[Pokémon/Smoochum]] | [[File:pokemon/124.png\|25px]] [[Pokémon/Jynx]]|
-| [[File:pokemon/236.png\|25px]] [[Pokémon/Tyrogue]]\* | [[File:pokemon/107.png\|25px]] [[Pokémon/Hitmonchan]] or [[File:pokemon/106.png\|25px]] [[Pokémon/Hitmonlee]]|
-| [[File:pokemon/239.png\|25px]] [[Pokémon/Elekid]]\* | [[File:pokemon/125.png\|25px]] [[Pokémon/Electabuzz]]|
-| [[File:pokemon/240.png\|25px]] [[Pokémon/Magby]]\* | [[File:pokemon/126.png\|25px]] [[Pokémon/Magmar]]|
-
-\* Tyrogue, Elekid, and Magby can also be found in Fighting, Electric, and Fire Eggs respectively.
+|Have [[File:pokemon/231.png\|25px]] [[Pokémon/Phanpy]] at below level 21 or below level 51 if you cleared the [[Dungeons/Team Rocket's Hideout]] Dungeon 251 times | [[File:pokemon/52.04.png\|25px]] [[Pokémon/Meowth (Phanpy)]] |
 
 ### Roamers
-
-|Pokémon|Requirement|
+|Requirement|Pokémon|
 |---|---|
-| [[File:pokemon/244.png\|25px]] [[Pokémon/Entei]]|Unlocks during [[Quest_Lines/The_Legendary_Beasts]]|
-| [[File:pokemon/243.png\|25px]] [[Pokémon/Raikou]]|Unlocks during [[Quest_Lines/The_Legendary_Beasts]]|
+| Unlocks during [[Quest_Lines/The Legendary Beasts]] | [[File:pokemon/244.png\|25px]] [[Pokémon/Entei]] |
+| Unlocks during [[Quest_Lines/The Legendary Beasts]] | [[File:pokemon/243.png\|25px]] [[Pokémon/Raikou]] |
+
+### Wanderers
+|Berry|Pokémon|
+|---|---|
+| [[File:Tanga.png\|32px]] [[Berries/Tanga]] | [[File:pokemon/213.01.png\|25px]] [[Pokémon/Shuckle (Corked)]]

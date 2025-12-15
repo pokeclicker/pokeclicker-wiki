@@ -1,0 +1,2 @@
+### Acquisition
+Purchasable at the Gem Master in [[Towns/Fallarbor Town]] after battling [[Temporary Battles/Hoenn Stone Salesman]] which becomes available after progressing in [[Quest Lines/The Delta Episode]]. Free if [[Pokémon/Torchic]] was picked as the Hoenn starter.

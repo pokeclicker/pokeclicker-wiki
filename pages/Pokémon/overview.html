@@ -8,22 +8,30 @@
                 <th>Base Attack</th>
                 <th>Egg Steps</th>
                 <th>Base BE</th>
+                <th>Experience</th>
                 <th>Catch Rate</th>
+                <th>Native Region</th>
             </tr>
         </thead>
-        <tbody data-bind="foreach: pokemonList.filter(p => p.id >= 0 && Math.floor(p.id) <= GameConstants.MaxIDPerRegion[GameConstants.MAX_AVAILABLE_REGION])">
-            <tr class="clickable" data-bind="click: () => { Wiki.gotoPage('Pokemon', $data.name); return false; }">
+        <tbody data-bind="foreach: Wiki.pokemon.getAvailablePokemon()">
+            <tr class="clickable align-middle" data-bind="
+                click: (_, e) => { return Wiki.gotoPageClick(e, 'Pokemon', $data.name); },
+                attr: { 'data-href': `#!Pokemon/${$data.name}` }">
                 <td data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`, attr: { 'data-sort': $data.id }"></td>
-                <td data-bind="text: $data.name"></td>
+                <td>
+                    <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a>
+                </td>
                 <td data-bind="foreach: $data.type">
                     <span class="badge text-white" data-bind="text: PokemonType[$data], style: {
-                        backgroundColor: TypeColor[$data]
+                        backgroundColor: GameConstants.TypeColor[$data]
                     }"></span>
                 </td>
                 <td data-bind="text: $data.attack"></td>
                 <td data-bind="text: App.game.breeding.getSteps($data.eggCycles).toLocaleString(), attr: { 'data-order': $data.eggCycles }"></td>
-                <td data-bind="text: Wiki.pokemon.getEfficiency([0,0,0], $data.attack, $data.eggCycles).toLocaleString('en-US', { maximumSignificantDigits: 2 })"></td>
+                <td data-bind="text: Wiki.pokemon.getEfficiency([0,0,0], $data.attack, $data.eggCycles).toLocaleString('en-US', { maximumFractionDigits: 3 })"></td>
+                <td data-bind="text: ($data.exp || 0).toLocaleString()"></td>
                 <td data-bind="text: PokemonFactory.catchRateHelper($data.catchRate, true) + '%'"></td>
+                <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.nativeRegion])"></td>
             </tr>
         </tbody>
     </table>

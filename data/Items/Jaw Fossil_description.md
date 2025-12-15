@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain [[Pokémon/Tyrunt]]
+1 can be exchanged for [[Pokémon/Tyrunt]] or 10 for [[Pokémon/Tyrantrum]] at the Ambrette Fossil Lab in [[Towns/Ambrette Town]].

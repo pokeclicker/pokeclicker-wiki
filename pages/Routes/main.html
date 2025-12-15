@@ -24,11 +24,19 @@
         <!-- /ko -->
         <tr>
           <td>Region</td>
-          <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region])"></td>
+          <td>
+              <a href="#!" data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region]), attr: { href: `#!Regions/${GameConstants.camelCaseToString(GameConstants.Region[$data.region])}` }"></a>
+          </td>
         </tr>
         <tr>
           <td>Sub Region</td>
           <td data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name"></td>
+        </tr>
+        <tr>
+            <td>Environment</td>
+            <td data-bind="foreach: MapHelper.getEnvironments($data.number, $data.region)">
+                <a href="#!" data-bind="text: GameConstants.camelCaseToString($data), attr: { href: `#!Environments/${GameConstants.camelCaseToString($data)}` }"></a><br />
+            </td>
         </tr>
       </tbody>
     </table>
@@ -38,18 +46,16 @@
       <p data-bind="text: Math.round(PokemonFactory.routeHealth($data.number, $data.region)).toLocaleString()"></p>
   </div>
   <div>
+    <h3>Level:</h3>
+    <p data-bind="text: Math.round(PokemonFactory.routeLevel($data.number, $data.region)).toLocaleString()"></p>
+  </div>
+  <div>
     <h3>Egg Steps:</h3>
     <p data-bind="text: +Math.sqrt(MapHelper.normalizeRoute($data?.number, $data.region)).toFixed(2)"></p>
   </div>
   <div>
     <h3>Roamer Chance:</h3>
-    <p data-bind="text: (() => {
-      const region = $data.region;
-      const routes = Routes.getRoutesByRegion($data.region).map(r => MapHelper.normalizeRoute(r.number, region));
-      const routeNum = MapHelper.normalizeRoute($data?.number, region);
-      const roamingChance = ((max, min, maxRoute, minRoute) => Math.floor(max + ( (min - max) * (maxRoute - routeNum) / (maxRoute - minRoute))))(GameConstants.ROAMING_MAX_CHANCE, GameConstants.ROAMING_MIN_CHANCE, Math.max(...routes), Math.min(...routes));
-      return '1/' + roamingChance.toLocaleString();
-    })()"></p>
+    <p data-bind="text: `1/${Wiki.pokemon.getRouteRoamingChance($data.region, $data.subRegion ?? 0, $data.number).toLocaleString()}`"></p>
   </div>
   <div>
     <h3>Encounters</h3>

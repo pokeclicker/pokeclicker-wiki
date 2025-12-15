@@ -1,38 +1,49 @@
 ##### This is a guide for how to help contribute to the wiki.
 
 ## How to edit pages
-Currently, There are two ways to edit the wiki:
-* By opening a Pull Request to the [GitHub Repository](https://github.com/pokeclicker/pokeclicker-wiki). This method is needed for create **New pages** And edit **Html pages**
-* Logging into the wiki through a Discord account. This method only works for editing **existing Markdown Pages**
+Currently, there are two ways to edit the wiki:
+* by opening a Pull Request to the [GitHub Repository](https://github.com/pokeclicker/pokeclicker-wiki). This method is needed to create **new pages** and to edit **HTML pages**.
+* by logging into the wiki through a Discord account. This method only works for editing **existing Markdown pages**.
 *We will be working on adding a better tool in the future.*
 
-### Editing markdown pages
-For editing markdown pages, you can test your changes by pressing the **edit** icon in the top right corner of each page and changing the markdown.
+### Editing Markdown pages
+To edit Markdown pages, you can test your changes by pressing the **edit** icon in the top right corner of each page and changing the Markdown.
 The changes will be shown live, and can then be added using either the GitHub website, or your GitHub tool of choice.
-All of the standard markdown tools & syntax should be available. If anything is missing, ask for it on discord!
-You can see some tips for markdown below, like how to make links for other wiki pages.
-[//] (Problems editing the markdown pages in Android? Change to desktop view to avoid Android duplicating words)
+All of the standard Markdown tools & syntax should be available. If anything is missing, ask for it on Discord!
+You can see some tips for Markdown below, like how to make links for other wiki pages.
+[//] (Problems editing the Markdown pages in Android? Change to desktop view to avoid Android duplicating words.)
 
-### Editing HTML pages
-To test your changes for HTML pages, you need to run the site locally. This can be done using a tool like VS Codes "Live Server".
+### Forking and Editing the Repository
+To edit pages not available from the Wiki directly, you need to [sign up](https://github.com/signup/) for a GitHub account, fork the wiki's code, edit, commit, and send a Pull Request (PR) to be merged into the live database. A fork is a private sandboxed copy of the wiki's files that you can freely edit without affecting the actual Wiki.  Committing is saving your changes to this local copy.  A Pull Request is the point where your changes are submitted for review and, if approved, update the Wiki.
+* Go to https://github.com/signup/, follow the steps to get a free account.
+* Go to https://github.com/pokeclicker/pokeclicker-wiki/ and click the "Fork" button in the upper right.  All the default options fine, click "Create Fork"
+* Forks are stored under "Your Repositories" in your account drop-down menu.  This is where you're going to edit.
+* Find the page you want to work on.  Text is stored in /pokeclicker-wiki/Pages/(page_name)/ and may be in Overview.html or Main.html, or in /pokeclicker-wiki/data/(folder)/ - individual Pokemon and Items for example.  If a page has a subcategory in its URL then it's probably in /data/.
+* Click on the pencil (Edit) button in the upper right to change the page.
+* Save your changes to your fork with the green "Commit Changes" button, also upper right.
+* When satisfied with the revised page, go to "Pull Requests" in the upper left, choose the commits you want and submit them for review. Add a descriptive title and notes about the changes.
+* Wait for approval or a request for revision.
+
+### Testing HTML pages
+To see a 1:1 representation of changes to HTML pages, you need to run the site locally. This can be done using a tool like VS Code's "Live Server".
 All game data is available for use in the HTML pages, using the framework Knockout (just like what the game is using).
-To run it locally, you might need to run the command "`git submodule update --remote`".
+To run it locally, you might need to run the command `git submodule update --remote`.
 
-### Editing Javascript
-You will very rarely need to edit the Javascript files. It's only used for general stuff, which should work by now.
-Try to write page specific Javascript in the Knockout, if possible.
-You can run "`npm start`" to see your changes and test they've worked, this will also keep the `bundle.js` file updated with your changes.
-Otherwise after you have edited a Javascript file, you need to run "`npm run build`" so the `bundle.js` file has your changes applied.
+### Editing JavaScript
+You will very rarely need to edit the JavaScript files. It's only used for general stuff, which should work by now.
+Try to write page specific JavaScript in Knockout, if possible.
+You can run `npm start` to see your changes and test if they've worked. This will also keep the `bundle.js` file updated with your changes.
+Otherwise after you have edited a JavaScript file, you need to run `npm run build` so the `bundle.js` file has your changes applied.
 
-### Page structure
-Each page needs to have one or two HTML-pages in the "pages"-folder. The "overview.html" file should always be included. This is used to either display an overview for pages with more than one page (like Pokémon), or the full page for pages with no sub-pages (like Farm).
-The "main.html" file is used for a bunch of pages, where we can auto generate the page-specific content. Like the Pokémon page, all the stats can be pulled from the game data, so no need to make a page for each individual Pokémon.
+### Page Structure
+Each page needs to have one or two HTML pages in the `pages` folder. The `overview.html` file should always be included. This is used to either display an overview for pages with more than one page (like `Pokémon`), or the full page for pages with no sub-pages (like `Farm`).
+The `main.html` file is used for a bunch of pages, where we can autogenerate the page-specific content. Like the Pokémon page, all the stats can be pulled from the game data, so there's no need to make a page for each individual Pokémon.
 
-Here is a table of how a page is build, and which files should be changed to change content. We will be using Berries as example:
+Here is a table of how a page is built, and which files should be changed to change content. We will be using `Berries` as example:
 Page Element | File | File for example | Description
 :--- | :--- | :--- | :---
 Page Title | Autogenerated | - | This is the title of the page. It's generated from the link.
 Page description | data/"Page type"/overview_description.md OR data/"Page type"/"name"_description.md | data/Berries/overview_description.md OR data/Berries/Cheri_description.md | A short description in the start of the page. Uses Markdown.
-Table of Contents | Autogenerated | - | This is the Table of Contents. It will be auto generated from the headers of the page.
+Table of Contents | Autogenerated | - | This is the Table of Contents. It will be autogenerated from the headers of the page.
 Autogenerated page | pages/"Page type"/overview.html OR pages/"Page type"/"Page name".html | pages/berries/overview.html OR pages/berries/main.html | A HTML page with all the stuff that can be generated. Uses Knockout. overview.html should contain a list of the subpages (if any). main.html should fetch data from the games data, based on "Page name". If you are unsure how to generate stuff, or if stuff can be generated, please ask in the discord.
 Page content | data/"Page type"/overview.md OR data/"Page type"/"name".md | data/Berries/overview.md OR data/Berries/Cheri.md | All the content that we cannot autogenerate. Uses Markdown.

@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain [[Pokémon/Anorith]]
+1 can be exchanged for [[Pokémon/Anorith]] or 10 for [[Pokémon/Armaldo]] at the Devon Corporation in [[Towns/Rustboro City]].

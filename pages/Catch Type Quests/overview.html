@@ -1,0 +1,7 @@
+<div style="max-width: 900px;">
+    <!-- ko foreach: GameHelper.enumNumbers(PokemonType).filter(t => t >= 0) -->
+    <span class="type-icon badge m-1" data-bind="style:{ background: GameConstants.TypeColor[$data] }">
+        <a style="text-decoration: none; font-size: 0.875rem; color: #f5f5f5;" data-bind="text: PokemonType[$data], attr: { href: `#!Catch Type Quests/${PokemonType[$data]}` }"></a>
+    </span>
+    <!-- /ko -->
+</div>

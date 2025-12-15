@@ -1,1 +1,1 @@
-*Purchased at the Johto Berry Master in @[[Towns/Goldenrod City]] for 50,000 Farm Points.*
+*Purchased at the Johto [Berry Master](#!Berry_Masters) in @[[Towns/Goldenrod City]] for 50,000 Farm Points.*

@@ -1,1 +1,1 @@
-When equipped, the Cell Battery increases the amount of Mining Energy gained passively.
+When equipped, the Cell Battery decreases the number of charges needed to discharge, up to thirty less as it is leveled up.

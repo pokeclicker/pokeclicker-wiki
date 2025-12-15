@@ -1,0 +1,1 @@
+Increases attack gained per breeding cycle by +1 (per Protein applied to the Pokémon).

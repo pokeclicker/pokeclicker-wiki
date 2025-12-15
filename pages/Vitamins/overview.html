@@ -96,7 +96,7 @@
                 const baseOutput = 'efficiency-calculator-input-';
                 document.getElementById('efficiency-calculator-output-attack').innerText = attackBonus.toLocaleString();
                 document.getElementById('efficiency-calculator-output-egg-steps').innerText = eggSteps.toLocaleString();
-                document.getElementById('efficiency-calculator-output-efficiency').innerText = efficiency.toLocaleString('en-US', { maximumSignificantDigits: 3 });
+                document.getElementById('efficiency-calculator-output-efficiency').innerText = efficiency.toLocaleString('en-US', { maximumFractionDigits: 3 });
             }
             updateEfficiency();
         </script>

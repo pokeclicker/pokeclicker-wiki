@@ -1,4 +1,4 @@
-Safari is an area available in Kanto ([[Towns/Safari Zone]]), Johto ([[Towns/National Park]]), Sinnoh ([[Towns/Great_Marsh]]) and Kalos ([[Towns/Friend Safari]]); where the player may spend Quest Points to try and catch unique Pokémon. To unlock this area the player must first have the Safari Ticket which is acquired after beating [[Gyms/Fuchsia City]]'s Gym. The Pokémon can randomly spawn both on water and grass tiles, and also as sprites that can show up in both these environments.
+Safari is an area available in Kanto ([[Towns/Safari Zone]]), Johto ([[Towns/National Park]]), Sinnoh ([[Towns/Great Marsh]]), Kalos ([[Towns/Friend Safari]]) and Alola's Magikarp Jump ([[Towns/Hoppy Town Fishing Pond]]); where the player may spend Quest Points to try and catch unique Pokémon. To unlock this area the player must first have the Safari Ticket which is acquired after beating [[Gyms/Fuchsia City]]'s Gym. The Pokémon can randomly spawn both on water and grass tiles, and also as sprites that can show up in both these environments.
 
 ## Actions
 Upon entering the Safari, the player receives 30 Safari Balls. The player may exit and reenter the Safari without paying the Quest Point fee again provided they still have Safari balls. As long as the game isn't closed, they only need to pay the fee if they run out of Safari balls and need to reenter to get more.
@@ -7,11 +7,11 @@ Once inside the Safari, the player has the option to either catch, throw a rock,
 
 |**Action** | **Effect** {.no-data-tables}
 |---|---|
-|Ball | Attempt to catch the Pokémon with a Safari Ball. Based on catch chance, this action may fail, after which the Pokémon might flee (based on escape chance), watch carefully / be angry (i.e. do nothing), or resume eating bait. Upon running out of Safari Balls, the player will be forced out of the Safari, requiring them to pay the entrance fee again to re-enter. Throwing a ball awards **10 Safari experience** and succesfully capturing a Pokémon awards **50 Safari experience**. This value is multiplied by **5x** if the Pokémon is a shiny.
-|Rock | Toss a rock at the Pokémon, removing "eating" status and making it angry for 2 - 7 turns. When angry, a Pokémon's catch chance and escape chance are both doubled.  Awards **10 Safari experience**.
-|Bait (generic) | Gives the Pokémon "eating" status for 2 - 7 turns. No other effects.
-|Bait (Razz Berry) | Gives the Pokémon "eating" status for 2 - 8 turns. Divides escape chance by 1.5x for the rest of the encounter unless another type of bait is used.
-|Bait (Nanab Berry) | Gives the Pokémon "eating" status for 2 - 8 turns. Boosts catch chance by 1.5x for the rest of the encounter unless another type of bait is used.
+|Ball | Attempt to catch the Pokémon with a Safari Ball. Based on catch chance, this action may fail, after which the Pokémon might flee (based on escape chance), watch carefully / be angry (i.e. do nothing), or resume eating bait. Upon running out of Safari Balls, the player will be forced out of the Safari, requiring them to pay the entrance fee again to re-enter. Throwing a ball awards **10 Safari experience** and succesfully capturing a Pokémon awards **50 Safari experience**. This value is multiplied by **5x** if the Pokémon is a shiny. Note that capturing Pokémon in the Safari does **not** give Dungeon Tokens.
+|Rock | Toss a rock at the Pokémon, removing "eating" status and making it angry for 2 - 6 turns. When angry, a Pokémon's catch chance and escape chance are both doubled.  Awards **10 Safari experience**.
+|Bait (generic) | Gives the Pokémon "eating" status for 2 - 6 turns. No other effects.
+|Bait (Razz Berry) | Gives the Pokémon "eating" status for 2 - 7 turns. Divides escape chance by 1.5x for the rest of the encounter unless another type of bait is used.
+|Bait (Nanab Berry) | Gives the Pokémon "eating" status for 2 - 7 turns. Boosts catch chance by 1.5x for the rest of the encounter unless another type of bait is used.
 |Run | Flee the encounter and return to the Safari overworld without penalty.
 
 **Note:** All three types of bait give the Pokémon "eating" status and remove "angry" status. While eating, a Pokémon's catch chance is halved, and its escape chance is quartered. All 3 types of bait award **5 Safari experience**.
@@ -76,7 +76,9 @@ $Catch Chance = (\frac{CatchRate}{6}) + Magic Ball + (Multiplier * 10)$
 
 Where **CatchRate** is the Pokémon's base catch rate.
 
-This is further modified by the effect of rocks (Angry status) and berries (Eating status). If **Eating** status:
+This is further modified by the effect of rocks (Angry status) and berries (Eating status).
+
+If **Eating** status:
 
 $Catch Chance = \frac{Catch Chance}{2 - Multiplier}$
 
@@ -110,6 +112,53 @@ $Egg Steps = 1 + \lfloor\frac{SafariLevel}{10}\rfloor$
 
 This value can then be further modified by Egg Steps multipliers, for example, using the Farm setups shown in [[Hatchery]] page or equipping [[Oak Items/Magma Stone]].
 
+:::collapsed Catch Rate Table
+
+Depending on the Base Catch Rate of the Pokémon found in the Safari Zone and whether you use Magic Ball or not, the best combination of Bait/Rock for your Safari Level is laid out on the table below. For the most difficult to catch Pokémon you should throw Nanab [[File:Nanab.png\|32px]], and as it gets easier to catch them, swap to Razz [[File:Razz.png\|32px]].
+
+|**Base Catch %** | **Base Catch Rate** | **No Magic Ball** | **LvL 5 Magic Ball** {.no-data-tables}
+| --- | --- | --- | --- |
+0.5	| 3 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+0.83	| 5 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+1	| 6 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+1.67	| 10 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+2.5	| 15 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+3.33	| 20 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+4.17	| 25 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+5	| 30 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+5.83	| 35 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+7.5	| 45 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+8.33	| 50 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+9.17	| 55 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+10	| 60 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-39 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+10.83	| 65 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-36 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 37-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+11.67	| 70 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-34 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 35-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+12.5	| 75 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-31 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 32-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+13.33	| 80 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-29 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 30-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+15	| 90 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-24 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 25-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+16.67	| 100 | Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-20 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 21-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+20	| 120 | LvL 1-39 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-13 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 14-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+20.83	| 125 | LvL 1-36 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 37-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-11 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 12-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+21.17	| 127 | LvL 1-35 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 36-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-11 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 12-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+21.67	| 130 | LvL 1-34 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 35-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-10 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 11-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+23.33	| 140 | LvL 1-29 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 30-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-6 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 7-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+24.17	| 145 | LvL 1-27 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 28-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-5 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 6-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+25	| 150 | LvL 1-24 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 25-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-4 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 5-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+25.83	| 155 | LvL 1-22 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 23-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-2 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 3-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+26.67	| 160 | LvL 1-20 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 21-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 2-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+28.33	| 170 | LvL 1-16 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 17-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] |
+30	| 180 | LvL 1-13 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 14-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-39 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+31.67	| 190 | LvL 1-10 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 11-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-37 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 38-40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+33.33	| 200 | LvL 1-6 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 7-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-36 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 37-40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+34.17	| 205 | LvL 1-5 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 6-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-35 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 36-40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+36.67	| 220 | LvL 1 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]], LvL 2-40 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-33 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 34-40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+37.5	| 225 | Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-33 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 34-40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+39.17	| 235 | Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-31 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 32-40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+42.5	| 255 | LvL 1-37 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 38-40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] | LvL 1-28 Razz [[File:Razz.png\|32px]] Rock [[File:rock.png\|16px]], Lvl 29-40 Nanab [[File:Nanab.png\|32px]] Rock [[File:rock.png\|16px]] |
+
+:::
+
+
 ### Animation Speed Up Tiers
 Every 10 Safari Levels, the animation will speed up by the following values:
 
@@ -126,4 +175,4 @@ After successfully capturing a Pokémon, there is a chance for an item to spawn.
 
 $ItemChance = 39\% + (1\% * Safari Level)$
 
-The items that can be obtained are different between the Safari locations.
+The items that can be obtained are different between the Safari locations and picking them up awards **10 Safari experience**.

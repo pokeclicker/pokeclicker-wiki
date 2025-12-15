@@ -1,4 +1,7 @@
-## Exclusive Pokémon
+
+----
+
+## Exclusive Pokémon {#exclusives}
 
 The following is a list of Pokémon obtainable in Galar which cannot be found on Routes, in Dungeons, or through level-based evolutions of Pokémon caught in the region.
 
@@ -31,7 +34,7 @@ For the evolution to happen, you must equip the Held Item to the corresponding P
 |[[Towns/Stow-on-Side]] | [[File:pokemon/883.png\|25px]] [[Pokémon/Arctovish]] | [[File:Fossilized Fish.png\|20px]] 1 [[Items/Fossilized Fish]], [[File:Fossilized Dino.png\|20px]] 1 [[Items/Fossilized Dino]],   [[File:questPoint.svg\|20px]] 25,000 |
 |[[Towns/Glimwood Tangle]] | [[File:pokemon/893.01.png\|25px]] [[Pokémon/Zarude (Dada)]] | [[File:questPoint.svg\|20px]] 500,000 |
 
-Zarude (Dada) requires [[Quest Line/Secrets of the Jungle]] Quest Line to be completed to become available for purchase.
+Zarude (Dada) requires [[Quest Lines/Secrets of the Jungle]] Quest Line to be completed to become available for purchase.
 
 ### Eggs
 All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries/Passho]], and [[Berries/Rindo]] berries.
@@ -57,7 +60,7 @@ Mimic Pokémon are Pokémon that can be encountered by opening a chest inside [[
 |---|---|---|
 | [[File:pokemon/845.01.png\|25px]] [[Pokémon/Cramorant (Gulping)]] | Rain | [[Routes/Axew's Eye]], [[Routes/Bridge Field]], [[Routes/Stony Wilderness]], [[Routes/Lake of Outrage]], [[Routes/Galar Route 9]], [[Routes/Circhester Bay]], [[Routes/Forest of Focus]], [[Routes/Challenge Beach]], and [[Routes/Training Lowlands]] |
 | [[File:pokemon/845.02.png\|25px]] [[Pokémon/Cramorant (Gorging)]] | Thunderstorm | [[Routes/Axew's Eye]], [[Routes/Galar Route 9]], [[Routes/Circhester Bay]], [[Routes/Forest of Focus]], [[Routes/Challenge Beach]], and [[Routes/Training Lowlands]] |
-| [[File:pokemon/875.01.png\|25px]] [[Pokémon/Eiscue (Noice Face)]] | Sunny | [[Routes/Route 10]] and [[Routes/Frigid Sea]] |
+| [[File:pokemon/875.01.png\|25px]] [[Pokémon/Eiscue (Noice Face)]] | Harsh Sunlight | [[Routes/Route 10]] and [[Routes/Frigid Sea]] |
 
 ### Location-dependent Pokémon
 **Note:** Location-dependant Pokémon evolve at or above the level specified (excluding level 100) when leveled at a particular location. Pokémon at level 100 must be bred and retrained to the correct level (level 34), and then leveled at the specified location.
