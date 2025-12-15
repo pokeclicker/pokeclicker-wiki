@@ -15474,7 +15474,7 @@ function plugin(md, options) {
 plugin.default = plugin;
 module.exports = plugin;
 
-},{"juice/client":87,"mathjax-full/js/a11y/assistive-mml.js":160,"mathjax-full/js/adaptors/liteAdaptor.js":162,"mathjax-full/js/handlers/html.js":222,"mathjax-full/js/input/tex.js":228,"mathjax-full/js/input/tex/AllPackages.js":229,"mathjax-full/js/mathjax.js":317,"mathjax-full/js/output/svg.js":375}],101:[function(require,module,exports){
+},{"juice/client":87,"mathjax-full/js/a11y/assistive-mml.js":160,"mathjax-full/js/adaptors/liteAdaptor.js":168,"mathjax-full/js/handlers/html.js":222,"mathjax-full/js/input/tex.js":228,"mathjax-full/js/input/tex/AllPackages.js":229,"mathjax-full/js/mathjax.js":317,"mathjax-full/js/output/svg.js":375}],101:[function(require,module,exports){
 'use strict';
 var DFA = require('./lib/dfa.js');
 
@@ -22829,6 +22829,558 @@ exports.NodeMixin = NodeMixin;
 
 },{"../util/Options.js":441}],162:[function(require,module,exports){
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiteDocument = void 0;
+var Element_js_1 = require("./Element.js");
+var LiteDocument = (function () {
+    function LiteDocument() {
+        this.root = new Element_js_1.LiteElement('html', {}, [
+            this.head = new Element_js_1.LiteElement('head'),
+            this.body = new Element_js_1.LiteElement('body')
+        ]);
+        this.type = '';
+    }
+    Object.defineProperty(LiteDocument.prototype, "kind", {
+        get: function () {
+            return '#document';
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return LiteDocument;
+}());
+exports.LiteDocument = LiteDocument;
+
+},{"./Element.js":163}],163:[function(require,module,exports){
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiteElement = void 0;
+var LiteElement = (function () {
+    function LiteElement(kind, attributes, children) {
+        var e_1, _a;
+        if (attributes === void 0) { attributes = {}; }
+        if (children === void 0) { children = []; }
+        this.kind = kind;
+        this.attributes = __assign({}, attributes);
+        this.children = __spreadArray([], __read(children), false);
+        try {
+            for (var _b = __values(this.children), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var child = _c.value;
+                child.parent = this;
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        this.styles = null;
+    }
+    return LiteElement;
+}());
+exports.LiteElement = LiteElement;
+
+},{}],164:[function(require,module,exports){
+"use strict";
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiteList = void 0;
+var LiteList = (function () {
+    function LiteList(children) {
+        this.nodes = [];
+        this.nodes = __spreadArray([], __read(children), false);
+    }
+    LiteList.prototype.append = function (node) {
+        this.nodes.push(node);
+    };
+    LiteList.prototype[Symbol.iterator] = function () {
+        var i = 0;
+        return {
+            next: function () {
+                return (i === this.nodes.length ?
+                    { value: null, done: true } :
+                    { value: this.nodes[i++], done: false });
+            }
+        };
+    };
+    return LiteList;
+}());
+exports.LiteList = LiteList;
+
+},{}],165:[function(require,module,exports){
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+var __values = (this && this.__values) || function(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiteParser = exports.PATTERNS = void 0;
+var Entities = __importStar(require("../../util/Entities.js"));
+var Element_js_1 = require("./Element.js");
+var Text_js_1 = require("./Text.js");
+var PATTERNS;
+(function (PATTERNS) {
+    PATTERNS.TAGNAME = '[a-z][^\\s\\n>]*';
+    PATTERNS.ATTNAME = '[a-z][^\\s\\n>=]*';
+    PATTERNS.VALUE = "(?:'[^']*'|\"[^\"]*\"|[^\\s\\n]+)";
+    PATTERNS.VALUESPLIT = "(?:'([^']*)'|\"([^\"]*)\"|([^\\s\\n]+))";
+    PATTERNS.SPACE = '(?:\\s|\\n)+';
+    PATTERNS.OPTIONALSPACE = '(?:\\s|\\n)*';
+    PATTERNS.ATTRIBUTE = PATTERNS.ATTNAME + '(?:' + PATTERNS.OPTIONALSPACE + '=' + PATTERNS.OPTIONALSPACE + PATTERNS.VALUE + ')?';
+    PATTERNS.ATTRIBUTESPLIT = '(' + PATTERNS.ATTNAME + ')(?:' + PATTERNS.OPTIONALSPACE + '=' + PATTERNS.OPTIONALSPACE + PATTERNS.VALUESPLIT + ')?';
+    PATTERNS.TAG = '(<(?:' + PATTERNS.TAGNAME + '(?:' + PATTERNS.SPACE + PATTERNS.ATTRIBUTE + ')*'
+        + PATTERNS.OPTIONALSPACE + '/?|/' + PATTERNS.TAGNAME + '|!--[^]*?--|![^]*?)(?:>|$))';
+    PATTERNS.tag = new RegExp(PATTERNS.TAG, 'i');
+    PATTERNS.attr = new RegExp(PATTERNS.ATTRIBUTE, 'i');
+    PATTERNS.attrsplit = new RegExp(PATTERNS.ATTRIBUTESPLIT, 'i');
+})(PATTERNS = exports.PATTERNS || (exports.PATTERNS = {}));
+var LiteParser = (function () {
+    function LiteParser() {
+    }
+    LiteParser.prototype.parseFromString = function (text, _format, adaptor) {
+        if (_format === void 0) { _format = 'text/html'; }
+        if (adaptor === void 0) { adaptor = null; }
+        var root = adaptor.createDocument();
+        var node = adaptor.body(root);
+        var parts = text.replace(/<\?.*?\?>/g, '').split(PATTERNS.tag);
+        while (parts.length) {
+            var text_1 = parts.shift();
+            var tag = parts.shift();
+            if (text_1) {
+                this.addText(adaptor, node, text_1);
+            }
+            if (tag && tag.charAt(tag.length - 1) === '>') {
+                if (tag.charAt(1) === '!') {
+                    this.addComment(adaptor, node, tag);
+                }
+                else if (tag.charAt(1) === '/') {
+                    node = this.closeTag(adaptor, node, tag);
+                }
+                else {
+                    node = this.openTag(adaptor, node, tag, parts);
+                }
+            }
+        }
+        this.checkDocument(adaptor, root);
+        return root;
+    };
+    LiteParser.prototype.addText = function (adaptor, node, text) {
+        text = Entities.translate(text);
+        return adaptor.append(node, adaptor.text(text));
+    };
+    LiteParser.prototype.addComment = function (adaptor, node, comment) {
+        return adaptor.append(node, new Text_js_1.LiteComment(comment));
+    };
+    LiteParser.prototype.closeTag = function (adaptor, node, tag) {
+        var kind = tag.slice(2, tag.length - 1).toLowerCase();
+        while (adaptor.parent(node) && adaptor.kind(node) !== kind) {
+            node = adaptor.parent(node);
+        }
+        return adaptor.parent(node);
+    };
+    LiteParser.prototype.openTag = function (adaptor, node, tag, parts) {
+        var PCDATA = this.constructor.PCDATA;
+        var SELF_CLOSING = this.constructor.SELF_CLOSING;
+        var kind = tag.match(/<(.*?)[\s\n>\/]/)[1].toLowerCase();
+        var child = adaptor.node(kind);
+        var attributes = tag.replace(/^<.*?[\s\n>]/, '').split(PATTERNS.attrsplit);
+        if (attributes.pop().match(/>$/) || attributes.length < 5) {
+            this.addAttributes(adaptor, child, attributes);
+            adaptor.append(node, child);
+            if (!SELF_CLOSING[kind] && !tag.match(/\/>$/)) {
+                if (PCDATA[kind]) {
+                    this.handlePCDATA(adaptor, child, kind, parts);
+                }
+                else {
+                    node = child;
+                }
+            }
+        }
+        return node;
+    };
+    LiteParser.prototype.addAttributes = function (adaptor, node, attributes) {
+        var CDATA_ATTR = this.constructor.CDATA_ATTR;
+        while (attributes.length) {
+            var _a = __read(attributes.splice(0, 5), 5), name_1 = _a[1], v1 = _a[2], v2 = _a[3], v3 = _a[4];
+            var value = v1 || v2 || v3 || '';
+            if (!CDATA_ATTR[name_1]) {
+                value = Entities.translate(value);
+            }
+            adaptor.setAttribute(node, name_1, value);
+        }
+    };
+    LiteParser.prototype.handlePCDATA = function (adaptor, node, kind, parts) {
+        var pcdata = [];
+        var etag = '</' + kind + '>';
+        var ptag = '';
+        while (parts.length && ptag !== etag) {
+            pcdata.push(ptag);
+            pcdata.push(parts.shift());
+            ptag = parts.shift();
+        }
+        adaptor.append(node, adaptor.text(pcdata.join('')));
+    };
+    LiteParser.prototype.checkDocument = function (adaptor, root) {
+        var e_1, _a, e_2, _b;
+        var node = this.getOnlyChild(adaptor, adaptor.body(root));
+        if (!node)
+            return;
+        try {
+            for (var _c = __values(adaptor.childNodes(adaptor.body(root))), _d = _c.next(); !_d.done; _d = _c.next()) {
+                var child = _d.value;
+                if (child === node) {
+                    break;
+                }
+                if (child instanceof Text_js_1.LiteComment && child.value.match(/^<!DOCTYPE/)) {
+                    root.type = child.value;
+                }
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (_d && !_d.done && (_a = _c.return)) _a.call(_c);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        switch (adaptor.kind(node)) {
+            case 'html':
+                try {
+                    for (var _e = __values(node.children), _f = _e.next(); !_f.done; _f = _e.next()) {
+                        var child = _f.value;
+                        switch (adaptor.kind(child)) {
+                            case 'head':
+                                root.head = child;
+                                break;
+                            case 'body':
+                                root.body = child;
+                                break;
+                        }
+                    }
+                }
+                catch (e_2_1) { e_2 = { error: e_2_1 }; }
+                finally {
+                    try {
+                        if (_f && !_f.done && (_b = _e.return)) _b.call(_e);
+                    }
+                    finally { if (e_2) throw e_2.error; }
+                }
+                root.root = node;
+                adaptor.remove(node);
+                if (adaptor.parent(root.body) !== node) {
+                    adaptor.append(node, root.body);
+                }
+                if (adaptor.parent(root.head) !== node) {
+                    adaptor.insert(root.head, root.body);
+                }
+                break;
+            case 'head':
+                root.head = adaptor.replace(node, root.head);
+                break;
+            case 'body':
+                root.body = adaptor.replace(node, root.body);
+                break;
+        }
+    };
+    LiteParser.prototype.getOnlyChild = function (adaptor, body) {
+        var e_3, _a;
+        var node = null;
+        try {
+            for (var _b = __values(adaptor.childNodes(body)), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var child = _c.value;
+                if (child instanceof Element_js_1.LiteElement) {
+                    if (node)
+                        return null;
+                    node = child;
+                }
+            }
+        }
+        catch (e_3_1) { e_3 = { error: e_3_1 }; }
+        finally {
+            try {
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_3) throw e_3.error; }
+        }
+        return node;
+    };
+    LiteParser.prototype.serialize = function (adaptor, node, xml) {
+        var _this = this;
+        if (xml === void 0) { xml = false; }
+        var SELF_CLOSING = this.constructor.SELF_CLOSING;
+        var CDATA = this.constructor.CDATA_ATTR;
+        var tag = adaptor.kind(node);
+        var attributes = adaptor.allAttributes(node).map(function (x) { return x.name + '="' + (CDATA[x.name] ? x.value : _this.protectAttribute(x.value)) + '"'; }).join(' ');
+        var content = this.serializeInner(adaptor, node, xml);
+        var html = '<' + tag + (attributes ? ' ' + attributes : '')
+            + ((!xml || content) && !SELF_CLOSING[tag] ? ">".concat(content, "</").concat(tag, ">") : xml ? '/>' : '>');
+        return html;
+    };
+    LiteParser.prototype.serializeInner = function (adaptor, node, xml) {
+        var _this = this;
+        if (xml === void 0) { xml = false; }
+        var PCDATA = this.constructor.PCDATA;
+        if (PCDATA.hasOwnProperty(node.kind)) {
+            return adaptor.childNodes(node).map(function (x) { return adaptor.value(x); }).join('');
+        }
+        return adaptor.childNodes(node).map(function (x) {
+            var kind = adaptor.kind(x);
+            return (kind === '#text' ? _this.protectHTML(adaptor.value(x)) :
+                kind === '#comment' ? x.value :
+                    _this.serialize(adaptor, x, xml));
+        }).join('');
+    };
+    LiteParser.prototype.protectAttribute = function (text) {
+        if (typeof text !== 'string') {
+            text = String(text);
+        }
+        return text.replace(/"/g, '&quot;');
+    };
+    LiteParser.prototype.protectHTML = function (text) {
+        return text.replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    };
+    LiteParser.SELF_CLOSING = {
+        area: true,
+        base: true,
+        br: true,
+        col: true,
+        command: true,
+        embed: true,
+        hr: true,
+        img: true,
+        input: true,
+        keygen: true,
+        link: true,
+        menuitem: true,
+        meta: true,
+        param: true,
+        source: true,
+        track: true,
+        wbr: true
+    };
+    LiteParser.PCDATA = {
+        option: true,
+        textarea: true,
+        fieldset: true,
+        title: true,
+        style: true,
+        script: true
+    };
+    LiteParser.CDATA_ATTR = {
+        style: true,
+        datafld: true,
+        datasrc: true,
+        href: true,
+        src: true,
+        longdesc: true,
+        usemap: true,
+        cite: true,
+        datetime: true,
+        action: true,
+        axis: true,
+        profile: true,
+        content: true,
+        scheme: true
+    };
+    return LiteParser;
+}());
+exports.LiteParser = LiteParser;
+
+},{"../../util/Entities.js":438,"./Element.js":163,"./Text.js":166}],166:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiteComment = exports.LiteText = void 0;
+var LiteText = (function () {
+    function LiteText(text) {
+        if (text === void 0) { text = ''; }
+        this.value = text;
+    }
+    Object.defineProperty(LiteText.prototype, "kind", {
+        get: function () {
+            return '#text';
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return LiteText;
+}());
+exports.LiteText = LiteText;
+var LiteComment = (function (_super) {
+    __extends(LiteComment, _super);
+    function LiteComment() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(LiteComment.prototype, "kind", {
+        get: function () {
+            return '#comment';
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return LiteComment;
+}(LiteText));
+exports.LiteComment = LiteComment;
+
+},{}],167:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiteWindow = void 0;
+var Element_js_1 = require("./Element.js");
+var Document_js_1 = require("./Document.js");
+var List_js_1 = require("./List.js");
+var Parser_js_1 = require("./Parser.js");
+var LiteWindow = (function () {
+    function LiteWindow() {
+        this.DOMParser = Parser_js_1.LiteParser;
+        this.NodeList = List_js_1.LiteList;
+        this.HTMLCollection = List_js_1.LiteList;
+        this.HTMLElement = Element_js_1.LiteElement;
+        this.DocumentFragment = List_js_1.LiteList;
+        this.Document = Document_js_1.LiteDocument;
+        this.document = new Document_js_1.LiteDocument();
+    }
+    return LiteWindow;
+}());
+exports.LiteWindow = LiteWindow;
+
+},{"./Document.js":162,"./Element.js":163,"./List.js":164,"./Parser.js":165}],168:[function(require,module,exports){
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -23273,559 +23825,7 @@ function liteAdaptor(options) {
 }
 exports.liteAdaptor = liteAdaptor;
 
-},{"../core/DOMAdaptor.js":170,"../util/Styles.js":445,"./NodeMixin.js":161,"./lite/Document.js":163,"./lite/Element.js":164,"./lite/Parser.js":166,"./lite/Text.js":167,"./lite/Window.js":168}],163:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LiteDocument = void 0;
-var Element_js_1 = require("./Element.js");
-var LiteDocument = (function () {
-    function LiteDocument() {
-        this.root = new Element_js_1.LiteElement('html', {}, [
-            this.head = new Element_js_1.LiteElement('head'),
-            this.body = new Element_js_1.LiteElement('body')
-        ]);
-        this.type = '';
-    }
-    Object.defineProperty(LiteDocument.prototype, "kind", {
-        get: function () {
-            return '#document';
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return LiteDocument;
-}());
-exports.LiteDocument = LiteDocument;
-
-},{"./Element.js":164}],164:[function(require,module,exports){
-"use strict";
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-var __read = (this && this.__read) || function (o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-};
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LiteElement = void 0;
-var LiteElement = (function () {
-    function LiteElement(kind, attributes, children) {
-        var e_1, _a;
-        if (attributes === void 0) { attributes = {}; }
-        if (children === void 0) { children = []; }
-        this.kind = kind;
-        this.attributes = __assign({}, attributes);
-        this.children = __spreadArray([], __read(children), false);
-        try {
-            for (var _b = __values(this.children), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var child = _c.value;
-                child.parent = this;
-            }
-        }
-        catch (e_1_1) { e_1 = { error: e_1_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_1) throw e_1.error; }
-        }
-        this.styles = null;
-    }
-    return LiteElement;
-}());
-exports.LiteElement = LiteElement;
-
-},{}],165:[function(require,module,exports){
-"use strict";
-var __read = (this && this.__read) || function (o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-};
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LiteList = void 0;
-var LiteList = (function () {
-    function LiteList(children) {
-        this.nodes = [];
-        this.nodes = __spreadArray([], __read(children), false);
-    }
-    LiteList.prototype.append = function (node) {
-        this.nodes.push(node);
-    };
-    LiteList.prototype[Symbol.iterator] = function () {
-        var i = 0;
-        return {
-            next: function () {
-                return (i === this.nodes.length ?
-                    { value: null, done: true } :
-                    { value: this.nodes[i++], done: false });
-            }
-        };
-    };
-    return LiteList;
-}());
-exports.LiteList = LiteList;
-
-},{}],166:[function(require,module,exports){
-"use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-var __read = (this && this.__read) || function (o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-};
-var __values = (this && this.__values) || function(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function () {
-            if (o && i >= o.length) o = void 0;
-            return { value: o && o[i++], done: !o };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LiteParser = exports.PATTERNS = void 0;
-var Entities = __importStar(require("../../util/Entities.js"));
-var Element_js_1 = require("./Element.js");
-var Text_js_1 = require("./Text.js");
-var PATTERNS;
-(function (PATTERNS) {
-    PATTERNS.TAGNAME = '[a-z][^\\s\\n>]*';
-    PATTERNS.ATTNAME = '[a-z][^\\s\\n>=]*';
-    PATTERNS.VALUE = "(?:'[^']*'|\"[^\"]*\"|[^\\s\\n]+)";
-    PATTERNS.VALUESPLIT = "(?:'([^']*)'|\"([^\"]*)\"|([^\\s\\n]+))";
-    PATTERNS.SPACE = '(?:\\s|\\n)+';
-    PATTERNS.OPTIONALSPACE = '(?:\\s|\\n)*';
-    PATTERNS.ATTRIBUTE = PATTERNS.ATTNAME + '(?:' + PATTERNS.OPTIONALSPACE + '=' + PATTERNS.OPTIONALSPACE + PATTERNS.VALUE + ')?';
-    PATTERNS.ATTRIBUTESPLIT = '(' + PATTERNS.ATTNAME + ')(?:' + PATTERNS.OPTIONALSPACE + '=' + PATTERNS.OPTIONALSPACE + PATTERNS.VALUESPLIT + ')?';
-    PATTERNS.TAG = '(<(?:' + PATTERNS.TAGNAME + '(?:' + PATTERNS.SPACE + PATTERNS.ATTRIBUTE + ')*'
-        + PATTERNS.OPTIONALSPACE + '/?|/' + PATTERNS.TAGNAME + '|!--[^]*?--|![^]*?)(?:>|$))';
-    PATTERNS.tag = new RegExp(PATTERNS.TAG, 'i');
-    PATTERNS.attr = new RegExp(PATTERNS.ATTRIBUTE, 'i');
-    PATTERNS.attrsplit = new RegExp(PATTERNS.ATTRIBUTESPLIT, 'i');
-})(PATTERNS = exports.PATTERNS || (exports.PATTERNS = {}));
-var LiteParser = (function () {
-    function LiteParser() {
-    }
-    LiteParser.prototype.parseFromString = function (text, _format, adaptor) {
-        if (_format === void 0) { _format = 'text/html'; }
-        if (adaptor === void 0) { adaptor = null; }
-        var root = adaptor.createDocument();
-        var node = adaptor.body(root);
-        var parts = text.replace(/<\?.*?\?>/g, '').split(PATTERNS.tag);
-        while (parts.length) {
-            var text_1 = parts.shift();
-            var tag = parts.shift();
-            if (text_1) {
-                this.addText(adaptor, node, text_1);
-            }
-            if (tag && tag.charAt(tag.length - 1) === '>') {
-                if (tag.charAt(1) === '!') {
-                    this.addComment(adaptor, node, tag);
-                }
-                else if (tag.charAt(1) === '/') {
-                    node = this.closeTag(adaptor, node, tag);
-                }
-                else {
-                    node = this.openTag(adaptor, node, tag, parts);
-                }
-            }
-        }
-        this.checkDocument(adaptor, root);
-        return root;
-    };
-    LiteParser.prototype.addText = function (adaptor, node, text) {
-        text = Entities.translate(text);
-        return adaptor.append(node, adaptor.text(text));
-    };
-    LiteParser.prototype.addComment = function (adaptor, node, comment) {
-        return adaptor.append(node, new Text_js_1.LiteComment(comment));
-    };
-    LiteParser.prototype.closeTag = function (adaptor, node, tag) {
-        var kind = tag.slice(2, tag.length - 1).toLowerCase();
-        while (adaptor.parent(node) && adaptor.kind(node) !== kind) {
-            node = adaptor.parent(node);
-        }
-        return adaptor.parent(node);
-    };
-    LiteParser.prototype.openTag = function (adaptor, node, tag, parts) {
-        var PCDATA = this.constructor.PCDATA;
-        var SELF_CLOSING = this.constructor.SELF_CLOSING;
-        var kind = tag.match(/<(.*?)[\s\n>\/]/)[1].toLowerCase();
-        var child = adaptor.node(kind);
-        var attributes = tag.replace(/^<.*?[\s\n>]/, '').split(PATTERNS.attrsplit);
-        if (attributes.pop().match(/>$/) || attributes.length < 5) {
-            this.addAttributes(adaptor, child, attributes);
-            adaptor.append(node, child);
-            if (!SELF_CLOSING[kind] && !tag.match(/\/>$/)) {
-                if (PCDATA[kind]) {
-                    this.handlePCDATA(adaptor, child, kind, parts);
-                }
-                else {
-                    node = child;
-                }
-            }
-        }
-        return node;
-    };
-    LiteParser.prototype.addAttributes = function (adaptor, node, attributes) {
-        var CDATA_ATTR = this.constructor.CDATA_ATTR;
-        while (attributes.length) {
-            var _a = __read(attributes.splice(0, 5), 5), name_1 = _a[1], v1 = _a[2], v2 = _a[3], v3 = _a[4];
-            var value = v1 || v2 || v3 || '';
-            if (!CDATA_ATTR[name_1]) {
-                value = Entities.translate(value);
-            }
-            adaptor.setAttribute(node, name_1, value);
-        }
-    };
-    LiteParser.prototype.handlePCDATA = function (adaptor, node, kind, parts) {
-        var pcdata = [];
-        var etag = '</' + kind + '>';
-        var ptag = '';
-        while (parts.length && ptag !== etag) {
-            pcdata.push(ptag);
-            pcdata.push(parts.shift());
-            ptag = parts.shift();
-        }
-        adaptor.append(node, adaptor.text(pcdata.join('')));
-    };
-    LiteParser.prototype.checkDocument = function (adaptor, root) {
-        var e_1, _a, e_2, _b;
-        var node = this.getOnlyChild(adaptor, adaptor.body(root));
-        if (!node)
-            return;
-        try {
-            for (var _c = __values(adaptor.childNodes(adaptor.body(root))), _d = _c.next(); !_d.done; _d = _c.next()) {
-                var child = _d.value;
-                if (child === node) {
-                    break;
-                }
-                if (child instanceof Text_js_1.LiteComment && child.value.match(/^<!DOCTYPE/)) {
-                    root.type = child.value;
-                }
-            }
-        }
-        catch (e_1_1) { e_1 = { error: e_1_1 }; }
-        finally {
-            try {
-                if (_d && !_d.done && (_a = _c.return)) _a.call(_c);
-            }
-            finally { if (e_1) throw e_1.error; }
-        }
-        switch (adaptor.kind(node)) {
-            case 'html':
-                try {
-                    for (var _e = __values(node.children), _f = _e.next(); !_f.done; _f = _e.next()) {
-                        var child = _f.value;
-                        switch (adaptor.kind(child)) {
-                            case 'head':
-                                root.head = child;
-                                break;
-                            case 'body':
-                                root.body = child;
-                                break;
-                        }
-                    }
-                }
-                catch (e_2_1) { e_2 = { error: e_2_1 }; }
-                finally {
-                    try {
-                        if (_f && !_f.done && (_b = _e.return)) _b.call(_e);
-                    }
-                    finally { if (e_2) throw e_2.error; }
-                }
-                root.root = node;
-                adaptor.remove(node);
-                if (adaptor.parent(root.body) !== node) {
-                    adaptor.append(node, root.body);
-                }
-                if (adaptor.parent(root.head) !== node) {
-                    adaptor.insert(root.head, root.body);
-                }
-                break;
-            case 'head':
-                root.head = adaptor.replace(node, root.head);
-                break;
-            case 'body':
-                root.body = adaptor.replace(node, root.body);
-                break;
-        }
-    };
-    LiteParser.prototype.getOnlyChild = function (adaptor, body) {
-        var e_3, _a;
-        var node = null;
-        try {
-            for (var _b = __values(adaptor.childNodes(body)), _c = _b.next(); !_c.done; _c = _b.next()) {
-                var child = _c.value;
-                if (child instanceof Element_js_1.LiteElement) {
-                    if (node)
-                        return null;
-                    node = child;
-                }
-            }
-        }
-        catch (e_3_1) { e_3 = { error: e_3_1 }; }
-        finally {
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            }
-            finally { if (e_3) throw e_3.error; }
-        }
-        return node;
-    };
-    LiteParser.prototype.serialize = function (adaptor, node, xml) {
-        var _this = this;
-        if (xml === void 0) { xml = false; }
-        var SELF_CLOSING = this.constructor.SELF_CLOSING;
-        var CDATA = this.constructor.CDATA_ATTR;
-        var tag = adaptor.kind(node);
-        var attributes = adaptor.allAttributes(node).map(function (x) { return x.name + '="' + (CDATA[x.name] ? x.value : _this.protectAttribute(x.value)) + '"'; }).join(' ');
-        var content = this.serializeInner(adaptor, node, xml);
-        var html = '<' + tag + (attributes ? ' ' + attributes : '')
-            + ((!xml || content) && !SELF_CLOSING[tag] ? ">".concat(content, "</").concat(tag, ">") : xml ? '/>' : '>');
-        return html;
-    };
-    LiteParser.prototype.serializeInner = function (adaptor, node, xml) {
-        var _this = this;
-        if (xml === void 0) { xml = false; }
-        var PCDATA = this.constructor.PCDATA;
-        if (PCDATA.hasOwnProperty(node.kind)) {
-            return adaptor.childNodes(node).map(function (x) { return adaptor.value(x); }).join('');
-        }
-        return adaptor.childNodes(node).map(function (x) {
-            var kind = adaptor.kind(x);
-            return (kind === '#text' ? _this.protectHTML(adaptor.value(x)) :
-                kind === '#comment' ? x.value :
-                    _this.serialize(adaptor, x, xml));
-        }).join('');
-    };
-    LiteParser.prototype.protectAttribute = function (text) {
-        if (typeof text !== 'string') {
-            text = String(text);
-        }
-        return text.replace(/"/g, '&quot;');
-    };
-    LiteParser.prototype.protectHTML = function (text) {
-        return text.replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;');
-    };
-    LiteParser.SELF_CLOSING = {
-        area: true,
-        base: true,
-        br: true,
-        col: true,
-        command: true,
-        embed: true,
-        hr: true,
-        img: true,
-        input: true,
-        keygen: true,
-        link: true,
-        menuitem: true,
-        meta: true,
-        param: true,
-        source: true,
-        track: true,
-        wbr: true
-    };
-    LiteParser.PCDATA = {
-        option: true,
-        textarea: true,
-        fieldset: true,
-        title: true,
-        style: true,
-        script: true
-    };
-    LiteParser.CDATA_ATTR = {
-        style: true,
-        datafld: true,
-        datasrc: true,
-        href: true,
-        src: true,
-        longdesc: true,
-        usemap: true,
-        cite: true,
-        datetime: true,
-        action: true,
-        axis: true,
-        profile: true,
-        content: true,
-        scheme: true
-    };
-    return LiteParser;
-}());
-exports.LiteParser = LiteParser;
-
-},{"../../util/Entities.js":438,"./Element.js":164,"./Text.js":167}],167:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LiteComment = exports.LiteText = void 0;
-var LiteText = (function () {
-    function LiteText(text) {
-        if (text === void 0) { text = ''; }
-        this.value = text;
-    }
-    Object.defineProperty(LiteText.prototype, "kind", {
-        get: function () {
-            return '#text';
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return LiteText;
-}());
-exports.LiteText = LiteText;
-var LiteComment = (function (_super) {
-    __extends(LiteComment, _super);
-    function LiteComment() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Object.defineProperty(LiteComment.prototype, "kind", {
-        get: function () {
-            return '#comment';
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return LiteComment;
-}(LiteText));
-exports.LiteComment = LiteComment;
-
-},{}],168:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LiteWindow = void 0;
-var Element_js_1 = require("./Element.js");
-var Document_js_1 = require("./Document.js");
-var List_js_1 = require("./List.js");
-var Parser_js_1 = require("./Parser.js");
-var LiteWindow = (function () {
-    function LiteWindow() {
-        this.DOMParser = Parser_js_1.LiteParser;
-        this.NodeList = List_js_1.LiteList;
-        this.HTMLCollection = List_js_1.LiteList;
-        this.HTMLElement = Element_js_1.LiteElement;
-        this.DocumentFragment = List_js_1.LiteList;
-        this.Document = Document_js_1.LiteDocument;
-        this.document = new Document_js_1.LiteDocument();
-    }
-    return LiteWindow;
-}());
-exports.LiteWindow = LiteWindow;
-
-},{"./Document.js":163,"./Element.js":164,"./List.js":165,"./Parser.js":166}],169:[function(require,module,exports){
+},{"../core/DOMAdaptor.js":170,"../util/Styles.js":445,"./NodeMixin.js":161,"./lite/Document.js":162,"./lite/Element.js":163,"./lite/Parser.js":165,"./lite/Text.js":166,"./lite/Window.js":167}],169:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.VERSION = void 0;
@@ -77580,6 +77580,226 @@ module.exports = {
   discord,
 }
 },{}],506:[function(require,module,exports){
+/** 
+ * Helpers for common filtering cases.
+ * FilterHelpers classes consolidate logic for checking the properties for complex (and differently structured) objects
+ * and can check against multiple conditions at once.
+ */
+
+
+/** DUNGEON FILTERS */
+
+class DungeonFilterHelper {
+    constructor () {
+        //add condition arrays as needed for new filter cases
+        this.encounterConditions = [];
+    }
+
+    addEncounterFilter(filter) {
+        this.encounterConditions.push(filter);
+    }
+
+    filterDungeons(dungeons) {
+        return dungeons.filter(dungeon => {
+            const mimicsAsLoot = dungeon.mimicList.length > 0 ? Object.values(dungeon.lootTable).flat().filter(loot => dungeon.mimicList.includes(loot.loot)) : [];
+            const encounters = [].concat(dungeon.enemyList, dungeon.bossList, mimicsAsLoot);
+            
+            return encounters.some(DungeonFilterHelper.combineFilters(this.encounterConditions));
+        });
+    }
+    
+    filterEncounters(encounters, isMimic = false, lootTable = {}) {
+        if (isMimic) {
+            const mimicsAsLoot = encounters.length > 0 ? Object.values(lootTable).flat().filter(loot => encounters.includes(loot.loot)) : [];
+            return mimicsAsLoot.filter(DungeonFilterHelper.combineFilters(this.encounterConditions)).map(m => m.loot);
+        }
+
+        return encounters.filter(DungeonFilterHelper.combineFilters(this.encounterConditions))
+    }
+
+    //helpers for creating filters
+    static createHasRequirementFilter = (requirement) => { return (encounter) =>
+        encounter.requirement ? matchesRequirement(encounter.requirement, requirement)
+            : encounter.options?.requirement && matchesRequirement(encounter.options.requirement, requirement)
+    };
+    static createCheckByPokemonFilter = (checkPokemonBy) => { return (encounter) =>
+        encounter.trainerClass === undefined && (typeof encounter === 'string' ? checkPokemonBy(encounter) : checkPokemonBy(encounter.pokemon || encounter.name || encounter.loot));
+    };
+
+    //filter that checks that an object meets all conditions
+    static combineFilters = (filters) => { return (obj) => filters.every(f => f(obj)) };
+
+};
+
+
+/**
+ * 
+ * @param dungeons
+ * @param filterBy - conditions to filter by, add properties as needed
+ * @param {Requirement} filterBy.requirement
+ * @param {function} filterBy.pokemonFilter - callback(pokemonName: string) => boolean
+ * @param {boolean} filterEncounters - returns only encounters/pokemon that pass filters
+ */
+const filterDungeons = ({
+    dungeons = Object.values(dungeonList).filter(dungeon => GameConstants.getDungeonRegion(dungeon.name) <= GameConstants.MAX_AVAILABLE_REGION),
+    filterBy = {
+        encounterRequirement: null,
+        pokemonFilter: null,
+    },
+    filterEncounters = false, //returns only enemies that have this requirement
+}) => {
+    const dfh = new DungeonFilterHelper();
+    if (filterBy.encounterRequirement) {
+        dfh.addEncounterFilter(DungeonFilterHelper.createHasRequirementFilter(filterBy.encounterRequirement));
+    }
+    if (filterBy.pokemonFilter) {
+        dfh.addEncounterFilter(DungeonFilterHelper.createCheckByPokemonFilter(filterBy.pokemonFilter));
+    }
+
+    let filteredDungeons = dfh.filterDungeons(dungeons);
+
+    if (filterEncounters) {
+        filteredDungeons = filteredDungeons.map( dungeon => ({
+            ...dungeon,
+            enemyList: dfh.filterEncounters(dungeon.enemyList),
+            bossList: dfh.filterEncounters(dungeon.bossList),
+            mimicList: dfh.filterEncounters(dungeon.mimicList, true, dungeon.lootTable)
+        }));
+    }
+
+    return filteredDungeons;
+}
+
+
+/** ROUTE FILTERS */
+
+class RouteFilterHelper {
+    constructor () {
+        //add condition arrays as needed for new filter cases
+        this.encounterConditions = [];
+        this.pokemonConditions = []; //used for encounters that can cover an array of pokemon - currently only applies to special encounters
+    }
+
+    addEncounterFilter(filter) {
+        this.encounterConditions.push(filter);
+    }
+
+    addPokemonFilter(filter) {
+        this.pokemonConditions.push(filter);
+    }
+
+    filterRoutes(routes) {
+        return routes.filter(r => Object.values(r.pokemon).flat().some(RouteFilterHelper.combineFilters(this.encounterConditions)));
+    }
+
+    filterEncounters(encounters) {
+        return encounters.filter(RouteFilterHelper.combineFilters(this.encounterConditions));
+    }
+
+    filterEncounterPokemon(pokemon) {
+        return pokemon.filter(RouteFilterHelper.combineFilters(this.pokemonConditions));
+    }
+
+    //helpers for creating filters
+    static createHasRequirementFilter = (requirement) => { return (encounter) => encounter.req && matchesRequirement(encounter.req, requirement); };
+    static createCheckEncounterByPokemonFilter = (checkPokemonBy) => {
+        return (encounter) => encounter.pokemon ? encounter.pokemon.some(checkPokemonBy) : checkPokemonBy(encounter);
+    };
+
+    //filter that checks that an object meets all conditions
+    static combineFilters = (filters) => { return (obj) => filters.every(f => f(obj)) };
+};
+
+
+/**
+ * 
+ * @param routes
+ * @param filterBy - conditions to filter by, add properties as needed
+ * @param {Requirement} filterBy.requirement
+ * @param {function} filterBy.pokemonFilter - callback(pokemonName: string) => boolean
+ * @param {boolean} filterEncounters - returns only encounters/pokemon that pass filters
+ */
+
+const filterRoutes = ({
+    routes = Routes.regionRoutes.filter(route => route.region <= GameConstants.MAX_AVAILABLE_REGION),
+    filterBy = {
+        encounterRequirement: null,
+        pokemonFilter: null,
+    },
+    filterEncounters = false, 
+}) => {
+    const rfh = new RouteFilterHelper();
+
+    if (filterBy.encounterRequirement) {
+        rfh.addEncounterFilter(RouteFilterHelper.createHasRequirementFilter(filterBy.encounterRequirement));
+    }
+    if (filterBy.pokemonFilter) {
+        rfh.addEncounterFilter(RouteFilterHelper.createCheckEncounterByPokemonFilter(filterBy.pokemonFilter));
+        rfh.addPokemonFilter(filterBy.pokemonFilter);
+    }
+
+    let filteredRoutes = rfh.filterRoutes(routes);
+    
+    if (filterEncounters) {
+        filteredRoutes = filteredRoutes.map(route => ({
+            ...route, 
+            pokemon: { 
+                //encounters and pokemon are equivalent for land, water, headbutt; can skip additional pokemon filtering unless this changes
+                land: rfh.filterEncounters(route.pokemon.land),
+                water: rfh.filterEncounters(route.pokemon.water),
+                headbutt: rfh.filterEncounters(route.pokemon.headbutt),
+                special: rfh.filterEncounters(route.pokemon.special).map(s => ({
+                    ...s,
+                    pokemon: rfh.filterEncounterPokemon(s.pokemon)
+                }))
+            }
+        }));
+    }
+
+    return filteredRoutes;
+}
+
+/** REQUIREMENT HELPERS */
+
+//Finds a specific requirement type in a potential MultiRequirement
+const findRequirementOfType = (requirement, type) => {
+    if (requirement instanceof type) {
+        return requirement;
+    } else if (requirement instanceof MultiRequirement || requirement instanceof OneFromManyRequirement) {
+        return requirement.requirements.find(r => findRequirementOfType(r, type));
+    } else {
+        return;
+    }
+}
+
+const matchesRequirement = (reqToCheck, reqToMatch = new Requirement(), canMatchMulti = true) => {
+    
+    if (canMatchMulti && (reqToCheck instanceof MultiRequirement || reqToCheck instanceof OneFromManyRequirement)) {
+        return reqToCheck.requirements.some(r => matchesRequirement(r, reqToMatch));
+    } else if (reqToCheck instanceof WeatherRequirement && reqToMatch instanceof WeatherRequirement) {
+        return reqToMatch.weather === undefined || reqToCheck.weather.some(w => reqToMatch.weather.includes(w));
+    } else if (reqToCheck instanceof DayOfWeekRequirement && reqToMatch instanceof DayOfWeekRequirement) {
+        return reqToMatch.DayOfWeekNum === undefined || reqToCheck.DayOfWeekNum === reqToMatch.DayOfWeekNum;
+    } else if (reqToCheck instanceof SpecialEventRequirement && reqToMatch instanceof SpecialEventRequirement) {
+        return reqToMatch.specialEventName === undefined || reqToCheck.specialEventName === reqToMatch.specialEventName;
+    } else if (reqToCheck instanceof QuestLineStartedRequirement && reqToMatch instanceof QuestLineStartedRequirement) {
+        return reqToMatch.questLineName === undefined || reqToMatch.questLineNamereqToCheck.questLineName === reqToMatch.questLineName;
+    } else if (reqToCheck instanceof QuestLineCompletedRequirement && reqToMatch instanceof QuestLineCompletedRequirement) {
+        return reqToMatch.questLineName === undefined || reqToCheck.questLineName === reqToMatch.questLineName;
+    } else if (reqToCheck instanceof QuestLineStepCompletedRequirement && reqToMatch instanceof QuestLineStepCompletedRequirement) {
+        return reqToMatch.questLineName === undefined || (reqToCheck.questLineName === reqToMatch.questLineName && reqToCheck.questIndex === reqToMatch.questIndex);
+    } else {
+        return false;
+    }
+};
+
+module.exports = {
+    filterRoutes,
+    filterDungeons,
+    matchesRequirement,
+    findRequirementOfType,
+}
+},{}],507:[function(require,module,exports){
 /*
 Initializing anything we need from the game files
 */
@@ -77706,7 +77926,7 @@ Settings.getSetting('theme').observableValue.subscribe(theme => {
   document.body.className = `no-select ${theme}`;
 });
 
-},{}],507:[function(require,module,exports){
+},{}],508:[function(require,module,exports){
 const requirementHints = (requirement, includeMarkdown = true) => {
     if (!requirement) {
         return [];
@@ -78037,7 +78257,7 @@ module.exports = {
     getSafariSpriteId,
 }
 
-},{}],508:[function(require,module,exports){
+},{}],509:[function(require,module,exports){
 // import our version etc
 const package = require('../pokeclicker/package.json');
 
@@ -78061,11 +78281,12 @@ window.Wiki = {
   dungeonTokens: require('./pages/dungeonTokens'),
   oakItems: require('./pages/oakItems'),
   gems: require('./pages/gems'),
+  filterHelper: require('./filterHelper'),
   getDealChains: require('./pages/dealChains').getDealChains,
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":502,"./components":503,"./datatables":504,"./discord":505,"./game":506,"./gameHelper":507,"./markdown-renderer":514,"./navigation":515,"./notifications":516,"./pages/dealChains":517,"./pages/dreamOrbs":518,"./pages/dungeonTokens":519,"./pages/dungeons":520,"./pages/farm":521,"./pages/farmSimulator":522,"./pages/gems":523,"./pages/items":524,"./pages/oakItems":525,"./pages/pokemon":526,"./pages/shopMon":527,"./typeahead":529}],509:[function(require,module,exports){
+},{"../pokeclicker/package.json":502,"./components":503,"./datatables":504,"./discord":505,"./filterHelper":506,"./game":507,"./gameHelper":508,"./markdown-renderer":515,"./navigation":516,"./notifications":517,"./pages/dealChains":518,"./pages/dreamOrbs":519,"./pages/dungeonTokens":520,"./pages/dungeons":521,"./pages/farm":522,"./pages/farmSimulator":523,"./pages/gems":524,"./pages/items":525,"./pages/oakItems":526,"./pages/pokemon":527,"./pages/shopMon":528,"./typeahead":530}],510:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const getContent = (editor) => editor.value().split('\n').map(l => l.trimEnd()).join('\n');
@@ -78203,7 +78424,7 @@ module.exports = {
   createMarkDownEditor,
 }
 
-},{"./markdown-renderer":514}],510:[function(require,module,exports){
+},{"./markdown-renderer":515}],511:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -78219,7 +78440,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],511:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],512:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -78237,7 +78458,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],512:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],513:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -78253,7 +78474,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],513:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],514:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -78269,7 +78490,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],514:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],515:[function(require,module,exports){
 const markdownit      = require('markdown-it');
 
 // Setup our markdown editor
@@ -78317,7 +78538,7 @@ const md = new markdownit({
   
       } else {
         // closing tag
-        return `</div></div></div>\n`;
+        return `</div></div></div></div>\n`;
       }
     }
   })
@@ -78343,7 +78564,7 @@ module.exports = {
   md,
 }
 
-},{"./markdown-plugins/hidden-comments.js":510,"./markdown-plugins/image-size.js":511,"./markdown-plugins/wiki-links-badge.js":512,"./markdown-plugins/wiki-links.js":513,"markdown-it":106,"markdown-it-attrs":96,"markdown-it-container":99,"markdown-it-mathjax3":100,"markdown-it-multimd-table":101}],515:[function(require,module,exports){
+},{"./markdown-plugins/hidden-comments.js":511,"./markdown-plugins/image-size.js":512,"./markdown-plugins/wiki-links-badge.js":513,"./markdown-plugins/wiki-links.js":514,"markdown-it":106,"markdown-it-attrs":96,"markdown-it-container":99,"markdown-it-mathjax3":100,"markdown-it-multimd-table":101}],516:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 const { applyDatatables } = require('./datatables');
 const { createMarkDownEditor } = require('./markdown-editor');
@@ -78530,6 +78751,14 @@ $(document).ready(() => {
       applyDatatables();
     }
   });
+
+  // Search for pages
+  document.getElementById('search').addEventListener('keyup', ({key, target}) => {
+    if (key === 'Enter') {
+      gotoPage('Search', target.value);
+      target.value = '';
+    }
+  });
 });
 
 // clickable table rows - handle middle clicking
@@ -78566,7 +78795,7 @@ module.exports = {
     gotoPageClick,
 };
 
-},{"./datatables":504,"./markdown-editor":509,"./markdown-renderer":514,"./redirections":528}],516:[function(require,module,exports){
+},{"./datatables":504,"./markdown-editor":510,"./markdown-renderer":515,"./redirections":529}],517:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -78602,7 +78831,7 @@ module.exports = {
   alert,
 };
 
-},{}],517:[function(require,module,exports){
+},{}],518:[function(require,module,exports){
 
 class DealProfit {
     constructor(type, amount) {
@@ -78766,7 +78995,7 @@ function getDealChains(
 module.exports = {
     getDealChains,
 }
-},{}],518:[function(require,module,exports){
+},{}],519:[function(require,module,exports){
 const getOrbLoot = (orb) => {
   const weightSum = orb.items.reduce((acc, item) => acc + item.weight, 0);
   return orb.items.map(item => {
@@ -78784,7 +79013,7 @@ module.exports = {
   getOrbLoot
 };
 
-},{}],519:[function(require,module,exports){
+},{}],520:[function(require,module,exports){
 const checkExist = setInterval(function() {
     if ($('.tablinks').length) {
         $('.tablinks')[0].click();
@@ -78883,7 +79112,7 @@ module.exports = {
     highestRoute,
     setWeather,
 };
-},{}],520:[function(require,module,exports){
+},{}],521:[function(require,module,exports){
 const getTableClearCounts = (dungeon) => {
     if (getTableClearCounts.cache.has(dungeon)) {
         return getTableClearCounts.cache.get(dungeon);
@@ -79244,6 +79473,34 @@ const getDungeonShadowPokemon = (dungeon) => {
     return shadows;
 };
 
+const getAllDungeonEncounters = (dungeon) => {
+    const mimicsAsLoot = dungeon.mimicList.length > 0 ? Object.values(dungeon.lootTable).flat().filter(loot => dungeon.mimicList.includes(loot.loot)) : [];
+
+    return [].concat(
+                dungeon.enemyList,
+                dungeon.bossList,
+                mimicsAsLoot
+            ).map(e => normalizeDungeonEncounter(e));
+}
+
+const normalizeDungeonEncounter = (encounter) => {
+    if (typeof encounter === 'string') {
+        return {
+            name: encounter
+        };
+    }
+
+    return {
+        ...encounter,
+        name: encounter.name || encounter.pokemon || encounter.loot,
+        options: {
+            ...encounter.options,
+            requirement: encounter.options?.requirement || encounter.requirement
+        }
+    };
+}
+
+
 module.exports = {
     getDungeonLoot,
     getDungeonLootChances,
@@ -79252,9 +79509,10 @@ module.exports = {
     getTableClearCounts,
     itemTypeCategories,
     getDungeonShadowPokemon,
+    getAllDungeonEncounters,
 };
 
-},{}],521:[function(require,module,exports){
+},{}],522:[function(require,module,exports){
 /**
  * Returns the primary mutation for a berry.
  * Filters out enigma mutations, as they cannot be used to obtain a berry for the first time.
@@ -79274,7 +79532,7 @@ module.exports = {
     getPrimaryMutation,
 };
 
-},{}],522:[function(require,module,exports){
+},{}],523:[function(require,module,exports){
 const selectedPlotIndex = ko.observable(12);
 const selectedPlot = ko.pureComputed(() => App.game.farming.plotList[selectedPlotIndex()]);
 const plotLabelsEnabled = ko.observable(false);
@@ -79605,7 +79863,7 @@ module.exports = {
     berryList,
 }
 
-},{}],523:[function(require,module,exports){
+},{}],524:[function(require,module,exports){
 // routeAvgHp copied from PokemonFactory.generateWildPokemon
 const routeAvgHp = (region, route) => {
     const poke = [...new Set(Object.values(Routes.getRoute(region, route).pokemon).flat().map(p => p.pokemon ?? p).flat())];
@@ -79770,7 +80028,7 @@ module.exports = {
     gemGymsPerFlute
 }
 
-},{}],524:[function(require,module,exports){
+},{}],525:[function(require,module,exports){
 const getItemName =  (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
@@ -79877,7 +80135,7 @@ module.exports = {
     getTownsWithTradesForItem,
 };
 
-},{}],525:[function(require,module,exports){
+},{}],526:[function(require,module,exports){
 const getOakItemBonus = (oakItem, level) => {
     const bonus = oakItem.bonusList[level];
     switch (oakItem.name) {
@@ -79952,7 +80210,7 @@ module.exports = {
     getOakItemUpgradeReq,
 };
 
-},{}],526:[function(require,module,exports){
+},{}],527:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -80053,7 +80311,7 @@ module.exports = {
     getRouteRoamingChance,
 }
 
-},{}],527:[function(require,module,exports){
+},{}],528:[function(require,module,exports){
 function getShopItemsByCurrencyAndFilter(currency, itemFilter) {
     var towns = Object.values(TownList).filter(t => t.region <= GameConstants.MAX_AVAILABLE_REGION);
     var filteredTowns = [];
@@ -80099,7 +80357,7 @@ module.exports = {
     getShopItems,
     getUniqueItems,
 };
-},{}],528:[function(require,module,exports){
+},{}],529:[function(require,module,exports){
 const redirections = [
     ({type, name}) => {
         if (type === 'Pokemon') {
@@ -80114,6 +80372,13 @@ const redirections = [
         name: '*',
         redirect: {
             type: 'Mega Pokémon'
+        }
+    },
+    {
+        type: 'Battle Cafe',
+        name: '*',
+        redirect: {
+            type: 'Battle Café'
         }
     },
 ];
@@ -80151,7 +80416,7 @@ module.exports = {
     redirections
 };
 
-},{}],529:[function(require,module,exports){
+},{}],530:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 const { getAvailablePokemon } = require('./pages/pokemon');
 
@@ -80296,10 +80561,10 @@ const searchOptions = [
     type: 'Quest Lines',
     page: q.name,
   })),
-  // Battle Cafe
+  // Battle Café
   {
     display: 'Battle Café',
-    type: 'Battle Cafe',
+    type: 'Battle Café',
     page: '',
   },
   // Vitamins
@@ -80448,6 +80713,11 @@ const searchOptions = [
     type: 'Weather',
     page: '',
   },
+  ...Object.values(Weather.weatherConditions).map(w => ({
+    display: `${GameConstants.humanifyString(WeatherType[w.type])} Weather`,
+    type: 'Weather',
+    page: WeatherType[w.type],
+  })),
   // Oak Itens
   {
     display: 'Oak Items',
@@ -80634,6 +80904,7 @@ const searchOptions = [
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
+  a.sort = a.display.replace(/.*-\s/, '').replace(/\(.*\)/, '');
   const duplicates = searchOptions.filter(b => b.display == a.display);
   if (duplicates.length > 1) {
     duplicates.forEach(d => d.display = `${d.display} (${d.type})`);
@@ -80653,16 +80924,70 @@ searchOptions.forEach(a => {
 function escapeRegExp(text) {
   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&').replace(/[eé]/g, '[eé]');
 }
-// This is the function which figures out the results to show
-var substringMatcher = (searchData) => {
-  return (query, cb) => {
-    // regex used to determine if a string contains the substring `q`
+
+function levenshtein(a, b) {
+  if (a === b) return 0;
+  if (!a.length) return b.length;
+  if (!b.length) return a.length;
+  const aLen = a.length;
+  const bLen = b.length;
+  let prev = new Array(bLen + 1);
+  let cur = new Array(bLen + 1);
+  for (let j = 0; j <= bLen; j++) prev[j] = j;
+  for (let i = 1; i <= aLen; i++) {
+    cur[0] = i;
+    const ai = a.charAt(i - 1);
+    for (let j = 1; j <= bLen; j++) {
+      const cost = ai === b.charAt(j - 1) ? 0 : 1;
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost);
+    }
+    const tmp = prev; prev = cur; cur = tmp;
+  }
+  return prev[bLen];
+}
+
+const substringMatcher = (searchData) => {
+  return (query, cb, fuzzy = false) => {
+    if (!query || query.length === 0) return cb ? cb([]) : [];
+
     const substrRegex = new RegExp(escapeRegExp(query), 'i');
 
-    // iterate through the pool of strings and for any string that matches the regex
-    const results = searchData.filter(d => substrRegex.test(d.redirect || d.display));
+    if (!fuzzy) {
+      const results = searchData.filter(d => substrRegex.test(d.redirect || d.display));
+      const sortedResults = results.sort((a, b) => a.sort.search(substrRegex) - b.sort.search(substrRegex) || a.sort.length - b.sort.length || a.display.length - b.display.length);
+      return cb ? cb(sortedResults) : sortedResults;
+    }
 
-    cb(results.sort((a, b) => a.display.search(substrRegex) - b.display.search(substrRegex) || a.display.length - b.display.length));
+    // fuzzy mode: compute a distance and pick the best matches
+    const qLower = query.toLowerCase();
+    // Scale match based on length of query
+    const maxDist = Math.max(1, Math.ceil(qLower.length * 0.25));
+
+    const matches = [];
+    for (let item of searchData) {
+      const target = (item.redirect || item.display).toLowerCase() || '';
+
+      if (target.indexOf(qLower) !== -1) {
+        matches.push({ item: item, dist: 0, pos: target.indexOf(qLower) });
+        continue;
+      }
+
+      let best = levenshtein(qLower, target);
+
+      const tokens = target.split(/[\s\-()→:/]+/).filter(Boolean);
+      for (let token of tokens) {
+        const dist = levenshtein(qLower, token);
+        if (dist < best) best = dist;
+      }
+
+      if (best <= maxDist) {
+        const pos = target.indexOf(tokens.find(tok => levenshtein(qLower, tok) === best) || '');
+        matches.push({ item: item, dist: best, pos: pos === -1 ? target.length : pos });
+      }
+    }
+
+    const sortedResults = matches.sort((a, b) => a.dist - b.dist || a.pos - b.pos || a.item.sort.length - b.item.sort.length || a.item.display.length - b.item.display.length).map(m => m.item);
+    return cb ? cb(sortedResults) : sortedResults;
   };
 };
 
@@ -80700,6 +81025,7 @@ $('#search').bind('typeahead:autocomplete', (ev, suggestion) => {
 
 module.exports = { 
   searchOptions,
+  searchViaKeyword: substringMatcher(searchOptions),
 };
 
-},{"./navigation":515,"./pages/pokemon":526}]},{},[508]);
+},{"./navigation":516,"./pages/pokemon":527}]},{},[509]);
