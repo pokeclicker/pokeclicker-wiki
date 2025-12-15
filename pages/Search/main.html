@@ -7,7 +7,7 @@
       <th>Page</th>
     </tr>
   </thead>
-  <tbody data-bind="foreach: Wiki.searchViaKeyword(Wiki.pageName())">
+  <tbody data-bind="foreach: Wiki.searchViaKeyword(Wiki.pageName(), undefined, true)">
     <tr class="clickable" data-bind="click: () => { Wiki.gotoPage($data.type, $data.page); return false; }">
       <td class="tight" data-bind="text: $data.type.replace(/\s/g, '&nbsp;')"></td>
       <td data-bind="text: $data.page || '---'"></td>
