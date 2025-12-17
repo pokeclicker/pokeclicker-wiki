@@ -185,11 +185,15 @@ $(document).ready(() => {
     }
   });
 
+  let activeSearchEntry;
   // Search for pages
   document.getElementById('search').addEventListener('keyup', ({key, target}) => {
-    if (key === 'Enter') {
+    if (key === 'Enter' && !activeSearchEntry) {
       gotoPage('Search', target.value);
+      target.blur();
       target.value = '';
+    } else {
+      activeSearchEntry = document.querySelector('.tt-dataset .active');
     }
   });
 });
