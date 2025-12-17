@@ -1,3 +1,4 @@
+
 ---- {#growth}
 
 ###### [Back to Top](#) {.text-end}
@@ -755,7 +756,7 @@ Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
 All planting times refer to the "Until Ripe" value of the first Berry planted.
 | Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Occa.png\|32px]] [[Berries/Occa]]      | `Planted First` | | |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]]      | `Planted First` | | |
 | [[File:Sitrus.png\|32px]] [[Berries/Sitrus]]  | 00:10:00      | 00:06:40                              | 00:04:27                              |
 
 ### Mutating Persim (Active Strategy)
