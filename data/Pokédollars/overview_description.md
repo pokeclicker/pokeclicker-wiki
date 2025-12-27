@@ -1,3 +1,4 @@
+
 ###### Currency: [[File:money.svg|18px]] **Pokédollars** • [[File:dungeonToken.svg|18px]] [[Dungeon Tokens]] • [[File:questPoint.svg|18px]] [[Quest Points]] • [[File:farmPoint.svg|18px]] [[Farm Points]] • [[File:diamond.svg|18px]]  [[Diamonds]] • [[File:battlePoint.svg|18px]] [[Battle Points]] {.alert .alert-secondary}
 
 #### Jump to:
@@ -29,7 +30,7 @@ Region | Route | Gym
 :--- | :--- |:---
 Kanto | Route 23 | Champion Blue
 Johto | Route 28 | Champion Lance
-Hoenn | Route 134 | Champion Wallace
+Hoenn | Route 134 | Any E4 Member
 Sinnoh | Route 230 | Champion Cynthia
 Unova | Route 18 | Champion Iris
 Kalos | Route 21 | Champion Diantha
