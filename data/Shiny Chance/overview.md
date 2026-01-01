@@ -1,3 +1,4 @@
+
 #### Jump to:
 - [Shiny Odds](#odds)
 - [Tips for Obtaining Shiny Pokémon](#tips)
@@ -25,7 +26,7 @@ Route Encounter | 1/8192 | 1/4096 | 1/1611
 Evolution Item/Level Up Evolutions | 1/2048 | 1/1024 | 1/403
 Safari Zone Encounter  | 1/1024 | 1/512 | 1/201
 Hatching in the [[Hatchery]] | 1/1024 | 1/512 | 1/201
-Quest or [Battle Frontier](#!Battle_Frontier) Reward | 1/1024 | 1/512 | 1/201
+Reward from Quest, [Battle Frontier](#!Battle_Frontier) or Discord code | 1/1024 | 1/512 | 1/201
 Purchasing or trading from a Shop | 1/1024 | 1/512 | 1/201
 [[Wandering Pokémon]] Encounter | 1/1024 | 1/512 | 1/201
 OOOSHINY code | 1 / 1 | 1 / 1 | 1 / 1
