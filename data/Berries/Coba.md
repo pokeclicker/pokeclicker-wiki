@@ -1,7 +1,8 @@
+
 ## Mutation Strategy
 ### Possible Planting Formations {#planting}
 
-Coba is obtained by surrounding an empty plot with between 10 and 15 points of Dry flavor, between 15 and 20 points of Bitter flavor, and 0 points of all other flavors.
+Coba is obtained by surrounding an empty plot with between 10 and 15 points of Dry flavor, between 15 and 20 points of Bitter flavor, and 0 points of all other flavors. Purple squares indicate where mutations can occur.
 
 Two possible farming setups are listed below.
 :::collapsed  WA Coba Mutation - Farm Simulator Code
