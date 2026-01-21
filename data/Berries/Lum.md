@@ -1,3 +1,6 @@
+
+Note: Lum aura isn't cumulative and doesn't affect nearby Lum.
+
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
