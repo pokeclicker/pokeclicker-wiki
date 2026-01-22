@@ -1,0 +1,1 @@
+*See [Effort Values (EVs)](#!Pokérus#EV) for more information on EVs and EV modifiers.*
