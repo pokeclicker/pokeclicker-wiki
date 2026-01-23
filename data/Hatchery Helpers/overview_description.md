@@ -1,5 +1,6 @@
+
 Hatchery Helpers are people that can be hired to work on your Pokémon Day Care to automate the [[Hatchery]].
-Many can be unlocked by fulfilling certain requirements, while others can be purchased from certain Shops.
+Unlocking Hatchery Helpers as a mechankc requires you to breed 100 eggs manually. Individul Hatchery Helpers can be unlocked by fulfilling certain requirements or be purchased from certain Shops. Further information can be found on the Hatchery Helpers detail Wiki page.
 Once hired, a Hatchery Helper will work until they are fired or you do not have the necessary funds to continue to employ them.
 
 ## Usage {#Usage}
