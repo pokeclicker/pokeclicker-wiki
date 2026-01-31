@@ -1,3 +1,4 @@
+
 ###### Currency: [[File:money.svg|18px]] [[Pokédollars]] • [[File:dungeonToken.svg|18px]] [[Dungeon Tokens]] • [[File:questPoint.svg|18px]] **Quest Points** • [[File:farmPoint.svg|18px]] [[Farm Points]] • [[File:diamond.svg|18px]]  [[Diamonds]] • [[File:battlePoint.svg|18px]] [[Battle Points]] {.alert .alert-secondary}
 
 #### Jump to:
@@ -227,7 +228,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Beldum.png\|25px]] | 1 | [[File:pokemon/374.png\|30px]] Beldum | 22,500 [[File:questPoint.svg\|25px]]
 
 #### Sinnoh
-Without using the Underground to mine stones and using typed eggs, 71,500 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 13,200 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 72,250 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 13,950 [[File:questPoint.svg\|25px]] are needed.
 
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -260,6 +261,12 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Combee.png\|25px]] | 1 | [[File:pokemon/415.png\|30px]] Combee | 6,750 [[File:questPoint.svg\|25px]]
 |[[File:Burmy (Plant).png\|25px]] | 1 | [[File:pokemon/412.png\|30px]] Burmy | 6,750 [[File:questPoint.svg\|25px]]
 |[[File:Cherubi.png\|25px]] | 1 | [[File:pokemon/420.png\|30px]] Cherubi | 6,750 [[File:questPoint.svg\|25px]]
+
+##### Great Marsh
+Item Name | Number Required | Necessary to Obtain | Cost
+:---: | :---: | :---: | :---:
+[[File:Safari_ticket.png\|25px]] Safari Ticket | 1 |  [[File:pokemon/451.png\|30px]] Skorupi [[File:pokemon/455.png\|30px]] Carnivine |  750 [[File:questPoint.svg\|25px]] (Entrance Fee)
+
 
 #### Unova
 Without using the Underground to mine stones and using typed eggs, 98,125 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 19,900 [[File:questPoint.svg\|25px]] are needed.
