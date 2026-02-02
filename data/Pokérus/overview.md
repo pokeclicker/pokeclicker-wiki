@@ -1,3 +1,4 @@
+
 ## Spreading Pokérus
 
 Spreading Pokérus can only occur in the [[Hatchery]].
@@ -24,7 +25,6 @@ None | **None** | Base State. Pokémon can contract Pokérus. | No | No
 [[File:Infected.png]] | **Infected** | Pokémon has contracted Pokérus, but has yet to hatch once after contracting the virus. | No | No
 [[File:Contagious.png]] | **Contagious** | Pokémon has contracted Pokérus, and is capable of spreading the virus. | **Yes** | **Yes**
 [[File:Resistant.png]] | **Resistant** | Pokémon has contracted Pokérus, and is capable of spreading the virus. Pokémon has accumulated 50 or more EVs. | **Yes** | **Yes**
-*There is a known bug that Pokémon infected via typed eggs will remain Infected upon hatching, rather than becoming Contagious. Breeding the Pokémon the usual way will cause the Pokémon to correctly become Contagious.*
 
 #### Resistant Pokémon {#resistant}
 When a Pokémon gains **50 EVs**, it becomes resistant. The number of resistant Pokémon in your party counts toward [[Click Attack]] and certain [[Achievements]]. Resistant Pokémon continue to gain EVs at the same rate, but their EV bonus will increase much slower.
