@@ -473,7 +473,7 @@ Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
 ### Chople + Babiri + Lum + Petaya
 This strategy uses [[Berries/Babiri]]'s aura to prevent mutation and [[Berries/Petaya]] for a longer uptime, and is the most efficient Egg Step setup when taking uptime into account.
 
-The free plot can be used for any other berry e.g. another [[Berries/Chople]] for more egg steps, a [[Berries/Haban]] for a longer lifespan or a [[Berries/Starf]] for a higher shiny aura.
+The free plot can be used for any other berry except [[Berries/Chople]] which would make [[Berries/Chilan]] mutations possible, e.g. a [[Berries/Haban]] for a longer lifespan or a [[Berries/Starf]] for a higher shiny aura.
 
 :::collapsed Chople + Babiri + Petaya + Lum - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
