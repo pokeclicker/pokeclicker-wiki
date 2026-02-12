@@ -10,7 +10,7 @@ Shiny is a rare [[Pokémon]] state that can randomly occur in encounters, when h
 The shiny status of Pokémon in your party **does not** affect any stats or modifiers. The number of shiny Pokémon you own contributes toward [[Click Attack]] and various [[Achievements]].
 
 There are some benefits when encountering or obtaining a **new or duplicate** shiny Pokémon:
-- Shiny Pokémon encounters have a 100% drop rate for their [[Rare Hold Item]].
+- Shiny Pokémon encounters have a 100% drop rate for their [[Rare Hold Items]].
 - Catching a shiny Pokémon provides a 5x multiplier to their [EV yield](#!Pokérus).
 - A [hatch](#!Hatchery) that results in a shiny Pokémon grants 5x attack gain.
 
