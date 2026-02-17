@@ -130,7 +130,7 @@ All planting times use the time-to-ripe remaining of the first planted berry for
 | Berry | Planting Time with No Modifier | Planting Time with Mulch or Sprayduck | Planting Time with  Mulch & Sprayduck |
 |:---:|:---:|:---:|:---:|
 | [[File:Haban.png\|32px]] [[Berries/Haban]] | `Planted First` | | |
-| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | 18:00:00 | 11:59:56 | 07:59:54 |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | 20:00:00 | 14:00:00 | 10:00:00 |
 | [[File:Yache.png\|32px]] [[Berries/Yache]] | 12:00:00 | 08:00:00 | 05:20:00 |
 | [[File:Shuca.png\|32px]] [[Berries/Shuca]] | 11:03:35 |	07:22:24 |	04:54:56 |
 | [[File:Charti.png\|32px]] [[Berries/Charti]] | 10:33:35 |	07:02:24 |	04:41:36 |
