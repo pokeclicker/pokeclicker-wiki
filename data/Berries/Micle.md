@@ -1,3 +1,4 @@
+
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
@@ -58,3 +59,33 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
 | [[File:Passho.png\|32px]] [[Berries/Passho]]  | `Planted First`       |                         |                            |
 | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]]    | 05:00:00      | 03:20:00                              | 02:13:18                              |
+
+
+The following setup has the highest mutation rate for Micle due to the x10.49 mutation aura received by the five Kebia berries. The use of Babiri is not optional because of the parasitic nature of Kebia and the risk of it overtaking Pamtre. Once Micle mutates, it will take 02:12:00 to reach taller stage (Sprayduck unequipped), at which point it can mutate into Kebia; to avoid this you should simply harvest all berries once Micle spawns.
+
+:::collapsed Edge Micle Mutation with Babiri/Kebia - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjozMSwiYWdlIjozNjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMSwiYWdlIjozNjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMSwiYWdlIjozNjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMSwiYWdlIjozNjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMSwiYWdlIjozNjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMSwiYWdlIjozNjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMSwiYWdlIjozNjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMSwiYWdlIjozNjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMSwiYWdlIjozNjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMSwiYWdlIjozNjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMSwiYWdlIjozNjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMSwiYWdlIjozNjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMSwiYWdlIjozNjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzEsImFnZSI6MzYwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MzEsImFnZSI6MzYwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQyLCJhZ2UiOjg2NDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQyLCJhZ2UiOjg2NDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQyLCJhZ2UiOjg2NDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjMxLCJhZ2UiOjM2MDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjMxLCJhZ2UiOjM2MDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQyLCJhZ2UiOjg2NDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MiwiYWdlIjo4NjQwMCwibXVsY2giOi0xfV19fX0==
+:::
+
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | |
+
+| [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | |
+
+| [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | |
+
+| [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] |  [[File:Babiri.png\|32px]] [[Berries/Babiri]]  | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | |
+
+| [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]] | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | {.mutation} | [[File:Kebia.png\|32px]] [[Berries/Kebia]] | |
+:::
+
+**Timing Table**
+All planting times refer to the "Until Ripe" value of the first Berry planted.
+| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
+| :---:                                         | :---:         | :---:                                 | :---:                                 |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]]  | `Planted First`       |                         |                            |
+| [[File:Pamtre.png\|32px]] [[Berries/Pamtre]]    | 05:00:00      | 03:20:00                              | 02:13:18                              |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]]    | 00:03:20      | 00:02:13                              | 00:01:28                              |
