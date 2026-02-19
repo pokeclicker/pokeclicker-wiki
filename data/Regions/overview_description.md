@@ -1,3 +1,4 @@
+
 #### Jump to:
 * [Region Mechanics](#mechanics)
     * [Docks (Moving from Region to Region)](#docks)
@@ -74,7 +75,6 @@ There are currently 8 available regions.
 #### [[Regions/Unova]]
 * **Notable Locations:**
     * Dock: [[Towns/Castelia City]]
-    * Safari: [[Towns/Great Marsh]]
     * Berry Master: [[Towns/Driftveil City]]
     * Dream Orbs: [[Towns/Black and White Park]]
 #### [[Regions/Kalos]]
