@@ -127,7 +127,7 @@ The table below shows how many Pokémon are required in order to resist these Po
 | Modifiers | Required Purchases/Trades/Evolutions/Etc. Needed to Resist |
 | :--- | :--- | :--- |
 | No Modifiers |  50 |
-| [[File:Power_Bracer.png\|24px]] Power Bracer + 21 Boosted [[File:Rowap.png\|24px]] Rowaps |  11 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + 20 Boosted [[File:Rowap.png\|24px]] Rowaps |  11 |
 | [[File:Power_Bracer.png\|24px]] Power Bracer + 20 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute (38.60% AB or more) | 10 |
 | [[File:Power_Bracer.png\|24px]] Power Bracer + 21 Boosted [[File:Rowap.png\|24px]] Rowaps | 10 |
 | [[File:Power_Bracer.png\|24px]] Power Bracer + 20 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute (609.56% AB or more) | 9 |
