@@ -69,6 +69,7 @@ Lum Berries can be obtained from the following dungeons.
 |[[File:pokemon/251.01.png\|32px]] [[Pokemon/Flowering Celebi]] | Dungeon Chest | [[Dungeons/Glimwood Tangle]]
 |[[File:pokemon/251.02.png\|32px]] [[Pokemon/Grinch Celebi]] | Dungeon Boss | [[Dungeons/Ilex Forest]]*
 |[[File:pokemon/492.png\|32px]] [[Pokemon/Shaymin (Land)]] | Dungeon Boss | [[Dungeons/Flower Paradise]]
+|[[File:pokemon/492.01.png\|32px]] [[Pokemon/Shaymin (Sky)]] | Dungeon Boss | [[Dungeons/Flower Paradise]]
 *Note: Grinch Celebi only appears during the event [[Events/Merry Christmas!]]*
 Base chance of dropping: 1 in 512 (Routes)
 Base chance of dropping: 1 in 85.3 (Dungeon Boss)
