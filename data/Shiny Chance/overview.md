@@ -13,6 +13,7 @@ There are some benefits when encountering or obtaining a **new or duplicate** sh
 - Shiny Pokémon encounters have a 100% drop rate for their [[Rare Hold Items]].
 - Catching a shiny Pokémon provides a 5x multiplier to their [EV yield](#!Pokérus).
 - A [hatch](#!Hatchery) that results in a shiny Pokémon grants 5x attack gain.
+- Gym/Trainer shiny encounters will level up the Shiny Charm.
 
 
 
@@ -22,7 +23,7 @@ There are some benefits when encountering or obtaining a **new or duplicate** sh
 Location/Method | Base Chance | Chance (Lv 5 Shiny Charm) | Chance (Lv 5 Shiny Charm, optimal shiny odds farm)
 :--- | :--- | :--- | :---
 Route Encounter | 1/8192 | 1/4096 | 1/1611
-Gym/Trainer Encounter (Non catchable) | 1/8192 | 1/4096 | 1/1611
+Gym/Trainer Encounter | 1/8192 | 1/4096 | 1/1611
 [Dungeon](#!Dungeons) Encounter | 1/4096 | 1/2048 | 1/805
 Evolution Item/Level Up Evolutions | 1/2048 | 1/1024 | 1/403
 Safari Zone Encounter  | 1/1024 | 1/512 | 1/201
