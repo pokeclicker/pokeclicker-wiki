@@ -516,6 +516,25 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 | [[File:Chople.png\|32px]]  [[Berries/Chople]] | 09:00:00 (using Petaya), 10:00:00 (no Petaya) | 06:00:00 (using Petaya), 06:40:00 (no Petaya) | 04:00:00 (using Petaya), 04:26:40 (no Petaya) |
 [[File:Lum.png\|32px]] [[Berries/Lum]] | 11:59:59 (using Petaya), 01:00:00 (no Petaya) | 07:59:59 (using Petaya), 00:40:00 (no Petaya)  | 5:19:59 (using Petaya), 00:26:40 (no Petaya) |
 
+### TRUE Infinite Chople Farm
+In order for this to be Infinite, it requires the use of Alex set on Replant of the Petayas, which are planted whith at least a 24 hour offset so that one Petaya is always up, while the Colbur prevents any Kasibs from spawning upon wither. Charlie on Farm Wanders makes the entire setup Farm Points Positive, making it Truly Infinite.
+
+:::collapsed True Infinite Farm - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1MSwiYWdlIjoxMjk2MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NTEsImFnZSI6MTI5NjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUxLCJhZ2UiOjEyOTYwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NCwiYWdlIjo0MzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6MTksImFnZSI6NDMyMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjQsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjUwLCJhZ2UiOjU0MDAwLCJtdWxjaCI6LTF9XX19fQ==`
+:::
+***Egg Step Bonus: 2.575x***
+
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | |
+| [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Babiri.png\|32px]] [[Berries/Babiri]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | |
+| [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Chople.png\|32px]] [[Berries/Chople]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | [[File:Colbur.png\|32px]] [[Berries/Colbur]] | |
+:::
+
 ---- {#shiny}
 
 ###### [Back to Top](#) {.text-end}
@@ -660,6 +679,9 @@ Berry | Planting Time with No Modifier | Planting Time with Mulch/Sprayduck | Pl
 [[File:Starf.png\|32px]] [[Berries/Starf]] | `Planted First` | - | -
 [[File:Petaya.png\|32px]] [[Berries/Petaya]] | `Planted First` | - | -
 [[File:Lum.png\|32px]] [[Berries/Lum]] | 11:59:59 (using Petaya), 01:00:00 (no Petaya) | 07:59:59 (using Petaya), 00:40:00 (no Petaya)  | 5:19:59 (using Petaya), 00:26:40 (no Petaya) |
+
+
+
 
 
 ---- {#evs}
