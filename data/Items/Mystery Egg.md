@@ -1,5 +1,6 @@
+
 ### Hatches Into
-All the Pokémon included in the other typed Eggs, plus some extra ones:
+All the Pokémon included in the other typed [[Eggs]], plus some extra ones:
 Region | Pokemon
 :--- | :---
 Kanto | [[Pokemon/Gastly]], [[Pokemon/Jigglypuff]], [[Pokemon/Geodude]], [[Pokemon/Doduo]]
