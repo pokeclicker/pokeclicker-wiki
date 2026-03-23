@@ -7,6 +7,7 @@
                 <th>Sub Region</th>
                 <th>Town Name</th>
                 <th>Requirement</th>
+                <th>Dialog</th>
             </tr>
         </thead>
         <tbody>
@@ -18,6 +19,7 @@
                 <td data-bind="text: SubRegions.list[$parent.region][$parent.subRegion ?? 0].name, attr: { 'data-order': $parent.subRegion ?? 0 }"></td>
                 <td data-bind="text: $parent.name"></td>
                 <td data-bind="html: Wiki.md.renderInline(Wiki.gameHelper.requirementHints(options.requirement).join('\n'))"></td>
+                <td data-bind="html: Wiki.md.renderInline(dialog.join('\n').replace(/(<([^>]+)>)/gi, '').replace('{ROUTE_NAME}', 'BOOSTED ROUTE'))"></td>
             </tr>
             <!-- /ko -->
             <!-- /ko -->
