@@ -1,3 +1,4 @@
+
 Shadow Pokémon are Pokémon with a shadowy aura [[File:status/shadow.svg|24px]] that can be encountered in Orre, a subregion in [[Regions/Hoenn]]. They can only be encountered as part of a trainer battle in [[Dungeons]] and never as a wild encounter.
 
 Shadow is a state, like [Shiny](#!Shiny_Chance). A total of **131** Pokémon can be obtained in Shadow form.
@@ -10,7 +11,7 @@ Shadow Pokémon can be **purified** at [[Towns/Relic Stone]] in Orre once enough
 - Catching Shadow Pokémon yield 2x [EVs](#!Pokérus#EV).
 
 #### Flow
-**1 Flow** is gained for every **1,000 experience points** gained by Shadow and Purified Pokémon. Flow is gained regardless of the level of the Shadow or Purified Pokémon, even if they are at level 100. Shadow Pokémon can equip special Held Items that boost experience gain: [[Items/Joy Scent]], [[Items/Vivid Scent]], and [[Items/Excite Scent]].
+**1 Flow** is gained for every **1,000 experience points** gained by Shadow and Purified Pokémon. Flow is gained regardless of the level of the Shadow or Purified Pokémon, even if they are at level 100. Shadow/Purified Pokémon can equip special Held Items that boost experience gain: [[Items/Joy Scent]], [[Items/Vivid Scent]], and [[Items/Excite Scent]].
 
 The Flow needed to purify a Shadow Pokémon **increases with each purification** and follows this formula:
 
@@ -151,5 +152,5 @@ N° of Purification | Flow Required
 130 | 600,719,837
 131 | 663,875,538
 :::
-&nbsp;
+
 ## List of Shadow Pokémon
