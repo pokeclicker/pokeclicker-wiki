@@ -77811,9 +77811,9 @@ themes.options.push(new SettingOption('Quartz', 'quartz'));
 themes.options.push(new SettingOption('Vapor', 'vapor'));
 themes.options.push(new SettingOption('Zephyr', 'zephyr'));
 
-/*
+
 const now = new Date();
-if (now.getMonth() == 3 && now.getDate() == 1) {
+/*if (now.getMonth() == 3 && now.getDate() == 1) {
   themes.options.forEach((t) => {
   t.value = "sketchy";
   });
