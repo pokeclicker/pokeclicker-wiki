@@ -9,6 +9,7 @@ themes.options.push(new SettingOption('Quartz', 'quartz'));
 themes.options.push(new SettingOption('Vapor', 'vapor'));
 themes.options.push(new SettingOption('Zephyr', 'zephyr'));
 
+/*
 const now = new Date();
 if (now.getMonth() == 3 && now.getDate() == 1) {
   themes.options.forEach((t) => {
@@ -18,6 +19,7 @@ if (now.getMonth() == 3 && now.getDate() == 1) {
   themes.options.push(new SettingOption("Definitely Not Sketchy", "sketchy"));
 }
 themes.options.sort((a, b) => (a.text).localeCompare(b.text));
+*/
 
 // Suppress game notifications
 Notifier.notify = () => {};
