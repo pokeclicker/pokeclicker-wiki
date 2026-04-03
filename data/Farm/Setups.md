@@ -517,7 +517,7 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 [[File:Lum.png\|32px]] [[Berries/Lum]] | 11:59:59 (using Petaya), 01:00:00 (no Petaya) | 07:59:59 (using Petaya), 00:40:00 (no Petaya)  | 5:19:59 (using Petaya), 00:26:40 (no Petaya) |
 
 ### TRUE Infinite Chople Farm
-In order for this to be Infinite, it requires the use of Alex set on Replant of the Petayas, which are planted whith at least a 24 hour offset so that one Petaya is always up, while the Colbur prevents any Kasibs from spawning upon wither. Charlie on Farm Wanders makes the entire setup Farm Points Positive, making it Truly Infinite.
+In order for this to be Infinite, it requires the use of [[Farm Hands/Alex]] set on Replant of the Petayas, which are planted with at least a 24 hour offset so that one Petaya is always up, while the Colbur prevents any Kasibs from spawning upon wither. [[Farm Hands/Charlie]] on Farm Wanderers makes the setup gain Farm Points, making it Truly Infinite.
 
 :::collapsed True Infinite Farm - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
