@@ -1,268 +1,280 @@
 <div>
     <!-- ko with: dungeonList[Wiki.pageName()] -->
-        <div class="float-lg-end col-lg-4 m-2">
-            <table class="table table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <th class="text-center" colspan="2" data-bind="text: Wiki.pageName()"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- ko with: Object.values(TownList).find(town => town.dungeon === $data) -->
-                        <!-- ko let: { image: ko.observable('map') } -->
-                        <tr>
-                            <td class="text-center p-0" colspan="2">
-                                <div class="btn-group btn-group-sm w-100" role="group">
-                                    <input type="radio" class="btn-check" name="image" id="btnmap" autocomplete="off" checked>
-                                    <label class="btn btn-primary rounded-0" for="btnmap" data-bind="click: () => { image('map'); return true; },
+    
+    <div class="float-lg-end col-lg-4 m-2">
+        <div class="d-flex justify-content-between mb-1" data-bind="using: Object.values(dungeonList).filter(d => GameConstants.getDungeonRegion(d.name) <= GameConstants.MAX_AVAILABLE_REGION)">
+            <div data-bind="with: $data[$data.findIndex(dungeonObject => dungeonObject.name === Wiki.pageName())-1]">
+                <button class="btn btn-link btn-sm" type="button" style="text-decoration: none;"
+                        data-bind="text: `← ${$data.name}`, click: () => Wiki.gotoPage('Dungeons', $data.name)"></button>
+            </div>
+            <div data-bind="with: $data[$data.findIndex(dungeonObject => dungeonObject.name === Wiki.pageName())+1]">
+                <button class="btn btn-link btn-sm" type="button" style="text-decoration: none;"
+                        data-bind="text: `${$data.name}  →`, click: () => Wiki.gotoPage('Dungeons', $data.name)"></button>
+            </div>
+        </div>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th class="text-center" colspan="2" data-bind="text: Wiki.pageName()"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- ko with: Object.values(TownList).find(town => town.dungeon === $data) -->
+                <!-- ko let: { image: ko.observable('map') } -->
+                <tr>
+                    <td class="text-center p-0" colspan="2">
+                        <div class="btn-group btn-group-sm w-100" role="group">
+                            <input type="radio" class="btn-check" name="image" id="btnmap" autocomplete="off" checked>
+                            <label class="btn btn-primary rounded-0" for="btnmap" data-bind="click: () => { image('map'); return true; },
                                         tooltip: {
                                             title: 'Dungeon location marked on the below map with a pink overlay.',
                                             trigger: 'hover',
                                             placement: 'top',
                                         }">Map Location</label>
-                                    <input type="radio" class="btn-check" name="image" id="btndungeon" autocomplete="off">
-                                    <label class="btn btn-primary rounded-0" for="btndungeon" data-bind="click: () => { image('dungeon'); return true; }">Dungeon</label>
-                                </div>
-                            </td>
-                        </tr>
-                        <!-- ko if: image() == 'map' -->
-                            <!-- ko with: Wiki.gameHelper.getLocationOverlaySVG(Wiki.pageName(), $data.region, $data.subRegion), as: 'filePath' -->
-                            <tr data-bind="with: Wiki.gameHelper.overlaySVG(), as: 'overlaySVG'">
-                                <td colspan="2">
-                                    <div id="map-container">
-                                        <div id="map-overlay" data-bind="html: overlaySVG"></div>
-                                        <img class="w-100" width="1600" data-bind="attr: {
+                            <input type="radio" class="btn-check" name="image" id="btndungeon" autocomplete="off">
+                            <label class="btn btn-primary rounded-0" for="btndungeon" data-bind="click: () => { image('dungeon'); return true; }">Dungeon</label>
+                        </div>
+                    </td>
+                </tr>
+                <!-- ko if: image() == 'map' -->
+                <!-- ko with: Wiki.gameHelper.getLocationOverlaySVG(Wiki.pageName(), $data.region, $data.subRegion), as: 'filePath' -->
+                <tr data-bind="with: Wiki.gameHelper.overlaySVG(), as: 'overlaySVG'">
+                    <td colspan="2">
+                        <div id="map-container">
+                            <div id="map-overlay" data-bind="html: overlaySVG"></div>
+                            <img class="w-100" width="1600" data-bind="attr: {
                                             src:`images/${filePath}.png`
                                         }" />
-                                    </div>
-                                </td>
-                            </tr>
+                        </div>
+                    </td>
+                </tr>
+                <!-- /ko -->
+                <!-- /ko -->
+                <!-- ko if: image() == 'dungeon' -->
+                <tr>
+                    <td colspan="2">
+                        <img class="w-100" data-bind="attr: {src: `images/${Wiki.pageName()}.png`}" />
+                    </td>
+                </tr>
+                <!-- /ko -->
+                <!-- /ko -->
+                <tr>
+                    <td>Region</td>
+                    <td>
+                        <a href="#!" data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region]), attr: { href: `#!Regions/${GameConstants.camelCaseToString(GameConstants.Region[$data.region])}` }"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sub Region</td>
+                    <td data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name"></td>
+                </tr>
+                <tr>
+                    <td>Environment(s)</td>
+                    <td data-bind="foreach: MapHelper.getEnvironments($data.name, $data.region)">
+                        <a href="#!" data-bind="text: `${GameConstants.camelCaseToString($data)}`, attr: { href: `#!Environments/${GameConstants.camelCaseToString($data)}` }"></a><br />
+                    </td>
+                </tr>
+                <!-- /ko -->
+                <tr>
+                    <td>Cost</td>
+                    <td>
+                        <knockout data-bind="text: $data.tokenCost.toLocaleString()"></knockout>
+                        <img src="./images/dungeonToken.svg" width="18px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Base HP</td>
+                    <td data-bind="text: $data.baseHealth.toLocaleString()"></td>
+                </tr>
+                <!-- ko with: Object.values(TownList).filter(town => town.content.some(content => content instanceof MoveToDungeon && content.dungeon === $data)) -->
+                <tr data-bind="if: $data.length > 0">
+                    <td>Accessed From</td>
+                    <td data-bind="foreach: $data">
+                        <a href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${$data.name}` }"></a>
+                    </td>
+                </tr>
+                <!-- /ko -->
+            </tbody>
+        </table>
+    </div>
+    <p>Town: <a class="badge text-bg-secondary" href="#!" data-bind="text: `${$data.name} (Town)`, attr: { href: `#!Towns/${$data.name}` }"></a></p>
+    <!-- ko if: typeof $data.optionalParameters?.dungeonRegionalDifficulty === 'number' -->
+    <div>
+        <h3>Regional Difficulty:</h3>
+        <p>
+            This dungeon's difficulty is not based on its region, but instead it's based on:
+            <b><span data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.optionalParameters.dungeonRegionalDifficulty])"></span></b>.
+            This is relevant for things like loot debuff, HP, experience, and dungeon size.
+        </p>
+    </div>
+    <!-- /ko -->
+    <br />
+    <div>
+        <h3>Encounters</h3>
+        <!-- ko foreach: $data.enemyList.filter(e => !e.name) -->
+        <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == ($data.pokemon || $data)).id + '.png'}" />
+        <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.pokemon || $data, attr: { href: `#!Pokemon/${$data.pokemon || $data}` }"></a>
+        <!-- /ko -->
+        <div class="accordion mt-1" data-bind="visible: $data.enemyList.some(e => e.name)">
+            <div class="accordion-item">
+                <h4 class="accordion-header">
+                    <button data-bs-target="#sectionCollapse" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
+                        Trainers
+                    </button>
+                </h4>
+                <div id="sectionCollapse" class="accordion-collapse collapse">
+                    <div class="accordion-body" data-bind="foreach: $data.enemyList.filter((t) => t.team)">
+                        <span class="badge text-bg-secondary">
+                            <span data-bind="text: $data.name + `${$data.options ? ($data.options.requirement ? ' 🔒' : '') : ''}`,
+                                  tooltip: {
+                                  title: $data.options?.requirement ? Wiki.gameHelper.requirementHints($data.options.requirement, false).join('<br/>') : '',
+                                    html: true,
+                                    trigger: 'hover'
+                                }"></span>
+                            <!-- ko with: $data.team.map((p) => `${p.name}${p.shadow ? '<img width="15px" class="ms-1" src="./pokeclicker/docs/assets/images/status/shadow.svg" title="Shadow"/>' : ''}`).join(', ') -->
+                            <span data-bind="html: `( ${$data} )`"></span>
                             <!-- /ko -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <!-- ko if: Wiki.dungeons.getDungeonShadowPokemon($data).length -->
+    <div>
+        <h4>Shadow Pokémon</h4>
+        <!-- ko foreach: [...new Set(Wiki.dungeons.getDungeonShadowPokemon($data).map(p => p.pokemon))] -->
+        <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data).id + '.png'}" />
+        <a class="badge text-bg-secondary" href="#!" data-bind="text: $data, attr: { href: `#!Pokemon/${$data}` }"></a>
+        <!-- /ko -->
+    </div>
+    <br />
+    <!-- /ko -->
+    <div>
+        <h3>Bosses</h3>
+        <div class="table-responsive">
+            <table class="table table-bordered table-sm no-data-tables">
+                <thead>
+                    <tr class="text-center">
+                        <th>Pokémon / Trainer</th>
+                        <th>Team / Base HP</th>
+                        <th>Weight</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- ko foreach: $data.bossList -->
+                    <tr>
+                        <!-- ko if: $data.baseHealth -->
+                        <td class="align-middle text-center">
+                            <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data.name).id + '.png'}" />
+                            <a href="#!" class="text-decoration-none" data-bind="text:
+                               $data.name + `${$data.options ? ($data.options.requirement ? ' 🔒' : '' ) : '' }`,
+                               attr: { href: `#!Pokemon /${$data.name}` },
+                               tooltip: {
+                               title: $data.options?.requirement ? Wiki.gameHelper.requirementHints($data.options.requirement, false).join('<br/>') : '',
+                                        html: true,
+                                        trigger: 'hover'
+                                    }"></a>
+                        </td>
+                        <td class="align-middle text-center" data-bind="text: $data.baseHealth.toLocaleString()"></td>
+                        <td class="align-middle text-center" data-bind="text: $data.options?.weight ?? 1"></td>
                         <!-- /ko -->
-                        <!-- ko if: image() == 'dungeon' -->
-                        <tr>
-                            <td colspan="2">
-                                <img class="w-100" data-bind="attr: {src: `images/${Wiki.pageName()}.png`}"/>
-                            </td>
-                        </tr>    
+                        <!-- ko ifnot: $data.baseHealth -->
+                        <td class="align-middle text-center">
+                            <!-- ko ifnot: $data.subTrainerClass -->
+                            <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/npcs/' + $data.trainerClass + '.png'}" />
+                            <!-- /ko -->
+                            <!-- ko if: $data.subTrainerClass -->
+                            <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/npcs/' + $data.trainerClass + ' ' + $data.subTrainerClass + '.png'}" />
+                            <!-- /ko -->
+                            <knockout data-bind="text: $data.name + `${$data.options ? ($data.options.requirement ? ' 🔒' : '') : ''}`,
+                                      tooltip: {
+                                      title: $data.options?.requirement ? Wiki.gameHelper.requirementHints($data.options.requirement, false).join('<br/>') : '',
+                                        html: true,
+                                        trigger: 'hover'
+                                    }"></knockout>
+                        </td>
+                        <td class="p-0 h-100">
+                            <table class="table table-sm m-0 p-0 h-100">
+                                <tbody data-bind="foreach: $data.team">
+                                    <tr data-bind="css: { 'border-top': $index() > 0 }" style="border-color: var(--bs-table-border-color) !important;">
+                                        <td class="align-middle text-center border-end border-bottom-0 w-50" style="border-color: var(--bs-table-border-color) !important;">
+                                            <img width="42px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data.name).id + '.png'}" />
+                                            <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a>
+                                            <!-- ko if: $data.shadow >= GameConstants.ShadowStatus.Shadow -->
+                                            <img width="18px" class="ms-1" src="./pokeclicker/docs/assets/images/status/shadow.svg" title="Shadow" />
+                                            <!-- /ko -->
+                                        </td>
+                                        <td class="align-middle text-center border-bottom-0 w-50" data-bind="text: $data.maxHealth.toLocaleString()"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td class="align-middle text-center" data-bind="text: $data.options.weight ?? 1"></td>
                         <!-- /ko -->
-                        <!-- /ko -->
-                    <tr>
-                        <td>Region</td>
-                        <td>
-                            <a href="#!" data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region]), attr: { href: `#!Regions/${GameConstants.camelCaseToString(GameConstants.Region[$data.region])}` }"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Sub Region</td>
-                        <td data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name"></td>
-                    </tr>
-                    <tr>
-                        <td>Environment(s)</td>
-                        <td data-bind="foreach: MapHelper.getEnvironments($data.name, $data.region)">
-                            <a href="#!" data-bind="text: `${GameConstants.camelCaseToString($data)}`, attr: { href: `#!Environments/${GameConstants.camelCaseToString($data)}` }"></a><br />
-                        </td>
-                    </tr>
-                    <!-- /ko -->
-                    <tr>
-                        <td>Cost</td>
-                        <td>
-                            <knockout data-bind="text: $data.tokenCost.toLocaleString()"></knockout>
-                            <img src="./images/dungeonToken.svg" width="18px"/> 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Base HP</td>
-                        <td data-bind="text: $data.baseHealth.toLocaleString()"></td>
-                    </tr>
-                    <!-- ko with: Object.values(TownList).filter(town => town.content.some(content => content instanceof MoveToDungeon && content.dungeon === $data)) -->
-                    <tr data-bind="if: $data.length > 0">
-                        <td>Accessed From</td>
-                        <td data-bind="foreach: $data">
-                            <a href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${$data.name}` }"></a>
-                        </td>
                     </tr>
                     <!-- /ko -->
                 </tbody>
             </table>
         </div>
-        <p>Town: <a class="badge text-bg-secondary" href="#!" data-bind="text: `${$data.name} (Town)`, attr: { href: `#!Towns/${$data.name}` }"></a></p>
-        <!-- ko if: typeof $data.optionalParameters?.dungeonRegionalDifficulty === 'number' -->
-        <div>
-            <h3>Regional Difficulty:</h3>
-            <p>This dungeon's difficulty is not based on its region, but instead it's based on:
-            <b><span data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.optionalParameters.dungeonRegionalDifficulty])"></span></b>.
-            This is relevant for things like loot debuff, HP, experience, and dungeon size.</p>
-        </div>
+    </div>
+    <br />
+    <div>
+        <h3>Possible Loot</h3>
+        <!-- ko if: Wiki.dungeons.hasLootWithRequirements($data) -->
+        <p>
+            This table assumes that all requirements are met, which isn't always possible.
+        </p>
         <!-- /ko -->
-        <br/>
-        <div>
-            <h3>Encounters</h3>
-            <!-- ko foreach: $data.enemyList.filter(e => !e.name) -->
-            <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == ($data.pokemon || $data)).id + '.png'}"/>
-            <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.pokemon || $data, attr: { href: `#!Pokemon/${$data.pokemon || $data}` }"></a>            
-            <!-- /ko -->
-            <div class="accordion mt-1" data-bind="visible: $data.enemyList.some(e => e.name)">
-                <div class="accordion-item">
-                    <h4 class="accordion-header">
-                        <button data-bs-target="#sectionCollapse" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            Trainers
-                        </button>
-                    </h4>
-                    <div id="sectionCollapse" class="accordion-collapse collapse">
-                        <div class="accordion-body" data-bind="foreach: $data.enemyList.filter((t) => t.team)">
-                            <span class="badge text-bg-secondary">
-                                <span data-bind="text: $data.name + `${$data.options ? ($data.options.requirement ? ' 🔒' : '') : ''}`,
-                                tooltip: {
-                                    title: $data.options?.requirement ? Wiki.gameHelper.requirementHints($data.options.requirement, false).join('<br/>') : '',
-                                    html: true,
-                                    trigger: 'hover'
-                                }"></span>
-                                <!-- ko with: $data.team.map((p) => `${p.name}${p.shadow ? '<img width="15px" class="ms-1" src="./pokeclicker/docs/assets/images/status/shadow.svg" title="Shadow"/>' : ''}`).join(', ') -->
-                                <span data-bind="html: `( ${$data} )`"></span>
-                                <!-- /ko -->
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br/>
-        <!-- ko if: Wiki.dungeons.getDungeonShadowPokemon($data).length -->
-        <div>
-            <h4>Shadow Pokémon</h4>
-            <!-- ko foreach: [...new Set(Wiki.dungeons.getDungeonShadowPokemon($data).map(p => p.pokemon))] -->
-            <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data).id + '.png'}"/>
-            <a class="badge text-bg-secondary" href="#!" data-bind="text: $data, attr: { href: `#!Pokemon/${$data}` }"></a>
-            <!-- /ko -->
-        </div>
-        <br/>
-        <!-- /ko -->
-        <div>
-            <h3>Bosses</h3>
-            <div class="table-responsive">
-                <table class="table table-bordered table-sm no-data-tables">
-                    <thead>
-                        <tr class="text-center">
-                            <th>Pokémon / Trainer</th>
-                            <th>Team / Base HP</th>
-                            <th>Weight</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- ko foreach: $data.bossList -->
-                        <tr>
-                            <!-- ko if: $data.baseHealth -->
-                            <td class="align-middle text-center">
-                                <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data.name).id + '.png'}"/>
-                                <a href="#!" class="text-decoration-none" data-bind="text: 
-                                    $data.name + `${$data.options ? ($data.options.requirement ? ' 🔒' : '') : ''}`, 
-                                    attr: { href: `#!Pokemon/${$data.name}` }, 
-                                    tooltip: {
-                                        title: $data.options?.requirement ? Wiki.gameHelper.requirementHints($data.options.requirement, false).join('<br/>') : '',
-                                        html: true,
-                                        trigger: 'hover'
-                                    }"></a>
-                            </td>
-                            <td class="align-middle text-center" data-bind="text: $data.baseHealth.toLocaleString()"></td>
-                            <td class="align-middle text-center" data-bind="text: $data.options?.weight ?? 1"></td>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Weight</th>
+                        <th style="text-align: center" data-bind="attr: { colspan: Wiki.dungeons.getTableClearCounts($data).length }">Chance</th>
+                        <!-- ko if: Wiki.dungeons.hasLootWithRequirements($data) -->
+                        <th>Requirement</th>
+                        <!-- /ko -->
+                    </tr>
+                    <tr>
+                        <th colspan="2"></th>
+                        <!-- ko foreach: Wiki.dungeons.getTableClearCounts($data) -->
+                        <th data-bind="text: $data.header"></th>
+                        <!-- /ko -->
+                        <!-- ko if: Wiki.dungeons.hasLootWithRequirements($data) -->
+                        <th></th>
+                        <!-- /ko -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- ko foreach: Wiki.dungeons.getDungeonLoot($data) -->
+                    <tr>
+                        <td style="font-weight: bold; text-transform: capitalize; text-align: center" data-bind="text: $data.tier, attr: { colspan: Wiki.dungeons.getTableClearCounts($parent).length + 2 + (Wiki.dungeons.hasLootWithRequirements($parent) ? 1 : 0) }"></td>
+                    </tr>
+                    <!-- ko foreach: $data.items -->
+                    <tr class="align-middle">
+                        <td class="text-nowrap">
+                            <!-- ko if: $data.image -->
+                            <img class="table-image" data-bind="attr: { src: `./pokeclicker/docs/${$data.image}`, alt: `Icon of ${$data.type === 'pokemon' ? 'Pokémon' : $data.type} ${$data.item}` }" />
                             <!-- /ko -->
+                            <a class="text-decoration-none" href="#!" data-bind="text: $data.item, attr: { href: `#!${Wiki.dungeons.itemTypeCategories[$data.type]}/${$data.item}` }"></a>
+                        </td>
+                        <td data-bind="text: $data.weight ?? 'N/A'"></td>
+                        <!-- ko foreach: $data.chances -->
+                        <td data-bind="text: typeof $data.chance === 'number' ? ($data.chance >= 0.0001 ? $data.chance.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }) : ('<' + 0.0001.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }))) : ($data.chance ?? '-')"></td>
+                        <!-- /ko -->
+                        <!-- ko if: Wiki.dungeons.hasLootWithRequirements($parents[1]) -->
+                        <td data-bind="text: $data.requirement ?? '-'"></td>
+                        <!-- /ko -->
+                    </tr>
+                    <!-- /ko -->
+                    <!-- /ko -->
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-                            <!-- ko ifnot: $data.baseHealth -->
-                            <td class="align-middle text-center">
-                                <!-- ko ifnot: $data.subTrainerClass -->
-                                <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/npcs/' + $data.trainerClass + '.png'}"/>
-                                <!-- /ko -->
-                                <!-- ko if: $data.subTrainerClass -->
-                                <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/npcs/' + $data.trainerClass + ' ' + $data.subTrainerClass + '.png'}"/>
-                                <!-- /ko -->
-                                <knockout data-bind="text: $data.name + `${$data.options ? ($data.options.requirement ? ' 🔒' : '') : ''}`, 
-                                    tooltip: {
-                                        title: $data.options?.requirement ? Wiki.gameHelper.requirementHints($data.options.requirement, false).join('<br/>') : '',
-                                        html: true,
-                                        trigger: 'hover'
-                                    }"></knockout>
-                            </td>
-                            <td class="p-0 h-100">
-                                <table class="table table-sm m-0 p-0 h-100">
-                                    <tbody data-bind="foreach: $data.team">
-                                        <tr data-bind="css: { 'border-top': $index() > 0 }" style="border-color: var(--bs-table-border-color) !important;">
-                                            <td class="align-middle text-center border-end border-bottom-0 w-50" style="border-color: var(--bs-table-border-color) !important;">
-                                                <img width="42px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data.name).id + '.png'}"/>
-                                                <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a>
-                                                <!-- ko if: $data.shadow >= GameConstants.ShadowStatus.Shadow -->
-                                                <img width="18px" class="ms-1" src="./pokeclicker/docs/assets/images/status/shadow.svg" title="Shadow"/>
-                                                <!-- /ko -->
-                                            </td>
-                                            <td class="align-middle text-center border-bottom-0 w-50" data-bind="text: $data.maxHealth.toLocaleString()"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td class="align-middle text-center" data-bind="text: $data.options.weight ?? 1"></td>
-                            <!-- /ko -->
-                        </tr>
-                        <!-- /ko -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <br/>
-        <div>
-            <h3>Possible Loot</h3>
-            <!-- ko if: Wiki.dungeons.hasLootWithRequirements($data) -->
-            <p>
-                This table assumes that all requirements are met, which isn't always possible.
-            </p>
-            <!-- /ko -->
-            <div class="table-responsive">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Item</th>
-                            <th>Weight</th>
-                            <th style="text-align: center" data-bind="attr: { colspan: Wiki.dungeons.getTableClearCounts($data).length }">Chance</th>
-                            <!-- ko if: Wiki.dungeons.hasLootWithRequirements($data) -->
-                            <th>Requirement</th>
-                            <!-- /ko -->
-                        </tr>
-                        <tr>
-                            <th colspan="2"></th>
-                            <!-- ko foreach: Wiki.dungeons.getTableClearCounts($data) -->
-                                <th data-bind="text: $data.header"></th>
-                            <!-- /ko -->
-                            <!-- ko if: Wiki.dungeons.hasLootWithRequirements($data) -->
-                            <th></th>
-                            <!-- /ko -->
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- ko foreach: Wiki.dungeons.getDungeonLoot($data) -->
-                            <tr>
-                                <td style="font-weight: bold; text-transform: capitalize; text-align: center" data-bind="text: $data.tier, attr: { colspan: Wiki.dungeons.getTableClearCounts($parent).length + 2 + (Wiki.dungeons.hasLootWithRequirements($parent) ? 1 : 0) }"></td>
-                            </tr>
-                            <!-- ko foreach: $data.items -->
-                                <tr class="align-middle">
-                                    <td class="text-nowrap">
-                                        <!-- ko if: $data.image -->
-                                        <img class="table-image" data-bind="attr: { src: `./pokeclicker/docs/${$data.image}`, alt: `Icon of ${$data.type === 'pokemon' ? 'Pokémon' : $data.type} ${$data.item}` }"/>
-                                        <!-- /ko -->
-                                        <a class="text-decoration-none" href="#!" data-bind="text: $data.item, attr: { href: `#!${Wiki.dungeons.itemTypeCategories[$data.type]}/${$data.item}` }"></a>
-                                    </td>
-                                    <td data-bind="text: $data.weight ?? 'N/A'"></td>
-                                    <!-- ko foreach: $data.chances -->
-                                    <td data-bind="text: typeof $data.chance === 'number' ? ($data.chance >= 0.0001 ? $data.chance.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }) : ('<' + 0.0001.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }))) : ($data.chance ?? '-')"></td>
-                                    <!-- /ko -->
-                                    <!-- ko if: Wiki.dungeons.hasLootWithRequirements($parents[1]) -->
-                                    <td data-bind="text: $data.requirement ?? '-'"></td>
-                                    <!-- /ko -->
-                                </tr>
-                            <!-- /ko -->
-                        <!-- /ko -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        
     <!-- /ko -->
 </div>
