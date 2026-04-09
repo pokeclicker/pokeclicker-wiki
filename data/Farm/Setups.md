@@ -797,10 +797,15 @@ There are 2 plots where the player can plant whatever they want. In this example
 
 Purple spots are where the player is meant to harvest the berry and replace with more Cheri. Note that if a Colbur overtakes a Cheri at a stage different from Berry (ripe), it's highly recommended to shovel it and plant another Cheri there. Also, it's recommended to equip [[Oak Items/Squirtbottle]] as it increases mutation chance.
 
-You can make this setup semi passive by hiring different workers to harvest and plant periodically, only requiring the occasional dig. It makes around 300k Farm Points per hour. Petaya is required.
-Harvesters: 1 or 2 with a lower Work Speed set to only harvest. Charlie + Bailey works well for this as they can cover all Colbur spots (designate 10 to Charlie and the rest to Bailey)
-Planter: Set to only plant Cheris. Jessie is the best for this as she is the only one whose Work Speed can sync up to both Charlie and Bailey.
-Make sure to hire the harvesters first to put their timer just ahead of Jessies.
+
+You can make this setup semi passive by hiring Farm Hands to harvest and plant periodically, only requiring the occasional dig. It makes around 300k Farm Points per hour. [[Berries/Petaya]] is required.
+
+Harvesters: 1 or 2 with a lower Work Speed set to only harvest. Charlie + Bailey works well for this as they can cover all [[Berries/Colbur]] spots (designate 10 to Charlie and the rest to Bailey). Alternatively Riley or Kerry at 0 energy essentially have a 5/7 minute Work Speed, but this requires waiting for 0 energy or spending 280k/95k farm points firing and hiring (while performing an action each time, can be done by planting Cheris in increments and timing the fire/hire).
+
+Planter: Set to only plant Cheris. Jessie is usually the best for this as the 1 minute work speed can easily sync up every Harvester cycle.
+
+Make sure to time the hiring so that the Planter work cycle always ticks a few seconds after the Harvesters.
+
 
 :::collapsed Colbur Nonsense - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
