@@ -1,3 +1,4 @@
+
 The **Battle Frontier** is a location in Hoenn where your Pokémon fight endless teams of three randomly generated Pokémon. There is a 30 second time limit for each stage - if you do not defeat the three Pokémon within the time limit you will be awarded Pokédollars and Battle Points. *(you won't be awarded if you quit)*
 Items such as XAttack are permitted; however, you **cannot** Click to damage Pokémon in the Battle Frontier and the time flute **does not** have any effect.
 
@@ -14,7 +15,7 @@ As described above, Pokémon Attack speed is doubled on cleared stages in the Ba
 
 Egg Steps = `Stage Number ^ 0.5`
 
-The combination of these two features in particular can lead to extremely efficient breeding in the Battle Frontier that rivals (and often surpasses) many other high efficiency breeding locations currently in the game.
+The combination of these two features in particular can lead to extremely efficient breeding in the Battle Frontier that rivals (and often surpasses) many other high efficiency breeding locations currently in the game. For pure egg step efficiency, you should reset as soon as you aren't 1 shotting.
 
 ### Gems
 
