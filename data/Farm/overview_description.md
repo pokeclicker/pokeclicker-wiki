@@ -1,3 +1,4 @@
+
 #### Jump to:
 * [Growing Berries](#growing)
 * [Farm Plots](#plots)
@@ -15,6 +16,8 @@
 In the Farm, you can grow different types of [[Berries]], which can be [traded](#!Berries#trades) for useful items and unique Pokémon and earn you [[Farm Points]] [[File:farmPoint.svg|25px]]. Berry plants also attract [[Wandering Pokémon]], create helpful [Auras](#!Berries/#aura), and more.
 
 The Farm is unlocked after reaching [[Routes/Kanto Route 11]] and obtaining the [Wailmer Pail](#!Key_Items).
+
+The default hotkey to open the Farm interface is **F**.
 
 ----
 
