@@ -1,3 +1,4 @@
+
 #### Jump to:
 * [Hatchery Basics](#basics)
     * [How to Use](#howto)
@@ -17,6 +18,8 @@
 In the Hatchery, you can hatch [[Eggs]] and breed [[Pokémon]] that have reached level 100. Breeding is the primary way of increasing a Pokémon's attack stat.
 
 The Hatchery is unlocked upon clearing [[Routes/Kanto Route 3]].
+
+The default hotkey to open the Hatchery interface is **H**.
 
 ----
 
