@@ -12,7 +12,7 @@ Quest Points are green currency earned by completing regular Quests in the Quest
 ## Quests {#quests}
 *For multi-step story quests, see [[Quest Lines]]. Quest Lines do not award Quest Points.*
 
-The quest module displays 10 quests that you can work toward. Completing all the quests on the list awards bonus Quest Points. You can work on multiple quests at the same time, limited by your quest slots. You gain additional quest slots at Quest Level 5, 10, and 15.
+The quest module displays 10 quests that you can work toward. The default hotkey to open the Quest List is **Q**. Completing all the quests on the list awards bonus Quest Points. You can work on multiple quests at the same time, limited by your quest slots. You gain additional quest slots at Quest Level 5, 10, and 15.
 
 Refreshing the quest list costs Pokédollars. You gain a free refresh daily and upon leveling your Quest Level.
 
