@@ -1,3 +1,4 @@
+
 #### Jump to:
 * [Prices](#shopprices)
 * [Types of Shops](#shoptypes)
@@ -32,7 +33,7 @@ $\text{New Reduced Price} =  \large\frac{\text{Item Price}}{1.00045}${.overflow-
 
 Sells items for currency. Stocks consumables such as Poké Balls and evolution items, in addition to other regional items.
 
-- A shortcut to an **Explorers Poké Mart** is unlocked after beating the Johto Champion that sells Poké Balls, battle items, and restores.
+- A shortcut to an **Explorers Poké Mart** is unlocked after beating the Johto Champion that sells Poké Balls, battle items, and restores. The default hotkey to open this shop is **E**.
 - Poké Marts at Pokémon Leagues sell [[Items/Master Ball]] and [[Items/Vitamins]].
 
 #### Berry Masters
