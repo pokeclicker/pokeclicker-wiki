@@ -17,37 +17,30 @@ const getEfficiency = (vitaminsUsed, baseAttack, eggCycles) => {
 }
 
 const getBestVitamins = (baseAttack, eggCycles, region) => {
-    // Add our initial starting eff here
-    let res = {
-        protein: 0,
-        calcium: 0,
-        carbos: 0,
-        eff: getEfficiency([0,0,0], baseAttack, eggCycles),
-    };
-    vitaminsUsed = {};
-    totalVitamins = (region + 1) * 5;
-    // Unlocked at Unova
-    carbos = (region >= GameConstants.Region.unova ? totalVitamins : 0) + 1;
-    while (carbos-- > 0) {
-        // Unlocked at Hoenn
-        calcium = (region >= GameConstants.Region.hoenn ? totalVitamins - carbos: 0) + 1;
-        while (calcium-- > 0) {
-            protein = (totalVitamins - (carbos + calcium)) + 1;
-            while (protein-- > 0) {
-                const eff = getEfficiency([protein, calcium, carbos], baseAttack, eggCycles);
-                // If the previous result is better than this, no point to continue
-                if (eff < res.eff) break;
-                // Push our data if same or better
-                res = {
-                    protein,
-                    calcium,
-                    carbos,
-                    eff,
-                };
-            }
+    const maxVitamins = (region + 1) * 5;
+    // Only one attack vitamin ever makes sense for a given baseAttack
+    const attackVitamin = (baseAttack > 100 && region >= GameConstants.Region.hoenn) ? GameConstants.VitaminType.Calcium : GameConstants.VitaminType.Protein;
+    const startingCarbos = (region >= GameConstants.Region.unova ? maxVitamins : 0);
+    let bestVitamins = [0, 0, startingCarbos];
+    let bestEfficiency = getEfficiency(bestVitamins, baseAttack, eggCycles);
+    for (let i = 1; i <= maxVitamins; i++) {
+        const newVitamins = [0, 0, Math.max(startingCarbos - i, 0)];
+        newVitamins[attackVitamin] = i;
+        const newEfficiency = getEfficiency(newVitamins, baseAttack, eggCycles);
+        // Using >= here prioritises the cheaper attack vitamin over carbos when there is a dead tie
+        if (newEfficiency >= bestEfficiency) {
+            bestEfficiency = newEfficiency;
+            bestVitamins = newVitamins;
         }
     }
-    return res;
+
+    return {
+        protein: bestVitamins[GameConstants.VitaminType.Protein],
+        calcium: bestVitamins[GameConstants.VitaminType.Calcium],
+        carbos: bestVitamins[GameConstants.VitaminType.Carbos],
+        eggSteps: calcEggSteps(bestVitamins, eggCycles),
+        eff: bestEfficiency,
+    }
 }
 
 const getAllAvailableShadowPokemon = () => {
