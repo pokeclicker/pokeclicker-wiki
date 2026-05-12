@@ -1,3 +1,4 @@
+
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
@@ -34,3 +35,7 @@ Durin Berries can mutate into the following Berries.
 | Used In                                       | Other Requirements |
 | :---:                                         | :---: |
 | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]]  | `N/A` |
+
+#### Obtainable Berry
+
+Can be obtained in Pokeballs from the Safari Zone past level 15.
