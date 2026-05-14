@@ -1,3 +1,4 @@
+
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
@@ -38,7 +39,7 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 | [[File:Aguav.png\|32px]] [[Berries/Aguav]]    | 00:05:50      | 00:03:47                              | 00:02:35                                 |
 
 ### Acquisition
-Hondew Berries can be obtained from the following dungeons.
+Hondew Berries can be obtained from the [[Towns/Friend Safari]] and from the following dungeon.
 
 | Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
