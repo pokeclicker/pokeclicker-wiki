@@ -35,3 +35,6 @@ Durin Berries can mutate into the following Berries.
 | Used In                                       | Other Requirements |
 | :---:                                         | :---: |
 | [[File:Jaboca.png\|32px]] [[Berries/Jaboca]]  | `N/A` |
+
+### Acquisition
+Durin Berries can be obtained from the [[Towns/Hoppy Town Fishing Pond]].
