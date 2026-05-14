@@ -1,3 +1,4 @@
+
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
@@ -43,7 +44,7 @@ Razz Berries can mutate into the following Berries.
 | [[File:Occa.png\|32px]] [[Berries/Occa]]      | [[File:Figy.png\|32px]] [[Berries/Figy]] [[File:Tamato.png\|32px]] [[Berries/Tamato]] [[File:Spelon.png\|32px]] [[Berries/Spelon]] |
 
 ### Acquisition
-Razz Berries can be obtained from the following dungeons.
+Razz Berries can be obtained from the [[Towns/Safari Zone]] and from the following dungeons.
 
 | Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
