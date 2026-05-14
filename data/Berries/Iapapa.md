@@ -1,3 +1,4 @@
+
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
@@ -37,7 +38,7 @@ Iapapa Berries can mutate into the following Berries.
 | [[File:Wacan.png\|32px]] [[Berries/Wacan]]  | [[File:Pinap.png\|32px]] [[Berries/Pinap]] [[File:Qualot.png\|32px]] [[Berries/Qualot]] [[File:Grepa.png\|32px]] [[Berries/Grepa]] |
 
 ### Acquisition
-Iapapa Berries can be obtained from the following dungeons.
+Iapapa Berries can be obtained from the [[Towns/Friend Safari]], [[Towns/Hoppy Town Fishing Pond]] and from the following dungeons.
 
 | Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
