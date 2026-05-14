@@ -1,3 +1,4 @@
+
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
@@ -45,7 +46,7 @@ Nanab Berries can mutate into the following Berries.
 | [[File:Roseli.png\|32px]] [[Berries/Roseli]]  | [[File:Mago.png\|32px]] [[Berries/Mago]] [[File:Magost.png\|32px]] [[Berries/Magost]] [[File:Watmel.png\|32px]] [[Berries/Watmel]] |
 
 ### Acquisition
-Nanab Berries can be obtained from the following dungeons.
+Nanab Berries can be obtained from the [[Towns/Safari Zone]] and from the following dungeons.
 
 | Location	                        |Region | Tier	    |
 | :---:                             | :---:     | :---:         |
