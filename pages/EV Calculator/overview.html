@@ -1,0 +1,229 @@
+
+<!-- EV CONSTANTS + KO INPUTS -->
+<!--ko let: { 
+    evYields: [
+        {
+            method: "Route Catch",
+            evs: .1,
+            excludeMods: [],
+        },{
+            method: "Dungeon (Regular) Catch",
+            evs: .3,
+            excludeMods: [],
+        },{
+            method: "Shadow Dungeon (Regular) Catch",
+            evs: .6,
+            excludeMods: [],
+        },{
+            method: "Dungeon (Mimic/Boss) Catch",
+            evs: 1,
+            excludeMods: [],
+        },{
+            method: "Shadow Dungeon (Mimic/Boss) Catch",
+            evs: 2,
+            excludeMods: [],
+        },{
+            method: "Base Wanderer Catch",
+            evs: .2,
+            excludeMods: [],
+        },{
+            method: "Color/Berry Wanderer Catch",
+            evs: 1,
+            excludeMods: [],
+        },{
+            method: "Roaming Catch",
+            evs: 5,
+            excludeMods: [],
+        },{
+            method: "Safari Catch",
+            evs: 1,
+            excludeMods: ["repeatBall"],
+        },{
+            method: "Shop/Trade/Item Evolution",
+            evs: 1,
+            excludeMods: ["repeatBall"],
+        },
+    ],
+
+    evMod: {
+        slowChallenge: .1,
+        machoBrace: 1.5,
+        powerBracer: 2,
+        repeatBall: 5,
+        flute: (achievementBonus) => {
+            return 1.02 + .02 * achievementBonus/100;
+        },
+        farm: (numRowap, numRowapBoosted) => {
+            return Math.pow(1.015, numRowap) * Math.pow(1.04545, numRowapBoosted);
+        },
+    },
+
+    columns: [
+        {
+            headerHtml: "No Items",
+            mods: ["challenge", "farm", "flute"],
+        },{
+            headerHtml: "<img width='24px' alt='Macho Brace' src='images/Macho_Brace.png'/>",
+            mods: ["machoBrace", "challenge", "farm", "flute"],
+        },{
+            headerHtml: "<img width='24px' alt='Power Bracer' src='images/Power_Bracer.png'/>",
+            mods: ["powerBracer", "challenge", "farm", "flute"],
+        },{
+            headerHtml: "<img width='28px' alt='Repeat Ball' src='images/Repeatball.png'/>",
+            mods: ["repeatBall", "challenge", "farm", "flute"],
+        },{
+            headerHtml: "<img width='24px' alt='Macho Brace' src='images/Macho_Brace.png'/> + <img width='28px' alt='Repeat Ball' src='images/Repeatball.png'/>",
+            mods: ["repeatBall", "machoBrace", "challenge", "farm", "flute"],
+        }, {
+            headerHtml: "<img width='24px' alt='Power Bracer' src='images/Power_Bracer.png'/> + <img width='28px' alt='Repeat Ball' src='images/Repeatball.png'/>",
+            mods: ["repeatBall", "powerBracer", "challenge", "farm", "flute"],
+        },
+    ],
+
+    totalMod: (modArray, roundTo = -1) => {
+        const total = modArray.reduce((a,b) => a * b);
+        return roundTo >= 0 ?  Math.round(total * Math.pow(10, roundTo))/Math.pow(10, roundTo) : total;
+    },
+
+    inputs: {
+        rowapCount: ko.observable(0),
+        rowapBoostedCount: ko.observable(0),
+        achievementBonus: ko.observable(0),
+        enableFlute: ko.observable(false),
+        enableFarm: ko.observable(false),
+        enableSlowEv: ko.observable(false),
+        evGoal: ko.observable(50),
+    },
+
+}-->
+
+<!-- ACTUAL CALCULATED EV MODS AFTER USER INPUT -->
+<!-- ko let: {
+    calculatedMods: {
+        machoBrace: evMod.machoBrace,
+        powerBracer: evMod.powerBracer,
+        repeatBall: evMod.repeatBall,
+        challenge: inputs.enableSlowEv() ? evMod.slowChallenge : 1,
+        farm: inputs.enableFarm() ? evMod.farm(+inputs.rowapCount(), +inputs.rowapBoostedCount()) : 1,
+        flute: inputs.enableFlute() ? evMod.flute(+inputs.achievementBonus()) : 1,
+    },
+}-->
+
+<p class="text-center small m-1">Global EV Modifiers: <span class="fw-bold small font-monospace" data-bind="text: totalMod([calculatedMods.challenge, calculatedMods.farm, calculatedMods.flute], 2) +'x'"></span></p>
+
+<div class="table-responsive">
+    <table class="table table-hover no-data-tables">
+        <thead class="align-middle">
+            <tr class="border-0">
+                <th class="col-2 text-end fw-normal border-0 border-end pb-1"></th>
+                <!--ko foreach: columns-->
+                    <th colspan="2" class="col-1 text-center table-secondary border-0 border-end pb-0" data-bind="html: $data.headerHtml"></th>
+                <!--/ko-->
+            </tr>
+            <tr class="border-0">
+                <th class="text-end fw-normal border-0 border-end pb-1"></th>
+                <!--ko foreach: columns-->
+                    <th colspan="2" class="text-center table-secondary font-monospace border-0 border-end small pt-0" data-bind="text: totalMod($data.mods.map(mod => calculatedMods[mod]), 2) + `x`"></th>
+                <!--/ko-->
+            </tr>
+            <tr class="">
+                <th class="border-end p-0"></th>
+                <!--ko foreach: columns-->
+                    <th class="text-center fw-normal small p-1">EVs Gained</th>
+                    <th class="text-center border-end fw-normal small p-1">Needed for <span class="d-inline-block" data-bind="text: +inputs.evGoal() + ' EVs'"></span></th>
+                <!--/ko-->
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: evYields">
+            <tr>
+                <td class="text-end align-middle fw-bold border-end" data-bind="text: $data.method"></td>
+                <!--ko foreach: columns-->
+                <!--ko let: { colTotalMod: totalMod($data.mods.map(mod => calculatedMods[mod])), excludeCol: $parent.excludeMods.some(mod => $data.mods.includes(mod)) }-->
+                    <td class="text-center align-middle"><code data-bind="text: excludeCol ? '-' : totalMod([colTotalMod, $parent.evs], 2)"></code></td>
+                    <td class="text-center align-middle border-end" data-bind="text: excludeCol ? '-' : Math.ceil(+inputs.evGoal() / colTotalMod / $parent.evs)"></td>
+                <!--/ko-->
+                <!--/ko-->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="d-flex mb-3 gap-3 align-items-center justify-content-center">
+    <span><img width='24px' alt='Macho Brace' src='images/Macho_Brace.png'/> = Macho Brace</span>
+    <span><img width='24px' alt='Power Bracer' src='images/Power_Bracer.png'/> = Power Bracer</span>
+    <span><img width='28px' alt='Repeat Ball' src='images/Repeatball.png'/> = Repeat Ball</span>
+</div>
+
+<h5>Calculator Settings</h5>
+<form class="d-grid gap-2">
+    <div class="row gy-2">
+        <div class="form-group col-6 col-md-2 d-flex flex-column justify-content-end">
+            <label for="evGoal" class="form-label fw-bold">EV Goal</label>
+            <input type="number" min="0" max="999999" id="evGoal" class="form-control" data-bind="value: inputs.evGoal" />
+        </div>
+        <div class="form-group col-6 col-md-2 offset-md-8 d-flex flex-column justify-content-end">   
+            <label for="globalMult" class="form-label">Total Global Multiplier</label>
+            <input type="text" readonly id="globalMult" class="form-control font-monospace fw-bold" data-bind="value: totalMod([calculatedMods.challenge, calculatedMods.farm, calculatedMods.flute])" />
+        </div>
+    </div>
+
+    <div class="row gy-2">
+        <div class="form-group col-6 col-md-3">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="enableSlowEv" data-bind="checked: inputs.enableSlowEv">
+                <label for="enableSlowEv" class="form-check-label fw-bold">Use Slow EVs</label>
+            </div>
+        </div>
+        <div class="form-group col-6 col-md-2 offset-md-7 d-flex flex-column justify-content-end"> 
+            <label for="totalChallengeMult" class="form-label">Challenge Multiplier</label>
+            <input type="text" readonly id="totalChallengeMult" class="form-control font-monospace" data-bind="value: inputs.enableSlowEv() ? calculatedMods.challenge : '-'" />
+        </div>
+    </div>
+
+    <div class="row gy-2">
+        <div class="form-group col-md-3">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="enableFarm" data-bind="checked: inputs.enableFarm">
+                <label for="enableFarm" class="form-check-label fw-bold">Use Farm</label>
+            </div>
+        </div>
+        <div class="form-group col-6 col-md-2 d-flex flex-column justify-content-end" data-bind="css: {'opacity-50': !inputs.enableFarm() }">  
+            <label for="evCalcRowapCount" class="form-label fw-bold">Rowaps (No Lum Boost)</label>
+            <input type="number" min="0" max="25" id="evCalcRowapCount" class="form-control" data-bind="value: inputs.rowapCount, attr: { disabled: !inputs.enableFarm() }" />
+        </div>
+        <div class="form-group col-6 col-md-2 d-flex flex-column justify-content-end" data-bind="css: {'opacity-50': !inputs.enableFarm() }">
+            <label for="evCalcRowapBoostedCount" class="form-label fw-bold">Rowaps (Lum Boosted)</label>
+            <input type="number" min="0" max="25" id="evCalcRowapBoostedCount" class="form-control" data-bind="value: inputs.rowapBoostedCount, attr: { disabled: !inputs.enableFarm() }" />
+        </div>
+        <div class="form-group col-md-3">
+            <span class="small fst-italic text-danger" data-bind="if: +inputs.rowapCount() + +inputs.rowapBoostedCount() > 25">
+                Warning: Number of berries exceeds maximum farm size 
+            </span>
+        </div>
+        <div class="form-group col-6 offset-6 col-md-2 offset-md-0 d-flex flex-column justify-content-end">   
+            <label for="totalfarmMult" class="form-label">Farm Multiplier</label>
+            <input type="text" readonly id="totalfarmMult" class="form-control font-monospace" data-bind="value: inputs.enableFarm() ? calculatedMods.farm : '-'" />
+        </div>
+    </div>
+
+    <div class="row gy-2">
+        <div class="form-group col-md-3 d-flex">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="enableFlute" data-bind="checked: inputs.enableFlute">
+                <label for="enableFlute" class="form-check-label fw-bold">Use Blue Flute</label>
+            </div>
+        </div>
+
+        <div class="form-group col-6 col-md-2 d-flex flex-column justify-content-end" data-bind="css: {'opacity-50': !inputs.enableFlute() }">
+            <label for="achievementBonus" class="form-label fw-bold">Achievement Bonus %</label>
+            <input type="number" min="0" max="9999" id="achievementBonus" class="form-control" data-bind="value: inputs.achievementBonus, attr: { disabled: !inputs.enableFlute() }" />
+        </div>
+        <div class="form-group col-6 col-md-2 offset-md-5 d-flex flex-column justify-content-end">   
+            <label for="totalFluteMult" class="form-label">Flute Multiplier</label>
+            <input type="text" readonly id="totalFluteMult" class="form-control font-monospace" data-bind="value: inputs.enableFlute() ? calculatedMods.flute : '-'" />
+        </div>
+    </div>
+</form>
+
+<!--/ko-->
+<!--/ko-->
