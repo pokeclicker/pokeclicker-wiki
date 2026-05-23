@@ -8,7 +8,7 @@ Sitrus Berries can mutate into the following Berries.
 | [[File:Lum.png\|32px]] [[Berries/Lum]]        | [[File:Cheri.png\|32px]] [[Berries/Cheri]] [[File:Chesto.png\|32px]] [[Berries/Chesto]] [[File:Pecha.png\|32px]] [[Berries/Pecha]] [[File:Rawst.png\|32px]] [[Berries/Rawst]] [[File:Aspear.png\|32px]] [[Berries/Aspear]] [[File:Leppa.png\|32px]] [[Berries/Leppa]] [[File:Oran.png\|32px]] [[Berries/Oran]] |
 
 ### Acquisition
-Sitrus Berries can be obtained from the [[Towns/Safari Zone]] and from the following dungeons.
+Sitrus Berries can be obtained from the [[Towns/Safari Zone]], any route, and from the following dungeons.
 
 | Location	                    | Region | Tier	    |
 | :---:                         | :---:     | :---:         |
