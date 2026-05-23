@@ -10,7 +10,7 @@ Oran Berries can mutate into the following Berries.
 | [[File:Passho.png\|32px]] [[Berries/Passho]]  | [[File:Chesto.png\|32px]] [[Berries/Chesto]] [[File:Kelpsy.png\|32px]] [[Berries/Kelpsy]] [[File:Coba.png\|32px]] [[Berries/Coba]] |
 
 ### Acquisition
-Oran Berries can be obtained from the [[Towns/Safari Zone]] and from the following dungeons.
+Oran Berries can be obtained from the [[Towns/Safari Zone]], any route, and from the following dungeons.
 
 | Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
