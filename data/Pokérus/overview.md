@@ -124,12 +124,13 @@ For Pokémon that can only be acquired through purchases, trades, and item evolu
 The table below shows how many Pokémon are required in order to resist these Pokémon using various combinations of modifiers, assuming a base EV gain of 1. Since the Blue Flute's effectiveness scales with your Achievement Bonus, the percentages in the setups show the minimum Achievement Bonus required to reach that multiplier.
 
 *Note: AB stands for Achievement Bonus. Your Achievement Bonus can be checked in your Achievement Tracker. The Rowaps are based on [these Farm setups](#!Farm/Setups#evs), which use Lum to boost their effectiveness.*
+
 | Modifiers | Required Purchases/Trades/Evolutions/Etc. Needed to Resist |
 | :--- | :--- | :--- |
 | No Modifiers |  50 |
 | [[File:Power_Bracer.png\|24px]] Power Bracer + 20 Boosted [[File:Rowap.png\|24px]] Rowaps |  11 |
-| [[File:Power_Bracer.png\|24px]] Power Bracer + 20 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute (38.60% AB or more) | 10 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + 20 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute (38.76% AB or more) | 10 |
 | [[File:Power_Bracer.png\|24px]] Power Bracer + 21 Boosted [[File:Rowap.png\|24px]] Rowaps | 10 |
-| [[File:Power_Bracer.png\|24px]] Power Bracer + 20 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute (609.56% AB or more) | 9 |
-| [[File:Power_Bracer.png\|24px]] Power Bracer + 21 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute (361.34% AB or more) | 9 |
-| [[File:Power_Bracer.png\|24px]] Power Bracer + 21 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute (1044.01% AB or more) | 8 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + 20 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute (610.25% AB or more) | 9 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + 21 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute (361.76% AB or more) | 9 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + 21 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute (1044.26% AB or more) | 8 |
