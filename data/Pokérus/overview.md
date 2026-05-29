@@ -46,7 +46,7 @@ $EVBonus = 1 + \frac{EffortValues}{100}$ {.overflow-auto .text-center}
 
 $EVBonus = EffortValues^{log_{50}1.5}\approx EffortValues^{0.103645891}$ {.overflow-auto .text-center}
 
-| EV Bonus (Damage Multiplier){.col-2} | EVs required{.col-3} | EV Bonus (Damage Multiplier){.col-2} | EVs required{.col-3} |
+| EV Bonus (Damage Multiplier){.col-2} | EVs required{.col-3} | EV Bonus (Damage Multiplier){.col-2} | EVs required |
 ---: | :--- | ---: | :---
 `×1.5` | 50 |` ×2` | 803
 `×2.5` | 6,910 | `×3` | 40,122
@@ -70,7 +70,7 @@ Things that **do not** increase EVs:
 #### Base EV Yield (Per Capture Method) {#evbase}
 EV yields differ based on how the Pokémon is obtained.
 
-| Method {.col-1}| EVs Yielded {.col-1}|
+| Method | EVs Yielded {.col-4} |
 | :--- | :--- |
 | Catching a Pokémon on a Route | `0.1` |
 | Catching a Base [[Wandering Pokémon]] | `0.2` |
@@ -86,7 +86,7 @@ EV yields differ based on how the Pokémon is obtained.
 #### EV Yield Modifiers {#evmodifiers}
 EV yields can also be modified by items, auras, and Pokémon states. If the Slow EVs [Challenge Mode](#!Challenge_Modes) is activated, all EV gains are divided by 10. Modifiers are multiplicative for all that apply.
 
-| Modifier {.col-1}| EV Yield Multiplier {.col-1}|
+| Modifier{.col-1} | EV Yield Multiplier {.col-1}|
 | :--- | :--- |
 | Slow EV Challenge | `0.1x` |
 | Pokémon is holding a [[File:Macho_Brace.png\|24px]] [[Items/Macho Brace]] | `1.5x` |
@@ -124,7 +124,7 @@ The table below shows how many Pokémon are required in order to resist these Po
 
 *Note: Your Achievement Bonus can be checked in your Achievement Tracker. The Rowaps are based on [these Farm setups](#!Farm/Setups#evs), which use Lum to boost their effectiveness.*
 
-| Modifiers | Minimum Achievement Bonus | Captures Needed to Resist |
+| Modifiers | Minimum Achievement Bonus{.col-3} | Captures Needed to Resist{.col-3} |
 | :--- | :--- | :--- |
 | No Modifiers | N/A | 50 |
 | [[File:Power_Bracer.png\|24px]] Power Bracer + 20 Boosted [[File:Rowap.png\|24px]] Rowaps | N/A |  11 |
