@@ -1,7 +1,6 @@
 
 ::: text-center
-# Welcome to the Po
-éClicker Wiki!
+# Welcome to the PokéClicker Wiki!
 
 ----------
 
