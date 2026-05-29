@@ -46,15 +46,14 @@ $EVBonus = 1 + \frac{EffortValues}{100}$ {.overflow-auto .text-center}
 
 $EVBonus = EffortValues^{log_{50}1.5}\approx EffortValues^{0.103645891}$ {.overflow-auto .text-center}
 
-| EV Bonus (Damage Multiplier) {.col-1}| EVs required {.col-1}|
-:--- | :---
-1.5x | 50 |
-2x | 803 |
-3x | 40,122 |
-4x | 643,898 |
-5x | 5,544,055 |
-6x | ≈32.2E6 |
-7x | ≈142.5E6 |
+| EV Bonus (Damage Multiplier){.col-2} | EVs required | EV Bonus (Damage Multiplier){.col-2} | EVs required |
+---: | :--- | ---: | :---
+`×1.5` | 50 |` ×2` | 803
+`×2.5` | 6,910 | `×3` | 40,122
+`×3.5` | 177,541 | `×4` | 643,898
+`×4.5` | 2,006,081 | `×5` | 5,544,055
+`×5.5` | ≈13,91E6 | `×6` | ≈32,2E6
+`×6.5` | ≈69,7E6 | `×7` | ≈142,5E6
 
 ---
 
