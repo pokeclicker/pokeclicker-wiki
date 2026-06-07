@@ -1,0 +1,673 @@
+<div>
+    <div class="bg-primary rounded-0 px-3 py-2 mb-2">
+        <h5 class="m-0 text-light font-weight-bold">General</h5>
+    </div>
+    <div class="px-3">
+        <div class="border-bottom border-dark font-weight-bold">Where can I play the latest version?</div>
+        <p class="small">
+            <a href="https://www.pokeclicker.com/" target="_blank">https://www.pokeclicker.com/</a><br>
+            or download the offline <a href="#!Desktop Client">desktop client</a>:<br>
+            <a href="https://github.com/RedSparr0w/Pokeclicker-desktop/releases/latest" target="_blank">https://github.com/RedSparr0w/Pokeclicker-desktop/releases/latest</a>
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">Where can I view more information about my save file?</div>
+        <p class="small">
+            <a href="https://companion.pokeclicker.com/" target="_blank">https://companion.pokeclicker.com/</a>
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">Is the Dynamic Background available without the game?</div>
+        <p class="small">
+            <a href="https://background.pokeclicker.com/" target="_blank">https://background.pokeclicker.com/</a>
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">What is this server's invite link?</div>
+        <p class="small">
+            <a href="https://discord.gg/a6DFe4p" target="_blank">https://discord.gg/a6DFe4p</a>
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">My game isn't running at full speed when the window isn't active.</div>
+        <p class="small">
+            This is a setting on browsers that slows down inactive windows.<br>
+            You can change the browser flags, but this is <strong>not</strong> recommended.<br>
+            Otherwise you can download the <a href="#!Desktop Client">desktop client</a> from here:<br>
+            <a href="https://github.com/RedSparr0w/Pokeclicker-desktop/releases/latest" target="_blank">https://github.com/RedSparr0w/Pokeclicker-desktop/releases/latest</a>
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">How do I get <a href="#!Dungeon Tokens">Dungeon Tokens</a>?</div>
+        <p class="small">
+            Read the in-game Tutorial.<br>
+            Set the "Caught" selector in the top left to <a href="#!Poké Balls">Poké Ball</a> to capture Pokémon you have already caught.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">How is damage calculated?</div>
+        <p class="small">
+            The damage you do against an enemy Pokémon is the sum of the attack of all Pokémon the player has, after type effectiveness, type weakness, and other multipliers are applied.<br>
+            For players' Pokémon with two types, only the most efficient type is applied.<br>
+            For enemy Pokémon with two types, effectiveness and weakness is applied once to each type.<br>
+            For enemy Pokémon with one type, effectiveness and weakness is applied twice to that single type.<br>
+            Other factors that will multiply damage value include <a href="#!Flutes">flutes</a>, battle items, and <a href="#!Weather">weather</a>. <a href="#!Gems">Gems</a> can be used to change the effectiveness and weakness multipliers as well.<br>
+            Player can check the attack against a specific Pokémon they are fighting by <strong>hovering over Pokémon attack value</strong>.
+        </p>
+    </div>
+
+    <div class="bg-primary rounded-0 px-3 py-2 mb-2">
+        <h5 class="m-0 text-light font-weight-bold">Save Data</h5>
+    </div>
+    <div class="px-3">
+        <div class="border-bottom border-dark font-weight-bold">Are there cloud saves or accounts?</div>
+        <p class="small">
+            No. Your file is saved in your browser data. We recommend making frequent backups of your save data.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">Can I transfer my save file between devices?</div>
+        <p class="small">
+            Yes! Download a copy of the save file from <strong>Start Menu → Save</strong>, transfer it to the other device, and import it from the save selector screen.<br>
+            Note that progress does not automatically carry over between devices.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">Can I import my save from the previous version?</div>
+        <p class="small">
+            You can only import the shinies you obtained in the previous version.<br>
+            They will only appear in your Pokémon list once re-captured (this will not count as capturing a new shiny Pokémon).
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">Will my progress be carried over on release?</div>
+        <p class="small">
+            Your save file will likely be compatible with the final release.
+        </p>
+    </div>
+
+    <div class="bg-primary rounded-0 px-3 py-2 mb-2">
+        <h5 class="m-0 text-light font-weight-bold">Rare/Shiny Pokémon</h5>
+    </div>
+    <div class="px-3">
+        <div class="border-bottom border-dark font-weight-bold">What are the odds of finding a <a href="#!Roaming Pokémon">roaming Pokémon</a>?</div>
+        <p class="small">
+            The chance to encounter a <a href="#!Roaming Pokémon">roaming Pokémon</a> is <code>1/8192</code> for the first route of a region, and increases linearly up to <code>1/4096</code> for the last route of a region.<br>
+            ("first" and "last" here just being the route difficulty/HP, not necessarily the order you reach the route)
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">What are the odds of finding a shiny Pokémon?</div>
+        <table class="table table-bordered table-sm">
+            <thead>
+                <tr>
+                    <th style="width: 70%">Source</th>
+                    <th class="text-center" style="width: 30%">Odds</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>On a <a href="#!Routes">Route</a></td>
+                    <td class="text-center"><code>1/8192</code></td>
+                </tr>
+                <tr>
+                    <td>In a <a href="#!Dungeons">Dungeon</a></td>
+                    <td class="text-center"><code>1/4096</code></td>
+                </tr>
+                <tr>
+                    <td>Using an <a href="#!Items">Evolution Item</a></td>
+                    <td class="text-center"><code>1/2048</code></td>
+                </tr>
+                <tr>
+                    <td>In the <a href="#!Safari">Safari Zone</a></td>
+                    <td class="text-center"><code>1/1024</code></td>
+                </tr>
+                <tr>
+                    <td>From a <a href="#!Shops">Shop</a></td>
+                    <td class="text-center"><code>1/1024</code></td>
+                </tr>
+                <tr>
+                    <td>From Hatching an <a href="#!Hatchery">Egg</a></td>
+                    <td class="text-center"><code>1/1024</code></td>
+                </tr>
+                <tr>
+                    <td>From a Reward</td>
+                    <td class="text-center"><code>1/1024</code></td>
+                </tr>
+                <tr>
+                    <td>From a <a href="#!Battle Frontier">Battle Frontier</a> Milestone</td>
+                    <td class="text-center"><code>1/1024</code></td>
+                </tr>
+                <tr>
+                    <td>Wandering on the <a href="#!Farm">Farm</a></td>
+                    <td class="text-center"><code>1/1024</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="border-bottom border-dark font-weight-bold">Do shiny Pokémon give any bonus to gameplay?</div>
+        <p class="small">
+            Yes, they give an extra 100% bonus to <a href="#!Click Attack">Click Attack</a>.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">If I breed a shiny Pokémon, will it still stay shiny?</div>
+        <p class="small">
+            Yes, once a Pokémon is shiny, it will always remain shiny.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">If I evolve a shiny Pokémon, will the evolution be shiny?</div>
+        <p class="small">
+            No, you will need to obtain the evolution's shiny via a different method.
+        </p>
+    </div>
+
+    <div class="bg-primary rounded-0 px-3 py-2 mb-2">
+        <h5 class="m-0 text-light font-weight-bold">Items</h5>
+    </div>
+    <div class="px-3">
+        <div class="border-bottom border-dark font-weight-bold">How do I evolve Pokémon that require an item to evolve?</div>
+        <p class="small">
+            You can use evolution items by clicking <strong>Items</strong> in the Start Menu.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">What is the small/medium/large restore used for?</div>
+        <p class="small">
+            They can be used in the <a href="#!Underground">Underground</a> to restore energy.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">What are <a href="#!Berries">Berries</a> used for?</div>
+        <p class="small">
+            These items can be used in the <a href="#!Farm"><strong>Farm</strong></a> to grow more berries and earn <a href="#!Farm Points">farm points</a>.<br>
+            They can be exchanged for different items or Pokémon in <a href="#!Berry Masters">Berry Master Shops</a>.<br>
+            They have special Auras that can provide gameplay bonuses.<br>
+            They can attract wild Pokémon to the Farm that can be captured, some of which can only be obtained this way.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">How can I get more Berries?</div>
+        <p class="small">
+            Some berries can be obtained as Pokémon drops or from dungeon chests, but most are obtained through mutation on the <a href="#!Farm">Farm</a>.<br>
+            The <a href="#!Berry Masters">Kanto Berry Master</a> in Cerulean City will provide daily hints about how to mutate the various berries.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">What are Vitamins used for?</div>
+        <p class="small">
+            They increase the base attack of your Pokémon, which will gain you more damage each time you breed them. See <a href="#!Hatchery">Hatchery</a> for more information.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">How many Oak Item slots are available?</div>
+        <p class="small">
+            There is a maximum of 3 active slots. See <a href="#!Oak Items">Oak Items</a> for more information.
+        </p>
+    </div>
+
+    <div class="bg-primary rounded-0 px-3 py-2 mb-2">
+        <h5 class="m-0 text-light font-weight-bold">Gameplay</h5>
+    </div>
+    <div class="px-3">
+        <div class="border-bottom border-dark font-weight-bold">How many <a href="#!Regions">regions</a> are playable?</div>
+        <p class="small">
+            Currently Kanto through <span data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[GameConstants.MAX_AVAILABLE_REGION])">Galar</span> are able to be played.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">How do I get to the next region?</div>
+        <p class="small">
+            You must defeat the league champion of the current region. If you have the <a href="#!Challenge Modes">regional Pokédex challenge</a> active, you must obtain all Pokémon available in the current region.<br>
+            <strong>Note:</strong> Once you go to the next region, you will not be able to go back to previous regions until you reach the dock.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">How do I increase my Click Attack?</div>
+        <p class="small">
+            New Pokémon you capture, shinies obtained, Pokémon made resistant to <a href="#!Pokérus">Pokérus</a>, and <a href="#!Shadow Pokémon">Purified Pokémon</a> all increase your click attack.<br>
+            <a href="#!Achievements">Achievement</a> bonuses also boost your click attack.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">How do I unlock the Auto Battle option for Gyms?</div>
+        <p class="small">
+            You must defeat the <a href="#!Gyms">Gym Leader</a> manually 10 times.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">How do I make the <a href="#!Dungeons">dungeons</a> smaller?</div>
+        <p class="small">
+            <a href="#!Dungeons">Dungeons</a> will become smaller at 10, 100, 1,000, etc. clears to a minimum of 5×5 tiles.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">How do I unlock Flash in <a href="#!Dungeons">dungeons</a>?</div>
+        <table class="table table-bordered table-sm">
+            <thead>
+                <tr>
+                    <th class="text-center" style="width: 10%">Tier</th>
+                    <th class="text-center" style="width: 20%">Clears Required</th>
+                    <th style="width: 70%">Effect</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-center">100</td>
+                    <td>Reveals the 4 tiles directly adjacent to the player (cardinal directions).</td>
+                </tr>
+                <tr>
+                    <td class="text-center">2</td>
+                    <td class="text-center">250</td>
+                    <td>Reveals all 8 tiles surrounding the player (full 3×3 area).</td>
+                </tr>
+                <tr>
+                    <td class="text-center">3</td>
+                    <td class="text-center">400</td>
+                    <td>Reveals a large diamond area — all tiles within 2 steps of the player.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="border-bottom border-dark font-weight-bold">How do I unlock Dungeon Guides (BETA) for dungeons?</div>
+        <p class="small">
+            You need to have cleared the dungeon at least 10 times in order to make use of <a href="#!Dungeon Guides">Dungeon Guides</a>.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">How do the floors in dungeons work?</div>
+        <p class="small">
+            Dungeons can't get bigger than 10×10; instead they get a second floor of at least 5×5. The boss tile is always on the second floor; the first floor has a stairs tile instead. When you reach the second floor, time stops and you get 10 extra seconds.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">Can I progress towards more than 1 quest at a time?</div>
+        <p class="small">Yes, you can unlock up to 4 <a href="#!Quest Points">quest slots</a>.</p>
+        <table class="table table-bordered table-sm">
+            <thead>
+                <tr>
+                    <th class="text-center" style="width: 50%">Quest Level</th>
+                    <th class="text-center" style="width: 50%">Slots Unlocked</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center">5</td>
+                    <td class="text-center">2</td>
+                </tr>
+                <tr>
+                    <td class="text-center">10</td>
+                    <td class="text-center">3</td>
+                </tr>
+                <tr>
+                    <td class="text-center">15</td>
+                    <td class="text-center">4</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="border-bottom border-dark font-weight-bold">Where do I find..</div>
+        <table class="table table-bordered table-sm">
+            <thead>
+                <tr>
+                    <th style="width: 25%">Location</th>
+                    <th style="width: 75%">Found At</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#!Underground">Underground</a></td>
+                    <td>Route 14</td>
+                </tr>
+                <tr>
+                    <td>Daycare</td>
+                    <td>Route 5, or click <strong>List</strong> on the <a href="#!Hatchery">hatchery</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#!Farm">Farm</a></td>
+                    <td>Route 11</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="border-bottom border-dark font-weight-bold">How do I unlock the..</div>
+        <table class="table table-bordered table-sm">
+            <thead>
+                <tr>
+                    <th style="width: 25%">Location</th>
+                    <th style="width: 75%">How to Unlock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#!Underground">Underground</a></td>
+                    <td>Buy the <a href="#!Key Items"><strong>Explorer Kit</strong></a> from <strong>Cinnabar Island</strong>.</td>
+                </tr>
+                <tr>
+                    <td>Daycare</td>
+                    <td>Will be unlocked after reaching <strong>Route 3</strong>.</td>
+                </tr>
+                <tr>
+                    <td><a href="#!Farm">Farm</a></td>
+                    <td>Will be unlocked after reaching <strong>Route 11</strong> and obtaining <a href="#!Berries"><strong>Berries</strong></a>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="border-bottom border-dark font-weight-bold">Why should I be breeding Pokémon?</div>
+        <p class="small">
+            Some Pokémon can only be obtained by breeding.<br>
+            When a Pokémon is hatched, its attack will increase by 25% of the base amount.<br>
+            Breeding has higher odds of obtaining a <a href="#!Shiny Chance">shiny Pokémon</a> <code>(1/1024)</code>.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">How do I obtain certain Pokémon?</div>
+        <p class="small">
+            Check that you have completed every <a href="#!Routes"><strong>route</strong></a>.<br>
+            Check that each <a href="#!Dungeons"><strong>dungeon</strong></a> has been completed.<br>
+            Some Pokémon only come from <a href="#!Eggs"><strong>Eggs</strong></a>.<br>
+            Some can only be obtained by using an <a href="#!Items"><strong>Evolution Item</strong></a>.<br>
+            Some can only be found in the <a href="#!Safari"><strong>Safari Zone</strong></a>.<br>
+            <strong>Fossil Pokémon</strong> can only be obtained with the correlating <strong>Fossil</strong> from the <a href="#!Underground"><strong>Underground</strong></a>.<br>
+            Some can only be purchased from a <a href="#!Shops"><strong>Shop</strong></a>.<br>
+            <a href="#!Roaming Pokémon"><strong>(Roamers)</strong></a> Some legendaries will <strong>randomly</strong> appear on <a href="#!Routes"><strong>routes</strong></a>.<br>
+            <a href="#!Baby Pokémon"><strong>(Babies)</strong></a> Breed their evolution.<br>
+            Some can only evolve at certain <strong>times of the day</strong>.<br>
+            Some can only evolve in specific <strong>locations</strong>.<br>
+            Some can only appear/evolve in specific <a href="#!Weather"><strong>weather</strong></a>.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">What is the schedule of the day cycle?</div>
+        <table class="table table-bordered table-sm">
+            <thead>
+                <tr>
+                    <th class="text-center" style="width: 35%">Time of Day</th>
+                    <th class="text-center" style="width: 10%">Icon</th>
+                    <th class="text-center" style="width: 27.5%">Start</th>
+                    <th class="text-center" style="width: 27.5%">End</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center align-middle">Dawn</td>
+                    <td class="text-center align-middle"><img src="./pokeclicker/docs/assets/images/dayCycle/Dawn.png" style="background: #25b6a0; width: 30px;"></td>
+                    <td class="text-center align-middle">05:00</td>
+                    <td class="text-center align-middle">06:00</td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle">Day</td>
+                    <td class="text-center align-middle"><img src="./pokeclicker/docs/assets/images/dayCycle/Day.png" style="background: #f4a470; width: 30px;"></td>
+                    <td class="text-center align-middle">06:00</td>
+                    <td class="text-center align-middle">17:00</td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle">Dusk</td>
+                    <td class="text-center align-middle"><img src="./pokeclicker/docs/assets/images/dayCycle/Dusk.png" style="background: #93558a; width: 30px;"></td>
+                    <td class="text-center align-middle">17:00</td>
+                    <td class="text-center align-middle">18:00</td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle">Night</td>
+                    <td class="text-center align-middle"><img src="./pokeclicker/docs/assets/images/dayCycle/Night.png" style="background: #4a6252; width: 30px;"></td>
+                    <td class="text-center align-middle">18:00</td>
+                    <td class="text-center align-middle">05:00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="border-bottom border-dark font-weight-bold">What are the EV damage multipliers?</div>
+        <table class="table table-bordered table-sm">
+            <thead>
+                <tr>
+                    <th class="text-center" style="width: 50%">EVs</th>
+                    <th class="text-center" style="width: 50%">Damage Multiplier</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center">50 EVs</td>
+                    <td class="text-center">1.5× Damage</td>
+                </tr>
+                <tr>
+                    <td class="text-center">802 EVs</td>
+                    <td class="text-center">2× Damage</td>
+                </tr>
+                <tr>
+                    <td class="text-center">40,121 EVs</td>
+                    <td class="text-center">3× Damage</td>
+                </tr>
+                <tr>
+                    <td class="text-center">643,300 EVs</td>
+                    <td class="text-center">4× Damage</td>
+                </tr>
+                <tr>
+                    <td class="text-center">5,540,000 EVs</td>
+                    <td class="text-center">5× Damage</td>
+                </tr>
+                <tr>
+                    <td class="text-center" colspan="2">..and so on</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bg-primary rounded-0 px-3 py-2 mb-2">
+        <h5 class="m-0 text-light font-weight-bold">Pokérus and EVs</h5>
+    </div>
+    <div class="px-3">
+        <div class="border-bottom border-dark font-weight-bold">What is Pokérus, and what are EVs?</div>
+        <p class="small">
+            Pokérus is a beneficial virus your Pokémon can catch. EVs, also called Effort Values, increase the attack of your Pokémon.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">When do I unlock EVs?</div>
+        <p class="small">
+            EVs are unlocked after defeating the Distortion World dungeon in Sinnoh.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">How do I spread Pokérus?</div>
+        <p class="small">
+            Pokérus is spread by Pokémon that are infected, to other Pokémon in the <a href="#!Hatchery">hatchery</a> (not in the queue) that share a type with the infected Pokémon. Neither Pokémon can be ready to hatch, nor can a <a href="#!Hatchery Helpers">Hatchery Helper</a> be used on either Pokémon.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">How do I gain EVs?</div>
+        <p class="small">
+            EVs can be gained in a variety of ways, but are primarily gained by capturing (not breeding) Pokémon.<br>
+            You can use the Contagious <a href="#!Poké Balls">Poké Ball</a> selector (unlocked after getting <a href="#!Pokérus">Pokérus</a>) to focus catching Pokémon with less than 50 EVs. Note that setting this selector to "Do not catch" will prevent you from catching any Contagious Pokémon, even if your Caught selector has a Poké Ball set.
+        </p>
+        <table class="table table-bordered table-sm">
+            <thead>
+                <tr>
+                    <th style="width: 65%">Source</th>
+                    <th class="text-center" style="width: 35%">EV Yield / Modifier</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Base Yield</td>
+                    <td class="text-center"><code>0.1 EV</code></td>
+                </tr>
+                <tr>
+                    <td>Base <a href="#!Wandering Pokémon">Wanderer</a> Yield</td>
+                    <td class="text-center"><code>0.2 EV</code></td>
+                </tr>
+                <tr>
+                    <td><a href="#!Wandering Pokémon">Wanderer</a> Yield</td>
+                    <td class="text-center"><code>1 EV</code></td>
+                </tr>
+                <tr>
+                    <td>Evolution Item / Shopmon / <a href="#!Safari">Safari</a> Yield</td>
+                    <td class="text-center"><code>1 EV</code></td>
+                </tr>
+                <tr>
+                    <td><a href="#!Shadow Pokémon">Shadow</a> Modifier</td>
+                    <td class="text-center"><code>2×</code></td>
+                </tr>
+                <tr>
+                    <td><a href="#!Shiny Chance">Shiny</a> Modifier</td>
+                    <td class="text-center"><code>5×</code></td>
+                </tr>
+                <tr>
+                    <td><a href="#!Dungeons">Dungeon</a> Modifier</td>
+                    <td class="text-center"><code>3×</code></td>
+                </tr>
+                <tr>
+                    <td><a href="#!Dungeons">Dungeon Mimic</a> / Dungeon Boss Modifier</td>
+                    <td class="text-center"><code>10×</code></td>
+                </tr>
+                <tr>
+                    <td><a href="#!Roaming Pokémon">Roamer</a> Modifier</td>
+                    <td class="text-center"><code>50×</code></td>
+                </tr>
+                <tr>
+                    <td><a href="#!Poké Balls">Repeat Ball</a> Modifier</td>
+                    <td class="text-center"><code>5×</code></td>
+                </tr>
+                <tr>
+                    <td><a href="#!Oak Items">Macho Brace</a> Modifier</td>
+                    <td class="text-center"><code>1.5×</code></td>
+                </tr>
+                <tr>
+                    <td><a href="#!Oak Items">Power Bracer</a> Modifier</td>
+                    <td class="text-center"><code>2×</code></td>
+                </tr>
+                <tr>
+                    <td>Rowap Aura Modifier</td>
+                    <td class="text-center"><code>Multiplier</code> based off <a href="#!Farm">Farm</a> Setup</td>
+                </tr>
+                <tr>
+                    <td><a href="#!Flutes">Blue Flute</a> Modifier</td>
+                    <td class="text-center"><code>%</code> based off <a href="#!Achievements">Achievement</a> Bonus</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="border-bottom border-dark font-weight-bold">What is the EV Attack Bonus?</div>
+        <p class="small">
+            The EV damage multiplier is multiplicative, and scales linearly until 1.5× (50 EVs). The bonus thereafter has diminishing returns relative to the number of EVs gained, but has no limit.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">What do the Pokérus status filters mean?</div>
+        <table class="table table-bordered table-sm">
+            <thead>
+                <tr>
+                    <th class="text-center" style="width: 10%">Icon</th>
+                    <th class="text-center" style="width: 20%">Status</th>
+                    <th style="width: 70%">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center align-middle">—</td>
+                    <td class="text-center align-middle"><code>None</code></td>
+                    <td class="align-middle">Pokémon that have not been infected with Pokérus.</td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle"><img src="./pokeclicker/docs/assets/images/breeding/pokerus/Infected.png"></td>
+                    <td class="text-center align-middle"><code>Infected</code></td>
+                    <td class="align-middle">Pokémon has Pokérus, but cannot spread Pokérus or gain EVs until hatching.</td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle"><img src="./pokeclicker/docs/assets/images/breeding/pokerus/Contagious.png"></td>
+                    <td class="text-center align-middle"><code>Contagious</code></td>
+                    <td class="align-middle">Pokémon with less than 50 EVs.</td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle"><img src="./pokeclicker/docs/assets/images/breeding/pokerus/Resistant.png"></td>
+                    <td class="text-center align-middle"><code>Resistant</code></td>
+                    <td class="align-middle">Pokémon with 50 or more EVs. These Pokémon will still be able to spread Pokérus.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bg-primary rounded-0 px-3 py-2 mb-2">
+        <h5 class="m-0 text-light font-weight-bold">Challenge Modes</h5>
+    </div>
+    <div class="px-3">
+        <div class="border-bottom border-dark font-weight-bold">What are challenge modes?</div>
+        <p class="small">
+            They are options you can select <strong>when starting a new save</strong> to make the game harder or more complex by modifying mechanics.<br>
+            <strong>Note:</strong> You can deactivate the challenges at any point, but they cannot be activated later.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">What do I get for activating challenge modes?</div>
+        <p class="small">
+            You don't get anything special for having challenges active, but each challenge will give you a ribbon on your trainer profile.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">Regional Attack Debuff</div>
+        <p class="small">
+            Lowers the attack of Pokémon that aren't native to the current region.<br>
+            The strength of the debuff is based on your highest region, not the region you are battling in.<br>
+            Pokémon retain 20% of their attack in Johto and this value raises by 10% each region.<br>
+            <strong>Note:</strong> This challenge is activated by default.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">Require Complete Pokédex</div>
+        <p class="small">
+            Requires a complete regional Pokédex before moving on to the next region.<br>
+            You only need <strong>one of each Pokémon</strong> to be able to move to the next region. Any form of the Pokémon is valid even if it isn't the base form.<br>
+            <strong>Note:</strong> This challenge is activated by default.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">No Click Attack</div>
+        <p class="small">
+            Disables the ability to use <a href="#!Click Attack">click attacks</a>.<br>
+            You still can click in the very first battle of the game.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">No Battle Items</div>
+        <p class="small">
+            Disables the usage of <a href="#!Items">X Attack, X Click, Lucky Egg, Token Collector, Dowsing Machine, and Lucky Incense</a>.<br>
+            You can still buy or find these items even if you can't use them.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">No Master Balls</div>
+        <p class="small">
+            Disables the usage of <a href="#!Poké Balls">Master Balls</a>.<br>
+            You still can buy them, so you can complete the related <a href="#!Achievements">achievements</a>.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">No Oak Items</div>
+        <p class="small">
+            Disables the usage of all <a href="#!Oak Items">Oak items</a>.<br>
+            The <a href="#!Achievements">achievements</a> related to leveling up these items will disappear, and the percentages will be distributed among the other general achievements.<br>
+            In order to get the berries that mutate while using some Oak Items, you can buy them from the <a href="#!Berry Masters">Johto Berry Master</a> once you have unlocked the berry that evolves to them.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">No Gem Upgrades</div>
+        <p class="small">
+            Disables the usage of <a href="#!Gems">Gems</a> to increase damage multipliers.<br>
+            You can still get gems and use them to buy items such as <a href="#!Flutes">flutes</a> or Pokémon.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">No Vitamins</div>
+        <p class="small">
+            Disables the usage of <a href="#!Vitamins">Vitamins</a>.<br>
+            You can still buy and find them, so the related <a href="#!Achievements">achievements</a> can still be completed. After getting them you can get a money refund by inputting the code: "REFUND-VITAMINS" (one use only).
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">Slow EVs</div>
+        <p class="small">
+            Gain EVs 10× slower.<br>
+            If the challenge is deactivated, the EVs will get multiplied back.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">Real Evolution</div>
+        <p class="small">
+            Your Pokémon go away when they evolve.<br>
+            When your Pokémon evolve, their stats are carried over to the evolution. This includes times hatched, EVs, and shiny status.<br>
+            If the base Pokémon had a <a href="#!Rare Hold Items">Held Item</a>, it will be carried over to the evolution unless the item is incompatible. For example, Light Ball won't be transferred to a Raichu but a Magnet will.<br>
+            <a href="#!Baby Pokémon">Baby Pokémon</a> aren't considered evolutions but gifts.
+        </p>
+    </div>
+
+    <div class="bg-primary rounded-0 px-3 py-2 mb-2">
+        <h5 class="m-0 text-light font-weight-bold">Development</h5>
+    </div>
+    <div class="px-3">
+        <div class="border-bottom border-dark font-weight-bold">When will the development version be fully released?</div>
+        <p class="small">
+            There are currently no plans for a "final release".<br>
+            Maybe once all the regions are added that will be version <code>1.0.0</code>.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">When will more regions be added?</div>
+        <p class="small">
+            This is a current priority, but there are no set timelines; it will be ready when it is ready.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">Who are the awesome people developing this game?</div>
+        <p class="small">
+            The original game was developed by @IshaD, who has since decided to stop work on this project.<br>
+            Since then, lots of people have helped by contributing code via GitHub.
+        </p>
+
+        <div class="border-bottom border-dark font-weight-bold">How can I help with development?</div>
+        <p class="small">
+            The GitHub repo is located here:<br>
+            <a href="https://github.com/pokeclicker/pokeclicker" target="_blank">https://github.com/pokeclicker/pokeclicker</a><br>
+            Any new issues, suggestions or code contributions are always welcomed.<br>
+            You may even earn the @Poké Crew, @Code Contributor, or @Developer roles in Discord.
+        </p>
+    </div>
+</div>
