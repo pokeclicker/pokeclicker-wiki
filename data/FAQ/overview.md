@@ -164,7 +164,7 @@ Yes, you can unlock up to 4 [[Quest Points]].
 
 | Location{.col-3} | How to Unlock{.col-9} |
 | :--- | :--- |
-| [[Underground]] | Buy the **Explorer Kit** from **Cinnabar Island**. |
+| [[Underground]] | Buy the **[Explorer Kit](#!Key Items/)** from **Cinnabar Island**. |
 | Daycare | Will be unlocked after reaching **Route 3**. |
 | [[Farm]] | Will be unlocked after reaching **Route 11** and obtaining **[[Berries]]**. |
 
@@ -242,7 +242,7 @@ You can use the Contagious [[Poké Balls]] selector (unlocked after getting [[Po
 | [Blue Flute](#!Flutes/) Modifier | `%` based off [[Achievements]] Bonus |
 
 #### What is the EV Attack Bonus?
-The EV damage multiplier is multiplicative, and scales linearly until 1.5× (50 EVs). The bonus thereafter has diminishing returns relative to the number of EVs gained, but has no limit.
+The EV damage multiplier is multiplicative, and scales linearly until 1.5× (50 EVs). The bonus thereafter has diminishing returns relative to the number of EVs gained, but has no limit. EV damage multiplier thresholds are above.
 
 #### What do the Pokérus status filters mean?
 
