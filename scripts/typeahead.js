@@ -46,6 +46,11 @@ const searchOptions = [
     page: '',
   },
   {
+    display: 'FAQ',
+    type: 'FAQ',
+    page: '',
+  },
+  {
     display: 'Battle Frontier',
     type: 'Battle Frontier',
     page: '',
