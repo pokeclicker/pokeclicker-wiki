@@ -498,3 +498,13 @@ td.tight {
 button.form-select::after {
   content: none;
 }
+
+/* Day cycle icon backgrounds */
+.day-cycle-dawn, .day-cycle-day, .day-cycle-dusk, .day-cycle-night {
+  width: 56px;
+  height: 56px;
+}
+.day-cycle-dawn  { background: #25b6a0; }
+.day-cycle-day   { background: #f4a470; }
+.day-cycle-dusk  { background: #93558a; }
+.day-cycle-night { background: #4a6252; }
