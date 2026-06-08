@@ -11,8 +11,8 @@ or download the offline [[Desktop Client]]:
 #### Is the Dynamic Background available without the game?
 [https://background.pokeclicker.com/](https://background.pokeclicker.com/)
 
-#### What is this server's invite link?
-[https://discord.gg/a6DFe4p](https://discord.gg/a6DFe4p)
+#### Does PokéClicker have a discord server?
+Yes! Join here: [https://discord.gg/a6DFe4p](https://discord.gg/a6DFe4p)
 
 #### My game isn't running at full speed when the window isn't active.
 This is a setting on browsers that slows down inactive windows.
