@@ -1,3 +1,4 @@
+
 ## General
 
 #### Where can I play the latest version?
@@ -163,7 +164,7 @@ Yes, you can unlock up to 4 [[Quest Points]].
 
 | Location{.col-3} | How to Unlock{.col-9} |
 | :--- | :--- |
-| [[Underground]] | Buy the **[Explorer Kit](#!Key Items/)** from **Cinnabar Island**. |
+| [[Underground]] | Buy the **Explorer Kit** from **Cinnabar Island**. |
 | Daycare | Will be unlocked after reaching **Route 3**. |
 | [[Farm]] | Will be unlocked after reaching **Route 11** and obtaining **[[Berries]]**. |
 
