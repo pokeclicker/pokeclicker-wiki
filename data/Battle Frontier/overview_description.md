@@ -11,7 +11,7 @@ Frontier stages that have already been cleared in previous attempts will be clea
 
 ### Breeding Strategy
 
-As described above, Pokémon Attack speed is doubled on cleared stages in the Battle Frontier. Additionally, the amount of egg steps gained by a single Pokémon in the Battle Frontier is as follows:
+As described above, Pokémon Attack speed is doubled on cleared stages in the Battle Frontier. Additionally, the number of egg steps gained by a single Pokémon in the Battle Frontier is as follows:
 
 Egg Steps = `Stage Number ^ 0.5`
 
