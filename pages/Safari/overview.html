@@ -1,0 +1,48 @@
+<div>
+    <h3>Safair Catch Rate</h3>
+    <table class="table table-hover table-striped table-bordered no-data-tables" data-bind="with: { stage: ko.observable(BattleFrontierRunner.stage.peek()), enemyPokemon: ko.observable(BattleFrontierBattle.enemyPokemon.peek()) }">
+        <thead class="thead-dark">
+            <tr>
+                <th>Level</th>
+                <th>
+                    <input type="number" min="1" step="1" max="40" data-bind="event: { input: (data, e) => {
+                    BattleFrontierRunner.stage = ko.observable(+e.target.value);
+                    BattleFrontierBattle.generateNewEnemy();
+                    $data.stage(+e.target.value);
+                    $data.enemyPokemon(BattleFrontierBattle.enemyPokemon());
+                } }, value: $data.stage" />
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HP per Pokémon</td>
+                <td data-bind="text: $data.enemyPokemon().health().toLocaleString('en-US')"></td>
+            </tr>
+            <tr>
+                <td>HP in Total</td>
+                <td data-bind="text: ($data.enemyPokemon().health() * 3).toLocaleString('en-US')"></td>
+            </tr>
+            <tr>
+                <td>Damage required (after types)</td>
+                <td data-bind="text: Math.ceil($data.enemyPokemon().health() * 3 / 30).toLocaleString('en-US')"></td>
+            </tr>
+            <tr>
+                <td>Battle Points</td>
+                <td data-bind="text: Math.round($data.stage() * Math.max($data.stage() / 100, 1)).toLocaleString()"></td>
+            </tr>
+            <tr>
+                <td>Pokédollars</td>
+                <td data-bind="text: ($data.stage() * 100 * Math.max($data.stage() / 100, 1)).toLocaleString()"></td>
+            </tr>
+            <tr>
+                <td>Egg Steps per Pokémon</td>
+                <td data-bind="text: +Math.sqrt($data.stage()).toFixed(2)"></td>
+            </tr>
+            <tr>
+                <td>Gems per Pokémon</td>
+                <td data-bind="text: Math.ceil($data.stage() / 80).toLocaleString()"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
