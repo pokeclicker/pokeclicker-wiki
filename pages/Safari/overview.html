@@ -1,0 +1,119 @@
+<!-- ko let: {
+    magicBallBonusList: App.game.oakItems.itemList[OakItemType.Magic_Ball].bonusList.map((b, i) => ({ level: i, bonus: b })),
+    safariLevel: ko.observable(1),
+    magicBallBonus: ko.observable(10),
+} -->
+<h3>Safari Catch Rate</h3>
+<div class="table-responsive">
+    <table class="table table-hover table-striped table-bordered">
+        <tbody>
+            <tr>
+                <th>Safari Level</th>
+                <th>
+                    <input type="number" min="1" step="1" max="40" value="1" data-bind="textInput: safariLevel" />
+                </th>
+            </tr>
+            <tr>
+                <th>Magic Ball</th>
+                <th>
+                    <select class="form-select form-select-sm" data-bind="
+                            options: [{ bonus: 0 }, ...magicBallBonusList],
+                            optionsText: (item)=>
+                        {
+                        return item.bonus == 0 ? 'Not Equipped' : `Level ${item.level}`;
+                        },
+                        optionsValue: 'bonus',
+                        value: magicBallBonus" autocomplete="off">
+                    </select>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="accordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-6haol" aria-expanded="false">
+                Catch Rate Table
+            </button>
+        </h2>
+        <div id="collapse-6haol" class="accordion-collapse collapse" style="">
+            <div class="accordion-body">
+                <!-- ko with: [{ value: 0, label: 'Safari Zone' }, { value: 1, label: 'National Park' }, { value: 3, label: 'Great Marsh' }, { value: 5, label: 'Friend Safari' }, { value: 6, label: 'Hoppy Town Fishing Pond' }] -->
+                <ul class="nav nav-tabs" role="tablist" data-bind="foreach: $data">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" type="button" role="tab"
+                                data-bind="text: $data.label, attr: { id: `tab-${$index()}`, 'data-bs-target': `#tab-${$index()}-pane` }, css: { active: $index() == 0 }"></button>
+                    </li>
+                </ul>
+                <div class="tab-content mb-2" data-bind="foreach: $data">
+                    <div class="tab-pane fade pt-2" role="tabpanel" data-bind="attr: { id: `tab-${$index()}-pane` }, css: { show: $index() == 0, active: $index() == 0 }">
+                        <h4 data-bind="text: `${$data.label}`"></h4>
+                        <table class="table table-hover table-striped table-bordered " data-paging="false" data-filter="false">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Pokémon</th>
+                                    <th>Base Catch Rate</th>
+                                    <th>Base Catch Chance</th>
+                                    <th>Best Catch Chance</th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: pokemonList.filter((p) =>
+                                ($data.value == 5 ? (PokemonLocations.isObtainableAndNotEvable(p.name)
+                                && PokemonHelper.calcNativeRegion(p.name) <= GameConstants.MAX_AVAILABLE_REGION) || SafariPokemonList.list[GameConstants.Region.kalos]().find(x =>x.name == p.name) : PokemonLocations.getPokemonLocations(p.name)[PokemonLocationType.Safari]!== undefined && (Object.keys(PokemonLocations.getPokemonLocations(p.name)[PokemonLocationType.Safari]) == $data.value || Object.keys(PokemonLocations.getPokemonLocations(p.name)[PokemonLocationType.Safari]).includes(String($data.value))  )  ) ) ">
+                                <tr class="align-middle">
+                                    <td data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`, attr: { 'data-sort': $data.id }"></td>
+                                    <td>
+                                        <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a>
+                                    </td>
+                                    <td data-bind="text: $data.catchRate"></td>
+                                    <td data-bind="text: ($data.catchRate / 6 ).toFixed(2)  + '%'"></td>
+                                    <td data-bind="text: (() =>
+                                        {
+                                        const level = safariLevel() < 0 ? 1 : safariLevel() > 40 ? 40 : safariLevel();
+                                        const multiplier = ((level - 1) /  50);
+                                        const baseEscape = 30;
+                                        const basecatchRate = ($data.catchRate / 6 ) + magicBallBonus() + (multiplier * 10);
+
+                                        function eatingCatch (catchChance) { return (catchChance / (2 - multiplier)) > 100 ? 100 : (catchChance / (2 - multiplier)); }
+                                        function angryCatch (catchChance)  { return (catchChance * (2 + multiplier)) > 100 ? 100 :  (catchChance * (2 + multiplier)); }
+                                        function nanabCatch (catchChance)  { return (catchChance * (1.5 + multiplier)) > 100 ? 100 : (catchChance * (1.5 + multiplier)); }
+                                        function eatingEscape (escapeChance) { return (escapeChance / (4 + multiplier));}
+                                        function angryEscape (escapeChance) { return (escapeChance * (2 - multiplier));}
+                                        function razzEscape (escapeChance) { return (escapeChance / (1.5 + multiplier));}
+
+
+                                        const eatingEscapeChance = 1-(eatingEscape(baseEscape) / 100);
+                                        const angryEscapeChance = 1-(angryEscape(baseEscape) / 100);
+                                        const razzEatingEscapeChance = 1-(razzEscape(eatingEscape(baseEscape)) / 100);
+                                        const razzAngryEscapeChance = 1-(razzEscape(angryEscape(baseEscape)) / 100);
+
+
+                                        const catchMethods = {
+                                        Bait : eatingEscapeChance  * eatingCatch(basecatchRate),
+                                        Rock : angryEscapeChance * angryCatch(basecatchRate),
+                                        BaitRock : eatingEscapeChance * angryEscapeChance * angryCatch(basecatchRate),
+                                        Nanab : eatingEscapeChance  * nanabCatch(eatingCatch(basecatchRate)),
+                                        NanabRock : eatingEscapeChance  * angryEscapeChance *  nanabCatch(angryCatch(basecatchRate)),
+                                        Razz : razzEatingEscapeChance  *  eatingCatch(basecatchRate),
+                                        RazzRock : razzEatingEscapeChance * razzAngryEscapeChance * angryCatch(basecatchRate)
+                                        };
+
+                                        const largestVariable = Object.keys(catchMethods).reduce((x, y) => catchMethods[x] > catchMethods[y] ? x : y);
+                                        const methodText = largestVariable.replace('Rock', ' Rock');
+
+                                        return (`${methodText} with ${catchMethods[largestVariable].toFixed(2)}% chance on the first ball`).toLocaleString();
+                                        })()">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /ko -->
