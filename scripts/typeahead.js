@@ -338,6 +338,7 @@ const searchOptions = [
     display: 'Roaming Pokémon',
     type: 'Roaming Pokémon',
     page: '',
+    redirects: ['Boosted Route']
   },
   // Baby Pokémon
   {
