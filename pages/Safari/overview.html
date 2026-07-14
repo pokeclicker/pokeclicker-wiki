@@ -71,55 +71,55 @@
                                     <td data-bind="text: ($data.catchRate / 6 ).toFixed(2)  + '%'"></td>
                                     <td data-bind="text: (() =>
                                         {
-                                        const level = Math.max(0, Math.min(safariLevel(),Safari.maxSafariLevel));
-                                        const safariPoke = new SafariPokemon($data.name);
-                                        safariPoke.levelModifier = (level - 1) / 50;
+                                            const level = Math.max(0, Math.min(safariLevel(),Safari.maxSafariLevel));
+                                            const safariPoke = new SafariPokemon($data.name);
+                                            safariPoke.levelModifier = (level - 1) / 50;
 
 
-                                        function catchFactor(eating, angry, bait){
-                                        let catchF = safariPoke.baseCatchFactor + magicBallBonus() + (safariPoke.levelModifier * 10);
-                                        if (eating > 0) {
-                                        catchF /= 2 - safariPoke.levelModifier;
-                                        }
-                                        if (angry > 0) {
-                                        catchF *= 2 + safariPoke.levelModifier;
-                                        }
-                                        if (bait === BaitType.Nanab) {
-                                        catchF *= 1.5 + safariPoke.levelModifier;
-                                        }
+                                            function catchFactor(eating, angry, bait){
+                                                let catchF = safariPoke.baseCatchFactor + magicBallBonus() + (safariPoke.levelModifier * 10);
+                                                if (eating > 0) {
+                                                    catchF /= 2 - safariPoke.levelModifier;
+                                                    }
+                                                    if (angry > 0) {
+                                                    catchF *= 2 + safariPoke.levelModifier;
+                                                    }
+                                                    if (bait === BaitType.Nanab) {
+                                                    catchF *= 1.5 + safariPoke.levelModifier;
+                                                    }
 
-                                        return Math.min(100, catchF);
-                                        }
+                                                    return Math.min(100, catchF);
+                                            }
 
-                                        function escapeFactor(eating, angry, bait){
-                                        let escapeF = safariPoke.baseEscapeFactor;
-                                        if (eating > 0) {
-                                        escapeF /= 4 + safariPoke.levelModifier;
-                                        }
-                                        if (angry > 0) {
-                                        escapeF *= 2 - safariPoke.levelModifier;
-                                        }
-                                        if (bait === BaitType.Razz) {
-                                        escapeF /= 1.5 + safariPoke.levelModifier;
-                                        }
+                                            function escapeFactor(eating, angry, bait){
+                                                let escapeF = safariPoke.baseEscapeFactor;
+                                                    if (eating > 0) {
+                                                    escapeF /= 4 + safariPoke.levelModifier;
+                                                    }
+                                                    if (angry > 0) {
+                                                    escapeF *= 2 - safariPoke.levelModifier;
+                                                    }
+                                                    if (bait === BaitType.Razz) {
+                                                    escapeF /= 1.5 + safariPoke.levelModifier;
+                                                }
 
-                                        return (1-(escapeF/100));
-                                        }
+                                                return (1-(escapeF/100));
+                                            }
 
-                                        const catchMethods = {
-                                        Bait : escapeFactor(1,0,0) * catchFactor(1,0,0),
-                                        Rock : escapeFactor(0,1,0) * catchFactor(0,1,0),
-                                        BaitRock : escapeFactor(1,0,0) * escapeFactor(0,1,0) * catchFactor(0,1,0),
-                                        Nanab : escapeFactor(1,0,BaitType.Nanab) * catchFactor(1,0,BaitType.Nanab),
-                                        NanabRock : escapeFactor(1,0,BaitType.Nanab) * escapeFactor(0,1,0) * catchFactor(0,1,BaitType.Nanab),
-                                        Razz : escapeFactor(1,0,BaitType.Razz)  * catchFactor(1,0,BaitType.Razz),
-                                        RazzRock : escapeFactor(1,0,BaitType.Razz) * escapeFactor(0,1,BaitType.Razz) * catchFactor(0,1,BaitType.Razz),
-                                        };
+                                            const catchMethods = {
+                                            Bait : escapeFactor(1,0,0) * catchFactor(1,0,0),
+                                            Rock : escapeFactor(0,1,0) * catchFactor(0,1,0),
+                                            BaitRock : escapeFactor(1,0,0) * escapeFactor(0,1,0) * catchFactor(0,1,0),
+                                            Nanab : escapeFactor(1,0,BaitType.Nanab) * catchFactor(1,0,BaitType.Nanab),
+                                            NanabRock : escapeFactor(1,0,BaitType.Nanab) * escapeFactor(0,1,0) * catchFactor(0,1,BaitType.Nanab),
+                                            Razz : escapeFactor(1,0,BaitType.Razz)  * catchFactor(1,0,BaitType.Razz),
+                                            RazzRock : escapeFactor(1,0,BaitType.Razz) * escapeFactor(0,1,BaitType.Razz) * catchFactor(0,1,BaitType.Razz),
+                                            };
 
-                                        const largestVariable = Object.keys(catchMethods).reduce((x, y) => catchMethods[x] > catchMethods[y] ? x : y);
-                                        const methodText = largestVariable.replace('Rock', ' Rock');
+                                            const largestVariable = Object.keys(catchMethods).reduce((x, y) => catchMethods[x] > catchMethods[y] ? x : y);
+                                            const methodText = largestVariable.replace('Rock', ' Rock');
 
-                                        return (`${methodText} with ${catchMethods[largestVariable].toFixed(2)}% chance on the first ball`).toLocaleString();
+                                            return (`${methodText} with ${catchMethods[largestVariable].toFixed(2)}% chance on the first ball`).toLocaleString();
                                         })()">
                                     </td>
                                 </tr>
