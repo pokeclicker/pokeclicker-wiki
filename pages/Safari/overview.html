@@ -60,8 +60,8 @@
                                 </tr>
                             </thead>
                             <tbody data-bind="foreach: pokemonList.filter((p) =>
-                                ($data.value == 5 ? (PokemonLocations.isObtainableAndNotEvable(p.name)
-                                && PokemonHelper.calcNativeRegion(p.name) <= GameConstants.MAX_AVAILABLE_REGION) || SafariPokemonList.list[GameConstants.Region.kalos]().find(x =>x.name == p.name) : PokemonLocations.getPokemonLocations(p.name)[PokemonLocationType.Safari]!== undefined && (Object.keys(PokemonLocations.getPokemonLocations(p.name)[PokemonLocationType.Safari]) == $data.value || Object.keys(PokemonLocations.getPokemonLocations(p.name)[PokemonLocationType.Safari]).includes(String($data.value))  )  ) ) ">
+                                ($data.value == 5 ? (PokemonLocations.isObtainableAndNotEvable(p.name) && PokemonHelper.calcNativeRegion(p.name) <= GameConstants.MAX_AVAILABLE_REGION) || SafariPokemonList.list[GameConstants.Region.kalos]().find(x =>x.name == p.name) 
+                                : PokemonLocations.getPokemonLocations(p.name)[PokemonLocationType.Safari]!== undefined && Object.keys(PokemonLocations.getPokemonLocations(p.name)[PokemonLocationType.Safari]).includes(String($data.value))) ) ">
                                 <tr class="align-middle">
                                     <td data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`, attr: { 'data-sort': $data.id }"></td>
                                     <td>
