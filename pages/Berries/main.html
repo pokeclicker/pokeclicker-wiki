@@ -71,12 +71,6 @@
                             <ko data-bind="text: (Math.floor($data.farmValue / (4 + $data.growthTime[PlotStage.Bloom] / 1800))).toLocaleString()"></ko>
                         </td>
                     </tr>
-                    <!-- ko if: FarmController.getHint($data.type) -->
-                    <tr>
-                        <td>Hint</td>
-                        <td data-bind="text: FarmController.getHint($data.type)"></td>
-                    </tr>
-                    <!-- /ko -->
                     <tr>
                         <th class="text-center" colspan="2">Flavors</th>
                     </tr>
@@ -85,6 +79,16 @@
                         <td data-bind="text: $data"></td>
                         <td data-bind="text: $parent.flavors[$index()].value"></td>
                     </tr>
+                    <!-- /ko -->
+                    <!-- ko if: FarmController.getHint($data.type) -->
+                    <tr>
+                        <th class="text-center" colspan="2">Mutation Hints</th>
+                    </tr>
+                    <!-- ko foreach: App.game.farming.mutations.filter(mutation => mutation.mutatedBerry === $data.type).map(m=>m.hint) -->
+                    <tr>
+                        <td  colspan="2" data-bind="text: $data"></td>
+                    </tr>
+                    <!-- /ko -->
                     <!-- /ko -->
                 </tbody>
             </table>
