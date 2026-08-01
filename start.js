@@ -26,4 +26,5 @@ function bundle() {
 RUN OUR LOCAL SERVER
 */
 const FiveServer = require('five-server').default
-new FiveServer().start();
+// Fall back to index.html so deep links like /Pokémon/Charmander/ work in dev
+new FiveServer().start({ file: 'index.html' });

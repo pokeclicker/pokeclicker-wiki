@@ -17,10 +17,10 @@
     })">
         <tr class="clickable align-middle" data-bind="
             click: (_, e) => { return Wiki.gotoPageClick(e, 'Gyms', $data[0]); },
-            attr: { 'data-href': `#!Gyms/${$data[0]}` }">
+            attr: { 'data-href': `/Gyms/${$data[0]}/` }">
             <td data-bind="text: $index() + 1"></td>
             <td>
-                <a class="text-decoration-none" href="#!" data-bind="text: $data[1].leaderName.replace(/\d/g, ''), attr: { href: `#!Gyms/${$data[0]}` }"></a>
+                <a class="text-decoration-none" href="/" data-bind="text: $data[1].leaderName.replace(/\d/g, ''), attr: { href: `/Gyms/${$data[0]}/` }"></a>
             </td>
             <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[($data[1].parent ?? TownList[$data[1].town])?.region] ?? '') || '-'"></td>
             <td data-bind="text: $data[1].parent?.name ?? $data[1].town"></td>

@@ -61,4 +61,4 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 - Starf is not used in any Berry trades.
 
 #### Farm Setups
-- Increasing [Shiny Chance](#!Shiny_Chance)
+- Increasing [Shiny Chance](/Shiny_Chance/)

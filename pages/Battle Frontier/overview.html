@@ -14,7 +14,7 @@
                 <td data-bind="text: $data.stage.toLocaleString(), attr: { 'data-order': $data.stage }"></td>
                 <td>
                     <ko data-bind="text: $data.description"></ko>
-                    <img data-bind="attr: { src: `./pokeclicker/docs/${$data.image}` }" width="28px"/>
+                    <img data-bind="attr: { src: `/pokeclicker/docs/${$data.image}` }" width="28px"/>
                 </td>
                 <td data-bind="text: (() => {
                     BattleFrontierRunner.stage = ko.observable($data.stage);

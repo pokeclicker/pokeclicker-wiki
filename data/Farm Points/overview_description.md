@@ -20,7 +20,7 @@ Farm Points are gained per harvest. The number of berries harvested (or increasi
 *→ See: [[Farm/Setups]]*
 
 * Farm Setups that speed up berry growth rate can help you earn Farm Points faster.
-* [Colbur Nonsense](#!Farm/Setups#nonsense) is an active play setup for gaining Farm Points quickly.
+* [Colbur Nonsense](/Farm/Setups/#nonsense) is an active play setup for gaining Farm Points quickly.
 
 #### Efficient Berries
 Consult the Berry Farm Point Table below for most efficient berries (sort by Farm Points per second).

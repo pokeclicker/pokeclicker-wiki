@@ -99,9 +99,9 @@ Spoilers!
 ```
 [[Pokemon]] or [[Pokemon/Charmander]] or @[[Wiki Guide]]
 ```
-[Evolves into Charmeleon](#!Pokemon/Charmander)
+[Evolves into Charmeleon](/Pokemon/Charmander/)
 ```
-Link to a page with text other than its name. [Evolves into Charmeleon](#!Pokemon/Charmander)
+Link to a page with text other than its name. [Evolves into Charmeleon](/Pokemon/Charmander/)
 ```
 [PokéClicker Companion](https://companion.pokeclicker.com)
 ```
@@ -119,12 +119,12 @@ Use anchors to send the reader to a different section on the same page.  Anchors
 [scroll to header info](#header-info) or [scroll to here](#here) {#here}
 ```
 
-Combining the above, you can link to an anchor on another page with `[link text](#!page/subpage#anchor)`
+Combining the above, you can link to an anchor on another page with `[link text](/page/subpage/#anchor)`
 
-[Harvest Aura Setups](#!Farm/Setups#harvest)
+[Harvest Aura Setups](/Farm/Setups/#harvest)
 
 ```
-[Harvest Aura Setups](#!Farm/Setups#harvest)
+[Harvest Aura Setups](/Farm/Setups/#harvest)
 ```
 
 ### Images {#images}

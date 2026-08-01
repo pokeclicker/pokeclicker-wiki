@@ -8,7 +8,7 @@
     <tbody data-bind="foreach: ChangelogItems.filter(i => i.type.label === 'UPDATE')">
         <tr class="clickable" data-bind="
             click: (_, e) => { return Wiki.gotoPageClick(e, 'Game Updates', $data.version); },
-            attr: { 'data-href': `#!Game Updates/${$data.version}` }
+            attr: { 'data-href': `/Game Updates/${$data.version}/` }
         ">
             <td data-bind="text: $data.version.replace('v', '')"></td>
             <td data-bind="text: $data.description.match(/\-(?=[^-]*$)(.+)<\/code>/)[1].trim()"></td>

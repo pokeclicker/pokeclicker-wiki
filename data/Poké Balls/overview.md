@@ -1,5 +1,5 @@
 ## Catch Filters
-Catch filters are a set of conditions that dictate what Pokéballs will be thrown (or not thrown) on different Pokémon. New filters can be created to aid with more personal needs e.g. for [[Catch Type Quests]] or gaining [EVs](#!Pokérus#Effort_Values) on certain Pokémon.
+Catch filters are a set of conditions that dictate what Pokéballs will be thrown (or not thrown) on different Pokémon. New filters can be created to aid with more personal needs e.g. for [[Catch Type Quests]] or gaining [EVs](/Pokérus/#Effort_Values) on certain Pokémon.
 
 Catch filter priority is set from top to bottom by default, so higher filters have a higher priority.
 

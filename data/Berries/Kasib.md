@@ -1,6 +1,6 @@
 ## Mutation Strategy {#mutation}
 ### Possible Planting Formations {#planting}
-Kasib cannot be mutated. Instead, Kasib can spawn once you have unlocked any Gen 4 or Gen 5 berry (any [ID #37](#!Berries/Occa) or higher) and a berry withers in the Farm.
+Kasib cannot be mutated. Instead, Kasib can spawn once you have unlocked any Gen 4 or Gen 5 berry (any [ID #37](/Berries/Occa/) or higher) and a berry withers in the Farm.
 
 Whenever a berry withers, Kasib has a **5% of spawning** in its place, as long as there are no [[Berries/Colbur]] berries in the Farm. Spawning a Kasib is **not** considered a mutation.
 

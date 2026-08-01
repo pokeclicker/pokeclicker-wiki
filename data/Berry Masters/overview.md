@@ -68,11 +68,11 @@ Trades prices do not increase, regardless of quantity exchanged. All players hav
 
 Berries generations are based on ID number. All berries have the same chance of being selected among its generation.
 
-- Generation 1 is [Cheri #1](/#!Berries/Cheri) → [Sitrus #8](/#!Berries/Sitrus)
-- Generation 2 is [Persim #9](/#!Berries/Persim) → [Lum #20](/#!Berries/Lum)
-- Generation 3 is [Pomeg #21](/#!Berries/Pomeg) → [Pinkan #36](/#!Berries/Pinkan)
-- Generation 4 is [Occa #37](/#!Berries/Occa) → [Roseli #54](/#!Berries/Roseli)
-- Generation 5 is [Snover #55](/#!Berries/Snover) and up, but Berry Masters will only ever request Berries with a total growth time of under 24 hours. ([[Berries/Micle]], [[Berries/Custap]], [[Berries/Jaboca]], [[Berries/Rowap]], [[Berries/Kee]] & [[Berries/Maranga]])
+- Generation 1 is [Cheri #1](/Berries/Cheri/) → [Sitrus #8](/Berries/Sitrus/)
+- Generation 2 is [Persim #9](/Berries/Persim/) → [Lum #20](/Berries/Lum/)
+- Generation 3 is [Pomeg #21](/Berries/Pomeg/) → [Pinkan #36](/Berries/Pinkan/)
+- Generation 4 is [Occa #37](/Berries/Occa/) → [Roseli #54](/Berries/Roseli/)
+- Generation 5 is [Snover #55](/Berries/Snover/) and up, but Berry Masters will only ever request Berries with a total growth time of under 24 hours. ([[Berries/Micle]], [[Berries/Custap]], [[Berries/Jaboca]], [[Berries/Rowap]], [[Berries/Kee]] & [[Berries/Maranga]])
 
 #### Pokémon {#berrypokemon}
 All Pokémon below are exclusively obtained through berry trades unless otherwise noted.

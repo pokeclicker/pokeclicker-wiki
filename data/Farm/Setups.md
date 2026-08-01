@@ -365,7 +365,7 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 
 
 ## Egg Step Gain Setups
-Setups to maximize egg step gains for efficient breeding in the [[Hatchery]]. Each ripe [[Berries/Chople]] plant multiplies Egg Gain by **1.03x** or **1.0609x** (when boosted by [[Berries/Lum]]). This effect stacks with every Chople plant, as well as with other [Egg Step](#!Hatchery#eggstepgain) modifiers.
+Setups to maximize egg step gains for efficient breeding in the [[Hatchery]]. Each ripe [[Berries/Chople]] plant multiplies Egg Gain by **1.03x** or **1.0609x** (when boosted by [[Berries/Lum]]). This effect stacks with every Chople plant, as well as with other [Egg Step](/Hatchery/#eggstepgain) modifiers.
 
 Specific layouts must be used to prevent Chople berries from mutating into [[Berries/Chilan]], which can occur when a Chople is surrounded by three or more other Choples.
 
@@ -689,7 +689,7 @@ Berry | Planting Time with No Modifier | Planting Time with Mulch/Sprayduck | Pl
 ###### [Back to Top](#) {.text-end}
 
 ## EV Gain Setups
-Setups to maximize [EV gains](#!Pokérus). Each ripe [[Berries/Rowap]] plant multiplies EV yields by **1.015x** or **1.04545x** (when boosted by [[Berries/Lum]]). This effect stacks with every Rowap plant, as well as with other [EV Modifiers](#evmodifiers).
+Setups to maximize [EV gains](/Pokérus/). Each ripe [[Berries/Rowap]] plant multiplies EV yields by **1.015x** or **1.04545x** (when boosted by [[Berries/Lum]]). This effect stacks with every Rowap plant, as well as with other [EV Modifiers](#evmodifiers).
 
 ### Rowap + Lum (+ Petaya)
 Using 4 Lum and filling the remaining spots with Rowap provides the highest EV gain multiplier. For a longer uptime, replace a Rowap with a [[Berries/Petaya]]. For an even longer uptime (3.5 years), use the [Infinite Farm](#infinite) setup.

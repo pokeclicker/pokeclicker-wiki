@@ -38,6 +38,6 @@ In addition to selling farming supplies, Berry Masters have a rotating selection
 Berry Masters will only ever request berries with a Growth Time of under 24 hours.
 
 #### Battle Café {#battlecafe}
-*→ See: [Battle Café](#!Battle_Cafe)*
+*→ See: [Battle Café](/Battle_Cafe/)*
 
 At the Battle Café in Galar, you can spin [[Pokemon/Milcery]] with Berries to have them evolve into various forms of **Alcremie**. This is the only way to acquire Alcremies.

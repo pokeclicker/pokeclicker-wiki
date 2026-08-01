@@ -26,7 +26,7 @@ $\text{Average Dungeon Token Per Second} = \large \frac{\text{Dungeon Tokens} \t
 
 | Modifer | Multiplier Amount |
 | ----- | ----- |
-| [Achievement](#!Achievements) Bonus % | Variable |
+| [Achievement](/Achievements/) Bonus % | Variable |
 | [[File:items/battleItem/Token_collector.png\|24px]] [[Items/Token Collector]] | 1.5x |
 
 ---

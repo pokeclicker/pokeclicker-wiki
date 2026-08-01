@@ -1,6 +1,6 @@
 Flutes are items that can be activated for global boosts. Each Flute is associated with 3 different types and requires [[Gems]] of those type to use.
 
-Flutes can be purchased in [[Towns/Fallarbor Town]] and [[Towns/Undella Town]], after you have obtained the Heat Badge from [Lavaridge Town Gym](#!Gyms/Lavaridge_Town) in [[Regions/Hoenn]].
+Flutes can be purchased in [[Towns/Fallarbor Town]] and [[Towns/Undella Town]], after you have obtained the Heat Badge from [Lavaridge Town Gym](/Gyms/Lavaridge_Town/) in [[Regions/Hoenn]].
 
 ----
 
@@ -10,7 +10,7 @@ Flutes can be toggled on and off freely. Active Flutes consume 1 Gem (of each ty
 For example, having both the [[Items/Red Flute]] and [[Items/Blue Flute]] active will use 2 Fire, 2 Rock, 2 Dragon, 2 Water, 2 Bug, and 2 Ghost Gems every second. Having all 6 Flutes active uses 6 Gems of every type per second.
 
 #### Effect Bonus
-The bonus of each Flute is determined by your [achievement bonus](#!Achievements):
+The bonus of each Flute is determined by your [achievement bonus](/Achievements/):
 
 $Flute Bonus = \large 0.02 * (1 + \frac{\text{Achievement Bonus \%}}{100} )${.overflow-auto .text-center}
 

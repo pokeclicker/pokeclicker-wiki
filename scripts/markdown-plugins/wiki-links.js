@@ -1,5 +1,6 @@
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
+var { segment } = require('../wiki-url');
 
 var plugin = Plugin(
   // regexp to match
@@ -7,7 +8,7 @@ var plugin = Plugin(
 
   // this function will be called when something matches
   (match, utils) => {
-    return `<a href="#!${utils.escape(match[1])}/${utils.escape(match[3] || '')}">${utils.escape(match[3] || match[1])}</a>`;
+    return `<a href="/${segment(match[1])}/${match[3] ? `${segment(match[3])}/` : ''}">${utils.escape(match[3] || match[1])}</a>`;
   }
 );
 

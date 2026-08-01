@@ -23,8 +23,8 @@
         <div data-bind="visible: $data.evolutions?.filter(e => e.trigger !== EvoTrigger.NONE).length" class="mb-3">
             <h3>Evolves into:</h3>
             <!-- ko foreach: [...new Set($data.evolutions?.filter(e => e.trigger !== EvoTrigger.NONE).map(e => e.evolvedPokemon))] -->
-                <a href="#!" class="badge text-bg-secondary" data-bind="
-                    attr: { href: `#!Pokemon/${$data}` },
+                <a href="/" class="badge text-bg-secondary" data-bind="
+                    attr: { href: `/Pokemon/${$data}/` },
                     text: $data"></a>
             <!-- /ko -->
         </div>
@@ -44,7 +44,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-route" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            <img src="/images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
                             Routes
                         </button>
                     </h4>
@@ -56,7 +56,7 @@
                                     <span class="input-group-text">
                                         <a class="text-decoration-none text-body" data-bind="
                                             text: $data.routeName.replace(new RegExp(`^${GameConstants.Region[$parents[1][0]]}`, 'i'), ''),
-                                            attr: { href: `#!Routes/${$data.routeName}` }"></a>
+                                            attr: { href: `/Routes/${$data.routeName}/` }"></a>
                                     </span>
                                     <!-- ko if: $parent.requirements -->
                                     <span class="input-group-text" style="cursor: help;" data-bind="tooltip: {
@@ -80,7 +80,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-roaming" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            <img src="/images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
                             Roaming
                         </button>
                     </h4>
@@ -90,7 +90,7 @@
                                 <span class="input-group-text">
                                     <a class="text-decoration-none text-body" data-bind="
                                         text: ($data.roamingGroup?.name ?? GameConstants.camelCaseToString(GameConstants.Region[$data.region])),
-                                        attr: { href: `#!Roaming Pokémon` }"></a>
+                                        attr: { href: `/Roaming Pokémon/` }"></a>
                                 </span>
                                 <!-- ko if: $data.requirements -->
                                 <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
@@ -113,7 +113,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-dungeon" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            <img src="/images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
                             Dungeons
                         </button>
                     </h4>
@@ -129,7 +129,7 @@
                                 <div class="input-group input-group-sm w-auto">
                                     <span class="input-group-text">
                                         <a class="text-decoration-none text-body" data-bind="
-                                            text: $data.dungeon, attr: { href: `#!Dungeons/${$data.dungeon}` }"></a>
+                                            text: $data.dungeon, attr: { href: `/Dungeons/${$data.dungeon}/` }"></a>
                                     </span>
                                     <!-- ko if: $data.requirements -->
                                     <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
@@ -153,7 +153,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-dungeon-boss" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            <img src="/images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
                             Dungeon Boss
                         </button>
                     </h4>
@@ -169,7 +169,7 @@
                                 <div class="input-group input-group-sm w-auto">
                                     <span class="input-group-text">
                                         <a class="text-decoration-none text-body" data-bind="
-                                            text: $data.dungeon, attr: { href: `#!Dungeons/${$data.dungeon}` }"></a>
+                                            text: $data.dungeon, attr: { href: `/Dungeons/${$data.dungeon}/` }"></a>
                                     </span>
                                     <!-- ko if: $data.requirements -->
                                     <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
@@ -193,7 +193,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-dungeon-chest" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            <img src="/images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
                             Dungeon Chests
                         </button>
                     </h4>
@@ -202,7 +202,7 @@
                             <div class="input-group input-group-sm w-auto">
                                 <span class="input-group-text">
                                     <a class="text-decoration-none text-body" data-bind="
-                                        text: $data.dungeon, attr: { href: `#!Dungeons/${$data.dungeon}` }"></a>
+                                        text: $data.dungeon, attr: { href: `/Dungeons/${$data.dungeon}/` }"></a>
                                 </span>
                                 <!-- ko if: $data.requirements -->
                                 <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
@@ -225,7 +225,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-level-evolution" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
+                            <img src="/images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
                             Level Evolutions
                         </button>
                     </h4>
@@ -233,7 +233,7 @@
                         <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.Evolution]?.filter(e => e.stone == null || e.stone == GameConstants.StoneType.None))">
                             <div class="input-group input-group-sm w-auto">
                                 <span class="input-group-text">
-                                    <a class="text-decoration-none text-body" data-bind="text: $data.basePokemon, attr: { href: `#!Pokemon/${$data.basePokemon}` }"></a>
+                                    <a class="text-decoration-none text-body" data-bind="text: $data.basePokemon, attr: { href: `/Pokemon/${$data.basePokemon}/` }"></a>
                                 </span>
                                 <!-- ko if: $data.restrictions -->
                                 <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
@@ -256,7 +256,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-item-evolution" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            <img src="/images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
                             Item Evolutions
                         </button>
                     </h4>
@@ -265,7 +265,7 @@
                             <div class="input-group input-group-sm w-auto">
                                 <span class="input-group-text">
                                     <a class="text-decoration-none text-body" data-bind="
-                                        text: $data.basePokemon, attr: { href: `#!Pokemon/${$data.basePokemon}` }"></a>
+                                        text: $data.basePokemon, attr: { href: `/Pokemon/${$data.basePokemon}/` }"></a>
                                 </span>
                                 <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
                                     title: Wiki.gameHelper.getEvolutionHints($data).join('<br/>') ?? '',
@@ -286,7 +286,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-egg" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
+                            <img src="/images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
                             Eggs
                         </button>
                     </h4>
@@ -295,7 +295,7 @@
                             <div class="input-group input-group-sm w-auto">
                                 <span class="input-group-text">
                                     <a class="text-decoration-none text-body" data-bind="
-                                        text: `${ItemList[$data].displayName}`, attr: { href: `#!Items/${ItemList[$data].displayName}` }"></a>
+                                        text: `${ItemList[$data].displayName}`, attr: { href: `/Items/${ItemList[$data].displayName}/` }"></a>
                                 </span>
                             </div>
                         </div>
@@ -310,7 +310,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-baby" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
+                            <img src="/images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
                             Breeding
                         </button>
                     </h4>
@@ -318,7 +318,7 @@
                         <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.Baby])">
                             <div class="input-group input-group-sm w-auto">
                                 <span class="input-group-text">
-                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Pokemon/${$data}` }"></a>
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `/Pokemon/${$data}/` }"></a>
                                 </span>
                             </div>
                         </div>
@@ -333,7 +333,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-fossil" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
+                            <img src="/images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
                             Fossils
                         </button>
                     </h4>
@@ -341,7 +341,7 @@
                         <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.Fossil])">
                             <div class="input-group input-group-sm w-auto">
                                 <span class="input-group-text">
-                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Items/${$data}` }"></a>
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `/Items/${$data}/` }"></a>
                                 </span>
                             </div>
                         </div>
@@ -356,8 +356,8 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-shop" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }, visible: ItemList[Wiki.pageName()]?.ignoreEV === true"/>
-                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }, visible: !ItemList[Wiki.pageName()]?.ignoreEV"/>
+                            <img src="/images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }, visible: ItemList[Wiki.pageName()]?.ignoreEV === true"/>
+                            <img src="/images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }, visible: !ItemList[Wiki.pageName()]?.ignoreEV"/>
                             Shops
                         </button>
                     </h4>
@@ -365,7 +365,7 @@
                         <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.Shop])">
                             <div class="input-group input-group-sm w-auto">
                                 <span class="input-group-text">
-                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Towns/${$data}` }"></a>
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `/Towns/${$data}/` }"></a>
                                 </span>
                             </div>
                         </div>
@@ -380,7 +380,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-trade" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            <img src="/images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
                             Trades
                         </button>
                     </h4>
@@ -388,7 +388,7 @@
                         <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.Trade])">
                             <div class="input-group input-group-sm w-auto">
                                 <span class="input-group-text">
-                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Towns/${$data}` }"></a>
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `/Towns/${$data}/` }"></a>
                                 </span>
                             </div>
                         </div>
@@ -403,7 +403,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-safari" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            <img src="/images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
                             Safari Zone
                         </button>
                     </h4>
@@ -415,7 +415,7 @@
                                     <span class="input-group-text">
                                         <a class="text-decoration-none text-body" data-bind="
                                             text: `Spawn Chance - ${$data.chance}%`,
-                                            attr: { href: `#!Towns/${Object.values(TownList).find(t => t.region == $parents[1][0] && t.content.filter(c => c instanceof SafariTownContent).length).name}` }"></a>
+                                            attr: { href: `/Towns/${Object.values(TownList).find(t => t.region == $parents[1][0] && t.content.filter(c => c instanceof SafariTownContent).length).name}/` }"></a>
                                     </span>
                                     <!-- ko if: $data.requirement -->
                                     <span class="input-group-text" style="cursor: help;" data-bind="tooltip: {
@@ -441,7 +441,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-friend-safari" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            <img src="/images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
                             Friend Safari
                         </button>
                     </h4>
@@ -453,7 +453,7 @@
                                     <span class="input-group-text">
                                         <a class="text-decoration-none text-body" data-bind="
                                             text: `In ${SafariPokemonList.getEnvironmentByPokemonType(Wiki.pageName()).map(env => SafariEnvironments[env]).join(', ')}`,
-                                            attr: { href: `#!Towns/Friend Safari` }"></a>
+                                            attr: { href: `/Towns/Friend Safari/` }"></a>
                                     </span>
                                     <!-- ko if: requireCaught -->
                                     <span class="input-group-text" style="cursor: help;" data-bind="tooltip: {
@@ -477,7 +477,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-shadow" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            <img src="/images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
                             Shadow Pokémon
                         </button>
                     </h4>
@@ -485,7 +485,7 @@
                         <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: $data[PokemonLocationType.ShadowPokemon]">
                             <div class="input-group input-group-sm w-auto">
                                 <span class="input-group-text">
-                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Dungeons/${$data}` }"></a>
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `/Dungeons/${$data}/` }"></a>
                                 </span>
                             </div>
                         </div>
@@ -500,7 +500,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-battle-frontier" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
+                            <img src="/images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
                             Battle Frontier
                         </button>
                     </h4>
@@ -508,7 +508,7 @@
                         <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.BattleFrontier])">
                             <div class="input-group input-group-sm w-auto">
                                 <span class="input-group-text">
-                                    <a class="text-decoration-none text-body" data-bind="text: `Stage ${$data}`, attr: { href: `#!Battle Frontier` }"></a>
+                                    <a class="text-decoration-none text-body" data-bind="text: `Stage ${$data}`, attr: { href: `/Battle Frontier/` }"></a>
                                 </span>
                                 <!-- ko with: BattleFrontierMilestones.milestoneRewards.find(m => m instanceof BattleFrontierMilestone && m._description == Wiki.pageName())?.requirement -->
                                 <span class="input-group-text" style="cursor: help;" data-bind="tooltip: {
@@ -531,7 +531,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-wandering" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            <img src="/images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
                             Farm Wandering
                         </button>
                     </h4>
@@ -543,7 +543,7 @@
                                     <span class="text-decoration-none text-body" data-bind="text: $data"></span>
                                     <!-- /ko -->
                                     <!-- ko ifnot: $data == 'Always' -->
-                                    <a class="text-decoration-none text-body" data-bind="text: `${$data} Berry`, attr: { href: `#!Berries/${$data}` }"></a>
+                                    <a class="text-decoration-none text-body" data-bind="text: `${$data} Berry`, attr: { href: `/Berries/${$data}/` }"></a>
                                     <!-- /ko -->
                                 </span>
                             </div>
@@ -559,7 +559,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-discord" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
+                            <img src="/images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
                             Discord Shop
                         </button>
                     </h4>
@@ -582,7 +582,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-quest" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
+                            <img src="/images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
                             Quest Reward
                         </button>
                     </h4>
@@ -590,7 +590,7 @@
                         <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.QuestLineReward])">
                             <div class="input-group input-group-sm w-auto">
                                 <span class="input-group-text">
-                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Quest_Lines/${$data}` }"></a>
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `/Quest_Lines/${$data}/` }"></a>
                                 </span>
                             </div>
                         </div>
@@ -605,7 +605,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-tempbattle" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
+                            <img src="/images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
                             Temporary Battle
                         </button>
                     </h4>
@@ -613,7 +613,7 @@
                         <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.TempBattleReward])">
                             <div class="input-group input-group-sm w-auto">
                                 <span class="input-group-text">
-                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Temporary_Battles/${$data}` }"></a>
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `/Temporary_Battles/${$data}/` }"></a>
                                 </span>
                             </div>
                         </div>
@@ -628,7 +628,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-gym" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
+                            <img src="/images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
                             Gym Reward
                         </button>
                     </h4>
@@ -636,7 +636,7 @@
                         <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.GymReward])">
                             <div class="input-group input-group-sm w-auto">
                                 <span class="input-group-text">
-                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Gyms/${$data}` }"></a>
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `/Gyms/${$data}/` }"></a>
                                 </span>
                             </div>
                         </div>
@@ -651,7 +651,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-dungeon" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
+                            <img src="/images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
                             Dungeon Reward
                         </button>
                     </h4>
@@ -659,7 +659,7 @@
                         <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.DungeonReward])">
                             <div class="input-group input-group-sm w-auto">
                                 <span class="input-group-text">
-                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Dungeons/${$data}` }"></a>
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `/Dungeons/${$data}/` }"></a>
                                 </span>
                             </div>
                         </div>
@@ -674,7 +674,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-giftnpc" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
+                            <img src="/images/Infected.png" data-bind="tooltip: { title: 'Does not provide EVs' }"/>
                             NPC
                         </button>
                     </h4>
@@ -683,7 +683,7 @@
                             <div class="input-group input-group-sm w-auto">
                                 <span class="input-group-text">
                                     <a class="text-decoration-none text-body" data-bind="text: `${$data.town} - ${$data.npc}`,
-                                        attr: { href: `#!Towns/${$data.town}` }"></a>
+                                        attr: { href: `/Towns/${$data.town}/` }"></a>
                                 </span>
                                 <!-- ko if: $data.requirements -->
                                 <span class="input-group-text" style="cursor: help" data-bind="tooltip: {
@@ -706,7 +706,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-dreamorbs" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            <img src="/images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
                             Dream Orbs
                         </button>
                     </h4>
@@ -714,7 +714,7 @@
                         <div class="accordion-body d-flex flex-wrap gap-2" data-bind="foreach: Object.values($data[PokemonLocationType.DreamOrb])">
                             <div class="input-group input-group-sm w-auto">
                                 <span class="input-group-text">
-                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `#!Dream Orbs` }"></a>
+                                    <a class="text-decoration-none text-body" data-bind="text: $data, attr: { href: `/Dream Orbs/` }"></a>
                                 </span>
                             </div>
                         </div>
@@ -729,7 +729,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-battlecafe" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            <img src="/images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
                             Battle Café
                         </button>
                     </h4>
@@ -738,7 +738,7 @@
                             <div class="input-group input-group-sm w-auto">
                                 <span class="input-group-text">
                                     <a class="text-decoration-none text-body" data-bind="text: `${Wiki.pokemon.battleCafeToHumanReadableString($data)}`,
-                                        attr: { href: `#!Battle Cafe` }"></a>
+                                        attr: { href: `/Battle Cafe/` }"></a>
                                 </span>
                             </div>
                         </div>
@@ -753,7 +753,7 @@
                 <div class="accordion-item">
                     <h4 class="accordion-header">
                         <button data-bs-target="#obtain-method-safariitem" class="accordion-button collapsed" type="button" data-bs-toggle="collapse">
-                            <img src="./images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
+                            <img src="/images/Contagious.png" data-bind="tooltip: { title: 'Provides EVs' }"/>
                             Safari Item
                         </button>
                     </h4>
@@ -765,7 +765,7 @@
                                     <span class="input-group-text">
                                         <a class="text-decoration-none text-body" data-bind="
                                             text: `Chance - ${$data.chance * 100}%`,
-                                            attr: { href: `#!Towns/${Object.values(TownList).find(t => t.region == $parent[0] && t.content.filter(c => c instanceof SafariTownContent).length).name}` }"></a>
+                                            attr: { href: `/Towns/${Object.values(TownList).find(t => t.region == $parent[0] && t.content.filter(c => c instanceof SafariTownContent).length).name}/` }"></a>
                                     </span>
                                     <!-- ko if: $data.requirement -->
                                     <span class="input-group-text" style="cursor: help;" data-bind="tooltip: {

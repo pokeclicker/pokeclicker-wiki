@@ -4,7 +4,7 @@
     <!-- /ko -->
     <!-- ko if: PokemonType[Wiki.pageName()] >= 0 -->
     <div data-bind="with: Wiki.pageName()">
-        <img data-bind="attr: {src: './pokeclicker/docs/' + Gems.image(PokemonType[$data])}"/>
+        <img data-bind="attr: {src: '/pokeclicker/docs/' + Gems.image(PokemonType[$data])}"/>
         <h3 data-bind="text: `Best ${$data} Gem farming locations`"></h3>
         <p>The top two locations from each Region are listed below, if they exist.</p>
         <p>Pokémon that appear during certain weather or other special conditions are not included in the route calculation.</p>
@@ -24,11 +24,11 @@
                     <tr>
                         <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[region]), attr: { 'data-sort': region }"></td>
                         <td data-bind="text: $data.battleType"></td>
-                        <td><a style="text-decoration: none;" data-bind="text: $data.name, attr: { href: `#!${$data.battleType}s/${$data.name}` }"></a></td>
+                        <td><a style="text-decoration: none;" data-bind="text: $data.name, attr: { href: `/${$data.battleType}s/${$data.name}/` }"></a></td>
                         <td style="text-align: right;" data-bind="text: `${$data.maxHealth.toLocaleString()} ❤️`, attr: { 'data-sort' : $data.maxHealth }"></td>
                         <td style="text-align: right;" data-bind="attr: { 'data-sort': $data.gemsPerEncounter }">
                             <ko data-bind="text: $data.gemsPerEncounter.toFixed(2)"></ko>
-                            <img style="margin: -6px 0" data-bind="attr: { src: './pokeclicker/docs/' + Gems.image(PokemonType[Wiki.pageName()]) }"/>
+                            <img style="margin: -6px 0" data-bind="attr: { src: '/pokeclicker/docs/' + Gems.image(PokemonType[Wiki.pageName()]) }"/>
                         </td>
                     </tr>
                     <!-- /ko -->

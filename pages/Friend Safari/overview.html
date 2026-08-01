@@ -10,8 +10,8 @@
         <tbody data-bind="foreach: SafariPokemonList.list[GameConstants.Region.kalos]().filter(p => !p.requireCaught)">
             <tr>
                 <td class="align-middle">
-                    <img width="48px" class="me-1" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
-                    <a href="#!" class="text-decoration-none" data-bind="text: $data.name, attr: {href: `#!Pokemon/${$data.name}` }"></a>
+                    <img width="48px" class="me-1" data-bind="attr: {src: '/pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
+                    <a href="/" class="text-decoration-none" data-bind="text: $data.name, attr: {href: `/Pokemon/${$data.name}/` }"></a>
                 </td>
                 <td class="align-middle" data-bind="text: $data.weight">
                 </td>

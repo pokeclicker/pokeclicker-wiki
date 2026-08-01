@@ -65,10 +65,10 @@ The chance to encounter a [[Roaming Pokémon]] is `1/8192` for the first route o
 | :--- | :---: |
 | On a [[Routes]] | `1/8192` |
 | In a [[Dungeons]] | `1/4096` |
-| Using an [Evolution Item](#!Items/) | `1/2048` |
+| Using an [Evolution Item](/Items/) | `1/2048` |
 | In the [[Safari]] | `1/1024` |
 | From a [[Shops]] | `1/1024` |
-| From [Egg Hatching](#!Hatchery/) | `1/1024` |
+| From [Egg Hatching](/Hatchery/) | `1/1024` |
 | From a Reward | `1/1024` |
 | From a [[Battle Frontier]] Milestone | `1/1024` |
 | Wandering on the [[Farm]] | `1/1024` |
@@ -100,7 +100,7 @@ They can attract wild Pokémon to the Farm that can be captured, some of which c
 
 #### How can I get more Berries?
 Some berries can be obtained as Pokémon drops or from dungeon chests, but most are obtained through mutation on the [[Farm]].
-The [Kanto Berry Master](#!Berry Masters/) in Cerulean City will provide daily hints about how to mutate the various berries.
+The [Kanto Berry Master](/Berry Masters/) in Cerulean City will provide daily hints about how to mutate the various berries.
 
 #### What are Vitamins used for?
 They increase the base attack of your Pokémon, which will gain you more damage each time you breed them. See [[Hatchery]] for more information.
@@ -116,7 +116,7 @@ There is a maximum of 3 active slots. See [[Oak Items]] for more information.
 Currently Kanto through Galar are able to be played.
 
 #### How do I get to the next region?
-You must defeat the league champion of the current region. If you have the [regional Pokédex challenge](#!Challenge Modes/) active, you must obtain all Pokémon available in the current region.
+You must defeat the league champion of the current region. If you have the [regional Pokédex challenge](/Challenge Modes/) active, you must obtain all Pokémon available in the current region.
 **Note:** Once you go to the next region, you will not be able to go back to previous regions until you reach the dock.
 
 #### How do I increase my [[Click Attack]]?
@@ -124,7 +124,7 @@ New Pokémon you capture, shinies obtained, Pokémon made resistant to [[Pokéru
 [[Achievements]] bonuses also boost your click attack.
 
 #### How do I unlock the Auto Battle option for Gyms?
-You must defeat the [Gym Leader](#!Gyms/) manually 10 times.
+You must defeat the [Gym Leader](/Gyms/) manually 10 times.
 
 #### How do I make the [[Dungeons]] smaller?
 [[Dungeons]] will become smaller at 10, 100, 1,000, etc. clears to a minimum of 5×5 tiles.
@@ -164,7 +164,7 @@ Yes, you can unlock up to 4 [[Quest Points]].
 
 | Location{.col-3} | How to Unlock{.col-9} |
 | :--- | :--- |
-| [[Underground]] | Buy the **[Explorer Kit](#!Key Items/)** from **Cinnabar Island**. |
+| [[Underground]] | Buy the **[Explorer Kit](/Key Items/)** from **Cinnabar Island**. |
 | Daycare | Will be unlocked after reaching **Route 3**. |
 | [[Farm]] | Will be unlocked after reaching **Route 11** and obtaining **[[Berries]]**. |
 
@@ -177,7 +177,7 @@ Breeding has higher odds of obtaining a [[Shiny Chance]] `(1/1024)`.
 Check that you have completed every **[[Routes]]**.
 Check that each **[[Dungeons]]** has been completed.
 Some Pokémon only come from **[[Eggs]]**.
-Some can only be obtained by using an **[Evolution Item](#!Items/)**.
+Some can only be obtained by using an **[Evolution Item](/Items/)**.
 Some can only be found in the **[[Safari]]**.
 **Fossil Pokémon** can only be obtained with the correlating **Fossil** from the **[[Underground]]**.
 Some can only be purchased from a **[[Shops]]**.
@@ -191,10 +191,10 @@ Some can only appear/evolve in specific **[[Weather]]**.
 
 | Time of Day{.col-4} | Icon{.col-1} | Start{.col-3} | End{.col-4} |
 | :---: | :---: | :---: | :---: |
-| Dawn | ![Dawn](./pokeclicker/docs/assets/images/dayCycle/Dawn.png){.day-cycle-dawn} | 05:00 | 06:00 |
-| Day | ![Day](./pokeclicker/docs/assets/images/dayCycle/Day.png){.day-cycle-day} | 06:00 | 17:00 |
-| Dusk | ![Dusk](./pokeclicker/docs/assets/images/dayCycle/Dusk.png){.day-cycle-dusk} | 17:00 | 18:00 |
-| Night | ![Night](./pokeclicker/docs/assets/images/dayCycle/Night.png){.day-cycle-night} | 18:00 | 05:00 |
+| Dawn | ![Dawn](/pokeclicker/docs/assets/images/dayCycle/Dawn.png){.day-cycle-dawn} | 05:00 | 06:00 |
+| Day | ![Day](/pokeclicker/docs/assets/images/dayCycle/Day.png){.day-cycle-day} | 06:00 | 17:00 |
+| Dusk | ![Dusk](/pokeclicker/docs/assets/images/dayCycle/Dusk.png){.day-cycle-dusk} | 17:00 | 18:00 |
+| Night | ![Night](/pokeclicker/docs/assets/images/dayCycle/Night.png){.day-cycle-night} | 18:00 | 05:00 |
 
 #### What are the EV damage multipliers?
 
@@ -235,11 +235,11 @@ You can use the Contagious [[Poké Balls]] selector (unlocked after getting [[Po
 | [[Dungeons]] Modifier | `3×` |
 | [[Dungeons]] Mimic / Boss Modifier | `10×` |
 | [[Roaming Pokémon]] Modifier | `50×` |
-| [Repeat Ball](#!Poké Balls/) Modifier | `5×` |
-| [Macho Brace](#!Oak Items/) Modifier | `1.5×` |
-| [Power Bracer](#!Oak Items/) Modifier | `2×` |
+| [Repeat Ball](/Poké Balls/) Modifier | `5×` |
+| [Macho Brace](/Oak Items/) Modifier | `1.5×` |
+| [Power Bracer](/Oak Items/) Modifier | `2×` |
 | Rowap Aura Modifier | `Multiplier` based off [[Farm]] Setup |
-| [Blue Flute](#!Flutes/) Modifier | `%` based off [[Achievements]] Bonus |
+| [Blue Flute](/Flutes/) Modifier | `%` based off [[Achievements]] Bonus |
 
 #### What is the EV Attack Bonus?
 The EV damage multiplier is multiplicative, and scales linearly until 1.5× (50 EVs). The bonus thereafter has diminishing returns relative to the number of EVs gained, but has no limit. EV damage multiplier thresholds are above.
@@ -249,9 +249,9 @@ The EV damage multiplier is multiplicative, and scales linearly until 1.5× (50 
 | Icon{.col-1} | Status{.col-2} | Description{.col-9} |
 | :---: | :---: | :--- |
 | — | `None` | Pokémon that have not been infected with Pokérus. |
-| ![Infected](./pokeclicker/docs/assets/images/breeding/pokerus/Infected.png) | `Infected` | Pokémon has Pokérus, but cannot spread Pokérus or gain EVs until hatching. |
-| ![Contagious](./pokeclicker/docs/assets/images/breeding/pokerus/Contagious.png) | `Contagious` | Pokémon with less than 50 EVs. |
-| ![Resistant](./pokeclicker/docs/assets/images/breeding/pokerus/Resistant.png) | `Resistant` | Pokémon with 50 or more EVs. These Pokémon will still be able to spread Pokérus. |
+| ![Infected](/pokeclicker/docs/assets/images/breeding/pokerus/Infected.png) | `Infected` | Pokémon has Pokérus, but cannot spread Pokérus or gain EVs until hatching. |
+| ![Contagious](/pokeclicker/docs/assets/images/breeding/pokerus/Contagious.png) | `Contagious` | Pokémon with less than 50 EVs. |
+| ![Resistant](/pokeclicker/docs/assets/images/breeding/pokerus/Resistant.png) | `Resistant` | Pokémon with 50 or more EVs. These Pokémon will still be able to spread Pokérus. |
 
 ---
 

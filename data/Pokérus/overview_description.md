@@ -10,7 +10,7 @@
     * [Tips for Gaining EVs](#evtips)
 
 #### See also:
-* [Farm Setups for EV Yields](#!Farm/Setups#evs)
+* [Farm Setups for EV Yields](/Farm/Setups/#evs)
 
 Pokérus is a microscopic life-form that can attach to Pokémon. Your Kanto Starter Pokémon (or your lowest ID Pokémon, if your Kanto starter is missing due to Real Evolution challenge or another reason) will automatically be infected with Pokérus after completing [[Quest Lines/A New World]] in Sinnoh.
 

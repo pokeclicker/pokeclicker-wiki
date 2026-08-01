@@ -50,9 +50,9 @@ Trades for shards and Quest Points. They are mostly an alternate way to obtain e
 Trades Fossil Pokémon for fossil items. There are Fossil Traders in [[Towns/Cinnabar Island]], [[Towns/Rustboro City]], [[Towns/Oreburgh City]], [[Towns/Nacrene City]], [[Towns/Ambrette Town]], and [[Towns/Stow-on-Side]].
 
 #### Gem Traders
-*→ See: [Gems/Gem Trades](#!Gems#trades)*
+*→ See: [Gems/Gem Trades](/Gems/#trades)*
 
-Trades [[Flutes]], [Mega Stones](#!Mega_Pokémon), and exclusive Pokémon for Gems.
+Trades [[Flutes]], [Mega Stones](/Mega_Pokémon/), and exclusive Pokémon for Gems.
 
 #### Other Shops
 There are many other regional shops and traders, some more hidden than others. A full list of shops is below.

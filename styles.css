@@ -32,6 +32,11 @@ blockquote {
     z-index: 2000;
 }
 
+/* Account for the fixed navbar when scrolling to anchors */
+#main-content [id] {
+  scroll-margin-top: 70px;
+}
+
 /* CUSTOM */
 #toaster {
   position: fixed;
@@ -79,7 +84,7 @@ td.tight {
 .table-mutations table.table td {
   width: 80px;
   height: 80px;
-  background-image: url('images/soil.png');
+  background-image: url('/images/soil.png');
   background-size: cover;
   color: whitesmoke !important;
 }

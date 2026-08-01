@@ -13,9 +13,9 @@
         <tbody data-bind="foreach: App.game.quests.questLines()">
             <tr class="clickable align-middle" data-bind="
                 click: (_, e) => { return Wiki.gotoPageClick(e, 'Quest Lines', $data.name); },
-                attr: { 'data-href': `#!Quest Lines/${$data.name}` }">
+                attr: { 'data-href': `/Quest Lines/${$data.name}/` }">
                 <td>
-                    <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Quest Lines/${$data.name}` }"></a>
+                    <a class="text-decoration-none" href="/" data-bind="text: $data.name, attr: { href: `/Quest Lines/${$data.name}/` }"></a>
                 </td>
                 <td data-bind="text: $data.description"></td>
                 <td data-bind="text: $data.totalQuests"></td>

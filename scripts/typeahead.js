@@ -1,4 +1,5 @@
 const { gotoPage } = require('./navigation');
+const { buildUrl } = require('./wiki-url');
 const { getAvailablePokemon } = require('./pages/pokemon');
 
 const excludedItemTypes = [
@@ -599,7 +600,7 @@ $('#search').typeahead({
     notFound: '<a class="dropdown-item disabled">No results found...</a>',
     suggestion: (suggestion) => {
       const display = suggestion.redirect ? `${suggestion.redirect} → ${suggestion.display}` : suggestion.display;
-      return `<a href="#!${suggestion.type}/${suggestion.page}">${display}</a>`;
+      return `<a href="${buildUrl(suggestion.type, suggestion.page)}">${display}</a>`;
     },
   },
 });

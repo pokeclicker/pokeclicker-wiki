@@ -5,11 +5,11 @@
     <!-- ko if: FarmHands.list.find(h => h.name == Wiki.pageName()) -->
     <div data-bind="with: FarmHands.list.find(h => h.name == Wiki.pageName())">
         <p>
-            <img data-bind="attr: { src: `./pokeclicker/docs/assets/images/profile/trainer-${$data.trainerSprite}.png` }"/>
+            <img data-bind="attr: { src: `/pokeclicker/docs/assets/images/profile/trainer-${$data.trainerSprite}.png` }"/>
         </p>
         <h2>Hourly Wage</h2>
         <p>
-            <img width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/currency/${GameConstants.Currency[$data.cost.currency]}.svg` }"/>
+            <img width="18px" data-bind="attr: { src: `/pokeclicker/docs/assets/images/currency/${GameConstants.Currency[$data.cost.currency]}.svg` }"/>
             <ko data-bind="text: $data.cost.amount.toLocaleString()"></ko>
         </p>
         <h2>Work Speed</h2>

@@ -6,7 +6,7 @@
 * [Alternate Forms](#altforms)
 * [Lists of Pokémon](#listsofpokemon)
 #### See Also:
-* [Pokérus/EVs](#!Pokérus)
+* [Pokérus/EVs](/Pokérus/)
 * [[Hatchery]]
 
 Pokémon are your partners in this adventure and your main source of attack. Currently the game has **1,402** different Pokémon forms. Most of them based on main games, with 33 coming from side games, 53 coming from anime and films, and 18 custom forms.
@@ -20,7 +20,7 @@ Pokémon are your partners in this adventure and your main source of attack. Cur
 - **Base attack:** Used to calculate attack bonus. This value cannot be changed.
 - **Attack (or Current Attack):** Scales linearly from Level 0 to Level 100. The Pokémon's attack at Level 100 is their maximum attack.
     - Breed Pokémon in the [[Hatchery]] to increase their maximum attack.
-    - Attack is affected by [EV Bonus](#!Pokérus#EV), [Shadow](#!Shadow_Pokémon) states, and attack-increasing held items.
+    - Attack is affected by [EV Bonus](/Pokérus/#EV), [Shadow](/Shadow_Pokémon/) states, and attack-increasing held items.
 - **Attack Bonus:** The amount of attack that a Pokémon gains each time it is bred.
     - The base attack bonus is **25% of the base attack**. Current attack never affects attack bonus.
     - Attack bonus can be increased using [[Items/Protein]] and [[Items/Calcium]], at the cost of increasing egg steps.
@@ -30,9 +30,9 @@ Pokémon are your partners in this adventure and your main source of attack. Cur
     - Egg steps can be reduced by using [[Items/Carbos]].
 - **Breeding Efficiency:** The amount of attack the Pokémon gains per egg cycle (i.e. per 40 egg steps).
     - [[Vitamins]] can greatly affect BE, due to their effects on attack bonus and egg steps.
-    - EV Bonus, [Shadow](#!Shadow_Pokémon) states, and attack-increasing held items are calculated as part of BE.
+    - EV Bonus, [Shadow](/Shadow_Pokémon/) states, and attack-increasing held items are calculated as part of BE.
     - $BE = \frac{Attack Bonus}{Egg Cycles} * EV Bonus * Shadow Status * Held Item Bonus${.overflow-auto .m-3}
-- **Native Region:** The region used for Pokédex completion and [Regional Debuff](#!Regions#debuff) calculations. It is not necessarily where or when the Pokémon is available.
+- **Native Region:** The region used for Pokédex completion and [Regional Debuff](/Regions/#debuff) calculations. It is not necessarily where or when the Pokémon is available.
 
 #### How Base Stats are Calculated
 Pokémon stats are based on statistics in their main games.

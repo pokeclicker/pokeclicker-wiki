@@ -3,14 +3,14 @@
 * [Catching Wanderers](#catching)
 * [Lists of Wandering Pokémon](#lists)
 
-Ripe [Berry](#!Berries) plants on the [[Farm]] have a chance to attract Wandering Pokémon (or Wanderers).
+Ripe [Berry](/Berries/) plants on the [[Farm]] have a chance to attract Wandering Pokémon (or Wanderers).
 
 ----
 
 ## Attracting Wanderers {#attracting}
 Only Berry plants at the ripe stage attract Wanderers. Each ripe Berry has a base chance of **1/2000 every 1.5 seconds** to attract a Wandering Pokémon.
 
-* [[Berries/Roseli]] auras increase the chance of Wanderers appearing for *all* Berries on the Farm. (See [Wandering Pokémon Farm Setups](#!Farm/Setups#wanderers))
+* [[Berries/Roseli]] auras increase the chance of Wanderers appearing for *all* Berries on the Farm. (See [Wandering Pokémon Farm Setups](/Farm/Setups/#wanderers))
 
 
 Some Pokémon are attracted to all Berries, while others are picky and will only appear on specific Berry types or specific Berry colors. Any Pokémon that *can* appear has an equal base chance to appear.
@@ -46,5 +46,5 @@ $$ \text{route} = \text{random route from}   ⌊\Bigg( (\text{totalroutes}-1) \t
 The following Pokémon can **only** be obtained from Wandering encounters:
 @[[Pokemon/Shuckle (Corked)]] @[[Pokemon/Detective Pikachu]] @[[Pokemon/Burmy (No Coat)]] @[[Pokemon/Snover (Berry)]] @[[Pokemon/Flabébé (Yellow)]] @[[Pokemon/Flabébé (Blue)]] @[[Pokemon/Oricorio (Pa'u)]] @[[Pokemon/Exposed Applin]] @[[Pokemon/Morpeko (Hangry)]]
 
-The following Pokémon can **only** be [EV trained](#!Pokérus/#EV) from Wandering encounters:
-@[[Pokemon/Treecko]] @[[#!Pokemon/Torchic]] @[[#!Pokemon/Mudkip]]  @[[#!Pokemon/Shedinja]] @[[#!Pokemon/Turtwig]] @[[#!Pokemon/Chimchar]] @[[#!Pokemon/Piplup]] @[[#!Pokemon/Mothim]] @[[#!Pokemon/Snivy]] @[[#!Pokemon/Tepig]] @[[#!Pokemon/Oshawott]] @[[#!Pokemon/Chespin]] @[[#!Pokemon/Fennekin]]  @[[#!Pokemon/Froakie]] @[[#!Pokemon/Rowlet]] @[[#!Pokemon/Litten]] @[[#!Pokemon/Popplio]]  @[[#!Pokemon/Crabrawler]] @[[#!Pokemon/Grookey]] @[[#!Pokemon/Scorbunny]] @[[#!Pokemon/Sobble]]
+The following Pokémon can **only** be [EV trained](/Pokérus/#EV) from Wandering encounters:
+@[[Pokemon/Treecko]] @[[Pokemon/Torchic]] @[[Pokemon/Mudkip]]  @[[Pokemon/Shedinja]] @[[Pokemon/Turtwig]] @[[Pokemon/Chimchar]] @[[Pokemon/Piplup]] @[[Pokemon/Mothim]] @[[Pokemon/Snivy]] @[[Pokemon/Tepig]] @[[Pokemon/Oshawott]] @[[Pokemon/Chespin]] @[[Pokemon/Fennekin]]  @[[Pokemon/Froakie]] @[[Pokemon/Rowlet]] @[[Pokemon/Litten]] @[[Pokemon/Popplio]]  @[[Pokemon/Crabrawler]] @[[Pokemon/Grookey]] @[[Pokemon/Scorbunny]] @[[Pokemon/Sobble]]

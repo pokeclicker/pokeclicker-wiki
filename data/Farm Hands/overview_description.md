@@ -13,7 +13,7 @@ You can customize the type of actions they do and where:
 - **Should Harvest** allows Farm Hands to harvest berries from plots
 - **Allowed Plots** opens a dropdown that allows you to limit which plots the Farm Hand can work on. Green plots are allowed.
 
-[Locking a plot](#!Farm#lockplots) will also prevent a Farm Hand from planting or harvesting in that plot (they will still catch Wanderers).
+[Locking a plot](/Farm/#lockplots) will also prevent a Farm Hand from planting or harvesting in that plot (they will still catch Wanderers).
 
 
 #### Work Cycles

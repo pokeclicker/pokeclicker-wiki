@@ -11,11 +11,11 @@
         <tr>
             <td class="text-center align-middle" data-bind="text: id"></td>
             <td class="align-middle">
-                <img width="36px" class="me-2" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + id + '.png'}"/>
-                <a class="text-decoration-none" href="#!" target="_blank" data-bind="text: name, attr: {href: `#!Pokemon/${$data.name}` }"></a>
+                <img width="36px" class="me-2" data-bind="attr: {src: '/pokeclicker/docs/assets/images/pokemon/' + id + '.png'}"/>
+                <a class="text-decoration-none" href="/" target="_blank" data-bind="text: name, attr: {href: `/Pokemon/${$data.name}/` }"></a>
             </td>
             <td class="align-middle">
-                <a class="text-decoration-none" href="#!" target="_blank" data-bind="text: pokemonMap[Math.floor(id)].name, attr: {href: `#!Pokemon/${pokemonMap[Math.floor(id)].name}` }"></a>
+                <a class="text-decoration-none" href="/" target="_blank" data-bind="text: pokemonMap[Math.floor(id)].name, attr: {href: `/Pokemon/${pokemonMap[Math.floor(id)].name}/` }"></a>
             </td>
         </tr>
     </tbody>

@@ -60,7 +60,8 @@ const saveChanges = (editor, filename, btn) => {
     Wiki.alert('Successfully submitted your changes, please wait a few minutes for these changes to take affect', 'success', 2e4);
 
     // Take user back to non editor page
-    window.location.hash = window.location.hash.replace(/\/+edit$/, '');
+    // (uses the global to avoid a require cycle with navigation.js)
+    Wiki.gotoPage(Wiki.pageType(), Wiki.pageName());
   })();
 }
 
@@ -106,7 +107,7 @@ const createMarkDownEditor =  (elementID, filename) => {
               cancel = confirm("There are unsaved changes which will be lost");
             }
             if (cancel) {
-              window.location.hash = window.location.hash.replace(/\/+edit$/, '');
+              Wiki.gotoPage(Wiki.pageType(), Wiki.pageName());
             }
           }
           el.append(btn);

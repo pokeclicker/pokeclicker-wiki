@@ -9,7 +9,7 @@
 
 Gems are dropped when defeating Pokémon. They are used to permanently upgrade the attack effectiveness of party Pokémon of that type. Gems are also traded at [[Shops]] and used to power [[Flutes]].
 
-Gems are unlocked by obtaining the [Gem Case](#!Key_Items) after defeating [Giovanni's Gym](#!Towns/Viridian_City) in Viridian City.
+Gems are unlocked by obtaining the [Gem Case](/Key_Items/) after defeating [Giovanni's Gym](/Towns/Viridian_City/) in Viridian City.
 
 ----
 

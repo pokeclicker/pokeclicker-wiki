@@ -5,7 +5,7 @@
 
 
 #### Berry Masters
-*For a full list of items purchasable at Berry Masters, see the [Items For Sale](#!Berry_Masters#itemsforsale) section.*
+*For a full list of items purchasable at Berry Masters, see the [Items For Sale](/Berry_Masters/#itemsforsale) section.*
 
 #### Shopmon
 Name {.col-1}| Base Price{.col-1}| Description/Notes {.col-3}| Region {.col-1}|
@@ -17,5 +17,5 @@ Name {.col-1}| Base Price{.col-1}| Description/Notes {.col-3}| Region {.col-1}|
 Name {.col-1}| Base Price{.col-1}| Description/Notes {.col-3}| Region {.col-1}|
 :--- | :--- | :--- | :---
 [[File:Gracidea.png\|25px]] [[Items/Gracidea]] | [[File:farmPoint.svg\|25px]] 200,000 | Required to obtain [[Pokémon/Shaymin (Sky)]] | Sinnoh |
-[[File:Ground_Memory_Silvally.png\|25px]] [[Items/Ground Memory]] | [[File:farmPoint.svg\|25px]] 200,000 | Required for [[#!Quest Lines/Typing some Memories]] Quest Line | Alola |
+[[File:Ground_Memory_Silvally.png\|25px]] [[Items/Ground Memory]] | [[File:farmPoint.svg\|25px]] 200,000 | Required for [[Quest Lines/Typing some Memories]] Quest Line | Alola |
 [[File:Masterball.png\|25px]] [[Items/Master Ball]] | [[File:farmPoint.svg\|25px]] 3,000 | Price increases permanently with each purchase. Sold in each region's Pokémon League. Caps at [[File:farmPoint.svg\|25px]] 300,000| All

@@ -10,7 +10,7 @@
         <tbody data-bind="foreach: Object.entries(App.game.challenges.list)">
             <tr>
                 <td class="align-middle text-center">
-                    <img width="48px" data-bind="attr: {src: './pokeclicker/docs/assets/images/challenges/' + $data[0] + '.png'}"/>
+                    <img width="48px" data-bind="attr: {src: '/pokeclicker/docs/assets/images/challenges/' + $data[0] + '.png'}"/>
                 </td>
                 <td class="align-middle" data-bind="text: $data[1].type"></td>
                 <td class="align-middle" data-bind="text: $data[1].description"></td>

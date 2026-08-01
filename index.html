@@ -8,18 +8,18 @@
         ].filter(x => x != undefined && x != '').join(' - ')">PokéClicker Wiki</title>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta charset="utf-8">
-        <link href="./pokeclicker/docs/assets/images/favicon.ico" rel="icon" type="image/x-icon">
+        <link href="/pokeclicker/docs/assets/images/favicon.ico" rel="icon" type="image/x-icon">
         <!--jQuery-->
-        <script src="./pokeclicker/docs/libs/jquery.min.js"></script>
+        <script src="/pokeclicker/docs/libs/jquery.min.js"></script>
 
         <!--Knockout-->
-        <script src="./pokeclicker/docs/libs/knockout-latest.js"></script>
+        <script src="/pokeclicker/docs/libs/knockout-latest.js"></script>
 
         <!-- New module-based code from './modules' -->
-        <script src="./pokeclicker/docs/scripts/modules.min.js?v=0.10.25"></script>
+        <script src="/pokeclicker/docs/scripts/modules.min.js?v=0.10.25"></script>
 
         <!--Minified scripts-->
-        <script src="./pokeclicker/docs/scripts/script.min.js?v=0.10.25"></script>
+        <script src="/pokeclicker/docs/scripts/script.min.js?v=0.10.25"></script>
 
         <!--Bootstrap-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -35,19 +35,19 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
         <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 
-        <link href="./styles.css?t=1783727745927" rel="stylesheet">
+        <link href="/styles.css?t=1783727745927" rel="stylesheet">
 
     </head>
     <body class="no-select">
         <!-- Have this 2nd navbar for spacing of the body -->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#!">PokéClicker Wiki</a>
+                <a class="navbar-brand" href="/">PokéClicker Wiki</a>
             </div>
             <div class="collapse navbar-collapse main-nav-collapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <!-- <li class="nav-item">
-                    <a class="nav-link" href="#!">Home</a>
+                    <a class="nav-link" href="/">Home</a>
                     </li> -->
                 </ul>
                 <div class="d-flex">
@@ -58,14 +58,14 @@
         <nav id="nav-bar" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
             <link id="theme-link" href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/yeti/bootstrap.min.css" rel="stylesheet" data-bind="attr: {href: 'https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/' + Settings.getSetting('theme').observableValue() + '/bootstrap.min.css'}">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#!">PokéClicker Wiki</a>
+                <a class="navbar-brand" href="/">PokéClicker Wiki</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".main-nav-collapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse main-nav-collapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <!-- <li class="nav-item">
-                        <a class="nav-link" href="#!">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                         </li> -->
                     </ul>
                     <div class="d-flex">
@@ -74,11 +74,11 @@
                             <button type="button" class="btn bg-transparent text-dark px-2" style="position: absolute; right: 0; z-index: 100;"  aria-label="Clear Search" onclick="document.getElementById('search').value = '';document.getElementById('search').dispatchEvent(new Event('input'));">×</button>
                         </div>
                         <a data-bs-toggle="modal" data-bs-target="#settings-modal" tabindex="-1" class="btn btn-secondary ml-1">
-                            <img src="./images/settings.svg" width="22px" />
+                            <img src="/images/settings.svg" width="22px" />
                         </a>
                         <!-- ko ifnot: Wiki.discord.ID() -->
-                        <a href="#!" tabindex="-1" class="btn btn-secondary ml-1" data-bind="attr: { href: `https://discord.pokeclicker.com/proxy?action=login&redirect_uri=${encodeURIComponent(location.origin + location.pathname)}` }">
-                            <img src="./images/user.svg" width="22px" />
+                        <a href="/" tabindex="-1" class="btn btn-secondary ml-1" onclick="Wiki.storeLoginReturn()" data-bind="attr: { href: `https://discord.pokeclicker.com/proxy?action=login&redirect_uri=${encodeURIComponent(location.origin + '/')}` }">
+                            <img src="/images/user.svg" width="22px" />
                         </a>
                         <!-- /ko -->
                         <!-- ko if: Wiki.discord.ID() -->
@@ -101,7 +101,7 @@
                 <ol class="breadcrumb">
                     <li data-bind="class: 'breadcrumb-item' + (!Wiki.pageType() && !Wiki.pageName() ? ' active' : '')">
                         <!-- ko if: Wiki.pageType() -->
-                        <a href="#!">Home</a>
+                        <a href="/">Home</a>
                         <!-- /ko -->
                         <!-- ko ifnot: Wiki.pageType() -->
                         <span>Home</span>
@@ -110,7 +110,7 @@
                     <!-- ko if: Wiki.pageType() -->
                     <li data-bind="class: 'breadcrumb-item' + (Wiki.pageType() && !Wiki.pageName() ? ' active' : '')">
                         <!-- ko if: Wiki.pageName() -->
-                        <a href="#!" data-bind="text: Wiki.pageType(), attr: { href: `#!${Wiki.pageType()}` }"></a>
+                        <a href="/" data-bind="text: Wiki.pageType(), attr: { href: Wiki.buildUrl(Wiki.pageType()) }"></a>
                         <!-- /ko -->
                         <!-- ko ifnot: Wiki.pageName() -->
                         <span data-bind="text: Wiki.pageType()"></span>
@@ -124,10 +124,10 @@
                     <!-- /ko -->
                     <li class="breadcrumb-item breadcrumb-no-divider ms-auto">
                         <!-- ko if: Wiki.discord.ID() -->
-                        <a href="#!" data-bind="attr: { href: `#!${Wiki.pageType() || ''}/${Wiki.pageName() || ''}/edit` }">Edit</a>
+                        <a href="/" data-bind="attr: { href: Wiki.buildUrl(Wiki.pageType(), Wiki.pageName(), { edit: true }) }">Edit</a>
                         <!-- /ko -->
                         <!-- ko ifnot: Wiki.discord.ID() -->
-                        <a href="#!" data-bind="attr: { href: `https://discord.pokeclicker.com/proxy?action=login&redirect_uri=${encodeURIComponent(location.origin + location.pathname)}` }">
+                        <a href="/" onclick="Wiki.storeLoginReturn()" data-bind="attr: { href: `https://discord.pokeclicker.com/proxy?action=login&redirect_uri=${encodeURIComponent(location.origin + '/')}` }">
                             Sign In to Edit
                         </a>
                         <!-- /ko -->
@@ -252,6 +252,6 @@
         </template>
 
         <!-- Main wiki script -->
-        <script src="bundle.js?t=1783727745927"></script>
+        <script src="/bundle.js?t=1783727745927"></script>
     </body>
 </html>

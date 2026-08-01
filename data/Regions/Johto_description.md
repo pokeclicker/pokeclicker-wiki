@@ -1,5 +1,5 @@
 :--- | ---:
-[**← Kanto**](#!Regions/Kanto) | **[Hoenn →](#!Regions/Hoenn)**
+[**← Kanto**](/Regions/Kanto/) | **[Hoenn →](/Regions/Hoenn/)**
 
 #### Jump to:
 * [Towns, Routes, and Dungeons](#wiki-page-content)

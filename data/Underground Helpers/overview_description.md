@@ -22,7 +22,7 @@ If the "Look for favorite" setting is enabled:
 - After completing a mine, the helper will attempt to find their favorite mine.
 - If unsuccessful, they will find one of the six other mine types at random.
 - If successful, there will be a delay based on the player's mining level equal to 15 minutes -30 seconds per player level beyond 20.  At player Lv.50 or above favorite mines are discovered instantly.
-- Helpers can never discover [Special mines](#!Underground/#special).
+- Helpers can never discover [Special mines](/Underground/#special).
 
 
 

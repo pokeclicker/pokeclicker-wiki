@@ -21,7 +21,7 @@ To visit another region, you must first unlock the **dock** in the region that y
 Docks in subregions are located in the first town you visit and are automatically unlocked.
 
 #### Unlocking New Regions {#unlock}
-Unlocking new regions requires defeating the region's League Champion and, if the Pokédex [Challenge Mode](#!Challenge_Modes) is enabled, catching all the Pokémon in the region's Pokédex. Once you become Champion, all missing regional Pokémon will automatically show up in your Pokédex.
+Unlocking new regions requires defeating the region's League Champion and, if the Pokédex [Challenge Mode](/Challenge_Modes/) is enabled, catching all the Pokémon in the region's Pokédex. Once you become Champion, all missing regional Pokémon will automatically show up in your Pokédex.
 
 **With every region unlocked:**
 - Your Pokémon can use 5 more [[Vitamins]].
@@ -40,7 +40,7 @@ This means:
 As new regions are reached, the regional debuff decreases and this penalty becomes less notable.
 
 #### Dungeon Debuff {#dungeondebuff}
-*→ See: [Dungeons/Regional Debuff](#!Dungeons#debuff)*
+*→ See: [Dungeons/Regional Debuff](/Dungeons/#debuff)*
 
 Dungeons in regions that are 3 or more regions below your highest region receive a debuff to Epic, Legendary, and Mythic loot drop rates.
 
@@ -92,7 +92,7 @@ There are currently 8 available regions.
 * **Subregions:** Isle of Armor, Crown Tundra
 * **Notable Locations:**
     * Dock: [[Towns/Hulbury]]
-    * [Battle Café](#!Battle_Cafe)
+    * [Battle Café](/Battle_Cafe/)
 
 ---
 
