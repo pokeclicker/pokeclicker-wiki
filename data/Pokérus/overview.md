@@ -77,14 +77,14 @@ EV yields differ based on how the Pokémon is obtained.
 | Catching a Pokémon in a Regular [[Dungeon]] Encounter | `0.3` |
 | Catching a Pokémon in a Mimic or Dungeon Boss Encounter | `1` |
 | Using an Evolution Item | `1` |
-| Purchasing or trading at a Shop, Opening a [Dream Orb](#!Dream_Orbs), Spinning [[Battle Café]] | `1` |
+| Purchasing or trading at a Shop, Opening a [Dream Orb](/Dream_Orbs/), Spinning [[Battle Café]] | `1` |
 | Catching a Pokémon in the [[Safari]] | `1` |
 | Catching a Color or Berry-Specific [[Wandering Pokémon]] | `1` |
-| Catching a Pokémon in a [Roaming](#!Roaming_Pokémon) Encounter | `5` |
+| Catching a Pokémon in a [Roaming](/Roaming_Pokémon/) Encounter | `5` |
 # {.mt-3}
 
 #### EV Yield Modifiers {#evmodifiers}
-EV yields can also be modified by items, auras, and Pokémon states. If the Slow EVs [Challenge Mode](#!Challenge_Modes) is activated, all EV gains are divided by 10. Modifiers are multiplicative for all that apply.
+EV yields can also be modified by items, auras, and Pokémon states. If the Slow EVs [Challenge Mode](/Challenge_Modes/) is activated, all EV gains are divided by 10. Modifiers are multiplicative for all that apply.
 
 | Modifier{.col-1} | EV Yield Multiplier {.col-1}|
 | :--- | :--- |
@@ -92,9 +92,9 @@ EV yields can also be modified by items, auras, and Pokémon states. If the Slow
 | Pokémon is holding a [[File:Macho_Brace.png\|24px]] [[Items/Macho Brace]] | `1.5x` |
 | Pokémon is holding a [[File:Power_Bracer.png\|24px]] [[Items/Power Bracer]] | `2x` |
 | Pokémon is captured as a [[Shadow Pokémon]]* | `2x` |
-| Pokémon is captured as a [Shiny](#!Shiny_Chance)* | `5x` |
+| Pokémon is captured as a [Shiny](/Shiny_Chance/)* | `5x` |
 | Pokémon is captured with a [[File:Repeatball.png\|24px]] [[Items/Repeat Ball]] | `5x` |
-| [[File:Rowap.png\|24px]] [[Berries/Rowap]] Berry Aura| `1.015x` per ripe plant. (See [Farm Setups for EV Gains](#!Farm/Setups#evs) for how to obtain up to `2.54x` across the Farm). |
+| [[File:Rowap.png\|24px]] [[Berries/Rowap]] Berry Aura| `1.015x` per ripe plant. (See [Farm Setups for EV Gains](/Farm/Setups/#evs) for how to obtain up to `2.54x` across the Farm). |
 | [[File:Blue_Flute.png\|24px]] [[Items/Blue Flute]] | Variable based on Flute bonus `[1.02 + .02 * AchievementBonus]x`. Current maximum of `1.24x`. |
 **The newly obtained Pokémon must be a Shadow or Shiny form. Simply owning a Shadow or Shiny Pokémon does not affect multipliers.*
 
@@ -122,7 +122,7 @@ For Pokémon that can only be acquired through purchases, trades, and item evolu
 
 The table below shows how many Pokémon are required in order to resist these Pokémon using various combinations of modifiers, assuming a base EV gain of 1. Since the Blue Flute's effectiveness scales with your Achievement Bonus, the percentages in the setups show the minimum Achievement Bonus required to reach that multiplier.
 
-*Note: Your Achievement Bonus can be checked in your Achievement Tracker. The Rowaps are based on [these Farm setups](#!Farm/Setups#evs), which use Lum to boost their effectiveness.*
+*Note: Your Achievement Bonus can be checked in your Achievement Tracker. The Rowaps are based on [these Farm setups](/Farm/Setups/#evs), which use Lum to boost their effectiveness.*
 
 | Modifiers | Minimum Achievement Bonus{.col-3} | Captures Needed to Resist{.col-3} |
 | :--- | :--- | :--- |

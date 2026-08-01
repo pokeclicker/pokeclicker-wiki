@@ -18,10 +18,10 @@
           <!-- ko foreach: Object.values(TownList).filter(t => t.region == GameConstants.Region[Wiki.pageName().toLowerCase()]) -->
           <tr class="clickable" data-bind="
             click: (_, e) => { return Wiki.gotoPageClick(e, 'Towns', $data.name); },
-            attr: { 'data-href': `#!Towns/${$data.name}` }">
+            attr: { 'data-href': `/Towns/${$data.name}/` }">
               <td data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name, attr: { 'data-order': $data.subRegion ?? 0 }"></td>
               <td>
-                  <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${$data.name}` }"></a>
+                  <a class="text-decoration-none" href="/" data-bind="text: $data.name, attr: { href: `/Towns/${$data.name}/` }"></a>
               </td>
               <td data-bind="foreach: $data.content">
                   <span class="badge text-bg-secondary" data-bind="text: GameConstants.camelCaseToString($data.__proto__.constructor.name.replace(/(MoveTo|TownContent|Temporary)/, ''))"></span>
@@ -48,10 +48,10 @@
       <tbody data-bind="foreach: Routes.regionRoutes.filter(t => t.region == GameConstants.Region[Wiki.pageName().toLowerCase()])">
           <tr class="text-nowrap clickable" data-bind="
             click: (_, e) => { return Wiki.gotoPageClick(e, 'Routes', $data.routeName); },
-            attr: { 'data-href': `#!Routes/${$data.routeName}` }">
+            attr: { 'data-href': `/Routes/${$data.routeName}/` }">
               <td data-bind="text: SubRegions.list[$data.region][$data.subRegion ?? 0].name, attr: { 'data-order': $data.subRegion ?? 0 }"></td>
               <td data-bind="attr: { 'data-order': $index() }">
-                <a class="text-decoration-none" href="#!" data-bind="text: $data.routeName, attr: { href: `#!Routes/${$data.routeName}` }"></a>
+                <a class="text-decoration-none" href="/" data-bind="text: $data.routeName, attr: { href: `/Routes/${$data.routeName}/` }"></a>
               </td>
               <td data-bind="text: new Set(Object.values($data.pokemon).flat().map(p => typeof p != 'string' ? p.pokemon.flat() : p).flat()).size"></td>
               <td data-bind="text: `❤️ ${Math.round(PokemonFactory.routeHealth($data.number, $data.region)).toLocaleString()}`, attr: { 'data-order': PokemonFactory.routeHealth($data.number, $data.region) }"></td>
@@ -74,12 +74,12 @@
       <tbody data-bind="foreach: GameConstants.RegionDungeons[GameConstants.Region[Wiki.pageName().toLowerCase()]]">
           <tr class="text-nowrap clickable" data-bind="
             click: (_, e) => { return Wiki.gotoPageClick(e, 'Dungeons', $data); },
-            attr: { 'data-href': `#!Dungeons/${$data}` }">
+            attr: { 'data-href': `/Dungeons/${$data}/` }">
               <td>
-                  <a class="text-decoration-none" href="#!" data-bind="text: $data, attr: { href: `#!Dungeons/${$data}` }"></a>
+                  <a class="text-decoration-none" href="/" data-bind="text: $data, attr: { href: `/Dungeons/${$data}/` }"></a>
               </td>
               <td data-bind="attr: { 'data-sort': dungeonList[$data].tokenCost }">
-                  <img src="./images/dungeonToken.svg" width="18px"/>
+                  <img src="/images/dungeonToken.svg" width="18px"/>
                   <ko data-bind="text: dungeonList[$data].tokenCost.toLocaleString()"></ko>
               </td>
               <td data-bind="text: `❤️ ${dungeonList[$data].baseHealth.toLocaleString()}`, attr: { 'data-sort': dungeonList[$data].baseHealth }"></td>

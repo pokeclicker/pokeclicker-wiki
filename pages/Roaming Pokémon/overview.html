@@ -24,7 +24,7 @@
                 <tr>
                     <td class="align-middle w-50">
                         <div class="d-flex align-items-center">
-                            <img width="48px" class="me-1" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.pokemonName].id + '.png'}"/>
+                            <img width="48px" class="me-1" data-bind="attr: {src: '/pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.pokemonName].id + '.png'}"/>
                             <knockout data-bind="text: $data.pokemonName"></knockout>
                         </div> 
                     </td>
@@ -55,12 +55,12 @@
         }, {}))">
             <tr>
                 <td class="align-middle w-50">
-                    <a href="#!" class="text-decoration-none" data-bind="text: $data[0], attr: { href: `#!Events/${$data[0]}` }"></a>
+                    <a href="/" class="text-decoration-none" data-bind="text: $data[0], attr: { href: `/Events/${$data[0]}/` }"></a>
                 </td>
                 <td class="align-middle w-50">
                     <div class="d-flex flex-wrap" data-bind="foreach: $data[1]">
                         <div class="d-flex align-items-center me-1">
-                            <img width="48px" class="me-1" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data].id + '.png'}"/>
+                            <img width="48px" class="me-1" data-bind="attr: {src: '/pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data].id + '.png'}"/>
                             <knockout data-bind="text: $data"></knockout>
                         </div>
                     </div>

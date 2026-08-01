@@ -14,7 +14,7 @@
             <tbody>
                 <tr>
                     <td class="text-center" colspan="2">
-                        <img data-bind="attr: { src: `./pokeclicker/docs/${$data.imagePath}` }"/>
+                        <img data-bind="attr: { src: `/pokeclicker/docs/${$data.imagePath}` }"/>
                     </td>
                 </tr>
                 <tr data-bind="with: $data.parent ?? TownList[$data.town]">
@@ -27,13 +27,13 @@
                 </tr>
                 <tr data-bind="with: $data.parent ?? $data.town">
                     <td>Town</td>
-                    <td><a class="text-decoration-none" href="#!" href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${$data.name}` }"></a></td>
+                    <td><a class="text-decoration-none" href="/" href="/" data-bind="text: $data.name, attr: { href: `/Towns/${$data.name}/` }"></a></td>
                 </tr>
                 <!-- ko if: !BadgeEnums[$data.badgeReward].startsWith('Elite') -->
                 <tr>
                     <td>Badge</td>
                     <td>
-                        <img width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/badges/${BadgeEnums[$data.badgeReward]}.svg` }" />
+                        <img width="18px" data-bind="attr: { src: `/pokeclicker/docs/assets/images/badges/${BadgeEnums[$data.badgeReward]}.svg` }" />
                         <span data-bind="text: BadgeEnums[$data.badgeReward]"></span>
                     </td>
                 </tr>
@@ -41,7 +41,7 @@
                 <tr>
                     <td>Money</td>
                     <td>
-                        <img data-bind="attr: { src: `./images/money.svg` }" width="18px" />
+                        <img data-bind="attr: { src: `/images/money.svg` }" width="18px" />
                         <span data-bind="text: $data.moneyReward.toLocaleString()"></span>
                     </td>
                 </tr>
@@ -76,8 +76,8 @@
             <tbody data-bind="foreach: $data.pokemons">
                 <tr>
                     <td class="align-middle">
-                        <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
-                        <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: {href: `#!Pokemon/${$data.name}` }"></a>
+                        <img width="32px" data-bind="attr: {src: '/pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
+                        <a class="text-decoration-none" href="/" data-bind="text: $data.name, attr: {href: `/Pokemon/${$data.name}/` }"></a>
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
                     <td class="align-middle" data-bind="text: $data.level.toLocaleString()"></td>
@@ -113,7 +113,7 @@
                     <td class="align-middle" data-bind="attr: { rowspan: $parent.pokemons.filter((p) => !p.requirements?.length).length }">No requirement</td>
                     <!-- /ko -->
                     <td class="align-middle">
-                        <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
+                        <img width="32px" data-bind="attr: {src: '/pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
                         <knockout data-bind="text: $data.name"></knockout>
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
@@ -141,7 +141,7 @@
                     <td class="align-middle" data-bind="text: $parent[0], attr: { rowspan: $parent[1].length }"></td>
                     <!-- /ko -->
                     <td class="align-middle">
-                        <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
+                        <img width="32px" data-bind="attr: {src: '/pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
                         <knockout data-bind="text: $data.name"></knockout>
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>

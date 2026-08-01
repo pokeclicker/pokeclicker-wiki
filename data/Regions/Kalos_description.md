@@ -1,5 +1,5 @@
 :--- | ---:
-[**← Unova**](#!Regions/Unova) | **[Alola →](#!Regions/Alola)**
+[**← Unova**](/Regions/Unova/) | **[Alola →](/Regions/Alola/)**
 
 #### Jump to:
 * [Towns, Routes, and Dungeons](#wiki-page-content)

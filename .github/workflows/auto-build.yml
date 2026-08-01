@@ -1,4 +1,4 @@
-name: Auto Build Bundle
+name: Build and Deploy
 
 on:
   push:
@@ -6,9 +6,27 @@ on:
       - main
     paths:
       - 'scripts/**'
+      - 'data/**'
+      - 'pages/**'
+      - 'templates/**'
+      - 'build/**'
+      - 'index.html'
+      - 'styles.css'
+      - 'pokeclicker'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/auto-build.yml'
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+# Only run one deploy at a time
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -17,7 +35,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          persist-credentials: true
           fetch-depth: 0
           submodules: 'recursive'
 
@@ -27,6 +44,12 @@ jobs:
           node-version: '18'
           cache: 'npm'
           cache-dependency-path: package-lock.json
+
+      - name: Cache Puppeteer browser
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/puppeteer
+          key: puppeteer-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
 
       - name: Install dependencies
         run: npm ci
@@ -40,16 +63,24 @@ jobs:
       - name: Build bundle
         run: npm run update
 
-      - name: Commit and push bundle.js if changed
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Only commit if bundle.js changed
-          if [[ -n "$(git status --porcelain bundle.js)" ]]; then
-            git add bundle.js
-            git add index.html
-            git commit -m "chore: rebuild bundle.js (auto)" || echo "no commit"
-            git push origin HEAD:refs/heads/main
-          else
-            echo "bundle.js unchanged"
-          fi
+      - name: Enumerate wiki routes
+        run: node build/dump-routes.js
+
+      - name: Generate static site
+        run: node build/generate-static.js
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -27,7 +27,7 @@ Obtaining [[Items/Medichamite]] requires completing quests at Quest Level 16 or 
 ###### Catch-Type Quests
 - [[Catch Type Quests]] lists the best locations to farm each type of Pokémon.
 ###### Gems
-- Individual [Gem](#!Gems) pages list where to best farm each Gem type.
+- Individual [Gem](/Gems/) pages list where to best farm each Gem type.
 - Plates can be sold quickly for gems and will count toward Quest completion.
 
 #### List of Possible Quests
@@ -78,7 +78,7 @@ Item | Cost | Description/Notes | Region |
 | [[File:Mystery_egg.png\|25px]] [[Items/Mystery Egg]] | [[File:questPoint.svg\|25px]] 700 | | All |
 | [[File:Macho_Brace.png\|25px]] [[Items/Macho Brace]] | [[File:questPoint.svg\|25px]] 1,500 | Held item. Increases EV gain. | Sinnoh |
 | [[File:Power_Bracer.png\|25px]] [[Items/Power Bracer]] | [[File:questPoint.svg\|25px]] 2,000  | Held item. Increases EV gain. | Alola |
-| [[File:Grass_Memory_Silvally.png\|25px]] [[Items/Grass Memory]] | [[File:questPoint.svg\|25px]] 125,000 | Required for [[#!Quest Lines/Typing some Memories]] Quest Line | Alola |
+| [[File:Grass_Memory_Silvally.png\|25px]] [[Items/Grass Memory]] | [[File:questPoint.svg\|25px]] 125,000 | Required for [[Quest Lines/Typing some Memories]] Quest Line | Alola |
 | Evolution Items* | [[File:questPoint.svg\|25px]] 2,500-5,000 | See below. Can also trade with Shard Traders for a reduced QP cost. | Various |
 
 ::: collapsed Evolution Item costs

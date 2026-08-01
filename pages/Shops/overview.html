@@ -19,7 +19,7 @@
             <td class="align-middle text-center" data-bind="text: $index() + 1"></td>
             <td class="align-middle" data-bind="text: $data.text()"></td>
             <td class="align-middle">
-                <a class="text-decoration-none" href="#!" target="_blank" data-bind="text: $data.parent.name, attr: {href: `#!Towns/${$data.parent.name}` }"></a>
+                <a class="text-decoration-none" href="/" target="_blank" data-bind="text: $data.parent.name, attr: {href: `/Towns/${$data.parent.name}/` }"></a>
             </td>
             <td class="align-middle" data-bind="text: Wiki.gameHelper.getRegionName($data.parent.region)"></td>
             <td class="align-middle" data-bind="text: !$data.parent.subRegion ? '-' : SubRegions.getSubRegionById($data.parent.region, $data.parent.subRegion).name"></td>
@@ -30,13 +30,13 @@
                 <div class="d-flex align-items-center p-1" data-bind="css: { 'border-top': $index() > 0 }" style="border-color: var(--bs-table-border-color) !important;">
                     <div class="w-50">
                         <div class="d-flex align-items-center">
-                            <img width="18" class="me-1" data-bind="attr: { src: `./pokeclicker/docs/${$data.image}` }"/>
-                            <a href="#!" target="_blank" class="text-decoration-none" data-bind="text: $data.displayName,
-                                attr: { href: `#!${Wiki.items.getItemPageFromObject($data)}` }"></a>
+                            <img width="18" class="me-1" data-bind="attr: { src: `/pokeclicker/docs/${$data.image}` }"/>
+                            <a href="/" target="_blank" class="text-decoration-none" data-bind="text: $data.displayName,
+                                attr: { href: `/${Wiki.items.getItemPageFromObject($data)}/` }"></a>
                         </div> 
                     </div>
                     <div class="w-50">
-                        <img width="18" class="me-1" data-bind="attr: { src: `./images/${GameConstants.Currency[$data.currency]}.svg` }" />
+                        <img width="18" class="me-1" data-bind="attr: { src: `/images/${GameConstants.Currency[$data.currency]}.svg` }" />
                         <ko data-bind="text: $data.basePrice.toLocaleString()"></ko>
                     </div>
                 </div>
@@ -48,20 +48,20 @@
                 <div class="d-flex align-items-center p-1" data-bind="css: { 'border-top': $index() > 0 }" style="border-color: var(--bs-table-border-color) !important;">
                     <div class="w-50">
                         <div class="d-flex align-items-center">
-                            <img width="18" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.item.itemType.image }" />
-                            <a href="#!" target="_blank" class="text-decoration-none" data-bind="text: $data.item.itemType.displayName,
-                                attr: { href: `#!${Wiki.items.getItemPageFromObject($data.item.itemType)}` }"></a>
+                            <img width="18" class="me-1" data-bind="attr: { src: '/pokeclicker/docs/' + $data.item.itemType.image }" />
+                            <a href="/" target="_blank" class="text-decoration-none" data-bind="text: $data.item.itemType.displayName,
+                                attr: { href: `/${Wiki.items.getItemPageFromObject($data.item.itemType)}/` }"></a>
                         </div> 
                     </div>
                     <div class="w-50">
                         <!-- ko foreach: $data.shards -->
                         <div>
-                            <img width="18" class="me-1" data-bind="attr: { src: `./images/${$data.shardType.name}.png` }" />
+                            <img width="18" class="me-1" data-bind="attr: { src: `/images/${$data.shardType.name}.png` }" />
                             <knockout data-bind="text: `${$data.amount.toLocaleString()} x ${$data.shardType.name}`"></knockout>
                         </div>
                         <!-- /ko -->
                         <div data-bind="if: $data.questPointCost > 0">
-                            <img class="me-1" width="18" data-bind="attr: { src: './images/questPoint.svg' }" width="18px"/>
+                            <img class="me-1" width="18" data-bind="attr: { src: '/images/questPoint.svg' }" width="18px"/>
                             <ko data-bind="text: $data.questPointCost.toLocaleString()"></ko>
                         </div>
                     </div>
@@ -74,14 +74,14 @@
                 <div class="d-flex align-items-center p-1" data-bind="css: { 'border-top': $index() > 0 }" style="border-color: var(--bs-table-border-color) !important;">
                     <div class="w-50">
                         <div class="d-flex align-items-center">
-                            <img width="18" class="me-1" data-bind="attr: { src: './pokeclicker/docs/' + $data.item.itemType.image }" />
-                            <a href="#!" target="_blank" class="text-decoration-none" data-bind="text: $data.item.itemType.displayName,
-                                attr: { href: `#!${Wiki.items.getItemPageFromObject($data.item.itemType)}` }"></a>
+                            <img width="18" class="me-1" data-bind="attr: { src: '/pokeclicker/docs/' + $data.item.itemType.image }" />
+                            <a href="/" target="_blank" class="text-decoration-none" data-bind="text: $data.item.itemType.displayName,
+                                attr: { href: `/${Wiki.items.getItemPageFromObject($data.item.itemType)}/` }"></a>
                         </div> 
                     </div>
                     <div class="w-50" data-bind="foreach: $data.gems">
                         <div>
-                            <img width="18" data-bind="attr: { src: `./images/${PokemonType[$data.gemType]} Gem.png` }" />
+                            <img width="18" data-bind="attr: { src: `/images/${PokemonType[$data.gemType]} Gem.png` }" />
                             <knockout data-bind="text: `${$data.amount.toLocaleString()} x ${PokemonType[$data.gemType]}`"></knockout>
                         </div>
                     </div>

@@ -17,32 +17,32 @@
                         <th class="align-middle">Location</th>
                         <th class="align-middle" style="text-align: right;">Maximum HP</th>
                         <th class="align-middle" style="text-align: right; width: 15%;">
-                            <img width="24" class="me-1" src="./pokeclicker/docs/assets/images/pokeball/Pokeball.svg" data-bind="tooltip: {
+                            <img width="24" class="me-1" src="/pokeclicker/docs/assets/images/pokeball/Pokeball.svg" data-bind="tooltip: {
                                 title: 'Poké Ball',
                                 trigger: 'hover'
                             }">
                         </th>
                         <th class="align-middle" style="text-align: right; width: 15%;">
-                            <img width="24" class="me-1" src="./pokeclicker/docs/assets/images/pokeball/Pokeball.svg" data-bind="tooltip: {
+                            <img width="24" class="me-1" src="/pokeclicker/docs/assets/images/pokeball/Pokeball.svg" data-bind="tooltip: {
                                 title: 'Poké Ball',
                                 trigger: 'hover'
                             }"> +
-                            <img width="32" class="me-1" src="./images/Magic_Ball.png" data-bind="tooltip: {
+                            <img width="32" class="me-1" src="/images/Magic_Ball.png" data-bind="tooltip: {
                                 title: 'Magic Ball (Level 5)',
                                 trigger: 'hover'
                             }">
                             or&nbsp;
-                            <img width="24" class="me-1" src="./pokeclicker/docs/assets/images/pokeball/Ultraball.svg" data-bind="tooltip: {
+                            <img width="24" class="me-1" src="/pokeclicker/docs/assets/images/pokeball/Ultraball.svg" data-bind="tooltip: {
                                 title: 'Ultra Ball',
                                 trigger: 'hover'
                             }">
                         </th>
                         <th class="align-middle" style="text-align: right; width: 15%;">
-                            <img width="24" class="me-1" src="./pokeclicker/docs/assets/images/pokeball/Ultraball.svg" data-bind="tooltip: {
+                            <img width="24" class="me-1" src="/pokeclicker/docs/assets/images/pokeball/Ultraball.svg" data-bind="tooltip: {
                                 title: 'Ultra Ball',
                                 trigger: 'hover'
                             }"> +
-                            <img width="32" class="me-1" src="./images/Magic_Ball.png" data-bind="tooltip: {
+                            <img width="32" class="me-1" src="/images/Magic_Ball.png" data-bind="tooltip: {
                                 title: 'Magic Ball (Level 5)',
                                 trigger: 'hover'
                             }">
@@ -55,11 +55,11 @@
                     <tr>
                         <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[region]), attr: { 'data-sort': region }"></td>
                         <td class="align-middle text-center tight" style="box-shadow: none; border: none;" data-bind="style: { 'background-color': Weather.weatherConditions[$data.weather].color, display: 'flex', width: 'auto' }">
-                            <img data-bind="attr: { src: `./pokeclicker/docs/assets/images/weather/${WeatherType[$data.weather]}.png` }"
+                            <img data-bind="attr: { src: `/pokeclicker/docs/assets/images/weather/${WeatherType[$data.weather]}.png` }"
                                 width="24px">
                             <ko class="text-dark" data-bind="text: GameConstants.humanifyString(WeatherType[$data.weather])"></ko>
                         </td>
-                        <td><a class="text-nowrap" style="text-decoration: none;" data-bind="text: $data.route.routeName.replace(), attr: { href: `#!Routes/${$data.route.routeName}` }"></a></td>
+                        <td><a class="text-nowrap" style="text-decoration: none;" data-bind="text: $data.route.routeName.replace(), attr: { href: `/Routes/${$data.route.routeName}/` }"></a></td>
                         <td class="text-nowrap" style="text-align: right;" data-bind="text: `${$data.maxHealth.toLocaleString()} ❤️`, attr: { 'data-sort' : $data.maxHealth }"></td>
                         <td style="text-align: right;" data-bind="text: `${($data.pokeball / 100).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, attr: { 'data-sort': $data.pokeball }"></td>
                         <td style="text-align: right;" data-bind="text: `${($data.ultraball / 100).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, attr: { 'data-sort': $data.ultraball }"></td>

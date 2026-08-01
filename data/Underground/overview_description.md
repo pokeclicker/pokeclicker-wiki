@@ -4,7 +4,7 @@ Jump to:
 * [Discovery Time](#discovery)
 * [Tools](#tool)
 * [Trading](#trade)
-* [Helpers](#!Underground_Helpers)
+* [Helpers](/Underground_Helpers/)
 * [Levelling](#level)
 * [Upgrades](#upgrade)
 
@@ -14,9 +14,9 @@ The **Underground** is a special location in [[Regions/Kanto]] where players can
 - Shards, which are used for various trades
 - Fossil and Fossil Pieces, which can be revived into new Pokémon
 - Evolution Stones for evolving certain Pokémon
-- Special Items such as [Mega Stones](/#!Mega%20Pokémon/) or [[Items/Palaeontologist_Token]]
+- Special Items such as [Mega Stones](/Mega%20Pokémon/) or [[Items/Palaeontologist_Token]]
 
-The Underground is unlocked upon buying the [Explorer Kit](#!Key_Items) in [[Towns/Cinnabar Island]] for 5,000 Quest Points [[File:questPoint.svg\|20px]].
+The Underground is unlocked upon buying the [Explorer Kit](/Key_Items/) in [[Towns/Cinnabar Island]] for 5,000 Quest Points [[File:questPoint.svg\|20px]].
 
 Once you've obtained the Explorer Kit, you can enter the Underground by:
 - Clicking its location on the map on [[Routes/Kanto Route 14]]
@@ -41,7 +41,7 @@ Players have two options when starting a new mine:
 - Select a mine: Any of the six mine types may be chosen.  Random never has any discovery time, while the others do.
 
 #### Special Mines{#special}
-When the player - not a helper- discovers a mine, there is a 4% chance for it to become a Special Mine.  Special Mines contain exactly one item which can be an eligible [Mega Stones](/#!Mega%20Pokémon/) or other items such as [[Items/Palaeontologist Token]].  It's possible to get back-to-back Special Mines, though rare.  Helpers have their normal percentage chance to keep items dug up from Special Mines if they collect it.
+When the player - not a helper- discovers a mine, there is a 4% chance for it to become a Special Mine.  Special Mines contain exactly one item which can be an eligible [Mega Stones](/Mega%20Pokémon/) or other items such as [[Items/Palaeontologist Token]].  It's possible to get back-to-back Special Mines, though rare.  Helpers have their normal percentage chance to keep items dug up from Special Mines if they collect it.
 
 ### Discovery Time{#discovery}
 

@@ -10,10 +10,10 @@
         <!-- ko foreach: App.game.oakItems.itemList -->
         <tr class="clickable" data-bind="
             click: (_, e) => { return Wiki.gotoPageClick(e, 'Oak Items', $data.displayName); },
-            attr: { 'data-href': `#!Oak_Items/${$data.displayName}` }">
+            attr: { 'data-href': `/Oak_Items/${$data.displayName}/` }">
             <td class="align-middle">
-                <img width="28" class="me-1" data-bind="attr: { src: `./images/${OakItemType[$data.name]}.png` }" />
-                <a class="text-decoration-none align-middle" href="#!" data-bind="text: $data.displayName, attr: { href: `#!Oak_Items/${$data.displayName}` }"></a>
+                <img width="28" class="me-1" data-bind="attr: { src: `/images/${OakItemType[$data.name]}.png` }" />
+                <a class="text-decoration-none align-middle" href="/" data-bind="text: $data.displayName, attr: { href: `/Oak_Items/${$data.displayName}/` }"></a>
             </td>
             <td class="align-middle" data-bind="text: $data.description"></td>
             <td class="align-middle">
@@ -23,7 +23,7 @@
                 <!-- ko if: $data instanceof BoughtOakItem -->
                 <knockout data-bind="with: { oakItem: $data, shopItem: ItemList[OakItemType[$data.name]] }">
                     <knockout data-bind="text: `Purchase at ${oakItem.shopName} for ${shopItem.basePrice.toLocaleString()}`"></knockout>
-                    <img class="ms-1" width="18" data-bind="attr: { src: `./images/${GameConstants.Currency[shopItem.currency]}.svg` }">
+                    <img class="ms-1" width="18" data-bind="attr: { src: `/images/${GameConstants.Currency[shopItem.currency]}.svg` }">
                 </knockout>
                 <!-- /ko -->
             </td>

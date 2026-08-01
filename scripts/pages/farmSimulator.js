@@ -9,11 +9,11 @@ const getImage = (plot) => {
         return '';
     }
     if (plot.stage() === PlotStage.Seed) {
-        return './images/farm/AllTreeSeed.png';
+        return '/images/farm/AllTreeSeed.png';
     } else if (plot.stage() === PlotStage.Sprout) {
-        return './images/farm/AllTreeSprout.png';
+        return '/images/farm/AllTreeSprout.png';
     }
-    return `./images/${BerryType[plot.berry]}Tree${PlotStage[plot.stage()]}.png`;
+    return `/images/${BerryType[plot.berry]}Tree${PlotStage[plot.stage()]}.png`;
 }
 
 const setPlotBerry = (berry) => {

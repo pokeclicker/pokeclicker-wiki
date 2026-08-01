@@ -15,9 +15,9 @@
             <tbody data-bind="foreach: App.game.specialEvents.events.sort((a, b) => a.startTime - b.startTime);">
                 <tr class="clickable align-middle" data-bind="
                     click: (_, e) => { return Wiki.gotoPageClick(e, 'Events', $data.title); },
-                    attr: { 'data-href': `#!Events/${$data.title}` }">
+                    attr: { 'data-href': `/Events/${$data.title}/` }">
                     <td>
-                        <a class="text-decoration-none" href="#!" data-bind="text: $data.title, attr: { href: `#!Events/${$data.title}` }"></a>
+                        <a class="text-decoration-none" href="/" data-bind="text: $data.title, attr: { href: `/Events/${$data.title}/` }"></a>
                     </td>
                     <td data-bind="text: $data.description"></td>
                     <td data-bind="text: $data.startTime.toLocaleString(), attr: { 'data-sort': $data.timeTillStart() }"></td>
@@ -26,7 +26,7 @@
                         <!-- ko with: Math.floor(1 + $data.timeTillStart() / 1000 / 60 / 60 / 24) * 500, as: 'cost' -->
                         <td data-bind="attr: { 'data-sort': cost }">
                             <ko data-bind="text: cost.toLocaleString()"></ko>
-                            <img data-bind="attr: { src: './images/questPoint.svg' }" width="18px"/>
+                            <img data-bind="attr: { src: '/images/questPoint.svg' }" width="18px"/>
                         </td>
                         <!-- /ko -->
                     <!-- /ko -->

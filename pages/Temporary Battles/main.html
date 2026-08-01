@@ -13,7 +13,7 @@
             <tbody>
                 <tr>
                     <td class="text-center" colspan="2">
-                        <img data-bind="attr: { src: `./pokeclicker/docs/${$data.getImage()}` }"/>
+                        <img data-bind="attr: { src: `/pokeclicker/docs/${$data.getImage()}` }"/>
                     </td>
                 </tr>
                 <!-- ko with: { town: $data.optionalArgs?.returnTown ? TownList[$data.optionalArgs.returnTown] : $data.getTown(), isOverworld: $data.optionalArgs?.returnTown !== undefined } -->
@@ -59,7 +59,7 @@
             <tbody data-bind="foreach: $data.pokemons">
                 <tr>
                     <td class="align-middle">
-                        <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
+                        <img width="32px" data-bind="attr: {src: '/pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
                         <knockout data-bind="text: $data.name"></knockout>
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
@@ -92,7 +92,7 @@
                     <td class="align-middle" data-bind="attr: { rowspan: $parent.pokemons.filter((p) => !p.requirements?.length).length }">No Requirement</td>
                     <!-- /ko -->
                     <td class="align-middle">
-                        <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
+                        <img width="32px" data-bind="attr: {src: '/pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
                         <knockout data-bind="text: $data.name"></knockout>
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>
@@ -118,7 +118,7 @@
                     <td class="align-middle" data-bind="text: $parent[0], attr: { rowspan: $parent[1].length }"></td>
                     <!-- /ko -->
                     <td class="align-middle">
-                        <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
+                        <img width="32px" data-bind="attr: {src: '/pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/>
                         <knockout data-bind="text: $data.name"></knockout>
                     </td>
                     <td class="align-middle" data-bind="text: $data.maxHealth.toLocaleString()"></td>

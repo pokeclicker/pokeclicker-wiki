@@ -16,7 +16,7 @@
             <tbody>
                 <tr>
                     <td class="text-center" colspan="2">
-                        <img data-bind="attr: {src: './pokeclicker/docs/' + $data.image}" />
+                        <img data-bind="attr: {src: '/pokeclicker/docs/' + $data.image}" />
                     </td>
                 </tr>
                 <tr>
@@ -27,7 +27,7 @@
                     && Object.values(TownList).some((t) => t.content.some((c) => c instanceof Shop && c.items.some((i) => i.name == $data.name)))">
                     <td>Price</td>
                     <td>
-                        <img data-bind="attr: { src: `./images/${GameConstants.Currency[$data.currency]}.svg` }" width="18px" />
+                        <img data-bind="attr: { src: `/images/${GameConstants.Currency[$data.currency]}.svg` }" width="18px" />
                         <ko data-bind="text: $data.basePrice.toLocaleString()"></ko>
                     </td>
                 </tr>
@@ -36,7 +36,7 @@
                     <td>Trade</td>
                     <td data-bind="foreach: $data.gems">
                         <div>
-                            <img width="24" data-bind="attr: { src: `./images/${PokemonType[$data.gemType]} Gem.png` }" />
+                            <img width="24" data-bind="attr: { src: `/images/${PokemonType[$data.gemType]} Gem.png` }" />
                             <knockout data-bind="text: `${$data.amount.toLocaleString()} x ${PokemonType[$data.gemType]}`"></knockout>
                         </div>
                     </td>
@@ -49,12 +49,12 @@
                     <td>
                         <!-- ko foreach: $data.shards -->
                         <div>
-                            <img width="24" data-bind="attr: { src: `./images/${$data.shardType.name}.png` }" />
+                            <img width="24" data-bind="attr: { src: `/images/${$data.shardType.name}.png` }" />
                             <knockout data-bind="text: `${$data.amount.toLocaleString()} x ${$data.shardType.name}`"></knockout>
                         </div>
                         <!-- /ko -->
                         <div>
-                            <img data-bind="attr: { src: './images/questPoint.svg' }" width="18px" />
+                            <img data-bind="attr: { src: '/images/questPoint.svg' }" width="18px" />
                             <ko data-bind="text: $data.questPointCost.toLocaleString()"></ko>
                         </div>
                     </td>
@@ -71,14 +71,14 @@
     <div class="mt-3" data-bind="if: Object.values(TownList).some((t) => t.content.some((c) => c instanceof Shop && c.items.some((i) => i.name == $data.name)))">
         <h3>Can be purchased in the following towns:</h3>
         <!-- ko foreach : Object.values(TownList).filter((t) => t.content.some((c) => c instanceof Shop && c.items.some((i) => i.name == $data.name))) -->
-        <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${$data.name}` }"></a>
+        <a class="badge text-bg-secondary" href="/" data-bind="text: $data.name, attr: { href: `/Towns/${$data.name}/` }"></a>
         <!-- /ko -->
     </div>
     <!-- Gem Trade -->
     <div class="mt-3" data-bind="if: Object.values(GemDeals.list).flatMap((d) => d()).find((d) => d.item.itemType.name == $data.name)">
         <h3>Can be traded for Gems in the following town:</h3>
         <div data-bind="foreach: Object.values(TownList).filter(t => t.content.some(c => c instanceof GemMasterShop && GemDeals.list[c.shop]?.().some(d => d.item.itemType.name == $data.name)))">
-            <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${$data.name}` }"></a>
+            <a class="badge text-bg-secondary" href="/" data-bind="text: $data.name, attr: { href: `/Towns/${$data.name}/` }"></a>
         </div>
     </div>
     <!-- Shard & Generic Trades -->
@@ -86,7 +86,7 @@
     <div class="mt-3" data-bind="visible: $data.length">
         <h3>Can be traded for in the following towns:</h3>
         <div data-bind="foreach: $data">
-            <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Towns/${$data.name}` }"></a>
+            <a class="badge text-bg-secondary" href="/" data-bind="text: $data.name, attr: { href: `/Towns/${$data.name}/` }"></a>
         </div>
     </div>
     <!-- /ko -->
@@ -104,15 +104,15 @@
                     <th>Name</th>
                     <th style="text-align: right;">
                         <ko data-bind="text: $data.gemTypes[0] + ' Gem'"></ko>
-                        <img style="margin: -6px 0" data-bind="attr: { src: './pokeclicker/docs/' + Gems.image(PokemonType[$data.gemTypes[0]]) }" />
+                        <img style="margin: -6px 0" data-bind="attr: { src: '/pokeclicker/docs/' + Gems.image(PokemonType[$data.gemTypes[0]]) }" />
                     </th>
                     <th style="text-align: right;">
                         <ko data-bind="text: $data.gemTypes[1] + ' Gem'"></ko>
-                        <img style="margin: -6px 0" data-bind="attr: { src: './pokeclicker/docs/' + Gems.image(PokemonType[$data.gemTypes[1]]) }" />
+                        <img style="margin: -6px 0" data-bind="attr: { src: '/pokeclicker/docs/' + Gems.image(PokemonType[$data.gemTypes[1]]) }" />
                     </th>
                     <th style="text-align: right;">
                         <ko data-bind="text: $data.gemTypes[2] + ' Gem'"></ko>
-                        <img style="margin: -6px 0" data-bind="attr: { src: './pokeclicker/docs/' + Gems.image(PokemonType[$data.gemTypes[2]]) }" />
+                        <img style="margin: -6px 0" data-bind="attr: { src: '/pokeclicker/docs/' + Gems.image(PokemonType[$data.gemTypes[2]]) }" />
                     </th>
                     <th>Total</th>
                     <th class="d-none">Gem Types</th>
@@ -121,7 +121,7 @@
             <tbody data-bind="foreach: { data: Wiki.gems.gemGymsPerFlute($data.name) }">
                 <tr>
                     <td data-bind="text: $index() + 1"></td>
-                    <td><a style="text-decoration: none;" data-bind="text: $data.displayName, attr: { href: `#!Gyms/${$data.name}` }"></a></td>
+                    <td><a style="text-decoration: none;" data-bind="text: $data.displayName, attr: { href: `/Gyms/${$data.name}/` }"></a></td>
                     <td data-bind="text: $data.gems[0].amount.toFixed(2)"></td>
                     <td data-bind="text: $data.gems[1].amount.toFixed(2)"></td>
                     <td data-bind="text: $data.gems[2].amount.toFixed(2)"></td>
@@ -168,13 +168,13 @@
                     <!-- ko foreach: itemChances -->
                     <tr class="clickable align-middle" data-bind="
                         click: (_, e)=> { return Wiki.gotoPageClick(e, 'Dungeons', $data.dungeonName); },
-                        attr: { 'data-href': `#!Dungeons/${$data.dungeonName}` }">
+                        attr: { 'data-href': `/Dungeons/${$data.dungeonName}/` }">
                         <td>
-                            <a class="text-decoration-none" href="#!" data-bind="text: $data.dungeonName, attr: { href: `#!Dungeons/${$data.dungeonName}` }"></a>
+                            <a class="text-decoration-none" href="/" data-bind="text: $data.dungeonName, attr: { href: `/Dungeons/${$data.dungeonName}/` }"></a>
                         </td>
                         <td data-bind="text: $data.region"></td>
                         <td class="text-center">
-                            <img width="40px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/dungeons/chest-${$data.tier.toLowerCase()}.png`, title: `${$data.tier}` }" />
+                            <img width="40px" data-bind="attr: { src: `/pokeclicker/docs/assets/images/dungeons/chest-${$data.tier.toLowerCase()}.png`, title: `${$data.tier}` }" />
                         </td>
                         <!-- ko foreach: $data.chances -->
                         <td data-bind="text: typeof $data.chance === 'number' ? ($data.chance >= 0.0001 ? $data.chance.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }) : ('<' + 0.0001.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }))) : ($data.chance ?? '-'), attr: { 'data-order': $data.chance }"></td>
@@ -191,7 +191,7 @@
     <div class="mt-3" data-bind="if: pokemonList.some((p) => ([ItemType.item, ItemType.underground]).includes(p.heldItem?.type) && p.heldItem?.id == $data.name || p.heldItem?.id == $data.displayName)">
         <h3>Can be dropped by the following Pokémon:</h3>
         <!-- ko foreach : pokemonList.filter((p) => ([ItemType.item, ItemType.underground]).includes(p.heldItem?.type) && p.heldItem?.id == $data.name || p.heldItem?.id == $data.displayName) -->
-        <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokémon/${$data.name}` }"></a>
+        <a class="badge text-bg-secondary" href="/" data-bind="text: $data.name, attr: { href: `/Pokémon/${$data.name}/` }"></a>
         <!-- /ko -->
     </div>
     <!-- /ko -->

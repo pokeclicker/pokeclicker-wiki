@@ -16,10 +16,10 @@
         <tbody data-bind="foreach: Wiki.pokemon.getAvailablePokemon()">
             <tr class="clickable align-middle" data-bind="
                 click: (_, e) => { return Wiki.gotoPageClick(e, 'Pokemon', $data.name); },
-                attr: { 'data-href': `#!Pokemon/${$data.name}` }">
+                attr: { 'data-href': `/Pokemon/${$data.name}/` }">
                 <td data-bind="text: `#${Math.floor($data.id).toString().padStart(3, '0')}`, attr: { 'data-sort': $data.id }"></td>
                 <td>
-                    <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a>
+                    <a class="text-decoration-none" href="/" data-bind="text: $data.name, attr: { href: `/Pokemon/${$data.name}/` }"></a>
                 </td>
                 <td data-bind="foreach: $data.type">
                     <span class="badge text-white" data-bind="text: PokemonType[$data], style: {

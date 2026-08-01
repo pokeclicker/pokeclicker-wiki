@@ -14,7 +14,7 @@
 
 Berries are dropped from wild Pokémon, Dungeon Chests, and can be grown and mutated in the [[Farm]]. Berries can be used to [trade](#trades) for items and Pokémon. Berry plants also be used for their [auras](#aura) or to attract [[Wandering Pokémon]].
 
-Berry plants grow in four stages (Sprout → Taller → Bloom → Ripe). If left unharvested, they will wither after a certain amount of time. For the basics of growing berries, see the [Farm](#!Farm#growing) page.
+Berry plants grow in four stages (Sprout → Taller → Bloom → Ripe). If left unharvested, they will wither after a certain amount of time. For the basics of growing berries, see the [Farm](/Farm/#growing) page.
 
 For detailed information on growing each Berry, ways to acquire them, and Wanderers they attract, see the Berry's [individual page](#list).
 
@@ -27,7 +27,7 @@ The stats for Berry plants can be modified by various items and auras. Such effe
 | ---- | ---- | ---- |
 | **Color** | The Berry's color. Some Wanderers are only attracted to certain color Berries. | |
 | **Flavors** | The Berry's flavors. A common mutation requirement. | Berries begin to have flavors at the Taller stage of growth. They have 50% of their flavor points at the Taller stage, 75% at Bloom, and full flavor points at Ripe. |
-| **Growth Time** | How long it takes for a Berry plant to reach the Ripe stage. | _**Speeds up Growth Time:** Sprayduck, Boost or Amaze [Mulch](#!Farm#farmtools), [[Berries/Wacan]] Auras_{.d-block .fst-normal} _**Stops Growth Time:** Freeze Mulch_{.d-block .fst-normal} |
+| **Growth Time** | How long it takes for a Berry plant to reach the Ripe stage. | _**Speeds up Growth Time:** Sprayduck, Boost or Amaze [Mulch](/Farm/#farmtools), [[Berries/Wacan]] Auras_{.d-block .fst-normal} _**Stops Growth Time:** Freeze Mulch_{.d-block .fst-normal} |
 | **Wither Time** | How long it takes for a ripe Berry plant to wither. | _**Slows down Wither Time:** [[Berries/Yache]] and [[Berries/Haban]] Auras_{.d-block .fst-normal} _**Speeds up Wither Time:** Sprayduck, Boost or Amaze Mulch, [[Berries/Kasib]] Auras_{.d-block .fst-normal} _**Pauses Wither Time:** Freeze Mulch, [[Berries/Petaya]] Aura_{.d-block .fst-normal} |
 | **Exp** | Amount of Farm EXP gained per harvest. Used to level [[Oak Items/Sprayduck]]. | |
 | **Harvest Amount** | Amount of Berries gained per harvest. Berry plants will always yield at least 1 berry, even if the Harvest Amount is less than 1, but multiplying boosts will use the actual value.* | _**Increases Harvest:** Rich or Amaze Mulch, [[Berries/Passho]] Auras_{.d-block .fst-normal} _**Decreases Harvest:** [[Berries/Tanga]] Auras_{.d-block .fst-normal} |

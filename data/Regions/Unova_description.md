@@ -1,5 +1,5 @@
 :--- | ---:
-[**← Sinnoh**](#!Regions/Sinnoh) | **[Kalos →](#!Regions/Kalos)**
+[**← Sinnoh**](/Regions/Sinnoh/) | **[Kalos →](/Regions/Kalos/)**
 
 #### Jump to:
 * [Towns, Routes, and Dungeons](#wiki-page-content)

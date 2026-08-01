@@ -10,7 +10,7 @@
                     click: () => { Wiki.farmSimulator.selectedPlotIndex($index()); },
                     css: { selected: Wiki.farmSimulator.selectedPlotIndex() === $index() }">
                     <div class="plotImage">
-                        <img style="width: 100%;" src="./images/farm/soil.png" data-bind="class: FarmController.calcMulchClass($data)">
+                        <img style="width: 100%;" src="/images/farm/soil.png" data-bind="class: FarmController.calcMulchClass($data)">
                         <div class="plotButton" data-bind="ifnot: $data.isEmpty()">
                             <img width="100%" height="100%" src=""
                                 style="width: 68.75%; max-height: 100%; image-rendering: pixelated;"

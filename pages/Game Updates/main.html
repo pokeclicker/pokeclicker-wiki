@@ -14,10 +14,10 @@
                 }
             })()">
                 <!-- ko if: $data.previous -->
-                <a href="#" class="text-decoration-none" data-bind="text: `← ${$data.previous}`, attr: { href: `/#!Game_Updates/${$data.previous}` }"></a>
+                <a href="#" class="text-decoration-none" data-bind="text: `← ${$data.previous}`, attr: { href: `/Game_Updates/${$data.previous}/` }"></a>
                 <!-- /ko -->
                 <!-- ko if: $data.next -->
-                <a href="#" class="text-decoration-none" data-bind="text: `${$data.next} →`, attr: { href: `/#!Game_Updates/${$data.next}` }"></a>
+                <a href="#" class="text-decoration-none" data-bind="text: `${$data.next} →`, attr: { href: `/Game_Updates/${$data.next}/` }"></a>
                 <!-- /ko -->
             </div>
         </div>

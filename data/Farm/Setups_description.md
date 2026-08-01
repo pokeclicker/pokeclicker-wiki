@@ -1,4 +1,4 @@
-Farm Setups are specific arrangements of Berries that maximize the use of [Berry Auras](#!Berries#aura) on the [[Farm]].
+Farm Setups are specific arrangements of Berries that maximize the use of [Berry Auras](/Berries/#aura) on the [[Farm]].
 
 *If you are looking for how to mutate and unlock Berries, see [[Berries]] and individual Berry pages.*
 
@@ -11,7 +11,7 @@ Farm Setups are specific arrangements of Berries that maximize the use of [Berry
 | **[Wandering Pokémon](#wanderers)** | Boost chances for encountering specific [[Wandering Pokémon]] | [[File:Roseli.png\|24px]] [[Berries/Roseli]] |
 | **[Roaming Pokemon](#roamers)** | Boost chances for encountering [[Roaming Pokémon]] | [[File:Jaboca.png\|24px]] [[Berries/Jaboca]] |
 | **[Egg Step Gain](#eggsteps)** | Increase egg step gains for faster breeding in the [[Hatchery]] | [[File:Chople.png\|24px]] [[Berries/Chople]] |
-| **[EV Gains](#evs)** | Increase [EV yields](#!Pokérus) | [[File:Rowap.png\|24px]] [[Berries/Rowap]] |
+| **[EV Gains](#evs)** | Increase [EV yields](/Pokérus/) | [[File:Rowap.png\|24px]] [[Berries/Rowap]] |
 | **[Shiny Chance](#shiny)** | Increase [[Shiny Chance]] | [[File:Starf.png\|24px]] [[Berries/Starf]] |
 | **[Levelling Squirtbottle](#squirtbottle)** | Mutate berries quickly to level [[Oak Items/Squirtbottle]] | [[File:Occa.png\|24px]] [[Berries/Occa]] or [[File:Kebia.png\|24px]] [[Berries/Kebia]] or [[File:Persim.png\|24px]] [[Berries/Persim]] |
 | **[Colbur Nonsense](#nonsense)** | Earn Farm Points quickly (active play) | [[File:Colbur.png\|24px]] [[Berries/Colbur]], [[File:Babiri.png\|24px]] [[Berries/Babiri]],  [[File:Petaya.png\|24px]] [[Berries/Petaya]] |

@@ -1,5 +1,5 @@
 :--- | ---:
-[**← Hoenn**](#!Regions/Hoenn) | **[Unova →](#!Regions/Unova)**
+[**← Hoenn**](/Regions/Hoenn/) | **[Unova →](/Regions/Unova/)**
 
 #### Jump to:
 * [Towns, Routes, and Dungeons](#wiki-page-content)

@@ -13,13 +13,13 @@
             <!-- ko foreach: HatcheryHelpers.list -->
             <tr class="clickable align-middle" data-bind="
                 click: (_, e) => { return Wiki.gotoPageClick(e, 'Hatchery Helpers', $data.name); },
-                attr: { 'data-href': `#!Hatchery Helpers/${$data.name}` }">
+                attr: { 'data-href': `/Hatchery Helpers/${$data.name}/` }">
                 <td class="text-nowrap">
-                    <img class="me-1" width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/profile/trainer-${$data.trainerSprite}.png` }"/>
-                    <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Hatchery Helpers/${$data.name}` }"></a>
+                    <img class="me-1" width="18px" data-bind="attr: { src: `/pokeclicker/docs/assets/images/profile/trainer-${$data.trainerSprite}.png` }"/>
+                    <a class="text-decoration-none" href="/" data-bind="text: $data.name, attr: { href: `/Hatchery Helpers/${$data.name}/` }"></a>
                 </td>
                 <td class="text-nowrap" data-bind="attr: { 'data-order': $data.cost.amount }">
-                    <img width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/currency/${GameConstants.Currency[$data.cost.currency]}.svg` }"/>
+                    <img width="18px" data-bind="attr: { src: `/pokeclicker/docs/assets/images/currency/${GameConstants.Currency[$data.cost.currency]}.svg` }"/>
                     <ko data-bind="text: $data.cost.amount.toLocaleString()"></ko>
                 </td>                
                 <td data-bind="text: `${$data.stepEfficiencyBase}%`"></td>
@@ -54,11 +54,11 @@
                 <!-- ko foreach: HatcheryHelpers.list -->
                 <tr class="align-middle">
                     <td class="text-nowrap">
-                        <img class="me-1" width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/profile/trainer-${$data.trainerSprite}.png` }"/>
+                        <img class="me-1" width="18px" data-bind="attr: { src: `/pokeclicker/docs/assets/images/profile/trainer-${$data.trainerSprite}.png` }"/>
                         <ko data-bind="text: $data.name"></ko>
                     </td>
                     <td class="text-nowrap" data-bind="attr: { 'data-order': $data.cost.amount }">
-                        <img width="18px" data-bind="attr: { src: `./pokeclicker/docs/assets/images/currency/${GameConstants.Currency[$data.cost.currency]}.svg` }"/>
+                        <img width="18px" data-bind="attr: { src: `/pokeclicker/docs/assets/images/currency/${GameConstants.Currency[$data.cost.currency]}.svg` }"/>
                         <ko data-bind="text: ($data.cost.amount * $parent.value ** 2 * 50).toLocaleString()"></ko>
                     </td>
                     <td data-bind="text: `${$data.stepEfficiencyBase + $parent.value}%`"></td>

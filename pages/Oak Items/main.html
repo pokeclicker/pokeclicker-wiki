@@ -13,7 +13,7 @@
             <tbody>
                 <tr>
                     <td class="text-center" colspan="2">
-                        <img data-bind="attr: {src: `images/${OakItemType[$data.name]}.png`}"/>
+                        <img data-bind="attr: {src: `/images/${OakItemType[$data.name]}.png`}"/>
                     </td>
                 </tr>
                 <tr>
@@ -29,7 +29,7 @@
                         <!-- ko if: $data instanceof BoughtOakItem -->
                         <knockout data-bind="with: { oakItem: $data, shopItem: ItemList[OakItemType[$data.name]] }">
                             <knockout data-bind="text: `Purchase at ${oakItem.shopName} for ${shopItem.basePrice.toLocaleString()}`"></knockout>
-                            <img class="ms-1" width="18" data-bind="attr: { src: `./images/${GameConstants.Currency[shopItem.currency]}.svg` }">
+                            <img class="ms-1" width="18" data-bind="attr: { src: `/images/${GameConstants.Currency[shopItem.currency]}.svg` }">
                         </knockout>
                         <!-- /ko -->
                     </td>
@@ -55,7 +55,7 @@
                     <td style="text-align: right;">
                         <!-- ko if: $parent.costList[$index()] -->
                         <knockout data-bind="text: $parent.costList[$index()].amount.toLocaleString()"></knockout>
-                        <img width="18" data-bind="attr: { src: `./images/${GameConstants.Currency[$parent.costList[$index()].currency]}.svg` }" />
+                        <img width="18" data-bind="attr: { src: `/images/${GameConstants.Currency[$parent.costList[$index()].currency]}.svg` }" />
                         <!-- /ko -->
                         <!-- ko ifnot: $parent.costList[$index()] -->
                         <span>N/A</span>

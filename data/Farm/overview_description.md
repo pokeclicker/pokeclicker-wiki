@@ -13,9 +13,9 @@
 * [[Farm Points]]
 * [[Farm/Setups]]
 
-In the Farm, you can grow different types of [[Berries]], which can be [traded](#!Berries#trades) for useful items and unique Pokémon and earn you [[Farm Points]] [[File:farmPoint.svg|25px]]. Berry plants also attract [[Wandering Pokémon]], create helpful [Auras](#!Berries/#aura), and more.
+In the Farm, you can grow different types of [[Berries]], which can be [traded](/Berries/#trades) for useful items and unique Pokémon and earn you [[Farm Points]] [[File:farmPoint.svg|25px]]. Berry plants also attract [[Wandering Pokémon]], create helpful [Auras](/Berries/#aura), and more.
 
-The Farm is unlocked after reaching [[Routes/Kanto Route 11]] and obtaining the [Wailmer Pail](#!Key_Items).
+The Farm is unlocked after reaching [[Routes/Kanto Route 11]] and obtaining the [Wailmer Pail](/Key_Items/).
 
 The default hotkey to open the Farm interface is **F**.
 
@@ -33,10 +33,10 @@ The first eight Gen 1 Berries are dropped by wild Pokémon. More Berries can be 
 3. If left unharvested, ripe Berry plants will eventually **wither**, dropping half of the expected Berries.
 4. If it withers, Berry plants have a chance to **replant** themselves, spawning a plant of the same Berry in that plot. Farm Points are not gained when Berries wither or get replanted.
 
-Growth time, harvest amounts, wither time, and replant rates can be [modified](#!Berries#stats).
+Growth time, harvest amounts, wither time, and replant rates can be [modified](/Berries/#stats).
 
 #### Mutating Berries
-*→ See: [Mutations](#!Berries#mutation)*
+*→ See: [Mutations](/Berries/#mutation)*
 
 Berries planted in certain configurations can mutate into new Berry species.
 

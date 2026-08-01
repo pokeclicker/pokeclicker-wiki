@@ -21,7 +21,7 @@
 
 Dungeons are locations where you can encounter wild Pokémon and Trainers and loot items from chests. Dungeons cost [[Dungeon Tokens]] [[File:dungeonToken.svg|18px]] to enter. Once inside, you have a time limit to explore. To **clear** a dungeon, you must find and defeat the Dungeon Boss within the time limit.
 
-Dungeons become available in the game after you purchase a [Dungeon Ticket](#!Key_Items) in [[Town/Viridian City]].
+Dungeons become available in the game after you purchase a [Dungeon Ticket](/Key_Items/) in [[Town/Viridian City]].
 
 #### Controls{#navigation}
 
@@ -46,7 +46,7 @@ On the dungeon overview, you can click the [[File:encountersInfo/encountersInfo.
 Encounters can have different weights, making some enemies and bosses more likely to appear than others.
 
 **Wild Pokémon** can be captured, and a successful capture will also reward you Dungeon Tokens.
-- Pokémon captured in dungeons provide higher base [Effort Value](#!Pokérus/#EV) yields. These modifiers stack with other multipliers that affect EVs.
+- Pokémon captured in dungeons provide higher base [Effort Value](/Pokérus/#EV) yields. These modifiers stack with other multipliers that affect EVs.
 - Dungeons encounters benefit from a +15% catch rate when using a [[Items/Dusk Ball]].
 
 **Mimics**{#mimic} are wild Pokémon are hiding as chests, and opening a chest with a Mimic will result in a battle. Mimics will **not** be displayed on the Dungeon location summary card until encountered at least once. Some Pokémon are exclusive to Mimic encounters.
@@ -67,7 +67,7 @@ Ways to increase the timer:
 
 #### Multiple Clears{#clearing}
 - Clearing a dungeon 10 times will allow you to **hire [[Dungeon Guides]]** to automatically explore the dungeon for you (for a fee).
-- Clearing a dungeon 10, 100, 250 and 500 times will **award an [achievement](#!Achievements)**.
+- Clearing a dungeon 10, 100, 250 and 500 times will **award an [achievement](/Achievements/)**.
 - Clearing a dungeon 10, 100, 1000, etc. times (any amount that is a power of ten) will **shrink the dungeon size by 1 permanently**.
 - Clearing a dungeon 100, 250, and 400 times will **increase your [Flash Ability](#flash)** for that dungeon, allowing you to see the contents of unexplored tiles.
 
