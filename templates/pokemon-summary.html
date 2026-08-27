@@ -26,11 +26,11 @@
                     <div class="container">
                         <div class="row">
                             <div class="col">
-                                <img data-bind="attr: { src: `./pokeclicker/docs/assets/images/${sprite()}/${$data.id}.png` }"/>
+                                <img data-bind="attr: { src: `./pokeclicker/docs/assets/images/${sprite()}/${$data.id}.png` }" />
                             </div>
                             <!-- ko if: $data.gender.visualDifference -->
                             <div class="col">
-                                <img data-bind="attr: { src: `./pokeclicker/docs/assets/images/${sprite()}/${$data.id}-f.png` }"/>
+                                <img data-bind="attr: { src: `./pokeclicker/docs/assets/images/${sprite()}/${$data.id}-f.png` }" />
                             </div>
                             <!-- /ko -->
                         </div>
@@ -50,13 +50,13 @@
                                 <div class="progress">
                                     <!-- ko if: $data.gender.type != GameConstants.Genders.Genderless -->
                                     <div class="progress-bar male" role="progressbar" aria-valuemax="100"
-                                        data-bind="style: { width: PokedexHelper.getGenderRatioData($data).male + '%' },
+                                         data-bind="style: { width: PokedexHelper.getGenderRatioData($data).male + '%' },
                                         tooltip: {
                                             title:PokedexHelper.getGenderRatioData($data).male + '%',
                                             placement: 'bottom'
                                         }"></div>
                                     <div class="progress-bar female" role="progressbar" aria-valuemax="100"
-                                        data-bind="style: { width: PokedexHelper.getGenderRatioData($data).female + '%' },
+                                         data-bind="style: { width: PokedexHelper.getGenderRatioData($data).female + '%' },
                                         tooltip: {
                                             title:PokedexHelper.getGenderRatioData($data).female + '%',
                                             placement: 'bottom'
@@ -64,7 +64,7 @@
                                     <!-- /ko -->
                                     <!-- ko if: $data.gender.type == GameConstants.Genders.Genderless -->
                                     <div class="progress-bar genderless" role="progressbar" style="width: 100%;" aria-valuemax="100"
-                                        data-bind="tooltip: {
+                                         data-bind="tooltip: {
                                             title: 'N/A',
                                             placement: 'bottom'
                                         }"></div>
@@ -84,7 +84,7 @@
             <td>Type(s)</td>
             <td>
                 <!-- ko foreach: $data.type -->
-                    <span class="badge type-icon" data-bind="text: PokemonType[$data], style:{ background: GameConstants.TypeColor[$data] }"></span>
+                <span class="badge type-icon" data-bind="text: PokemonType[$data], style:{ background: GameConstants.TypeColor[$data] }"></span>
                 <!-- /ko -->
             </td>
         </tr>
@@ -123,5 +123,24 @@
                 <!-- /ko -->
             </td>
         </tr>
+        <!-- ko if: PokemonHelper.getMegaStones($data.name).length > 0 || PokemonHelper.isMegaEvolution($data.name) -->
+        <tr>
+            <td>
+                <a href="#!Mega Pokemon">Mega Stone</a>
+            </td>
+            <td>
+                <!-- ko foreach: (function() {
+                    const stones = PokemonHelper.getMegaStones($data.name).map(x => x.displayName);
+                    const evo = PokemonLocations.getPokemonPrevolution($data.name).find(e => e.evolvedPokemon === $data.name);
+                    const req = evo?.restrictions?.find(r => r instanceof MegaEvolveRequirement);
+                    const extra = ItemList[GameConstants.MegaStoneType[req?.megaStone]]?.displayName;
+                    return extra ? stones.concat(extra) : stones;
+                })() -->
+                <a data-bind="text: $data, attr: { href: '#!Items/' + $data }"></a>
+                <!-- /ko -->
+            </td>
+        </tr>
+        <!-- /ko -->
+
     </tbody>
 </table>
