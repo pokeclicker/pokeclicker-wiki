@@ -12,7 +12,9 @@
             <tbody data-bind="foreach: $data">
                 <!-- ko with: App.game.farming.berryData[$data] -->
                 <tr>
-                    <td data-bind="text: BerryType[$parent]"></td>
+                    <td>
+                        <a class="text-decoration-none" href="#!" data-bind="text: BerryType[$data.type], attr: { href: `#!Berries/${BerryType[$data.type]}` }"></a>
+                    </td>
                     <td>
                         <img src="./images/farmPoint.svg" width="18px"/>
                         <ko data-bind="text: ($data.farmValue / $data.growthTime[PlotStage.Bloom]).toFixed(3)"></ko>
