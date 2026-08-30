@@ -4,7 +4,7 @@ The Veteran Shop is a shop in [[Towns/Pallet Town]] exclusive to experienced pla
 
 | Item / Mechanic | Cost | Requirement (different file) | Notes |
 |---|---|---|---|
-| Pokerus Virus | 200 DT | Have at least 500 pokemon resistant to pokerus | Can be purchased multiple times to continue infecting pokemon |
+| Pokerus Virus | 2,000 DT | Have at least 500 pokemon resistant to pokerus | Can be purchased multiple times to continue infecting pokemon |
 | Event Calendar | 10,000 QP | Purchased Event Calendar | |
 | Explorer Kit (underground) | 5,000 pokedollars | Reached level 50 in the Underground | |
 | Holo Caster (achievement tracker) | 100 DT | Unlocked Holo Caster | |
