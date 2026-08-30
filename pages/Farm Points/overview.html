@@ -10,7 +10,7 @@
                 <th>Total time till ripe (hh:mm:ss)</th>
             </thead>
             <tbody data-bind="foreach: $data">
-                <!-- ko with: App.game.farming.berryData[$data] -->
+                <!-- ko with: BerryList[$data] -->
                 <tr>
                     <td data-bind="text: BerryType[$parent]"></td>
                     <td>

@@ -12,7 +12,7 @@
                 <th>Growth Time</th>
             </tr>
         </thead>
-        <tbody data-bind="foreach: App.game.farming.berryData">
+        <tbody data-bind="foreach: BerryList">
             <tr class="clickable align-middle" data-bind="
                 click: (_, e) => { return Wiki.gotoPageClick(e, 'Berries', BerryType[$data.type]); },
                 attr: { 'data-href': `#!Berries/${BerryType[$data.type]}` }">

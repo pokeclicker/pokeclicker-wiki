@@ -109,7 +109,7 @@ const searchOptions = [
     type: 'Berries',
     page: '',
   },
-  ...App.game.farming.berryData.map(b => ({
+  ...BerryList.map(b => ({
     display: `${BerryType[b.type]} Berry`,
     type: 'Berries',
     page: BerryType[b.type],
