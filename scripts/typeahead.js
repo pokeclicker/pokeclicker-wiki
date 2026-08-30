@@ -488,6 +488,12 @@ const searchOptions = [
     type: 'Game Updates',
     page: '',
   },
+  // Veteran Shop
+  {
+    display: 'Veteran Shop',
+    type: 'Veteran Shop',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
