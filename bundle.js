@@ -77882,6 +77882,7 @@ QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 AchievementHandler.initialize(multiplier, new Challenges());
+AchievementHandler.calculateMaxBonus();
 
 BerryDeal.generateDeals(now);
 GemDeals.generateDeals();
