@@ -79581,7 +79581,9 @@ const setPlotStage = (plotStage) => {
         selectedPlot()._age(0);
     } else {
         const berryData = BerryList[selectedPlot()._berry()];
-        selectedPlot()._age(berryData?.growthTime[plotStage] ?? 0);
+        let age = berryData?.growthTime[plotStage] ?? 0;
+        if (age > 0) age -= 1;
+        selectedPlot()._age(age);
     }
 }
 
