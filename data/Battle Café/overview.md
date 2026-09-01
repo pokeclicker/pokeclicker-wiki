@@ -11,7 +11,11 @@ Day               | 6:00 AM - 5:59 PM         | 06:00 - 17:59
 Dusk              | 5:00 PM - 5:59 PM         | 17:00 - 17:59
 Night             | 6:00 PM - 5:59 AM         | 18:00 - 05:59
 
-The player starts with **3 daily spins**. Every full set of one sweet type, full shiny set, and full resistant set, will give the player 1 extra spin per day up to a maximum of **24 daily spins**.  Berries and spins are not consumed until the spin is complete; closing the game interrupts this process. The Battle Café's window can be closed and a spin will continue as long as the game isn't quit.
+### Spins
+
+The player starts with **3 daily spins**. Every full set of one sweet type, full shiny set, and full resistant set, will give the player 1 extra spin per day up to a maximum of **24 daily spins**. Each day at midnight you gain your daily spins, up to a limit of 7 days worth of spins.
+Berries and spins are not consumed until the spin is complete; closing the game interrupts this process. The Battle Café's window can be closed and a spin will continue as long as the game isn't quit.
+Spinning an Alcremie form that is already resistant does not consume a spin.
 
 ### Berry Costs
 Each sweet type requires a fixed quantity of three different types of [[Berries]]. The player will need to possess the requisite number of each kind of berry to be able to spin on that sweet type and those berries will be consumed. *(This means that caution should be taken so the last berry of a certain kind isn't lost while performing a spin.)* The seven sweet types and their associated berry costs are outlined below.
