@@ -32,8 +32,10 @@
 <br>
 <h2>Trivia</h2>
 <p>To complete all Dungeon achievements, you will need the following number of Dungeon Tokens:<br />
-    
-Note: Dungeons are counted towards the Region in which they're unlocked. For example Sevii 4567 counts towards Hoenn's total.</p>
+
+Note: Dungeons are counted towards the Region in which they're unlocked. For example Sevii 4567 counts towards Hoenn's total.<br />
+
+These totals account for the entry cost dropping as a dungeon shrinks, so they are lower than the cost per entry multiplied by the number of clears.</p>
 <div class="table-responsive">
     <table class="table table-hover table-striped table-bordered">
         <thead class="thead-dark">
@@ -47,32 +49,25 @@ Note: Dungeons are counted towards the Region in which they're unlocked. For exa
         </thead>
         <tbody data-bind="foreach: Object.entries(Object.values(dungeonList).reduce((map, d) => {
             const region = d.optionalParameters?.dungeonRegionalDifficulty ?? GameConstants.getDungeonRegion(d.name);
-            map[region] = (map[region] ?? 0) + d.tokenCost;
+            map[region] = map[region] ?? [0, 0, 0, 0];
+            [1, 10, 100, 500].forEach((clears, i) => map[region][i] += Wiki.dungeons.getTotalDungeonTokenCost(d, clears));
             return map;
-        }, {})).filter(([region, total]) => region <= GameConstants.MAX_AVAILABLE_REGION)">
-            <tr data-bind="with: { region: GameConstants.camelCaseToString(GameConstants.Region[$data[0]]), total: $data[1] }">
+        }, {})).filter(([region, totals]) => region <= GameConstants.MAX_AVAILABLE_REGION)">
+            <tr data-bind="with: { region: GameConstants.camelCaseToString(GameConstants.Region[$data[0]]), totals: $data[1] }">
                 <td data-bind="text: $data.region"></td>
-                <td data-bind="attr: { 'data-order': $data.total }"><img src="./images/dungeonToken.svg" width="18px"/> 
-                    <ko data-bind="text: $data.total.toLocaleString()"></ko></td>
-                <td data-bind="attr: { 'data-order': $data.total }"><img src="./images/dungeonToken.svg" width="18px"/> 
-                    <ko data-bind="text: ($data.total * 10).toLocaleString()"></ko></td>
-                <td data-bind="attr: { 'data-order': $data.total }"><img src="./images/dungeonToken.svg" width="18px"/> 
-                    <ko data-bind="text: ($data.total * 100).toLocaleString()"></ko></td>
-                <td data-bind="attr: { 'data-order': $data.total }"><img src="./images/dungeonToken.svg" width="18px"/> 
-                    <ko data-bind="text: ($data.total * 500).toLocaleString()"></ko></td>
+                <!-- ko foreach: $data.totals -->
+                <td data-bind="attr: { 'data-order': $data }"><img src="./images/dungeonToken.svg" width="18px"/> 
+                    <ko data-bind="text: $data.toLocaleString()"></ko></td>
+                <!-- /ko -->
             </tr>
         </tbody>
         <tfoot>
-            <tr data-bind="with: {total: Object.values(GameConstants.RegionDungeons).filter((r, i) => i <= GameConstants.MAX_AVAILABLE_REGION).flat().map(d => dungeonList[d]).reduce((sum, d) => sum + d.tokenCost, 0)}">
+            <tr data-bind="with: {totals: [1, 10, 100, 500].map(clears => Object.values(GameConstants.RegionDungeons).filter((r, i) => i <= GameConstants.MAX_AVAILABLE_REGION).flat().map(d => dungeonList[d]).reduce((sum, d) => sum + Wiki.dungeons.getTotalDungeonTokenCost(d, clears), 0))}">
                 <td>Total</td>
+                <!-- ko foreach: $data.totals -->
                 <td><img src="./images/dungeonToken.svg" width="18px"/> 
-                    <ko data-bind="text: $data.total.toLocaleString()"></ko></td>
-                <td><img src="./images/dungeonToken.svg" width="18px"/> 
-                    <ko data-bind="text: ($data.total * 10).toLocaleString()"></ko></td>
-                <td><img src="./images/dungeonToken.svg" width="18px"/> 
-                    <ko data-bind="text: ($data.total * 100).toLocaleString()"></ko></td>
-                <td><img src="./images/dungeonToken.svg" width="18px"/> 
-                    <ko data-bind="text: ($data.total * 500).toLocaleString()"></ko></td>
+                    <ko data-bind="text: $data.toLocaleString()"></ko></td>
+                <!-- /ko -->
             </tr>
         </tfoot>
     </table>

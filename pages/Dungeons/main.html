@@ -64,13 +64,23 @@
                         </td>
                     </tr>
                     <!-- /ko -->
+                    <!-- ko let: { costSteps: Wiki.dungeons.getDungeonTokenCostSteps($data).slice(1) } -->
                     <tr>
                         <td>Cost</td>
                         <td>
-                            <knockout data-bind="text: $data.tokenCost.toLocaleString()"></knockout>
+                            <knockout data-bind="text: `Base: ${$data.tokenCost.toLocaleString()}`"></knockout>
                             <img src="./images/dungeonToken.svg" width="18px"/> 
+                            <!-- ko if: costSteps.length -->
+                            <div data-bind="foreach: costSteps">
+                                <div class="text-nowrap">
+                                    <knockout data-bind="text: `After ${$data.clears.toLocaleString()} clears: ${$data.cost.toLocaleString()}`"></knockout>
+                                    <img src="./images/dungeonToken.svg" width="18px"/>
+                                </div>
+                            </div>
+                            <!-- /ko -->
                         </td>
                     </tr>
+                    <!-- /ko -->
                     <tr>
                         <td>Base HP</td>
                         <td data-bind="text: $data.baseHealth.toLocaleString()"></td>
