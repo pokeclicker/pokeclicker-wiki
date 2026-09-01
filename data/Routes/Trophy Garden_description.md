@@ -1,0 +1,2 @@
+## Daily Pokémon
+Each day, 3 Pokémon are randomly chosen from Mr. Backlot's list of 33 (listed below as Special Encounters) and added to the route's 5 permanent encounters. Only Pokémon the player has already captured can show up, the rest appear locked until caught elsewhere.
