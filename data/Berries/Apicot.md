@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-Pokémon #484 [[Pokémon/Palkia]] must be caught to unlock this berry. You can fill your farm in the following way to obtain Apicot Berries. Purple squares indicate where mutations can occur.
+The Apicot berry can be acquired by having 23 [[Berries/Chilan]] berries at the Berry stage in your farm. The mutation is unlocked by completing the [[Quest Lines/A New World]] quest line. Owning [[Pokémon/Palkia]] doubles the chance of the mutation. You can fill your farm in the following way to obtain Apicot Berries. Purple squares indicate where mutations can occur.
 
 :::collapsed Apicot Mutation - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
