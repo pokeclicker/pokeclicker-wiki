@@ -41,16 +41,6 @@ Item prices increase with repeat purchases and decrease by harvesting Berries on
 | [[File:trainer-14.png\|25px]] [[Items/Hatchery Helper Cameron]] | [[File:currency/farmPoint.svg\|24px]] 100,000 | One-time purchase. | @[[Towns/Mauville City]] |
 | [[File:trainer-55.png\|25px]] [[Items/Farm Hand Riley]] | [[File:currency/farmPoint.svg\|24px]] 200,000 | One-time purchase. | @[[Towns/Hearthome City]] |
 
-#### Berries (Oak Item Challenge) {.mt-3}
-These Berries can only be purchased if you have the Oak Item Challenge enabled, as these berries typically require Oak Items to mutate.
-
-| Name {.col-2}| Base Price {.col-1}| Description {.col-5}| Available Locations {.col-1}|
-|:-------- | :-------- |:--------| :--------|
-| [[File:items/berry/Chople.png\|25px]] [[Berries/Chople]] | [[File:currency/farmPoint.svg\|24px]] 10,000 | One-time purchase. Requires Spelon unlocked. | @[[Towns/Goldenrod City]] |
-| [[File:items/berry/Kebia.png\|25px]] [[Berries/Kebia]] | [[File:currency/farmPoint.svg\|24px]] 10,000 | One-time purchase. Requires Pamtre unlocked. | @[[Towns/Goldenrod City]] |
-| [[File:items/berry/Shuca.png\|25px]] [[Berries/Shuca]] | [[File:currency/farmPoint.svg\|24px]] 10,000 | One-time purchase. Requires Watmel unlocked. | @[[Towns/Goldenrod City]] |
-| [[File:items/berry/Charti.png\|25px]] [[Berries/Charti]] | [[File:currency/farmPoint.svg\|24px]] 10,000 | One-time purchase. Requires Cornn unlocked. | @[[Towns/Goldenrod City]] |
-
 #### Other {.mt-3}
 
 | Name {.col-2}| Base Price {.col-1}| Description {.col-5}| Available Locations {.col-1}|

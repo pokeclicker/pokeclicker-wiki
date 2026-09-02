@@ -5,7 +5,6 @@
 Custap can be obtained by having at least one empty plot and at least 600 points of sweet on the field. [[Berries/Watmel]] must be unlocked to unlock this berry. You can fill your farm in the following way to obtain Custap berries. Purple squares indicate where mutations can occur.
 
 #### Watmel Mutation Strategy
-**WARNING:** Trying to mutate Custap while having the [[Items/Sprinklotad]] equipped may result in your Watmel berries mutating into [[Berries/Shuca]] berries.
 
 :::collapsed Custap Mutation w/ Watmel - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
