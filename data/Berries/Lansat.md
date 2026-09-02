@@ -2,7 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-Pokémon #483 [[Pokémon/Dialga]] must be caught to unlock this berry. You can fill your farm in the following way to obtain Lansat Berries. Purple squares indicate where mutations can occur.
+The Lansat berry can be acquired by having 23 [[Berries/Roseli]] berries at the Berry stage in your farm. The mutation is unlocked by completing the [[Quest Lines/A New World]] quest line. Owning [[Pokémon/Dialga]] doubles the chance of the mutation. You can fill your farm in the following way to obtain Lansat Berries. Purple squares indicate where mutations can occur.
 
 :::collapsed Lansat Mutation - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.

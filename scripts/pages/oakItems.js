@@ -16,7 +16,7 @@ const getOakItemBonus = (oakItem, level) => {
         case OakItemType.Blaze_Cassette:
             return `x${bonus} Hatching Speed`;
         case OakItemType.Cell_Battery:
-            return `${bonus} Charges Needed to Discharge`;
+            return `x${bonus} Battery Charge Rate`;
         case OakItemType.Squirtbottle:
             return `x${bonus} Mutation Rate`;
         case OakItemType.Sprinklotad:

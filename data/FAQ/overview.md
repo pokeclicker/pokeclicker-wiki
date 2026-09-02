@@ -290,7 +290,6 @@ You still can buy them, so you can complete the related [[Achievements]].
 #### No Oak Items
 Disables the usage of all [[Oak Items]].
 The [[Achievements]] related to leveling up these items will disappear, and the percentages will be distributed among the other general achievements.
-In order to get the berries that mutate while using some Oak Items, you can buy them from the [[Berry Masters]] once you have unlocked the berry that evolves to them.
 
 #### No Gem Upgrades
 Disables the usage of [[Gems]] to increase damage multipliers.
