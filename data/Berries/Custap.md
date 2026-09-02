@@ -1,3 +1,4 @@
+
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
@@ -9,15 +10,15 @@ Custap can be obtained by having at least one empty plot and at least 600 points
 :::collapsed Custap Mutation w/ Watmel - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
 
-`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjozMiwiYWdlIjozMzEyMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMiwiYWdlIjozMzEyMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMiwiYWdlIjozMzEyMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMiwiYWdlIjozMzEyMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMiwiYWdlIjozMzEyMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMiwiYWdlIjozMzEyMCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMiwiYWdlIjozMzEyMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzIsImFnZSI6MzMxMjAsIm11bGNoIjotMX0seyJiZXJyeSI6MzIsImFnZSI6MzMxMjAsIm11bGNoIjotMX0seyJiZXJyeSI6MzIsImFnZSI6MzMxMjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzIsImFnZSI6MzMxMjAsIm11bGNoIjotMX0seyJiZXJyeSI6MzIsImFnZSI6MzMxMjAsIm11bGNoIjotMX0seyJiZXJyeSI6MzIsImFnZSI6MzMxMjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTIwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTIwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTIwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTIwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTIwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTIwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTIwLCJtdWxjaCI6LTF9XX19fQ==`
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzIsImFnZSI6MzMxMTksIm11bGNoIjotMX0seyJiZXJyeSI6MzIsImFnZSI6MzMxMTksIm11bGNoIjotMX0seyJiZXJyeSI6MzIsImFnZSI6MzMxMTksIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTE5LCJtdWxjaCI6LTF9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTE5LCJtdWxjaCI6LTF9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTE5LCJtdWxjaCI6LTF9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTE5LCJtdWxjaCI6LTF9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTE5LCJtdWxjaCI6LTF9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTE5LCJtdWxjaCI6LTF9LHsiYmVycnkiOjMyLCJhZ2UiOjMzMTE5LCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMiwiYWdlIjozMzExOSwibXVsY2giOi0xfSx7ImJlcnJ5IjozMiwiYWdlIjozMzExOSwibXVsY2giOi0xfSx7ImJlcnJ5IjozMiwiYWdlIjozMzExOSwibXVsY2giOi0xfSx7ImJlcnJ5IjozMiwiYWdlIjozMzExOSwibXVsY2giOi0xfSx7ImJlcnJ5IjozMiwiYWdlIjozMzExOSwibXVsY2giOi0xfSx7ImJlcnJ5IjozMiwiYWdlIjozMzExOSwibXVsY2giOi0xfSx7ImJlcnJ5IjozMiwiYWdlIjozMzExOSwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzIsImFnZSI6MzMxMTksIm11bGNoIjotMX0seyJiZXJyeSI6MzIsImFnZSI6MzMxMTksIm11bGNoIjotMX0seyJiZXJyeSI6MzIsImFnZSI6MzMxMTksIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9XX19fQ==`
 :::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
+| {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | {.mutation}  | |
 | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | |
 | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | |
-| [[File:Watmel.png\|32px]] [[Berries/Watmel]] | {.mutation} | {.mutation} | {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | |
-| [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | |
 | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | |
+| {.mutation} | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | [[File:Watmel.png\|32px]] [[Berries/Watmel]] | {.mutation}  | |
 :::
 
 #### Pinkan Mutation Strategy
