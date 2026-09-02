@@ -237,7 +237,8 @@ const importFarm = (saveData) => {
 
     App.game.farming.plotList.forEach((plot, idx) => {
         plot._berry(plotList[idx].berry);
-        plot._age(plotList[idx].age);
+        const age = plotList[idx].age;
+        plot._age(age > 0 ? age - 1 : age);
         plot._mulch(plotList[idx].mulch);
     });
 };
