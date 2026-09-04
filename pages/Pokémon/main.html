@@ -410,11 +410,11 @@
                     <div id="obtain-method-safari" class="accordion-collapse collapse">
                         <div class="accordion-body" data-bind="foreach: Object.entries($data[PokemonLocationType.Safari])">
                             <h5 data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data[0]])"></h5>
-                            <div class="d-flex flex-wrap gap-2 mb-2" data-bind="foreach: Object.entries($data[1])">
-                                <div class="input-group input-group-sm w-auto" data-bind="with: { chance: $data[1], requirement: SafariPokemonList.list[$parent[0]]().find(p => p.name == Wiki.pageName())?.requirement }">
+                            <div class="d-flex flex-wrap gap-2 mb-2" data-bind="foreach: Object.entries($data[1].chances)">
+                                <div class="input-group input-group-sm w-auto" data-bind="with: { environment: SafariEnvironments[$data[0]], chance: $data[1], requirement: $parent[1].requirement }">
                                     <span class="input-group-text">
                                         <a class="text-decoration-none text-body" data-bind="
-                                            text: `Spawn Chance - ${$data.chance}%`,
+                                            text: `${$data.environment} Spawn Chance - ${$data.chance}%`,
                                             attr: { href: `#!Towns/${Object.values(TownList).find(t => t.region == $parents[1][0] && t.content.filter(c => c instanceof SafariTownContent).length).name}` }"></a>
                                     </span>
                                     <!-- ko if: $data.requirement -->
