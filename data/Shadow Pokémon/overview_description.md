@@ -11,7 +11,8 @@ Shadow Pokémon can be **purified** at [[Towns/Relic Stone]] in Orre once enough
 - Catching Shadow Pokémon yield 2x [EVs](#!Pokérus#EV).
 
 #### Flow
-**1 Flow** is gained for every **1,000 experience points** gained by Shadow and Purified Pokémon. Flow is gained regardless of the level of the Shadow or Purified Pokémon, even if they are at level 100. Shadow/Purified Pokémon can equip special Held Items that boost experience gain: [[Items/Joy Scent]], [[Items/Vivid Scent]], and [[Items/Excite Scent]].
+**1 Flow** is gained for every **1,000 experience points** gained by Shadow and Purified Pokémon. Flow is gained regardless of the level of the Shadow or Purified Pokémon, even if they are at level 100. Shadow/Purified Pokémon can equip special Held Items that boost experience gain: [[Items/Joy Scent]], [[Items/Vivid Scent]], and [[Items/Excite Scent]]. Having the [[Items/Time Flute]] active also increases the Flow gained.
+Scents can be traded up for stronger ones at the **Perfumer** in [[Towns/Agate Village]]
 
 The Flow needed to purify a Shadow Pokémon **increases with each purification** and follows this formula:
 
