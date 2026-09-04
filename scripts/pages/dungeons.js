@@ -424,6 +424,7 @@ module.exports = {
     itemTypeCategories,
     getDungeonShadowPokemon,
     getAllDungeonEncounters,
+    getDungeonTokenCost,
     getTotalDungeonTokenCost,
     getDungeonTokenCostSteps,
 };
