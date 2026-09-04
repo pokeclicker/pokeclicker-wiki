@@ -76,7 +76,6 @@ Persim has a mutation rate of 2% when ripe Oran and Pecha plants are adjacent to
 - Be aware of Berry types that can easily mutate or cause mutations:
     - [[Berries/Occa]], [[Berries/Kebia]], [[Berries/Colbur]], and [[Berries/Enigma]] can mutate adjacent berries when ripe.
     - [[Berries/Rindo]] and [[Berries/Pamtre]] can mutate adjacent empty plots when ripe.
-    - [[Berries/Spelon]], [[Berries/Pamtre]], [[Berries/Watmel]], and [[Berries/Cornn]] can mutate into different berries when certain Oak Items are equipped.
     - [[Berries/Passho]] can mutate when it is not adjacent to any berry.
 
 
