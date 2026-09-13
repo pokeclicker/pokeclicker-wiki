@@ -86,4 +86,6 @@ Also, there may or may not be a Route 4 Pokemon Center somewhere to be found.
 ### Wanderers
 |Berry|Pokémon|
 |---|---|
-|[[File:Enigma.png\|32px]] [[Berries/Enigma]] | [[File:pokemon/25.15.png\|25px]] [[Pokémon/Detective Pikachu]]
+|[[File:Enigma.png\|32px]] [[Berries/Enigma]] | [[File:pokemon/25.15.png\|25px]] [[Pokémon/Detective Pikachu]]*
+
+**Note**: Due to Enigma mutation requirements, a small amount of files will not be able to obtain this Pokémon with Kanto as their max Region.
