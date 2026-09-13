@@ -220,6 +220,7 @@ const getDungeonLoot = (dungeon) => {
                 type: itemType,
                 image: itemGameData?.image ?? (pokemonData ? `assets/images/pokemon/${pokemonData.id}.png` : null),
                 weight: item.weight ?? 1,
+                amount: item.amount ?? 1,
                 requirement: item.requirement?.hint(),
                 ignoreDebuff: item.ignoreDebuff,
                 chances: []
@@ -237,6 +238,7 @@ const getDungeonLoot = (dungeon) => {
     }
     getDungeonLoot.cache.set(dungeon, lootTiers);
 
+    console.log(`getDungeonLoot(${dungeon.name})`, lootTiers);
     return lootTiers;
 };
 getDungeonLoot.cache = new WeakMap();
