@@ -84,13 +84,22 @@
             <!-- /ko -->
             <!-- ko ifnot: typeof $data == 'string' -->
             <!-- ko foreach: $data.pokemon -->
-            <a class="badge text-bg-secondary" href="#!" data-bind="text: `${$data} 🔒`, attr: { href: `#!Pokemon/${$data}` },
+            <a class="badge text-bg-secondary" href="#!" data-bind="attr: { href: `#!Pokemon/${$data}` },
               tooltip: {
-                  title: $parent.req.hint(),
+                  title: [$parent.req?.hint(), $parent.weight != 1 ? `Weight: ${$parent.weight.toLocaleString()}` : null].filter(Boolean).join('\n'),
                   html: false,
+                  customClass: 'tooltip-multiline',
                   placement: 'bottom',
                   trigger: 'hover'
-              }"></a>
+              }">
+                <!-- ko text: $data --><!-- /ko -->
+                <!-- ko if: $parent.req -->
+                <span class="fw-normal">🔒</span>
+                <!-- /ko -->
+                <!-- ko if: $parent.weight != 1 -->
+                <span class="fw-normal">🛈</span>
+                <!-- /ko -->
+            </a>
             <!-- /ko -->
             <!-- /ko -->
         </div>
