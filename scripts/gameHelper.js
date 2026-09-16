@@ -318,6 +318,105 @@ const getSafariSpriteId = (safariEncounter) => {
     }
 }
 
+const unwrapRequirement = (req) => (req?.constructor?.name === 'LazyRequirementWrapper' ? req.unwrap() : req);
+
+// The region a requirement can first be completed in
+const requirementRegion = (requirement, path = new Set()) => {
+    const req = unwrapRequirement(requirement);
+    // Only guards against cycles, requirements shared between branches are still checked
+    if (!req || path.has(req)) {
+        return GameConstants.Region.kanto;
+    }
+    path.add(req);
+    const region = getRequirementRegion(req, path);
+    path.delete(req);
+    return region;
+};
+
+const getRequirementRegion = (req, path) => {
+    if (req instanceof MultiRequirement) {
+        return Math.max(GameConstants.Region.kanto, ...req.requirements.map((r) => requirementRegion(r, path)));
+    }
+    if (req instanceof OneFromManyRequirement) {
+        return Math.min(...req.requirements.map((r) => requirementRegion(r, path)));
+    }
+    // "Before X" requirements don't delay unlocking
+    if (req.option === GameConstants.AchievementOption.less) {
+        return GameConstants.Region.kanto;
+    }
+    if (req instanceof MaxRegionRequirement) {
+        return req.requiredValue;
+    }
+    if (req instanceof RouteKillRequirement) {
+        const route = Routes.getRoute(req.region, req.route);
+        return route ? routeUnlockRegion(route, path) : req.region;
+    }
+    if (req instanceof GymBadgeRequirement) {
+        const gym = Object.values(GymList).find((g) => g.badgeReward === req.badge);
+        return gym ? gymUnlockRegion(gym, path) : GameConstants.Region.kanto;
+    }
+    if (req instanceof QuestLineStartedRequirement || req instanceof QuestLineCompletedRequirement || req instanceof QuestLineStepCompletedRequirement) {
+        return requirementRegion(App.game.quests.getQuestLine(req.questLineName)?.requirement, path);
+    }
+    if (req instanceof ClearDungeonRequirement) {
+        return townUnlockRegion(TownList[GameConstants.RegionDungeons.flat()[req.dungeonIndex]], path);
+    }
+    if (req instanceof TemporaryBattleRequirement) {
+        const battle = TemporaryBattleList[req.battleName];
+        return Math.max(
+            townUnlockRegion(battle?.getTown(), path),
+            ...(battle?.requirements ?? []).map((r) => requirementRegion(r, path))
+        );
+    }
+    return GameConstants.Region.kanto;
+};
+
+const subRegionUnlockRegion = (region, subRegion, path) => Math.max(
+    region,
+    requirementRegion(SubRegions.getSubRegionById(region, subRegion ?? 0)?.requirement, path)
+);
+
+const townUnlockRegion = (town, path = new Set()) => {
+    if (!town) {
+        return GameConstants.Region.kanto;
+    }
+    return Math.max(
+        subRegionUnlockRegion(town.region, town.subRegion, path),
+        ...town.requirements.map((r) => requirementRegion(r, path))
+    );
+};
+
+const routeUnlockRegionCache = {};
+
+// Routes in later subregions (e.g. Sevii Islands 4-7) use the region they unlock in
+const routeUnlockRegion = (route, path = new Set()) => {
+    const key = `${route.region}-${route.number}`;
+    if (routeUnlockRegionCache[key] === undefined) {
+        routeUnlockRegionCache[key] = Math.max(
+            subRegionUnlockRegion(route.region, route.subRegion, path),
+            ...route.requirements.map((r) => requirementRegion(r, path))
+        );
+    }
+    return routeUnlockRegionCache[key];
+};
+
+const gymUnlockRegionCache = {};
+
+// Gyms outside the main regions (Orange Islands, Orre, Magikarp Jump) use the region they unlock in
+const gymUnlockRegion = (gym, path = new Set()) => {
+    const gymRegion = GameConstants.getGymRegion(gym.town);
+    if (gymRegion >= 0 && gymRegion < GameConstants.Region.final) {
+        return gymRegion;
+    }
+    if (gymUnlockRegionCache[gym.town] === undefined) {
+        gymUnlockRegionCache[gym.town] = Math.max(
+            townUnlockRegion(gym.parent ?? TownList[gym.town], path),
+            ...gym.requirements.map((r) => requirementRegion(r, path))
+        );
+    }
+    return gymUnlockRegionCache[gym.town];
+};
+
 module.exports = {
     requirementHints,
     getEvolutionHints,
@@ -326,4 +425,9 @@ module.exports = {
     getRouteOverlaySVG,
     overlaySVG,
     getSafariSpriteId,
+    unwrapRequirement,
+    requirementRegion,
+    townUnlockRegion,
+    routeUnlockRegion,
+    gymUnlockRegion,
 }
