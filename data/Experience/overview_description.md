@@ -1,5 +1,6 @@
 #### Jump to:
 * [Experience by Location](#locations)
+* [Experience needed per Level](#levels)
 
 Experience (EXP) is gained whenever an enemy Pokémon is defeated. Leveling up increases a Pokémon's attack, and many Pokémon evolve once they reach a certain level. Pokémon stop gaining EXP when they reach the level cap, which starts at level 20 and increases by 10 for each [Gym](#!Gyms) badge you own, up to level 100.
 

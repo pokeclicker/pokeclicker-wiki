@@ -59,3 +59,42 @@
     </div>
     <!-- /ko -->
 </div>
+<hr>
+<h2 id="levels">Experience needed per Level</h2>
+<p>Every Pokémon has one of six level types, which decides how much EXP it needs to level up. The table below lists the total EXP needed to reach each level for every level type.</p>
+<!-- ko let: { levelTypes: GameHelper.enumNumbers(LevelType) } -->
+<div class="accordion mb-3">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experience-levels-collapse">
+                Show Table
+            </button>
+        </h2>
+        <div id="experience-levels-collapse" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped table-bordered no-data-tables mb-0">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Level</th>
+                                <!-- ko foreach: GameHelper.enumStrings(LevelType) -->
+                                <th style="text-align: right;" data-bind="text: $data"></th>
+                                <!-- /ko -->
+                            </tr>
+                        </thead>
+                        <!-- levelRequirements[levelType][level - 1] is the total EXP needed to reach that level, the last entry is a sentinel for the level cap -->
+                        <tbody data-bind="foreach: { data: levelRequirements[LevelType.erratic].slice(0, -1).map((requirement, index) => index + 1), as: 'level' }">
+                            <tr>
+                                <td data-bind="text: level"></td>
+                                <!-- ko foreach: { data: levelTypes, as: 'levelType' } -->
+                                <td style="text-align: right;" data-bind="text: levelRequirements[levelType][level - 1].toLocaleString()"></td>
+                                <!-- /ko -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /ko -->
