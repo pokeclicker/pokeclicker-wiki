@@ -238,7 +238,6 @@ const getDungeonLoot = (dungeon) => {
     }
     getDungeonLoot.cache.set(dungeon, lootTiers);
 
-    console.log(`getDungeonLoot(${dungeon.name})`, lootTiers);
     return lootTiers;
 };
 getDungeonLoot.cache = new WeakMap();
