@@ -480,6 +480,10 @@ td.tight {
   background-color: var(--bs-body-bg);
 }
 
+.tooltip-multiline .tooltip-inner {
+  white-space: pre-line;
+}
+
 .obtain-methods .accordion-button img {
   padding-right: 10px;
 }

@@ -257,7 +257,7 @@
                                         <!-- ko if: $data.image -->
                                         <img class="table-image" data-bind="attr: { src: `./pokeclicker/docs/${$data.image}`, alt: `Icon of ${$data.type === 'pokemon' ? 'Pokémon' : $data.type} ${$data.item}` }"/>
                                         <!-- /ko -->
-                                        <a class="text-decoration-none" href="#!" data-bind="text: $data.item, attr: { href: `#!${Wiki.dungeons.itemTypeCategories[$data.type]}/${$data.item}` }"></a>
+                                        <a class="text-decoration-none" href="#!" data-bind="text: $data.amount > 1 ? `${$data.item} ×${$data.amount}` : $data.item, attr: { href: `#!${Wiki.dungeons.itemTypeCategories[$data.type]}/${$data.item}` }"></a>
                                     </td>
                                     <td data-bind="text: $data.weight ?? 'N/A'"></td>
                                     <!-- ko foreach: $data.chances -->
