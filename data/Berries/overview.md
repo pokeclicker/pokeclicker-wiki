@@ -25,7 +25,7 @@ Aura | Effect | Range of Effect | Notes | Berries that Emit Aura
 **Attract Aura** | Modifies the chance of Pokémon wandering onto the farm | Global | Effect is multiplicative over the whole field. | @[[Berries/Roseli]] @[[Berries/Micle]]
 **Roamer Chance** | Increases chance of finding Roaming Pokémon on routes | Global | Effect is multiplicative over the whole field. | @[[Berries/Jaboca]]
 **EV Gain** | Increases amount of EVs gained in all applicable situations. | Global | Effect is multiplicative over the whole field. | @[[Berries/Rowap]]
-**Exp Gain** | Increases experience points gained after defeating an encounter | Global | Effect is multiplicative over the whole field. | @[[Berries/Custap]]
+**Exp Gain** | Increases [[Experience]] points gained after defeating an encounter | Global | Effect is multiplicative over the whole field. | @[[Berries/Custap]]
 **Pickup** | Increases the chance that a defeated Pokémon drops its [rare hold item](#!Rare_Hold_Items) | Global | Effect is multiplicative over the whole field. Effect stacks with the [[Items/Dowsing Machine]]. | @[[Berries/Rindo]]
 
 ----

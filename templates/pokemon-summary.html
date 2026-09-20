@@ -97,8 +97,15 @@
             <td data-bind="text: App.game.breeding.getSteps($data.eggCycles).toLocaleString()"></td>
         </tr>
         <tr>
-            <td>Experience</td>
+            <td>Base EXP</td>
             <td data-bind="text: ($data.exp || 0).toLocaleString()"></td>
+        </tr>
+        <tr>
+            <td>EXP to 100</td>
+            <td data-bind="
+                    text: levelRequirements[$data.levelType][99].toLocaleString(),
+                    tooltip: { title: `Level Type: ${GameHelper.enumStrings(LevelType)[$data.levelType]}`, placement: 'bottom', trigger: 'hover' }">
+            </td>
         </tr>
         <tr>
             <td>Catch Rate</td>
