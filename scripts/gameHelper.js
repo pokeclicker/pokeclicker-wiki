@@ -216,7 +216,6 @@ const isRequiredAttackEvolution = (restrictions) => {
 }
 
 const isEventRestrictedEvolution = (restrictions) => {
-    console.log(restrictions);
     return hasEvoRestrictions(restrictions, ['SpecialEventRequirement']);
 }
 
