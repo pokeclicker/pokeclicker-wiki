@@ -78086,6 +78086,11 @@ const getEvolutionHints = (evoData) => {
         hint += ` when it has ${requiredAttack.toLocaleString()} or more attack`;
     }
 
+    if (isEventRestrictedEvolution(restrictions)) {
+        const eventReq = getRequirementFromRestrictions(restrictions, 'SpecialEventRequirement');
+        hint += ` during the ${eventReq.specialEventName} event`;
+    }
+
     if (hint.length) {
         hints.push(`${hint}.`);
     }
@@ -78146,6 +78151,10 @@ const isMegaEvolution = (restrictions) => {
 
 const isRequiredAttackEvolution = (restrictions) => {
     return hasEvoRestrictions(restrictions, ['PokemonAttackRequirement']);
+}
+
+const isEventRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['SpecialEventRequirement']);
 }
 
 const hasEvoRestrictions = (restrictions, requirements) => {
