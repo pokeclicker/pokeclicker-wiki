@@ -394,6 +394,12 @@ const searchOptions = [
     type: 'Battle Points',
     page: '',
   },
+  // Experience
+  {
+    display: 'Experience',
+    type: 'Experience',
+    page: '',
+  },
   //Challenge Modes
   {
     display: 'Challenge Modes',
