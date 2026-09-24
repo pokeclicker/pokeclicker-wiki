@@ -77448,6 +77448,24 @@ ko.components.register('pokemon-summary', {
   template: { fromUrl: 'pokemon-summary' },
 });
 
+function RouteEncounter(params) {
+  this.encounter = params.encounter;
+
+  // Show the Pokémon summary below the tile when it wouldn't fit between the tile and the fixed navbar
+  this.placeSummary = (data, event) => {
+    const tile = event.currentTarget;
+    const summary = tile.querySelector('.custom-tooltip-content');
+    const navbarBottom = document.getElementById('nav-bar')?.getBoundingClientRect().bottom ?? 0;
+    tile.classList.remove('route-encounter-below');
+    tile.classList.toggle('route-encounter-below', summary.getBoundingClientRect().top < navbarBottom);
+  };
+}
+
+ko.components.register('route-encounter', {
+  viewModel: RouteEncounter,
+  template: { fromUrl: 'route-encounter' },
+});
+
 function GenericDeal(params) {
   this.model = params.model;
 }
@@ -78467,6 +78485,7 @@ window.Wiki = {
   dreamOrbs: require('./pages/dreamOrbs'),
   farmSimulator: require('./pages/farmSimulator'),
   dungeons: require('./pages/dungeons'),
+  routes: require('./pages/routes'),
   shopMon: require('./pages/shopMon'),
   dungeonTokens: require('./pages/dungeonTokens'),
   oakItems: require('./pages/oakItems'),
@@ -78477,7 +78496,7 @@ window.Wiki = {
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":502,"./components":503,"./datatables":504,"./discord":505,"./filterHelper":506,"./game":507,"./gameHelper":508,"./markdown-renderer":515,"./navigation":516,"./notifications":517,"./pages/dealChains":518,"./pages/dreamOrbs":519,"./pages/dungeonTokens":520,"./pages/dungeons":521,"./pages/experience":522,"./pages/farm":523,"./pages/farmSimulator":524,"./pages/gems":525,"./pages/items":526,"./pages/oakItems":527,"./pages/pokemon":528,"./pages/shopMon":529,"./typeahead":531}],510:[function(require,module,exports){
+},{"../pokeclicker/package.json":502,"./components":503,"./datatables":504,"./discord":505,"./filterHelper":506,"./game":507,"./gameHelper":508,"./markdown-renderer":515,"./navigation":516,"./notifications":517,"./pages/dealChains":518,"./pages/dreamOrbs":519,"./pages/dungeonTokens":520,"./pages/dungeons":521,"./pages/experience":522,"./pages/farm":523,"./pages/farmSimulator":524,"./pages/gems":525,"./pages/items":526,"./pages/oakItems":527,"./pages/pokemon":528,"./pages/routes":529,"./pages/shopMon":530,"./typeahead":532}],510:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const getContent = (editor) => editor.value().split('\n').map(l => l.trimEnd()).join('\n');
@@ -78991,7 +79010,7 @@ module.exports = {
     gotoPageClick,
 };
 
-},{"./datatables":504,"./markdown-editor":510,"./markdown-renderer":515,"./redirections":530}],517:[function(require,module,exports){
+},{"./datatables":504,"./markdown-editor":510,"./markdown-renderer":515,"./redirections":531}],517:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -80712,6 +80731,36 @@ module.exports = {
 }
 
 },{}],529:[function(require,module,exports){
+const { requirementHints } = require('../gameHelper');
+
+const toEncounters = (names, req, weight = 1) => {
+    const hints = requirementHints(req, false);
+    return names.map((name) => ({ name, hints, weight }));
+};
+
+const getRouteEncounterGroups = (route) => {
+    const { land, water, headbutt, special } = route.pokemon;
+    const specialEncounters = special.flatMap((s) => toEncounters(s.pokemon, s.req, s.weight));
+
+    return [
+        { title: 'Land', pokemon: toEncounters(land) },
+        { title: 'Water', note: land.length ? 'Requires the Super Rod.' : null, pokemon: toEncounters(water) },
+        { title: 'Headbutt', pokemon: toEncounters(headbutt) },
+        {
+            title: 'Special',
+            note: specialEncounters.some((e) => e.hints.length)
+                ? 'Pokémon marked 🔒 only appear when certain conditions are met; hover or tap the 🔒 to see those conditions.'
+                : null,
+            pokemon: specialEncounters,
+        },
+    ].filter((g) => g.pokemon.length);
+};
+
+module.exports = {
+    getRouteEncounterGroups,
+};
+
+},{"../gameHelper":508}],530:[function(require,module,exports){
 function getShopItemsByCurrencyAndFilter(currency, itemFilter) {
     var towns = Object.values(TownList).filter(t => t.region <= GameConstants.MAX_AVAILABLE_REGION);
     var filteredTowns = [];
@@ -80757,7 +80806,7 @@ module.exports = {
     getShopItems,
     getUniqueItems,
 };
-},{}],530:[function(require,module,exports){
+},{}],531:[function(require,module,exports){
 const redirections = [
     ({type, name}) => {
         if (type === 'Pokemon') {
@@ -80816,7 +80865,7 @@ module.exports = {
     redirections
 };
 
-},{}],531:[function(require,module,exports){
+},{}],532:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 const { getAvailablePokemon } = require('./pages/pokemon');
 
