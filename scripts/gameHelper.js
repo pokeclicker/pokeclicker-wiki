@@ -426,6 +426,29 @@ const gymUnlockRegion = (gym, path = new Set()) => {
     return gymUnlockRegionCache[gym.town];
 };
 
+// Label and optional wiki link for a town content badge
+const getTownContentBadge = (content) => {
+    const type = content.constructor.name;
+    switch (type) {
+        case 'Gym':
+            return { text: `Gym: ${content.buttonText}`, href: `#!Gyms/${content.town}` };
+        case 'MoveToDungeon':
+            return { text: `Dungeon: ${content.text()}`, href: `#!Dungeons/${content.text()}` };
+        case 'TemporaryBattle':
+            return { text: `Temporary Battle: ${content.text()}`, href: `#!Temporary_Battles/${content.name}` };
+        case 'MoveToTown':
+            return { text: `Move To: ${content.text()}` };
+        case 'BattleFrontierTownContent':
+            return { text: 'Battle Frontier', href: '#!Battle_Frontier' };
+        case 'DreamOrbTownContent':
+            return { text: 'Dream Orbs', href: '#!Dream_Orbs' };
+        case 'BattleCafe':
+            return { text: 'Battle Cafe', href: '#!Battle_Cafe' };
+        default:
+            return { text: GameConstants.camelCaseToString(type.replace(/(MoveTo|TownContent|Temporary)/, '')) };
+    }
+}
+
 module.exports = {
     requirementHints,
     getEvolutionHints,
@@ -439,4 +462,5 @@ module.exports = {
     townUnlockRegion,
     routeUnlockRegion,
     gymUnlockRegion,
+    getTownContentBadge,
 }
