@@ -78364,28 +78364,71 @@ const gymUnlockRegion = (gym, path = new Set()) => {
     return gymUnlockRegionCache[gym.town];
 };
 
+// Badge classes for each kind of town content, styled in styles.css
+const townContentBadgeClasses = {
+    gym: 'town-badge-gym',
+    dungeon: 'town-badge-dungeon',
+    battle: 'town-badge-battle',
+    facility: 'town-badge-facility',
+    shop: 'town-badge-shop',
+    travel: 'town-badge-travel',
+    other: 'town-badge-other',
+};
+
+const getTownContentCategory = (content) => {
+    switch (content.constructor.name) {
+        case 'Gym':
+        case 'AccessGym':
+            return 'gym';
+        case 'MoveToDungeon':
+            return 'dungeon';
+        case 'TemporaryBattle':
+            return 'battle';
+        case 'MoveToTown':
+            return 'travel';
+        case 'BattleFrontierTownContent':
+        case 'DreamOrbTownContent':
+        case 'BattleCafe':
+        case 'SafariTownContent':
+            return 'facility';
+        default:
+            return content instanceof Shop ? 'shop' : 'other';
+    }
+}
+
 // Label and optional wiki link for a town content badge
-const getTownContentBadge = (content) => {
+const getTownContentLink = (content) => {
     const type = content.constructor.name;
     switch (type) {
         case 'Gym':
-            return { text: `Gym: ${content.buttonText}`, href: `#!Gyms/${content.town}` };
+            return { text: content.buttonText, href: `#!Gyms/${content.town}` };
+        case 'AccessGym':
+            return { text: content.gym.buttonText, href: `#!Gyms/${content.gym.town}` };
         case 'MoveToDungeon':
-            return { text: `Dungeon: ${content.text()}`, href: `#!Dungeons/${content.text()}` };
+            return { text: content.text(), href: `#!Dungeons/${content.text()}` };
         case 'TemporaryBattle':
-            return { text: `Temporary Battle: ${content.text()}`, href: `#!Temporary_Battles/${content.name}` };
+            return { text: content.getDisplayName(), href: `#!Temporary_Battles/${content.name}` };
         case 'MoveToTown':
-            return { text: `Move To: ${content.text()}` };
+            return { text: `→ ${content.text()}` };
         case 'BattleFrontierTownContent':
             return { text: 'Battle Frontier', href: '#!Battle_Frontier' };
         case 'DreamOrbTownContent':
             return { text: 'Dream Orbs', href: '#!Dream_Orbs' };
         case 'BattleCafe':
-            return { text: 'Battle Cafe', href: '#!Battle_Cafe' };
+            return { text: 'Battle Café', href: '#!Battle_Cafe' };
         default:
             return { text: GameConstants.camelCaseToString(type.replace(/(MoveTo|TownContent|Temporary)/, '')) };
     }
 }
+
+// Shops and traders get their own tables on the town page, so they're left out of the content badges
+const hasTownShopTable = (content) => (content instanceof Shop && content.items.length > 0)
+    || content instanceof ShardTraderShop || content instanceof GemMasterShop || content instanceof GenericTraderShop;
+
+const getTownContentBadge = (content) => ({
+    ...getTownContentLink(content),
+    badgeClass: townContentBadgeClasses[getTownContentCategory(content)],
+});
 
 module.exports = {
     requirementHints,
@@ -78400,6 +78443,7 @@ module.exports = {
     townUnlockRegion,
     routeUnlockRegion,
     gymUnlockRegion,
+    hasTownShopTable,
     getTownContentBadge,
 }
 
