@@ -244,9 +244,9 @@
             </p>
             <!-- /ko -->
             <div class="table-responsive">
-                <table class="table table-bordered table-sm small">
+                <table class="table table-bordered table-hover table-sm small">
                     <thead class="text-center">
-                        <tr>
+                        <tr class="align-middle">
                             <th rowspan="2">Item</th>
                             <th rowspan="2">Weight</th>
                             <th data-bind="attr: { colspan: normalCounts.length }">Chance by clears</th>
@@ -281,6 +281,7 @@
                                     <span class="ms-1" style="cursor: help;" data-bind="tooltip: {
                                         title: $data.requirement,
                                         html: false,
+                                        customClass: 'tooltip-multiline',
                                         placement: 'top',
                                         trigger: 'hover'
                                     }">🔒</span>
