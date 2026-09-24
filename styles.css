@@ -614,3 +614,11 @@ a.town-badge[href]:hover {
 .route-encounter-addon:hover {
   background-color: rgba(var(--bs-body-color-rgb), 0.12);
 }
+
+/* Tier rows (Common, Rare, ...) in the dungeon loot table, the row also has .table-active for a tinted background */
+.dungeon-loot-tier {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
