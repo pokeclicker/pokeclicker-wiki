@@ -1,5 +1,5 @@
-### The following Pokémon can be obtained via reviving fossils.
-Bolded Pokémon can *only* aquire EVs through fossil revival.
+#### The following Pokémon can be obtained via reviving fossils.
+Pokémon with **bolded** names can *only* acquire EVs through fossil revival.
 
 |Pokémon | Fossil | Region| Location of Revival Lab |
 | --- | --- | --- | --- |
