@@ -1,3 +1,4 @@
+
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
@@ -39,7 +40,7 @@ Figy Berries can mutate into the following Berries.
 | [[File:Rindo.png\|32px]] [[Berries/Rindo]]    | [[File:Aguav.png\|32px]] [[Berries/Aguav]] |
 
 ### Acquisition
-Figy Berries can be obtained from the following dungeons.
+Figy Berries can be obtained from the [[Towns/Hoppy Town Fishing Pond]] and the following dungeons.
 
 | Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |

@@ -1,3 +1,4 @@
+
 ## Spreading Pokérus
 
 Spreading Pokérus can only occur in the [[Hatchery]].
@@ -24,7 +25,6 @@ None | **None** | Base State. Pokémon can contract Pokérus. | No | No
 [[File:Infected.png]] | **Infected** | Pokémon has contracted Pokérus, but has yet to hatch once after contracting the virus. | No | No
 [[File:Contagious.png]] | **Contagious** | Pokémon has contracted Pokérus, and is capable of spreading the virus. | **Yes** | **Yes**
 [[File:Resistant.png]] | **Resistant** | Pokémon has contracted Pokérus, and is capable of spreading the virus. Pokémon has accumulated 50 or more EVs. | **Yes** | **Yes**
-*There is a known bug that Pokémon infected via typed eggs will remain Infected upon hatching, rather than becoming Contagious. Breeding the Pokémon the usual way will cause the Pokémon to correctly become Contagious.*
 
 #### Resistant Pokémon {#resistant}
 When a Pokémon gains **50 EVs**, it becomes resistant. The number of resistant Pokémon in your party counts toward [[Click Attack]] and certain [[Achievements]]. Resistant Pokémon continue to gain EVs at the same rate, but their EV bonus will increase much slower.
@@ -44,17 +44,16 @@ $EVBonus = 1 + \frac{EffortValues}{100}$ {.overflow-auto .text-center}
 
 **After 50 EVs,** the Pokémon will continue to increase their EV bonus, but at a diminished rate, based on the formula below. There is no upper limit to this multiplier.
 
-$EVBonus = EffortValues^{0.103645891}$ {.overflow-auto .text-center}
+$EVBonus = EffortValues^{log_{50}1.5}\approx EffortValues^{0.103645891}$ {.overflow-auto .text-center}
 
-| EV Bonus (Damage Multiplier) {.col-1}| EVs required {.col-1}|
-:--- | :---
-1.5x | 50 |
-2x | 802 |
-3x | 40,121 |
-4x | 643,300 |
-5x | 5,540,000 |
-6x | 3.2E7 |
-7x | 1.4E8 |
+| Attack Multiplier{.col-2} | EVs required{.col-3} | Attack Multiplier{.col-2} | EVs required |
+---: | :--- | ---: | :---
+`×1.5` | 50 |` ×2` | 803
+`×2.5` | 6,910 | `×3` | 40,122
+`×3.5` | 177,541 | `×4` | 643,898
+`×4.5` | 2,006,081 | `×5` | 5,544,055
+`×5.5` | ≈13,91E6 | `×6` | ≈32,2E6
+`×6.5` | ≈69,7E6 | `×7` | ≈142,5E6
 
 ---
 
@@ -71,7 +70,7 @@ Things that **do not** increase EVs:
 #### Base EV Yield (Per Capture Method) {#evbase}
 EV yields differ based on how the Pokémon is obtained.
 
-| Method {.col-1}| EVs Yielded {.col-1}|
+| Method | EVs Yielded {.col-4} |
 | :--- | :--- |
 | Catching a Pokémon on a Route | `0.1` |
 | Catching a Base [[Wandering Pokémon]] | `0.2` |
@@ -87,7 +86,7 @@ EV yields differ based on how the Pokémon is obtained.
 #### EV Yield Modifiers {#evmodifiers}
 EV yields can also be modified by items, auras, and Pokémon states. If the Slow EVs [Challenge Mode](#!Challenge_Modes) is activated, all EV gains are divided by 10. Modifiers are multiplicative for all that apply.
 
-| Modifier {.col-1}| EV Yield Multiplier {.col-1}|
+| Modifier{.col-1} | EV Yield Multiplier {.col-1}|
 | :--- | :--- |
 | Slow EV Challenge | `0.1x` |
 | Pokémon is holding a [[File:Macho_Brace.png\|24px]] [[Items/Macho Brace]] | `1.5x` |
@@ -96,7 +95,7 @@ EV yields can also be modified by items, auras, and Pokémon states. If the Slow
 | Pokémon is captured as a [Shiny](#!Shiny_Chance)* | `5x` |
 | Pokémon is captured with a [[File:Repeatball.png\|24px]] [[Items/Repeat Ball]] | `5x` |
 | [[File:Rowap.png\|24px]] [[Berries/Rowap]] Berry Aura| `1.015x` per ripe plant. (See [Farm Setups for EV Gains](#!Farm/Setups#evs) for how to obtain up to `2.54x` across the Farm). |
-| [[File:Blue_Flute.png\|24px]] [[Items/Blue Flute]] | Variable based on Flute bonus `[1.02 + .02 * AchievementBonus]x`. Current maximum of `1.2x`. |
+| [[File:Blue_Flute.png\|24px]] [[Items/Blue Flute]] | Variable based on Flute bonus `[1.02 + .02 * AchievementBonus]x`. Current maximum of `1.24x`. |
 **The newly obtained Pokémon must be a Shadow or Shiny form. Simply owning a Shadow or Shiny Pokémon does not affect multipliers.*
 
 **Examples of EV Yields:**
@@ -123,13 +122,14 @@ For Pokémon that can only be acquired through purchases, trades, and item evolu
 
 The table below shows how many Pokémon are required in order to resist these Pokémon using various combinations of modifiers, assuming a base EV gain of 1. Since the Blue Flute's effectiveness scales with your Achievement Bonus, the percentages in the setups show the minimum Achievement Bonus required to reach that multiplier.
 
-*Note: AB stands for Achievement Bonus. Your Achievement Bonus can be checked in your Achievement Tracker. The Rowaps are based on [these Farm setups](#!Farm/Setups#evs), which use Lum to boost their effectiveness.*
-| Modifiers | Required Purchases/Trades/Evolutions/Etc. Needed to Resist |
+*Note: Your Achievement Bonus can be checked in your Achievement Tracker. The Rowaps are based on [these Farm setups](#!Farm/Setups#evs), which use Lum to boost their effectiveness.*
+
+| Modifiers | Minimum Achievement Bonus{.col-3} | Captures Needed to Resist{.col-3} |
 | :--- | :--- | :--- |
-| No Modifiers |  50 |
-| [[File:Power_Bracer.png\|24px]] Power Bracer + 21 Boosted [[File:Rowap.png\|24px]] Rowaps |  11 |
-| [[File:Power_Bracer.png\|24px]] Power Bracer + 20 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute (38.60% AB or more) | 10 |
-| [[File:Power_Bracer.png\|24px]] Power Bracer + 21 Boosted [[File:Rowap.png\|24px]] Rowaps | 10 |
-| [[File:Power_Bracer.png\|24px]] Power Bracer + 20 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute (609.56% AB or more) | 9 |
-| [[File:Power_Bracer.png\|24px]] Power Bracer + 21 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute (361.34% AB or more) | 9 |
-| [[File:Power_Bracer.png\|24px]] Power Bracer + 21 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute (1044.01% AB or more) | 8 |
+| No Modifiers | N/A | 50 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + 20 Boosted [[File:Rowap.png\|24px]] Rowaps | N/A |  11 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + 20 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute | 38.76% | 10 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + 21 Boosted [[File:Rowap.png\|24px]] Rowaps | N/A | 10 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + 20 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute | 610.25% | 9 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + 21 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute | 361.76% | 9 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + 21 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute | 1044.26% | 8 |

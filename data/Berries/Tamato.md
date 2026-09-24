@@ -1,3 +1,4 @@
+
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
@@ -44,7 +45,7 @@ Tamato Berries can mutate into the following Berries.
 | [[File:Occa.png\|32px]] [[Berries/Occa]]      | [[File:Razz.png\|32px]] [[Berries/Razz]] [[File:Figy.png\|32px]] [[Berries/Figy]] [[File:Spelon.png\|32px]] [[Berries/Spelon]] |
 
 ### Acquisition
-Tamato Berries can be obtained from the following dungeons.
+Tamato Berries can be obtained from the [[Towns/Friend Safari]] and from the following dungeon.
 
 | Location	                    | Region | Tier	    |
 | :---:                         | :---:     | :---:         |

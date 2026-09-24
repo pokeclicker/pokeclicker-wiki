@@ -12,5 +12,5 @@ Vitamins are not consumable and can be added and removed, as needed. To remove, 
 Each Pokémon page has a table with the highest breeding efficiency vitamin distributions, based on the highest unlocked region.
 
 ## Price
-When bought from the Pokémon League shop, the price for vitamins rises **permanently**, similar to Master Balls. Prices increment by 1.1x every purchase, and caps at 100x the base price (after 49 purchases).
+When bought from the Pokémon League shop, the price for vitamins rises **permanently**. Prices increment by 1.1x every purchase, and cap at 100x the base price (after 49 purchases).
 

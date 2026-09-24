@@ -1,3 +1,4 @@
+
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
@@ -40,7 +41,7 @@ Mago Berries can mutate into the following Berries.
 | [[File:Roseli.png\|32px]] [[Berries/Roseli]]  | [[File:Nanab.png\|32px]] [[Berries/Nanab]] [[File:Magost.png\|32px]] [[Berries/Magost]] [[File:Watmel.png\|32px]] [[Berries/Watmel]] |
 
 ### Acquisition
-Mago Berries can be obtained from the following dungeons.
+Mago Berries can be obtained from the [[Towns/Friend Safari]] and from the following dungeons.
 
 | Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |

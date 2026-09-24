@@ -1,3 +1,4 @@
+
 #### Jump to:
 * [Region Mechanics](#mechanics)
     * [Docks (Moving from Region to Region)](#docks)
@@ -15,7 +16,7 @@ Regions are areas in the world of Pokémon. Each new region introduces a new set
 ## Region Mechanics{#mechanics}
 
 #### Docks (Moving from Region to Region) {#docks}
-To visit another region, you must first unlock the **dock** in the region that you are in. When you move to a new region, as you will **not** be able to revisit past regions until reaching a dock in the new region.
+To visit another region, you must first unlock the **dock** in the region that you are in. When you move to a new region, you will **not** be able to revisit past regions until reaching a dock in the new region.
 
 Docks in subregions are located in the first town you visit and are automatically unlocked.
 
@@ -74,7 +75,6 @@ There are currently 8 available regions.
 #### [[Regions/Unova]]
 * **Notable Locations:**
     * Dock: [[Towns/Castelia City]]
-    * Safari: [[Towns/Great Marsh]]
     * Berry Master: [[Towns/Driftveil City]]
     * Dream Orbs: [[Towns/Black and White Park]]
 #### [[Regions/Kalos]]

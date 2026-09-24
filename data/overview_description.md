@@ -1,3 +1,4 @@
+
 ::: text-center
 # Welcome to the PokéClicker Wiki!
 
