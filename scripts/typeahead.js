@@ -500,6 +500,12 @@ const searchOptions = [
     type: 'Veteran Shop',
     page: '',
   },
+  // Fossil Pokemon
+  {
+    display: 'Fossil Pokémon',
+    type: 'Fossil Pokémon',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
