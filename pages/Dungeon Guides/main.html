@@ -4,8 +4,8 @@
     <!-- /ko -->
     <!-- ko if: DungeonGuides.list.find(h => h.name == Wiki.pageName()) -->
     <div data-bind="with: DungeonGuides.list.find(h => h.name == Wiki.pageName())">
-        <div class="float-lg-end col-lg-3 m-2" data-bind="pageSidebar">
-            <table class="table table-bordered">
+        <div class="float-lg-end col-lg-3 m-2 mb-1" data-bind="pageSidebar">
+            <table class="table table-bordered mb-0">
                 <thead>
                     <tr>
                         <th class="text-center" colspan="2" data-bind="text: Wiki.pageName()"></th>

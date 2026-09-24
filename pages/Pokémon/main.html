@@ -3,7 +3,7 @@
         <h3>Pokémon not found...</h3>
     <!-- /ko -->
     <!-- ko with: pokemonList.find((p) => p.name == Wiki.pageName()) -->
-        <div class="float-lg-end col-lg-3 m-2" data-bind="pageSidebar">
+        <div class="float-lg-end col-lg-3 m-2 mb-1" data-bind="pageSidebar">
             <!-- ko if: $data.id > 0 -->
             <div class="d-flex justify-content-between mb-1" data-bind="using: pokemonList.findIndex(p => p.name == Wiki.pageName())">
                 <div data-bind="with: pokemonList[$data - 1]">

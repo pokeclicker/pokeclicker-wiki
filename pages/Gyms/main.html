@@ -4,7 +4,7 @@
     <h3>Gym not found...</h3>
     <!-- /ko -->
     <!-- ko with: GymList[Wiki.pageName()] -->
-    <div class="float-lg-end col-lg-3 m-2" data-bind="pageSidebar">
+    <div class="float-lg-end col-lg-3 m-2 mb-1" data-bind="pageSidebar">
         <div class="d-flex justify-content-between mb-1" data-bind="using: Object.values(GymList).filter(g => GameConstants.getGymRegion(g.town) <= GameConstants.MAX_AVAILABLE_REGION)">
             <div data-bind="with: $data[$data.findIndex(gymObject => gymObject.town === Wiki.pageName())-1]">
                 <button class="btn btn-link btn-sm" type="button" style="text-decoration: none;"
@@ -15,7 +15,7 @@
                     data-bind="text: `${$data.leaderName}  →`, click: () => Wiki.gotoPage('Gyms', $data.town)"></button>
             </div>
         </div>
-        <table class="table table-hover table-striped table-bordered">
+        <table class="table table-hover table-striped table-bordered mb-0">
             <thead>
                 <tr>
                     <th class="text-center" colspan="2" data-bind="text: $data.leaderName.replace(/\d/g, '')"></th>
