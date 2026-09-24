@@ -78440,8 +78440,12 @@ const getTownContentLink = (content) => {
 }
 
 // Shops and traders get their own tables on the town page, so they're left out of the content badges
-const hasTownShopTable = (content) => (content instanceof Shop && content.items.length > 0)
-    || content instanceof ShardTraderShop || content instanceof GemMasterShop || content instanceof GenericTraderShop;
+const hasTownShopTable = (content) => {
+    return (content instanceof Shop && content.items.length > 0)
+        || content instanceof ShardTraderShop
+        || content instanceof GemMasterShop
+        || content instanceof GenericTraderShop;
+};
 
 const getTownContentBadge = (content) => ({
     ...getTownContentLink(content),
