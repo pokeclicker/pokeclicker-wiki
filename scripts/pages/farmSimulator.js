@@ -2,6 +2,7 @@ const selectedPlotIndex = ko.observable(12);
 const selectedPlot = ko.pureComputed(() => App.game.farming.plotList[selectedPlotIndex()]);
 const plotLabelsEnabled = ko.observable(false);
 const importSaveDataText = ko.observable('');
+const berrySearch = ko.observable('');
 
 const getImage = (plot) => {
     if (plot.berry === BerryType.None) {
@@ -30,8 +31,10 @@ const setPlotStage = (plotStage) => {
     if (plotStage == PlotStage.Seed) {
         selectedPlot()._age(0);
     } else {
-        const berryData = App.game.farming.berryData[selectedPlot()._berry()];
-        selectedPlot()._age(berryData?.growthTime[plotStage] ?? 0);
+        const berryData = BerryList[selectedPlot()._berry()];
+        let age = berryData?.growthTime[plotStage] ?? 0;
+        if (age > 0) age -= 1;
+        selectedPlot()._age(age);
     }
 }
 
@@ -120,21 +123,21 @@ const getFarmPointAmount = () => {
     if (!selectedPlot() || selectedPlot()._berry() == -1) {
         return '-';
     }
-    return App.game.farming.berryData[selectedPlot().berry].farmValue.toLocaleString();
+    return BerryList[selectedPlot().berry].farmValue.toLocaleString();
 }
 
 const getBerryColor = () => {
     if (!selectedPlot() || selectedPlot()._berry() == -1) {
         return '-';
     }
-    return BerryColor[App.game.farming.berryData[selectedPlot().berry].color];
+    return BerryColor[BerryList[selectedPlot().berry].color];
 }
 
 const getFlavorValue = (flavorType) => {
     if (!selectedPlot() || selectedPlot()._berry() == -1) {
         return '-';
     }
-    return App.game.farming.berryData[selectedPlot().berry].flavors.find(f => f.type === flavorType).value;
+    return BerryList[selectedPlot().berry].flavors.find(f => f.type === flavorType).value;
 }
 
 const getStageTimes = (calcTotalLifeTime = false) => {
@@ -157,8 +160,8 @@ const getStageTimes = (calcTotalLifeTime = false) => {
         let totalLifeTime = 0;
 
         stages.forEach((stage, idx) => {
-            const prevStageTime = idx == 0 ? 0 : App.game.farming.berryData[selectedPlot().berry].growthTime[idx - 1];
-            const growthTime = App.game.farming.berryData[selectedPlot().berry].growthTime[idx] - prevStageTime;
+            const prevStageTime = idx == 0 ? 0 : BerryList[selectedPlot().berry].growthTime[idx - 1];
+            const growthTime = BerryList[selectedPlot().berry].growthTime[idx] - prevStageTime;
             dummyPlot._age(growthTime);
             const growthMultiplier = App.game.farming.getGrowthMultiplier() * dummyPlot.getGrowthMultiplier();
 
@@ -234,7 +237,8 @@ const importFarm = (saveData) => {
 
     App.game.farming.plotList.forEach((plot, idx) => {
         plot._berry(plotList[idx].berry);
-        plot._age(plotList[idx].age);
+        const age = plotList[idx].age;
+        plot._age(age > 0 ? age - 1 : age);
         plot._mulch(plotList[idx].mulch);
     });
 };
@@ -286,11 +290,21 @@ const showPlotContextMenu = (event, plotIndex) => {
     }).data('plot-index', plotIndex).show();
 };
 
+const berryList = ko.pureComputed(() => {
+    const searchVal = berrySearch()?.toLowerCase();
+    const berries = GameHelper.enumSelectOption(BerryType);
+    if (!berrySearch) {
+        return berries;
+    }
+    return berries.filter((berry) => berry.name.toLowerCase().includes(searchVal));
+});
+
 module.exports = {
     selectedPlot,
     selectedPlotIndex,
     plotLabelsEnabled,
     importSaveDataText,
+    berrySearch,
     getImage,
     setPlotBerry,
     setPlotStage,
@@ -314,4 +328,5 @@ module.exports = {
     importFromText,
     importFromFile,
     showPlotContextMenu,
+    berryList,
 }

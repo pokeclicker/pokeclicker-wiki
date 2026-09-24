@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain [[Pokémon/Kabuto]]
+1 can be exchanged for [[Pokémon/Kabuto]] or 10 for [[Pokémon/Kabutops]] at the Cinnabar Lab in [[Towns/Cinnabar Island]].

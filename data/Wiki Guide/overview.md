@@ -75,6 +75,22 @@ Row | lorem | ipsum
 :::
 ```
 
+
+:::collapsed This is a collapsible block that starts off hidden.
+
+Spoilers!
+
+:::
+
+```
+:::collapsed This is a collapsible block that starts off hidden.
+
+Spoilers!
+
+:::
+```
+
+
 ---
 
 ### Linking to other wiki pages: {#linking}

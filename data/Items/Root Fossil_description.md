@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain [[Pokémon/Lileep]]
+1 can be exchanged for [[Pokémon/Lileep]] or 10 for [[Pokémon/Cradily]] at the Devon Corporation in [[Towns/Rustboro City]].

@@ -1,4 +1,7 @@
-## Exclusive Pokémon
+
+---
+
+## Exclusive Pokémon {#exclusives}
 
 The following is a list of Pokémon obtainable in Alola which cannot be found on Routes, in Dungeons, or through level-based evolutions of Pokémon caught in the region.
 
@@ -21,10 +24,10 @@ The following is a list of Pokémon obtainable in Alola which cannot be found on
 |---|---|---|---|
 |[[Towns/Aether Paradise]] | Akala Island | [[File:pokemon/772.png\|25px]] [[Pokémon/Type: Null]]|[[File:questPoint.svg\|20px]] 114,000|
 |[[Towns/Altar of the Sunne and Moone]] | Poni Island | [[File:pokemon/803.png\|25px]] [[Pokémon/Poipole]]|[[File:questPoint.svg\|20px]] 90,000|
-|[[Towns/Hoppy Town]] | Magikarp Jump | [[File:pokemon/129.23.png\|25px]] [[Pokémon/Magikarp Brown Stripes]]|[[File:Water_Gem.png\|20px]] 1,500,000 Water Gems|
+|[[Towns/Hoppy Town]] | Magikarp Jump | [[File:pokemon/129.23.png\|25px]] [[Pokémon/Magikarp Brown Stripes]]|[[File:gems/Water Gem.png\|20px]] 1,500,000 Water Gems|
 
 [[Towns/Aether Foundation]] also has some extra Shopmons, namely the Silvally forms, after completing [[Quest Lines/Typing some Memories]] Quest Line.
-Also, you should probably check that Magikarp's Eye.
+Also, you should probably keep an *eye* out for a secret shop.
 
 ### Eggs
 All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries/Passho]], and [[Berries/Rindo]] berries.
@@ -53,3 +56,55 @@ Crabrawler and Drampa can also be obtained as Wanderers by using [[Berries/Chopl
 | [[File:pokemon/129.16.png\|25px]] [[Pokémon/Magikarp Purple Diamonds]] | Magikarp Jump |Unlocks after beating [[Gyms/Luxury League]]'s Gym |
 | [[File:pokemon/129.2.png\|25px]] [[Pokémon/Magikarp Apricot Stripes]] | Magikarp Jump |Unlocks after beating [[Gyms/Heal League]]'s Gym |
 | [[File:pokemon/129.3.png\|25px]] [[Pokémon/Magikarp Violet Raindrops]]| Magikarp Jump |Unlocks after beating [[Gyms/Master League]]'s Gym |
+
+
+## Island Scan Pokémon
+These Pokémon only appear on specific routes/dungeons in Alola on certain days.
+Bolded Pokémon can *only* acquire EVs via this method.
+
+|Pokémon | Day of Week | Subregion | Dungeon/Route |
+|---|---|---|---|
+| [[File:pokemon/7.png\|25px]] [[Pokémon/Squirtle]] |Monday {data-sort=0} | Melemele Island | [[Dungeons/Seaward Cave]]|
+| [[File:pokemon/158.png\|25px]] [[Pokémon/Totodile]] |Monday {data-sort=0} | Melemele Island | [[Dungeons/Seaward Cave]]|
+| [[File:pokemon/306.png\|25px]] [[Pokémon/Aggron]] |Monday {data-sort=0} | Poni Island | [[Routes/Poni Plains]]|
+| [[File:pokemon/363.png\|25px]] [[Pokémon/Spheal]] |Monday {data-sort=0} | Akala Island | [[Routes/Alola Route 7]]|
+| [[File:pokemon/534.png\|25px]] [[Pokémon/Conkeldurr]] |Monday {data-sort=0} | Poni Island | [[Routes/Poni Plains]]|
+| [[File:pokemon/95.png\|25px]] [[Pokémon/Onix]] |Tuesday {data-sort=1} | Melemele Island | [[Dungeons/Ten Carat Hill]]|
+| [[File:pokemon/256.png\|25px]] [[Pokémon/Combusken]] |Tuesday {data-sort=1}  | Akala Island | [[Routes/Alola Route 8]]|
+| [[File:pokemon/394.png\|25px]] **[[Pokémon/Prinplup]]** |**Tuesday** {data-sort=1} | **Ula'ula Island** | [[Routes/Alola Route 16]]|
+| [[File:pokemon/404.png\|25px]] [[Pokémon/Luxio]] |Tuesday {data-sort=1}  | Akala Island | [[Routes/Alola Route 8]]|
+| [[File:pokemon/468.png\|25px]] [[Pokémon/Togekiss]] |Tuesday {data-sort=1} | Poni Island | [[Routes/Poni Gauntlet]]|
+| [[File:pokemon/479.png\|25px]] [[Pokémon/Rotom]] |Tuesday {data-sort=1}  | Poni Island | [[Routes/Poni Gauntlet]]|
+| [[File:pokemon/578.png\|25px]] [[Pokémon/Duosion]] |Tuesday {data-sort=1} | Ula'ula Island | [[Routes/Alola Route 16]]|
+| [[File:pokemon/633.png\|25px]] [[Pokémon/Deino]] |Tuesday {data-sort=1}  | Melemele Island | [[Dungeons/Ten Carat Hill]]|
+| [[File:pokemon/116.png\|25px]] [[Pokémon/Horsea]] |Wednesday {data-sort=2} | Melemele Island | [[Routes/Kala'e Bay]]|
+| [[File:pokemon/315.png\|25px]] [[Pokémon/Roselia]] |Wednesday {data-sort=2}  | Ula'ula Island | [[Dungeons/Ula'ula Meadow]]|
+| [[File:pokemon/388.png\|25px]] **[[Pokémon/Grotle ]]** |**Wednesday** {data-sort=2} | **Ula'ula Island** | [[Dungeons/Ula'ula Meadow]]|
+| [[File:pokemon/542.png\|25px]] [[Pokémon/Leavanny]] |Wednesday {data-sort=2} | Poni Island | [[Dungeons/Poni Meadow]]|
+| [[File:pokemon/679.png\|25px]] [[Pokémon/Honedge]] |Wednesday {data-sort=2} | Akala Island | [[Routes/Akala Outskirts]]|
+| [[File:pokemon/15.png\|25px]] [[Pokémon/Beedrill]] |Thursday {data-sort=3} | Akala Island | [[Routes/Alola Route 4]]|
+| [[File:pokemon/18.png\|25px]] **[[Pokémon/Pidgeot]]** |**Thursday** {data-sort=3} | **Ula'ula Island** | [[Routes/Alola Route 10]]|
+| [[File:pokemon/397.png\|25px]] [[Pokémon/Staravia]] |Thursday {data-sort=3}| Ula'ula Island | [[Routes/Alola Route 10]]|
+| [[File:pokemon/497.png\|25px]] **[[Pokémon/Serperior]]** |**Thursday** {data-sort=3} | **Poni Island** | [[Dungeons/Exeggutor Island Hill]]|
+| [[File:pokemon/543.png\|25px]] [[Pokémon/Venipede]] |Thursday {data-sort=3}| Akala Island | [[Routes/Alola Route 4]]|
+| [[File:pokemon/652.png\|25px]] **[[Pokémon/Chesnaught]]** |**Thursday** {data-sort=3}|**Poni Island** | [[Dungeons/Exeggutor Island Hill]] |
+| [[File:pokemon/1.png\|25px]] [[Pokémon/Bulbasaur]] |Friday {data-sort=4}| Melemele Island | [[Routes/Alola Route 2]]|
+| [[File:pokemon/69.png\|25px]] [[Pokémon/Bellsprout]] |Friday {data-sort=4}| Akala Island | [[Routes/Alola Route 5]]|
+| [[File:pokemon/152.png\|25px]] [[Pokémon/Chikorita]] |Friday {data-sort=4} | Melemele Island | [[Routes/Alola Route 2]]|
+| [[File:pokemon/253.png\|25px]] [[Pokémon/Grovyle]] |Friday {data-sort=4}| Akala Island | [[Routes/Alola Route 5]]|
+| [[File:pokemon/288.png\|25px]] [[Pokémon/Vigoroth]] |Friday {data-sort=4}| Ula'ula Island | [[Routes/Alola Route 11]]|
+| [[File:pokemon/391.png\|25px]] **[[Pokémon/Monferno]]** |**Friday** {data-sort=4} | **Ula'ula Island** | [[Routes/Alola Route 11]]|
+| [[File:pokemon/503.png\|25px]] **[[Pokémon/Samurott]]** |**Friday** {data-sort=4} | **Poni Island** | [[Routes/Poni Wilds]]|
+| [[File:pokemon/658.png\|25px]] **[[Pokémon/Greninja]]** |**Friday** {data-sort=4}|**Poni Island** | [[Routes/Poni Wilds]]|
+| [[File:pokemon/183.png\|25px]] [[Pokémon/Marill]] |Saturday {data-sort=5}| Akala Island | [[Dungeons/Brooklet Hill]]|
+| [[File:pokemon/259.png\|25px]] [[Pokémon/Marshtomp]] |Saturday {data-sort=5}| Akala Island | [[Dungeons/Brooklet Hill]]|
+| [[File:pokemon/500.png\|25px]] **[[Pokémon/Emboar]]** |**Saturday** {data-sort=5} | **Poni Island** | [[Routes/Ancient Poni Path]]|
+| [[File:pokemon/607.png\|25px]] [[Pokémon/Litwick]] |Saturday  {data-sort=5}| Melemele Island | [[Dungeons/Hau'oli Cemetery]]|
+| [[File:pokemon/610.png\|25px]] [[Pokémon/Axew]] |Saturday {data-sort=5}| Ula'ula Island | [[Routes/Mount Hokulani]]|
+| [[File:pokemon/655.png\|25px]] **[[Pokémon/Delphox]]** |**Saturday** {data-sort=5}| **Poni Island** | [[Routes/Ancient Poni Path]]|
+| [[File:pokemon/4.png\|25px]] [[Pokémon/Charmander]] |Sunday {data-sort=6}| Melemele Island | [[Routes/Alola Route 3]]|
+| [[File:pokemon/155.png\|25px]] [[Pokémon/Cyndaquil]] |Sunday {data-sort=6} | Melemele Island | [[Routes/Alola Route 3]]|
+| [[File:pokemon/280.png\|25px]] [[Pokémon/Ralts]] |Sunday {data-sort=6}| Akala Island | [[Routes/Alola Route 6]]|
+| [[File:pokemon/574.png\|25px]] [[Pokémon/Gothita]] |Sunday {data-sort=6}| Akala Island | [[Routes/Alola Route 6]]|
+| [[File:pokemon/604.png\|25px]] [[Pokémon/Eelektross]] |Sunday {data-sort=6} | Poni Island | [[Routes/Poni Grove]]|
+

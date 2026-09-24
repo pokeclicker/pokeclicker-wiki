@@ -1,3 +1,4 @@
+
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
@@ -12,6 +13,12 @@ Razz has a chance of mutating when [[Berries/Cheri]] and [[Berries/Leppa]] are t
 :::
 
 **Optimized Formation**
+:::collapsed  Razz Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MCwiYWdlIjo2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjUsImFnZSI6NDgwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NSwiYWdlIjo0ODAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjowLCJhZ2UiOjYwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MCwiYWdlIjo2MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjUsImFnZSI6NDgwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NSwiYWdlIjo0ODAsIm11bGNoIjotMX1dfX19`
+:::
+
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | {.mutation} | [[File:Cheri.png\|32px]] [[Berries/Cheri]] | {.mutation} | |
@@ -37,7 +44,7 @@ Razz Berries can mutate into the following Berries.
 | [[File:Occa.png\|32px]] [[Berries/Occa]]      | [[File:Figy.png\|32px]] [[Berries/Figy]] [[File:Tamato.png\|32px]] [[Berries/Tamato]] [[File:Spelon.png\|32px]] [[Berries/Spelon]] |
 
 ### Acquisition
-Razz Berries can be obtained from the following dungeons.
+Razz Berries can be obtained from the [[Towns/Safari Zone]] and from the following dungeons.
 
 | Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |

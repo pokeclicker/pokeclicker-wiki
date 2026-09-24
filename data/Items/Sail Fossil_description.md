@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain [[Pokémon/Amaura]]
+1 can be exchanged for [[Pokémon/Amaura]] or 10 for [[Pokémon/Aurorus]] at the Ambrette Fossil Lab in [[Towns/Ambrette Town]].

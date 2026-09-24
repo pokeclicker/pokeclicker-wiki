@@ -16,7 +16,7 @@ const getItemName =  (itemType, itemId) => {
 const getItemImage = (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
-            return `assets/images/items/${ItemList[itemId].imageDirectory}/${ItemList[itemId].name}.png`;
+            return `${ItemList[itemId].image}`;
         case ItemType.underground:
             return UndergroundItems.list.find((i) => i.name === itemId)?.image;
         case ItemType.berry:

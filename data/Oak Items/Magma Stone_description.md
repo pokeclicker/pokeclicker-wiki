@@ -1,0 +1,1 @@
+Magma Stone multiplies the egg steps gained by [[Eggs]] in the [[Hatchery]], making them hatch faster.  Its effect stacks with other egg step boosts like [[Berries/Chople]] Berries.

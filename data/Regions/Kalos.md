@@ -1,4 +1,7 @@
-## Exclusive Pokémon
+
+---
+
+## Exclusive Pokémon {#exclusives}
 
 The following is a list of Pokémon obtainable in Kalos which cannot be found on Routes, in Dungeons, or through level-based evolutions of Pokémon caught in the region.
 
@@ -21,7 +24,8 @@ The following is a list of Pokémon obtainable in Kalos which cannot be found on
 |[[File:Shiny_stone.png\|25px]] [[Items/Shiny Stone]]|5 | [[File:pokemon/671.png\|25px]] [[Pokémon/Florges (Red)]], [[File:pokemon/671.01.png\|25px]] [[Pokémon/Florges (Yellow)]], [[File:pokemon/671.03.png\|25px]] [[Pokémon/Florges (Blue)]], [[File:pokemon/671.02.png\|25px]] [[Pokémon/Florges (Orange)]], [[File:pokemon/671.04.png\|25px]] [[Pokémon/Florges (White)]] |
 
 ### Shopmons
-While Kalos has no mandatory Shopmons, there are some optional Pokémon available for purchase at [[Towns/Parfum Palace]] and [[Towns/Lumiose City]]. Oh and there may or may not be a Disguised Shop somewhere.
+While Kalos has no mandatory Shopmons, there are some optional Pokémon available for purchase at [[Towns/Parfum Palace]] and [[Towns/Lumiose City]].
+Also, there may or may not be a Disguised Shop somewhere.
 
 ### Eggs
 All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries/Passho]], and [[Berries/Rindo]] berries.

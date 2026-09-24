@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain [[Pokémon/Shieldon]]
+1 can be exchanged for [[Pokémon/Shieldon]] or 10 for [[Pokémon/Bastiodon]] at the Oreburgh Mining Museum in [[Towns/Oreburgh City]].

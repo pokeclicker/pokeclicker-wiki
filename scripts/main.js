@@ -21,6 +21,8 @@ window.Wiki = {
   dungeonTokens: require('./pages/dungeonTokens'),
   oakItems: require('./pages/oakItems'),
   gems: require('./pages/gems'),
+  experience: require('./pages/experience'),
+  filterHelper: require('./filterHelper'),
   getDealChains: require('./pages/dealChains').getDealChains,
   ...require('./navigation'),
 }

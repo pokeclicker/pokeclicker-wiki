@@ -42,8 +42,12 @@
         </thead>
         <tbody>
             <tr>
+                <td>Pokémon Level</td>
+                <td data-bind="text: $data.enemyPokemon().level.toLocaleString('en-US')"></td>
+            </tr>
+            <tr>
                 <td>HP per Pokémon</td>
-               <td data-bind="text: $data.enemyPokemon().health().toLocaleString('en-US')"></td>
+                <td data-bind="text: $data.enemyPokemon().health().toLocaleString('en-US')"></td>
             </tr>
             <tr>
                 <td>HP in Total</td>

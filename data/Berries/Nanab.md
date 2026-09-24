@@ -1,3 +1,4 @@
+
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
@@ -12,6 +13,13 @@ Nanab has a chance of mutating when [[Berries/Pecha]] and [[Berries/Aspear]] are
 :::
 
 **Optimized Formation**
+
+:::collapsed Nanab Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjoyLCJhZ2UiOjEyMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjIsImFnZSI6MTIwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NCwiYWdlIjoyNDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjIsImFnZSI6MTIwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MiwiYWdlIjoxMjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjQsImFnZSI6MjQwLCJtdWxjaCI6LTF9XX19fQ==`
+:::
+
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | {.mutation} | {.mutation} | [[File:Pecha.png\|32px]] [[Berries/Pecha]] | {.mutation} | |
@@ -38,7 +46,7 @@ Nanab Berries can mutate into the following Berries.
 | [[File:Roseli.png\|32px]] [[Berries/Roseli]]  | [[File:Mago.png\|32px]] [[Berries/Mago]] [[File:Magost.png\|32px]] [[Berries/Magost]] [[File:Watmel.png\|32px]] [[Berries/Watmel]] |
 
 ### Acquisition
-Nanab Berries can be obtained from the following dungeons.
+Nanab Berries can be obtained from the [[Towns/Safari Zone]] and from the following dungeons.
 
 | Location	                        |Region | Tier	    |
 | :---:                             | :---:     | :---:         |

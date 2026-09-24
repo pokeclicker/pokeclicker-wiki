@@ -23,7 +23,7 @@
                     <td data-bind="text: $data.startTime.toLocaleString(), attr: { 'data-sort': $data.timeTillStart() }"></td>
                     <td data-bind="text: $data.endTime.toLocaleString(), attr: { 'data-sort': $data.timeTillEnd() }"></td>
                     <!-- ko if: $data.timeTillStart() > 0 -->
-                        <!-- ko with: Math.floor($data.timeTillStart() / 1000 / 60 / 60 / 24) * 500, as: 'cost' -->
+                        <!-- ko with: Math.floor(1 + $data.timeTillStart() / 1000 / 60 / 60 / 24) * 500, as: 'cost' -->
                         <td data-bind="attr: { 'data-sort': cost }">
                             <ko data-bind="text: cost.toLocaleString()"></ko>
                             <img data-bind="attr: { src: './images/questPoint.svg' }" width="18px"/>

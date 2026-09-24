@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain [[Pokémon/Archen]]
+1 can be exchanged for [[Pokémon/Archen]] or 10 for [[Pokémon/Archeops]] at the Nacrene Museum in [[Towns/Nacrene City]].

@@ -77317,7 +77317,7 @@ module.exports = function whichTypedArray(value) {
 },{"available-typed-arrays":1,"call-bind":6,"call-bind/callBound":5,"for-each":62,"gopd":66,"has-tostringtag/shams":70}],502:[function(require,module,exports){
 module.exports={
   "name": "pokeclicker",
-  "version": "0.10.23",
+  "version": "0.10.26",
   "description": "PokéClicker repository",
   "main": "index.js",
   "scripts": {
@@ -77343,7 +77343,7 @@ module.exports={
   },
   "babel": {
     "presets": [
-      "env"
+      "@babel/preset-env"
     ]
   },
   "author": "RedSparr0w",
@@ -77352,7 +77352,16 @@ module.exports={
     "url": "https://github.com/pokeclicker/pokeclicker/issues"
   },
   "homepage": "https://github.com/pokeclicker/pokeclicker#readme",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^24.0.0"
+    }
+  },
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
     "@types/bootstrap": "^4.3.1",
     "@types/bootstrap-notify": "^3.1.34",
     "@types/intro.js": "^2.4.7",
@@ -77361,32 +77370,26 @@ module.exports={
     "@types/sortablejs": "^1.10.5",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",
-    "@vitest/coverage-v8": "^2.1.1",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0",
+    "@vitest/coverage-v8": "^3.1.3",
     "bootstrap-notify": "^3.1.3",
-    "browser-sync": "^2.28.3",
+    "browser-sync": "^3.0.2",
     "cross-env": "^7.0.2",
     "del": "^5.1.0",
     "es6-promise": "^4.2.8",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.22.1",
-    "gh-pages": "^4.0.0",
+    "gh-pages": "^6.1.1",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-changed": "^4.0.2",
     "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.0",
-    "gulp-connect": "^5.7.0",
     "gulp-ejs": "^5.1.0",
     "gulp-file-include": "^2.2.2",
     "gulp-filter": "^6.0.0",
-    "gulp-html-import": "^0.0.2",
-    "gulp-less": "^4.0.1",
-    "gulp-minify-css": "^1.2.1",
-    "gulp-minify-html": "^1.0.4",
+    "gulp-less": "^5.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.0.0",
@@ -77395,10 +77398,8 @@ module.exports={
     "gulp-stream-to-promise": "^0.1.0",
     "gulp-strip-debug": "^3.0.0",
     "gulp-typescript": "^5.0.1",
-    "gulp-util": "^3.0.7",
     "husky": "^4.3.8",
     "jsdom": "^25.0.0",
-    "natives": "^1.1.6",
     "npm-run-all2": "^6.2.0",
     "postcss-less": "^6.0.0",
     "stylelint": "^15.10.1",
@@ -77406,10 +77407,10 @@ module.exports={
     "ts-loader": "^8.0.4",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5",
-    "vitest": "^2.1.1",
+    "vitest": "^3.1.3",
     "webpack": "^5.76.0",
     "webpack-cli": "^5.0.1",
-    "webpack-stream": "^6.1.0"
+    "webpack-stream": "^7.0.0"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
@@ -77422,6 +77423,9 @@ module.exports={
     "knockout": "^3.5.1",
     "popper.js": "^1.16.0",
     "sortablejs": "^1.10.2"
+  },
+  "overrides": {
+    "clean-css": ">=5.3.1"
   }
 }
 
@@ -77474,7 +77478,7 @@ const applyDatatables = () => {
             let order = [[0, 'asc']];
 
             // If we have less than 40 rows, we don't need pagination, but table will still be sortable
-            if (rows < 40) {
+            if (rows < 40 && !element.classList.contains('always-data-tables')) {
                 pageLength = 40;
                 dom = `<'row'<'col-sm-12 col-md-6'><'col-sm-12 col-md-6'>><'row table-responsive'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'><'col-sm-12 col-md-7 text-center'>>`
                 order = [];
@@ -77582,6 +77586,226 @@ module.exports = {
   discord,
 }
 },{}],506:[function(require,module,exports){
+/** 
+ * Helpers for common filtering cases.
+ * FilterHelpers classes consolidate logic for checking the properties for complex (and differently structured) objects
+ * and can check against multiple conditions at once.
+ */
+
+
+/** DUNGEON FILTERS */
+
+class DungeonFilterHelper {
+    constructor () {
+        //add condition arrays as needed for new filter cases
+        this.encounterConditions = [];
+    }
+
+    addEncounterFilter(filter) {
+        this.encounterConditions.push(filter);
+    }
+
+    filterDungeons(dungeons) {
+        return dungeons.filter(dungeon => {
+            const mimicsAsLoot = dungeon.mimicList.length > 0 ? Object.values(dungeon.lootTable).flat().filter(loot => dungeon.mimicList.includes(loot.loot)) : [];
+            const encounters = [].concat(dungeon.enemyList, dungeon.bossList, mimicsAsLoot);
+            
+            return encounters.some(DungeonFilterHelper.combineFilters(this.encounterConditions));
+        });
+    }
+    
+    filterEncounters(encounters, isMimic = false, lootTable = {}) {
+        if (isMimic) {
+            const mimicsAsLoot = encounters.length > 0 ? Object.values(lootTable).flat().filter(loot => encounters.includes(loot.loot)) : [];
+            return mimicsAsLoot.filter(DungeonFilterHelper.combineFilters(this.encounterConditions)).map(m => m.loot);
+        }
+
+        return encounters.filter(DungeonFilterHelper.combineFilters(this.encounterConditions))
+    }
+
+    //helpers for creating filters
+    static createHasRequirementFilter = (requirement) => { return (encounter) =>
+        encounter.requirement ? matchesRequirement(encounter.requirement, requirement)
+            : encounter.options?.requirement && matchesRequirement(encounter.options.requirement, requirement)
+    };
+    static createCheckByPokemonFilter = (checkPokemonBy) => { return (encounter) =>
+        encounter.trainerClass === undefined && (typeof encounter === 'string' ? checkPokemonBy(encounter) : checkPokemonBy(encounter.pokemon || encounter.name || encounter.loot));
+    };
+
+    //filter that checks that an object meets all conditions
+    static combineFilters = (filters) => { return (obj) => filters.every(f => f(obj)) };
+
+};
+
+
+/**
+ * 
+ * @param dungeons
+ * @param filterBy - conditions to filter by, add properties as needed
+ * @param {Requirement} filterBy.requirement
+ * @param {function} filterBy.pokemonFilter - callback(pokemonName: string) => boolean
+ * @param {boolean} filterEncounters - returns only encounters/pokemon that pass filters
+ */
+const filterDungeons = ({
+    dungeons = Object.values(dungeonList).filter(dungeon => GameConstants.getDungeonRegion(dungeon.name) <= GameConstants.MAX_AVAILABLE_REGION),
+    filterBy = {
+        encounterRequirement: null,
+        pokemonFilter: null,
+    },
+    filterEncounters = false, //returns only enemies that have this requirement
+}) => {
+    const dfh = new DungeonFilterHelper();
+    if (filterBy.encounterRequirement) {
+        dfh.addEncounterFilter(DungeonFilterHelper.createHasRequirementFilter(filterBy.encounterRequirement));
+    }
+    if (filterBy.pokemonFilter) {
+        dfh.addEncounterFilter(DungeonFilterHelper.createCheckByPokemonFilter(filterBy.pokemonFilter));
+    }
+
+    let filteredDungeons = dfh.filterDungeons(dungeons);
+
+    if (filterEncounters) {
+        filteredDungeons = filteredDungeons.map( dungeon => ({
+            ...dungeon,
+            enemyList: dfh.filterEncounters(dungeon.enemyList),
+            bossList: dfh.filterEncounters(dungeon.bossList),
+            mimicList: dfh.filterEncounters(dungeon.mimicList, true, dungeon.lootTable)
+        }));
+    }
+
+    return filteredDungeons;
+}
+
+
+/** ROUTE FILTERS */
+
+class RouteFilterHelper {
+    constructor () {
+        //add condition arrays as needed for new filter cases
+        this.encounterConditions = [];
+        this.pokemonConditions = []; //used for encounters that can cover an array of pokemon - currently only applies to special encounters
+    }
+
+    addEncounterFilter(filter) {
+        this.encounterConditions.push(filter);
+    }
+
+    addPokemonFilter(filter) {
+        this.pokemonConditions.push(filter);
+    }
+
+    filterRoutes(routes) {
+        return routes.filter(r => Object.values(r.pokemon).flat().some(RouteFilterHelper.combineFilters(this.encounterConditions)));
+    }
+
+    filterEncounters(encounters) {
+        return encounters.filter(RouteFilterHelper.combineFilters(this.encounterConditions));
+    }
+
+    filterEncounterPokemon(pokemon) {
+        return pokemon.filter(RouteFilterHelper.combineFilters(this.pokemonConditions));
+    }
+
+    //helpers for creating filters
+    static createHasRequirementFilter = (requirement) => { return (encounter) => encounter.req && matchesRequirement(encounter.req, requirement); };
+    static createCheckEncounterByPokemonFilter = (checkPokemonBy) => {
+        return (encounter) => encounter.pokemon ? encounter.pokemon.some(checkPokemonBy) : checkPokemonBy(encounter);
+    };
+
+    //filter that checks that an object meets all conditions
+    static combineFilters = (filters) => { return (obj) => filters.every(f => f(obj)) };
+};
+
+
+/**
+ * 
+ * @param routes
+ * @param filterBy - conditions to filter by, add properties as needed
+ * @param {Requirement} filterBy.requirement
+ * @param {function} filterBy.pokemonFilter - callback(pokemonName: string) => boolean
+ * @param {boolean} filterEncounters - returns only encounters/pokemon that pass filters
+ */
+
+const filterRoutes = ({
+    routes = Routes.regionRoutes.filter(route => route.region <= GameConstants.MAX_AVAILABLE_REGION),
+    filterBy = {
+        encounterRequirement: null,
+        pokemonFilter: null,
+    },
+    filterEncounters = false, 
+}) => {
+    const rfh = new RouteFilterHelper();
+
+    if (filterBy.encounterRequirement) {
+        rfh.addEncounterFilter(RouteFilterHelper.createHasRequirementFilter(filterBy.encounterRequirement));
+    }
+    if (filterBy.pokemonFilter) {
+        rfh.addEncounterFilter(RouteFilterHelper.createCheckEncounterByPokemonFilter(filterBy.pokemonFilter));
+        rfh.addPokemonFilter(filterBy.pokemonFilter);
+    }
+
+    let filteredRoutes = rfh.filterRoutes(routes);
+    
+    if (filterEncounters) {
+        filteredRoutes = filteredRoutes.map(route => ({
+            ...route, 
+            pokemon: { 
+                //encounters and pokemon are equivalent for land, water, headbutt; can skip additional pokemon filtering unless this changes
+                land: rfh.filterEncounters(route.pokemon.land),
+                water: rfh.filterEncounters(route.pokemon.water),
+                headbutt: rfh.filterEncounters(route.pokemon.headbutt),
+                special: rfh.filterEncounters(route.pokemon.special).map(s => ({
+                    ...s,
+                    pokemon: rfh.filterEncounterPokemon(s.pokemon)
+                }))
+            }
+        }));
+    }
+
+    return filteredRoutes;
+}
+
+/** REQUIREMENT HELPERS */
+
+//Finds a specific requirement type in a potential MultiRequirement
+const findRequirementOfType = (requirement, type) => {
+    if (requirement instanceof type) {
+        return requirement;
+    } else if (requirement instanceof MultiRequirement || requirement instanceof OneFromManyRequirement) {
+        return requirement.requirements.find(r => findRequirementOfType(r, type));
+    } else {
+        return;
+    }
+}
+
+const matchesRequirement = (reqToCheck, reqToMatch = new Requirement(), canMatchMulti = true) => {
+    
+    if (canMatchMulti && (reqToCheck instanceof MultiRequirement || reqToCheck instanceof OneFromManyRequirement)) {
+        return reqToCheck.requirements.some(r => matchesRequirement(r, reqToMatch));
+    } else if (reqToCheck instanceof WeatherRequirement && reqToMatch instanceof WeatherRequirement) {
+        return reqToMatch.weather === undefined || reqToCheck.weather.some(w => reqToMatch.weather.includes(w));
+    } else if (reqToCheck instanceof DayOfWeekRequirement && reqToMatch instanceof DayOfWeekRequirement) {
+        return reqToMatch.DayOfWeekNum === undefined || reqToCheck.DayOfWeekNum === reqToMatch.DayOfWeekNum;
+    } else if (reqToCheck instanceof SpecialEventRequirement && reqToMatch instanceof SpecialEventRequirement) {
+        return reqToMatch.specialEventName === undefined || reqToCheck.specialEventName === reqToMatch.specialEventName;
+    } else if (reqToCheck instanceof QuestLineStartedRequirement && reqToMatch instanceof QuestLineStartedRequirement) {
+        return reqToMatch.questLineName === undefined || reqToMatch.questLineNamereqToCheck.questLineName === reqToMatch.questLineName;
+    } else if (reqToCheck instanceof QuestLineCompletedRequirement && reqToMatch instanceof QuestLineCompletedRequirement) {
+        return reqToMatch.questLineName === undefined || reqToCheck.questLineName === reqToMatch.questLineName;
+    } else if (reqToCheck instanceof QuestLineStepCompletedRequirement && reqToMatch instanceof QuestLineStepCompletedRequirement) {
+        return reqToMatch.questLineName === undefined || (reqToCheck.questLineName === reqToMatch.questLineName && reqToCheck.questIndex === reqToMatch.questIndex);
+    } else {
+        return false;
+    }
+};
+
+module.exports = {
+    filterRoutes,
+    filterDungeons,
+    matchesRequirement,
+    findRequirementOfType,
+}
+},{}],507:[function(require,module,exports){
 /*
 Initializing anything we need from the game files
 */
@@ -77593,8 +77817,9 @@ themes.options.push(new SettingOption('Quartz', 'quartz'));
 themes.options.push(new SettingOption('Vapor', 'vapor'));
 themes.options.push(new SettingOption('Zephyr', 'zephyr'));
 
+
 const now = new Date();
-if (now.getMonth() == 3 && now.getDate() == 1) {
+/*if (now.getMonth() == 3 && now.getDate() == 1) {
   themes.options.forEach((t) => {
   t.value = "sketchy";
   });
@@ -77602,6 +77827,7 @@ if (now.getMonth() == 3 && now.getDate() == 1) {
   themes.options.push(new SettingOption("Definitely Not Sketchy", "sketchy"));
 }
 themes.options.sort((a, b) => (a.text).localeCompare(b.text));
+*/
 
 // Suppress game notifications
 Notifier.notify = () => {};
@@ -77656,11 +77882,12 @@ QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 AchievementHandler.initialize(multiplier, new Challenges());
+AchievementHandler.calculateMaxBonus();
 
 BerryDeal.generateDeals(now);
 GemDeals.generateDeals();
 ShardDeal.generateDeals();
-GenericDeal.generateDeals();
+GenericDeal.generateDeals(now);
 SafariPokemonList.generateSafariLists(); // This needs to be after anything that generates shopmon due to Friend Safari calcs
 Weather.generateWeather(now);
 
@@ -77708,7 +77935,7 @@ Settings.getSetting('theme').observableValue.subscribe(theme => {
   document.body.className = `no-select ${theme}`;
 });
 
-},{}],507:[function(require,module,exports){
+},{}],508:[function(require,module,exports){
 const requirementHints = (requirement, includeMarkdown = true) => {
     if (!requirement) {
         return [];
@@ -77761,6 +77988,9 @@ const requirementHints = (requirement, includeMarkdown = true) => {
                     break;
                 case SpecialEventRequirement:
                     hint = `The ${includeMarkdown ? `[[Events/${req.specialEventName}]]` : req.specialEventName} event must be active.`;
+                    break;
+                case DayOfWeekRequirement:
+                    hint = `Appears every ${GameConstants.DayOfWeek[req.DayOfWeekNum]}.`;
                     break;
                 case DevelopmentRequirement:
                     hint = 'Not currently available.'
@@ -77856,6 +78086,11 @@ const getEvolutionHints = (evoData) => {
         hint += ` when it has ${requiredAttack.toLocaleString()} or more attack`;
     }
 
+    if (isEventRestrictedEvolution(restrictions)) {
+        const eventReq = getRequirementFromRestrictions(restrictions, 'SpecialEventRequirement');
+        hint += ` during the ${eventReq.specialEventName} event`;
+    }
+
     if (hint.length) {
         hints.push(`${hint}.`);
     }
@@ -77916,6 +78151,10 @@ const isMegaEvolution = (restrictions) => {
 
 const isRequiredAttackEvolution = (restrictions) => {
     return hasEvoRestrictions(restrictions, ['PokemonAttackRequirement']);
+}
+
+const isEventRestrictedEvolution = (restrictions) => {
+    return hasEvoRestrictions(restrictions, ['SpecialEventRequirement']);
 }
 
 const hasEvoRestrictions = (restrictions, requirements) => {
@@ -78026,6 +78265,105 @@ const getSafariSpriteId = (safariEncounter) => {
     }
 }
 
+const unwrapRequirement = (req) => (req?.constructor?.name === 'LazyRequirementWrapper' ? req.unwrap() : req);
+
+// The region a requirement can first be completed in
+const requirementRegion = (requirement, path = new Set()) => {
+    const req = unwrapRequirement(requirement);
+    // Only guards against cycles, requirements shared between branches are still checked
+    if (!req || path.has(req)) {
+        return GameConstants.Region.kanto;
+    }
+    path.add(req);
+    const region = getRequirementRegion(req, path);
+    path.delete(req);
+    return region;
+};
+
+const getRequirementRegion = (req, path) => {
+    if (req instanceof MultiRequirement) {
+        return Math.max(GameConstants.Region.kanto, ...req.requirements.map((r) => requirementRegion(r, path)));
+    }
+    if (req instanceof OneFromManyRequirement) {
+        return Math.min(...req.requirements.map((r) => requirementRegion(r, path)));
+    }
+    // "Before X" requirements don't delay unlocking
+    if (req.option === GameConstants.AchievementOption.less) {
+        return GameConstants.Region.kanto;
+    }
+    if (req instanceof MaxRegionRequirement) {
+        return req.requiredValue;
+    }
+    if (req instanceof RouteKillRequirement) {
+        const route = Routes.getRoute(req.region, req.route);
+        return route ? routeUnlockRegion(route, path) : req.region;
+    }
+    if (req instanceof GymBadgeRequirement) {
+        const gym = Object.values(GymList).find((g) => g.badgeReward === req.badge);
+        return gym ? gymUnlockRegion(gym, path) : GameConstants.Region.kanto;
+    }
+    if (req instanceof QuestLineStartedRequirement || req instanceof QuestLineCompletedRequirement || req instanceof QuestLineStepCompletedRequirement) {
+        return requirementRegion(App.game.quests.getQuestLine(req.questLineName)?.requirement, path);
+    }
+    if (req instanceof ClearDungeonRequirement) {
+        return townUnlockRegion(TownList[GameConstants.RegionDungeons.flat()[req.dungeonIndex]], path);
+    }
+    if (req instanceof TemporaryBattleRequirement) {
+        const battle = TemporaryBattleList[req.battleName];
+        return Math.max(
+            townUnlockRegion(battle?.getTown(), path),
+            ...(battle?.requirements ?? []).map((r) => requirementRegion(r, path))
+        );
+    }
+    return GameConstants.Region.kanto;
+};
+
+const subRegionUnlockRegion = (region, subRegion, path) => Math.max(
+    region,
+    requirementRegion(SubRegions.getSubRegionById(region, subRegion ?? 0)?.requirement, path)
+);
+
+const townUnlockRegion = (town, path = new Set()) => {
+    if (!town) {
+        return GameConstants.Region.kanto;
+    }
+    return Math.max(
+        subRegionUnlockRegion(town.region, town.subRegion, path),
+        ...town.requirements.map((r) => requirementRegion(r, path))
+    );
+};
+
+const routeUnlockRegionCache = {};
+
+// Routes in later subregions (e.g. Sevii Islands 4-7) use the region they unlock in
+const routeUnlockRegion = (route, path = new Set()) => {
+    const key = `${route.region}-${route.number}`;
+    if (routeUnlockRegionCache[key] === undefined) {
+        routeUnlockRegionCache[key] = Math.max(
+            subRegionUnlockRegion(route.region, route.subRegion, path),
+            ...route.requirements.map((r) => requirementRegion(r, path))
+        );
+    }
+    return routeUnlockRegionCache[key];
+};
+
+const gymUnlockRegionCache = {};
+
+// Gyms outside the main regions (Orange Islands, Orre, Magikarp Jump) use the region they unlock in
+const gymUnlockRegion = (gym, path = new Set()) => {
+    const gymRegion = GameConstants.getGymRegion(gym.town);
+    if (gymRegion >= 0 && gymRegion < GameConstants.Region.final) {
+        return gymRegion;
+    }
+    if (gymUnlockRegionCache[gym.town] === undefined) {
+        gymUnlockRegionCache[gym.town] = Math.max(
+            townUnlockRegion(gym.parent ?? TownList[gym.town], path),
+            ...gym.requirements.map((r) => requirementRegion(r, path))
+        );
+    }
+    return gymUnlockRegionCache[gym.town];
+};
+
 module.exports = {
     requirementHints,
     getEvolutionHints,
@@ -78034,9 +78372,14 @@ module.exports = {
     getRouteOverlaySVG,
     overlaySVG,
     getSafariSpriteId,
+    unwrapRequirement,
+    requirementRegion,
+    townUnlockRegion,
+    routeUnlockRegion,
+    gymUnlockRegion,
 }
 
-},{}],508:[function(require,module,exports){
+},{}],509:[function(require,module,exports){
 // import our version etc
 const package = require('../pokeclicker/package.json');
 
@@ -78060,11 +78403,13 @@ window.Wiki = {
   dungeonTokens: require('./pages/dungeonTokens'),
   oakItems: require('./pages/oakItems'),
   gems: require('./pages/gems'),
+  experience: require('./pages/experience'),
+  filterHelper: require('./filterHelper'),
   getDealChains: require('./pages/dealChains').getDealChains,
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":502,"./components":503,"./datatables":504,"./discord":505,"./game":506,"./gameHelper":507,"./markdown-renderer":514,"./navigation":515,"./notifications":516,"./pages/dealChains":517,"./pages/dreamOrbs":518,"./pages/dungeonTokens":519,"./pages/dungeons":520,"./pages/farm":521,"./pages/farmSimulator":522,"./pages/gems":523,"./pages/items":524,"./pages/oakItems":525,"./pages/pokemon":526,"./pages/shopMon":527,"./typeahead":529}],509:[function(require,module,exports){
+},{"../pokeclicker/package.json":502,"./components":503,"./datatables":504,"./discord":505,"./filterHelper":506,"./game":507,"./gameHelper":508,"./markdown-renderer":515,"./navigation":516,"./notifications":517,"./pages/dealChains":518,"./pages/dreamOrbs":519,"./pages/dungeonTokens":520,"./pages/dungeons":521,"./pages/experience":522,"./pages/farm":523,"./pages/farmSimulator":524,"./pages/gems":525,"./pages/items":526,"./pages/oakItems":527,"./pages/pokemon":528,"./pages/shopMon":529,"./typeahead":531}],510:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const getContent = (editor) => editor.value().split('\n').map(l => l.trimEnd()).join('\n');
@@ -78073,7 +78418,8 @@ const getOriginalContent = (editor) => editor._rendered.value.split('\n').map(l 
 // list of discord ids banned from editing the wiki
 const banList = [
   '516241570853552129', // primorollins (repeatedly editing a page after being told to stop)
-  '1320473652361433161' // the_spectrumyt_70106 (making unwanted page edits, not in discord to tell to stop)
+  '1320473652361433161', // the_spectrumyt_70106 (making unwanted page edits, not in discord to tell to stop)
+  '1393809036784177214', // keruiwang76
 ];
 
 const saveChanges = (editor, filename, btn) => {
@@ -78202,7 +78548,7 @@ module.exports = {
   createMarkDownEditor,
 }
 
-},{"./markdown-renderer":514}],510:[function(require,module,exports){
+},{"./markdown-renderer":515}],511:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -78218,7 +78564,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],511:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],512:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -78236,7 +78582,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],512:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],513:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -78252,7 +78598,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],513:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],514:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -78268,7 +78614,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],514:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],515:[function(require,module,exports){
 const markdownit      = require('markdown-it');
 
 // Setup our markdown editor
@@ -78316,7 +78662,7 @@ const md = new markdownit({
   
       } else {
         // closing tag
-        return `</div></div></div>\n`;
+        return `</div></div></div></div>\n`;
       }
     }
   })
@@ -78342,7 +78688,7 @@ module.exports = {
   md,
 }
 
-},{"./markdown-plugins/hidden-comments.js":510,"./markdown-plugins/image-size.js":511,"./markdown-plugins/wiki-links-badge.js":512,"./markdown-plugins/wiki-links.js":513,"markdown-it":106,"markdown-it-attrs":96,"markdown-it-container":99,"markdown-it-mathjax3":100,"markdown-it-multimd-table":101}],515:[function(require,module,exports){
+},{"./markdown-plugins/hidden-comments.js":511,"./markdown-plugins/image-size.js":512,"./markdown-plugins/wiki-links-badge.js":513,"./markdown-plugins/wiki-links.js":514,"markdown-it":106,"markdown-it-attrs":96,"markdown-it-container":99,"markdown-it-mathjax3":100,"markdown-it-multimd-table":101}],516:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 const { applyDatatables } = require('./datatables');
 const { createMarkDownEditor } = require('./markdown-editor');
@@ -78529,6 +78875,18 @@ $(document).ready(() => {
       applyDatatables();
     }
   });
+
+  let activeSearchEntry;
+  // Search for pages
+  document.getElementById('search').addEventListener('keyup', ({key, target}) => {
+    if (key === 'Enter' && !activeSearchEntry) {
+      gotoPage('Search', target.value);
+      target.blur();
+      target.value = '';
+    } else {
+      activeSearchEntry = document.querySelector('.tt-dataset .active');
+    }
+  });
 });
 
 // clickable table rows - handle middle clicking
@@ -78565,7 +78923,7 @@ module.exports = {
     gotoPageClick,
 };
 
-},{"./datatables":504,"./markdown-editor":509,"./markdown-renderer":514,"./redirections":528}],516:[function(require,module,exports){
+},{"./datatables":504,"./markdown-editor":510,"./markdown-renderer":515,"./redirections":530}],517:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -78601,7 +78959,7 @@ module.exports = {
   alert,
 };
 
-},{}],517:[function(require,module,exports){
+},{}],518:[function(require,module,exports){
 
 class DealProfit {
     constructor(type, amount) {
@@ -78765,7 +79123,7 @@ function getDealChains(
 module.exports = {
     getDealChains,
 }
-},{}],518:[function(require,module,exports){
+},{}],519:[function(require,module,exports){
 const getOrbLoot = (orb) => {
   const weightSum = orb.items.reduce((acc, item) => acc + item.weight, 0);
   return orb.items.map(item => {
@@ -78783,7 +79141,7 @@ module.exports = {
   getOrbLoot
 };
 
-},{}],519:[function(require,module,exports){
+},{}],520:[function(require,module,exports){
 const checkExist = setInterval(function() {
     if ($('.tablinks').length) {
         $('.tablinks')[0].click();
@@ -78882,7 +79240,7 @@ module.exports = {
     highestRoute,
     setWeather,
 };
-},{}],520:[function(require,module,exports){
+},{}],521:[function(require,module,exports){
 const getTableClearCounts = (dungeon) => {
     if (getTableClearCounts.cache.has(dungeon)) {
         return getTableClearCounts.cache.get(dungeon);
@@ -79105,6 +79463,7 @@ const getDungeonLoot = (dungeon) => {
                 type: itemType,
                 image: itemGameData?.image ?? (pokemonData ? `assets/images/pokemon/${pokemonData.id}.png` : null),
                 weight: item.weight ?? 1,
+                amount: item.amount ?? 1,
                 requirement: item.requirement?.hint(),
                 ignoreDebuff: item.ignoreDebuff,
                 chances: []
@@ -79243,6 +79602,63 @@ const getDungeonShadowPokemon = (dungeon) => {
     return shadows;
 };
 
+const getAllDungeonEncounters = (dungeon) => {
+    const mimicsAsLoot = dungeon.mimicList.length > 0 ? Object.values(dungeon.lootTable).flat().filter(loot => dungeon.mimicList.includes(loot.loot)) : [];
+
+    return [].concat(
+                dungeon.enemyList,
+                dungeon.bossList,
+                mimicsAsLoot
+            ).map(e => normalizeDungeonEncounter(e));
+}
+
+const normalizeDungeonEncounter = (encounter) => {
+    if (typeof encounter === 'string') {
+        return {
+            name: encounter
+        };
+    }
+
+    return {
+        ...encounter,
+        name: encounter.name || encounter.pokemon || encounter.loot,
+        options: {
+            ...encounter.options,
+            requirement: encounter.options?.requirement || encounter.requirement
+        }
+    };
+}
+
+const getDungeonTokenCost = (dungeon, clears = 0) => {
+    const fullSize = dungeon.getDungeonSize(true);
+    // The dungeon shrinks by 1 every time the clear count gains a digit, down to the minimum size
+    const size = Math.max(GameConstants.MIN_DUNGEON_SIZE, fullSize - Math.max(0, clears.toString().length - 1));
+    return Math.ceil(dungeon.baseTokenCost * size / fullSize);
+};
+
+const getTotalDungeonTokenCost = (dungeon, clears) => {
+    let total = 0;
+    let cleared = 0;
+    while (cleared < clears) {
+        // The cost stays the same until the clear count gains another digit
+        const next = Math.min(clears, cleared < 10 ? 10 : cleared * 10);
+        total += (next - cleared) * getDungeonTokenCost(dungeon, cleared);
+        cleared = next;
+    }
+    return total;
+};
+
+const getDungeonTokenCostSteps = (dungeon) => {
+    const steps = [];
+    const reductions = dungeon.getDungeonSize(true) - GameConstants.MIN_DUNGEON_SIZE;
+    for (let reduction = 0; reduction <= reductions; reduction++) {
+        const clears = reduction === 0 ? 0 : Math.pow(10, reduction);
+        steps.push({ clears, cost: getDungeonTokenCost(dungeon, clears) });
+    }
+    return steps;
+};
+
+
 module.exports = {
     getDungeonLoot,
     getDungeonLootChances,
@@ -79251,9 +79667,180 @@ module.exports = {
     getTableClearCounts,
     itemTypeCategories,
     getDungeonShadowPokemon,
+    getAllDungeonEncounters,
+    getDungeonTokenCost,
+    getTotalDungeonTokenCost,
+    getDungeonTokenCostSteps,
 };
 
-},{}],521:[function(require,module,exports){
+},{}],522:[function(require,module,exports){
+const { applyDatatables } = require('../datatables');
+const { unwrapRequirement, routeUnlockRegion, gymUnlockRegion } = require('../gameHelper');
+const { routeAvgHp } = require('./gems');
+
+// Bumped whenever the table needs to be rebuilt (filters or weather changed)
+const tableVersion = ko.observable(0);
+const maxRegion = ko.observable(GameConstants.MAX_AVAILABLE_REGION);
+const maxHealth = ko.observable('').extend({ rateLimit: { timeout: 500, method: 'notifyWhenChangesStop' } });
+
+// Copied from Party.gainExp
+const expPerDefeat = (pokemonName, level, trainer) => {
+    const trainerBonus = trainer ? 1.5 : 1;
+    return Math.floor(PokemonHelper.getPokemonByName(pokemonName).exp * level * trainerBonus / 9);
+};
+
+// Copied from Breeding.progressEggsBattle
+const eggStepsPerDefeat = (route, region) => +Math.sqrt(MapHelper.normalizeRoute(route, region)).toFixed(2);
+
+// Checks the requirements that change over time (weather, day of week, events),
+// all other requirements (quests, obtained Pokémon, etc) are assumed to be met
+const isRequirementMet = (requirement, weather, day) => {
+    const req = unwrapRequirement(requirement);
+    if (!req) {
+        return true;
+    }
+    if (req instanceof MultiRequirement) {
+        return req.requirements.every((r) => isRequirementMet(r, weather, day));
+    }
+    if (req instanceof OneFromManyRequirement) {
+        return req.requirements.some((r) => isRequirementMet(r, weather, day));
+    }
+    if (req instanceof WeatherRequirement) {
+        return req.weather.includes(weather);
+    }
+    if (req instanceof DayOfWeekRequirement) {
+        return req.DayOfWeekNum === day;
+    }
+    if (req instanceof SpecialEventRequirement || req instanceof SpecialEventRandomRequirement) {
+        return false;
+    }
+    return true;
+};
+
+// Mirrors RouteHelper.getAvailablePokemonList/getAvailablePokemonWeightList, assuming the Super Rod is obtained
+const getRouteEncounters = (route, weather, day) => {
+    const encounters = [...route.pokemon.land, ...route.pokemon.water, ...route.pokemon.headbutt]
+        .map((name) => ({ name, weight: 1 }));
+    route.pokemon.special
+        .filter((special) => isRequirementMet(special.req, weather, day))
+        .forEach((special) => special.pokemon.forEach((name) => encounters.push({ name, weight: special.weight ?? 1 })));
+    return encounters;
+};
+
+const getRouteRow = (route, day) => {
+    const weather = Weather.regionalWeather[route.region].peek();
+    const encounters = getRouteEncounters(route, weather, day);
+    const level = PokemonFactory.routeLevel(route.number, route.region);
+    const totalWeight = encounters.reduce((sum, e) => sum + e.weight, 0);
+    const avgExp = encounters.reduce((sum, e) => sum + e.weight * expPerDefeat(e.name, level, false), 0) / totalWeight;
+
+    // Health formula copied from PokemonFactory.generateWildPokemon
+    const routeHealth = PokemonFactory.routeHealth(route.number, route.region);
+    const avgHp = routeAvgHp(route.region, route.number);
+    const maxHealth = Math.max(...encounters.map((e) => Math.round(routeHealth * (0.9 + (PokemonHelper.getPokemonByName(e.name).hitpoints / avgHp) / 10))));
+
+    return {
+        type: 'Route',
+        name: route.routeName,
+        displayName: route.routeName,
+        region: route.region,
+        subRegionName: SubRegions.getSubRegionById(route.region, route.subRegion ?? 0).name,
+        unlockRegion: routeUnlockRegion(route),
+        weather,
+        maxHealth,
+        avgExp,
+        eggSteps: eggStepsPerDefeat(route.number, route.region),
+    };
+};
+
+// Requirement-gated gym Pokémon are alternative versions of the same party (e.g. based on starter),
+// so each is weighted by how many versions there are; a single version just adds to the party
+const getGymEncounters = (gym, weather, day) => {
+    const available = gym.pokemons.filter((p) => p.requirements.every((r) => isRequirementMet(r, weather, day)));
+    const versions = new Set(available.filter((p) => p.requirements.length).map((p) => p.requirements.map((r) => r.hint()).join())).size;
+    return available.map((p) => ({ ...p, weight: p.requirements.length ? 1 / versions : 1 }));
+};
+
+const getGymRow = (gymName, day) => {
+    const gym = GymList[gymName];
+    const town = gym.parent ?? TownList[gym.town];
+    const region = town.region;
+    const weather = Weather.regionalWeather[region].peek();
+    const encounters = getGymEncounters(gym, weather, day);
+    const totalWeight = encounters.reduce((sum, e) => sum + e.weight, 0);
+    const avgExp = encounters.reduce((sum, e) => sum + e.weight * expPerDefeat(e.name, e.level, true), 0) / totalWeight;
+
+    return {
+        type: 'Gym',
+        name: gymName,
+        // Some leader names are numbered to keep them unique (e.g. "Kareign 2")
+        displayName: `${gym.leaderName.replace(/\s*\d+$/, '')} (${town.name})`,
+        region,
+        subRegionName: SubRegions.getSubRegionById(town.region, town.subRegion).name,
+        unlockRegion: gymUnlockRegion(gym),
+        weather,
+        maxHealth: Math.max(...encounters.map((e) => e.maxHealth)),
+        avgExp,
+        // Copied from GymBattle.defeatPokemon, gyms use a regionless "route" based on their badge
+        eggSteps: eggStepsPerDefeat(gym.badgeReward * 3 + 1, GameConstants.Region.none),
+    };
+};
+
+const buildRows = () => {
+    const max = maxRegion.peek();
+    // Allow digit separators such as 40_000 or 40,000
+    const healthText = maxHealth.peek().replace(/[_,\s]/g, '');
+    const healthLimit = healthText ? Number(healthText) : NaN;
+    const day = GameHelper.today().getDay();
+
+    const routeRows = Routes.regionRoutes
+        .filter((route) => routeUnlockRegion(route) <= max)
+        .map((route) => getRouteRow(route, day));
+
+    const gymRows = GameConstants.RegionGyms.flat()
+        .filter((gymName) => GymList[gymName]?.pokemons.length && gymUnlockRegion(GymList[gymName]) <= max)
+        .map((gymName) => getGymRow(gymName, day));
+
+    // Group by region, routes first; the table's initial sort keeps this order within a region
+    return [...routeRows, ...gymRows]
+        .filter((row) => isNaN(healthLimit) || row.maxHealth <= healthLimit)
+        .sort((a, b) => a.region - b.region);
+};
+
+// Ignore dependencies so the table is only rebuilt through refreshTable
+const getRows = () => ko.ignoreDependencies(buildRows);
+
+const refreshTable = () => {
+    const table = document.getElementById('experience-table');
+    if (!table) {
+        return;
+    }
+    // DataTables moves the rows around, so remove it before knockout re-renders the table
+    if ($.fn.dataTable.isDataTable(table)) {
+        $(table).DataTable().destroy();
+    }
+    tableVersion(tableVersion.peek() + 1);
+    ko.tasks?.runEarly();
+    applyDatatables();
+};
+
+const refreshWeather = () => {
+    Weather.generateWeather(new Date());
+    refreshTable();
+};
+
+maxRegion.subscribe(refreshTable);
+maxHealth.subscribe(refreshTable);
+
+module.exports = {
+    tableVersion,
+    maxRegion,
+    maxHealth,
+    getRows,
+    refreshWeather,
+};
+
+},{"../datatables":504,"../gameHelper":508,"./gems":525}],523:[function(require,module,exports){
 /**
  * Returns the primary mutation for a berry.
  * Filters out enigma mutations, as they cannot be used to obtain a berry for the first time.
@@ -79273,11 +79860,12 @@ module.exports = {
     getPrimaryMutation,
 };
 
-},{}],522:[function(require,module,exports){
+},{}],524:[function(require,module,exports){
 const selectedPlotIndex = ko.observable(12);
 const selectedPlot = ko.pureComputed(() => App.game.farming.plotList[selectedPlotIndex()]);
 const plotLabelsEnabled = ko.observable(false);
 const importSaveDataText = ko.observable('');
+const berrySearch = ko.observable('');
 
 const getImage = (plot) => {
     if (plot.berry === BerryType.None) {
@@ -79306,8 +79894,10 @@ const setPlotStage = (plotStage) => {
     if (plotStage == PlotStage.Seed) {
         selectedPlot()._age(0);
     } else {
-        const berryData = App.game.farming.berryData[selectedPlot()._berry()];
-        selectedPlot()._age(berryData?.growthTime[plotStage] ?? 0);
+        const berryData = BerryList[selectedPlot()._berry()];
+        let age = berryData?.growthTime[plotStage] ?? 0;
+        if (age > 0) age -= 1;
+        selectedPlot()._age(age);
     }
 }
 
@@ -79396,21 +79986,21 @@ const getFarmPointAmount = () => {
     if (!selectedPlot() || selectedPlot()._berry() == -1) {
         return '-';
     }
-    return App.game.farming.berryData[selectedPlot().berry].farmValue.toLocaleString();
+    return BerryList[selectedPlot().berry].farmValue.toLocaleString();
 }
 
 const getBerryColor = () => {
     if (!selectedPlot() || selectedPlot()._berry() == -1) {
         return '-';
     }
-    return BerryColor[App.game.farming.berryData[selectedPlot().berry].color];
+    return BerryColor[BerryList[selectedPlot().berry].color];
 }
 
 const getFlavorValue = (flavorType) => {
     if (!selectedPlot() || selectedPlot()._berry() == -1) {
         return '-';
     }
-    return App.game.farming.berryData[selectedPlot().berry].flavors.find(f => f.type === flavorType).value;
+    return BerryList[selectedPlot().berry].flavors.find(f => f.type === flavorType).value;
 }
 
 const getStageTimes = (calcTotalLifeTime = false) => {
@@ -79433,8 +80023,8 @@ const getStageTimes = (calcTotalLifeTime = false) => {
         let totalLifeTime = 0;
 
         stages.forEach((stage, idx) => {
-            const prevStageTime = idx == 0 ? 0 : App.game.farming.berryData[selectedPlot().berry].growthTime[idx - 1];
-            const growthTime = App.game.farming.berryData[selectedPlot().berry].growthTime[idx] - prevStageTime;
+            const prevStageTime = idx == 0 ? 0 : BerryList[selectedPlot().berry].growthTime[idx - 1];
+            const growthTime = BerryList[selectedPlot().berry].growthTime[idx] - prevStageTime;
             dummyPlot._age(growthTime);
             const growthMultiplier = App.game.farming.getGrowthMultiplier() * dummyPlot.getGrowthMultiplier();
 
@@ -79510,7 +80100,8 @@ const importFarm = (saveData) => {
 
     App.game.farming.plotList.forEach((plot, idx) => {
         plot._berry(plotList[idx].berry);
-        plot._age(plotList[idx].age);
+        const age = plotList[idx].age;
+        plot._age(age > 0 ? age - 1 : age);
         plot._mulch(plotList[idx].mulch);
     });
 };
@@ -79562,11 +80153,21 @@ const showPlotContextMenu = (event, plotIndex) => {
     }).data('plot-index', plotIndex).show();
 };
 
+const berryList = ko.pureComputed(() => {
+    const searchVal = berrySearch()?.toLowerCase();
+    const berries = GameHelper.enumSelectOption(BerryType);
+    if (!berrySearch) {
+        return berries;
+    }
+    return berries.filter((berry) => berry.name.toLowerCase().includes(searchVal));
+});
+
 module.exports = {
     selectedPlot,
     selectedPlotIndex,
     plotLabelsEnabled,
     importSaveDataText,
+    berrySearch,
     getImage,
     setPlotBerry,
     setPlotStage,
@@ -79590,9 +80191,10 @@ module.exports = {
     importFromText,
     importFromFile,
     showPlotContextMenu,
+    berryList,
 }
 
-},{}],523:[function(require,module,exports){
+},{}],525:[function(require,module,exports){
 // routeAvgHp copied from PokemonFactory.generateWildPokemon
 const routeAvgHp = (region, route) => {
     const poke = [...new Set(Object.values(Routes.getRoute(region, route).pokemon).flat().map(p => p.pokemon ?? p).flat())];
@@ -79752,12 +80354,13 @@ const bestCaptureRoutesPerRegion = (region, type) => {
 
 
 module.exports = {
+    routeAvgHp,
     bestGemsPerRegion,
     bestCaptureRoutesPerRegion,
     gemGymsPerFlute
 }
 
-},{}],524:[function(require,module,exports){
+},{}],526:[function(require,module,exports){
 const getItemName =  (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
@@ -79776,7 +80379,7 @@ const getItemName =  (itemType, itemId) => {
 const getItemImage = (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
-            return `assets/images/items/${ItemList[itemId].imageDirectory}/${ItemList[itemId].name}.png`;
+            return `${ItemList[itemId].image}`;
         case ItemType.underground:
             return UndergroundItems.list.find((i) => i.name === itemId)?.image;
         case ItemType.berry:
@@ -79864,7 +80467,7 @@ module.exports = {
     getTownsWithTradesForItem,
 };
 
-},{}],525:[function(require,module,exports){
+},{}],527:[function(require,module,exports){
 const getOakItemBonus = (oakItem, level) => {
     const bonus = oakItem.bonusList[level];
     switch (oakItem.name) {
@@ -79883,11 +80486,11 @@ const getOakItemBonus = (oakItem, level) => {
         case OakItemType.Blaze_Cassette:
             return `x${bonus} Hatching Speed`;
         case OakItemType.Cell_Battery:
-            return `Tier ${bonus} Discharge Patterns`;
+            return `x${bonus} Battery Charge Rate`;
         case OakItemType.Squirtbottle:
             return `x${bonus} Mutation Rate`;
         case OakItemType.Sprinklotad:
-            return `x${bonus} Replant Rate`;
+            return `x${bonus} Mulch Duration`;
         case OakItemType.Explosive_Charge:
             return `${bonus} Tiles Damaged`;
         case OakItemType.Treasure_Scanner:
@@ -79924,7 +80527,7 @@ const getOakItemUpgradeReqText = (oakItemType, val) => {
         case OakItemType.Squirtbottle:
             return `Trigger ${val} berry mutations`;
         case OakItemType.Sprinklotad:
-            return `Trigger ${val} berry replants`;
+            return `Have mulch active for a total of ${val} minutes.`;
         case OakItemType.Explosive_Charge:
             return `Dig deeper ${val} times`;
         case OakItemType.Treasure_Scanner:
@@ -79938,7 +80541,8 @@ module.exports = {
     getOakItemBonus,
     getOakItemUpgradeReq,
 };
-},{}],526:[function(require,module,exports){
+
+},{}],528:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -80039,7 +80643,7 @@ module.exports = {
     getRouteRoamingChance,
 }
 
-},{}],527:[function(require,module,exports){
+},{}],529:[function(require,module,exports){
 function getShopItemsByCurrencyAndFilter(currency, itemFilter) {
     var towns = Object.values(TownList).filter(t => t.region <= GameConstants.MAX_AVAILABLE_REGION);
     var filteredTowns = [];
@@ -80085,7 +80689,7 @@ module.exports = {
     getShopItems,
     getUniqueItems,
 };
-},{}],528:[function(require,module,exports){
+},{}],530:[function(require,module,exports){
 const redirections = [
     ({type, name}) => {
         if (type === 'Pokemon') {
@@ -80100,6 +80704,13 @@ const redirections = [
         name: '*',
         redirect: {
             type: 'Mega Pokémon'
+        }
+    },
+    {
+        type: 'Battle Cafe',
+        name: '*',
+        redirect: {
+            type: 'Battle Café'
         }
     },
 ];
@@ -80137,7 +80748,7 @@ module.exports = {
     redirections
 };
 
-},{}],529:[function(require,module,exports){
+},{}],531:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 const { getAvailablePokemon } = require('./pages/pokemon');
 
@@ -80183,6 +80794,11 @@ const searchOptions = [
   {
     display: 'Wiki Guide',
     type: 'Wiki Guide',
+    page: '',
+  },
+  {
+    display: 'FAQ',
+    type: 'FAQ',
     page: '',
   },
   {
@@ -80244,7 +80860,7 @@ const searchOptions = [
     type: 'Berries',
     page: '',
   },
-  ...App.game.farming.berryData.map(b => ({
+  ...BerryList.map(b => ({
     display: `${BerryType[b.type]} Berry`,
     type: 'Berries',
     page: BerryType[b.type],
@@ -80282,10 +80898,10 @@ const searchOptions = [
     type: 'Quest Lines',
     page: q.name,
   })),
-  // Battle Cafe
+  // Battle Café
   {
     display: 'Battle Café',
-    type: 'Battle Cafe',
+    type: 'Battle Café',
     page: '',
   },
   // Vitamins
@@ -80345,6 +80961,12 @@ const searchOptions = [
     type: 'Towns',
     page: t.name,
   })),
+  // NPCs
+  {
+    display: 'NPCs',
+    type: 'NPCs',
+    page: '',
+  },
   // Safari
   {
     display: 'Safari',
@@ -80428,6 +81050,11 @@ const searchOptions = [
     type: 'Weather',
     page: '',
   },
+  ...Object.values(Weather.weatherConditions).map(w => ({
+    display: `${GameConstants.humanifyString(WeatherType[w.type])} Weather`,
+    type: 'Weather',
+    page: WeatherType[w.type],
+  })),
   // Oak Itens
   {
     display: 'Oak Items',
@@ -80462,6 +81089,7 @@ const searchOptions = [
     display: 'Roaming Pokémon',
     type: 'Roaming Pokémon',
     page: '',
+    redirects: ['Boosted Route']
   },
   // Baby Pokémon
   {
@@ -80515,6 +81143,12 @@ const searchOptions = [
   {
     display: 'Battle Points',
     type: 'Battle Points',
+    page: '',
+  },
+  // Experience
+  {
+    display: 'Experience',
+    type: 'Experience',
     page: '',
   },
   //Challenge Modes
@@ -80611,9 +81245,22 @@ const searchOptions = [
     type: 'Game Updates',
     page: '',
   },
+  // Veteran Shop
+  {
+    display: 'Veteran Shop',
+    type: 'Veteran Shop',
+    page: '',
+  },
+  // Fossil Pokemon
+  {
+    display: 'Fossil Pokémon',
+    type: 'Fossil Pokémon',
+    page: '',
+  },
 ];
 // Differentiate our different links with the same name
 searchOptions.forEach(a => {
+  a.sort = a.display.replace(/.*-\s/, '').replace(/\(.*\)/, '');
   const duplicates = searchOptions.filter(b => b.display == a.display);
   if (duplicates.length > 1) {
     duplicates.forEach(d => d.display = `${d.display} (${d.type})`);
@@ -80633,16 +81280,70 @@ searchOptions.forEach(a => {
 function escapeRegExp(text) {
   return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&').replace(/[eé]/g, '[eé]');
 }
-// This is the function which figures out the results to show
-var substringMatcher = (searchData) => {
-  return (query, cb) => {
-    // regex used to determine if a string contains the substring `q`
+
+function levenshtein(a, b) {
+  if (a === b) return 0;
+  if (!a.length) return b.length;
+  if (!b.length) return a.length;
+  const aLen = a.length;
+  const bLen = b.length;
+  let prev = new Array(bLen + 1);
+  let cur = new Array(bLen + 1);
+  for (let j = 0; j <= bLen; j++) prev[j] = j;
+  for (let i = 1; i <= aLen; i++) {
+    cur[0] = i;
+    const ai = a.charAt(i - 1);
+    for (let j = 1; j <= bLen; j++) {
+      const cost = ai === b.charAt(j - 1) ? 0 : 1;
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost);
+    }
+    const tmp = prev; prev = cur; cur = tmp;
+  }
+  return prev[bLen];
+}
+
+const substringMatcher = (searchData) => {
+  return (query, cb, fuzzy = false) => {
+    if (!query || query.length === 0) return cb ? cb([]) : [];
+
     const substrRegex = new RegExp(escapeRegExp(query), 'i');
 
-    // iterate through the pool of strings and for any string that matches the regex
-    const results = searchData.filter(d => substrRegex.test(d.redirect || d.display));
+    if (!fuzzy) {
+      const results = searchData.filter(d => substrRegex.test(d.redirect || d.display));
+      const sortedResults = results.sort((a, b) => a.sort.search(substrRegex) - b.sort.search(substrRegex) || a.sort.length - b.sort.length || a.display.length - b.display.length);
+      return cb ? cb(sortedResults) : sortedResults;
+    }
 
-    cb(results.sort((a, b) => a.display.search(substrRegex) - b.display.search(substrRegex) || a.display.length - b.display.length));
+    // fuzzy mode: compute a distance and pick the best matches
+    const qLower = query.toLowerCase();
+    // Scale match based on length of query
+    const maxDist = Math.max(1, Math.ceil(qLower.length * 0.25));
+
+    const matches = [];
+    for (let item of searchData) {
+      const target = (item.redirect || item.display).toLowerCase() || '';
+
+      if (target.indexOf(qLower) !== -1) {
+        matches.push({ item: item, dist: 0, pos: target.indexOf(qLower) });
+        continue;
+      }
+
+      let best = levenshtein(qLower, target);
+
+      const tokens = target.split(/[\s\-()→:/]+/).filter(Boolean);
+      for (let token of tokens) {
+        const dist = levenshtein(qLower, token);
+        if (dist < best) best = dist;
+      }
+
+      if (best <= maxDist) {
+        const pos = target.indexOf(tokens.find(tok => levenshtein(qLower, tok) === best) || '');
+        matches.push({ item: item, dist: best, pos: pos === -1 ? target.length : pos });
+      }
+    }
+
+    const sortedResults = matches.sort((a, b) => a.dist - b.dist || a.pos - b.pos || a.item.sort.length - b.item.sort.length || a.item.display.length - b.item.display.length).map(m => m.item);
+    return cb ? cb(sortedResults) : sortedResults;
   };
 };
 
@@ -80680,6 +81381,7 @@ $('#search').bind('typeahead:autocomplete', (ev, suggestion) => {
 
 module.exports = { 
   searchOptions,
+  searchViaKeyword: substringMatcher(searchOptions),
 };
 
-},{"./navigation":515,"./pages/pokemon":526}]},{},[508]);
+},{"./navigation":516,"./pages/pokemon":528}]},{},[509]);

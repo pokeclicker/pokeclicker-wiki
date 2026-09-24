@@ -1,4 +1,5 @@
-Oak Items are special items the player can equip to gain different effects. At first, only one slot is available, but the player can unlock more as they capture more unique Pokémon:
+
+Oak Items are special items the player can equip to gain different effects. The default hotkey to open the Oak Items interface is **O**. At first, only one slot is available, but the player can unlock more as they capture more unique Pokémon:
 
 | Slot # | Requirement |
 |---|---|

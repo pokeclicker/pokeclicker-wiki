@@ -3,7 +3,6 @@
 ### Possible Planting Formations {#planting}
 
 Cornn has a chance of mutating when [[Berries/Leppa]], [[Berries/Bluk]], and [[Berries/Wiki]] are touching an empty plot. You can fill your farm in the following way to obtain Cornn Berries. Purple squares indicate where mutations can occur.
-**WARNING:** Upon successfully mutating a Cornn, make sure to have [[Oak Items/Cell Battery]] unequipped since it may cause it to mutate into a [[Berries/Charti]].
 
 **Base Formation**
 ::: table-mutations
@@ -13,6 +12,12 @@ Cornn has a chance of mutating when [[Berries/Leppa]], [[Berries/Bluk]], and [[B
 :::
 
 **Optimized Formation**
+
+:::collapsed Cornn Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NSwiYWdlIjo0ODAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo1LCJhZ2UiOjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxMCwiYWdlIjo2NjAsIm11bGNoIjotMX0seyJiZXJyeSI6MTUsImFnZSI6NzIwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjoxMCwiYWdlIjo2NjAsIm11bGNoIjotMX0seyJiZXJyeSI6MTUsImFnZSI6NzIwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjUsImFnZSI6NDgwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NSwiYWdlIjo0ODAsIm11bGNoIjotMX0seyJiZXJyeSI6MTAsImFnZSI6NjYwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE1LCJhZ2UiOjcyMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6MTAsImFnZSI6NjYwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjE1LCJhZ2UiOjcyMCwibXVsY2giOi0xfV19fX0=`
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | {.mutation} | {.mutation} | [[File:Leppa.png\|32px]] [[Berries/Leppa]] | |

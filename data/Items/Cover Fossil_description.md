@@ -1,1 +1,1 @@
-Can be put in the hatchery to obtain [[Pokémon/Tirtouga]]
+1 can be exchanged for [[Pokémon/Tirtouga]] or 10 for [[Pokémon/Carracosta]] at the Nacrene Museum in [[Towns/Nacrene City]].
