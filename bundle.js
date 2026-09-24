@@ -79356,6 +79356,8 @@ module.exports = {
     setWeather,
 };
 },{}],521:[function(require,module,exports){
+const { requirementHints } = require('../gameHelper');
+
 const getTableClearCounts = (dungeon) => {
     if (getTableClearCounts.cache.has(dungeon)) {
         return getTableClearCounts.cache.get(dungeon);
@@ -79579,7 +79581,7 @@ const getDungeonLoot = (dungeon) => {
                 image: itemGameData?.image ?? (pokemonData ? `assets/images/pokemon/${pokemonData.id}.png` : null),
                 weight: item.weight ?? 1,
                 amount: item.amount ?? 1,
-                requirement: item.requirement?.hint(),
+                requirement: requirementHints(item.requirement, false).join('\n') || undefined,
                 ignoreDebuff: item.ignoreDebuff,
                 chances: []
             };
@@ -79788,7 +79790,7 @@ module.exports = {
     getDungeonTokenCostSteps,
 };
 
-},{}],522:[function(require,module,exports){
+},{"../gameHelper":508}],522:[function(require,module,exports){
 const { applyDatatables } = require('../datatables');
 const { unwrapRequirement, routeUnlockRegion, gymUnlockRegion } = require('../gameHelper');
 const { routeAvgHp } = require('./gems');
