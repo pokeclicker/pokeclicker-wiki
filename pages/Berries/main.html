@@ -4,7 +4,7 @@
     <!-- /ko -->
     <!-- ko if: BerryType[Wiki.pageName()] >= 0 -->
     <div data-bind="with: BerryList[BerryType[Wiki.pageName()]]">
-        <div class="float-lg-end col-lg-3 m-2">
+        <div class="float-lg-end col-lg-3 m-2" data-bind="pageSidebar">
             <div class="d-flex justify-content-between mb-1" data-bind="using: BerryType[Wiki.pageName()]">
                 <div data-bind="with: BerryList[$data - 1]">
                     <button class="btn btn-link btn-sm" type="button" style="text-decoration: none;"

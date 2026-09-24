@@ -32,6 +32,28 @@ const gotoPage = (type, name, other, noHistory) => {
   window.location.hash = hash;
 };
 
+// Set when the page is opened for editing, see onhashchange
+let editingPage = false;
+
+const clearPageSidebar = () => {
+  [...document.getElementById('wiki-page-sidebar').childNodes].forEach(ko.removeNode);
+};
+
+// Moves a page's sidebar into #wiki-page-sidebar so it floats next to the title, keeping the page's binding context.
+// Replaces any current sidebar so overlapping page loads can't stack them
+// When editing it stays in place so the editor keeps its full width
+ko.bindingHandlers.pageSidebar = {
+  init: (element, valueAccessor, allBindings, viewModel, bindingContext) => {
+    if (editingPage) {
+      return;
+    }
+    clearPageSidebar();
+    document.getElementById('wiki-page-sidebar').append(element);
+    ko.applyBindingsToDescendants(bindingContext, element);
+    return { controlsDescendantBindings: true };
+  },
+};
+
 const gotoPageClick = (event, type, name, other) => {
   if (event.ctrlKey) { // don't navigate when holding CTRL key
     return true;
@@ -83,6 +105,8 @@ onhashchange = (event) => {
     gotoPage(type, name ?? '', other, true);
     return;
   }
+  clearPageSidebar();
+  editingPage = other == 'edit';
   pageType(type);
   pageName(name);
   const pageElement = $('#wiki-page-content');

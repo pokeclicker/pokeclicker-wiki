@@ -134,12 +134,16 @@
                     </li>
                 </ol>
             </nav>
-            <div id="page-title">
-                <!-- ko if: Wiki.pageType() -->
-                <h1 data-bind="text: Wiki.pageName() ? Wiki.pageName() : Wiki.pageType()"></h1>
-                <!-- /ko -->
+            <div id="page-header" class="d-flex flex-column d-lg-block">
+                <!-- The page's sidebar is moved here by the pageSidebar binding, so it floats next to the title -->
+                <div id="wiki-page-sidebar" class="order-last"></div>
+                <div id="page-title">
+                    <!-- ko if: Wiki.pageType() -->
+                    <h1 data-bind="text: Wiki.pageName() ? Wiki.pageName() : Wiki.pageType()"></h1>
+                    <!-- /ko -->
+                </div>
+                <div id="wiki-page-custom-content-description"></div>
             </div>
-            <div id="wiki-page-custom-content-description"></div>
             
             <div id="page-table-of-contents">
                 <!-- ko if: Wiki.pageType() && false -->
