@@ -48,18 +48,20 @@
             </tbody>
         </table>
     </div>
-    <div class="mt-3" data-bind="if: $data.content">
+    <!-- ko with: $data.content.filter(c => !Wiki.gameHelper.hasTownShopTable(c)) -->
+    <div class="mt-3" data-bind="if: $data.length">
         <h3>Content:</h3>
-        <div data-bind="foreach: $data.content">
+        <div class="d-flex flex-wrap gap-1" data-bind="foreach: $data">
             <!-- ko with: Wiki.gameHelper.getTownContentBadge($data) -->
-            <a class="badge text-bg-secondary" data-bind="text: $data.text, attr: { href: $data.href }, css: { 'text-decoration-none': !$data.href }"></a>
+            <a class="badge town-badge" data-bind="text: $data.text, attr: { href: $data.href }, css: $data.badgeClass"></a>
             <!-- /ko -->
         </div>
     </div>
+    <!-- /ko -->
     <div class="mt-3" data-bind="if: $data.npcs">
         <h3>NPC(s):</h3>
-        <div data-bind="foreach: $data.npcs">
-            <span class="badge text-bg-secondary" data-bind="text: $data.name"></span>
+        <div class="d-flex flex-wrap gap-1" data-bind="foreach: $data.npcs">
+            <span class="badge town-badge" data-bind="text: $data.name"></span>
         </div>
     </div>
     <!-- ko with: $data.content.filter((c) => c instanceof Shop && c.items.length > 0) -->

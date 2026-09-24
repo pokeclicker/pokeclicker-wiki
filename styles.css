@@ -512,3 +512,32 @@ button.form-select::after {
 .day-cycle-day   { background: #f4a470; }
 .day-cycle-dusk  { background: #93558a; }
 .day-cycle-night { background: #4a6252; }
+
+.badge.town-badge {
+  color: var(--bs-body-color);
+  background-color: rgba(var(--town-badge-rgb, var(--bs-body-color-rgb)), var(--town-badge-bg-alpha, 0.06));
+  border: 1px solid rgba(var(--town-badge-rgb, var(--bs-body-color-rgb)), var(--town-badge-border-alpha, 0.35));
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a.town-badge:hover {
+  color: var(--bs-body-color);
+}
+
+a.town-badge[href]:hover {
+  background-color: rgba(var(--town-badge-rgb, var(--bs-body-color-rgb)), var(--town-badge-hover-alpha, 0.15));
+}
+
+.town-badge-gym, .town-badge-dungeon, .town-badge-battle, .town-badge-facility, .town-badge-shop {
+  --town-badge-bg-alpha: 0.12;
+  --town-badge-border-alpha: 0.8;
+  --town-badge-hover-alpha: 0.25;
+}
+
+.town-badge-gym      { --town-badge-rgb: var(--bs-danger-rgb); }
+.town-badge-dungeon  { --town-badge-rgb: var(--bs-primary-rgb); }
+.town-badge-battle   { --town-badge-rgb: var(--bs-warning-rgb); }
+.town-badge-facility { --town-badge-rgb: var(--bs-info-rgb); }
+.town-badge-shop     { --town-badge-rgb: var(--bs-success-rgb); }
+.town-badge-travel   { border-style: dashed; }
