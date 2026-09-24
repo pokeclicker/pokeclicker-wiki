@@ -31,8 +31,10 @@ const setPlotStage = (plotStage) => {
     if (plotStage == PlotStage.Seed) {
         selectedPlot()._age(0);
     } else {
-        const berryData = App.game.farming.berryData[selectedPlot()._berry()];
-        selectedPlot()._age(berryData?.growthTime[plotStage] ?? 0);
+        const berryData = BerryList[selectedPlot()._berry()];
+        let age = berryData?.growthTime[plotStage] ?? 0;
+        if (age > 0) age -= 1;
+        selectedPlot()._age(age);
     }
 }
 
@@ -121,21 +123,21 @@ const getFarmPointAmount = () => {
     if (!selectedPlot() || selectedPlot()._berry() == -1) {
         return '-';
     }
-    return App.game.farming.berryData[selectedPlot().berry].farmValue.toLocaleString();
+    return BerryList[selectedPlot().berry].farmValue.toLocaleString();
 }
 
 const getBerryColor = () => {
     if (!selectedPlot() || selectedPlot()._berry() == -1) {
         return '-';
     }
-    return BerryColor[App.game.farming.berryData[selectedPlot().berry].color];
+    return BerryColor[BerryList[selectedPlot().berry].color];
 }
 
 const getFlavorValue = (flavorType) => {
     if (!selectedPlot() || selectedPlot()._berry() == -1) {
         return '-';
     }
-    return App.game.farming.berryData[selectedPlot().berry].flavors.find(f => f.type === flavorType).value;
+    return BerryList[selectedPlot().berry].flavors.find(f => f.type === flavorType).value;
 }
 
 const getStageTimes = (calcTotalLifeTime = false) => {
@@ -158,9 +160,9 @@ const getStageTimes = (calcTotalLifeTime = false) => {
         let totalLifeTime = 0;
 
         stages.forEach((stage, idx) => {
-            const prevStageTime = idx == 0 ? 0 : App.game.farming.berryData[selectedPlot().berry].growthTime[idx - 1];
-            const growthTime = App.game.farming.berryData[selectedPlot().berry].growthTime[idx] - prevStageTime;
-            dummyPlot._age(App.game.farming.berryData[selectedPlot().berry].growthTime[idx]);
+            const prevStageTime = idx == 0 ? 0 : BerryList[selectedPlot().berry].growthTime[idx - 1];
+            const growthTime = BerryList[selectedPlot().berry].growthTime[idx] - prevStageTime;
+            dummyPlot._age(BerryList[selectedPlot().berry].growthTime[idx]);
             const growthMultiplier = App.game.farming.getGrowthMultiplier() * dummyPlot.getGrowthMultiplier();
 
             if (growthMultiplier == 0 || (petayaEffect && stage.stage == 'Wither')) {
@@ -235,7 +237,8 @@ const importFarm = (saveData) => {
 
     App.game.farming.plotList.forEach((plot, idx) => {
         plot._berry(plotList[idx].berry);
-        plot._age(plotList[idx].age);
+        const age = plotList[idx].age;
+        plot._age(age > 0 ? age - 1 : age);
         plot._mulch(plotList[idx].mulch);
     });
 };

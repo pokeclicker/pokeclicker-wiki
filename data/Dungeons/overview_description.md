@@ -7,6 +7,7 @@
 	* [Timer](#time)
 	* [Multiple Clears](#clearing)
 * [Map Size and Layout](#size)
+	* [Entry Cost](#cost)
 	* [Flash Ability](#flash)
 * [Chests](#chest)
 	* [Loot Odds](#tiers)
@@ -68,7 +69,7 @@ Ways to increase the timer:
 #### Multiple Clears{#clearing}
 - Clearing a dungeon 10 times will allow you to **hire [[Dungeon Guides]]** to automatically explore the dungeon for you (for a fee).
 - Clearing a dungeon 10, 100, 250 and 500 times will **award an [achievement](#!Achievements)**.
-- Clearing a dungeon 10, 100, 1000, etc. times (any amount that is a power of ten) will **shrink the dungeon size by 1 permanently**.
+- Clearing a dungeon 10, 100, 1000, etc. times (any amount that is a power of ten) will **shrink the dungeon size by 1 permanently**, which also permanently **lowers its [entry cost](#cost)**.
 - Clearing a dungeon 100, 250, and 400 times will **increase your [Flash Ability](#flash)** for that dungeon, allowing you to see the contents of unexplored tiles.
 
 ---
@@ -102,6 +103,18 @@ Regarding map reveals:
 **Including the entrance tile*
 
 :::
+
+#### Entry Cost{#cost}
+
+The [[Dungeon Tokens]] [[File:dungeonToken.svg|18px]] cost of entering a dungeon shrinks along with the dungeon, so a dungeon you have cleared many times is cheaper to run than a fresh one.
+
+**Entry Cost** = $\lceil BaseCost \times \frac{CurrentSize}{FullSize} \rceil${.overflow-auto}
+
+$FullSize$ is the dungeon's size before any reduction ($5$ plus its regional difficulty, so $5$ for Kanto up to $12$ for Galar) and $CurrentSize$ is that value minus 1 for every power of ten clears, down to the minimum of $5$.
+
+Because the reduction is capped at the minimum size, Kanto dungeons are already as small and as cheap as they can be, while later regions have more room to get cheaper. A Galar dungeon ($FullSize$ of 12) costs $11/12$ of its base price after 10 clears, $10/12$ after 100, and bottoms out at $5/12$ after 10,000,000 clears.
+
+***Example:** [[Dungeons/Glimwood Tangle]] has a base cost of 1,680,000 Dungeon Tokens. After 10 clears it costs 1,540,000, after 100 clears 1,400,000, and after 1,000 clears 1,260,000.*
 
 #### Flash Ability{#flash}
 

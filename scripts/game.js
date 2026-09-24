@@ -9,8 +9,9 @@ themes.options.push(new SettingOption('Quartz', 'quartz'));
 themes.options.push(new SettingOption('Vapor', 'vapor'));
 themes.options.push(new SettingOption('Zephyr', 'zephyr'));
 
+
 const now = new Date();
-if (now.getMonth() == 3 && now.getDate() == 1) {
+/*if (now.getMonth() == 3 && now.getDate() == 1) {
   themes.options.forEach((t) => {
   t.value = "sketchy";
   });
@@ -18,6 +19,7 @@ if (now.getMonth() == 3 && now.getDate() == 1) {
   themes.options.push(new SettingOption("Definitely Not Sketchy", "sketchy"));
 }
 themes.options.sort((a, b) => (a.text).localeCompare(b.text));
+*/
 
 // Suppress game notifications
 Notifier.notify = () => {};
@@ -72,11 +74,12 @@ QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 AchievementHandler.initialize(multiplier, new Challenges());
+AchievementHandler.calculateMaxBonus();
 
 BerryDeal.generateDeals(now);
 GemDeals.generateDeals();
 ShardDeal.generateDeals();
-GenericDeal.generateDeals();
+GenericDeal.generateDeals(now);
 SafariPokemonList.generateSafariLists(); // This needs to be after anything that generates shopmon due to Friend Safari calcs
 Weather.generateWeather(now);
 

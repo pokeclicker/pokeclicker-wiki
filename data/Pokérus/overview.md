@@ -1,3 +1,4 @@
+
 ## Spreading Pokérus
 
 Spreading Pokérus can only occur in the [[Hatchery]].
@@ -24,7 +25,6 @@ None | **None** | Base State. Pokémon can contract Pokérus. | No | No
 [[File:Infected.png]] | **Infected** | Pokémon has contracted Pokérus, but has yet to hatch once after contracting the virus. | No | No
 [[File:Contagious.png]] | **Contagious** | Pokémon has contracted Pokérus, and is capable of spreading the virus. | **Yes** | **Yes**
 [[File:Resistant.png]] | **Resistant** | Pokémon has contracted Pokérus, and is capable of spreading the virus. Pokémon has accumulated 50 or more EVs. | **Yes** | **Yes**
-*There is a known bug that Pokémon infected via typed eggs will remain Infected upon hatching, rather than becoming Contagious. Breeding the Pokémon the usual way will cause the Pokémon to correctly become Contagious.*
 
 #### Resistant Pokémon {#resistant}
 When a Pokémon gains **50 EVs**, it becomes resistant. The number of resistant Pokémon in your party counts toward [[Click Attack]] and certain [[Achievements]]. Resistant Pokémon continue to gain EVs at the same rate, but their EV bonus will increase much slower.
@@ -38,23 +38,22 @@ Effort Values (EVs) are a damage multiplying stat for each individual Pokémon. 
 - **EV bonus** is the damage multiplier applied to their attack.
 
 #### EV Bonus (Damage Multiplier) {#evbonus}
-For the first 50 EVs, every 1 EV increases the Pokémon's EV bonus by 0.01, thus increasing their damage by 1%.
+**For the first 50 EVs,** every 1 EV increases the Pokémon's EV bonus by 0.01, thus increasing their damage by 1%.
 
-$EVBonus = 1 + \frac{EffortValues}{100}$
+$EVBonus = 1 + \frac{EffortValues}{100}$ {.overflow-auto .text-center}
 
-After 50 EVs, the Pokémon will continue to increase their EV bonus, but at a diminished rate, based on the formula below. There is no upper limit to this multiplier.
+**After 50 EVs,** the Pokémon will continue to increase their EV bonus, but at a diminished rate, based on the formula below. There is no upper limit to this multiplier.
 
-$EVBonus = EffortValues^{0.103645891}$
+$EVBonus = EffortValues^{log_{50}1.5}\approx EffortValues^{0.103645891}$ {.overflow-auto .text-center}
 
-| EV Bonus (Damage Multiplier) | EVs required |
-:--- | :---
-1.5x | 50 |
-2x | 802 |
-3x | 40,121 |
-4x | 643,300 |
-5x | 5,540,000 |
-6x | 3.2E7 |
-7x | 1.4E8 |
+| Attack Multiplier{.col-2} | EVs required{.col-3} | Attack Multiplier{.col-2} | EVs required |
+---: | :--- | ---: | :---
+`×1.5` | 50 |` ×2` | 803
+`×2.5` | 6,910 | `×3` | 40,122
+`×3.5` | 177,541 | `×4` | 643,898
+`×4.5` | 2,006,081 | `×5` | 5,544,055
+`×5.5` | ≈13,91E6 | `×6` | ≈32,2E6
+`×6.5` | ≈69,7E6 | `×7` | ≈142,5E6
 
 ---
 
@@ -71,41 +70,41 @@ Things that **do not** increase EVs:
 #### Base EV Yield (Per Capture Method) {#evbase}
 EV yields differ based on how the Pokémon is obtained.
 
-| Method {.col-1}| EVs Yielded {.col-1}|
-| :--- | :---: |
-| Catching a Pokémon on a Route | 0.1 |
-| Catching a Base [[Wandering Pokémon]] | 0.2 |
-| Catching a Pokémon in a Regular Dungeon Encounter | 0.3 |
-| Catching a Pokémon in a Mimic or Dungeon Boss Encounter | 1 |
-| Using an Evolution Item | 1 |
-| Purchasing or trading at a Shop, Opening a [Dream Orb](#!Dream_Orbs), Spinning [[Battle Café]] | 1 |
-| Catching a Pokémon in the [[Safari]] | 1 |
-| Catching a Color or Berry-Specific [[Wandering Pokémon]] | 1 |
-| Catching a Pokémon in a [Roaming](#!Roaming_Pokémon) Encounter | 5 |
+| Method | EVs Yielded {.col-4} |
+| :--- | :--- |
+| Catching a Pokémon on a Route | `0.1` |
+| Catching a Base [[Wandering Pokémon]] | `0.2` |
+| Catching a Pokémon in a Regular [[Dungeon]] Encounter | `0.3` |
+| Catching a Pokémon in a Mimic or Dungeon Boss Encounter | `1` |
+| Using an Evolution Item | `1` |
+| Purchasing or trading at a Shop, Opening a [Dream Orb](#!Dream_Orbs), Spinning [[Battle Café]] | `1` |
+| Catching a Pokémon in the [[Safari]] | `1` |
+| Catching a Color or Berry-Specific [[Wandering Pokémon]] | `1` |
+| Catching a Pokémon in a [Roaming](#!Roaming_Pokémon) Encounter | `5` |
 # {.mt-3}
 
 #### EV Yield Modifiers {#evmodifiers}
 EV yields can also be modified by items, auras, and Pokémon states. If the Slow EVs [Challenge Mode](#!Challenge_Modes) is activated, all EV gains are divided by 10. Modifiers are multiplicative for all that apply.
 
-| Modifier {.col-1}| EV Yield Multiplier {.col-1}|
+| Modifier{.col-1} | EV Yield Multiplier {.col-1}|
 | :--- | :--- |
-| Slow EV Challenge | 0.1x |
-| Pokémon is holding a [[File:Macho_Brace.png\|24px]] [[Items/Macho Brace]] | 1.5x |
-| Pokémon is holding a [[File:Power_Bracer.png\|24px]] [[Items/Power Bracer]] | 2x |
-| Pokémon is captured as a [[Shadow Pokémon]]* | 2x |
-| Pokémon is captured as a [Shiny](#!Shiny_Chance)* | 5x |
-| Pokémon is captured with a [[File:Repeatball.png\|24px]] [[Items/Repeat Ball]] | 5x |
-| [[File:Rowap.png\|24px]] [[Berries/Rowap]] Berry Aura| Variable ([See Below](#Farm)) |
-| [[File:Blue_Flute.png\|24px]] [[Items/Blue Flute]] | Variable based on Flute bonus (`1.02 + .02(AchievementBonus)`) |
+| Slow EV Challenge | `0.1x` |
+| Pokémon is holding a [[File:Macho_Brace.png\|24px]] [[Items/Macho Brace]] | `1.5x` |
+| Pokémon is holding a [[File:Power_Bracer.png\|24px]] [[Items/Power Bracer]] | `2x` |
+| Pokémon is captured as a [[Shadow Pokémon]]* | `2x` |
+| Pokémon is captured as a [Shiny](#!Shiny_Chance)* | `5x` |
+| Pokémon is captured with a [[File:Repeatball.png\|24px]] [[Items/Repeat Ball]] | `5x` |
+| [[File:Rowap.png\|24px]] [[Berries/Rowap]] Berry Aura| `1.015x` per ripe plant. (See [Farm Setups for EV Gains](#!Farm/Setups#evs) for how to obtain up to `2.54x` across the Farm). |
+| [[File:Blue_Flute.png\|24px]] [[Items/Blue Flute]] | Variable based on Flute bonus `[1.02 + .02 * AchievementBonus]x`. Current maximum of `1.24x`. |
 **The newly obtained Pokémon must be a Shadow or Shiny form. Simply owning a Shadow or Shiny Pokémon does not affect multipliers.*
 
 **Examples of EV Yields:**
 - Catching a Dungeon Pokémon with a Repeat Ball yields:
-    - **0.3 EVs** (Dungeon Pokémon) **× 5** (Repeat Ball) = **1.5 EVs**
+    - `0.3` (Dungeon Pokémon) `×5` (Repeat Ball) = `1.5 EVs`
 - Catching a Shiny Roaming Pokémon with a Repeat Ball yields:
-    - **5** (Roamer) **× 5** (Shiny)  **× 5** (Repeat Ball) = **125 EVs**
+    - `5` (Roamer) `×5` (Shiny) `×5` (Repeat Ball) = `125 EVs`
 - Catching a Shadow Pokémon during a Dungeon Boss Encounter when the Pokémon is holding a Power Bracer yields:
-    - **1 EVs** (Dungeon Boss) **× 2** (Shadow Pokémon) **× 2** (Power Bracer) = **4 EVs**
+    - `1` (Dungeon Boss)  `×2` (Shadow Pokémon) `×2` (Power Bracer) = `4 EVs`
 
 #### Tips for Gaining EVs {#evtips}
 
@@ -115,105 +114,22 @@ Pokémon that appear on routes are generally the easiest Pokémon to gain EVs fo
 ##### Rare Encounters
 For catchable Pokémon, using Repeat Ball, Power Bracer, and a Rowap setup combined can provide ~25x EV gain per catch. Due to the time effort of obtaining Repeat Balls and setting up the Farm, you may want to prioritize such methods for only difficult to catch Pokémon.
 
+##### Friend Safari
+Pokémon that currently cannot gain EVs anywhere else can be caught in the [[Towns/Friend Safari]]. This is the only repeatable way to obtain these Pokémon.
+
 ##### Shop/Trade/Evolution-Only Pokémon
 For Pokémon that can only be acquired through purchases, trades, and item evolutions, you may wish to maximize your EV yield multiplier in order to resist your Pokémon with the least amount of purchases/trades/evolutions possible.
 
 The table below shows how many Pokémon are required in order to resist these Pokémon using various combinations of modifiers, assuming a base EV gain of 1. Since the Blue Flute's effectiveness scales with your Achievement Bonus, the percentages in the setups show the minimum Achievement Bonus required to reach that multiplier.
 
-*Note: AB stands for Achievement Bonus. Your Achievement Bonus can be checked in your Achievement Tracker. The Farm setups referenced are based on  [these specific setups](#Farm).*
-| Modifiers | Required Purchases/Trades/Evolutions/Etc. Needed to Resist |
+*Note: Your Achievement Bonus can be checked in your Achievement Tracker. The Rowaps are based on [these Farm setups](#!Farm/Setups#evs), which use Lum to boost their effectiveness.*
+
+| Modifiers | Minimum Achievement Bonus{.col-3} | Captures Needed to Resist{.col-3} |
 | :--- | :--- | :--- |
-| No Modifiers |  50 |
-| [[File:Power_Bracer.png\|24px]] Power Bracer + [[File:Rowap.png\|24px]]  Rowap/Lum/Petaya Setup |  11 |
-| [[File:Power_Bracer.png\|24px]] Power Bracer + [[File:Rowap.png\|24px]]  Rowap/Lum/Petaya Setup + [[File:Blue_Flute.png\|24px]] Blue Flute (38.60% AB or more) | 10 |
-| [[File:Power_Bracer.png\|24px]] Power Bracer + [[File:Rowap.png\|24px]]  Rowap/Lum Setup | 10 |
-| [[File:Power_Bracer.png\|24px]] Power Bracer + [[File:Rowap.png\|24px]]  Rowap/Lum/Petaya Setup + [[File:Blue_Flute.png\|24px]] Blue Flute (609.56% AB or more) | 9 |
-| [[File:Power_Bracer.png\|24px]] Power Bracer + [[File:Rowap.png\|24px]]  Rowap/Lum Setup + [[File:Blue_Flute.png\|24px]] Blue Flute (361.34% AB or more) | 9 |
-| [[File:Power_Bracer.png\|24px]] Power Bracer + [[File:Rowap.png\|24px]]  Rowap/Lum Setup + [[File:Blue_Flute.png\|24px]] Blue Flute (1044.01% AB or more) | 8 |
-# {.mt-3}
-
-##### Friend Safari
-Pokémon that currently cannot gain EVs anywhere else can be caught in the [[Towns/Friend Safari]]. This is the only repeatable way to obtain these Pokémon.
-
-----
-
-## Farm Setups for EV Yields {#Farm}
-The [[Farm]] can be used to increase EV yields. Each ripe [[Berries/Rowap]] plant multiplies EV yields by **1.015x** or **1.04545x** (when boosted by [[Berries/Lum]]). This effect stacks with every Rowap Plant, as well as with other [EV Modifiers](#evmodifiers).
-
-:::collapsed Rowap + Lum - Farm Simulator Code
-Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
-
-`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfV19fX0=`
-:::
-_**EV Gain Bonus: 2.54x**_
-::: table-mutations
-| :----: | :----: | :----: | :----: | :----: |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-:::
-
-**Timing Table**
-All planting times refer to the "Until Ripe" value of the first Berry planted.
-| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
-| :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]]      | `Planted First` | | |
-| [[File:Lum.png\|32px]] [[Berries/Lum]]  | 01:00:00      | 00:40:00                              | 00:26:40                              |
-
-
-### Rowap + Lum + Petaya
-
-The Petaya variant has slightly less EV yield but will last for up to five days vs. Rowap's normal lifespan of less than six hours. For an even longer uptime, use the [Infinite Farm](#infinite) setup.
-
-:::collapsed Rowap + Lum + Petaya - Farm Simulator Code
-Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
-
-`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo2NCwiYWdlIjo0MzIwMDAsIm11bGNoIjotMX1dfX19`
-:::
-_**EV Gain Bonus: 2.43x**_
-
-::: table-mutations
-| :----: | :----: | :----: | :----: | :----: |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | |
-:::
-
-**Timing Table**
-All planting times refer to the "Until Ripe" value of the first Berry planted.
-| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
-| :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Petaya.png\|32px]] [[Berries/Petaya]]      | `Planted First` | | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]]  | 05:54:00      | 03:55:59                              | 02:37:18                              |
-| [[File:Lum.png\|32px]] [[Berries/Lum]]      | 01:00:00      | 00:40:00                              | 00:26:40                                |
-
-
-### Infinite Farm{#infinite}
-The combination of [[Berries/Haban]] and [[Berries/Lum]] in this formation make the [[Berries/Petaya]] live for approximately 3.5 years once the setup fully ripens. While not as efficient as other setups, it works for those who want to forget about the Farm while still getting a benefit from it.
-
-:::collapsed Infinite Farm w/ Rowap - Farm Simulator Code
-Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
-
-`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OSwiYWdlIjoxNzI4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDksImFnZSI6MTcyODAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ5LCJhZ2UiOjE3MjgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OSwiYWdlIjoxNzI4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NjQsImFnZSI6NDMyMDAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ5LCJhZ2UiOjE3MjgwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo0OSwiYWdlIjoxNzI4MDAsIm11bGNoIjotMX0seyJiZXJyeSI6NDksImFnZSI6MTcyODAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOjQ5LCJhZ2UiOjE3MjgwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfSx7ImJlcnJ5IjoxOSwiYWdlIjo0MzIwMCwibXVsY2giOi0xfSx7ImJlcnJ5Ijo1OCwiYWdlIjo0MjQ4MCwibXVsY2giOi0xfV19fX0=`
-:::
-**EV Gain Bonus: 1.70x**
-::: table-mutations
-| :----: | :----: | :----: | :----: | :----: |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Petaya.png\|32px]] [[Berries/Petaya]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Haban.png\|32px]] [[Berries/Haban]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | [[File:Lum.png\|32px]] [[Berries/Lum]] | [[File:Rowap.png\|32px]] [[Berries/Rowap]] | |
-:::
-**Timing Table**
-All planting times refer to the "Until Ripe" value of the first Berry planted.
-| Berry                                         | Planting Time | Planting Time (Mulch or Sprayduck)    | Planting Time (Mulch and Sprayduck)   |
-| :---:                                         | :---:         | :---:                                 | :---:                                 |
-| [[File:Haban.png\|32px]] [[Berries/Haban]]      | `Planted First` | |
-| [[File:Petaya.png\|32px]] [[Berries/Petaya]]      | `Planted First` | | |
-| [[File:Rowap.png\|32px]] [[Berries/Rowap]]  | 05:54:00      | 03:55:59                              | 02:37:18                              |
-| [[File:Lum.png\|32px]] [[Berries/Lum]]      | 01:00:00      | 00:40:00                              | 00:26:40                                |
+| No Modifiers | N/A | 50 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + 20 Boosted [[File:Rowap.png\|24px]] Rowaps | N/A |  11 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + 20 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute | 38.76% | 10 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + 21 Boosted [[File:Rowap.png\|24px]] Rowaps | N/A | 10 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + 20 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute | 610.25% | 9 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + 21 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute | 361.76% | 9 |
+| [[File:Power_Bracer.png\|24px]] Power Bracer + 21 Boosted [[File:Rowap.png\|24px]] Rowaps + [[File:Blue_Flute.png\|24px]] Blue Flute | 1044.26% | 8 |

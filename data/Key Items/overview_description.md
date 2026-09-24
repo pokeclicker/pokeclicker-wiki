@@ -1,3 +1,4 @@
+
 **Key Items** are special items obtained as the player progresses through the game.
 
 ### Usage
@@ -8,9 +9,9 @@ Key Items are active automatically upon acquisition. To see acquired Key Items g
 
 | Item | How to Obtain | Effect |
 | --- | --- | --- |
-| [[File:Teachy_tv.png\|20px]] Teachy TV | Given by Professor Oak at the start of the game. | N/A |
-| [[File:Coin_case.png\|20px]] Coin Case | Given by Professor Oak at the start of the game. | N/A |
-| [[File:Pokeball_bag.png\|20px]] Pokéball Bag | Given by Professor Oak at the start of the game. | N/A |
+| [[File:Teachy_tv.png\|20px]] Teachy TV | Complete step 1 in the [[Quest Lines/Tutorial Quests]]  quest line. | N/A |
+| [[File:Coin_case.png\|20px]] Coin Case | Complete step 1 in the [[Quest Lines/Tutorial Quests]]  quest line. | Unlocks the Currency panel. |
+| [[File:Pokeball_bag.png\|20px]] Pokéball Bag | Complete step 1 in the [[Quest Lines/Tutorial Quests]]  quest line. | Unlocks the Poké Balls panel. |
 | [[File:Town_map.png\|20px]] Town Map | Defeat 10 Pokémon on Kanto Route 1. | Unlocks the Town Map panel. |
 | [[File:Dungeon_ticket.png\|20px]] Dungeon Ticket | Purchasable at [[Towns/Viridian City]] in Kanto for 100 Quest Points [[File:questPoint.svg\|20px]]. | Allows entry to [[Dungeons]] at the cost of Dungeon Tokens [[File:dungeonToken.svg\|20px]]. |
 | [[File:Super_rod.png\|20px]] Super Rod | Defeat 10 Pokémon on Kanto Route 12. | Allows water Pokémon to be encountered and caught in the wild. |

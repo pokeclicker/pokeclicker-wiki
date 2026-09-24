@@ -1,3 +1,4 @@
+
 #### Jump to:
 * [Berry Stats and Properties](#stats)
 * [Mutations](#mutation)
@@ -31,10 +32,10 @@ The stats for Berry plants can be modified by various items and auras. Such effe
 | **Exp** | Amount of Farm EXP gained per harvest. Used to level [[Oak Items/Sprayduck]]. | |
 | **Harvest Amount** | Amount of Berries gained per harvest. Berry plants will always yield at least 1 berry, even if the Harvest Amount is less than 1, but multiplying boosts will use the actual value.* | _**Increases Harvest:** Rich or Amaze Mulch, [[Berries/Passho]] Auras_{.d-block .fst-normal} _**Decreases Harvest:** [[Berries/Tanga]] Auras_{.d-block .fst-normal} |
 | **Replant Chance** | Chance of replanting itself if the Berry withers |  _**Increases Replant Chance:** Rich or Amaze Mulch, [[Berries/Shuca]] Auras_{.d-block .fst-normal}  _**Decreases Replant Chance:** [[Berries/Charti]] Auras_{.d-block .fst-normal} |
-| **Mutation Chance** | Chance for a plot to mutate into this Berry, when mutation conditions are met | _**Increases Mutation Chance:** [[Oak Items/Sprinklotad]], Rich or Amaze Mulch, [[Berries/Kebia]] and [[Berries/Payapa]] Auras_{.d-block .fst-normal} _**Decreases Mutation Chance:** [[Berries/Babiri]] Auras_{.d-block .fst-normal} |
+| **Mutation Chance** | Chance for a plot to mutate into this Berry, when mutation conditions are met | _**Increases Mutation Chance:** [[Oak Items/Sprinklotad]], Surprise or Amaze Mulch, [[Berries/Kebia]] and [[Berries/Payapa]] Auras_{.d-block .fst-normal} _**Decreases Mutation Chance:** [[Berries/Babiri]] Auras_{.d-block .fst-normal} |
 | **Farm Points per Harvest** | Farm points awarded per harvest. Also affects how much FP is earned per Wanderer. | |
 | **Aura** | [Aura](#aura) emitted that can have various gameplay effects | _**Stops Aura**: Freeze Mulch_{.d-block .fst-normal} _**Boosts Aura effects**: [[Berries/Lum]] Aura (does not stack)_{.d-block .fst-normal} |
-**e.g. Liechi with a Harvest Amount of .5 will yield 1 berry when harvested. When Rich Mulch is applied (x2 harvest multiplier), it will still only yield 1 berry. When Rich Mulch and 8 Passho auras are present (x16.32 harvest multiplier), it will yield 8 berries.*
+**e.g. Liechi, which by default has a Harvest Amount of .5, will yield 1 berry when harvested. When Rich Mulch is applied (x2 harvest multiplier), it will still only yield 1 berry. When Rich Mulch and 8 Passho auras are present (x16.32 harvest multiplier), it will yield 8 berries.*
 
 ----
 
@@ -75,7 +76,6 @@ Persim has a mutation rate of 2% when ripe Oran and Pecha plants are adjacent to
 - Be aware of Berry types that can easily mutate or cause mutations:
     - [[Berries/Occa]], [[Berries/Kebia]], [[Berries/Colbur]], and [[Berries/Enigma]] can mutate adjacent berries when ripe.
     - [[Berries/Rindo]] and [[Berries/Pamtre]] can mutate adjacent empty plots when ripe.
-    - [[Berries/Spelon]], [[Berries/Pamtre]], [[Berries/Watmel]], and [[Berries/Cornn]] can mutate into different berries when certain Oak Items are equipped.
     - [[Berries/Passho]] can mutate when it is not adjacent to any berry.
 
 

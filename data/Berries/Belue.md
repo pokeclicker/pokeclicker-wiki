@@ -1,3 +1,4 @@
+
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
@@ -34,3 +35,6 @@ Belue Berries can mutate into the following Berries.
 | Used In                                       | Other Requirements |
 | :---:                                         | :---: |
 | [[File:Rowap.png\|32px]] [[Berries/Rowap]]    | `N/A` |
+
+### Acquisition
+Belue Berries can be obtained from the [[Towns/Hoppy Town Fishing Pond]].

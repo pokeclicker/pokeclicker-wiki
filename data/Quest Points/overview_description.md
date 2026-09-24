@@ -1,4 +1,5 @@
-###### Currency: [[File:money.svg|18px]] [[Pokédollars]] • [[File:dungeonToken.svg|18px]] [[Dungeon Tokens]] • [[File:questPoint.svg|18px]] **Quest Points** • [[File:farmPoint.svg|18px]] [[Farm Points]] • [[File:diamond.svg|18px]]  [[Diamonds]] • [[File:battlePoint.svg|18px]] [[Battle Points]] {.alert .alert-light}
+
+###### Currency: [[File:money.svg|18px]] [[Pokédollars]] • [[File:dungeonToken.svg|18px]] [[Dungeon Tokens]] • [[File:questPoint.svg|18px]] **Quest Points** • [[File:farmPoint.svg|18px]] [[Farm Points]] • [[File:diamond.svg|18px]]  [[Diamonds]] • [[File:battlePoint.svg|18px]] [[Battle Points]] {.alert .alert-secondary}
 
 #### Jump to:
 * [Quests](#quests)
@@ -11,7 +12,7 @@ Quest Points are green currency earned by completing regular Quests in the Quest
 ## Quests {#quests}
 *For multi-step story quests, see [[Quest Lines]]. Quest Lines do not award Quest Points.*
 
-The quest module displays 10 quests that you can work toward. Completing all the quests on the list awards bonus Quest Points. You can work on multiple quests at the same time, limited by your quest slots. You gain additional quest slots at Quest Level 5, 10, and 15.
+The quest module displays 10 quests that you can work toward. The default hotkey to open the Quest List is **Q**. Completing all the quests on the list awards bonus Quest Points. You can work on multiple quests at the same time, limited by your quest slots. You gain additional quest slots at Quest Level 5, 10, and 15.
 
 Refreshing the quest list costs Pokédollars. You gain a free refresh daily and upon leveling your Quest Level.
 
@@ -22,7 +23,14 @@ $QuestExperience=100 + \frac{QPReward}{10}$ {.overflow-auto .text-center}
 
 Obtaining [[Items/Medichamite]] requires completing quests at Quest Level 16 or higher.
 
-#### Types of Quests
+#### Tips and Guides
+###### Catch-Type Quests
+- [[Catch Type Quests]] lists the best locations to farm each type of Pokémon.
+###### Gems
+- Individual [Gem](#!Gems) pages list where to best farm each Gem type.
+- Plates can be sold quickly for gems and will count toward Quest completion.
+
+#### List of Possible Quests
 Quest Points are awarded based on the type of quest, with a random 0.9x-1.1x variation to rewards.
 Types of Quests | Description
 --- | ---
@@ -37,9 +45,9 @@ Hatch Eggs | Breed Pokémon in the [[Hatchery]] (amount varies based on highest 
 Gain Currency | Gain [[Pokédollars]], [[Dungeon Tokens]], or [[Farm Points]] (amount varies based on highest region)
 Gain [[Gems]] | Gain 200-600 Gems
 Use [[Poké Balls]] | Use 100-500 Poké Balls, Great Balls, or Ultra Balls
-Equip the [[Items/Magic Ball]] and Capture Pokémon | Catch 100-500 Pokémon while equipping Magic Ball
-Equip [[Items/EXP Share]] and Defeat Pokémon | Defeat 100-500 Pokémon while equipping EXP Share
-Equip [[Items/Amulet Coin]] and Earn Pokédollars | Earn bonus Pokédollars 100-500 times while equipping Amulet Coin
+Equip the [[Oak Items/Magic Ball]] and Capture Pokémon | Catch 100-500 Pokémon while equipping Magic Ball
+Equip [[Oak Items/EXP Share]] and Defeat Pokémon | Defeat 100-500 Pokémon while equipping EXP Share
+Equip [[Oak Items/Amulet Coin]] and Earn Pokédollars | Earn bonus Pokédollars 100-500 times while equipping Amulet Coin
 Harvest Berries | Harvest Berries at the [[Farm]] (amount varies based on Berry growth time)
 Mine Items | Collect 3-15 items from the [[Underground]] Mines
 Mine Layers | Clear 1-3 layers in the Underground
@@ -220,7 +228,7 @@ Item Name | Number Required | Necessary to Obtain | Cost
 |[[File:Beldum.png\|25px]] | 1 | [[File:pokemon/374.png\|30px]] Beldum | 22,500 [[File:questPoint.svg\|25px]]
 
 #### Sinnoh
-Without using the Underground to mine stones and using typed eggs, 71,500 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 13,200 [[File:questPoint.svg\|25px]] are needed.
+Without using the Underground to mine stones and using typed eggs, 72,250 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 13,950 [[File:questPoint.svg\|25px]] are needed.
 
 ##### Evolution Items
 Item Name | Number Required | Necessary to Obtain | Cost
@@ -250,10 +258,15 @@ Item Name | Number Required | Necessary to Obtain | Cost
 ##### Shopmon
 Item Name | Number Required | Necessary to Obtain | Cost
 :---: | :---: | :---: | :---:
-|[[File:Skorupi.png\|25px]] | 1 | [[File:pokemon/451.png\|30px]] Skorupi | 6,750 [[File:questPoint.svg\|25px]]
 |[[File:Combee.png\|25px]] | 1 | [[File:pokemon/415.png\|30px]] Combee | 6,750 [[File:questPoint.svg\|25px]]
 |[[File:Burmy (Plant).png\|25px]] | 1 | [[File:pokemon/412.png\|30px]] Burmy | 6,750 [[File:questPoint.svg\|25px]]
 |[[File:Cherubi.png\|25px]] | 1 | [[File:pokemon/420.png\|30px]] Cherubi | 6,750 [[File:questPoint.svg\|25px]]
+
+##### Great Marsh
+Item Name | Number Required | Necessary to Obtain | Cost
+:---: | :---: | :---: | :---:
+[[File:Safari_ticket.png\|25px]] Safari Ticket | 1 |  [[File:pokemon/451.png\|30px]] Skorupi [[File:pokemon/455.png\|30px]] Carnivine |  750 [[File:questPoint.svg\|25px]] (Entrance Fee)
+
 
 #### Unova
 Without using the Underground to mine stones and using typed eggs, 98,125 [[File:questPoint.svg\|25px]] are needed. Using Mystery Eggs, Mining for stones, Rare Hold Items, and Berries 19,900 [[File:questPoint.svg\|25px]] are needed.
