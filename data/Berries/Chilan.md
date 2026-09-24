@@ -11,6 +11,12 @@ Chilan Berries have a chance of mutating when a Taller or later stage Chople Ber
 :::
 
 **Optimized Formation**
+
+:::collapsed Chilan Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOjJ9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6Mn0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOjJ9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6Mn0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOjJ9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6Mn0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOjJ9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6Mn0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOjJ9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6Mn0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOjJ9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6Mn0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOjJ9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6Mn0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOjJ9LHsiYmVycnkiOjQxLCJhZ2UiOjcyMDAwLCJtdWxjaCI6Mn0seyJiZXJyeSI6NDEsImFnZSI6NzIwMDAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0MSwiYWdlIjo3MjAwMCwibXVsY2giOjJ9XX19fQ==`
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | [[File:Chople.png\|32px]] [[Berries/Chople]] {.mutation} | |

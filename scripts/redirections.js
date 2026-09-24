@@ -14,6 +14,13 @@ const redirections = [
             type: 'Mega Pokémon'
         }
     },
+    {
+        type: 'Battle Cafe',
+        name: '*',
+        redirect: {
+            type: 'Battle Café'
+        }
+    },
 ];
 
 const matches = (patternOrName, string) => {

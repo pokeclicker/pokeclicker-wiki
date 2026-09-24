@@ -1,10 +1,35 @@
-## Acquisition
+## Mutation Strategy
+### Possible Planting Formations {#planting}
 
-The Chople berry can be acquired by equipping the [[Oak Items/Magma Stone]] while there is a [[Berries/Spelon]] at Taller stage or later on the field. The Spelon will then have a chance to mutate into Chople.
+The Chople berry can be acquired by growing a [[Berries/Spelon]] berry beside exactly three others of its kind, with nothing else growing nearby. Every plant involved must be at the Taller stage or later, and each of the four has a chance to mutate into a Chople berry. Equipping the [[File:Magma_Stone.png\|32px]][[Oak Items/Magma Stone]] doubles the chance of the mutation.
 
-If the "No Oak Items" challenge is on, the Chople berry can be bought from the [Johto Berry Master](#!Berry_Masters) for 10,000 Farm Points after unlocking [[Berries/Spelon]].
+**Base Formation**
+::: table-mutations
+| :----: | :----: |
+| [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | |
+| [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | |
+:::
+
+**Optimized Formation**
+
+Four of these blocks fit on a full farm, so that all sixteen plants can mutate at once. The middle row and column are left empty to keep the blocks from counting as each other's neighbours.
+
+:::collapsed Chople Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVsY2giOjJ9LHsiYmVycnkiOjMwLCJhZ2UiOjMwOTYwLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVsY2giOjJ9LHsiYmVycnkiOjMwLCJhZ2UiOjMwOTYwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzAsImFnZSI6MzA5NjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6MzAsImFnZSI6MzA5NjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVsY2giOjJ9LHsiYmVycnkiOjMwLCJhZ2UiOjMwOTYwLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOi0xfSx7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVsY2giOjJ9LHsiYmVycnkiOjMwLCJhZ2UiOjMwOTYwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MzAsImFnZSI6MzA5NjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjotMX0seyJiZXJyeSI6MzAsImFnZSI6MzA5NjAsIm11bGNoIjoyfSx7ImJlcnJ5IjozMCwiYWdlIjozMDk2MCwibXVsY2giOjJ9XX19fQ==`
+:::
+::: table-mutations
+| :----: | :----: | :----: | :----: | :----: |
+| [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} |   | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | |
+| [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} |   | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | |
+|   |   |   |   |   | |
+| [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} |   | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | |
+| [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} |   | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | [[File:Spelon.png\|32px]] [[Berries/Spelon]] {.mutation} | |
+:::
 
 #### Mutations
+
 Chople Berries can be used to mutate the following Berries.
 
 | Used In                                       | Other Requirements |

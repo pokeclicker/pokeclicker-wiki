@@ -3,7 +3,6 @@
 ### Possible Planting Formations {#planting}
 
 Watmel has a chance of mutating when a Taller or later stage [[Berries/Magost]] is surrounded with at least 130, but no more than 160 points of Sweet flavor, and no more than 80 points of all other flavors. This will cause the Magost to change into a Watmel and thus doesn't use an empty plot to trigger the mutation. You can fill your farm in the following way to obtain Watmel Berries. Purple squares indicate where mutations can occur.
-**WARNING:** Upon successfully mutating a Watmel, make sure to have [[Oak Items/Sprinklotad]] unequipped since it may cause it to mutate into a [[Berries/Shuca]].
 
 **Base Formation**
 ::: table-mutations
@@ -14,6 +13,12 @@ Watmel has a chance of mutating when a Taller or later stage [[Berries/Magost]] 
 :::
 
 **Optimized Formation**
+
+:::collapsed  Watmel Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOjJ9LHsiYmVycnkiOjI3LCJhZ2UiOjI4ODAwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MjcsImFnZSI6Mjg4MDAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOjJ9LHsiYmVycnkiOjI3LCJhZ2UiOjI4ODAwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MjcsImFnZSI6Mjg4MDAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOjJ9LHsiYmVycnkiOjI3LCJhZ2UiOjI4ODAwLCJtdWxjaCI6Mn0seyJiZXJyeSI6MjcsImFnZSI6Mjg4MDAsIm11bGNoIjoyfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjoyNywiYWdlIjoyODgwMCwibXVsY2giOi0xfV19fX0=`
+:::
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Magost.png\|32px]] [[Berries/Magost]] | [[File:Magost.png\|32px]] [[Berries/Magost]] | [[File:Magost.png\|32px]] [[Berries/Magost]] | [[File:Magost.png\|32px]] [[Berries/Magost]] | [[File:Magost.png\|32px]] [[Berries/Magost]] | |

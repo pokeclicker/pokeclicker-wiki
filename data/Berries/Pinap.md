@@ -1,3 +1,4 @@
+
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
@@ -12,6 +13,13 @@ Pinap has a chance of mutating when [[Berries/Sitrus]] and [[Berries/Aspear]] ar
 :::
 
 **Optimized Formation**
+
+:::collapsed Pinap Mutation - Farm Simulator Code
+Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.
+
+`eyJzYXZlIjp7ImZhcm1pbmciOnsicGxvdExpc3QiOlt7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjQsImFnZSI6MjQwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NywiYWdlIjoxMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NywiYWdlIjoxMjAwLCJtdWxjaCI6LTF9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6NCwiYWdlIjoyNDAsIm11bGNoIjotMX0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOi0xLCJhZ2UiOjAsIm11bGNoIjoyfSx7ImJlcnJ5Ijo0LCJhZ2UiOjI0MCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjcsImFnZSI6MTIwMCwibXVsY2giOi0xfSx7ImJlcnJ5IjotMSwiYWdlIjowLCJtdWxjaCI6Mn0seyJiZXJyeSI6LTEsImFnZSI6MCwibXVsY2giOjJ9LHsiYmVycnkiOjcsImFnZSI6MTIwMCwibXVsY2giOi0xfV19fX0=`
+:::
+
 ::: table-mutations
 | :----: | :----: | :----: | :----: | :----: |
 | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | {.mutation} | [[File:Aspear.png\|32px]] [[Berries/Aspear]] | {.mutation} | |
@@ -38,7 +46,7 @@ Pinap Berries can mutate into the following Berries.
 | [[File:Wacan.png\|32px]] [[Berries/Wacan]]    | [[File:Iapapa.png\|32px]] [[Berries/Iapapa]] [[File:Qualot.png\|32px]] [[Berries/Qualot]] [[File:Grepa.png\|32px]] [[Berries/Grepa]] |
 
 ### Acquisition
-Pinap Berries can be obtained from the following dungeons.
+Pinap Berries can be obtained from the [[Towns/Safari Zone]] and from the following dungeons.
 
 | Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |

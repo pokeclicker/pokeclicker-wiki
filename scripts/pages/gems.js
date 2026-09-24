@@ -157,6 +157,7 @@ const bestCaptureRoutesPerRegion = (region, type) => {
 
 
 module.exports = {
+    routeAvgHp,
     bestGemsPerRegion,
     bestCaptureRoutesPerRegion,
     gemGymsPerFlute

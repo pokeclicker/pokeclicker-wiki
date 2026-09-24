@@ -1,5 +1,6 @@
 ## Hints
 ### Sevii Master
+
 This achievement requires the player to capture all Pokémon from this list:
 :::collapsed Sevii Master Pokémon List
 |Pokémon|Acquisition|

@@ -1,4 +1,7 @@
-## Exclusive Pokémon
+
+----
+
+## Exclusive Pokémon {#exclusives}
 
 The following is a list of Pokémon obtainable in Hoenn which cannot be found on Routes, in Dungeons, or through level-based evolutions of Pokémon caught in the region.
 
@@ -38,10 +41,10 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 |[[File:Dragon_egg.png\|25px]] [[Items/Dragon Egg]] | [[File:pokemon/371.png\|25px]] [[Pokémon/Bagon]] |
 
 ### Baby Pokémon
-
+[[Baby Pokémon]] has a complete list of species obtainable by breeding.
 |Baby|Adult|
 |---|---|
-| [[File:pokemon/298.png\|25px]] [[Pokémon/Azurill]] | [[File:pokemon/183.png\|25px]] [[Pokémon/Marill]]|
+| [[File:pokemon/298.png\|25px]] [[Pokémon/Azurill]] | [[File:pokemon/183.png\|25px]] [[Pokémon/Marill]] or  [[File:pokemon/184.png\|25px]] [[Pokémon/Azumarill]]|
 
 ### Weather-dependent Pokémon
 |Pokémon | Required Weather | Location |

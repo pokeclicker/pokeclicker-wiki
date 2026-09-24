@@ -1,16 +1,22 @@
-Battle Points [[File:battlePoint.svg|25px]] are the red currency earned from the [[Battle Frontier]] that are currently used to buy items from the [[Towns/Battle Frontier]] Shop, a Furfrou from [[Towns/Parfum Palace]] in Kalos, and the [[Items/Fire Memory]] Disc from Captain Kiawe in the [[Dungeons/Wela Volcano Park]].
+###### Currency: [[File:money.svg|18px]] [[Pokédollars]] • [[File:dungeonToken.svg|18px]] [[Dungeon Tokens]] • [[File:questPoint.svg|18px]] [[Quest Points]] • [[File:farmPoint.svg|18px]] [[Farm Points]] • [[File:diamond.svg|18px]]  [[Diamonds]] • [[File:battlePoint.svg|18px]] **Battle Points** {.alert .alert-secondary}
 
----
+#### Jump to:
+* [Uses](#uses)
 
-## Formulas
-#### Earnings
+Battle Points are the red currency earned from the [[Battle Frontier]].
+
+Defeating higher stages of the Battle Frontier awards more Battle Points. A calculator is available on the [[Battle Frontier]] page.
+
+::: collapsed Battle Point Earnings Formula
 $$ \text{Battle Points} =\text{Stage Beaten} \times \text{Battle Multiplier} $$
 $$ \text{Battle Multiplier} = \max \bigg( \frac{stageBeaten}{100},1 \bigg) $$
 
 **Stage Beaten** is 1 stage lower the stage you lost on.
 **Battle Multiplier** is the highest value between **Stage Beaten** divided by 100, and 1.
+:::
 
 ---
 
-## Uses
-Battle Points can be used to purchase the following:
+## Uses {#uses}
+#### General
+- Hatching costs for Hatchery Helper [[Hatchery_Helpers/Noel]]

@@ -1,0 +1,181 @@
+<!-- ko if: Wiki.pageName() -->
+<!-- ko let: { weather: Weather.weatherConditions[WeatherType[Wiki.pageName()?.replace(/ /g,"_")]] } -->
+
+<!-- ko ifnot: weather -->
+<h3>Weather not found...</h3>
+<!-- /ko -->
+
+<!-- ko if: weather -->
+
+<!-- WEATHER DESCRIPTION -->
+<div>
+    <p>
+        <img class="me-2" data-bind="attr: { src: `./pokeclicker/docs/assets/images/weather/${WeatherType[weather.type]}.png` }, 
+            style: { 'background-color': weather.color, display: 'inline-block' }" width="36px">
+        <span style="font-style:italic" data-bind="text: weather.description"></span>
+    </p>
+
+    <h3>Pokémon Type Attack Modifers</h3>
+
+    <p data-bind="foreach: weather.multipliers">
+        <span class="badge text-white fw-normal" data-bind="text: `${PokemonType[$data.type]} x${$data.multiplier}`, style: { backgroundColor: GameConstants.TypeColor[$data.type] }"></span>
+    </p>
+    <!-- ko if: weather.multipliers.length == 0-->
+    <p>
+        <span class="badge text-bg-secondary fw-normal">None</span>
+    </p>
+    <!--/ko-->
+
+    <h3>Chance of Occurring</h3>
+    <p style="font-style:italic">Weather cycles every <span data-bind="text: Weather.period"></span> hours</p>
+        <div class="table-responsive">
+        <table class="table table-sm table-bordered no-data-tables"
+                data-bind="with: Object.entries(GameConstants.Region).filter(([region, regionName]) => region <= GameConstants.MAX_AVAILABLE_REGION && region >= 0).map(([region, regionName]) => region), as: 'regions'">
+            <thead>
+                <tr data-bind="foreach: regions">
+                    <th class="text-center table-secondary" data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data])"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-bind="foreach: regions">
+                    <!-- ko let: { totalRegionWeight: Weather.weatherDistribution[$data] 
+                                        ? Weather.weatherDistribution[$data].map(w => Weather.weatherConditions[w].weight).reduce((acc, weight) => acc + weight)
+                                        : Object.values(Weather.weatherConditions).map(w => w.weight).reduce((acc, weight) => acc + weight),
+                                    regionWeatherWeight: (Weather.weatherDistribution[$data] && !Weather.weatherDistribution[$data].includes(weather.type))
+                                        ? 0
+                                        : Weather.weatherConditions[weather.type].weight }
+                    -->
+                        <td class="text-center" data-bind="text: Math.round(regionWeatherWeight/totalRegionWeight*1000)/10 + `%` "></td>
+                    <!--/ko-->
+                </tr>
+                
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+<!-- ROUTE POKEMON -->
+<!-- ko let: { routes: Wiki.filterHelper.filterRoutes({ filterBy: { encounterRequirement: new WeatherRequirement([weather.type]) }, filterEncounters: true }) }
+-->
+          
+    <!-- ko if: routes.length > 0 -->
+     <br/>
+    <h3>Route Encounters</h3>
+    <p><b>Bolded Pokémon</b> are exclusive to <span data-bind="text: GameConstants.humanifyString(WeatherType[weather.type])"></span> weather for that route.</p>
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Region</th>
+                    <th>Route Name</th>
+                    <th>Weather Pokémon Encounters</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: routes">         
+                    <tr>
+                        <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[$data.region]), attr: { 'data-order': $data.region }"></td>
+                        <td data-bind="attr: { 'data-order': $index }">
+                            <a class="text-decoration-none" href="#!" data-bind="text: $data.routeName, attr: { href: `#!Routes/${$data.routeName}` }"></a>
+                        </td>
+                        <td data-bind="foreach: $data.pokemon.special.map(s => ({ 
+                                    ...s, 
+                                    weather: Wiki.filterHelper.findRequirementOfType(s.req, WeatherRequirement).weather
+                                })).sort((a, b) => a.weather.length - b.weather.length)">
+                            <!--ko foreach: $data.pokemon -->
+                                <span class="me-1" style="display:inline-block">
+                                    <img width="30px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data].id + '.png'}"/> 
+                                    <a href="#!" data-bind="text: $data, attr: {href: `#!Pokemon/${$data}`}, style: { fontWeight: $parent.weather.length == 1 ? `bold` : ``}"></a>
+                                </span>
+                            <!--/ko-->
+                        </td>
+                    </tr>     
+            </tbody>
+        </table>
+    </div>
+    <!--/ko-->
+<!--/ko-->
+
+<!-- DUNGEON POKEMON -->
+<!-- ko let: { dungeons: Wiki.filterHelper.filterDungeons({ filterBy: { encounterRequirement: new WeatherRequirement([weather.type]) }, filterEncounters: true })}
+-->
+    
+    <!-- ko if: dungeons.length > 0 -->
+    <br/>
+    <h3>Dungeon Encounters</h3> 
+    <p><b>Bolded Pokémon</b> are exclusive to <span data-bind="text: GameConstants.humanifyString(WeatherType[weather.type])"></span> weather for that dungeon.</p>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Region</th>
+                    <th>Dungeon Name</th>
+                    <th>Weather Pokémon Encounters</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: dungeons">
+                <tr>
+                    <td data-bind="text: GameConstants.camelCaseToString(GameConstants.Region[GameConstants.getDungeonRegion($data.name)]), attr: {'data-order': GameConstants.getDungeonRegion($data.name)}"></td>
+                    <td data-bind="attr: { 'data-order': $index }">
+                        <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Dungeons/${$data.name}` }"></a>
+                    </td>
+                    <td data-bind="foreach: Wiki.dungeons.getAllDungeonEncounters($data).map(e => ({
+                            ...e,
+                            weather: Wiki.filterHelper.findRequirementOfType(e.options.requirement, WeatherRequirement).weather
+                        })).sort((a, b) => a.weather.length - b.weather.length)">
+                            <span class="me-1" style="display:inline-block">
+                                <img width="30px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.name].id + '.png'}"/> 
+                                <a href="#!" data-bind="text: $data.name, attr: {href: `#!Pokemon/${$data.name}`}, style: { fontWeight: $data.weather.length == 1 ? `bold` : ``}"></a>
+                            </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--/ko-->
+<!--/ko-->
+
+<br/>
+
+
+<!-- POKEMON EVOLUTIONS -->
+<!--ko let: { pokemonEvos: pokemonList.filter(p => p.evolutions).flatMap(p => p.evolutions).filter(e => 
+                    e.restrictions.find(r => Wiki.filterHelper.matchesRequirement(r, new WeatherRequirement([weather.type]))))}
+-->
+    <!--ko if: pokemonEvos.length > 0 -->
+    <h3>Pokémon Evolutions Affected by Weather</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Pokémon</th>
+                    <th>Evolves Into</th>
+                    <th>Requirements</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: pokemonEvos">
+                <tr>
+                    <td>
+                        <img width="30px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.basePokemon].id + '.png'}"/> 
+                        <a href="#!" class="text-decoration-none" data-bind="text: $data.basePokemon, attr: {href: `#!Pokemon/${$data.basePokemon}`}"></a>
+                    </td>
+                    <td>
+                        <img width="30px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonMap[$data.evolvedPokemon].id + '.png'}"/> 
+                        <a href="#!" class="text-decoration-none" data-bind="text: $data.evolvedPokemon, attr: {href: `#!Pokemon/${$data.evolvedPokemon}`}"></a>
+                    </td>
+                    <td data-bind="foreach: Wiki.gameHelper.getEvolutionHints($data)">
+                        <span data-bind="text: $data"></span><br/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--/ko-->
+<!--/ko-->
+
+
+<!--/ko-->
+
+<!--/ko-->
+<!--/ko-->

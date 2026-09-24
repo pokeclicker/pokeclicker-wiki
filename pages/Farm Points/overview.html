@@ -10,17 +10,19 @@
                 <th>Total time till ripe (hh:mm:ss)</th>
             </thead>
             <tbody data-bind="foreach: $data">
-                <!-- ko with: App.game.farming.berryData[$data] -->
+                <!-- ko with: BerryList[$data] -->
                 <tr>
-                    <td data-bind="text: BerryType[$parent]"></td>
                     <td>
+                        <a class="text-decoration-none" href="#!" data-bind="text: BerryType[$data.type], attr: { href: `#!Berries/${BerryType[$data.type]}` }"></a>
+                    </td>
+                    <td data-bind="attr: { 'data-sort': $data.farmValue / $data.growthTime[PlotStage.Bloom] }">
                         <img src="./images/farmPoint.svg" width="18px"/>
-                        <ko data-bind="text: ($data.farmValue / $data.growthTime[PlotStage.Bloom]).toFixed(3)"></ko>
+                        <ko data-bind="text: ($data.farmValue / $data.growthTime[PlotStage.Bloom]).toLocaleString(undefined, {minimumFractionDigits: 3, maximumFractionDigits: 3})"></ko>
                     </td>
                     <td data-bind="text: `${$data.harvestAmount.toLocaleString()} berr${$data.harvestAmount === 1 ? 'y' : 'ies'}`, attr: { 'data-sort': $data.harvestAmount }"></td>
-                    <td>
+                    <td data-bind="attr: { 'data-sort': $data.farmValue }">
                         <img src="./images/farmPoint.svg" width="18px"/>
-                        <ko data-bind="text: $data.farmValue.toLocaleString(), attr: { 'data-sort': $data.farmValue }"></ko>
+                        <ko data-bind="text: $data.farmValue.toLocaleString()"></ko>
                     </td>
                     <td data-bind="text: GameConstants.formatTime($data.growthTime[PlotStage.Bloom])"></td>
                 </tr>

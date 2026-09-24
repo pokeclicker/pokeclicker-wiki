@@ -14,4 +14,4 @@ The base dungeon token for each route can be found on the [[Dungeon Tokens]] pag
 |Farm Points | 0.06x
 |Quest Points | 0.06x
 |Battle Points | 0.01x
-|Diamonds | 0.001x
+|Diamonds | 0.1x

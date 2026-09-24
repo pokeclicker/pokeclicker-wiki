@@ -1,4 +1,7 @@
-## Exclusive Pokémon
+
+---
+
+## Exclusive Pokémon {#exclusives}
 
 The following is a list of Pokémon obtainable in Sinnoh which cannot be found on Routes, in Dungeons, or through level-based evolutions of Pokémon caught in the region.
 
@@ -54,11 +57,13 @@ All starters can also be obtained as Wanderers using [[Berries/Occa]], [[Berries
 |[[File:Dragon_egg.png\|25px]] [[Items/Dragon Egg]] | [[File:pokemon/443.png\|25px]] [[Pokémon/Gible]] |
 
 ### Baby Pokémon
+
+[[Baby Pokémon]] has a complete list of species obtainable by breeding.
 |Baby|Adult|
 |---|---|
 | [[File:pokemon/438.png\|25px]] [[Pokémon/Bonsly]] | [[File:pokemon/185.png\|25px]] [[Pokémon/Sudowoodo]] |
 | [[File:pokemon/439.png\|25px]] [[Pokémon/Mime Jr.]] | [[File:pokemon/122.png\|25px]] [[Pokémon/Mr. Mime]] |
-| [[File:pokemon/440.png\|25px]] [[Pokémon/Happiny]] | [[File:pokemon/113.png\|25px]] [[Pokémon/Chansey]] |
+| [[File:pokemon/440.png\|25px]] [[Pokémon/Happiny]] | [[File:pokemon/113.png\|25px]] [[Pokémon/Chansey]]  or  [[File:pokemon/242.png\|25px]] [[Pokémon/Blissey]]|
 | [[File:pokemon/446.png\|25px]] [[Pokémon/Munchlax]] | [[File:pokemon/143.png\|25px]] [[Pokémon/Snorlax]] |
 | [[File:pokemon/458.png\|25px]] [[Pokémon/Mantyke]] | [[File:pokemon/226.png\|25px]] [[Pokémon/Mantine]] |
 | [[File:pokemon/489.png\|25px]] [[Pokémon/Phione]] | [[File:pokemon/490.png\|25px]] [[Pokémon/Manaphy]] |
@@ -72,13 +77,13 @@ Munchlax can also be obtained as a Wanderer by using [[Berries/Chilan]] berries.
 
 ### Level-dependent Pokémon
 **Note:** Level-dependant Pokémon evolve at or above the level specified excluding level 100. Pokémon at level 100 must be bred and retrained to the correct level.
-|Pokémon | Evolution | Required Level | Required Location |
+|Pokémon | Evolution | Required Level |
 |---|---|---|---|
-| [[File:pokemon/190.png\|25px]] [[Pokémon/Aipom]] | [[File:pokemon/424.png\|25px]] [[Pokémon/Ambipom]] | 32 | Any |
-| [[File:pokemon/108.png\|25px]] [[Pokémon/Lickitung]] | [[File:pokemon/463.png\|25px]] [[Pokémon/Lickilicky]] | 33 | Any |
-| [[File:pokemon/114.png\|25px]] [[Pokémon/Tangela]] | [[File:pokemon/465.png\|25px]] [[Pokémon/Tangrowth]] | 33 | Any |
-| [[File:pokemon/193.png\|25px]] [[Pokémon/Yanma]] | [[File:pokemon/469.png\|25px]] [[Pokémon/Yanmega]] | 33 | Any |
-| [[File:pokemon/221.png\|25px]] [[Pokémon/Piloswine]] | [[File:pokemon/473.png\|25px]] [[Pokémon/Mamoswine]] | 53 | Any |
+| [[File:pokemon/190.png\|25px]] [[Pokémon/Aipom]] | [[File:pokemon/424.png\|25px]] [[Pokémon/Ambipom]] | 32 |
+| [[File:pokemon/108.png\|25px]] [[Pokémon/Lickitung]] | [[File:pokemon/463.png\|25px]] [[Pokémon/Lickilicky]] | 33 |
+| [[File:pokemon/114.png\|25px]] [[Pokémon/Tangela]] | [[File:pokemon/465.png\|25px]] [[Pokémon/Tangrowth]] | 33 |
+| [[File:pokemon/193.png\|25px]] [[Pokémon/Yanma]] | [[File:pokemon/469.png\|25px]] [[Pokémon/Yanmega]] | 33 |
+| [[File:pokemon/221.png\|25px]] [[Pokémon/Piloswine]] | [[File:pokemon/473.png\|25px]] [[Pokémon/Mamoswine]] | 53 |
 
 ### Environment-dependent Pokémon
 **Note:** Environment-dependant Pokémon evolve at or above the level specified (excluding level 100) when leveled at a location that matches the environment specified. Pokémon at level 100 must be bred and then retrained to the correct level (level 20, or for Burmy level 1) while being inside the right location.

@@ -1,21 +1,26 @@
-Some game mechanics are dependant on the area a player is located in. These special locations are called Environments.
+Environment is a game mechanic that can affect Pokémon evolutions, Pokémon forms, and the catch rates of certain Poké Balls. A location's environment is usually not explicitly indicated in-game, but can be inferred by the background. A few environments, like [Moss Rock](#!Environments/Moss_Rock), are visible in Dungeons.
 
-### Pokémon
+### Evolutions
+Environmental evolutions occur when Pokémons level up in a certain environment after Level 20.
 
-Environmental evolutions occur when leveled up to or after level 20. Pokémon affected by this are listed below by [native region](#!Regions).
+| Native Region | Pokémon | Evolves Into | Required Environment |
+| --------------| ------- | --------- | ---------------------|
+| Sinnoh | [[Pokémon/Magneton]] | [[Pokémon/Magnezone]] | [[Environments/Magnetic Field]] |
+| Sinnoh | [[Pokémon/Nosepass]] | [[Pokémon/Probopass]] | [[Environments/Magnetic Field]] |
+| Sinnoh | [[Pokémon/Eevee]] | [[Pokémon/Leafeon]] | [Moss Rock](#!Environments/Moss_Rock) |
+| Sinnoh | [[Pokémon/Eevee]] | [[Pokémon/Glaceon]] | [Ice Rock](#!Environments/Ice_Rock) |
+| Alola  | [[Pokémon/Charjabug]] | [[Pokémon/Vikavolt]] | [[Environments/Magnetic Field]] |
 
-#### Sinnoh:
+### Forms
+Pokémon can change form when they are hatched or fed a rare candy in a certain environment.
 
-- [[Pokémon/Magneton]] into [[Pokémon/Magnezone]] in a [[Environments/Magnetic Field]]
-- [[Pokémon/Nosepass]] into [[Pokémon/Probopass]] in a [[Environments/Magnetic Field]]
-- [[Pokémon/Eevee]] into [[Pokémon/Leafeon]] in a [Moss Rock Environment](#!Environments/Moss_Rock)
-- [[Pokémon/Eevee]] into [[Pokémon/Glaceon]] in an [Ice Rock Environment](#!Environments/Ice_Rock)
+| Native Region | Pokémon | Changes Into | Required Environment |
+| --------------| ------- | --------- | ---------------------|
+| Sinnoh | [Burmy (Sand)](#!Pokémon/Burmy_(Sand)), [Burmy (Trash)](#!Pokémon/Burmy_(Trash)) | [Burmy (Plant)](#!Pokémon/Burmy_(Plant)) | [[Environments/Plant Cloak]] |
+| Sinnoh | [Burmy (Plant)](#!Pokémon/Burmy_(Plant)), [Burmy (Trash)](#!Pokémon/Burmy_(Trash)) | [Burmy (Sand)](#!Pokémon/Burmy_(Sand)) | [[Environments/Sandy Cloak]] |
+| Sinnoh | [Burmy (Plant)](#!Pokémon/Burmy_(Plant)), [Burmy (Sand)](#!Pokémon/Burmy_(Sand)) | [Burmy (Trash)](#!Pokémon/Burmy_(Trash)) | [[Environments/Trash Cloak]] |
 
-Burmy also changes its form depending on the environment, switching between [(Plant)](#!Pokémon/Burmy_(Plant)), [(Sand)](#!Pokémon/Burmy_(Sand)), and [(Trash)](#!Pokémon/Burmy_(Trash)) forms.
 
-#### Alola:
-- [[Pokémon/Charjabug]] into [[Pokémon/Vikavolt]] in a [[Environments/Magnetic Field]]
-
-### Pokéballs
+### Poké Balls
 
 [Water Environments](#!Environments/Water) increase the catch rate of the [[Items/Dive Ball]] by 15%.
