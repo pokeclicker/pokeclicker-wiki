@@ -1,3 +1,4 @@
+
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
@@ -41,3 +42,6 @@ Kelpsy Berries can mutate into the following Berries.
 | Used In                                       | Other Requirements |
 | :---:                                         | :---: |
 | [[File:Passho.png\|32px]] [[Berries/Passho]]  | [[File:Chesto.png\|32px]] [[Berries/Chesto]] [[File:Oran.png\|32px]] [[Berries/Oran]] [[File:Coba.png\|32px]] [[Berries/Coba]] |
+
+### Acquisition
+Kelpsy Berries can be obtained from the [[Towns/Hoppy Town Fishing Pond]].

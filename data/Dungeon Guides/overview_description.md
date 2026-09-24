@@ -1,12 +1,25 @@
-Dungeon Guides provide [dungeon](#!Dungeons) automation for an additional fee. Guides can be hired after clearing a dungeon at least ten times, and each have their own dungeon exploring pattern and wages.
+Dungeon Guides automatically run [[Dungeons]] for a fee. Guides can be hired after clearing a dungeon at least ten times. Each Dungeon Guide has their own dungeon exploring pattern and wages.
 
-### Hiring
-To hire a Guide, go to the [dungeon](#!Dungeons) location and click on the circular arrow next to the "Start \<dungeon cost\> [[File:dungeonToken.svg|18px]]" button.  If the hire button is missing, clear the Dungeon 10 times manually.  The pop-up window shows all available Guides, their stats and prices.  Click the "Hire!" button to bring up a second window where the number of runs and final price will be shown.  "Start!" begins the Guide's attempts.  Do not close the game while a Guide is working, as this will forfeit all remaining attempts with **no** refunds.
+### Common Exploration Behavior
+* Dungeon Guides are affected by the same time limitations as when you run a dungeon manually, and they are not guaranteed to clear a dungeon. Faster Dungeon Guides with better exploration patterns are more likely to succeed.
+* They will always interact with every tile they explore, opening chests, and throwing [[Poké Balls]] based on your catch filters.
+* Guides do not account for map visibility from [Flash](#!Dungeons/#flash) or from opening chests, relying exclusively on their own exploration pattern to make their next move.
+* Effects from [[Items/Time Flute]] and [[Oak Items]] apply to dungeon attempts made by guides.
+* **Do not close the game** while a Guide is working, as this will **forfeit all remaining attempts** with **no refunds**.
 
-The cost of using a Dungeon Guide is based on their pattern, speed, number of attempts and the base price of the Dungeon being attempted.  The more expensive the Dungeon, the higher the fee and the lower the odds of success for Guides that don't beeline to the boss.  The total cost of all attempts purchased must be paid up front when the Guide is hired.
+### How to Hire
+To hire a Guide, go to the [Dungeon](#!Dungeons) location and click on the **↻**{.btn .btn-primary .btn-sm} circular arrow next to the **Start  [[File:dungeonToken.svg|18px]] (Cost)**{.btn .btn-success .btn-sm} button. The button will not appear until you have cleared the Dungeon 10 times manully.
 
-#### Discount
-Dungeon Guide's costs get a bulk discount, based on the formula below.  The more dungeon attempts that are bought at once, the bigger the percentage discount offered on the Guide's fee.  This discount does not change the Dungeon Entry Cost which is always paid in full and in addition to the Guide's fee.  There are diminishing returns making minimum orders of 50-100 runs or full sets of 500 most efficient.
+The Hire a Dungeon Guide window will pop up and show all Guides, their stats, and prices. Click the **Hire!**{.btn .btn-primary .btn-sm} button to bring up a second window where the number of runs and final price will be shown. The total cost of all attempts purchased must be paid up front when the Guide is hired.
+
+Clicking the **Start!**{.btn .btn-primary .btn-sm} button begins the Guide's attempts.
+
+You can fire a Dungeon Guide at any time by clicking on the guide and clicking the **Fire**{.btn .btn-danger .btn-sm} button on the pop up.
+
+### Cost and Discount
+The cost of using a Dungeon Guide is based on their pattern, speed, number of attempts and the base price of the Dungeon being attempted. The more expensive the Dungeon, the higher the fee. Each Dungeon Guide's page has a calcuator for their total cost.
+
+You receive a discount when buying many dungeon attempts at once, with higher discount percentages at more attempts, based on the formula below. This discount does **not** change the Dungeon Entry Cost which is always paid in full, in addition to the Guide's fee. The discount has diminishing returns, making minimum orders of 50-100 runs or full sets of 500 most efficient.
 
 $$ \text{Discount} =  \frac{(\text{Dungeon Attempts} ^.975)}{\text{Dungeon Attempts}}$$
 
@@ -18,12 +31,8 @@ Dungeon Attempts | Discount
 25 | 7.73%
 50 | 9.32%
 100 | 10.87%
-200 | 12.41%
-300 | 13.29%
+250 | 12.89%
 500 | 14.39%
 1000 | 15.86%
 
-
-### Controls
-Dungeon Guides explore automatically, opening loot chests and battling wild Pokémon or trainers using your Pokémon team's total Attack.  [[Poké Balls]] will be thrown based on active Catch Filters.  Effects such as [[Items/Time Flute]], [[Items/Token Collector]] and [[Oak Items]] are all usable by Dungeon Guides.  Guides do not account for [Flash](#!Dungeons/#flash) or the lack thereof, relying exclusively on their own exploration pattern.
-
+----

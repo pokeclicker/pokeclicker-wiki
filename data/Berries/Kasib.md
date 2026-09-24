@@ -1,7 +1,10 @@
 ## Mutation Strategy {#mutation}
 ### Possible Planting Formations {#planting}
-Kasib is a special mutation.  Letting any berry wither after unlocking any Gen 4 or Gen 5 berry (any [ID #37](#!Berries/Occa) or higher) has a 5% chance of spawning a Kasib berry in its place, as long as there are no [[Berries/Colbur]] berries in the [[Farm]]. A good strategy is to plant a field of [[Berries/Cheri]] and wait for them to wither, while using
-[[Oak_Items/Sprayduck]] to speed turnover, replanting constantly until a Kasib mutates.  Due to a very high mutation chance [[Items/Surprise Mulch]] is generally not needed.; a field of 25 Cheri has a ~72% chance of success.
+Kasib cannot be mutated. Instead, Kasib can spawn once you have unlocked any Gen 4 or Gen 5 berry (any [ID #37](#!Berries/Occa) or higher) and a berry withers in the Farm.
+
+Whenever a berry withers, Kasib has a **5% of spawning** in its place, as long as there are no [[Berries/Colbur]] berries in the Farm. Spawning a Kasib is **not** considered a mutation.
+
+A good strategy is to plant a field of [[Berries/Cheri]] and wait for them to wither, while using [[Oak_Items/Sprayduck]] to speed turnover, replanting constantly until a Kasib mutates. A field of 25 Cheri has a ~72% chance of success.
 
 :::collapsed  Kasib Mutation - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.

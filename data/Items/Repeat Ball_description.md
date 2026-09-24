@@ -1,1 +1,1 @@
->Increased catch rate based on the "Captured" statistic and 5x EV gain rate on successful catch.  One of the rotating [[Daily Deals]] trades offered by [[Towns/Driftveil City]]'s [Berry Master](#!Berry_Masters).
+>Increased catch rate based on the "Captured" statistic and 5x [EV](#!Pokérus) gain rate on successful catch.  One of the rotating [[Daily Deals]] trades offered by [[Towns/Driftveil City]]'s [Berry Master](#!Berry_Masters).

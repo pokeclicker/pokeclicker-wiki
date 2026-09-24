@@ -3,7 +3,6 @@
 ### Possible Planting Formations {#planting}
 
 Spelon has a chance of mutating when a Taller or later stage [[Berries/Tamato]] is surrounded with at least 130, but no more than 160 points of Spicy flavor, and no more than 80 points of all other flavors. This will cause the Tamato to change into a Spelon and thus doesn't use an empty plot to trigger the mutation. You can fill your farm in the following way to obtain Spelon Berries. Purple squares indicate where mutations can occur.
-**WARNING:** While mutating or maturing a Spelon for harvest, do not equip [[Oak Items/Magma Stone]] since it may cause it to mutate into a [[Berries/Chople]].
 
 **Base Formation**
 ::: table-mutations

@@ -1,3 +1,4 @@
+
 ## Mutation Strategy {#mutation}
 
 ### Possible Planting Formations {#planting}
@@ -45,7 +46,7 @@ Pinap Berries can mutate into the following Berries.
 | [[File:Wacan.png\|32px]] [[Berries/Wacan]]    | [[File:Iapapa.png\|32px]] [[Berries/Iapapa]] [[File:Qualot.png\|32px]] [[Berries/Qualot]] [[File:Grepa.png\|32px]] [[Berries/Grepa]] |
 
 ### Acquisition
-Pinap Berries can be obtained from the following dungeons.
+Pinap Berries can be obtained from the [[Towns/Safari Zone]] and from the following dungeons.
 
 | Location	                        | Region | Tier	    |
 | :---:                             | :---:     | :---:         |
