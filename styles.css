@@ -541,3 +541,69 @@ a.town-badge[href]:hover {
 .town-badge-facility { --town-badge-rgb: var(--bs-info-rgb); }
 .town-badge-shop     { --town-badge-rgb: var(--bs-success-rgb); }
 .town-badge-travel   { border-style: dashed; }
+
+/* Route encounter tiles */
+.route-encounter {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0 0.75rem 0 0.125rem;
+  border: 1px solid rgba(var(--bs-body-color-rgb), 0.2);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+
+.route-encounter a,
+.route-encounter a:hover {
+  color: var(--bs-body-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.route-encounter a:hover {
+  text-decoration: underline;
+}
+
+.route-encounter .custom-tooltip-content {
+  bottom: 100%;
+}
+
+.route-encounter .custom-tooltip-content table {
+  margin-bottom: 0;
+}
+
+/* Set on hover when there isn't room above the tile, see RouteEncounter in components.js */
+.route-encounter-below .custom-tooltip-content {
+  top: 100%;
+  bottom: auto;
+  margin-top: 0.25rem;
+}
+
+.route-encounter-group {
+  display: flex;
+}
+
+.route-encounter-group > .route-encounter:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.route-encounter-addon {
+  display: flex;
+  align-items: center;
+  padding: 0 0.375rem;
+  border: 1px solid rgba(var(--bs-body-color-rgb), 0.2);
+  border-left: 0;
+  border-radius: 0 0.375rem 0.375rem 0;
+  background-color: rgba(var(--bs-body-color-rgb), 0.06);
+  font-size: 0.75rem;
+  cursor: help;
+}
+
+.route-encounter-addon:not(:last-child) {
+  border-radius: 0;
+}
+
+.route-encounter-addon:hover {
+  background-color: rgba(var(--bs-body-color-rgb), 0.12);
+}
