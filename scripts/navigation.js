@@ -1,6 +1,7 @@
 const { md } = require('./markdown-renderer');
 const { applyDatatables } = require('./datatables');
 const { createMarkDownEditor } = require('./markdown-editor');
+const { isPageLocked } = require('./locked-pages');
 const redirections = require('./redirections');
 
 // Load our error page for when we need it
@@ -103,6 +104,11 @@ onhashchange = (event) => {
   }
   if (type !== originalType || name !== originalName) {
     gotoPage(type, name ?? '', other, true);
+    return;
+  }
+  if (other == 'edit' && isPageLocked(type, name)) {
+    Wiki.alert('This page is locked and can\'t be edited.', 'warning', 5e3);
+    gotoPage(type, name ?? '', undefined, true);
     return;
   }
   clearPageSidebar();

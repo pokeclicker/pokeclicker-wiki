@@ -123,6 +123,7 @@
                     </li>
                     <!-- /ko -->
                     <li class="breadcrumb-item breadcrumb-no-divider ms-auto">
+                        <!-- ko ifnot: Wiki.isPageLocked(Wiki.pageType(), Wiki.pageName()) -->
                         <!-- ko if: Wiki.discord.ID() -->
                         <a href="#!" data-bind="attr: { href: `#!${Wiki.pageType() || ''}/${Wiki.pageName() || ''}/edit` }">Edit</a>
                         <!-- /ko -->
@@ -130,6 +131,7 @@
                         <a href="#!" data-bind="attr: { href: `https://discord.pokeclicker.com/proxy?action=login&redirect_uri=${encodeURIComponent(location.origin + location.pathname)}` }">
                             Sign In to Edit
                         </a>
+                        <!-- /ko -->
                         <!-- /ko -->
                     </li>
                 </ol>
