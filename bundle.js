@@ -78470,6 +78470,28 @@ module.exports = {
 }
 
 },{}],509:[function(require,module,exports){
+// Pages which can't be edited through the wiki's editor, as 'Type/Name' (or just 'Type' for its overview)
+// NOTE: this is only enforced in the wiki itself, the save endpoint doesn't check it
+// Matching ignores case, and underscores are treated as spaces (so they can be copied from the url)
+const lockedPages = [
+  '/',
+  'Farm Simulator',
+];
+
+const pageKey = (type, name) => `${type || ''}/${name || ''}`.toLowerCase();
+
+const lockedKeys = new Set(lockedPages.map((page) => {
+  const [type, name] = page.replace(/_/g, ' ').split('/');
+  return pageKey(type, name);
+}));
+
+const isPageLocked = (type, name) => lockedKeys.has(pageKey(type, name));
+
+module.exports = {
+  isPageLocked,
+};
+
+},{}],510:[function(require,module,exports){
 // import our version etc
 const package = require('../pokeclicker/package.json');
 
@@ -78482,6 +78504,7 @@ window.Wiki = {
   ...require('./markdown-renderer'),
   ...require('./discord'),
   ...require('./components'),
+  ...require('./locked-pages'),
   gameHelper: require('./gameHelper'),
   pokemon: require('./pages/pokemon'),
   farm: require('./pages/farm'),
@@ -78500,7 +78523,7 @@ window.Wiki = {
   ...require('./navigation'),
 }
 
-},{"../pokeclicker/package.json":502,"./components":503,"./datatables":504,"./discord":505,"./filterHelper":506,"./game":507,"./gameHelper":508,"./markdown-renderer":515,"./navigation":516,"./notifications":517,"./pages/dealChains":518,"./pages/dreamOrbs":519,"./pages/dungeonTokens":520,"./pages/dungeons":521,"./pages/experience":522,"./pages/farm":523,"./pages/farmSimulator":524,"./pages/gems":525,"./pages/items":526,"./pages/oakItems":527,"./pages/pokemon":528,"./pages/routes":529,"./pages/shopMon":530,"./typeahead":532}],510:[function(require,module,exports){
+},{"../pokeclicker/package.json":502,"./components":503,"./datatables":504,"./discord":505,"./filterHelper":506,"./game":507,"./gameHelper":508,"./locked-pages":509,"./markdown-renderer":516,"./navigation":517,"./notifications":518,"./pages/dealChains":519,"./pages/dreamOrbs":520,"./pages/dungeonTokens":521,"./pages/dungeons":522,"./pages/experience":523,"./pages/farm":524,"./pages/farmSimulator":525,"./pages/gems":526,"./pages/items":527,"./pages/oakItems":528,"./pages/pokemon":529,"./pages/routes":530,"./pages/shopMon":531,"./typeahead":533}],511:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 
 const getContent = (editor) => editor.value().split('\n').map(l => l.trimEnd()).join('\n');
@@ -78639,7 +78662,7 @@ module.exports = {
   createMarkDownEditor,
 }
 
-},{"./markdown-renderer":515}],511:[function(require,module,exports){
+},{"./markdown-renderer":516}],512:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -78655,7 +78678,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],512:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],513:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -78673,7 +78696,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],513:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],514:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -78689,7 +78712,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],514:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],515:[function(require,module,exports){
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
@@ -78705,7 +78728,7 @@ var plugin = Plugin(
 
 module.exports = plugin;
 
-},{"markdown-it":106,"markdown-it-regexp":103}],515:[function(require,module,exports){
+},{"markdown-it":106,"markdown-it-regexp":103}],516:[function(require,module,exports){
 const markdownit      = require('markdown-it');
 
 // Setup our markdown editor
@@ -78779,10 +78802,11 @@ module.exports = {
   md,
 }
 
-},{"./markdown-plugins/hidden-comments.js":511,"./markdown-plugins/image-size.js":512,"./markdown-plugins/wiki-links-badge.js":513,"./markdown-plugins/wiki-links.js":514,"markdown-it":106,"markdown-it-attrs":96,"markdown-it-container":99,"markdown-it-mathjax3":100,"markdown-it-multimd-table":101}],516:[function(require,module,exports){
+},{"./markdown-plugins/hidden-comments.js":512,"./markdown-plugins/image-size.js":513,"./markdown-plugins/wiki-links-badge.js":514,"./markdown-plugins/wiki-links.js":515,"markdown-it":106,"markdown-it-attrs":96,"markdown-it-container":99,"markdown-it-mathjax3":100,"markdown-it-multimd-table":101}],517:[function(require,module,exports){
 const { md } = require('./markdown-renderer');
 const { applyDatatables } = require('./datatables');
 const { createMarkDownEditor } = require('./markdown-editor');
+const { isPageLocked } = require('./locked-pages');
 const redirections = require('./redirections');
 
 // Load our error page for when we need it
@@ -78885,6 +78909,11 @@ onhashchange = (event) => {
   }
   if (type !== originalType || name !== originalName) {
     gotoPage(type, name ?? '', other, true);
+    return;
+  }
+  if (other == 'edit' && isPageLocked(type, name)) {
+    Wiki.alert('This page is locked and can\'t be edited.', 'warning', 5e3);
+    gotoPage(type, name ?? '', undefined, true);
     return;
   }
   clearPageSidebar();
@@ -79038,7 +79067,7 @@ module.exports = {
     gotoPageClick,
 };
 
-},{"./datatables":504,"./markdown-editor":510,"./markdown-renderer":515,"./redirections":531}],517:[function(require,module,exports){
+},{"./datatables":504,"./locked-pages":509,"./markdown-editor":511,"./markdown-renderer":516,"./redirections":532}],518:[function(require,module,exports){
 const alert = (message, type = 'primary', timeout = 5e3) => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('alert', `alert-${type}`, 'alert-dismissible', 'fade', 'show');
@@ -79074,7 +79103,7 @@ module.exports = {
   alert,
 };
 
-},{}],518:[function(require,module,exports){
+},{}],519:[function(require,module,exports){
 
 class DealProfit {
     constructor(type, amount) {
@@ -79238,7 +79267,7 @@ function getDealChains(
 module.exports = {
     getDealChains,
 }
-},{}],519:[function(require,module,exports){
+},{}],520:[function(require,module,exports){
 const getOrbLoot = (orb) => {
   const weightSum = orb.items.reduce((acc, item) => acc + item.weight, 0);
   return orb.items.map(item => {
@@ -79256,7 +79285,7 @@ module.exports = {
   getOrbLoot
 };
 
-},{}],520:[function(require,module,exports){
+},{}],521:[function(require,module,exports){
 const checkExist = setInterval(function() {
     if ($('.tablinks').length) {
         $('.tablinks')[0].click();
@@ -79355,7 +79384,7 @@ module.exports = {
     highestRoute,
     setWeather,
 };
-},{}],521:[function(require,module,exports){
+},{}],522:[function(require,module,exports){
 const { requirementHints } = require('../gameHelper');
 
 const getTableClearCounts = (dungeon) => {
@@ -79790,7 +79819,7 @@ module.exports = {
     getDungeonTokenCostSteps,
 };
 
-},{"../gameHelper":508}],522:[function(require,module,exports){
+},{"../gameHelper":508}],523:[function(require,module,exports){
 const { applyDatatables } = require('../datatables');
 const { unwrapRequirement, routeUnlockRegion, gymUnlockRegion } = require('../gameHelper');
 const { routeAvgHp } = require('./gems');
@@ -79957,7 +79986,7 @@ module.exports = {
     refreshWeather,
 };
 
-},{"../datatables":504,"../gameHelper":508,"./gems":525}],523:[function(require,module,exports){
+},{"../datatables":504,"../gameHelper":508,"./gems":526}],524:[function(require,module,exports){
 /**
  * Returns the primary mutation for a berry.
  * Filters out enigma mutations, as they cannot be used to obtain a berry for the first time.
@@ -79977,7 +80006,7 @@ module.exports = {
     getPrimaryMutation,
 };
 
-},{}],524:[function(require,module,exports){
+},{}],525:[function(require,module,exports){
 const selectedPlotIndex = ko.observable(12);
 const selectedPlot = ko.pureComputed(() => App.game.farming.plotList[selectedPlotIndex()]);
 const plotLabelsEnabled = ko.observable(false);
@@ -80311,7 +80340,7 @@ module.exports = {
     berryList,
 }
 
-},{}],525:[function(require,module,exports){
+},{}],526:[function(require,module,exports){
 // routeAvgHp copied from PokemonFactory.generateWildPokemon
 const routeAvgHp = (region, route) => {
     const poke = [...new Set(Object.values(Routes.getRoute(region, route).pokemon).flat().map(p => p.pokemon ?? p).flat())];
@@ -80477,7 +80506,7 @@ module.exports = {
     gemGymsPerFlute
 }
 
-},{}],526:[function(require,module,exports){
+},{}],527:[function(require,module,exports){
 const getItemName =  (itemType, itemId) => {
     switch (itemType) {
         case ItemType.item:
@@ -80584,7 +80613,7 @@ module.exports = {
     getTownsWithTradesForItem,
 };
 
-},{}],527:[function(require,module,exports){
+},{}],528:[function(require,module,exports){
 const getOakItemBonus = (oakItem, level) => {
     const bonus = oakItem.bonusList[level];
     switch (oakItem.name) {
@@ -80659,7 +80688,7 @@ module.exports = {
     getOakItemUpgradeReq,
 };
 
-},{}],528:[function(require,module,exports){
+},{}],529:[function(require,module,exports){
 
 const getBreedingAttackBonus = (vitaminsUsed, baseAttack) => {
     const attackBonusPercent = (GameConstants.BREEDING_ATTACK_BONUS + vitaminsUsed[GameConstants.VitaminType.Calcium]) / 100;
@@ -80760,7 +80789,7 @@ module.exports = {
     getRouteRoamingChance,
 }
 
-},{}],529:[function(require,module,exports){
+},{}],530:[function(require,module,exports){
 const { requirementHints } = require('../gameHelper');
 
 const toEncounters = (names, req, weight = 1) => {
@@ -80790,7 +80819,7 @@ module.exports = {
     getRouteEncounterGroups,
 };
 
-},{"../gameHelper":508}],530:[function(require,module,exports){
+},{"../gameHelper":508}],531:[function(require,module,exports){
 function getShopItemsByCurrencyAndFilter(currency, itemFilter) {
     var towns = Object.values(TownList).filter(t => t.region <= GameConstants.MAX_AVAILABLE_REGION);
     var filteredTowns = [];
@@ -80836,7 +80865,7 @@ module.exports = {
     getShopItems,
     getUniqueItems,
 };
-},{}],531:[function(require,module,exports){
+},{}],532:[function(require,module,exports){
 const redirections = [
     ({type, name}) => {
         if (type === 'Pokemon') {
@@ -80895,7 +80924,7 @@ module.exports = {
     redirections
 };
 
-},{}],532:[function(require,module,exports){
+},{}],533:[function(require,module,exports){
 const { gotoPage } = require('./navigation');
 const { getAvailablePokemon } = require('./pages/pokemon');
 
@@ -81531,4 +81560,4 @@ module.exports = {
   searchViaKeyword: substringMatcher(searchOptions),
 };
 
-},{"./navigation":516,"./pages/pokemon":528}]},{},[509]);
+},{"./navigation":517,"./pages/pokemon":529}]},{},[510]);
