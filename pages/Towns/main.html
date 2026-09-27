@@ -4,31 +4,51 @@
         <h3>Town not found...</h3>
     <!-- /ko -->
     <!-- ko with: TownList[Wiki.pageName()] -->
-    <div class="float-lg-end col-lg-4 m-2">
-        <table class="table table-hover table-striped table-bordered">
+    <div class="float-lg-end col-lg-4 m-2 mb-1" data-bind="pageSidebar">
+        <table class="table table-hover table-striped table-bordered mb-0">
             <thead>
                 <tr>
                     <th class="text-center" colspan="2" data-bind="text: Wiki.pageName()"></th>
                 </tr>
             </thead>
             <tbody>
+                <!-- ko let: { image: ko.observable('map') } -->
                 <tr>
-                    <td class="text-center" colspan="2">
-                        <img class="w-100" data-bind="attr: {src: `images/${Wiki.pageName()}.png`}"/>
+                    <td class="text-center p-0" colspan="2">
+                        <div class="btn-group btn-group-sm w-100" role="group">
+                            <input type="radio" class="btn-check" name="image" id="btnmap" autocomplete="off" checked>
+                            <label class="btn btn-primary rounded-0" for="btnmap" data-bind="click: () => { image('map'); return true; },
+                                tooltip: {
+                                    title: 'Town location marked on the below map with a pink overlay.',
+                                    trigger: 'hover',
+                                    placement: 'top',
+                                }">Map Location</label>
+                            <input type="radio" class="btn-check" name="image" id="btntown" autocomplete="off">
+                            <label class="btn btn-primary rounded-0" for="btntown" data-bind="click: () => { image('town'); return true; }">Town</label>
+                        </div>
                     </td>
                 </tr>
+                <!-- ko if: image() == 'map' -->
                 <!-- ko with: Wiki.gameHelper.getLocationOverlaySVG(Wiki.pageName(), $data.region, $data.subRegion), as: 'filePath' -->
                 <tr data-bind="with: Wiki.gameHelper.overlaySVG(), as: 'overlaySVG'">
                     <td colspan="2">
                         <div id="map-container">
                             <div id="map-overlay" data-bind="html: overlaySVG"></div>
-                            <img class="w-100" width="1600" data-bind="attr: {
-                                src:`images/${filePath}.png?`
-                            }" />
+                            <img class="w-100" width="1600" data-bind="attr: { src:`images/${filePath}.png` }" />
                         </div>
                     </td>
                 </tr>
                 <!-- /ko -->
+                <!-- /ko -->
+                <!-- ko if: image() == 'town' -->
+                <tr>
+                    <td colspan="2">
+                        <img class="w-100" data-bind="attr: {src: `images/${Wiki.pageName()}.png`}"/>
+                    </td>
+                </tr>    
+                <!-- /ko -->
+                <!-- /ko -->
+
                 <tr>
                     <td>Region</td>
                     <td>
@@ -48,22 +68,20 @@
             </tbody>
         </table>
     </div>
-    <div class="mt-3" data-bind="if: $data.content">
+    <!-- ko with: $data.content.filter(c => !Wiki.gameHelper.hasTownShopTable(c)) -->
+    <div class="mt-3" data-bind="if: $data.length">
         <h3>Content:</h3>
-        <div data-bind="foreach: $data.content">
-            <!-- ko if: $data.__proto__.constructor.name == "Gym" -->
-                <a class="badge text-bg-secondary" href="#!" data-bind="text: $data.__proto__.constructor.name + ': ' + $data.buttonText, 
-                attr: { href: `#!Gyms/${$data.town}` }"></a>
-            <!-- /ko -->
-            <!-- ko ifnot: $data.__proto__.constructor.name == "Gym" -->
-                <span class="badge text-bg-secondary" data-bind="text: GameConstants.camelCaseToString($data.__proto__.constructor.name.replace(/(MoveTo|TownContent|Temporary)/, ''))"></span>
+        <div class="d-flex flex-wrap gap-1" data-bind="foreach: $data">
+            <!-- ko with: Wiki.gameHelper.getTownContentBadge($data) -->
+            <a class="badge town-badge" data-bind="text: $data.text, attr: { href: $data.href }, css: $data.badgeClass"></a>
             <!-- /ko -->
         </div>
     </div>
+    <!-- /ko -->
     <div class="mt-3" data-bind="if: $data.npcs">
         <h3>NPC(s):</h3>
-        <div data-bind="foreach: $data.npcs">
-            <span class="badge text-bg-secondary" data-bind="text: $data.name"></span>
+        <div class="d-flex flex-wrap gap-1" data-bind="foreach: $data.npcs">
+            <span class="badge town-badge" data-bind="text: $data.name"></span>
         </div>
     </div>
     <!-- ko with: $data.content.filter((c) => c instanceof Shop && c.items.length > 0) -->
@@ -288,7 +306,7 @@
                     <!-- ko if: $parent.region == GameConstants.Region.johto -->
                     <td class="align-middle">
                         <img width="18" class="me-1" data-bind="attr: { src: `./images/contestToken.svg` }" />
-                        <knockout data-bind="text: Math.floor(pokemonMap[$data.name].attack / 5), attr: { 'data-sort': pokemonMap[$data.name].attack }"></knockout> 
+                        <knockout data-bind="text: Math.round(pokemonMap[$data.name].attack ** .5 + 16), attr: { 'data-sort': pokemonMap[$data.name].attack }"></knockout>
                     </td>
                     <!-- /ko -->
                 </tr>

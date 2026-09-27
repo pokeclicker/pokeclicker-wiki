@@ -16,6 +16,24 @@ ko.components.register('pokemon-summary', {
   template: { fromUrl: 'pokemon-summary' },
 });
 
+function RouteEncounter(params) {
+  this.encounter = params.encounter;
+
+  // Show the Pokémon summary below the tile when it wouldn't fit between the tile and the fixed navbar
+  this.placeSummary = (data, event) => {
+    const tile = event.currentTarget;
+    const summary = tile.querySelector('.custom-tooltip-content');
+    const navbarBottom = document.getElementById('nav-bar')?.getBoundingClientRect().bottom ?? 0;
+    tile.classList.remove('route-encounter-below');
+    tile.classList.toggle('route-encounter-below', summary.getBoundingClientRect().top < navbarBottom);
+  };
+}
+
+ko.components.register('route-encounter', {
+  viewModel: RouteEncounter,
+  template: { fromUrl: 'route-encounter' },
+});
+
 function GenericDeal(params) {
   this.model = params.model;
 }

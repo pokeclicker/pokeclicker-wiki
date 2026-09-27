@@ -109,7 +109,7 @@ const searchOptions = [
     type: 'Berries',
     page: '',
   },
-  ...App.game.farming.berryData.map(b => ({
+  ...BerryList.map(b => ({
     display: `${BerryType[b.type]} Berry`,
     type: 'Berries',
     page: BerryType[b.type],
@@ -338,6 +338,7 @@ const searchOptions = [
     display: 'Roaming Pokémon',
     type: 'Roaming Pokémon',
     page: '',
+    redirects: ['Boosted Route']
   },
   // Baby Pokémon
   {
@@ -391,6 +392,12 @@ const searchOptions = [
   {
     display: 'Battle Points',
     type: 'Battle Points',
+    page: '',
+  },
+  // Experience
+  {
+    display: 'Experience',
+    type: 'Experience',
     page: '',
   },
   //Challenge Modes
@@ -485,6 +492,18 @@ const searchOptions = [
   {
     display: 'Game Updates',
     type: 'Game Updates',
+    page: '',
+  },
+  // Veteran Shop
+  {
+    display: 'Veteran Shop',
+    type: 'Veteran Shop',
+    page: '',
+  },
+  // Fossil Pokemon
+  {
+    display: 'Fossil Pokémon',
+    type: 'Fossil Pokémon',
     page: '',
   },
 ];

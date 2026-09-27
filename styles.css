@@ -480,6 +480,10 @@ td.tight {
   background-color: var(--bs-body-bg);
 }
 
+.tooltip-multiline .tooltip-inner {
+  white-space: pre-line;
+}
+
 .obtain-methods .accordion-button img {
   padding-right: 10px;
 }
@@ -508,3 +512,113 @@ button.form-select::after {
 .day-cycle-day   { background: #f4a470; }
 .day-cycle-dusk  { background: #93558a; }
 .day-cycle-night { background: #4a6252; }
+
+.badge.town-badge {
+  color: var(--bs-body-color);
+  background-color: rgba(var(--town-badge-rgb, var(--bs-body-color-rgb)), var(--town-badge-bg-alpha, 0.06));
+  border: 1px solid rgba(var(--town-badge-rgb, var(--bs-body-color-rgb)), var(--town-badge-border-alpha, 0.35));
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a.town-badge:hover {
+  color: var(--bs-body-color);
+}
+
+a.town-badge[href]:hover {
+  background-color: rgba(var(--town-badge-rgb, var(--bs-body-color-rgb)), var(--town-badge-hover-alpha, 0.15));
+}
+
+.town-badge-gym, .town-badge-dungeon, .town-badge-battle, .town-badge-facility, .town-badge-shop {
+  --town-badge-bg-alpha: 0.12;
+  --town-badge-border-alpha: 0.8;
+  --town-badge-hover-alpha: 0.25;
+}
+
+.town-badge-gym      { --town-badge-rgb: var(--bs-danger-rgb); }
+.town-badge-dungeon  { --town-badge-rgb: var(--bs-primary-rgb); }
+.town-badge-battle   { --town-badge-rgb: var(--bs-warning-rgb); }
+.town-badge-facility { --town-badge-rgb: var(--bs-info-rgb); }
+.town-badge-shop     { --town-badge-rgb: var(--bs-success-rgb); }
+.town-badge-travel   { border-style: dashed; }
+
+/* Route encounter tiles */
+.route-encounter {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0 0.75rem 0 0.125rem;
+  border: 1px solid rgba(var(--bs-body-color-rgb), 0.2);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+
+.route-encounter a,
+.route-encounter a:hover {
+  color: var(--bs-body-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.route-encounter a:hover {
+  text-decoration: underline;
+}
+
+.route-encounter .custom-tooltip-content {
+  bottom: 100%;
+  width: max-content;
+  overflow: hidden;
+  border: 1px solid rgba(var(--bs-body-color-rgb), 0.4);
+  border-radius: 0.375rem;
+  background-color: var(--bs-body-bg);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.route-encounter .custom-tooltip-content table {
+  margin-bottom: 0;
+  border-style: hidden;
+}
+
+/* Set on hover when there isn't room above the tile, see RouteEncounter in components.js */
+.route-encounter-below .custom-tooltip-content {
+  top: 100%;
+  bottom: auto;
+  margin-top: 0.25rem;
+}
+
+.route-encounter-group {
+  display: flex;
+}
+
+.route-encounter-group > .route-encounter:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.route-encounter-addon {
+  display: flex;
+  align-items: center;
+  padding: 0 0.375rem;
+  border: 1px solid rgba(var(--bs-body-color-rgb), 0.2);
+  border-left: 0;
+  border-radius: 0 0.375rem 0.375rem 0;
+  background-color: rgba(var(--bs-body-color-rgb), 0.06);
+  font-size: 0.75rem;
+  cursor: help;
+}
+
+.route-encounter-addon:not(:last-child) {
+  border-radius: 0;
+}
+
+.route-encounter-addon:hover {
+  background-color: rgba(var(--bs-body-color-rgb), 0.12);
+}
+
+/* Tier rows (Common, Rare, ...) in the dungeon loot table, the row also has .table-active for a tinted background */
+.dungeon-loot-tier {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}

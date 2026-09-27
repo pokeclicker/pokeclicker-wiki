@@ -5,7 +5,6 @@
 Pinkan has a chance of mutating by surrounding an empty plot with all Pink colored berries from #3 [[Berries/Pecha]] to #33 [[Berries/Watmel]]. Also, you MUST have started the Questline [[Quest Lines/Team Rocket's Pinkan Theme Park]] in order to be able to mutate this berry. You can fill your farm in the following way to obtain Pinkan Berries. Purple squares indicate where mutations can occur.
 **Note:** The planted berries can create [[Berries/Roseli]] or [[Berries/Magost]] as well as Pinkan.  Remove them with [[Items/Berry Shovel]]s in order to reopen the spots for Pinkan to mutate.
 **Note:** It's recommended to use [[Items/Freeze Mulch]] on the short lived berries (Pecha, Persim, Mago & Nanab) in this setup to give the formation long enough to produce a Pinkan reliably.
-**WARNING:** Trying to mutate Pinkan while having the [[Oak Items/Sprinklotad]] equipped may result in your Watmel mutating into [[Berries/Shuca]].
 
 **Base Formation**
 ::: table-mutations

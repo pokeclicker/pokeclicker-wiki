@@ -74,11 +74,12 @@ QuestLineHelper.loadQuestLines();
 BattleFrontierRunner.stage(100);
 BattleFrontierBattle.generateNewEnemy();
 AchievementHandler.initialize(multiplier, new Challenges());
+AchievementHandler.calculateMaxBonus();
 
 BerryDeal.generateDeals(now);
 GemDeals.generateDeals();
 ShardDeal.generateDeals();
-GenericDeal.generateDeals();
+GenericDeal.generateDeals(now);
 SafariPokemonList.generateSafariLists(); // This needs to be after anything that generates shopmon due to Friend Safari calcs
 Weather.generateWeather(now);
 

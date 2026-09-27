@@ -2,7 +2,7 @@
 <h2>Route not found...</h2>
 <!-- /ko -->
 <div data-bind="with: Routes.regionRoutes.find(r => r.routeName == Wiki.pageName())">
-    <div class="float-lg-end col-lg-4 m-2">
+    <div class="float-lg-end col-lg-4 m-2 mb-1" data-bind="pageSidebar">
         <div class="d-flex justify-content-between mb-1" data-bind="using: Routes.regionRoutes.find(r => r.routeName == Wiki.pageName())">
             <div data-bind="with: Routes['regionRoutes'][Routes['regionRoutes'].findIndex(route => route.routeName === Wiki.pageName()) -1]">
                 <button class="btn btn-link btn-sm" type="button" style="text-decoration: none;"
@@ -13,7 +13,7 @@
                         data-bind="text: `${$data.routeName}  →`, click: () => Wiki.gotoPage('Routes', $data.routeName)"></button>
             </div>
         </div>
-        <table class="table table-hover table-striped table-bordered">
+        <table class="table table-hover table-striped table-bordered mb-0">
             <thead>
                 <tr>
                     <th class="text-center" colspan="2" data-bind="text: Wiki.pageName()"></th>
@@ -48,54 +48,35 @@
                         <a href="#!" data-bind="text: GameConstants.camelCaseToString($data), attr: { href: `#!Environments/${GameConstants.camelCaseToString($data)}` }"></a><br />
                     </td>
                 </tr>
+                <tr>
+                    <td>Base HP</td>
+                    <td data-bind="text: Math.round(PokemonFactory.routeHealth($data.number, $data.region)).toLocaleString()"></td>
+                </tr>
+                <tr>
+                    <td>Level</td>
+                    <td data-bind="text: Math.round(PokemonFactory.routeLevel($data.number, $data.region)).toLocaleString()"></td>
+                </tr>
+                <tr>
+                    <td>Egg Steps</td>
+                    <td data-bind="text: +Math.sqrt(MapHelper.normalizeRoute($data.number, $data.region)).toFixed(2)"></td>
+                </tr>
+                <tr>
+                    <td>Roamer Chance</td>
+                    <td data-bind="text: `1/${Wiki.pokemon.getRouteRoamingChance($data.region, $data.subRegion ?? 0, $data.number).toLocaleString()}`"></td>
+                </tr>
             </tbody>
         </table>
     </div>
     <div>
-        <h3>Base HP:</h3>
-        <p data-bind="text: Math.round(PokemonFactory.routeHealth($data.number, $data.region)).toLocaleString()"></p>
-    </div>
-    <div>
-        <h3>Level:</h3>
-        <p data-bind="text: Math.round(PokemonFactory.routeLevel($data.number, $data.region)).toLocaleString()"></p>
-    </div>
-    <div>
-        <h3>Egg Steps:</h3>
-        <p data-bind="text: +Math.sqrt(MapHelper.normalizeRoute($data?.number, $data.region)).toFixed(2)"></p>
-    </div>
-    <div>
-        <h3>Roamer Chance:</h3>
-        <p data-bind="text: `1/${Wiki.pokemon.getRouteRoamingChance($data.region, $data.subRegion ?? 0, $data.number).toLocaleString()}`"></p>
-    </div>
-    <div>
         <h3>Encounters</h3>
-        <!-- ko foreach: Object.entries($data.pokemon) -->
-        <!-- ko if: $data[1].length -->
-        <h4 data-bind="text: GameConstants.camelCaseToString($data[0])"></h4>
-        <div data-bind="foreach: $data[1]">
-            <!-- ko if: typeof $data == 'string' -->
-            <div class="custom-tooltip">
-                <img width="32px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data).id + '.png'}" />
-                <a class="badge text-bg-secondary" href="#!" data-bind="text: $data, attr: { href: `#!Pokemon/${$data}` }"></a>
-                <span class="custom-tooltip-content text-nowrap mb-1">
-                    <pokemon-summary params="pokemonData: pokemonList.find((p) => p.name == $data)"></pokemon-summary>
-                </span>
-            </div>
-            <!-- /ko -->
-            <!-- ko ifnot: typeof $data == 'string' -->
-            <!-- ko foreach: $data.pokemon -->
-            <a class="badge text-bg-secondary" href="#!" data-bind="text: `${$data} 🔒`, attr: { href: `#!Pokemon/${$data}` },
-              tooltip: {
-                  title: $parent.req.hint(),
-                  html: false,
-                  placement: 'bottom',
-                  trigger: 'hover'
-              }"></a>
-            <!-- /ko -->
-            <!-- /ko -->
-        </div>
-        <br />
+        <!-- ko foreach: Wiki.routes.getRouteEncounterGroups($data) -->
+        <h4 class="mt-3 mb-2" data-bind="text: $data.title"></h4>
+        <!-- ko if: $data.note -->
+        <div class="small text-muted mb-1" data-bind="text: $data.note"></div>
         <!-- /ko -->
+        <div class="d-flex flex-wrap gap-2" data-bind="foreach: $data.pokemon">
+            <route-encounter params="encounter: $data"></route-encounter>
+        </div>
         <!-- /ko -->
     </div>
 </div>

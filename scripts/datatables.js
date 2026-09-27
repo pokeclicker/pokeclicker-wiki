@@ -18,7 +18,7 @@ const applyDatatables = () => {
             let order = [[0, 'asc']];
 
             // If we have less than 40 rows, we don't need pagination, but table will still be sortable
-            if (rows < 40) {
+            if (rows < 40 && !element.classList.contains('always-data-tables')) {
                 pageLength = 40;
                 dom = `<'row'<'col-sm-12 col-md-6'><'col-sm-12 col-md-6'>><'row table-responsive'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'><'col-sm-12 col-md-7 text-center'>>`
                 order = [];

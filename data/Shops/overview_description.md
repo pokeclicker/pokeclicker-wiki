@@ -13,7 +13,8 @@ Most items that are purchased with currency (e.g. Pokédollars, Quest Points) in
 
 Exceptions:
 - [[Items/Poké Ball]] never increases in price.
-- [[Items/Master Ball]], [[Vitamins]], and [[Items/Key Stone]] increase in price permanently (up to a cap).
+- [[Vitamins]] and [[Items/Key Stone]] increase in price permanently, up to a cap of 100x their base price.
+- [[Items/Master Ball]] increase in price for each currency permanently with no cap.
 
 
 :::collapsed Price Change Formulas
@@ -33,7 +34,7 @@ $\text{New Reduced Price} =  \large\frac{\text{Item Price}}{1.00045}${.overflow-
 
 Sells items for currency. Stocks consumables such as Poké Balls and evolution items, in addition to other regional items.
 
-- A shortcut to an **Explorers Poké Mart** is unlocked after beating the Johto Champion that sells Poké Balls, battle items, and restores. The default hotkey to open this shop is **E**.
+- A shortcut to an **Explorers Poké Mart** is unlocked after beating the Johto Champion that sells Poké Balls, battle items, and restores. The default hotkey to open this shop is **E**. After defeating Champion Cynthia and unlocking all farm plots it also stocks the [[Farm]] mulches and shovels.
 - Poké Marts at Pokémon Leagues sell [[Items/Master Ball]] and [[Items/Vitamins]].
 
 #### Berry Masters

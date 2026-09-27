@@ -1,0 +1,100 @@
+<div>
+    <div class="d-flex flex-wrap align-items-center mb-3" style="column-gap: 1.5rem; row-gap: 0.5rem;">
+        <div class="d-flex align-items-center gap-2">
+            <label class="fw-bold" for="experience-max-region">Max Region</label>
+            <select id="experience-max-region" class="form-select form-select-sm w-auto" data-bind="
+                options: GameHelper.enumNumbers(GameConstants.Region).filter((r) => r <= GameConstants.MAX_AVAILABLE_REGION && r != GameConstants.Region.none),
+                optionsText: Wiki.gameHelper.getRegionName,
+                value: Wiki.experience.maxRegion" autocomplete="off"></select>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            <label class="fw-bold" for="experience-max-health">Max Health</label>
+            <input id="experience-max-health" type="text" inputmode="numeric" class="form-control form-control-sm" style="width: 10rem;" placeholder="Any" data-bind="textInput: Wiki.experience.maxHealth" autocomplete="off">
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            <!-- ko let: { region: GameConstants.Region.galar } -->
+            <span class="btn btn-sm text-dark d-flex align-items-center pe-none" data-bind="style: { 'background-color': Weather.weatherConditions[Weather.regionalWeather[region]()].color }">
+                <ko class="me-1" data-bind="text: `${Wiki.gameHelper.getRegionName(region)}:`"></ko>
+                <img width="18" class="me-1" data-bind="attr: { src: `./pokeclicker/docs/assets/images/weather/${WeatherType[Weather.regionalWeather[region]()]}.png` }">
+                <ko data-bind="text: GameConstants.humanifyString(WeatherType[Weather.regionalWeather[region]()])"></ko>
+            </span>
+            <!-- /ko -->
+            <button class="btn btn-primary btn-sm" data-bind="click: Wiki.experience.refreshWeather">Refresh Weather</button>
+        </div>
+    </div>
+
+    <!-- ko foreach: { data: [Wiki.experience.tableVersion()], as: 'version' } -->
+    <div class="table-responsive">
+        <table id="experience-table" class="table table-hover table-striped table-bordered always-data-tables">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Region</th>
+                    <th>Subregion</th>
+                    <th>Location</th>
+                    <th>Battle Type</th>
+                    <th style="text-align: right;">Maximum HP</th>
+                    <th style="text-align: right;">Egg Steps</th>
+                    <th style="text-align: right;">Average EXP</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: Wiki.experience.getRows()">
+                <tr>
+                    <td class="text-nowrap" data-bind="attr: { 'data-sort': $data.region }">
+                        <a class="text-decoration-none" data-bind="text: Wiki.gameHelper.getRegionName($data.region), attr: { href: `#!Regions/${Wiki.gameHelper.getRegionName($data.region)}` }"></a>
+                        <!-- ko if: $data.unlockRegion > $data.region -->
+                        <span class="small text-muted" data-bind="text: `(after ${Wiki.gameHelper.getRegionName($data.unlockRegion)})`"></span>
+                        <!-- /ko -->
+                    </td>
+                    <td data-bind="text: $data.subRegionName"></td>
+                    <td data-bind="attr: { 'data-sort': $index() }">
+                        <a class="text-decoration-none" data-bind="text: $data.displayName, attr: { href: `#!${$data.type}s/${$data.name}` }"></a>
+                    </td>
+                    <td data-bind="text: $data.type"></td>
+                    <td class="text-nowrap" style="text-align: right;" data-bind="text: `${$data.maxHealth.toLocaleString()} ❤️`, attr: { 'data-sort': $data.maxHealth }"></td>
+                    <td style="text-align: right;" data-bind="text: $data.eggSteps.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }), attr: { 'data-sort': $data.eggSteps }"></td>
+                    <td style="text-align: right;" data-bind="text: Math.round($data.avgExp).toLocaleString(), attr: { 'data-sort': $data.avgExp }"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- /ko -->
+</div>
+<hr>
+<h2 id="levels">Experience needed per Level</h2>
+<p>Every Pokémon has one of six level types, which decides how much EXP it needs to level up. The table below lists the total EXP needed to reach each level for every level type.</p>
+<!-- ko let: { levelTypes: GameHelper.enumNumbers(LevelType) } -->
+<div class="accordion mb-3">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experience-levels-collapse">
+                Show Table
+            </button>
+        </h2>
+        <div id="experience-levels-collapse" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped table-bordered no-data-tables mb-0">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Level</th>
+                                <!-- ko foreach: GameHelper.enumStrings(LevelType) -->
+                                <th style="text-align: right;" data-bind="text: $data"></th>
+                                <!-- /ko -->
+                            </tr>
+                        </thead>
+                        <!-- levelRequirements[levelType][level - 1] is the total EXP needed to reach that level, the last entry is a sentinel for the level cap -->
+                        <tbody data-bind="foreach: { data: levelRequirements[LevelType.erratic].slice(0, -1).map((requirement, index) => index + 1), as: 'level' }">
+                            <tr>
+                                <td data-bind="text: level"></td>
+                                <!-- ko foreach: { data: levelTypes, as: 'levelType' } -->
+                                <td style="text-align: right;" data-bind="text: levelRequirements[levelType][level - 1].toLocaleString()"></td>
+                                <!-- /ko -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /ko -->

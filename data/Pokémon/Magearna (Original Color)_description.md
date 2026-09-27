@@ -1,1 +1,2 @@
-The "Mystery Gift" NPC will offer you Magearna (Original Color) for completing all regional **Shiny Master** achievements from Kanto through Galar.
+
+The "Mystery Gift" NPC will offer you Magearna (Original Color) for completing all regional **Shiny Master** achievements from Kanto through Galar. If the player has lost some shinies due to Real Evolution, they need to reacquire them as the game checks for all relevant Pokémon to be in the party.

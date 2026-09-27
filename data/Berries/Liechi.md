@@ -2,8 +2,7 @@
 
 ### Possible Planting Formations {#planting}
 
-The Liechi berry can be acquired by having 23 Passho Berries in your farm.
-Pokémon #382 [[Pokémon/Kyogre]] must be caught to unlock this berry. You can fill your farm in the following way to obtain Liechi Berries. Purple squares indicate where mutations can occur.
+The Liechi berry can be acquired by having 23 [[Berries/Passho]] berries at the Berry stage in your farm. The mutation is unlocked by completing the [[Quest Lines/Land vs. Water]] quest line. Owning [[Pokémon/Kyogre]] doubles the chance of the mutation. You can fill your farm in the following way to obtain Liechi Berries. Purple squares indicate where mutations can occur.
 
 :::collapsed Liechi Mutation - Farm Simulator Code
 Copy & paste the line below into the [[Farm Simulator]]'s Import from Text.

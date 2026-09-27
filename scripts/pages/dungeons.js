@@ -1,3 +1,5 @@
+const { requirementHints } = require('../gameHelper');
+
 const getTableClearCounts = (dungeon) => {
     if (getTableClearCounts.cache.has(dungeon)) {
         return getTableClearCounts.cache.get(dungeon);
@@ -220,7 +222,8 @@ const getDungeonLoot = (dungeon) => {
                 type: itemType,
                 image: itemGameData?.image ?? (pokemonData ? `assets/images/pokemon/${pokemonData.id}.png` : null),
                 weight: item.weight ?? 1,
-                requirement: item.requirement?.hint(),
+                amount: item.amount ?? 1,
+                requirement: requirementHints(item.requirement, false).join('\n') || undefined,
                 ignoreDebuff: item.ignoreDebuff,
                 chances: []
             };
@@ -385,6 +388,35 @@ const normalizeDungeonEncounter = (encounter) => {
     };
 }
 
+const getDungeonTokenCost = (dungeon, clears = 0) => {
+    const fullSize = dungeon.getDungeonSize(true);
+    // The dungeon shrinks by 1 every time the clear count gains a digit, down to the minimum size
+    const size = Math.max(GameConstants.MIN_DUNGEON_SIZE, fullSize - Math.max(0, clears.toString().length - 1));
+    return Math.ceil(dungeon.baseTokenCost * size / fullSize);
+};
+
+const getTotalDungeonTokenCost = (dungeon, clears) => {
+    let total = 0;
+    let cleared = 0;
+    while (cleared < clears) {
+        // The cost stays the same until the clear count gains another digit
+        const next = Math.min(clears, cleared < 10 ? 10 : cleared * 10);
+        total += (next - cleared) * getDungeonTokenCost(dungeon, cleared);
+        cleared = next;
+    }
+    return total;
+};
+
+const getDungeonTokenCostSteps = (dungeon) => {
+    const steps = [];
+    const reductions = dungeon.getDungeonSize(true) - GameConstants.MIN_DUNGEON_SIZE;
+    for (let reduction = 0; reduction <= reductions; reduction++) {
+        const clears = reduction === 0 ? 0 : Math.pow(10, reduction);
+        steps.push({ clears, cost: getDungeonTokenCost(dungeon, clears) });
+    }
+    return steps;
+};
+
 
 module.exports = {
     getDungeonLoot,
@@ -395,4 +427,7 @@ module.exports = {
     itemTypeCategories,
     getDungeonShadowPokemon,
     getAllDungeonEncounters,
+    getDungeonTokenCost,
+    getTotalDungeonTokenCost,
+    getDungeonTokenCostSteps,
 };

@@ -1,6 +1,7 @@
 const { md } = require('./markdown-renderer');
 const { applyDatatables } = require('./datatables');
 const { createMarkDownEditor } = require('./markdown-editor');
+const { isPageLocked } = require('./locked-pages');
 const redirections = require('./redirections');
 
 // Load our error page for when we need it
@@ -30,6 +31,28 @@ const gotoPage = (type, name, other, noHistory) => {
   }
   // Update our page hash, so if we reload it will load this page
   window.location.hash = hash;
+};
+
+// Set when the page is opened for editing, see onhashchange
+let editingPage = false;
+
+const clearPageSidebar = () => {
+  [...document.getElementById('wiki-page-sidebar').childNodes].forEach(ko.removeNode);
+};
+
+// Moves a page's sidebar into #wiki-page-sidebar so it floats next to the title, keeping the page's binding context.
+// Replaces any current sidebar so overlapping page loads can't stack them
+// When editing it stays in place so the editor keeps its full width
+ko.bindingHandlers.pageSidebar = {
+  init: (element, valueAccessor, allBindings, viewModel, bindingContext) => {
+    if (editingPage) {
+      return;
+    }
+    clearPageSidebar();
+    document.getElementById('wiki-page-sidebar').append(element);
+    ko.applyBindingsToDescendants(bindingContext, element);
+    return { controlsDescendantBindings: true };
+  },
 };
 
 const gotoPageClick = (event, type, name, other) => {
@@ -83,6 +106,13 @@ onhashchange = (event) => {
     gotoPage(type, name ?? '', other, true);
     return;
   }
+  if (other == 'edit' && isPageLocked(type, name)) {
+    Wiki.alert('This page is locked and can\'t be edited.', 'warning', 5e3);
+    gotoPage(type, name ?? '', undefined, true);
+    return;
+  }
+  clearPageSidebar();
+  editingPage = other == 'edit';
   pageType(type);
   pageName(name);
   const pageElement = $('#wiki-page-content');
