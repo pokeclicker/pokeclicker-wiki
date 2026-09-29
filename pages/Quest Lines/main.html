@@ -1,6 +1,6 @@
 <div>
     <!-- ko ifnot: App.game.quests.questLines().find((q) => q.name == Wiki.pageName()) -->
-        <h3>Quest not found...</h3>
+    <h3>Quest not found...</h3>
     <!-- /ko -->
     <!-- ko if: App.game.quests.questLines().find((q) => q.name == Wiki.pageName()) -->
     <div data-bind="with: App.game.quests.questLines().find((q) => q.name == Wiki.pageName())">
@@ -12,12 +12,31 @@
             <li class="list-group-item">
                 <span data-bind="text: $data.description"></span>
                 <ul data-bind="foreach: $data.quests">
+                    <!-- ko if: $data.defaultDescription === 'Generic Quest Description. This should be overriden.'|| $data.defaultDescription === $data.description-->
                     <li data-bind="text: $data.description"></li>
+                    <!-- /ko -->
+                    <!-- ko ifnot: $data.defaultDescription === 'Generic Quest Description. This should be overriden.'|| $data.defaultDescription === $data.description-->
+                    <li data-bind="text: $data.description"></li>
+                    <ul>
+                        <li data-bind="text: $data.defaultDescription"></li>
+                    </ul>
+                    <!-- /ko -->
+
                 </ul>
             </li>
             <!-- /ko -->
             <!-- ko ifnot: $data.quests -->
+            <!-- ko if: $data.defaultDescription === 'Generic Quest Description. This should be overriden.'|| $data.defaultDescription === $data.description || Wiki.pageName() == 'How blu mouse?'-->
             <li class="list-group-item" data-bind="text: $data.description"></li>
+            <!-- /ko -->
+            <!-- ko ifnot: $data.defaultDescription === 'Generic Quest Description. This should be overriden.'|| $data.defaultDescription === $data.description || Wiki.pageName() == 'How blu mouse?'-->
+            <li class="list-group-item">
+                <span data-bind="text: $data.description"></span>
+                <ul>
+                    <li data-bind="text: $data.defaultDescription"></li>
+                </ul>
+            </li>
+            <!-- /ko -->
             <!-- /ko -->
         </ol>
     </div>
