@@ -106,7 +106,7 @@ These Evolution Items cost [[File:questPoint.svg\|25px]] 5,000.
 Pokémon | Cost | Description/Notes | Region |
 :--- | :--- | :--- | :--- |
 [[File:Eevee.png\|25px]] [[Pokémon/Eevee]] | [[File:questPoint.svg\|25px]] 4,000 | | Kanto |
-[[File:Porygon.png\|25px]] [[Pokémon/Porygon]] | [[File:questPoint.svg\|25px]] 2,000 | Only repeatable way to obtain Porygon. | Kanto |
+[[File:Porygon.png\|25px]] [[Pokémon/Porygon]] | [[File:questPoint.svg\|25px]] 2,000 | | Kanto |
 [[File:Jynx.png\|25px]] [[Pokémon/Jynx]] | [[File:questPoint.svg\|25px]] 2,000 | | Kanto |
 [[File:Mr. Mime.png\|25px]] [[Pokémon/Mr. Mime]] | [[File:questPoint.svg\|25px]] 1,000 | | Kanto |
 [[File:Lickitung.png\|25px]] [[Pokémon/Lickitung]] | [[File:questPoint.svg\|25px]] 1,000 | | Kanto |
@@ -117,7 +117,7 @@ Pokémon | Cost | Description/Notes | Region |
 [[File:Burmy (Plant).png\|25px]] [[Pokémon/Burmy (Plant)]] | [[File:questPoint.svg\|25px]] 6,750 | | Sinnoh |
 [[File:Cherubi.png\|25px]] [[Pokémon/Cherubi]] | [[File:questPoint.svg\|25px]] 6,750 | | Sinnoh |
 [[File:Zorua.png\|25px]] [[Pokémon/Zorua]] | [[File:questPoint.svg\|25px]] 50,625 | | Unova |
-[[File:Meloetta (Pirouette).png\|25px]] [[Pokémon/ Meloetta (Pirouette)]] | [[File:questPoint.svg\|25px]] 200,000 | Only repeatable way to obtain Meloetta (Pirouette). | Unova |
+[[File:Meloetta (Pirouette).png\|25px]] [[Pokémon/Meloetta (Pirouette)]] | [[File:questPoint.svg\|25px]] 200,000 | Only repeatable way to obtain Meloetta (Pirouette). | Unova |
 [[File:Furfrou (Dandy).png\|25px]] [[Pokémon/Furfrou (Dandy)]] | [[File:questPoint.svg\|25px]] 250,000 | Only repeatable way to obtain Furfrou (Dandy). | Kalos |
 [[File:Type Null.png\|25px]] [[Pokémon/Type: Null]] | [[File:questPoint.svg\|25px]] 114,000 | Only repeatable way to obtain Type: Null. | Alola |
 [[File:Poipole.png\|25px]] [[Pokémon/Poipole]] | [[File:questPoint.svg\|25px]] 90,000 | Only repeatable way to obtain Poipole. | Alola |
