@@ -208,11 +208,21 @@
                                     <tbody data-bind="foreach: $data.team">
                                         <tr data-bind="css: { 'border-top': $index() > 0 }" style="border-color: var(--bs-table-border-color) !important;">
                                             <td class="align-middle text-center border-end border-bottom-0 w-50" style="border-color: var(--bs-table-border-color) !important;">
-                                                <img width="42px" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data.name).id + '.png'}"/>
-                                                <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a>
-                                                <!-- ko if: $data.shadow >= GameConstants.ShadowStatus.Shadow -->
-                                                <img width="18px" class="ms-1" src="./pokeclicker/docs/assets/images/status/shadow.svg" title="Shadow"/>
-                                                <!-- /ko -->
+                                                <div class="d-flex align-items-center justify-content-center">
+                                                    <!-- ko if: $data instanceof CustomGymPokemon -->
+                                                        <img width="42px" class="flex-shrink-0" data-bind="attr: {src: `./pokeclicker/docs/assets/images/customPokemon/${image}`}"/>
+                                                        <span data-bind="text: $data.displayName"></span>
+                                                    <!-- /ko -->
+
+                                                    <!-- ko ifnot: $data instanceof CustomGymPokemon -->
+                                                        <img width="42px" class="flex-shrink-0 me-1" data-bind="attr: {src: './pokeclicker/docs/assets/images/pokemon/' + pokemonList.find((p) => p.name == $data.name).id + '.png'}"/>
+                                                        <a class="text-decoration-none" href="#!" data-bind="text: $data.name, attr: { href: `#!Pokemon/${$data.name}` }"></a>
+                                                    <!-- /ko -->
+
+                                                    <!-- ko if: $data.shadow >= GameConstants.ShadowStatus.Shadow -->
+                                                        <img width="18px" class="ms-1 flex-shrink-0" src="./pokeclicker/docs/assets/images/status/shadow.svg" title="Shadow"/>
+                                                    <!-- /ko -->
+                                                </div>
                                             </td>
                                             <td class="align-middle text-center border-bottom-0 w-50" data-bind="text: $data.maxHealth.toLocaleString()"></td>
                                         </tr>
