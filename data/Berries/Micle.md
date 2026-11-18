@@ -87,4 +87,4 @@ All planting times refer to the "Until Ripe" value of the first Berry planted.
 | :---:                                         | :---:         | :---:                                 | :---:                                 |
 | [[File:Babiri.png\|32px]] [[Berries/Babiri]]  | `Planted First`       |                         |                            |
 | [[File:Pamtre.png\|32px]] [[Berries/Pamtre]]    | 05:00:00      | 03:20:00                              | 02:13:18                              |
-| [[File:Kebia.png\|32px]] [[Berries/Kebia]]    | 00:10:00      | 00:06:40                              | 00:04:27                              |
+| [[File:Kebia.png\|32px]] [[Berries/Kebia]]    | 00:03:20      | 00:02:13                              | 00:01:28                              |
